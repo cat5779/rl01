@@ -41,3 +41,7 @@ your latest result. No agent is launched or interrupted by this publication.
 ## Fresh S11/S12/S13 continuation
 
 The next assignments are available at [the new handoff](next/START_HERE.md). S13 continues the interrupted S5 route; S12 and S11 separately advance the reviewed S6 mechanism and parameter region. Use the new contract rather than older round-four start conditions.
+
+## September 17 browser continuation
+
+See the [new handoff rules and S13 continuation](overnight-20260917/README.md). Tiny contrast extensions do not meet the new completion gate. New chat-reported results remain unreviewed until their proofs are obtained and checked.
