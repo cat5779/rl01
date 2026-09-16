@@ -10,3 +10,7 @@ is UNREVIEWED; no proof ZIP has been retrieved or independently audited.
 Use the existing reviewed [results](../KNOWN_RESULTS.md), [pitfalls](../PITFALLS.md)
 and [reading map](../READING_MAP.md). Other browser tasks receive distinct
 coordinator prompts; this packet does not launch any task.
+
+## Scheduled check 1
+
+Research assignments: [S13](check1/S13.md), [S1](check1/S1.md), [S2](check1/S2.md). New author claims remain unreviewed. These prompts do not themselves launch tasks.
