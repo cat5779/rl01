@@ -1,0 +1,70 @@
+{
+  "status": "reviewed finite fixtures and analytic scope markers",
+  "fixtures": [
+    {
+      "id": "S4-fourier4",
+      "family": "cyclic P_(4,2); direct-sum lift is not contiguous Fourier",
+      "n": 4,
+      "k": 2,
+      "a": "1/40",
+      "c": "19/20",
+      "claims": {
+        "posterior_first_tangents": "zero exactly",
+        "gaussian_integrand_curvature": "164919889685924000/48811956520986961",
+        "sparse_slack_curvature_interval": [
+          "3.1355",
+          "3.1356"
+        ],
+        "full_H_second_interval": [
+          "-123",
+          "-122"
+        ]
+      },
+      "certificate": "optional/S4/evidence/certificate.json"
+    },
+    {
+      "id": "S5-fourier6",
+      "n": 6,
+      "k": 2,
+      "a": "49/100",
+      "c": "1/2",
+      "claims": {
+        "aggregate_R_tr_interval": [
+          "-0.184",
+          "-0.183"
+        ],
+        "full_H_second": "less than -37"
+      },
+      "scope": "low-contrast route obstruction; not a high-contrast theorem",
+      "certificate": "optional/S5/evidence/fourier6_certificate.json"
+    },
+    {
+      "id": "S5-no-clock",
+      "family": "P_(8m,4m), every positive odd m",
+      "c": "any fixed 0<c<1",
+      "claims": {
+        "h2_moment": "1/(8*m^2)",
+        "h4_moment": "3/(64*m^4)",
+        "conclusion": "no exact common scalar clock on an open a-interval"
+      },
+      "scope": "does not quantify entropy cost of an approximate clock",
+      "certificate": "optional/S5/evidence/clock_certificate.json"
+    },
+    {
+      "id": "S6-principal-minors",
+      "n": 4,
+      "k": 2,
+      "a": "1/40",
+      "c": "19/20",
+      "claims": {
+        "Z2": "63434923041/409600000000",
+        "full_H_second_interval": [
+          "-122.97902407",
+          "-122.97902406"
+        ]
+      },
+      "scope": "finite exact check; q=2 is not Shannon-curvature proof",
+      "certificate": "optional/S6/evidence/certificate.json"
+    }
+  ]
+}

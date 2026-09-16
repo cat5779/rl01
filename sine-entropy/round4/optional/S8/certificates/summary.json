@@ -1,0 +1,64 @@
+{
+  "arithmetic": "Fraction and outward dyadic rational intervals",
+  "checker_sha256": "c7258867c73c40425d6faa1ae4a517eecb3958b00f1d12b0b8da14bfe2f5cb92",
+  "fixtures": {
+    "circuit_lowcontrast_n5": {
+      "curvature_gain": {
+        "denominator": 1000000000000,
+        "lower_numerator": 1632999947,
+        "upper_numerator": 1632999948
+      },
+      "sha256": "990e9e3abb54506c6a49b7a753dfe9d83c9d4e21d3d7ff0a952da74f90170df8",
+      "status": "PASS_EXACT_CONNECTED_CIRCUIT_FIXTURE"
+    },
+    "circuit_n10": {
+      "curvature_gain": {
+        "denominator": 1000000000000,
+        "lower_numerator": 4139387159633,
+        "upper_numerator": 4139387159634
+      },
+      "sha256": "55b527a374c5a4e7d51937a83a4aa43fa01fdbc9139a77ede23c52116ad29a3b",
+      "status": "PASS_EXACT_CONNECTED_CIRCUIT_FIXTURE"
+    },
+    "circuit_n5": {
+      "curvature_gain": {
+        "denominator": 1000000000000,
+        "lower_numerator": 3317691444428,
+        "upper_numerator": 3317691444429
+      },
+      "sha256": "ab20d223d640bfacd2a06e1ed44a5038b06fd9c6a74f8cbd0c42a008a4e8723a",
+      "status": "PASS_EXACT_CONNECTED_CIRCUIT_FIXTURE"
+    },
+    "fixed_diagonal_n4": {
+      "curvature_gain": {
+        "denominator": 1000000000000,
+        "lower_numerator": 279456324073,
+        "upper_numerator": 279456324074
+      },
+      "sha256": "3697b9c4b1841fe234d376c09ca8f7fe041c9a5745e1fcd45d6827598d2ed101",
+      "status": "PASS_EXACT_FIXED_DIAGONAL_FOUR_SITE_COMPARISON"
+    },
+    "gaussian_n34": {
+      "curvature_gain": {
+        "denominator": 1000000000000,
+        "lower_numerator": 228711913173143,
+        "upper_numerator": 228711913173144
+      },
+      "sha256": "ea2d502f3592e1af4402aa3f9b8eda9f3d7fb82f4cb39ca5b1047b326d17e322",
+      "status": "PASS_EXACT_SUMMED_GAUSSIAN_ROUTE_OBSTRUCTION"
+    },
+    "rotation": {
+      "curvature_gain": {
+        "denominator": 1000000000000,
+        "lower_numerator": -1737115357632,
+        "upper_numerator": -1737115357631
+      },
+      "sha256": "dbfa1ccd62a9d2a4be4ced0c41918773212c06a9dec9240ad940e3e78a606eaa",
+      "status": "PASS_EXACT_PROJECTION_ROTATION_OBSTRUCTION"
+    }
+  },
+  "log_bits": 192,
+  "log_terms": 64,
+  "scope": "Finite certificates and algebraic regressions; the all-dimensional theorem is proved in RESULT.md. Sine target remains unproved.",
+  "status": "PASS_EXACT_S8_ROUND2"
+}
