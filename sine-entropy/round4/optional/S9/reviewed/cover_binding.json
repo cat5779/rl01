@@ -1,0 +1,11 @@
+{
+  "source": "independent fresh rebuild from frozen author source",
+  "source_pr_head": "2d05b8bd52ef36bb2f7071c019dfea46ce50226d",
+  "raw_sha256": "d4a7c186c31110e0d3b2d9a4a4ba0744b446466c1f300d7e534c723b9a115d6a",
+  "gzip_sha256": "60f61ff04ddfd6a2e46e9a10ff40af60d3610a0f6af0a5f52a802214b3f99b02",
+  "raw_bytes": 5815293,
+  "nodes": 5843,
+  "leaves": 2922,
+  "pending": 0,
+  "warning": "Independent rebuild metadata differs from historical author-cover bytes; do not compare this hash to an author receipt for a different file."
+}

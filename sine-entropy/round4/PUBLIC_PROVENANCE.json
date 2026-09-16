@@ -247,6 +247,114 @@
       "source_delivery": "S8 independent audit/restored exact receipt",
       "sha256": "1ce5587df0458a7629ea4a47ef9d384a907309ca3779982e052de175700c4598",
       "copy": "byte-for-byte"
+    },
+    {
+      "path": "optional/S9/FULL_R3_PRODUCTION.md",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "f3a4800ddf663c32ba2620e69e9d91bd5bdac776b39e0cc06368052c1a219bb2",
+      "copy": "public links/scope references adapted; mathematical accepted statements unchanged"
+    },
+    {
+      "path": "optional/S9/RESULT.md",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "0f93ba39d907fbb9be666751c9394f5d6f38e15c9c8aa985c2b66557d3a7c7ed",
+      "copy": "public links/scope references adapted; mathematical accepted statements unchanged"
+    },
+    {
+      "path": "optional/S9/code/atom_polynomials.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "af18cd2d0b331a497cba5fd3e8fd1d4548e9370f99f3fb62b21949e4bbdd95ec",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/code/dyadic.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "e8352454cc5de97a46a364e14480dc96cd482436a8c1aaf73f6d6ebb10102eca",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/code/channel_engine.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "deb5aac37aae988143744eab252d5e9b38b91664c9636f9b7f61dab97f629d44",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/code/certify_full_r3.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "ae08a775024da6fce6b35b2da57a28a4ba42da28ae25b9f6dce1c0871b753aba",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/code/check_exact_atoms.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "d19808ea328a1a2c8467cc98aeff214ee7d89f387dae5defd3ec5fc724a8f054",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/code/check_scaled_jets.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "90f65179da25b8638e987419055957904759db91909a4d22a9fde10e9def5bd1",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/code/certify_aligned.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "041276c729413d15aa9bd58bb68bea1caae8e2aeeccc67c04e4c1d9467dca732",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/code/certify_finite_entropy.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "48b1140d1e300fac146829b593889e6ce0c40bf1d542151a44f34a520d758293",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/reviewed/restore_cover.py",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "45655122490a576aebdc8e8f7f825bec92e3752f03347c250b2f23efea32da0b",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/reviewed/cover_binding.json",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "9148246217f262c11db8754f4bb00e89cc1b5cb1a67148836d34e6416bcaae90",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/reviewed/full_r3_highcontrast.json.gz.b64",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "c3403c9097d100f42c700f2e14c13ed701265e79f293810937eb2f315f7c12be",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/reviewed/aligned_full_rebuilt.json",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "ef4e76b42693320c040d5f15403f45e30b0baa871394b416d3f975f4a31ec56b",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/reviewed/finite_entropy_rebuilt.json",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "2c72f72bb01443efa08f2b6aa2dbf0fe9a2105cc4e1a5c61780dd99f4932b161",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/reviewed/exact_atoms.json",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "9817240a829b66cb7eeba8e25b85599189e56a239f261c00c5321c4f724a6a28",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/reviewed/scaled_jets.json",
+      "source_delivery": "S9 independently accepted finite-radius units only",
+      "sha256": "295091b8e786c7469d5926332399efc8a95750efc491c981fac40c99aa298e6d",
+      "copy": "byte-for-byte from independently reviewed integration"
+    },
+    {
+      "path": "optional/S9/INDEPENDENT_AUDIT.md",
+      "source_delivery": "S9 independent review",
+      "sha256": "d13de91ac0ff535044fd887752b28c5846a92b33cc9f5a4be1b486fe8287d380",
+      "copy": "local runtime path replaced by python; mathematical content unchanged"
     }
   ]
 }

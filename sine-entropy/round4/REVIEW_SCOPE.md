@@ -38,3 +38,12 @@ passed; source Git blobs and the losslessly restored 34-site receipt matched.
 Canonical generated receipt hashes agree after LF normalization. The complete
 review is included under optional/S8. This does not certify novelty or the
 fixed-density sine target. No S9 second-round result is implicitly accepted.
+
+## S9 second-round partial acceptance
+
+The R=3 positive theorem, polynomial/jet interface and finite paired-layer/H7
+signs are independently CORRECT. The reviewer rebuilt the 2922-leaf cover from
+source and checked completeness plus tamper guards. Only these units are in
+this public packet. Growing-radius Theorems A/B and their dependent claims are
+quarantined because the source proof upload is incomplete/corrupt. That does
+not refute them and does not diminish the separately verified finite result.

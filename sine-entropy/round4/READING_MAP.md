@@ -51,3 +51,25 @@ example; in THIS packet the exact restored JSON is directly available at
 also retained. To rerun the self-contained standard-library checker, use its
 `--help` and choose a fresh output directory; source RESULT's invocation uses
 the original path and should be adjusted to `optional/S8/verify_round2.py`.
+
+## Optional S9 positive finite-radius starting point
+
+Read [definitions](optional/S9/RESULT.md),
+[full R=3 theorem](optional/S9/FULL_R3_PRODUCTION.md), and
+[independent audit](optional/S9/INDEPENDENT_AUDIT.md). The former supplies the
+finite atom normalization referred to by the historical proof. Exact finite
+data live in `optional/S9/reviewed/`; they retain all required atoms/derivatives.
+
+From this packet directory, with a fresh output path:
+
+```text
+python optional/S9/reviewed/restore_cover.py --output generated/s9-wide.json
+python optional/S9/code/certify_full_r3.py --state generated/s9-wide.json --check-structure
+python optional/S9/code/certify_full_r3.py --state generated/s9-wide.json --replay --begin-leaf 0 --end-leaf 2922 --receipt generated/s9-replay.json
+```
+
+The all-leaf replay may take several minutes. To rebuild rather than restore,
+use `--fresh --profile highcontrast --max-nodes 10000` with a new state path.
+The independent complete rebuild took about 198 seconds on the audit host.
+No absent historical replay inputs or private workspace are needed for these
+commands. The compressed cover is an optional download, not required reading.

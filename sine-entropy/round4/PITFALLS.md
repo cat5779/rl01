@@ -55,3 +55,12 @@ curvature gain. Pointwise positivity/convexity inside a Gaussian representation
 can fail while the integral has the desired sign. Do not discard signed terms
 individually. The reviewed rank-two comparison is a curvature DIFFERENCE; an
 iterable path to a solved reference and a fixed-density sign remain unpaid.
+
+## S9's finite positive result does not close the limit
+
+Full R=3 production positivity is now an accepted regression/starting theorem.
+It does not provide a vanishing approximation error as R grows. A new R=3
+replay is not new research credit. Individual count layers can still have the
+wrong sign despite positivity of the full finite sum. Do not cite the damaged
+growing-radius Theorems A/B as established; only the reviewed finite units are
+included here.

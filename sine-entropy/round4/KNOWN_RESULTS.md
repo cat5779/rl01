@@ -125,3 +125,29 @@ and a connected 34-site example disproves pointwise convexity of the Gaussian
 density even after all outside output words are summed, although the integrated
 Fisher curvature and actual entropy-curvature gain are positive. The latter
 keeps integrated signed cancellation alive. Neither is a target counterexample.
+
+## Reviewed S9 second-round finite-radius addition
+
+For the true half-density radius-three Fejer family, all `37/40<=c<=1`, all
+legal shifts and all noise times, the complete center production satisfies
+`partial_a^2 I_3>=6 exp(-2s)`. The assigned truncated functional
+`J_3=log2-int_0^(log4) I_3 ds` therefore has `J_3''<=-45/16`.
+At c=1 its original shift domain is a singleton; the derivative refers to the
+legal auxiliary-kernel extension. This is a positive continuum theorem for
+FIXED radius, not a growing-radius or entropy-rate theorem.
+
+The [proof](optional/S9/FULL_R3_PRODUCTION.md),
+[definitions](optional/S9/RESULT.md), and
+[independent review](optional/S9/INDEPENDENT_AUDIT.md) are supplied. A fresh
+exact rebuild covers the entire rational auxiliary box with 5843 nodes,
+2922 accepted leaves, and no pending region. The complete independently rebuilt
+cover is supplied compressed, not merely described by an author hash.
+
+At `c=5*pi/16`, `|a-(1-c)/2|<=1/10000`, the paired count layers 1+5 have
+negative integrated curvature while the full production integral has positive
+curvature and the complete seven-site entropy has negative curvature. These
+finite signs were separately reconstructed and are method tests only.
+
+S9's advertised growing-radius Theorems A/B and dependent signed-measure limits
+are NOT supplied as accepted results: the uploaded main proof was malformed
+and its core proof span missing. This is missing evidence, not a disproof.
