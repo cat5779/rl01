@@ -37,3 +37,7 @@ independently reviewed round-four results. See KNOWN_RESULTS.md before choosing
 new work. Older commit-pinned launch links intentionally remain immutable;
 use this updated snapshot for subsequent rounds, with an explicit delta from
 your latest result. No agent is launched or interrupted by this publication.
+
+## Fresh S11/S12/S13 continuation
+
+The next assignments are available at [the new handoff](next/START_HERE.md). S13 continues the interrupted S5 route; S12 and S11 separately advance the reviewed S6 mechanism and parameter region. Use the new contract rather than older round-four start conditions.

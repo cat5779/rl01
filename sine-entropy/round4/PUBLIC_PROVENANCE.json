@@ -571,6 +571,18 @@
       "source_delivery": "S6 round-four review and exact source identity",
       "sha256": "3c8813c1e68692e20cfcacd57467a36f3f25f1433f63c977c2ca36a2d10a4b16",
       "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "next/S5_ROUND3_AUTHOR_SUMMARY.md",
+      "source_delivery": "S5 unfinished-route recovery",
+      "sha256": "a77342b1c7289e3790cbd29392d51394d3780b0f9974778eb80795dd1aa4c390",
+      "copy": "Recovered full prior author summary; unreviewed; unavailable citation handles and attachment references explicitly marked"
+    },
+    {
+      "path": "next/S5_STALLED_CHECKPOINT.md",
+      "source_delivery": "S5 unfinished-route recovery",
+      "sha256": "bf3471040a6e6e80de897e520e032dc25d60860bc4a44e621998ac971fe5716e",
+      "copy": "User-supplied interrupted-run mathematical leads translated and scoped; unreviewed"
     }
   ]
 }
