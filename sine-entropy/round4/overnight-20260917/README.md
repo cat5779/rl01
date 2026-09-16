@@ -14,3 +14,7 @@ coordinator prompts; this packet does not launch any task.
 ## Scheduled check 1
 
 Research assignments: [S13](check1/S13.md), [S1](check1/S1.md), [S2](check1/S2.md). New author claims remain unreviewed. These prompts do not themselves launch tasks.
+
+## Scheduled check 2
+
+Research assignments: [S13](check2/S13.md), [S1](check2/S1.md), [S3](check2/S3.md). New author claims remain unreviewed. These prompts do not themselves launch tasks.
