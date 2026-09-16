@@ -29,3 +29,11 @@ Use a commit-pinned URL when supplied. `PUBLIC_PROVENANCE.json` records copied
 artifact hashes; `MANIFEST.sha256` covers this packet except itself. Original
 proof files preserve author-era status language; the review-scope statements
 in KNOWN_RESULTS.md and REVIEW_SCOPE.md govern what may be used as reviewed.
+
+## Latest reviewed update
+
+This branch now also includes the intact S9 growing-layer proof and S6's
+independently reviewed round-four results. See KNOWN_RESULTS.md before choosing
+new work. Older commit-pinned launch links intentionally remain immutable;
+use this updated snapshot for subsequent rounds, with an explicit delta from
+your latest result. No agent is launched or interrupted by this publication.

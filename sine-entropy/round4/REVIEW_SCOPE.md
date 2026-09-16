@@ -43,7 +43,23 @@ fixed-density sine target. No S9 second-round result is implicitly accepted.
 
 The R=3 positive theorem, polynomial/jet interface and finite paired-layer/H7
 signs are independently CORRECT. The reviewer rebuilt the 2922-leaf cover from
-source and checked completeness plus tamper guards. Only these units are in
-this public packet. Growing-radius Theorems A/B and their dependent claims are
-quarantined because the source proof upload is incomplete/corrupt. That does
-not refute them and does not diminish the separately verified finite result.
+source and checked completeness plus tamper guards. The previous malformed
+growing-proof quarantine is historical; the intact proof is now independently
+accepted at its stated method-obstruction scope, as documented below.
+
+## Latest S9 repair and S6 round four
+
+S9 Theorems A/B, Sections 5.1–5.4 and 6, and LAYER_MEASURE are independently
+CORRECT at their exact stated scopes; the independent bounded arithmetic
+checker passes. The full signed sum is not decided.
+
+S6 both the narrow high-contrast theorem and real-q correlated-reference error
+are independently CORRECT. The actual target-region theorem additionally passed
+a fresh-context second reviewer. Primary-source theorem conditions were checked;
+exact certificates were replayed from source and a separately hashed ZIP.
+The original inner manifest verifier checks listed files but does not reject
+extra files or authenticate its hash anchor. The independent archive SHA-256
+and this packet's complete manifest fix the audited input identity; the inner
+verifier alone should not be treated as a complete integrity check.
+
+No novelty, formal proof-assistant certification, or full target closure is claimed.

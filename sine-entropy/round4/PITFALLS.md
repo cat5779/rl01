@@ -61,6 +61,16 @@ iterable path to a solved reference and a fixed-density sign remain unpaid.
 Full R=3 production positivity is now an accepted regression/starting theorem.
 It does not provide a vanishing approximation error as R grows. A new R=3
 replay is not new research credit. Individual count layers can still have the
-wrong sign despite positivity of the full finite sum. Do not cite the damaged
-growing-radius Theorems A/B as established; only the reviewed finite units are
-included here.
+wrong sign despite positivity of the full finite sum. The intact repaired growing-radius Theorems A/B are now separately accepted
+as method obstructions; see the current KNOWN_RESULTS and repair audit.
+
+## Newly reviewed boundaries
+
+Do not repackage the S6 10^(-13)-wide contrast strip or its real-q block error
+as a new discovery. Advance the contrast/shift coverage or pay the remaining
+main-term sign. A value-to-curvature passage is justified here by the special
+full-atom polynomial expansion and nested derivative estimates; an arbitrary
+small entropy value error still does not justify differentiating it.
+
+S9's total negative layer mass is provably nonvanishing. A new approach must
+retain the positive-negative compensation, not demand all layers be convex.

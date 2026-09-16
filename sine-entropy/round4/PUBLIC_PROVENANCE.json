@@ -249,18 +249,6 @@
       "copy": "byte-for-byte"
     },
     {
-      "path": "optional/S9/FULL_R3_PRODUCTION.md",
-      "source_delivery": "S9 independently accepted finite-radius units only",
-      "sha256": "f3a4800ddf663c32ba2620e69e9d91bd5bdac776b39e0cc06368052c1a219bb2",
-      "copy": "public links/scope references adapted; mathematical accepted statements unchanged"
-    },
-    {
-      "path": "optional/S9/RESULT.md",
-      "source_delivery": "S9 independently accepted finite-radius units only",
-      "sha256": "0f93ba39d907fbb9be666751c9394f5d6f38e15c9c8aa985c2b66557d3a7c7ed",
-      "copy": "public links/scope references adapted; mathematical accepted statements unchanged"
-    },
-    {
       "path": "optional/S9/code/atom_polynomials.py",
       "source_delivery": "S9 independently accepted finite-radius units only",
       "sha256": "af18cd2d0b331a497cba5fd3e8fd1d4548e9370f99f3fb62b21949e4bbdd95ec",
@@ -355,6 +343,234 @@
       "source_delivery": "S9 independent review",
       "sha256": "d13de91ac0ff535044fd887752b28c5846a92b33cc9f5a4be1b486fe8287d380",
       "copy": "local runtime path replaced by python; mathematical content unchanged"
+    },
+    {
+      "path": "optional/S9/GROWING_RESULT.md",
+      "source_delivery": "S9 repaired growing proof and independent review",
+      "sha256": "12b89c639cd3a05e4c8fd12d2818712ffe9975ddf7bf3aaf109c7f654518bc2c",
+      "copy": "public relative links adapted; mathematics unchanged"
+    },
+    {
+      "path": "optional/S9/LAYER_MEASURE.md",
+      "source_delivery": "S9 repaired growing proof and independent review",
+      "sha256": "1799991e11c01e0fc65947e2e39503a4dd9013e1de78cda6da9aef2e3822d4be",
+      "copy": "public relative links adapted; mathematics unchanged"
+    },
+    {
+      "path": "optional/S9/RESULT.md",
+      "source_delivery": "S9 repaired growing proof and independent review",
+      "sha256": "4150e731d383ede0d61b0a2dfccd744a97224114e4480a59016d860b172f3c1a",
+      "copy": "public relative links adapted; mathematics unchanged"
+    },
+    {
+      "path": "optional/S9/FULL_R3_PRODUCTION.md",
+      "source_delivery": "S9 repaired growing proof and independent review",
+      "sha256": "d245fda110f474897daa884d5cb32fe37c71a6fed587e0a11ae7c1c4c2079921",
+      "copy": "public relative links adapted; mathematics unchanged"
+    },
+    {
+      "path": "optional/S9/repair-review/INDEPENDENT_AUDIT.md",
+      "source_delivery": "S9 repaired growing proof and independent review",
+      "sha256": "85165962624492a587b8b358e9d9bd0538fa81f596915b114f121033e9e9aee9",
+      "copy": "public relative links adapted; mathematics unchanged"
+    },
+    {
+      "path": "optional/S9/repair-review/check_growing_proofs.py",
+      "source_delivery": "S9 repaired growing proof and independent review",
+      "sha256": "e283327e8fb34e10788103b64dabc9fe1030fcbd5e2cb342e38ed27521d2f462",
+      "copy": "public relative links adapted; mathematics unchanged"
+    },
+    {
+      "path": "optional/S6/round4/source/attempts.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "173333f77a70c3f409a5c834c787671414d510bbe7392909c4667bedaff8bfb6",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/candidate_ledger.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "45f245121e65c90dccb99113543c2b5880d27e55523f6f59553d7314e333cac1",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/DELTA_FROM_LAST_ROUND.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "36ad8592eeb37a3c3f30f589f3beece4c2efce1b21ab4feb5ad37c4543b649e3",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/dependency_versions.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "fd288690144b85ac0ee8783aa64cb94caf860a70ba89791fda035fee804c9453",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/gap_audit.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "d3dd6c73e7607ad5eb942a5fa51baa1f215dc677480ea29cb7cdb10f6ed3c3ff",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/manifest.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "39a25737d1a9e34eab9729dd69c72c26f94d3a8e39558aa3fbf12260d854e832",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/MANIFEST.sha256",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "5fa4eac3efd52b6e706256c1e3d762baa4c374e1485b5d82470afce5bb4ad683",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/MANIFEST_NOTES.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "2d84de6e436e46261d6b813b4c4526fa53027240f0b761dea14837610b7ed0be",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/proof.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "ece5ebc05e401d055c741d1651dc3782ee697e9395b8b22603084103eb321762",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/README.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "b4fe336d00034a574d66252178de82f7026cdd3e87eb7238efeed21a7d6cc17e",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/requirements.txt",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "7980dccd39d2e8df86318881489620feda68f1e44e0c7dd3056627dfba292c87",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/work_log.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "ba6ef684bfee05c68f6aa85c6989a2a6b9891b040de56d11551a999e60143f56",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/evidence/checkpoints.jsonl",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "1626e5c02be589ab8a1bef51682e9622b92768cac58b6b8062ba9e3c05b3396d",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/output/README.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "2d17c44dbcc6bad9621af19355868942184f0b1b5ef6e031eea1ce8ae7886839",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/scripts/build_manifest.py",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "18eeea44e30da7acc067f27b021b59ee6938f151557e640773acc6f94090238c",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/scripts/exact_constants.py",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "81e3227719c674a003ce1b6c9c3de23cb6e6f6034261da52797174a9762443b8",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/scripts/finite_dpp_check.py",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "0ac70810aa6ac0617c00adc5f1cb2988c60eef2cc6571773973e727fb6b1d690",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/scripts/replay.py",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "fb8e4e4e1b088a97d4bebb7175c1ea2ff57e074d82237a74005f46c119784d9b",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/scripts/verify_manifest.py",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "aaba2036c41454d82a282057d32d26dacfa7464549b8160d8d8916bf166140f7",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/sources/reading_notes.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "3092258df78fccd2591e17d677bac863465bc032b537689f7435fdd7c3e5f85e",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/evidence/certificates/finite_coupled_check.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "fe32f63e4d5081eae0b358e939f07924418610eb7970146908ce36cf8113af44",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/evidence/certificates/high_contrast_constants.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "4c763be2dc9dc3e97d89968534ef5bc7988f6e2be6beb2cb360ee810a523f3a2",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/evidence/certificates/pre_manifest_replay.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "3fdfd24a357619b169120feea17a574d19e8ac6f19a9d0432708f326518e75a1",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/evidence/frozen/candidate_ledger_initial.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "91f4d446979c45d911140c02a5cfe2c8d22e595ed0924f9eb0b4908f764a2c20",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/evidence/frozen/proof_targets_frozen.md",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "3bee52cd06e68372a7851f6f129dec2b0a7b71bf26332665c5477df62b6b3a59",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/output/replay/finite_coupled_check.replay.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "fe32f63e4d5081eae0b358e939f07924418610eb7970146908ce36cf8113af44",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/output/replay/high_contrast_constants.replay.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "4c763be2dc9dc3e97d89968534ef5bc7988f6e2be6beb2cb360ee810a523f3a2",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/source/output/replay/replay_report.json",
+      "source_delivery": "S6 reviewed round-four original package",
+      "sha256": "9eeb5d1f842ac435f52b890278dc3aa6fd7e9638a8c069d6239d2645e3bee69d",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/README.md",
+      "source_delivery": "S6 round-four review and exact source identity",
+      "sha256": "38c9a4231ddbe4bb0bb531918bae7775ca26b6f1b20bfd2ea3737e044fc09619",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/INDEPENDENT_AUDIT.md",
+      "source_delivery": "S6 round-four review and exact source identity",
+      "sha256": "11faf51f72dbc31488ed62d935218feaf2bd0d17776a50f2efd4faa0a1e891fe",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/SIGN_SECOND_AUDIT.md",
+      "source_delivery": "S6 round-four review and exact source identity",
+      "sha256": "ad97192a9cef001af3a3890b54c0b140185c215caceba2dc749f2de1a133e7d6",
+      "copy": "byte-for-byte frozen reviewed artifact"
+    },
+    {
+      "path": "optional/S6/round4/SOURCE.json",
+      "source_delivery": "S6 round-four review and exact source identity",
+      "sha256": "3c8813c1e68692e20cfcacd57467a36f3f25f1433f63c977c2ca36a2d10a4b16",
+      "copy": "byte-for-byte frozen reviewed artifact"
     }
   ]
 }

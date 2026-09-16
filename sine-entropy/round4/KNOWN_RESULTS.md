@@ -148,6 +148,34 @@ negative integrated curvature while the full production integral has positive
 curvature and the complete seven-site entropy has negative curvature. These
 finite signs were separately reconstructed and are method tests only.
 
-S9's advertised growing-radius Theorems A/B and dependent signed-measure limits
-are NOT supplied as accepted results: the uploaded main proof was malformed
-and its core proof span missing. This is missing evidence, not a disproof.
+The previously malformed S9 growing proof has been replaced by an intact
+source and independently accepted, at the method-obstruction scope below.
+
+## Latest reviewed S9 repair and S6 round-four results
+
+S9: the [intact growing proof](optional/S9/GROWING_RESULT.md) and
+[repair audit](optional/S9/repair-review/INDEPENDENT_AUDIT.md) prove a central
+count band's integrated Jensen contribution is <-1/40 for every odd R>=160001,
+c=19/20, rho=1/2, shifts 1/200,1/40,9/200. Theorem B identifies total negative
+mass with the positive center entropy deficit in the limit. Its restricted
+density extension, half-density growing Fourier projection extension, and
+[signed-layer weak limit](optional/S9/LAYER_MEASURE.md) also pass review.
+This refutes layerwise nonnegativity or an o(1) negative-mass budget, not the
+full signed Jensen inequality. It does not rule out paid signed cancellation.
+
+S6: the [new proof](optional/S6/round4/source/proof.md) passes a
+[full audit](optional/S6/round4/INDEPENDENT_AUDIT.md) and an additional
+[fresh sign-theorem audit](optional/S6/round4/SIGN_SECOND_AUDIT.md).
+For every finite Hermitian contraction Q and n,
+`37/40<=c<=37/40+10^(-13)` and `|a-(1-c)/2|<=1/200` imply
+`H(DPP(aI+cQ))''/n<=-1/200`. Integrating and taking values to the limit yields
+a strong sine-rate Jensen inequality at every fixed density on this strip.
+This extremely narrow target-region advance does not raise the whole-legal-
+shift universal contrast threshold. The general high-contrast target is OPEN.
+
+For the true R-block product reference, its positive real-q remainder obeys
+`0<=E/n<=c Tr b(Q_R)/R+2880 log((1-delta)/delta)^2 |q-1|`,
+for q in [1/2,3/2], n divisible by R, and the stated fixed interior strip.
+The same bound controls its absolute finite Jensen defect. Vanishing error
+requires both R->infinity AND q->1; the growing-block main-term sign remains open.
+These are reviewed baselines for subsequent work, not fresh tasks to repeat.

@@ -1,3 +1,3 @@
 # Snapshot status
 
-Prepared 2026-09-16 with reviewed S2/S3 continuations, S4-S6 second-round results, S8 second-round rank-two comparison, and only the independently accepted S9 finite-R3 units. S9 growing claims are quarantined for missing/corrupt proof text. Current round-three browser outputs are not assumed reviewed. S7 has no accepted new result from two stalled runs.
+Updated 2026-09-16 after independently accepting the repaired S9 growing-layer obstructions and S6 round-four narrow high-contrast theorem plus real-q block error. S6 sign theorem has two independent reviews. Other unreviewed current browser claims are not silently granted. Earlier pinned commits retain their original snapshots. S7 has no accepted new result from the two stalled runs.

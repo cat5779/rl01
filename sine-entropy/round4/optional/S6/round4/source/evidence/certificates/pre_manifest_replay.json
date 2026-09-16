@@ -1,0 +1,11 @@
+{
+  "classification": "self-review receipt, not independent certification",
+  "checks": {
+    "exact_high_contrast_json_full_match": true,
+    "finite_coupled_exact_fields_match": true,
+    "python_syntax_compile": true,
+    "utf8_lf_audit": true
+  },
+  "floating_q_grid_used_as_proof": false,
+  "research_window_end_utc": "2026-09-16T13:32:32.543402Z"
+}

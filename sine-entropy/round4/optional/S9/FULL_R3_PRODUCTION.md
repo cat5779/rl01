@@ -1,13 +1,13 @@
 PROVED_SCOPED_LEMMA
 
-> Independently accepted only at the finite R=3 scope. See [reviewed definitions and quarantine boundary](RESULT.md) and the [independent audit](INDEPENDENT_AUDIT.md). The cover omitted by the source upload has been independently rebuilt and is supplied in compressed form under reviewed/. Author-era verification wording below is historical.
+> Independently accepted only at the finite R=3 scope. See [reviewed definitions and scope](RESULT.md) and the [independent audit](INDEPENDENT_AUDIT.md). The cover omitted by the source upload has been independently rebuilt and is supplied in compressed form under reviewed/. Author-era verification wording below is historical.
 
 # A positive full-production theorem on the entire high-contrast R=3 family
 
 This is a finite aligned-family result, not the sine entropy-rate theorem.
 It uses full center production with all changing exterior-word weights.
 The outward cover and fresh replay of all its accepted leaves have completed.
-This positive result does not depend on the unreviewed growing-layer claims, whose uploaded proofs are quarantined.
+This positive result does not depend on the growing-layer obstruction. The intact growing proof was subsequently accepted in the separate repair review.
 
 ## Statement
 
@@ -91,7 +91,7 @@ required original contrasts and shifts without a floating parameter search.
 ## 2. Polynomial scaled jets retain every noise factor
 
 The complete probabilities of (P3) are the exact bivariate polynomials (17)
-in RESULT.md, with `u,delta` there replaced by `v,z`. Every monomial is
+in GROWING_RESULT.md, with `u,delta` there replaced by `v,z`. Every monomial is
 `C_kl v^k z^l` with `k>=l`. Hence the three layers
 
 \[
@@ -167,6 +167,6 @@ radius-three bound. No entropy-rate derivative-limit exchange occurs.
 The theorem signs the **full** aligned `J_3`, for the entire remaining contrast
 range and legal shifts. It does not prove the same assertion for `J_R` with
 unbounded `R`. The fixed-radius approximation error does not vanish, so (P2)
-by itself cannot sign the actual sine entropy-rate gap. The author also proposed a growing adverse-layer obstruction, but its uploaded
-proof is corrupted and is not accepted here. This positive finite-radius
-result does not use that claim.
+by itself cannot sign the actual sine entropy-rate gap. The original upload of the growing adverse-layer obstruction was corrupted
+and was quarantined. Its intact replacement is now accepted in the separate
+repair review; this positive finite-radius result does not depend on it.

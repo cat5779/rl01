@@ -1,9 +1,9 @@
 PROVED_SCOPED_LEMMA
 
-# Reviewed definitions, accepted units, and quarantined upload
+# Reviewed definitions and accepted finite and growing units
 
-This is an integration scope record, not a reconstruction of the missing
-author proof. All entropies are complete-configuration Shannon entropies.
+This is an integration scope record. The author supplied the intact repaired
+proof separately in [GROWING_RESULT.md](GROWING_RESULT.md). All entropies are complete-configuration Shannon entropies.
 The full sine entropy-rate concavity problem remains unresolved.
 
 ## Accepted finite-radius theorem
@@ -55,10 +55,20 @@ enclosures are in `reviewed/aligned_full_rebuilt.json` and
 `reviewed/finite_entropy_rebuilt.json`. These are route tests, not a rate
 counterexample. Their rebuilt data include all complete atoms and derivatives.
 
-## Not accepted from this upload
+## Accepted repaired growing proof
 
-Theorem A's claimed negative count-band bound for every odd R>=160001,
-Theorem B and dependent signed-layer limits, and the advertised open-density
-and growing circular extensions await an intact proof.
-The corrupted author proof is not part of this public packet. No inferred
-replacement proof is accepted. See INDEPENDENT_AUDIT.md for the missing-proof boundary.
+See [GROWING_RESULT.md](GROWING_RESULT.md), Sections 3–6 and
+[repair audit](repair-review/INDEPENDENT_AUDIT.md) for complete quantifiers.
+The central-band bound is <-1/40 for c=19/20, rho=1/2, shifts
+1/200, 1/40, 9/200, and every odd R>=160001. The total negative layer mass
+converges to D(0)=log 2-h(f_center)>0, while positive mass converges to
+[D(-d)+D(d)]/2. The explicitly restricted density extension and genuine
+growing half-density Fourier projection extension are accepted at their stated
+scope. The [signed-layer supplement](LAYER_MEASURE.md) references the repaired
+GROWING_RESULT equations whenever it says RESULT.md; it proves weak convergence
+of the Jordan parts and convergence of total variation norms, not convergence
+in total variation distance.
+
+These are obstructions to stronger layerwise proof routes. Neither mass
+separately decides their signed difference, so the full target stays open.
+The original upload and quarantine remain in provenance/history.

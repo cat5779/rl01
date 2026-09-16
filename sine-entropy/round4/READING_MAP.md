@@ -73,3 +73,18 @@ use `--fresh --profile highcontrast --max-nodes 10000` with a new state path.
 The independent complete rebuild took about 198 seconds on the audit host.
 No absent historical replay inputs or private workspace are needed for these
 commands. The compressed cover is an optional download, not required reading.
+
+## Latest optional S9/S6 proofs
+
+- [S9 intact growing proof](optional/S9/GROWING_RESULT.md),
+  [signed-layer limit](optional/S9/LAYER_MEASURE.md), and
+  [independent audit](optional/S9/repair-review/INDEPENDENT_AUDIT.md).
+  The original proof's equation references to RESULT.md refer to GROWING_RESULT.md
+  in this curated packet. Run `python optional/S9/repair-review/check_growing_proofs.py`
+  for the bounded independent arithmetic checks.
+- [S6 reviewed round-four scope and replay](optional/S6/round4/README.md).
+  Its source/ directory preserves the complete ZIP contents, so its documented
+  standard-library replay is self-contained. Read the proof before using the
+  sign extension or the real-q estimate as a premise.
+
+The broad target remains open. Advance beyond these results in future work.
