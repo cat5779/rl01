@@ -25,8 +25,9 @@
 - Status: **ACTIVE SCOUT**.
 - Category: Toeplitz/local-limit statistical mechanics.
 - Target: identify limits of `A_k`, `E_k`, and `d_k` directly.
-- New paired diagnostics: `d_k=0.7588+/-0.0112` at `n=40` and
-  `0.6779+/-0.0141` at `n=60`.  These support a positive central profile even
+- New paired diagnostics: `d_k=0.7588+/-0.0112` at `n=40`,
+  `0.6779+/-0.0141` at `n=60`, and `0.5714+/-0.0161` at `n=80`.
+  These support a positive central profile even
   though `E_k` has already outgrown the conservative analytic lower bound for
   `A_k`.
 - Risk: proving existence of the entropy increment may be as hard as the

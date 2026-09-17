@@ -88,7 +88,7 @@ PRO01–PRO03 的理论构造任务，不与那些网页版研究任务争夺同
 | 任务 | 状态 | 下一验收点 |
 |---|---|---|
 | C01 SA05 n=8 | FINITE_CERTIFIED | 严格有限符号证书及 256 原子独立回归均完成 |
-| C02 SA04 中央尺度 | EXPLORATORY + PROVED SUBLEMMA | `n=40,60` 配对诊断支持正中央差；继续完整交换极限 |
+| C02 SA04 中央尺度 | EXPLORATORY + PROVED SUBLEMMA | `n=40,60,80` 配对诊断支持正中央差；继续完整交换极限 |
 | C03 SA03 截断判号 | ACTIVE EXPLORATORY | 全 word 到 `R=9` 支持正平均；逐 word 正性已反例淘汰 |
 
 ## 运行
