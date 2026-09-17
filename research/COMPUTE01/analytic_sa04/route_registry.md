@@ -45,9 +45,10 @@
   values lie in `[0.965,1.040]`.  The second bounded, decreasing-to-the-tail
   profile strengthens the window route without fixing a limiting curve.
 - An independent higher-statistics `n=120` checkpoint reproduces the center
-  and offset-two values and resolves the first four offsets as
-  `4.11,6.42,7.39,7.54`.  Thus the finite off-center peak is robust, although
-  offsets two and three are not yet statistically separated.
+  and offset-two values and resolves offsets zero through six as
+  `4.11,6.42,7.39,7.54,7.16,6.84,6.34`.  Thus the finite off-center peak is
+  robust and localized to offsets two or three; the subsequent decline is
+  resolved.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 
