@@ -9,5 +9,6 @@
 | Negative wordwise-kernel example at R=9,u=1 | checked in current run | kills ROUTE-2 |
 | Bare half-parameter budget | finite-grid counterexample | kills an over-strong ROUTE-3 closure |
 | Bregman-compensated half-parameter budget | survives R<=9 grid, unproved | focused ROUTE-3 candidate |
+| True-DPP large-radius scout | calibrated; positive through R=80 | supports ROUTE-3 at high contrast |
 | Expected high-contrast budget inequality | open | smallest analytic bottleneck |
 | Positive sign of Gamma(19/20) | open | frozen target |

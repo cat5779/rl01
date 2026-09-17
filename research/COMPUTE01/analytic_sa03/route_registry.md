@@ -36,10 +36,14 @@
 
 ## ROUTE-4: large-R true-DPP sampling
 
-- Status: **ACTIVE SCOUT**.
+- Status: **COMPLETED SCOUT THROUGH R=80**.
 - The sampler is calibrated against exact full-word enumeration.  It is used
-  to decide whether ROUTE-3 remains plausible at `R=20,40,80`, not to certify
-  `Gamma`.
+  to decide whether ROUTE-3 remains plausible, not to certify `Gamma`.
+- Results: `A_R''=7.699+/-0.026,9.504+/-0.039,11.225+/-0.051` at
+  `R=20,40,80`.  The Bregman-compensated half-parameter margins are
+  `0.701,1.123,1.521`, all positive.
+- Calibration: at `R=7`, the sampler differs from exhaustive enumeration by
+  `-0.39` reported standard errors.
 
 ## ROUTE-5: weak-coupling series at `c=19/20`
 
