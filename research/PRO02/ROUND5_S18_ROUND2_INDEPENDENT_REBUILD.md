@@ -16,6 +16,13 @@ certificate.  It did find the older same-author six-site pair witness at
 independent source.  The checks below instead rebuild the atoms and derivatives
 directly from the finite sine kernel.
 
+The specifically suggested directory `C:\Users\UIO\Desktop\20260907` contains
+`RESULTS18` and `PRO02_checks S18`, but SHA-256 comparison shows that they are
+byte-for-byte identical to the already archived `S18_RESULT.md` and
+`checks/S18_PRO02_checks.py` respectively (`0B7F4860...C355B` and
+`EE2F53C5...BD2DF`).  They are the recovered Round 1 artifacts, not the missing
+Round 2 attachments.
+
 ## Independent method
 
 At half density, with `c=19/20`, put
