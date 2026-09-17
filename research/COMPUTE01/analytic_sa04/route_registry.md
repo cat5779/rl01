@@ -11,12 +11,14 @@
 
 ## ROUTE-2: central entropy-dissipation estimate
 
-- Status: **PROMOTED / INCOMPLETE**.
+- Status: **PARTLY BLOCKED / REDIRECTED**.
 - Category: reversible Dirichlet forms and association schemes.
-- Target lemma: an explicit `limsup E_k<2c^4/9`, or a stronger bound that can
-  be paired with R1.
-- Fast falsification test: compute a certified or asymptotic lower estimate for
-  `E_k`; if it exceeds the R1 constant, the witness must be strengthened.
+- Proved reduction: the bridge is a Poisson number of exchanges with mean
+  tending to `1/2`.
+- Failed subroute: the left-endpoint dissipation bound would require
+  `limsup J_k<4c^4/9`; finite exact values already rise above that threshold.
+- Redirected target: control the full finite-exchange entropy cost or its local
+  weak limit, retaining dissipation decay within the bridge.
 
 ## ROUTE-3: limiting central profile
 

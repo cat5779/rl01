@@ -79,3 +79,25 @@ Across `n=6,8,...,20`:
 Detailed layer records are in `sa04_central_scale_result.json` (`n<=16`) and
 `sa04_central_scale_large_result.json` (`n=18,20`).
 
+## Central bridge diagnostic
+
+The program also evaluates the entropy dissipation at the left endpoint of the
+central clock bridge.  Dividing by the raw jump rate gives the expected
+log-density loss `J_k` of one active exchange.
+
+| `n` | bridge mean jumps `tau_k` | one-exchange loss `J_k` | actual `E_k` | monotonicity upper bound |
+|---:|---:|---:|---:|---:|
+| 6 | 0.002620 | 0.085935 | 0.000224 | 0.000225 |
+| 8 | 0.004897 | 0.223604 | 0.001089 | 0.001095 |
+| 10 | 0.007801 | 0.376350 | 0.002909 | 0.002936 |
+| 12 | 0.011316 | 0.527448 | 0.005890 | 0.005968 |
+| 14 | 0.015419 | 0.670232 | 0.010156 | 0.010334 |
+| 16 | 0.020086 | 0.802366 | 0.015774 | 0.016116 |
+| 18 | 0.025289 | 0.923445 | 0.022768 | 0.023353 |
+| 20 | 0.030999 | 1.033906 | 0.031132 | 0.032050 |
+
+This rejects the crude initial-dissipation upper bound as the main asymptotic
+route: closing the analytic deletion lower bound through that inequality would
+require `limsup J_k<4c^4/9≈0.3620`, while the exact finite values have already
+crossed and moved away from that threshold.  The full finite-exchange bridge,
+not its left derivative alone, must be retained.

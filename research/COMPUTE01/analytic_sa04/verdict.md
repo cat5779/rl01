@@ -9,5 +9,8 @@
   or strengthen the witness until it dominates the sharp `E_k` estimate.
 - The clock-gap asymptotic is settled: its mean jump count tends to `1/2`, so
   vanishing raw time does not remove the entropy-cost obstruction.
+- A bound using only the initial entropy dissipation is too crude on current
+  exact diagnostics.  Further work should analyze the complete Poissonized
+  finite-exchange channel, not extrapolate the derivative at the left endpoint.
 - Research value: the sublemma rules out vanishing of the deletion mechanism
   itself and localises all possible cancellation in the clock term.

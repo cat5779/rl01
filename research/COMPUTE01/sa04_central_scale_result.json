@@ -47,6 +47,14 @@
         "w_l": 10.865648437500003,
         "w_l_times_d_l": 1.6988857173099794
       },
+      "central_bridge": {
+        "time_gap": 0.000327546827172694,
+        "mean_jump_count": 0.002620374617381552,
+        "initial_entropy_dissipation": 0.6874765995614598,
+        "initial_per_jump_entropy_dissipation": 0.08593457494518247,
+        "monotonicity_upper_bound_for_E_k": 0.00022518077894182883,
+        "actual_E_k": 0.0002244091493439973
+      },
       "W_from_weighted_transport": -3.807993163451714,
       "W_from_direct_curvature": -3.8079931634517137,
       "W_identity_error": -4.440892098500626e-16,
@@ -106,6 +114,14 @@
         "sqrt_n_times_d_l": 0.7087915824569297,
         "w_l": 17.249187177734377,
         "w_l_times_d_l": 4.322571569489965
+      },
+      "central_bridge": {
+        "time_gap": 0.0003264768982238363,
+        "mean_jump_count": 0.004897153473357545,
+        "initial_entropy_dissipation": 3.3540645081720997,
+        "initial_per_jump_entropy_dissipation": 0.22360430054480665,
+        "monotonicity_upper_bound_for_E_k": 0.0010950245770706842,
+        "actual_E_k": 0.001088584531882708
       },
       "W_from_weighted_transport": -10.669975385622568,
       "W_from_direct_curvature": -10.66997538562257,
@@ -177,6 +193,14 @@
         "sqrt_n_times_d_l": 1.0571085467105532,
         "w_l": 24.660841287789914,
         "w_l_times_d_l": 8.243800480507812
+      },
+      "central_bridge": {
+        "time_gap": 0.0003250600736861028,
+        "mean_jump_count": 0.007801441768466467,
+        "initial_entropy_dissipation": 9.03239063961402,
+        "initial_per_jump_entropy_dissipation": 0.3763496099839175,
+        "monotonicity_upper_bound_for_E_k": 0.0029360695668745984,
+        "actual_E_k": 0.0029088874479645532
       },
       "W_from_weighted_transport": -21.96880736342835,
       "W_from_direct_curvature": -21.968807363428347,
@@ -259,6 +283,14 @@
         "sqrt_n_times_d_l": 1.41007349497304,
         "w_l": 32.92810589153603,
         "w_l_times_d_l": 13.403489422602913
+      },
+      "central_bridge": {
+        "time_gap": 0.0003233045342757766,
+        "mean_jump_count": 0.011315658699652181,
+        "initial_entropy_dissipation": 18.460689783495834,
+        "initial_per_jump_entropy_dissipation": 0.5274482795284524,
+        "monotonicity_upper_bound_for_E_k": 0.005968424712862708,
+        "actual_E_k": 0.005889730543128635
       },
       "W_from_weighted_transport": -38.06284051653586,
       "W_from_direct_curvature": -38.062840516535864,
@@ -352,6 +384,14 @@
         "sqrt_n_times_d_l": 1.7578512821100603,
         "w_l": 41.90038744093243,
         "w_l_times_d_l": 19.685033173883514
+      },
+      "central_bridge": {
+        "time_gap": 0.0003212202933367991,
+        "mean_jump_count": 0.015418574080166357,
+        "initial_entropy_dissipation": 32.17114469246842,
+        "initial_per_jump_entropy_dissipation": 0.670232181093092,
+        "monotonicity_upper_bound_for_E_k": 0.010334024535095312,
+        "actual_E_k": 0.010155713214398454
       },
       "W_from_weighted_transport": -59.072052484379455,
       "W_from_direct_curvature": -59.07205248437946,
@@ -456,6 +496,14 @@
         "sqrt_n_times_d_l": 2.0945661645664804,
         "w_l": 51.4464612515592,
         "w_l_times_d_l": 26.9395042560491
+      },
+      "central_bridge": {
+        "time_gap": 0.0003188190629795702,
+        "mean_jump_count": 0.020085600967712922,
+        "initial_entropy_dissipation": 50.54906045608796,
+        "initial_per_jump_entropy_dissipation": 0.8023660389855232,
+        "monotonicity_upper_bound_for_E_k": 0.01611600408910761,
+        "actual_E_k": 0.0157736076559144
       },
       "W_from_weighted_transport": -84.95586191118512,
       "W_from_direct_curvature": -84.95586191118515,

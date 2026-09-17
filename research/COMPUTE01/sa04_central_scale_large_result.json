@@ -113,6 +113,14 @@
         "w_l": 61.452211190662894,
         "w_l_times_d_l": 35.00212067915414
       },
+      "central_bridge": {
+        "time_gap": 0.00031611410088185646,
+        "mean_jump_count": 0.025289128070548516,
+        "initial_entropy_dissipation": 73.87560172504105,
+        "initial_per_jump_entropy_dissipation": 0.9234450215630131,
+        "monotonicity_upper_bound_for_E_k": 0.023353119416417475,
+        "actual_E_k": 0.02276792522370974
+      },
       "W_from_weighted_transport": -115.56586681336007,
       "W_from_direct_curvature": -115.56586681336005,
       "W_identity_error": -2.842170943040401e-14,
@@ -238,6 +246,14 @@
         "sqrt_n_times_d_l": 2.721404277839734,
         "w_l": 71.81862102354685,
         "w_l_times_d_l": 43.70339015823803
+      },
+      "central_bridge": {
+        "time_gap": 0.0003131200413197763,
+        "mean_jump_count": 0.03099888409065785,
+        "initial_entropy_dissipation": 102.35673520221906,
+        "initial_per_jump_entropy_dissipation": 1.0339064161840308,
+        "monotonicity_upper_bound_for_E_k": 0.03204994515587623,
+        "actual_E_k": 0.031131594097667192
       },
       "W_from_weighted_transport": -150.6827814432701,
       "W_from_direct_curvature": -150.68278144327004,

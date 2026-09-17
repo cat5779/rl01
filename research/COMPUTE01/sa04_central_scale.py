@@ -185,6 +185,36 @@ def layer_entropy(
     return entropy, diagnostics
 
 
+def layer_entropy_dissipation(
+    n: int,
+    layer: int,
+    time: float,
+    overlap_data: tuple[np.ndarray, np.ndarray],
+) -> float:
+    """Return -d/ds F_l(s) at the specified original time."""
+    overlap, multiplicities = overlap_data
+    chain = chain_law(n, layer, time)
+    chain_derivative = chain @ birth_death_generator(n, layer)
+    shell_sizes = np.array(
+        [comb(n // 2, layer - radius) * comb(n // 2, radius) for radius in range(layer + 1)],
+        dtype=np.float64,
+    )
+    state_count = comb(n, layer)
+    density = state_count * (overlap @ (chain / shell_sizes))
+    density_derivative = state_count * (
+        overlap @ (chain_derivative / shell_sizes)
+    )
+    mass_derivative = float(np.dot(multiplicities, density_derivative) / state_count)
+    if abs(mass_derivative) > 2e-9:
+        raise AssertionError(
+            f"density derivative has nonzero mass n={n}, l={layer}: {mass_derivative}"
+        )
+    entropy_derivative = float(
+        np.dot(multiplicities, density_derivative * np.log(density)) / state_count
+    )
+    return -entropy_derivative
+
+
 def convolve(left: list[Fraction], right: list[Fraction]) -> list[Fraction]:
     output = [Fraction(0) for _ in range(len(left) + len(right) - 1)]
     for left_degree, left_value in enumerate(left):
@@ -281,6 +311,28 @@ def diagnose_n(n: int) -> dict[str, object]:
         for index in range(n - 1)
     )
 
+    central_previous_layer = k - 1
+    central_gap = times[k] - times[central_previous_layer]
+    central_rate = central_previous_layer * (n - central_previous_layer)
+    initial_bridge_dissipation = layer_entropy_dissipation(
+        n,
+        central_previous_layer,
+        times[central_previous_layer],
+        overlap_cache[central_previous_layer],
+    )
+    central_bridge = {
+        "time_gap": central_gap,
+        "mean_jump_count": central_rate * central_gap,
+        "initial_entropy_dissipation": initial_bridge_dissipation,
+        "initial_per_jump_entropy_dissipation": (
+            initial_bridge_dissipation / central_rate
+        ),
+        "monotonicity_upper_bound_for_E_k": (
+            central_gap * initial_bridge_dissipation
+        ),
+        "actual_E_k": records[-1]["E_l"],
+    }
+
     return {
         "n": n,
         "k": k,
@@ -288,6 +340,7 @@ def diagnose_n(n: int) -> dict[str, object]:
         "max_density_mean_error": max_density_mass_error,
         "layers": records,
         "central": records[-1],
+        "central_bridge": central_bridge,
         "W_from_weighted_transport": weighted_transport,
         "W_from_direct_curvature": direct_curvature,
         "W_identity_error": weighted_transport - direct_curvature,

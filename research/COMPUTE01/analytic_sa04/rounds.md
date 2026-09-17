@@ -18,3 +18,14 @@
   to zero, hence E_k tends to zero".
 - The remaining object is the limiting entropy cost of that finite exchange
   window.
+
+## Round 3
+
+- Rewrote the bridge exactly as a Poisson number of discrete exchanges with
+  mean `tau_k->1/2`.
+- Reduced the monotonicity-only route to a one-exchange entropy loss `J_k`.
+- Exact evaluation through `n=20` gives `J_k=1.0339`, already well above the
+  sufficient threshold `4c^4/9≈0.3620`; the values rise over the tested range.
+- Retired the crude left-endpoint dissipation bound as the primary route.
+- Promoted the full finite-exchange/Palm-limit calculation, which retains the
+  entropy-dissipation decay over the bridge.
