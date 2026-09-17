@@ -11,3 +11,5 @@ RESULT.md 为建议交付名，无仓库写权限时直接交正文。不要求�
 随后从本地下载目录恢复了 S18 完整正文与配套脚本，分别收入 `S18_RESULT.md` 和 `checks/S18_PRO02_checks.py`。范围内复现审计与严格加强见 `ROUND3_REPRODUCTION.md`、`ROUND3_S18_AUDIT_AND_REFINEMENT.md`：S18 四个承重点和原脚本均已核对，新充分条件同时使用尖锐 `c^2` 储备折扣、变分容量与 sine-specific 完整 pair-cut。大窗口 `W_(m,L)` 的认证负上界仍未得到，因此 PR 继续保持不请求合并的研究状态。
 
 平衡线上的方法比较、闭合尺度和严格前沿见 `ROUND4_C37_TO_ONE_ADVANTAGE_BOUNDARY.md`，复核入口见 `ROUND4_VERIFICATION.md`。新增证书把原双预算沿平衡线延伸到 `c=937/1000`，并在 `c=15/16` 给出严格有理障碍；在 `c=19/20` 的实际十点 sine 后验上，Arb 进一步认证旧 pointwise pair 比较失败。新定位式相对 S18 将同口径窗口尺度缩小约 `12.59` 倍，但尚未在 `c=19/20` 给出不借用旧曲率的大窗口负界，故仍不请求合并。
+
+S18 Round 2 可见回复的新有限体积结论由 `ROUND5_S18_ROUND2_INDEPENDENT_REBUILD.md` 独立重建，入口为 `checks/verify_s18_round2_finite.py`。它不依赖缺失附件，逐原子 Arb 复核 `n=6`、`n=12`、完整六坐标 Hessian、六点邻域及首次 `6 -> 12` 总相关修正；有限结论成立，但全尺度/熵率曲率仍未闭合。

@@ -8,6 +8,7 @@ ROUND3_S18_AUDIT_AND_REFINEMENT.md
 ROUND3_REPRODUCTION.md
 ROUND4_C37_TO_ONE_ADVANTAGE_BOUNDARY.md
 ROUND4_VERIFICATION.md
+ROUND5_S18_ROUND2_INDEPENDENT_REBUILD.md
 PROVENANCE.json
 README.md
 SOL_REVIEW.md
@@ -33,4 +34,5 @@ checks/c37_sine_reveal.py
 checks/c95_sine_pair_obstruction.py
 checks/verify_c37_midpoint_pair.py
 checks/verify_midpoint_interval.py
+checks/verify_s18_round2_finite.py
 checks/.gitignore
