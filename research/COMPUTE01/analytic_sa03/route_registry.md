@@ -44,6 +44,9 @@
   `0.701,1.123,1.521`, all positive.
 - Calibration: at `R=7`, the sampler differs from exhaustive enumeration by
   `-0.39` reported standard errors.
+- Optimization audit: the 123-minute recomputing-eigendecomposition path and
+  the precomputed-eigendecomposition path agree in all 1,057 numeric fields to
+  maximum absolute error `8.53e-14`, with no structural mismatch.
 
 ## ROUTE-5: weak-coupling series at `c=19/20`
 

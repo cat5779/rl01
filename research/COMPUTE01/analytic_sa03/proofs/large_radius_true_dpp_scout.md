@@ -41,6 +41,14 @@ enumeration gives `5.409329`; the discrepancy is `-0.39` reported standard
 errors.  This checks the complete sampling, local-kernel, and quadrature path
 against the finite exact implementation.
 
+The original slow path, which recomputes the DPP eigendecomposition for every
+sample, was also allowed to complete all `R=20,40,80` nodes (about 123 minutes)
+with the same seed.  A recursive comparison against the optimized path, which
+precomputes one eigendecomposition per quadrature node, found 1,057 numeric
+fields, no structural or nonnumeric mismatch, and maximum absolute numerical
+difference `8.53e-14`.  Thus the optimization changes floating-point evaluation
+order only; it does not change any reported sign, component budget, or error.
+
 The values increasing through `R=80` do not prove divergence or a limit;
 the volume theorem already supplies a finite limiting object.  This scout only
 selects the sign mechanism and the high-contrast region needing proof.

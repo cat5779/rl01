@@ -13,3 +13,7 @@
   `7.699,9.504,11.225` at `R=20,40,80`, with naive standard errors below
   `0.051`.  This materially supports `Gamma(19/20)>0`, but does not certify the
   infinite-volume sign.
+- A complete 123-minute slow-path rerun agrees with the optimized sampler in
+  all 1,057 numeric fields to `8.53e-14` maximum absolute error.  The large-R
+  evidence is therefore insensitive to the eigendecomposition caching
+  optimization.
