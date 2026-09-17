@@ -25,6 +25,14 @@
 - Target: compare the expected parameter-derivative block plus
   `phi''-8` against the expected negative transport block, using the true DPP
   integration-by-parts structure.
+- A tempting sharper subclaim,
+  `E[transport]+(1/2)E[parameter derivative]>=0`, is **DISPROVED** by the
+  exhaustive finite scan from `R=3` onward.
+- The compensated candidate
+  `E[Bregman phi-prime]+(1/2)E[parameter derivative]+E[transport]>=0`
+  survives the `R<=9` grid.  Its smallest margins occur at the weak-coupling
+  endpoint and approach zero, so a proof must retain the Bregman term rather
+  than round the observed ratio to one half.
 
 ## ROUTE-4: large-R true-DPP sampling
 

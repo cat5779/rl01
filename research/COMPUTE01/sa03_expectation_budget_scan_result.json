@@ -1,0 +1,230 @@
+{
+  "status": "FINITE_GRID_COUNTEREXAMPLE_SEARCH",
+  "results": [
+    {
+      "R": 1,
+      "grid_points": 25,
+      "worst_transport_plus_half_parameter": {
+        "margin": 0.0001281757170854443,
+        "components": {
+          "u": 0.5,
+          "curvature_minus_8": 0.01677599856359402,
+          "bregman_phi_prime": 0.00025631474123767595,
+          "parameter_derivative": 0.017014797153830773,
+          "signed_transport": -0.008379222859829942
+        }
+      },
+      "worst_bregman_plus_transport_plus_half_parameter": {
+        "margin": 0.00038449045832312026,
+        "components": {
+          "u": 0.5,
+          "curvature_minus_8": 0.01677599856359402,
+          "bregman_phi_prime": 0.00025631474123767595,
+          "parameter_derivative": 0.017014797153830773,
+          "signed_transport": -0.008379222859829942
+        }
+      },
+      "worst_complete_residual": {
+        "margin": 0.025667887598832526,
+        "components": {
+          "u": 0.5,
+          "curvature_minus_8": 0.01677599856359402,
+          "bregman_phi_prime": 0.00025631474123767595,
+          "parameter_derivative": 0.017014797153830773,
+          "signed_transport": -0.008379222859829942
+        }
+      },
+      "largest_required_parameter_fraction": {
+        "fraction": 0.47740258347796083,
+        "components": {
+          "u": 0.5,
+          "curvature_minus_8": 0.01677599856359402,
+          "bregman_phi_prime": 0.00025631474123767595,
+          "parameter_derivative": 0.017014797153830773,
+          "signed_transport": -0.008379222859829942
+        }
+      }
+    },
+    {
+      "R": 3,
+      "grid_points": 25,
+      "worst_transport_plus_half_parameter": {
+        "margin": -0.004569998698694178,
+        "components": {
+          "u": 0.78125,
+          "curvature_minus_8": 0.5681399903440268,
+          "bregman_phi_prime": 0.054966960765183724,
+          "parameter_derivative": 0.7371535754052705,
+          "signed_transport": -0.3731467864013294
+        }
+      },
+      "worst_bregman_plus_transport_plus_half_parameter": {
+        "margin": 3.3925857442921804e-05,
+        "components": {
+          "u": 0.25,
+          "curvature_minus_8": 0.00529846347106113,
+          "bregman_phi_prime": 4.54828684340952e-05,
+          "parameter_derivative": 0.005416390452634011,
+          "signed_transport": -0.002719752237308179
+        }
+      },
+      "worst_complete_residual": {
+        "margin": 0.008040584554821057,
+        "components": {
+          "u": 0.25,
+          "curvature_minus_8": 0.00529846347106113,
+          "bregman_phi_prime": 4.54828684340952e-05,
+          "parameter_derivative": 0.005416390452634011,
+          "signed_transport": -0.002719752237308179
+        }
+      },
+      "largest_required_parameter_fraction": {
+        "fraction": 0.49373644538007344,
+        "components": {
+          "u": 0.25,
+          "curvature_minus_8": 0.00529846347106113,
+          "bregman_phi_prime": 4.54828684340952e-05,
+          "parameter_derivative": 0.005416390452634011,
+          "signed_transport": -0.002719752237308179
+        }
+      }
+    },
+    {
+      "R": 5,
+      "grid_points": 25,
+      "worst_transport_plus_half_parameter": {
+        "margin": -0.0074359773671826,
+        "components": {
+          "u": 0.7222222222222222,
+          "curvature_minus_8": 0.6456887510265497,
+          "bregman_phi_prime": 0.06662933541224747,
+          "parameter_derivative": 0.8647867979315729,
+          "signed_transport": -0.43982937633296904
+        }
+      },
+      "worst_bregman_plus_transport_plus_half_parameter": {
+        "margin": 5.173844788714244e-06,
+        "components": {
+          "u": 0.16666666666666666,
+          "curvature_minus_8": 0.0015962210706505892,
+          "bregman_phi_prime": 7.5001490646720585e-06,
+          "parameter_derivative": 0.0016162769174365428,
+          "signed_transport": -0.0008104647629942292
+        }
+      },
+      "worst_complete_residual": {
+        "margin": 0.0024095333741575744,
+        "components": {
+          "u": 0.16666666666666666,
+          "curvature_minus_8": 0.0015962210706505892,
+          "bregman_phi_prime": 7.5001490646720585e-06,
+          "parameter_derivative": 0.0016162769174365428,
+          "signed_transport": -0.0008104647629942292
+        }
+      },
+      "largest_required_parameter_fraction": {
+        "fraction": 0.49679891191113457,
+        "components": {
+          "u": 0.16666666666666666,
+          "curvature_minus_8": 0.0015962210706505892,
+          "bregman_phi_prime": 7.5001490646720585e-06,
+          "parameter_derivative": 0.0016162769174365428,
+          "signed_transport": -0.0008104647629942292
+        }
+      }
+    },
+    {
+      "R": 7,
+      "grid_points": 25,
+      "worst_transport_plus_half_parameter": {
+        "margin": -0.009939089215559305,
+        "components": {
+          "u": 0.7083333333333334,
+          "curvature_minus_8": 0.7439595457269832,
+          "bregman_phi_prime": 0.08305288670147927,
+          "parameter_derivative": 1.0306267612907254,
+          "signed_transport": -0.525252469860922
+        }
+      },
+      "worst_bregman_plus_transport_plus_half_parameter": {
+        "margin": 1.163901780055548e-06,
+        "components": {
+          "u": 0.125,
+          "curvature_minus_8": 0.0006147786182270525,
+          "bregman_phi_prime": 1.7881720076674953e-06,
+          "parameter_derivative": 0.0006196686415102292,
+          "signed_transport": -0.00031045859098272657
+        }
+      },
+      "worst_complete_residual": {
+        "margin": 0.0009257768407622228,
+        "components": {
+          "u": 0.125,
+          "curvature_minus_8": 0.0006147786182270525,
+          "bregman_phi_prime": 1.7881720076674953e-06,
+          "parameter_derivative": 0.0006196686415102292,
+          "signed_transport": -0.00031045859098272657
+        }
+      },
+      "largest_required_parameter_fraction": {
+        "fraction": 0.49812173522736447,
+        "components": {
+          "u": 0.125,
+          "curvature_minus_8": 0.0006147786182270525,
+          "bregman_phi_prime": 1.7881720076674953e-06,
+          "parameter_derivative": 0.0006196686415102292,
+          "signed_transport": -0.00031045859098272657
+        }
+      }
+    },
+    {
+      "R": 9,
+      "grid_points": 25,
+      "worst_transport_plus_half_parameter": {
+        "margin": -0.012302283104608458,
+        "components": {
+          "u": 0.7,
+          "curvature_minus_8": 0.8072005206309956,
+          "bregman_phi_prime": 0.09434626044883673,
+          "parameter_derivative": 1.1444050601059004,
+          "signed_transport": -0.5845048131575586
+        }
+      },
+      "worst_bregman_plus_transport_plus_half_parameter": {
+        "margin": 3.44972016684723e-07,
+        "components": {
+          "u": 0.1,
+          "curvature_minus_8": 0.00028222214420950057,
+          "bregman_phi_prime": 5.550531349997229e-07,
+          "parameter_derivative": 0.0002837669184534172,
+          "signed_transport": -0.0001420935403450236
+        }
+      },
+      "worst_complete_residual": {
+        "margin": 0.0004244505754528939,
+        "components": {
+          "u": 0.1,
+          "curvature_minus_8": 0.00028222214420950057,
+          "bregman_phi_prime": 5.550531349997229e-07,
+          "parameter_derivative": 0.0002837669184534172,
+          "signed_transport": -0.0001420935403450236
+        }
+      },
+      "largest_required_parameter_fraction": {
+        "fraction": 0.4987843120735677,
+        "components": {
+          "u": 0.1,
+          "curvature_minus_8": 0.00028222214420950057,
+          "bregman_phi_prime": 5.550531349997229e-07,
+          "parameter_derivative": 0.0002837669184534172,
+          "signed_transport": -0.0001420935403450236
+        }
+      }
+    }
+  ],
+  "conclusion": "The coefficient-1/2 transport/parameter inequality is false on the finite grid. Adding the expected Bregman-phi-prime term survives this scan, but remains unproved.",
+  "limitations": [
+    "The u grid is finite and binary64; positive margins are not certificates.",
+    "Only radii explicitly listed in the receipt are covered."
+  ]
+}

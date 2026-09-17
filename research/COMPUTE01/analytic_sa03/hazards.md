@@ -9,3 +9,6 @@
 5. A positive `Gamma` proves eventual positivity only for the truncated
    production curvature.  The entropy-rate derivative bridge remains a
    separate obligation.
+6. The observed transport/parameter ratio is close to one half, but the bare
+   coefficient-one-half inequality is false.  Dropping the Bregman-phi-prime
+   compensation loses the sign.

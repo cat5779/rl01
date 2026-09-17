@@ -6,3 +6,6 @@
 - Surviving line: prove an expectation-level compensated inequality under the
   true DPP law.  The data say to invest in the parameter-derivative budget and
   its cancellation with transport, not in pointwise positivity.
+- The currently sharp candidate must include the Bregman-phi-prime term; the
+  simpler `transport + parameter/2 >= 0` statement already has finite
+  counterexamples.
