@@ -1,0 +1,33 @@
+{
+  "status": "DISPROVED_ROUTE_LEMMA",
+  "review_status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATE; INDEPENDENT_REVIEW_PENDING",
+  "family": "True contiguous Toeplitz compressions of the half-density sine projection",
+  "kernel": "a I + (19/20) T_B(1_[-1/4,1/4])",
+  "rho": "1/2",
+  "c": "19/20",
+  "a_interval": [
+    "1/50",
+    "3/100"
+  ],
+  "pair_lag": 5,
+  "gamma_upper": "2",
+  "positive_part_placement": "E[(max(g,0)-gamma*W)_+], not (E[g]-gamma*E[W])_+",
+  "buffer_L0": 2020000,
+  "cylinder_sites": 4040004,
+  "conditional_excess_margin": "1/12",
+  "kappa_exact_expression": "1 / (12 * 50**4040004)",
+  "finite_bound": "sum_{i=0}^{n-6} E[(g_{i,i+5,+}-gamma W_{i,i+5})_+] >= max(n-4040005,0)*kappa",
+  "local_table_bound": "For every L>=2020000, the exact S7 table p^(5,L) has E[(g_+-gamma W)_+] >= kappa",
+  "n_for_half_linear_bound": 8080010,
+  "rejected_rule": "Vanishing o(n) total expected positive exceptions to the combined two-budget comparison with gamma<=2",
+  "not_claimed": [
+    "entropy concavity or its negation",
+    "sign of the full signed near field",
+    "positive signed average g-2W",
+    "independent acceptance",
+    "root MANIFEST.sha256 regeneration through this connector"
+  ],
+  "proof": "PROOF.md",
+  "scalar_certificate": "code/verify_reference_payment.py",
+  "analytic_constants": "code/verify_analytic_constants.py"
+}

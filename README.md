@@ -1,7 +1,19 @@
-# rl01
+# 正弦 DPP 熵率研究协作
 
-## Research handoff packets
+**完整高对比度凹性目标仍未解决。** 本库只放协作需要的当前题面、已审成果与研究任务；研究主库保留完整历史。
 
-- [Sine entropy research: browser-agent round-four handoff](sine-entropy/round4/START_HERE.md) — reviewed inputs, failed-method map, optional proofs and exact fixtures, and separate S4/S5/S6 assignments. The full high-contrast target remains open. Browser researchers return a self-contained ZIP; no repository write access is required.
+| 要找什么 | 从这里进入 |
+|---|---|
+| 目前证明到哪里、还卡在哪里 | [进展](STATUS.md) |
+| 精确定义和最终目标 | [题面](TARGET.md) |
+| 下一轮可独立研究的五题 | [任务](tasks/README.md) |
+| 证明、审查与必要复验代码 | [成果目录](RESULTS.md) |
+| 已失败的方法及适用边界 | [方法记录](METHODS.md) |
 
-Latest reviewed mathematics: [2026-09-17 synchronization](sine-entropy/round4/START_HERE.md). This is a curated handoff, not a full mirror of the research repository.
+目录只有 `results/路线/` 与 `tasks/` 两个主体。证明和审查一起放；必要代码/数据最多再下一层。累计 ZIP、重复来源副本、过期调度记录不再铺在当前目录中。
+
+网页版研究者按对应任务交付正文和代码，最终回复一个自包含 ZIP 即可；无需维护本库，也不把哈希校验作为数学成果的验收门槛。外部智能体 S20/S21 仍直接向原 PR 交付。
+
+PR118 的五题按已完成审查的版本同步，其后关于进一步明确“创造工具”的修改仍由原任务处理。任务04研究修正律，任务05研究真实律桥接，两者不得混为已解决的真实熵问题。
+
+完整旧版与旧脚本见 [整理前快照](https://github.com/cat5779/rl01/tree/7f081d311ced85cbf850605646808425f6b70129)；原来固定提交的下载链接继续有效。两库同步的是已审数学成果与工作题面，不是逐文件镜像。同步来源与搬迁表见 [SYNC.json](SYNC.json)。

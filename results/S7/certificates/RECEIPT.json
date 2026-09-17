@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "review_status": "same-author reproduction; independent review pending",
+  "checked_at_runtime_utc": "2026-09-17T04:19:43Z",
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "publication_repair": "The first PR111 result commit omitted all three verifier scripts and all six per-run certificate JSON files. This repair adds them. The six-site witness reproduces the historical logical canonical payload hash exactly. The identities and localization scripts were reconstituted from the committed proof statements after the earlier transient local workspace was unavailable, then rerun in normal and optimized mode.",
+  "comparison_ignores": ["elapsed_seconds_diagnostic"],
+  "committed_json_serialization": "After removing elapsed_seconds_diagnostic, json.dumps(obj, separators=(',', ':')) + '\\n'. The normal and optimized file in each pair are therefore byte-identical and share one Git blob.",
+  "pairs": [
+    {
+      "name": "pair_witness",
+      "status": "CERTIFIED_FINITE_ROUTE_OBSTRUCTION",
+      "normal_optimized_payload_identical": true,
+      "committed_sha256": "dd172332e7edd7af8cc4fff1978f2e356af8c40dd3ca8282553595c50a2ba61c",
+      "historical_pretty_payload_sha256": "2ca70c96b9f5991f6fc2b13adfc295b94abd9d6cf5809051e153445f3989cc3a",
+      "script_sha256": "592ad56c3474f9388a2cce2579397d13e58d3396d6298d767f8f42297f626a6a",
+      "raw_normal_sha256": "909b7e21a8ba1aba53dc80746806e750f833a002e2d6715199a7d50a224fc3dc",
+      "raw_optimized_sha256": "30dcf5a5c4cdefdb9d3eff9296766b4519737ea6a8b18dde733cb18473b66a1a",
+      "raw_elapsed_seconds_diagnostic": {"normal": 0.25703991800003223, "optimized": 0.24805211900002178}
+    },
+    {
+      "name": "identities",
+      "status": "PASS",
+      "individual_checks": 1004,
+      "normal_optimized_payload_identical": true,
+      "committed_sha256": "01a7c81b2952f711b7792cf96e024d6e01c3be9b406f6daae7cd6518b6eb9a14",
+      "script_sha256": "554f5fbe6c79efa5418d5f269f2bbdf4cede2ad90d7bca7c2f916811cc072ca8",
+      "raw_normal_sha256": "d39d5e065e2bfb42ed7fb99fd46f3ef72ae4af431aa27815c88ae4ae596b8d44",
+      "raw_optimized_sha256": "09b1fb789e183be3e671104526ebd8896038976315a30ae8028b7049cb27310c",
+      "raw_elapsed_seconds_diagnostic": {"normal": 0.0777087399999914, "optimized": 0.08371417899999756}
+    },
+    {
+      "name": "localization",
+      "status": "PASS",
+      "individual_checks": 8049,
+      "cases": 168,
+      "fixed_completion_case_counts": {"ones": 96, "zeros": 72},
+      "normal_optimized_payload_identical": true,
+      "committed_sha256": "f94a2b9abbaa9603f9121ee9d3aebfa0f848680358791f9559b54a0415759014",
+      "script_sha256": "278757cd0ffa850d3ecccf1fb034bc4793742050f07b3605520f03c3f1ac23a3",
+      "raw_normal_sha256": "c2f18f33a7d73ce6386acaafad1b9044556f01a6bc3fe529bc3db2695c60f907",
+      "raw_optimized_sha256": "3a0902cc27645d15d3a9640c1b1720ed371e0f1b54e01bccb0c54f6dd72fa296",
+      "raw_elapsed_seconds_diagnostic": {"normal": 0.9548217450000038, "optimized": 1.0103447669999923}
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "center_derivatives_pass": true,
-  "center_f_x": "8*L**2",
-  "center_f_x_expected": "8*L**2",
-  "center_lambda_x": "-2*L",
-  "center_lambda_x_expected": "-2*L",
-  "theta_variance_identity": true,
-  "variance_correction_identity": true
-}

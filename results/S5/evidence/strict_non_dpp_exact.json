@@ -1,0 +1,48 @@
+{
+  "case": "strictly_non_dpp_positive_rational_half_size_law",
+  "non_dpp_certificate": {
+    "criterion": "rank-2 complex projection DPP weights must satisfy the Pluecker triangle condition",
+    "scaled_edge_product_magnitudes": [
+      "10",
+      "1",
+      "1"
+    ],
+    "strict_violation": "10 > 1 + 1"
+  },
+  "theorem_6_1_exact_replay": {
+    "D_second_float_diagnostic": 6.982909818704763,
+    "a_mid": "1/40",
+    "all_exact_assertions_passed": true,
+    "c": "19/20",
+    "convex_cancel_obstruction_exact": "1483/400",
+    "full_entropy_face_log_coefficients": {
+      "13": "-1561/100",
+      "2892563": "761/200",
+      "3": "-1081/40",
+      "5987": "761/100",
+      "7": "761/50",
+      "761": "-361/50"
+    },
+    "full_entropy_fisher_exact": "6400/39",
+    "k": 2,
+    "n": 4,
+    "prime_log_coefficients": {
+      "11": "3472443/512000000",
+      "1787": "3472443/512000000",
+      "2892563": "-1157481/512000000",
+      "59": "3472443/512000000",
+      "5987": "-1157481/256000000",
+      "7": "-1157481/128000000"
+    },
+    "scaled_D_second_float_diagnostic": 0.004148830404003885,
+    "v": "39/1600"
+  },
+  "weights_in_mask_order": {
+    "0011": "5/12",
+    "0101": "1/24",
+    "0110": "1/24",
+    "1001": "1/24",
+    "1010": "1/24",
+    "1100": "5/12"
+  }
+}

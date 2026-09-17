@@ -1,0 +1,8 @@
+{
+  "normalization": "1.0",
+  "minimum_atom": "0.000000123134359375",
+  "direct_H2": "-1093.22709988851797606119962961935240091207736747837677739536",
+  "decomposition_H2": "-1093.22709988851797606119962961935240091207736747837677739536",
+  "absolute_difference": "5.6135095608113890065e-77",
+  "evidentiary_limit": "High-precision cross-check. Exact rational certification of the bad atom is separate."
+}

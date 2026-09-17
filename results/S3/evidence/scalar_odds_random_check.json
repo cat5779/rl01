@@ -1,0 +1,13 @@
+{
+  "trials": 200000,
+  "minimum_rhs_minus_lhs": 1.2349513548479461e-15,
+  "record": [
+    0.4969624149417452,
+    0.00331011834599515,
+    0.06400146534033668,
+    3.472881430118935e-07,
+    2.0509460794244222e-10,
+    2.0509584289379707e-10
+  ],
+  "evidentiary_limit": "Diagnostic only; the proof is the interpolation argument in proof.md."
+}
