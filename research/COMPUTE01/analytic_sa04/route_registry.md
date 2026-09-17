@@ -36,7 +36,11 @@
 
 ## ROUTE-4: weighted response without pointwise positivity
 
-- Status: **SCOUT**.
+- Status: **REDIRECTED TO INVERSE-ROOT REGULARITY**.
 - Category: Stein summation and saddle-point analysis.
-- Target: prove a negative `n^(3/2)` limit for `W_n` from a central profile.
-- Dependency: requires more than the single-point central bound.
+- Target: prove `|A_l-E_l|<=K/sqrt(n)` on the expanded central window and
+  combine it with the existing tail estimate to obtain `W_n=O(n)`.
+- The former target of a negative `n^(3/2)` limit relied on a constant-size
+  central cusp and is now numerically disfavored.  The eventual sign of `W_n`
+  remains open even if the `O(n)` bound closes.
+- Dependency: requires a window estimate, not only the single central layer.

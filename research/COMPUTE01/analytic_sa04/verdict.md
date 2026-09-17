@@ -4,9 +4,9 @@
 - Strict sublemma `A_k>=c^4/72` and
   `liminf A_k>=2c^4/9>0.1810`:
   **PROVED_HERE, PENDING_INDEPENDENT_REVIEW**.
-- Smallest remaining obstruction: prove an explicit upper bound on the actual
-  central reverse-clock cost `limsup E_k` below `2c^4/9`,
-  or strengthen the witness until it dominates the sharp `E_k` estimate.
+- Smallest scale obstruction: prove `|A_l-E_l|<=K/sqrt(n)` throughout the
+  expanded central window.  The older attempt to bound `E_k` below the constant
+  `2c^4/9` is contradicted by the finite diagnostics and is no longer the target.
 - The clock-gap asymptotic is settled: its mean jump count tends to `1/2`, so
   vanishing raw time does not remove the entropy-cost obstruction.
 - A bound using only the initial entropy dissipation is too crude on current
@@ -18,4 +18,5 @@
   positivity and the `n^-1/2` line, while disfavoring a constant positive lower
   bound.  Comparison against the weak constant `2c^4/9` is also the wrong closure.
 - Research value: the sublemma rules out vanishing of the deletion mechanism
-  itself and localises all possible cancellation in the clock term.
+  itself, while the new scaling data show that cancellation with the clock term
+  is likely accurate to inverse-root order.
