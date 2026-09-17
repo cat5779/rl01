@@ -31,9 +31,10 @@
   window estimate; it still does not prove a limiting profile or determine the
   asymptotic sign of `W_n`.
 - A six-chain independent-seed checkpoint reproduces the `n=120` center and
-  offset-two values and gives `4.11,6.42,7.39,7.54,7.16,6.84,6.34` at offsets
-  zero through six.  The off-center peak is robust, localized to offsets two
-  or three, and followed by a statistically resolved decline.
+  offset-two values and gives
+  `4.11,6.42,7.39,7.54,7.16,6.84,6.34,5.50,4.75,4.10` through offset twelve.
+  The off-center peak is robust, localized to offsets two or three, and
+  followed by a statistically resolved decline.
 - Research value: the sublemma rules out vanishing of the deletion mechanism
   itself, while the new scaling data show that cancellation with the clock term
   is likely accurate to inverse-root order.

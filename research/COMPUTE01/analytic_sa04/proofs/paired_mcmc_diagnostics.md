@@ -112,6 +112,9 @@ retained draws per chain gives the following first completed block:
 | 4 | 7.1596 | 0.0669 | 0.993 / 0.990 / 1.019 |
 | 5 | 6.8415 | 0.0535 | 0.993 / 0.975 / 1.027 |
 | 6 | 6.3405 | 0.0528 | 0.970 / 1.032 / 1.017 |
+| 8 | 5.5030 | 0.0455 | 0.988 / 1.005 / 0.972 |
+| 10 | 4.7512 | 0.0409 | 0.991 / 1.003 / 1.010 |
+| 12 | 4.0954 | 0.0337 | 1.016 / 1.012 / 0.987 |
 
 The new central value agrees with the earlier `4.184+/-0.219`, and the new
 offset-two value agrees with `7.491+/-0.183`.  The off-center peak is therefore
@@ -119,6 +122,8 @@ reproducible.  Offsets two and three differ by only about `1.35` combined naive
 standard errors, so the data do not yet distinguish the exact discrete peak.
 Offset four is lower than offset three by about four combined naive standard
 errors, and offsets five and six continue the decline.  The peak is therefore
-localized to offsets two or three, followed by a resolved descending segment.
-Later offsets in this higher-statistics run remain in progress; this table is
-a durable checkpoint rather than the final dense-window report.
+localized to offsets two or three.  Offsets eight, ten, and twelve extend the
+resolved descending segment; the new offset-twelve value agrees with the first
+scan's `4.055+/-0.086`.  Offsets fourteen and seventeen in this
+higher-statistics run remain in progress; this table is a durable checkpoint
+rather than the final dense-window report.
