@@ -1,0 +1,23 @@
+{
+  "task": "SA02",
+  "review_status": "PENDING_INDEPENDENT_REVIEW",
+  "source_repository": "randomcat4/dpp-stationary-entropy",
+  "source_pr": 118,
+  "source_ref": "f505f45e1ac0b79e66f592eb425d5637ffbf651a",
+  "source_path": "research_prompts/pro_tasks/deliverables",
+  "policy": "All new SA claims pending independent review. Original author labels retained as quotations. Each SA audited separately. No checksum gate.",
+  "code_status": "AUTHOR_SUPPLIED_NOT_RERUN_FOR_PUBLICATION",
+  "files": [
+    "PROVENANCE.md",
+    "SA02_MATRIX_BELLMAN_FULL_BLOCK.md",
+    "SA02_SOL_ASSESSMENT_AND_NEXT_ROUTE.md",
+    "TASK.md",
+    "sources/S7_AUDIT.md",
+    "sources/S7_LOCALIZATION.md",
+    "sources/S7_ONE_SIDED.md",
+    "sources/S7_PROOF.md"
+  ],
+  "missing_evidence": [
+    "Small scripts and outputs mentioned by SA02 author are absent from supplied delivery."
+  ]
+}
