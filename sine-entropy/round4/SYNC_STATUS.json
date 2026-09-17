@@ -29,7 +29,7 @@
       "path": "optional/overnight-reviewed-20260917/group-a/MANIFEST.sha256",
       "source_sha256": "182038c29e8c43b858a987cd37787b799327c3372614b098cc7e235aa06b306d",
       "published_sha256": "3cd153b16ef91fe7f190d22663799ebfbe791ceb83c10e23af1c4a5f4c793807",
-      "transformation": "byte-for-byte"
+      "transformation": "package manifest hashes rebound after provenance redaction; mathematical payload unchanged"
     },
     {
       "path": "optional/overnight-reviewed-20260917/group-a/PROVENANCE.md",
@@ -1397,7 +1397,7 @@
       "path": "optional/overnight-reviewed-20260917/group-c/SOURCE_MANIFEST.sha256",
       "source_sha256": "4c22f115f6d514d6618f369fef8234165bef99cbfedd4674d62c095f6a0dbeb2",
       "published_sha256": "da42c47d8320e83ca0f4fea3c0d039b1388911980a2d86e594e5df3744ad1e65",
-      "transformation": "byte-for-byte"
+      "transformation": "package manifest hashes rebound after provenance redaction; mathematical payload unchanged"
     },
     {
       "path": "optional/overnight-reviewed-20260917/README.md",
