@@ -61,9 +61,18 @@ The paired estimator was also run away from the single central layer.  Here
 | 4 | 0.4 | 0.6913 | 0.0718 | 0.6194 | 6.1943 | 0.1113 |
 | 6 | 0.6 | 0.5515 | 0.0330 | 0.5185 | 5.1848 | 0.0919 |
 | 8 | 0.8 | 0.4505 | 0.0183 | 0.4322 | 4.3216 | 0.0930 |
+| 12 | 1.2 | 0.3184 | 0.0060 | 0.3124 | 3.1243 | 0.0635 |
+| 15 | 1.5 | 0.2427 | 0.0031 | 0.2396 | 2.3959 | 0.0571 |
 
 The rescaled profile has a finite off-center peak and then decreases; no growth
 with the raw dimension is visible in this window.  Most split-Rhat values are
 near one; the largest is `1.105` for the offset-four deletion chain, so this
-remains route-selection evidence rather than a uniform bound.  Outer offsets
-near the expanded-window/tail splice are tested separately.
+remains route-selection evidence rather than a uniform bound.  The outer
+offsets have split-Rhat values in `[0.974,1.048]`.
+
+For `n=100`, the tail-splice radius prescribed by the reviewed report is
+`sqrt((n-2)log(n)/2)`, approximately `15.02`.  Thus the scan reaches the actual
+finite-n splice point.  Its largest observed rescaled increment is `6.98`, at
+offset two, and the profile decreases to `2.40` by the splice.  This is direct
+finite evidence for the full window shape required by the version-2 theorem;
+it is not a proof uniform in `n`.

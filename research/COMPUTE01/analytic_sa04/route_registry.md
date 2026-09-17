@@ -35,7 +35,9 @@
   Thus the inverse-root diagnosis survives, but no numerical leading constant
   is frozen.
 - The first `n=100` window scan gives `sqrt(n)d_l=6.98,6.19,5.18,4.32` at
-  offsets `2,4,6,8`.  It supports a bounded local profile rather than a
+  offsets `2,4,6,8`, followed by `3.12,2.40` at offsets `12,15`.  Offset 15 is
+  the finite-n tail splice used by the reviewed `W_n=O(n)` reduction.  The scan
+  supports a bounded local profile rather than a
   single-layer coincidence; the largest split-Rhat is `1.105`, so the result
   remains exploratory.
 - Risk: proving existence of the entropy increment may be as hard as the
