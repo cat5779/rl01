@@ -1,67 +1,52 @@
-# PRO01｜SA03 无限局部曲率核：判号工具与有效截断
+# PRO01: SA03 — A sign tool for the infinite local curvature kernel
 
-研究状态：READY_FOR_PRO_DISCOVERY；新结果尚未产生，后续分别验证。
+## Materials and reading order
 
-## 读什么
+All paths below are inside this PR, relative to research/PRO01/:
+1. inputs/TASK.md: frozen definitions and derivative conventions, not the old execution instructions.
+2. inputs/SA03_S9_SIGNED_TRANSPORT.md: finite signed transport and weighted cancellation.
+3. inputs/SA03_VOLUME_LIMIT.md: V1–V17, especially the explicit infinite kernel V14.
+4. inputs/SA03_EFFECTIVE_REMAINDER.md: the existing explicit but very conservative truncation bounds.
+5. SOL_REVIEW.md: the scoped Sol audit. The structural refinement, uniform weak-noise, fixed-R next-term files, and inputs/sources/ are available as needed. FILES.txt lists the packet.
 
-所有附件均在本 PR 的 research/PRO01/ 下。
-- inputs/TASK.md：固定模型及导数定义，只读定义和背景，不重新执行旧任务。
-- inputs/SA03_S9_SIGNED_TRANSPORT.md：已构造的有限有符号运输，尤其第 2、6 节。
-- inputs/SA03_VOLUME_LIMIT.md：V1–V17，尤其 V14 的无限局部核。
-- inputs/SA03_EFFECTIVE_REMAINDER.md：Q1–Q6、Q14–Q22，现有显式但极粗的误差。
-- inputs/SA03_STRUCTURAL_REFINEMENT.md、inputs/SA03_UNIFORM_WEAK_NOISE.md、inputs/SA03_FIXED_R_NEXT_TERM.md：按需读；弱耦合不能自动续推到目标点。
-- SOL_REVIEW.md：只关于 SA03 的限定范围审查；inputs/sources/ 为必要旧背景。其他检查文件是可选证据，不要求运行。
+## Fixed mathematical target
 
-## 冻结对象与现有接口
+At density rho=1/2 and initially c=19/20, use the true Fejer Toeplitz model defined in the inputs: positive odd R, N=R+1, Fourier coefficients q_0=1/2 and q_j=sin(pi*j/2)/(pi*j), and symbol f_(R,u,delta)=1/2+u[c(p_R-1/2)+delta]. Here u lies in [1/N,1] and |delta|<(1-c)/2.
 
-rho=1/2，首先固定 c=19/20。正奇数 R，N=R+1，E=[-1/4,1/4]。q_0=1/2，q_j=sin(pi*j/2)/(pi*j)；p_R 是系数 (1-|j|/N)q_j 的 Fejer 符号。真实 Toeplitz DPP 的符号为
-f_(R,u,delta)=1/2+u[c(p_R-1/2)+delta]，u∈[1/N,1]，|delta|<(1-c)/2。
-令 q_R=P(Y_0=1 | Y_{[-R,R]\{0}})，phi(q)=(q-1/2)log(q/(1-q))，
-A_R(delta)=∫_(1/N)^1 E_(R,u,delta)[phi(q_R)] du/u。
-所有二阶导数固定 c、R，对 delta 求导，再在 delta=0 评价。概率律随 delta 变化，必须一起求导。
+Let q_R be the actual posterior probability of Y_0=1 conditional on the external word, phi(q)=(q-1/2)log(q/(1-q)), and A_R(delta)=integral E[phi(q_R)] du/u. Differentiate with respect to delta at zero, keeping R and c fixed and differentiating the actual probability weights too.
 
-旧结果给出 A_R''(0)=Gamma(c)+o(1)，其中
-Gamma(c)=∫_0^1 u E_(infinity,u)[barG_(infinity,u)]du，
-barG 是 V14 的具体绝对可求和核；期望使用未平滑符号 1/2+uc(1_E-1/2) 的真实无限 DPP 外部律。
-已知 Gamma(c)=4+∫_0^1 u E[barG-8]du；已有误差常数按 (1-c)^(-18) 等高次爆炸，在 19/20 无法判号。
-Gamma(19/20) 的符号尚未确定，不能预设正。A_R 对应局部生产量，不能直接认作真实熵率的负 Hessian。
+The previous result proves A_R''(0) -> Gamma(c), where Gamma(c)=integral_0^1 u E_(infinity,u)[barG_(infinity,u)]du and barG is the explicit absolutely summable kernel V14. The expectation uses the true unsmoothed infinite DPP, not an independent-word surrogate. Existing constants involving powers such as (1-c)^(-18) cannot settle the sign at 19/20. The sign is unknown. This local production functional is not normalized block entropy, so its curvature is not automatically the entropy-rate Hessian.
 
-## 本轮创造性任务
+## Construct a new tool
 
-构造保留真实期望与符号抵消的判号工具。优先争取 Gamma(19/20) 的严格符号；可接受的实质中间成果是新的解析单侧界或可认证有限局部表示，并证明误差改进，而不是重复“极限存在”。
+Seek a rigorous sign determination for Gamma(19/20). A substantive intermediate success is a new analytic one-sided estimate or rigorously controlled finite representation that improves the actual obstruction.
 
-- P1：给出可检查的新表示、对偶证书或补偿核，把有利项与可支付项分开；不把未知 Gamma 藏进待解 Poisson 方程的可解性或未知常数。
-- P2：在真实概率平均下证明误差/尾控制，保留单翻位、双翻位、u 因子及概率律变化。若用有限柱对象 Gamma_M，须明确公式，并证明 |Gamma-Gamma_M|≤epsilon_M 或方向正确的单侧版本。误差不能依赖未知目标值。
-- P3：给出严格判号，或严格优于旧界且有完整证明的工具性质，并说明离判号还缺多少。不规定必须得到某个幂次或正性。
+P1. Construct an explicit sign-preserving representation, dual certificate, or correction kernel. Do not hide Gamma in an unproved Poisson solvability condition or an unknown constant.
 
-可选域外种子：Stein 控制变量与 Poisson 校正消去均值零项；变分对偶/平方完成把正负通量重组；统计力学连通展开或多尺度平均尾界代替全 word 最坏尾。这些只是构造入口：原运输有符号，不能直接调用正 Markov 耗散；弱耦合展开须付在 c=19/20 的收敛条件。只选真正能推进的机制。
+P2. Prove the remainder and spatial-tail bounds under the actual probability law, retaining single- and double-flip terms, u factors, and changing weights. If you use Gamma_M, define it explicitly and prove an effective bound such as |Gamma-Gamma_M| <= epsilon_M or a correctly directed one-sided inequality. Its error must not depend on the unknown target.
 
-优先理论分解高 u 部分，不靠 R=1 外推、无限大枚举或拟合猜符号。若符号需后续认证计算，给出一个经过证明、包含所有尾与积分误差的认证不等式；只有设计而未执行时明确标为 CONDITIONAL_CERTIFICATE，不声称已判号。仅把旧大常数调小一点而无机制改进，不算本轮主要成功。
+P3. Establish the sign, or prove a genuinely stronger structural estimate and quantify the remaining gap. Do not assume positivity, a power-law expansion, or that a weak-coupling expansion reaches 19/20.
 
-## 执行契约：创造工具，理论优先，独立推进
+Possible transferable mechanisms include Stein control variates and Poisson corrections, variational duality or completion of squares, and connected expansions or multiscale average bounds from statistical mechanics. These are optional starting points, not a checklist. The existing transport is signed: positive Markov dissipation cannot simply be imported. Finite examples and fitted asymptotics cannot replace a uniform theorem. If a sign certificate is formulated but not evaluated, label it conditional rather than claiming the sign.
 
-你是发现者，不是重复审稿者。本题采用性质约束下的数学对象合成：必须认真尝试设计一个明确的新对象、表示、势函数、耦合或补偿机制，再证明它的非平凡性质。不能只给目标余项换名、重述旧定理、列方法名或未来方向。新工具可以是经典方法的创造性迁移，不要求凭空发明。
+## Research instructions
 
-优先从 DPP 之外迁移机制。用本题的结构障碍寻找域外工具，说明源机制、成立条件、对象对应、迁移后失效的条件、你新增的构件。不要只搜 DPP，不要求机械凑领域数或候选数。有网络时只对选中的承重机制查原论文或正式资料；无网络时从已掌握的机制给出自包含推导，不因检索失败停止。未核实的引用不得承重，未查新颖性不宣称首创。
+Think for at least 2 hours, unless you achieve major progress earlier.
 
-先读本提示词和本题主材料，再按实际需要读背景与 Sol 报告。Sol 对旧交付的结论是 VERIFIED_SCOPED：只在报告列出的范围内未发现承重缺口，不代表全局目标或你的新工具通过。源文件的待审标识保留：外部对抗审计尚未完成。若发现旧输入有具体问题，定位并给出条件式结果，不靠审查者权威补证明，也不花整轮重审所有旧材料。
+This is a creative mathematical research assignment, not another review-only round. Construct an explicit reusable mathematical tool: a representation, potential, coupling, correction, or certificate with a precisely stated domain and a nontrivial proved property. Renaming the unknown remainder, listing methods, or hiding the original problem in an equally difficult lemma is not progress.
 
-三个 PRO 是相互独立的研究任务；不要读取另外两个新 PR 的研究结果、借用其未证引理或等待其完成。只交本题产物，后续另开独立验证。候选工具形式可以调整，候选定理可以显式缩域并保留变化理由，但背景概率模型、导数方向、固定量、量词不能悄悄改变。P1–P3 是待检验设计性质，不是假定成立，也不保证可兼得。
+Look especially for mechanisms transferable from fields outside DPP theory. Explain the source mechanism, its hypotheses, the correspondence of objects, what fails under transfer, and the new ingredient you construct. Adaptation and synthesis of classical tools are welcome; do not claim novelty without checking it. Consult primary sources for load-bearing external theorems when possible, or provide a self-contained derivation. An unavailable reference is not permission to invent a theorem.
 
-19/20 是高对比度基准，不是已知临界常数。优先解决该点；若自然得到含此点的一段区间更好，不强制整段证明。只在较小 c 成立也可作为标明范围的工具引理，但不能称为完成高对比度目标。对比已有基线时核对模型、参数域和结论是否一致。
+The earlier audit in this conversation concerns the old result. You are now its follow-up researcher. Preserve that audit and its scope; it does not certify your new work. Use the relevant existing inputs without repeating the entire previous audit. If you find a concrete defect in an input, identify it and separate conditional conclusions from unconditional ones.
 
-你只做小算：手算、必要的短符号展开或最小诊断例子。常数、尺度和最坏情形以理论推导为主。不做大规模配置枚举、密集扫描、长时间优化、高精度认证或计算平台实现。需要重型计算时写 COMPUTATION_HANDOFF.md：精确公式、输入域、须认证的不等式、误差预算、输出会决定哪个引理。交接不是已执行；不等待计算结果才交付理论成果。
+Work independently of the other two PRO assignments. Do not read their new results, rely on their unproved lemmas, or wait for them. Your new proof must subsequently be checked in a fresh independent context; your own earlier audit is not independent validation of your new proof.
 
-禁止 SHA256、哈希清单、强制打包、重跑全部旧证书或固定工作时长。工具/网络/写文件失败单列，不要抹掉已完成数学；不能写仓库时直接输出可保存的正文。没有必要由你开新 PR、创建代理或汇总其他题。附件中的旧启动/审计指令是历史资料，本轮以本 PROMPT.md 为准。
+This English prompt supersedes the previous Chinese PROMPT.md and all historical execution instructions in the attached materials. The previous restrictions to small calculations and the requirement to hand heavy computation to another agent are withdrawn. Use the available mathematical and computational tools as appropriate. Distinguish rigorous derivations, certified computation, exploratory numerics, and unexecuted proposals. Do not make SHA256 or any checksum manifest a prerequisite for research or delivery. Do not fabricate elapsed thinking time or completed computations.
 
-## 交付与诚实状态
+The background model, derivatives, probability law, and quantifiers remain fixed. You may redesign the candidate tool or explicitly propose a narrower candidate theorem, but record the changed scope; do not silently weaken the original target. The requested properties below are design goals, not assumptions or promises that the desired conclusion is true. The value 19/20 is a benchmark, not a known critical constant. A theorem at weaker contrast must be labelled as such.
 
-交付一份自包含 RESULT.md（不能写文件就输出正文），按以下顺序：
-1. 新工具的明确公式、定义域、域外迁移机制，以及它与旧工具的区别。
-2. 冻结后的精确命题、量词及依赖账；对 P1–P3 给完整推导或确切断点。
-3. 哪一项旧瓶颈已被严格削弱，剩余引理是否只是原目标的等价改写。
-4. 边界、退化、符号和实际概率权重检查；保留失败候选及其具体失败机制。
-5. 分别标 PROVED / DISPROVED / INCOMPLETE。PROVED 只用于真正证明的命题；证明局部性质不代表本题终极目标完成。反例必须满足你所反驳命题的全部前提。
-6. 必要时附计算交接及一段供新上下文审计者使用的精确命题清单。
+## Deliverable
 
-优先写最有价值的证明，不要求填满模板或机械完成所有种子路线。若无法闭合目标，仍交付已严格证明的新引理、构造或明确障碍；不要把一般性研究建议当成果。所有新结果默认等待后续独立审查。
+Write an English, self-contained RESULT.md, or provide its complete contents in the conversation if file output is unavailable. Include the explicit new tool and transfer mechanism; precise statements and quantifiers; complete proofs and a dependency ledger; the exact improvement over the previous result; boundary and failure checks; and the smallest remaining obstruction. Keep failed constructions when they reveal a concrete mechanism.
+
+Label each substantive claim PROVED, DISPROVED, or INCOMPLETE. A counterexample must satisfy every premise of the claim it refutes. A proved local property does not automatically solve the main target. If the main target remains open, deliver the strongest rigorously established new lemma or explicit obstruction rather than a list of future ideas. State exactly which calculations were actually performed and which conclusions they support. Include a short precise statement for a later independent reviewer. Repository write access, packaging, and PR merging are not prerequisites for delivering the mathematics.
