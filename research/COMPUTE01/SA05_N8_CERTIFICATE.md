@@ -1,6 +1,6 @@
 # SA05 n=8 finite sign certificate
 
-**Status: FINITE_CERTIFIED_PARTIAL**
+**Status: FINITE_CERTIFIED**
 
 This certificate addresses only the complete 70-state formula in section A of
 `results/SA05/SA05_HANDOFF.md`, at `c=19/20,n=8`.  It does not imply a sign for
@@ -43,12 +43,20 @@ all three certified intervals and also locates the two symmetric sign-change
 brackets recorded in its JSON receipt.  That floating run is a regression
 check, not part of the proof.
 
-## What remains for C01
+## Independent 256-atom regression
 
-The requested all-256-atom reconstruction has not yet been completed.  It must
-independently compare the full true/corrected Hessian difference with the
-70-state expression and check total and layerwise zeroth/first/second mass.
-Until that cross-check is present, this is a certified evaluation of the stated
-70-state formula, not an independent certification of the formula's derivation
-from all output atoms.
+`sa05_n8_full_atoms.py` independently forms every rank-four Fourier projection
+minor, mixes the resulting 70 latent DPP atoms through the coordinatewise
+channel, and reconstructs all 256 output atoms.  It checks total and layerwise
+zeroth/first/second mass, positivity, the exact count-law coefficients, and the
+complete corrected-minus-true entropy Hessian.  At all three points the largest
+component discrepancy from the reduced 70-state formula is below
+`3.5e-14`; details are in `sa05_n8_full_atoms_result.json`.
 
+That independent cross-check is deliberately labelled
+`BINARY64_INDEPENDENT_REGRESSION`.  It validates the derivation and
+implementation but does not supply the sign proof.  The sign claim remains the
+output of the exact-rational outward interval calculation described above.
+
+Thus C01 is complete as a finite certificate plus independent implementation
+regression.  No all-`n` or asymptotic conclusion is claimed.

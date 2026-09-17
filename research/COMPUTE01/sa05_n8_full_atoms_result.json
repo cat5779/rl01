@@ -1,0 +1,107 @@
+{
+  "status": "BINARY64_INDEPENDENT_REGRESSION",
+  "model": {
+    "n": 8,
+    "rank": 4,
+    "c": "19/20",
+    "latent_states": 70,
+    "output_atoms": 256
+  },
+  "method": "Direct 4x4 Fourier projection minors, latent DPP mixture, and coordinatewise channel; second-order forward jets.",
+  "points": [
+    {
+      "a": "1/200",
+      "full_entropy_difference": {
+        "value": -2.4015465172055883e-09,
+        "first": -1.2622049574417815e-06,
+        "second": -0.00037268948824475956
+      },
+      "reduced_70_state_formula": {
+        "value": -2.401544766235828e-09,
+        "first": -1.2622049558317824e-06,
+        "second": -0.00037268948827969445
+      },
+      "difference": {
+        "value": -1.750969760224637e-15,
+        "first": -1.6099991450430323e-15,
+        "second": 3.49348913512848e-14
+      },
+      "checks": {
+        "latent_weight_sum_error": 2.220446049250313e-16,
+        "latent_min_weight": 0.0006702065439601775,
+        "latent_max_imaginary_part": 8.673617379884034e-19,
+        "true_total_mass_error": 2.0968470015869656e-15,
+        "corrected_total_mass_error": 1.7334224333698245e-15,
+        "max_count_weight_error": 1.7763568394002505e-15,
+        "max_true_layer_q_mass_error": 3.4924596548080444e-10,
+        "max_corrected_layer_q_mass_error": 3.4924596548080444e-10,
+        "min_true_atom": 5.198685003906251e-10,
+        "min_corrected_atom": 5.198685003906251e-10,
+        "max_formula_component_error": 3.49348913512848e-14
+      }
+    },
+    {
+      "a": "1/50",
+      "full_entropy_difference": {
+        "value": -4.243031082040716e-08,
+        "first": -2.043579631516579e-06,
+        "second": 0.0003455421960723015
+      },
+      "reduced_70_state_formula": {
+        "value": -4.243030932900274e-08,
+        "first": -2.0435796301163817e-06,
+        "second": 0.000345542196066892
+      },
+      "difference": {
+        "value": -1.4914044209716224e-15,
+        "first": -1.400197130821141e-15,
+        "second": 5.409518319399176e-15
+      },
+      "checks": {
+        "latent_weight_sum_error": 2.220446049250313e-16,
+        "latent_min_weight": 0.0006702065439601775,
+        "latent_max_imaginary_part": 8.673617379884034e-19,
+        "true_total_mass_error": 2.220446049250313e-16,
+        "corrected_total_mass_error": 1.1975663516405888e-14,
+        "max_count_weight_error": 1.4210854715202004e-14,
+        "max_true_layer_q_mass_error": 7.275957614183426e-12,
+        "max_corrected_layer_q_mass_error": 7.275957614183426e-12,
+        "min_true_atom": 1.4164684960000003e-07,
+        "min_corrected_atom": 1.4164684960000003e-07,
+        "max_formula_component_error": 5.409518319399176e-15
+      }
+    },
+    {
+      "a": "1/40",
+      "full_entropy_difference": {
+        "value": -4.773881645547817e-08,
+        "first": -8.67806660115479e-16,
+        "second": 0.0004408152398980292
+      },
+      "reduced_70_state_formula": {
+        "value": -4.773881493751761e-08,
+        "first": 0.0,
+        "second": 0.0004408152398841934
+      },
+      "difference": {
+        "value": -1.5179605648467147e-15,
+        "first": -8.67806660115479e-16,
+        "second": 1.3835774973630643e-14
+      },
+      "checks": {
+        "latent_weight_sum_error": 2.220446049250313e-16,
+        "latent_min_weight": 0.0006702065439601775,
+        "latent_max_imaginary_part": 8.673617379884034e-19,
+        "true_total_mass_error": 2.9412236535186764e-15,
+        "corrected_total_mass_error": 1.5153676924395398e-14,
+        "max_count_weight_error": 1.4210854715202004e-14,
+        "max_true_layer_q_mass_error": 2.1827872842550278e-11,
+        "max_corrected_layer_q_mass_error": 2.1827872842550278e-11,
+        "min_true_atom": 3.5300308227539075e-07,
+        "min_corrected_atom": 3.5300308227539075e-07,
+        "max_formula_component_error": 1.3835774973630643e-14
+      }
+    }
+  ],
+  "limitation": "This cross-check uses binary64 arithmetic. Rigorous signs come from sa05_n8_interval.py, not from this regression."
+}
