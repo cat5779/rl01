@@ -31,6 +31,9 @@
   positive inverse-root central profile, not a dimension-free positive limit,
   even though `E_k` has already outgrown the conservative analytic lower bound
   for `A_k`.
+- At `n=100,120`, the rescaled values are `4.32+/-0.18` and `4.18+/-0.22`.
+  Thus the inverse-root diagnosis survives, but no numerical leading constant
+  is frozen.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 

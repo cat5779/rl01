@@ -17,6 +17,9 @@
   Their inverse-root rescalings are `4.80,5.25,5.11`; this supports eventual
   positivity and the `n^-1/2` line, while disfavoring a constant positive lower
   bound.  Comparison against the weak constant `2c^4/9` is also the wrong closure.
+- The follow-up values `sqrt(n)d_k=4.32+/-0.18` at `n=100` and
+  `4.18+/-0.22` at `n=120` reinforce the inverse-root scale but show that the
+  apparent `5.1105` constant at `n=80` was not stabilized.
 - Research value: the sublemma rules out vanishing of the deletion mechanism
   itself, while the new scaling data show that cancellation with the clock term
   is likely accurate to inverse-root order.

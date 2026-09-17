@@ -1,0 +1,176 @@
+{
+  "status": "EXPLORATORY_MCMC",
+  "results": [
+    {
+      "n": 100,
+      "k": 50,
+      "seed": 20261018,
+      "forward_bridge": {
+        "E_k_estimate": 0.6772685679489243,
+        "batch_se": 0.015049548655612912,
+        "acceptance_rate": 0.2748019323671498,
+        "chain_estimates": [
+          0.68582721677701,
+          0.6817279382461571,
+          0.6820450660824242,
+          0.6450066151916675,
+          0.7260533162808899,
+          0.6429512551153969
+        ],
+        "chain_estimate_spread": 0.08310206116549301,
+        "mean_importance_weight": 1.0016745694675562,
+        "mean_batch_ess_fraction": 0.9402179503637629,
+        "batch_count": 120,
+        "split_rhat": 0.9860125147742226,
+        "target_entropy_estimate": 9.33080171319712,
+        "target_entropy_batch_se": 0.08602945177210371,
+        "other_entropy_importance_estimate": 8.653533145248195,
+        "other_entropy_importance_batch_se": 0.0852652572175049
+      },
+      "reverse_bridge": {
+        "E_k_estimate": 0.6733123874335534,
+        "batch_se": 0.01344668647888308,
+        "acceptance_rate": 0.30279710144927535,
+        "chain_estimates": [
+          0.6914096308164206,
+          0.612440624374807,
+          0.6883193970385654,
+          0.6623821766781909,
+          0.6374885795398346,
+          0.7478339161535018
+        ],
+        "chain_estimate_spread": 0.13539329177869486,
+        "mean_importance_weight": 1.0004202600204195,
+        "mean_batch_ess_fraction": 0.9533731758082046,
+        "batch_count": 120,
+        "split_rhat": 1.0181775468583498,
+        "target_entropy_estimate": 8.588024344030043,
+        "target_entropy_batch_se": 0.08743293251254595,
+        "other_entropy_importance_estimate": 9.261336731463595,
+        "other_entropy_importance_batch_se": 0.08567512754059149
+      },
+      "combined_E_k_estimate": 0.6750686514519292,
+      "combined_batch_se": 0.010027215009495783,
+      "central_layer_entropy": {
+        "entropy_estimate": 9.707811723525113,
+        "batch_se": 0.10680869709648685,
+        "acceptance_rate": 0.25457971014492753,
+        "split_rhat": 0.9757135085012851,
+        "batch_count": 120
+      },
+      "paired_deletion_loss": {
+        "A_k_estimate": 1.1071499404219363,
+        "batch_se": 0.014591136208076875,
+        "acceptance_rate": 0.2554492753623188,
+        "split_rhat": 1.0199504755701987,
+        "batch_count": 120
+      },
+      "paired_central_increment": {
+        "d_k_estimate": 0.4320812889700071,
+        "naive_se": 0.017704414610184363
+      },
+      "combined_entropy_estimates": {
+        "F_k_at_s_k": 9.707811723525113,
+        "F_k_at_s_k_batch_se": 0.10680869709648685,
+        "F_k_minus_1_at_s_k_minus_1": 9.295925877164153,
+        "F_k_minus_1_at_s_k_minus_1_batch_se": 0.06070634843460049,
+        "F_k_minus_1_at_s_k": 8.621600869304432,
+        "F_k_minus_1_at_s_k_batch_se": 0.061043602498718395,
+        "A_k_estimate": 1.0862108542206812,
+        "A_k_naive_se": 0.12302202722061857,
+        "E_k_from_entropies": 0.6743250078597214,
+        "E_k_from_entropies_naive_se": 0.08609054620737784,
+        "d_k_estimate": 0.4118858463609598,
+        "d_k_naive_se": 0.12285503048598458
+      }
+    },
+    {
+      "n": 120,
+      "k": 60,
+      "seed": 20261038,
+      "forward_bridge": {
+        "E_k_estimate": 0.7396601979087928,
+        "batch_se": 0.021217880203540793,
+        "acceptance_rate": 0.26463285024154587,
+        "chain_estimates": [
+          0.6838199422377768,
+          0.7387806459088683,
+          0.7140801730301594,
+          0.6762994084992396,
+          0.8659352178425618,
+          0.7590457999341511
+        ],
+        "chain_estimate_spread": 0.18963580934332214,
+        "mean_importance_weight": 0.9941592971369023,
+        "mean_batch_ess_fraction": 0.9433621345727182,
+        "batch_count": 120,
+        "split_rhat": 1.0023692238672066,
+        "target_entropy_estimate": 11.36044805867377,
+        "target_entropy_batch_se": 0.10662489854818821,
+        "other_entropy_importance_estimate": 10.62078786076498,
+        "other_entropy_importance_batch_se": 0.1119653928351615
+      },
+      "reverse_bridge": {
+        "E_k_estimate": 0.7865046888145943,
+        "batch_se": 0.017740898969882214,
+        "acceptance_rate": 0.29382125603864734,
+        "chain_estimates": [
+          0.8215002215765154,
+          0.8071736987485074,
+          0.7785360151251599,
+          0.7887509557792378,
+          0.7672798371322497,
+          0.7557874045258967
+        ],
+        "chain_estimate_spread": 0.06571281705061871,
+        "mean_importance_weight": 0.9993691977082894,
+        "mean_batch_ess_fraction": 0.950328945694208,
+        "batch_count": 120,
+        "split_rhat": 1.038081228104549,
+        "target_entropy_estimate": 10.602354979782085,
+        "target_entropy_batch_se": 0.10745092895453835,
+        "other_entropy_importance_estimate": 11.388859668596682,
+        "other_entropy_importance_batch_se": 0.10855284364252339
+      },
+      "combined_E_k_estimate": 0.7672301689288014,
+      "combined_batch_se": 0.01361020026941154,
+      "central_layer_entropy": {
+        "entropy_estimate": 11.780197966085108,
+        "batch_se": 0.1178309401347249,
+        "acceptance_rate": 0.24821739130434783,
+        "split_rhat": 0.9928567373967184,
+        "batch_count": 120
+      },
+      "paired_deletion_loss": {
+        "A_k_estimate": 1.1492162994948985,
+        "batch_se": 0.014597460457637584,
+        "acceptance_rate": 0.25334299516908215,
+        "split_rhat": 0.9970964373622566,
+        "batch_count": 120
+      },
+      "paired_central_increment": {
+        "d_k_estimate": 0.3819861305660971,
+        "naive_se": 0.019958041065840676
+      },
+      "combined_entropy_estimates": {
+        "F_k_at_s_k": 11.780197966085108,
+        "F_k_at_s_k_batch_se": 0.1178309401347249,
+        "F_k_minus_1_at_s_k_minus_1": 11.374399322312884,
+        "F_k_minus_1_at_s_k_minus_1_batch_se": 0.07606765985858853,
+        "F_k_minus_1_at_s_k": 10.611192326490611,
+        "F_k_minus_1_at_s_k_batch_se": 0.0775261372142333,
+        "A_k_estimate": 1.1690056395944968,
+        "A_k_naive_se": 0.14104762459677672,
+        "E_k_from_entropies": 0.7632069958222729,
+        "E_k_from_entropies_naive_se": 0.10861211179109838,
+        "d_k_estimate": 0.40579864377222385,
+        "d_k_naive_se": 0.1402512721132862
+      }
+    }
+  ],
+  "limitations": [
+    "Batch errors do not certify Markov-chain mixing.",
+    "Relaxed binary64 birth-death tails are used beyond exact-enumeration sizes.",
+    "The output selects an analytic route and is not a proof of a limit."
+  ]
+}

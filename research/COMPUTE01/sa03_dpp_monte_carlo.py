@@ -191,21 +191,21 @@ def main() -> None:
         default=Path(__file__).with_name("sa03_dpp_monte_carlo_result.json"),
     )
     args = parser.parse_args()
-    results = [
-        integrate(radius, args.nodes, args.samples, args.seed + radius)
-        for radius in args.radii
+    limitations = [
+        "Reported errors are iid sampling errors conditional on the quadrature nodes.",
+        "They do not certify Gauss-Legendre error or rare-tail control.",
+        "The scout chooses an analytic route and does not prove the sign of Gamma(19/20).",
     ]
-    payload = {
-        "status": "EXPLORATORY_TRUE_DPP_MONTE_CARLO",
-        "contrast": C,
-        "results": results,
-        "limitations": [
-            "Reported errors are iid sampling errors conditional on the quadrature nodes.",
-            "They do not certify Gauss-Legendre error or rare-tail control.",
-            "The scout chooses an analytic route and does not prove the sign of Gamma(19/20).",
-        ],
-    }
-    args.output.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    results = []
+    for radius in args.radii:
+        results.append(integrate(radius, args.nodes, args.samples, args.seed + radius))
+        payload = {
+            "status": "EXPLORATORY_TRUE_DPP_MONTE_CARLO",
+            "contrast": C,
+            "results": results,
+            "limitations": limitations,
+        }
+        args.output.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
