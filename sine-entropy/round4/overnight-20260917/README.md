@@ -18,3 +18,7 @@ Research assignments: [S13](check1/S13.md), [S1](check1/S1.md), [S2](check1/S2.m
 ## Scheduled check 2
 
 Research assignments: [S13](check2/S13.md), [S1](check2/S1.md), [S3](check2/S3.md). New author claims remain unreviewed. These prompts do not themselves launch tasks.
+
+## Scheduled check 3
+
+Research assignments: [S3](check3/S3.md), [S4](check3/S4.md), [S5](check3/S5.md). New author claims remain unreviewed. These prompts do not themselves launch tasks.
