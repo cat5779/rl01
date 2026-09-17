@@ -76,3 +76,24 @@ finite-n splice point.  Its largest observed rescaled increment is `6.98`, at
 offset two, and the profile decreases to `2.40` by the splice.  This is direct
 finite evidence for the full window shape required by the version-2 theorem;
 it is not a proof uniform in `n`.
+
+## Cross-dimensional window check at n=120
+
+A second scan tests whether the `n=100` shape persists when the dimension is
+increased.  Offset 17 is the nearest integer to the new tail-splice radius
+`sqrt((n-2)log(n)/2)=16.81`.
+
+| offset | x | A_l | E_l | d_l | sqrt(n)d_l | naive SE after scaling |
+|---:|---:|---:|---:|---:|---:|---:|
+| 2 | 0.1826 | 0.9369 | 0.2530 | 0.6838 | 7.4912 | 0.1835 |
+| 6 | 0.5477 | 0.6130 | 0.0508 | 0.5622 | 6.1588 | 0.0982 |
+| 12 | 1.0954 | 0.3816 | 0.0115 | 0.3701 | 4.0545 | 0.0858 |
+| 17 | 1.5519 | 0.2602 | 0.0043 | 0.2559 | 2.8030 | 0.0578 |
+
+All twelve split-Rhat values for the deletion statistic and the two bridge
+directions lie in `[0.965,1.040]`.  The rescaled profile again stays of order
+one and decreases toward the splice.  Its values are not identical to the
+`n=100` scan, so the data do not identify a limiting curve or a sharp constant.
+They do, however, strengthen the route-level case for a dimension-uniform
+`K/sqrt(n)` window bound and against a constant-size central cusp.  This remains
+finite MCMC evidence, not a proof of the uniform bound or of the sign of `W_n`.

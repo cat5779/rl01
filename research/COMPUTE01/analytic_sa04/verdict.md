@@ -25,6 +25,11 @@
   Offset 15 is the report's finite-n tail splice.  This is the first direct
   evidence for the full version-2 window theorem, not only its central-layer
   specialization.
+- At `n=120`, a cross-dimensional scan gives `7.49,6.16,4.05,2.80` at offsets
+  `2,6,12,17`, with offset 17 at the new tail splice and all split-Rhat values
+  in `[0.965,1.040]`.  This supports investing in the uniform inverse-root
+  window estimate; it still does not prove a limiting profile or determine the
+  asymptotic sign of `W_n`.
 - Research value: the sublemma rules out vanishing of the deletion mechanism
   itself, while the new scaling data show that cancellation with the clock term
   is likely accurate to inverse-root order.

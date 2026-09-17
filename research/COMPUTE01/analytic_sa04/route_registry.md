@@ -40,6 +40,10 @@
   supports a bounded local profile rather than a
   single-layer coincidence; the largest split-Rhat is `1.105`, so the result
   remains exploratory.
+- The cross-dimensional `n=120` scan gives `7.49,6.16,4.05,2.80` at offsets
+  `2,6,12,17`; offset 17 is the new tail splice.  All relevant split-Rhat
+  values lie in `[0.965,1.040]`.  The second bounded, decreasing-to-the-tail
+  profile strengthens the window route without fixing a limiting curve.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 
