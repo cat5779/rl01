@@ -3,6 +3,9 @@ PROMPT.md
 ROUND2.md
 ROUND2_RESULT.md
 ROUND2_SELF_AUDIT.md
+S18_RESULT.md
+ROUND3_S18_AUDIT_AND_REFINEMENT.md
+ROUND3_REPRODUCTION.md
 PROVENANCE.json
 README.md
 SOL_REVIEW.md
@@ -21,4 +24,6 @@ sol_checks/check_auxiliary_examples.py
 checks/benchmark_reduction.py
 checks/enumerate_phi.py
 checks/verify_reductions.py
+checks/S18_PRO02_checks.py
+checks/refined_bottleneck.py
 checks/.gitignore
