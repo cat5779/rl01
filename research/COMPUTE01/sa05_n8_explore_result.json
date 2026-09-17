@@ -1,0 +1,42 @@
+{
+  "status": "EXPLORATORY",
+  "model": {
+    "n": 8,
+    "c": "19/20",
+    "state_count": 70
+  },
+  "data_checks": {
+    "mean_r0_minus_one": -2.220446049250313e-16,
+    "mean_v2": 1.5067312477055695e-17,
+    "mean_v4": -3.0610434821807887e-16
+  },
+  "candidate_points": [
+    {
+      "a": "1/200",
+      "curvature": -0.00037268948827969445,
+      "observed_sign": "negative"
+    },
+    {
+      "a": "1/50",
+      "curvature": 0.000345542196066892,
+      "observed_sign": "positive"
+    },
+    {
+      "a": "1/40",
+      "curvature": 0.0004408152398841934,
+      "observed_sign": "positive",
+      "role": "midpoint"
+    }
+  ],
+  "grid": {
+    "denominator": 20000,
+    "first_sign_change_bracket": ["27/2000", "271/20000"],
+    "second_sign_change_bracket": ["729/20000", "73/2000"]
+  },
+  "limitations": [
+    "Binary64 arithmetic only; no outward interval rounding yet.",
+    "The result is a finite n=8 diagnostic and has no asymptotic force.",
+    "The automatic derivative avoids finite differences but is not itself a sign certificate."
+  ]
+}
+
