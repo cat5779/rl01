@@ -9,3 +9,5 @@ RESULT.md 为建议交付名，无仓库写权限时直接交正文。不要求�
 接管后的第二轮结果见 `ROUND2_RESULT.md`。其状态是范围内新引理已证、完整基准负曲率仍未闭合；`checks/` 中的脚本复现可见 S18 数值并压力检查新储备与 pair-cut 公式。
 
 随后从本地下载目录恢复了 S18 完整正文与配套脚本，分别收入 `S18_RESULT.md` 和 `checks/S18_PRO02_checks.py`。范围内复现审计与严格加强见 `ROUND3_REPRODUCTION.md`、`ROUND3_S18_AUDIT_AND_REFINEMENT.md`：S18 四个承重点和原脚本均已核对，新充分条件同时使用尖锐 `c^2` 储备折扣、变分容量与 sine-specific 完整 pair-cut。大窗口 `W_(m,L)` 的认证负上界仍未得到，因此 PR 继续保持不请求合并的研究状态。
+
+平衡线上的方法比较、闭合尺度和严格前沿见 `ROUND4_C37_TO_ONE_ADVANTAGE_BOUNDARY.md`，复核入口见 `ROUND4_VERIFICATION.md`。新增证书把原双预算沿平衡线延伸到 `c=937/1000`，并在 `c=15/16` 给出严格有理障碍；在 `c=19/20` 的实际十点 sine 后验上，Arb 进一步认证旧 pointwise pair 比较失败。新定位式相对 S18 将同口径窗口尺度缩小约 `12.59` 倍，但尚未在 `c=19/20` 给出不借用旧曲率的大窗口负界，故仍不请求合并。

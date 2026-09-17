@@ -64,6 +64,9 @@ class Result:
     expected_pair_same: float
     expected_pair_opp: float
     expected_posterior_opp_energy: float
+    expected_quartic_bracket: float
+    u_old: float
+    expected_external_storage: float
 
 
 def enumerate_window(m: int, ell: int) -> Result:
@@ -79,6 +82,9 @@ def enumerate_window(m: int, ell: int) -> Result:
     epsame = 0.0
     epopp = 0.0
     eropp = 0.0
+    equartic = 0.0
+    estorage = 0.0
+    outside_gram = q - q @ q
     beta = A0 * (A0 + C0)
     for bits in itertools.product((0, 1), repeat=n):
         mat = k - np.diag([1 - b for b in bits])
@@ -88,8 +94,23 @@ def enumerate_window(m: int, ell: int) -> Result:
         if p <= 0.0:
             raise ArithmeticError((bits, p, sign, logabsdet))
         g = np.linalg.inv(mat)
+        alpha = np.array([A0 if b else 1 - A0 for b in bits])
+        sigma = np.array([1.0 if b else -1.0 for b in bits])
+        field = (alpha + sigma * C0) / alpha
+        transfer = np.linalg.inv(
+            np.eye(n) + q @ np.diag(field - 1.0)
+        )
+        left = np.diag(np.sqrt(field)) @ transfer
+        posterior_outside_gram = left @ outside_gram @ left.T
+        storage = sum(float(posterior_outside_gram[i, i]) for i in core)
         val = phi_core(g, core)
         diag = sum(float(g[i, i] ** 2) for i in core)
+        quartic_bracket = diag
+        for i in core:
+            for j in core:
+                quartic_bracket += float(
+                    g[i, j] ** 4 / (g[i, i] * g[j, j])
+                )
         psame = 0.0
         popp = 0.0
         ropp = 0.0
@@ -111,16 +132,30 @@ def enumerate_window(m: int, ell: int) -> Result:
         epsame += p * psame
         epopp += p * popp
         eropp += p * ropp
+        equartic += p * quartic_bracket
+        estorage += p * storage
         minp = min(minp, p)
         maxp = max(maxp, p)
     return Result(n, m, ell, mass, ephi, -ephi / m, minp, maxp,
-                  ediag, epsame, epopp, eropp)
+                  ediag, epsame, epopp, eropp, equartic,
+                  -equartic / (2 * m), estorage)
 
 
 def main() -> None:
+    global A0, C0
     parser = argparse.ArgumentParser()
+    parser.add_argument("--c", type=float, default=C0)
+    parser.add_argument(
+        "--a",
+        type=float,
+        default=None,
+        help="channel offset; defaults to the balanced value (1-c)/2",
+    )
     parser.add_argument("pairs", nargs="*", help="m,L pairs such as 4,2")
     args = parser.parse_args()
+    C0 = args.c
+    A0 = (1.0 - C0) / 2.0 if args.a is None else args.a
+    print(f"channel a={A0:.17g} c={C0:.17g}")
     pairs = []
     for item in args.pairs or ["6,0", "4,2"]:
         m, ell = map(int, item.split(","))
@@ -137,6 +172,11 @@ def main() -> None:
             f"pair_same={r.expected_pair_same/r.m:.12g} "
             f"pair_opp={r.expected_pair_opp/r.m:.12g} "
             f"Ropp={r.expected_posterior_opp_energy/r.m:.12g}"
+        )
+        print(
+            f"  old_U={r.u_old:.12g} exact_W={r.w:.12g} "
+            f"W_minus_U={r.w-r.u_old:.12g} "
+            f"external_storage={r.expected_external_storage:.12g}"
         )
 
 
