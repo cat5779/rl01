@@ -1,0 +1,35 @@
+{
+  "status": "FINITE_FULL_WORD_DIAGNOSTIC",
+  "contrast": 0.95,
+  "results": [
+    {
+      "R": 9,
+      "N": 10,
+      "external_bits": 18,
+      "word_count": 262144,
+      "quadrature_nodes": 64,
+      "u_interval": [
+        0.1,
+        1.0
+      ],
+      "baseline": 3.96,
+      "integrated_residual_components": {
+        "curvature_minus_8": 0.8056349068806892,
+        "bregman_phi_prime": 0.22445361204594358,
+        "parameter_derivative": 1.628644313556317,
+        "signed_transport": -0.7606185843755782
+      },
+      "A_R_second_derivative": 5.858114248107372,
+      "pointwise_min_normalized_total": 8.000429792604956,
+      "pointwise_max_normalized_total": 29.049118125288985,
+      "posterior_min": 0.14211904745356396,
+      "posterior_max": 0.8578809525464361,
+      "max_r1_closed_form_error": null
+    }
+  ],
+  "limitations": [
+    "Finite radii do not determine the sign of Gamma(19/20).",
+    "Binary64 linear algebra and Gauss-Legendre quadrature are not interval certificates.",
+    "Every reported expectation uses the genuine physical-word DPP law, not spectral Bernoulli words."
+  ]
+}

@@ -1,0 +1,40 @@
+# Route registry
+
+## ROUTE-1: componentwise nonnegative dissipation
+
+- Status: **DISPROVED**.
+- Counterexample: already at `R=1`, the signed transport component is strictly
+  negative for every nontrivial coupling.
+
+## ROUTE-2: wordwise positivity of the complete local kernel
+
+- Status: **DISPROVED**.
+- Counterexample: at `R=9,u=1`, the physical word
+  `001010011001101011` (site order `-9,...,-1,1,...,9`) has normalized local
+  kernel `-1.9552822249`.
+- Its residual components are `0`, `-4.1063612421`, `+5.5419951053`, and
+  `-11.3909160881`; after adding the independent baseline `8`, the total is
+  negative.
+
+## ROUTE-3: expected compensated budget
+
+- Status: **ACTIVE**.
+- Evidence: the physical-word expectation remains positive at every tested
+  quadrature node through `R=9`; the integrated total grows from `3.0720` at
+  `R=1` to `5.8581` at `R=9`.
+- Target: compare the expected parameter-derivative block plus
+  `phi''-8` against the expected negative transport block, using the true DPP
+  integration-by-parts structure.
+
+## ROUTE-4: large-R true-DPP sampling
+
+- Status: **ACTIVE SCOUT**.
+- The sampler is calibrated against exact full-word enumeration.  It is used
+  to decide whether ROUTE-3 remains plausible at `R=20,40,80`, not to certify
+  `Gamma`.
+
+## ROUTE-5: weak-coupling series at `c=19/20`
+
+- Status: **REJECTED AS A HIGH-CONTRAST CLOSURE**.
+- The positive fourth- and sixth-order coefficients are rigorous near
+  `cu=0`, but the existing uniform constants do not cover `u` near one.

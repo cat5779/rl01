@@ -14,7 +14,8 @@
 `A_k >= c^4/72`，并且 `liminf A_k >= 2c^4/9 > 0.1810`。
 
 因此删除机制本身不会随维数消失；任何可能的中央抵消都必须完整来自实际钟差成本
-`E_k`。当前唯一明确瓶颈是证明 `limsup E_k < 2c^4/9`（或构造更强删除见证）。
+`E_k`。后续配对 MCMC 已显示 `E_k<2c^4/9` 这条充分条件在 `n=60` 失效，
+但实际 `A_k` 同时大得多，中央差仍显著为正；应改为联合控制二者。
 完整推导见 `analytic_sa04/proofs/deletion_lower_bound.md`，状态为
 `PROVED_HERE / PENDING_INDEPENDENT_REVIEW`。
 
@@ -87,8 +88,8 @@ PRO01–PRO03 的理论构造任务，不与那些网页版研究任务争夺同
 | 任务 | 状态 | 下一验收点 |
 |---|---|---|
 | C01 SA05 n=8 | FINITE_CERTIFIED | 严格有限符号证书及 256 原子独立回归均完成 |
-| C02 SA04 中央尺度 | EXPLORATORY | 扩展尺寸并为中央非消失差寻找解析引理 |
-| C03 SA03 截断判号 | CLAIMED | 现有 R=1 脚本接口与局部残差分项回归 |
+| C02 SA04 中央尺度 | EXPLORATORY + PROVED SUBLEMMA | `n=40,60` 配对诊断支持正中央差；继续完整交换极限 |
+| C03 SA03 截断判号 | ACTIVE EXPLORATORY | 全 word 到 `R=9` 支持正平均；逐 word 正性已反例淘汰 |
 
 ## 运行
 
@@ -113,3 +114,8 @@ C02 的首轮程序 `sa04_central_scale.py` 已完成固定潜在集合的一维
 并通过 DPP 交叠计数生成函数恢复混合律。`n=6,8,...,20` 的结果和验算见
 `SA04_CENTRAL_SCALE.md`；它们支持把“中央 `d_l` 非消失”作为下一条待证方向，
 但仍明确标为有限 binary64 探索结果。
+
+C03 的 `sa03_exact_finite.py` 已对 `R=1,3,5,7,9` 枚举真实物理 word，并分别记录
+四块补偿残差。总曲率均为正，但 `R=9,u=1` 存在负的逐 word 局部核，因此只剩
+真实 DPP 期望层面的补偿路线。`sa03_dpp_monte_carlo.py` 使用精确 DPP 抽样把该
+预算扩展到更大半径；抽样器已用小 `R` 全枚举校准。
