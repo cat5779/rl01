@@ -48,3 +48,22 @@ the over-strong `d_k>=epsilon` closure.
 For larger dimensions the birth--death heat kernel is evaluated by Poisson
 uniformization.  This preserves nonnegativity and replaces an eigendecomposition
 whose tiny tails became negative at `n=80` in binary64.
+
+## First window profile at n=100
+
+The paired estimator was also run away from the single central layer.  Here
+`offset=k-l` and `x=offset/sqrt(n)`.
+
+| offset | x | A_l | E_l | d_l | sqrt(n)d_l | naive SE after scaling |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0 | 0.0 | 1.1072 | 0.6751 | 0.4321 | 4.3208 | 0.1770 |
+| 2 | 0.2 | 0.8798 | 0.1816 | 0.6982 | 6.9824 | 0.1423 |
+| 4 | 0.4 | 0.6913 | 0.0718 | 0.6194 | 6.1943 | 0.1113 |
+| 6 | 0.6 | 0.5515 | 0.0330 | 0.5185 | 5.1848 | 0.0919 |
+| 8 | 0.8 | 0.4505 | 0.0183 | 0.4322 | 4.3216 | 0.0930 |
+
+The rescaled profile has a finite off-center peak and then decreases; no growth
+with the raw dimension is visible in this window.  Most split-Rhat values are
+near one; the largest is `1.105` for the offset-four deletion chain, so this
+remains route-selection evidence rather than a uniform bound.  Outer offsets
+near the expanded-window/tail splice are tested separately.

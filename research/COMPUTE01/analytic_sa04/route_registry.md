@@ -34,6 +34,10 @@
 - At `n=100,120`, the rescaled values are `4.32+/-0.18` and `4.18+/-0.22`.
   Thus the inverse-root diagnosis survives, but no numerical leading constant
   is frozen.
+- The first `n=100` window scan gives `sqrt(n)d_l=6.98,6.19,5.18,4.32` at
+  offsets `2,4,6,8`.  It supports a bounded local profile rather than a
+  single-layer coincidence; the largest split-Rhat is `1.105`, so the result
+  remains exploratory.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 

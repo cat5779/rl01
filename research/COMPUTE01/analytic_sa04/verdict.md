@@ -20,6 +20,9 @@
 - The follow-up values `sqrt(n)d_k=4.32+/-0.18` at `n=100` and
   `4.18+/-0.22` at `n=120` reinforce the inverse-root scale but show that the
   apparent `5.1105` constant at `n=80` was not stabilized.
+- At `n=100`, offsets `2,4,6,8` give the bounded rescaled window profile
+  `6.98,6.19,5.18,4.32`.  This is the first direct evidence for the version-2
+  window theorem, not only its central-layer specialization.
 - Research value: the sublemma rules out vanishing of the deletion mechanism
   itself, while the new scaling data show that cancellation with the clock term
   is likely accurate to inverse-root order.
