@@ -1,0 +1,47 @@
+{
+  "status": "EXACT_PASS",
+  "n4": {
+    "input_atoms": 6,
+    "output_atoms": 16,
+    "all_atom_and_layer_normalizations": "EXACT_PASS",
+    "all_conditional_jets": "EXACT_PASS",
+    "true_equals_corrected_symbolically_in_a": true,
+    "complete_atom_E_second_at_midpoint": "0",
+    "weighted_layer_E_second_at_midpoint": "0"
+  },
+  "algebra": {
+    "n8_configuration_enumeration": false,
+    "n8_degree_four_witness": "7/8",
+    "positive_polynomial_coefficients_descending": [
+      210,
+      9520,
+      173460,
+      1665552,
+      9454760,
+      33592320,
+      75582720,
+      100776960,
+      60466176
+    ],
+    "n8_overlap_support_size": 5,
+    "jacobi_clock_and_residual_checks": "EXACT_PASS",
+    "overlap_score_and_degree_two_cancellation": "EXACT_PASS",
+    "uniform_source_constant_exact": "349998584954880000/2401"
+  },
+  "moving_reference": {
+    "moving_reference_second": "4",
+    "generic_Bregman_second_identity": "EXACT_PASS"
+  },
+  "two_law_graph": {
+    "rational_two_state_densities": true,
+    "ordered_edge_energy_factor": "EXACT_PASS",
+    "two_moving_law_dissipation": "EXACT_PASS",
+    "second_order_modulated_Jacobi_identity": "EXACT_PASS"
+  },
+  "not_tested": [
+    "n8 E_second numeric parameter locations",
+    "all-n midpoint sign",
+    "o(n) bridge",
+    "large configuration or parameter scans"
+  ]
+}

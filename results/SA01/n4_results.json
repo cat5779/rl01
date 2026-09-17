@@ -1,0 +1,159 @@
+{
+  "status": "PASS_EXACT_N4_CHECKS",
+  "scope": {
+    "input": "genuine contiguous-frequency cyclic projection P_(4,2)",
+    "a": "1/40",
+    "c": "19/20",
+    "input_states": 6,
+    "output_states": 16,
+    "proof_location": "REPORT.md",
+    "not_a_proof_of": "growing-dimension entropy concavity or an entropy-rate limit"
+  },
+  "continuum_lemma_rational_checks": {
+    "exp_9_4_partial_sum": {
+      "fraction": "3082913/327680",
+      "decimal": 9.408303833007812
+    },
+    "exp_17_8_partial_sum": {
+      "fraction": "314095517/37748736",
+      "decimal": 8.320689651701185
+    },
+    "neutral_delta": {
+      "fraction": "1/235",
+      "decimal": 0.00425531914893617
+    },
+    "h_min": {
+      "fraction": "468/55225",
+      "decimal": 0.008474422815753734
+    },
+    "s_min": {
+      "fraction": "2491671/44180000",
+      "decimal": 0.05639816659121775
+    },
+    "full_delta": {
+      "fraction": "1/9127",
+      "decimal": 0.00010956502684343158
+    }
+  },
+  "exact_new_certificate": {
+    "Psi": {
+      "fraction": "837568518400/8616436959",
+      "decimal": 97.20590104534415
+    },
+    "E": {
+      "fraction": "0",
+      "decimal": 0.0
+    },
+    "expected_W": {
+      "fraction": "676126666602967536957/113369088233035644035848",
+      "decimal": 0.005963941998132299
+    },
+    "expected_J": {
+      "fraction": "3458915971360317/390495652167895688",
+      "decimal": 0.008857757960063375
+    },
+    "B_geometry": {
+      "fraction": "1478656/6591",
+      "decimal": 224.34471248672432
+    },
+    "T_harmonic": {
+      "fraction": "1820510275160096/236619068411033",
+      "decimal": 7.693844318572298
+    },
+    "T_squared": {
+      "fraction": "29373889726055733120/634555434772830493",
+      "decimal": 46.290502163253116
+    },
+    "T_envelope": {
+      "fraction": "29416022942438399308/634555434772830493",
+      "decimal": 46.35690017054109
+    },
+    "T_adaptive_overlap": {
+      "fraction": "8259071995170514321506537598138977920/252802157341844929487178152072382173",
+      "decimal": 32.67010092798538
+    },
+    "T_adaptive_balance": {
+      "fraction": "3460052375622811527204508088003307468/252802157341844929487178152072382173",
+      "decimal": 13.686799242555706
+    },
+    "H_second_derivative_overlap_only_upper_bound": {
+      "fraction": "-16534810627528503619940692879286714240/758406472025534788461534456217146519",
+      "decimal": -21.80204314893003
+    },
+    "L_SA01": {
+      "fraction": "125257588507503052004/1903666304318491479",
+      "decimal": 65.79808037960991
+    },
+    "complete_budget": {
+      "fraction": "6400/39",
+      "decimal": 164.10256410256412
+    },
+    "H_second_derivative_upper_bound": {
+      "fraction": "-67558913439941061604/1903666304318491479",
+      "decimal": -35.48884239148573
+    },
+    "two_output_structural_certificate": {
+      "fraction": "1083/32500",
+      "decimal": 0.03332307692307692
+    },
+    "uniform_overlap_payment_per_site": {
+      "fraction": "778512384/48242012248609",
+      "decimal": 1.613764326388453e-05
+    },
+    "uniform_total_reserve_per_site": {
+      "fraction": "144400/579121",
+      "decimal": 0.24934340146532416
+    }
+  },
+  "legal_counterexample": {
+    "status": "DISPROVED_LOCAL_LEMMA",
+    "pair_zero_based": [
+      0,
+      1
+    ],
+    "exterior": [
+      0,
+      0
+    ],
+    "cells_A00_A10_A01_A11": [
+      "1521/351200",
+      "29679/351200",
+      "29679/351200",
+      "290321/351200"
+    ],
+    "exterior_probability": {
+      "fraction": "439/3200",
+      "decimal": 0.1371875
+    },
+    "h_exterior": {
+      "fraction": "761/878",
+      "decimal": 0.8667425968109339
+    },
+    "Gamma": {
+      "fraction": "88349984800/96990149359",
+      "decimal": 0.9109170919304471
+    },
+    "odds_ratio": {
+      "fraction": "579121/290321",
+      "decimal": 1.9947609714764003
+    },
+    "false_rhs": {
+      "fraction": "63788689025600/42578675568601",
+      "decimal": 1.4981369940177285
+    },
+    "log_lower_bound": {
+      "fraction": "288800/434721",
+      "decimal": 0.664334136147092
+    },
+    "false_margin_upper_bound": {
+      "fraction": "-6305136880422404000/18509844421857795321",
+      "decimal": -0.3406369463039263
+    }
+  },
+  "diagnostic_float_NOT_USED_FOR_PROOF": {
+    "A_acceleration": 41.123540034652066,
+    "R_2": 153.28826205603622,
+    "H_second_derivative": -122.97902406791205,
+    "note": "These logarithmic floating values certify no sign or error bound."
+  }
+}

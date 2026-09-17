@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "generic 3-site kernel; 2 interacting exterior sites; symbolic identities",
+  "checks": [
+    "external word normalization",
+    "exact Schur energy identity",
+    "odds-weighted row energy identity",
+    "rank-one flip update including exterior interaction",
+    "matrix material drift D G = 0",
+    "posterior material drift D q = u",
+    "positive birth minus reversible Poisson generator equals signed transport",
+    "detailed balance for the reversible generator",
+    "material rate drift D r_i = 2*u^2*o_i",
+    "material odds drift D o_i = -2*u*G_ii"
+  ],
+  "not_a_claim": "This symbolic auxiliary check does not replace the actual Fejer R=1 check or prove a sign."
+}

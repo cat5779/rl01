@@ -1,0 +1,22 @@
+{
+  "task": "SA01",
+  "review_status": "PENDING_INDEPENDENT_REVIEW",
+  "source_repository": "randomcat4/dpp-stationary-entropy",
+  "source_pr": 118,
+  "source_ref": "f505f45e1ac0b79e66f592eb425d5637ffbf651a",
+  "source_path": "research_results/SA01_POSTERIOR_SLACK",
+  "policy": "All new SA claims pending independent review. Original author labels retained as quotations. Each SA audited separately. No checksum gate.",
+  "code_status": "AUTHOR_SUPPLIED_NOT_RERUN_FOR_PUBLICATION",
+  "files": [
+    "HANDOFF.md",
+    "MODEL_AND_NOTATION.md",
+    "README.md",
+    "REPORT.md",
+    "TASK.md",
+    "n4_results.json",
+    "sources/S4_AUDIT.md",
+    "sources/S4_PROOF.md",
+    "verify_n4.py"
+  ],
+  "missing_evidence": []
+}

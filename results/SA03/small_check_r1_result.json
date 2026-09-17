@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "R=1, exact 8 joint atoms / 4 external words, symbolic parameters",
+  "checks": [
+    "normalization and exact Schur posterior",
+    "all u factors in jets",
+    "signed flux adjoint identity",
+    "pointwise compensated posterior drift",
+    "second-variation equality for arbitrary formal function jets",
+    "weighted boundary-flux equality for arbitrary fixed test values",
+    "exact negative signed-flux component in the legal R=1 model",
+    "explicit R=1 production curvature formula",
+    "exact rational negative budget and positive-total generating formula",
+    "small-coupling Taylor coefficients"
+  ],
+  "r1_curvature_div_u2_series": "8 + 48*t**2 + 128*t**3/3 + O(t**4)",
+  "negative_flux_component": "T B_phi = -16*u^2*t^2/(1-4*t^2) < 0 pointwise",
+  "not_performed": ["large-R enumeration", "parameter sweeps", "asymptotic fitting", "hash checks"]
+}

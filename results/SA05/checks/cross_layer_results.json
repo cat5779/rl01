@@ -1,0 +1,21 @@
+{
+  "status": "EXACT_PASS",
+  "n": 8,
+  "layers": [
+    2,
+    3,
+    4
+  ],
+  "configuration_enumeration": false,
+  "kernel_normalization": "EXACT_PASS",
+  "contiguous_mode_identity": "EXACT_PASS",
+  "moving_eta_derivative": "EXACT_PASS",
+  "two_step_second_jet_identity": "EXACT_PASS",
+  "matched_clock_ratio": "EXACT_PASS",
+  "static_chi_square_constant": "115520",
+  "fixed_mode_M_constant": "6084",
+  "not_proved_by_this_check": [
+    "all-n asymptotic entropy bridge",
+    "sign or scale of cross-layer second KL differences"
+  ]
+}

@@ -1,3 +1,5 @@
+> **待独立对抗性审查 / PENDING_INDEPENDENT_REVIEW。** 下文保留来源原文；其中 PROVED、PASS、AUDIT 等是作者或既有记录的表述，不代表本次 SA 成果已独立通过。审查入口见对应 results/SAxx/REVIEW_REQUEST.md；外部审计与其他 SA 分开进行。
+
 # 公共数学起点与范围
 
 这是任务准备材料，不是全局凹性证明。下列有限概率恒等式可直接使用；只重新推导它们不算新的研究成果。
