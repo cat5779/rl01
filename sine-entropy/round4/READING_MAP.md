@@ -88,3 +88,7 @@ commands. The compressed cover is an optional download, not required reading.
   sign extension or the real-q estimate as a premise.
 
 The broad target remains open. Advance beyond these results in future work.
+
+## Latest accepted research units
+
+Read [the scoped ledger](optional/overnight-reviewed-20260917/README.md), then the group A/B/C audits and actual proofs for your lane. The directory includes S1/S2/S4/S7/S9/S11/S12/S13 scope records and available reproducible evidence. This is a curated research subset, not a complete repository mirror.

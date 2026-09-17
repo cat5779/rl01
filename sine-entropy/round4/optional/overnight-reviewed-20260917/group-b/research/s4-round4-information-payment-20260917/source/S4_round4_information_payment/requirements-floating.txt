@@ -1,0 +1,2 @@
+# Optional floating diagnostics only; never a proof dependency.
+numpy==2.3.5

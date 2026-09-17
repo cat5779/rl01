@@ -1,0 +1,73 @@
+{
+  "benchmark": {
+    "K": [
+      [
+        "5/17",
+        "2/17"
+      ],
+      [
+        "2/17",
+        "11/17"
+      ]
+    ],
+    "Q": [
+      [
+        "4371/15742",
+        "1000/7871"
+      ],
+      [
+        "1000/7871",
+        "10371/15742"
+      ]
+    ],
+    "a_center": "37/1000",
+    "c": "463/500",
+    "loewner_checks": {
+      "K_minus_aI_determinant": "2431273/17000000",
+      "K_minus_aI_diagonal": [
+        "4371/17000",
+        "10371/17000"
+      ],
+      "upperI_minus_K_determinant": "3357273/17000000",
+      "upperI_minus_K_diagonal": [
+        "11371/17000",
+        "5371/17000"
+      ]
+    }
+  },
+  "contrast_response": {
+    "Q_scalar": "1/100",
+    "centered_shift_interval": [
+      "-1/200",
+      "1/200"
+    ],
+    "formula_per_site": "q*(1-2p)/(p^2*(1-p)^2)",
+    "lower_float": 3.3136094674556213,
+    "p_interval": [
+      "2063/50000",
+      "2563/50000"
+    ],
+    "rigorous_uniform_lower": "560/169"
+  },
+  "mixed_face": {
+    "H11": "-1979/408",
+    "H22": "-449/102",
+    "algebraic_part": "-29/102",
+    "cells_11_10_01_00": [
+      "3/17",
+      "2/17",
+      "8/17",
+      "4/17"
+    ],
+    "common_curvature_float_diagnostic": -9.245714286468989,
+    "delta": "-4/289",
+    "direct_sum_positive_mixed_payment": "2 sum_{i<j}(H_ij)_+ > n/714",
+    "odds_ratio": "3/4",
+    "phi_float_diagnostic": 0.0033683469615847783,
+    "reciprocal_sum": "493/24",
+    "rigorous_log_lower": "log(4/3) > 2/7",
+    "rigorous_phi_lower": "1/714"
+  },
+  "schema": 1,
+  "status": "DISPROVED_ROUTE_LEMMA"
+}

@@ -43,8 +43,8 @@ must not be advertised as a counterexample to the sine target.
   has been disproved. Integer replicas do not grant real-q continuation.
 - Replacing the full law by a product loses extensive spatial dependence. A
   value error bound does not control the a-curvature of its error. See S6.
-- S7's two stalled runs supplied no accepted new theorem. A masked-resolvent
-  representation and uniform far-tail bound are not inherited results.
+- S7's first two stalled runs supplied no theorem. Its later accepted spatial
+  results are now included in the 2026-09-17 review ledger; do not confuse the rounds.
 - This packet's exact finite checks verify their stated finite identities and
   signs; they do not prove the fixed-density entropy-rate target.
 
@@ -74,3 +74,35 @@ small entropy value error still does not justify differentiating it.
 
 S9's total negative layer mass is provably nonvanishing. A new approach must
 retain the positive-negative compensation, not demand all layers be convex.
+
+## Reviewed synchronization — 2026-09-17
+
+This packet now includes the accepted scopes of the latest three-reviewer
+integration. Full high-contrast sine entropy-rate concavity remains OPEN.
+Read the [new review ledger](optional/overnight-reviewed-20260917/README.md)
+and the independent audit of every imported claim.
+
+- S4: for every finite Hermitian contraction with mean density <=.01 or >=.99,
+  c in [.925,.959], and a in [(1-c)/4,3(1-c)/4], H''<=-11n/250; the associated
+  sine-rate strong Jensen gain is 11t(1-t)(a1-a0)^2/500. Ordinary densities and
+  the remaining channel region are open.
+- S1: weighted actual-output count tails at half density, c=.95,
+  a in [.02,.03]; the imported all-odds identity was not certified by this audit.
+- S2: the stated growing odd-n consecutive-Fourier second affine step is not
+  any contraction DPP law; the seven-site physical curvature reversal is exact.
+- S7: complete Shannon Hessian localization and quantitative posterior spatial
+  tails accepted. Near-field sign remains open. Missing six-site scripts and
+  payloads are NOT independent certificate evidence. Earlier statements that
+  S7 has no accepted theorem refer only to its first two stalled runs.
+- S9: production-weighted critical-scale Gaussian limit and opposite order-R
+  band/complement curvatures accepted; the subleading complete sign is unpaid.
+- S11/S12: precise method-budget and mixed-response obstructions accepted;
+  these are not counterexamples to the entropy-concavity target.
+- S13: for each fixed 0<c<1 along even n, liminf C_n/n >=
+  2D_pair(c)/(1-c^2)>0. This is only a favorable midpoint component. W_n and
+  off-midpoint response remain unpaid. Round-2 asymptotics are not promoted.
+- New S3/S5 archives were missing; their new chat claims are not accepted here.
+
+Each new unit received one independent Sol review, not a second review.
+Historical author and unreviewed files are preserved for provenance; the
+explicit acceptance boundaries override their original completion labels.

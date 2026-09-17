@@ -1,0 +1,145 @@
+{
+  "started_utc": "2026-09-17T03:33:41Z",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "scope": "same-author exact computational replay, not independent audit",
+  "selected_names": [
+    "rational",
+    "fourier7",
+    "common_frame",
+    "rational_optimized",
+    "fourier7_optimized"
+  ],
+  "resume_requested": false,
+  "executed_in_this_invocation": [
+    {
+      "name": "rational",
+      "command": [
+        "[LOCAL_USER]\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\S2\\S2_check1_cumulative\\scripts\\exact_certificate.py",
+        "--out",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\rational"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 6.171999999991385,
+      "finished_utc": "2026-09-17T03:33:47Z",
+      "source_sha256": {
+        "exact_certificate.py": "e2133a35e30e819c365c6c43f4d6d09d32532e00250ec73218e0f5d4575f2783",
+        "exact_fourier7.py": "622258c3463e1172effcb99c143d2ad6a651577250f80d6d3b749339d55be3ae",
+        "exact_common_frame.py": "53df3b69c75be7e37eca66d6dd994a1e8992c96213192b8d770fb1b4e5606aa6"
+      },
+      "evidence_sha256": {
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\logs\\rational.log": "d3339f2bfaf85195811669c9b1df295363c9bd5168a53c7ec9a563a82cf15fec",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\rational\\certificate.json": "42b39f5cf0a6dbc12b8d8c54e9dd16d389aa26a7baa76930abaa3cc2b1a777c3",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\rational\\run_receipt.json": "96b8b889f8ca97296e84a41654d47e222e8c010d220925cbe4f0e73e23a8b275"
+      }
+    },
+    {
+      "name": "fourier7",
+      "command": [
+        "[LOCAL_USER]\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\S2\\S2_check1_cumulative\\scripts\\exact_fourier7.py",
+        "--out",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\fourier7"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 1.7179999999934807,
+      "finished_utc": "2026-09-17T03:33:49Z",
+      "source_sha256": {
+        "exact_certificate.py": "e2133a35e30e819c365c6c43f4d6d09d32532e00250ec73218e0f5d4575f2783",
+        "exact_fourier7.py": "622258c3463e1172effcb99c143d2ad6a651577250f80d6d3b749339d55be3ae",
+        "exact_common_frame.py": "53df3b69c75be7e37eca66d6dd994a1e8992c96213192b8d770fb1b4e5606aa6"
+      },
+      "evidence_sha256": {
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\logs\\fourier7.log": "a2ff1430e9e0dabeb6474b554dfa6d7276d72ffc054ac47da1ef2a2d54b64365",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\fourier7\\certificate.json": "4ea1af60696f805c9d93d1839c7e0fd87caf6b6fb4484c86629046cacd1c2736",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\fourier7\\run_receipt.json": "638169de4c634e23fa656ee6decdcabed071cb1fbf75cf2d216656539b48b5c4"
+      }
+    },
+    {
+      "name": "common_frame",
+      "command": [
+        "[LOCAL_USER]\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\S2\\S2_check1_cumulative\\scripts\\exact_common_frame.py",
+        "--out",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\common_exact.json"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 0.8120000000053551,
+      "finished_utc": "2026-09-17T03:33:50Z",
+      "source_sha256": {
+        "exact_certificate.py": "e2133a35e30e819c365c6c43f4d6d09d32532e00250ec73218e0f5d4575f2783",
+        "exact_fourier7.py": "622258c3463e1172effcb99c143d2ad6a651577250f80d6d3b749339d55be3ae",
+        "exact_common_frame.py": "53df3b69c75be7e37eca66d6dd994a1e8992c96213192b8d770fb1b4e5606aa6"
+      },
+      "evidence_sha256": {
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\logs\\common_frame.log": "e657022c3f63ec5ad264cc4ee6c40b61481f40c281c92852f5a07c65a54da78b",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\common_exact.json": "ae1b748e5cfb08b436d74ee7991f62dcb09cb52358a5072c9934aa7e26ab92f1"
+      }
+    },
+    {
+      "name": "rational_optimized",
+      "command": [
+        "[LOCAL_USER]\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-O",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\S2\\S2_check1_cumulative\\scripts\\exact_certificate.py",
+        "--terms",
+        "28",
+        "--out",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\rational_optimized"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 7.60999999998603,
+      "finished_utc": "2026-09-17T03:33:58Z",
+      "source_sha256": {
+        "exact_certificate.py": "e2133a35e30e819c365c6c43f4d6d09d32532e00250ec73218e0f5d4575f2783",
+        "exact_fourier7.py": "622258c3463e1172effcb99c143d2ad6a651577250f80d6d3b749339d55be3ae",
+        "exact_common_frame.py": "53df3b69c75be7e37eca66d6dd994a1e8992c96213192b8d770fb1b4e5606aa6"
+      },
+      "evidence_sha256": {
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\logs\\rational_optimized.log": "83527df553095e2c036b0f74f1726b8547a75d3688cd14e989ded325e409280f",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\rational_optimized\\certificate.json": "7f50d385cf69a5c35304e9c62b2986bf08f85cd7953287d653d81796314e1222",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\rational_optimized\\run_receipt.json": "d83ba3f9e942fb8a2e3db3e0592481870ecf8119cd8b17d95d1d8d6e664b888e"
+      }
+    },
+    {
+      "name": "fourier7_optimized",
+      "command": [
+        "[LOCAL_USER]\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-O",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\S2\\S2_check1_cumulative\\scripts\\exact_fourier7.py",
+        "--terms",
+        "28",
+        "--bits",
+        "160",
+        "--out",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\fourier7_optimized"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 1.75,
+      "finished_utc": "2026-09-17T03:33:59Z",
+      "source_sha256": {
+        "exact_certificate.py": "e2133a35e30e819c365c6c43f4d6d09d32532e00250ec73218e0f5d4575f2783",
+        "exact_fourier7.py": "622258c3463e1172effcb99c143d2ad6a651577250f80d6d3b749339d55be3ae",
+        "exact_common_frame.py": "53df3b69c75be7e37eca66d6dd994a1e8992c96213192b8d770fb1b4e5606aa6"
+      },
+      "evidence_sha256": {
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\logs\\fourier7_optimized.log": "981abcab2d3fde9e34ec37f3e43a06ddc6e00f63005302cee393b03e973793d6",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\fourier7_optimized\\certificate.json": "c7c5ba149adc95444998cff28fef579fc088503dc823e5495cdb250671be2b0c",
+        "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\A\\audit-runs\\S2\\fourier7_optimized\\run_receipt.json": "77f8b3f874843d9b35873d57a7ef9b79fe4253da1e5ca91ce5e8a3d4a7f0b94a"
+      }
+    }
+  ],
+  "reused_completed_jobs": [],
+  "all_checks_passed": true,
+  "completed_names": [
+    "rational",
+    "fourier7",
+    "common_frame",
+    "rational_optimized",
+    "fourier7_optimized"
+  ],
+  "same_exact_laws_and_jets_at_both_precisions": true,
+  "finished_utc": "2026-09-17T03:33:59Z",
+  "invocation_runtime_seconds": 18.296999999991385
+}

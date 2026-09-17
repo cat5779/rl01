@@ -584,5 +584,7 @@
       "sha256": "bf3471040a6e6e80de897e520e032dc25d60860bc4a44e621998ac971fe5716e",
       "copy": "User-supplied interrupted-run mathematical leads translated and scoped; unreviewed"
     }
-  ]
+  ],
+  "latest_reviewed_source_commit": "5f535deafe6588bdada825794ecd05cd9bad616b",
+  "latest_sync_record": "SYNC_STATUS.json"
 }

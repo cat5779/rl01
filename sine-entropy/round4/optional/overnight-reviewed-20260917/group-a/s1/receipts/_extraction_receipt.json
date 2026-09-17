@@ -1,0 +1,336 @@
+{
+  "archive": "[LOCAL_USER]\\Desktop\\20260907\\S1_cumulative_round4_check2.zip",
+  "sha256": "28cf8ca4be573856d6888a00e41db3315c9c20f4ec603d125e20d04291a7f39f",
+  "members": [
+    {
+      "name": "S1_cumulative_round4_check2/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/receipts/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/receipts/CONTRACT.md",
+      "size": 2485,
+      "compressed": 1353,
+      "crc": "3c48564f"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/receipts/SOURCE_RECEIPTS.md",
+      "size": 993,
+      "compressed": 572,
+      "crc": "f0ca9b0c"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/receipts/S1_assignment_e78392f.md",
+      "size": 3990,
+      "compressed": 2082,
+      "crc": "27497c17"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/evidence/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/evidence/exact_obstruction_stdout.txt",
+      "size": 1091,
+      "compressed": 579,
+      "crc": "26a1ffb3"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/evidence/star_obstruction.json",
+      "size": 910,
+      "compressed": 486,
+      "crc": "bd7521f5"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/evidence/star_obstruction_stdout.txt",
+      "size": 910,
+      "compressed": 486,
+      "crc": "bd7521f5"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/evidence/exact_obstruction.json",
+      "size": 1091,
+      "compressed": 579,
+      "crc": "26a1ffb3"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/evidence/diagnostics.json",
+      "size": 3536,
+      "compressed": 1188,
+      "crc": "21f490ce"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/evidence/diagnostics_stdout.txt",
+      "size": 3536,
+      "compressed": 1188,
+      "crc": "21f490ce"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/RESULT.md",
+      "size": 17230,
+      "compressed": 7033,
+      "crc": "27b1f097"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/scripts/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/scripts/verify_exact_obstruction.py",
+      "size": 4256,
+      "compressed": 1664,
+      "crc": "757fb283"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/scripts/diagnose_potential.py",
+      "size": 9520,
+      "compressed": 3289,
+      "crc": "e82f32a3"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/new/scripts/verify_star_obstruction.py",
+      "size": 3121,
+      "compressed": 1392,
+      "crc": "534cf81f"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/prior/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/prior/round3_checkpoint.md",
+      "size": 2535,
+      "compressed": 1343,
+      "crc": "671e4e81"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/prior/README.md",
+      "size": 441,
+      "compressed": 277,
+      "crc": "1c0c3b1d"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/README.md",
+      "size": 2643,
+      "compressed": 1340,
+      "crc": "8c19b02b"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/RESEARCH_LOG.md",
+      "size": 3119,
+      "compressed": 1581,
+      "crc": "460cf6fe"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/previous_check1/S1_cumulative_round4_check1/MANIFEST.sha256",
+      "size": 1655,
+      "compressed": 789,
+      "crc": "574ec92f"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/receipts/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/receipts/CONTRACT.md",
+      "size": 2485,
+      "compressed": 1353,
+      "crc": "3c48564f"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/receipts/SOURCE_RECEIPTS.md",
+      "size": 1309,
+      "compressed": 529,
+      "crc": "e3399c5b"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/receipts/S1_assignment_4001ab1.md",
+      "size": 3956,
+      "compressed": 2104,
+      "crc": "b15d2cd8"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/exploration/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/exploration/test_reciprocal_ineq.py",
+      "size": 1509,
+      "compressed": 786,
+      "crc": "61355351"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/exploration/explore_theta_counts.py",
+      "size": 2152,
+      "compressed": 1012,
+      "crc": "dc1bfb50"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/exploration/test_pointwise_midpoint.py",
+      "size": 1451,
+      "compressed": 750,
+      "crc": "561ec4d0"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/exploration/explore_moments.py",
+      "size": 1770,
+      "compressed": 939,
+      "crc": "06cc1c8e"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/exploration/sample_stars.py",
+      "size": 2778,
+      "compressed": 1380,
+      "crc": "9390aae7"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/exploration/explore_bad_square.py",
+      "size": 2246,
+      "compressed": 1081,
+      "crc": "78817713"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/evidence/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/evidence/exhaustive_n16_theta_by_count.txt",
+      "size": 846,
+      "compressed": 315,
+      "crc": "3fe80d54"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/evidence/constants.json",
+      "size": 1142,
+      "compressed": 599,
+      "crc": "2d657d1c"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/evidence/seeded_n32_star_sample.txt",
+      "size": 921,
+      "compressed": 487,
+      "crc": "94a29917"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/evidence/constants_stdout.txt",
+      "size": 1142,
+      "compressed": 599,
+      "crc": "2d657d1c"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/evidence/fourier_tail_regression.json",
+      "size": 8475,
+      "compressed": 1597,
+      "crc": "3fc9e644"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/evidence/fourier_tail_regression_stdout.txt",
+      "size": 8475,
+      "compressed": 1597,
+      "crc": "3fc9e644"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/RESULT.md",
+      "size": 19225,
+      "compressed": 7474,
+      "crc": "a1d1fe4e"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/scripts/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/scripts/verify_fourier_tail.py",
+      "size": 7236,
+      "compressed": 2744,
+      "crc": "f1511f07"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/check2/scripts/verify_constants.py",
+      "size": 2349,
+      "compressed": 1000,
+      "crc": "bfc278db"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/prior_archives/",
+      "size": 0,
+      "compressed": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/prior_archives/S1_cumulative_round4_check1.zip.sha256",
+      "size": 98,
+      "compressed": 91,
+      "crc": "1d0da6a4"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/prior_archives/S1_cumulative_round4_check1.zip",
+      "size": 32741,
+      "compressed": 32741,
+      "crc": "b1ee0f4a"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/README.md",
+      "size": 1847,
+      "compressed": 970,
+      "crc": "e564b480"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/RESEARCH_LOG.md",
+      "size": 4559,
+      "compressed": 2238,
+      "crc": "c36531de"
+    },
+    {
+      "name": "S1_cumulative_round4_check2/MANIFEST.sha256",
+      "size": 4645,
+      "compressed": 1835,
+      "crc": "31bdb524"
+    }
+  ]
+}

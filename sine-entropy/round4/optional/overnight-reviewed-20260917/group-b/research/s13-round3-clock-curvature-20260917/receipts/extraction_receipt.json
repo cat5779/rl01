@@ -1,0 +1,380 @@
+{
+  "archive": "[LOCAL_USER]\\Desktop\\20260907\\S13_S13_cumulative_round3.zip",
+  "archive_sha256": "0c46d48b9ee78687ab6b613af0ca12a89ad1ed4a1bec81b3ba86a4f0acd911a5",
+  "destination": "[LOCAL_USER]\\Documents\\Codex\\2026-09-16\\ni\\work\\overnight-review\\B\\S13",
+  "entry_count": 53,
+  "uncompressed_bytes": 237411,
+  "entries": [
+    {
+      "name": "S13/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round1_unreviewed/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round1_unreviewed/S13_research_result.zip",
+      "size": 62171,
+      "compressed_size": 62171,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/proof.md",
+      "size": 27430,
+      "compressed_size": 10118,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/scripts/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/scripts/replay.py",
+      "size": 2635,
+      "compressed_size": 1200,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/scripts/symbolic_checks.py",
+      "size": 1825,
+      "compressed_size": 857,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/scripts/clock_curvature_receipt.py",
+      "size": 3600,
+      "compressed_size": 1617,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/scripts/central_band_receipt.py",
+      "size": 2584,
+      "compressed_size": 1114,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/scripts/finite_slice_check.py",
+      "size": 4130,
+      "compressed_size": 1906,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/ENVIRONMENT.md",
+      "size": 266,
+      "compressed_size": 194,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/RECOVERY_LEDGER.md",
+      "size": 3020,
+      "compressed_size": 1465,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/candidate_ledger.md",
+      "size": 1791,
+      "compressed_size": 935,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/SOURCE_LEDGER.md",
+      "size": 1623,
+      "compressed_size": 905,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/README.md",
+      "size": 3039,
+      "compressed_size": 1616,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/attempts.md",
+      "size": 2318,
+      "compressed_size": 1249,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/gap_audit.md",
+      "size": 2854,
+      "compressed_size": 1520,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/requirements.txt",
+      "size": 41,
+      "compressed_size": 34,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/checkpoints/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/checkpoints/CP01_FROZEN_THEOREM.md",
+      "size": 933,
+      "compressed_size": 541,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/checkpoints/CP02_UNPAID_CANDIDATE.md",
+      "size": 388,
+      "compressed_size": 283,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/frozen/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/frozen/clock_curvature_receipt.json",
+      "size": 7362,
+      "compressed_size": 1964,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/frozen/finite_slice_check.json",
+      "size": 2535,
+      "compressed_size": 871,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/frozen/symbolic_checks.json",
+      "size": 410,
+      "compressed_size": 213,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/evidence/frozen/central_band_receipt.json",
+      "size": 4470,
+      "compressed_size": 1204,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round3_author_result/TERM_BALANCE.md",
+      "size": 2099,
+      "compressed_size": 1087,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/exploration_unproved/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/exploration_unproved/finite_corrected_entropy_n16.json",
+      "size": 1485,
+      "compressed_size": 470,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/exploration_unproved/finite_corrected_entropy.json",
+      "size": 4541,
+      "compressed_size": 1217,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/exploration_unproved/finite_corrected_entropy.py",
+      "size": 4840,
+      "compressed_size": 1987,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/proof.md",
+      "size": 35334,
+      "compressed_size": 12991,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/scripts/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/scripts/replay.py",
+      "size": 4040,
+      "compressed_size": 1535,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/scripts/symbolic_checks.py",
+      "size": 2425,
+      "compressed_size": 979,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/scripts/defect_asymptotics.py",
+      "size": 8914,
+      "compressed_size": 2783,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/RECOVERY_LEDGER.md",
+      "size": 3284,
+      "compressed_size": 1475,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/candidate_ledger.md",
+      "size": 3407,
+      "compressed_size": 1638,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/README.md",
+      "size": 1687,
+      "compressed_size": 914,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/attempts.md",
+      "size": 1918,
+      "compressed_size": 1033,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/gap_audit.md",
+      "size": 2964,
+      "compressed_size": 1450,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/evidence/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/evidence/frozen/",
+      "size": 0,
+      "compressed_size": 0,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/evidence/frozen/defect_asymptotics.json",
+      "size": 13421,
+      "compressed_size": 2734,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/evidence/frozen/symbolic_checks.json",
+      "size": 241,
+      "compressed_size": 122,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/round2_unreviewed/TERM_BALANCE.md",
+      "size": 2905,
+      "compressed_size": 1386,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/README.md",
+      "size": 1935,
+      "compressed_size": 1086,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/MANIFEST.sha256",
+      "size": 4329,
+      "compressed_size": 2093,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/WORKLOG.md",
+      "size": 794,
+      "compressed_size": 488,
+      "is_symlink": false,
+      "unsafe": false
+    },
+    {
+      "name": "S13/verify_manifest.py",
+      "size": 1423,
+      "compressed_size": 666,
+      "is_symlink": false,
+      "unsafe": false
+    }
+  ]
+}

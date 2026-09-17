@@ -179,3 +179,35 @@ for q in [1/2,3/2], n divisible by R, and the stated fixed interior strip.
 The same bound controls its absolute finite Jensen defect. Vanishing error
 requires both R->infinity AND q->1; the growing-block main-term sign remains open.
 These are reviewed baselines for subsequent work, not fresh tasks to repeat.
+
+## Reviewed synchronization — 2026-09-17
+
+This packet now includes the accepted scopes of the latest three-reviewer
+integration. Full high-contrast sine entropy-rate concavity remains OPEN.
+Read the [new review ledger](optional/overnight-reviewed-20260917/README.md)
+and the independent audit of every imported claim.
+
+- S4: for every finite Hermitian contraction with mean density <=.01 or >=.99,
+  c in [.925,.959], and a in [(1-c)/4,3(1-c)/4], H''<=-11n/250; the associated
+  sine-rate strong Jensen gain is 11t(1-t)(a1-a0)^2/500. Ordinary densities and
+  the remaining channel region are open.
+- S1: weighted actual-output count tails at half density, c=.95,
+  a in [.02,.03]; the imported all-odds identity was not certified by this audit.
+- S2: the stated growing odd-n consecutive-Fourier second affine step is not
+  any contraction DPP law; the seven-site physical curvature reversal is exact.
+- S7: complete Shannon Hessian localization and quantitative posterior spatial
+  tails accepted. Near-field sign remains open. Missing six-site scripts and
+  payloads are NOT independent certificate evidence. Earlier statements that
+  S7 has no accepted theorem refer only to its first two stalled runs.
+- S9: production-weighted critical-scale Gaussian limit and opposite order-R
+  band/complement curvatures accepted; the subleading complete sign is unpaid.
+- S11/S12: precise method-budget and mixed-response obstructions accepted;
+  these are not counterexamples to the entropy-concavity target.
+- S13: for each fixed 0<c<1 along even n, liminf C_n/n >=
+  2D_pair(c)/(1-c^2)>0. This is only a favorable midpoint component. W_n and
+  off-midpoint response remain unpaid. Round-2 asymptotics are not promoted.
+- New S3/S5 archives were missing; their new chat claims are not accepted here.
+
+Each new unit received one independent Sol review, not a second review.
+Historical author and unreviewed files are preserved for provenance; the
+explicit acceptance boundaries override their original completion labels.

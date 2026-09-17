@@ -1,0 +1,11 @@
+{
+  "utc_start": "2026-09-16T13:04:45.202805+00:00",
+  "utc_end": "2026-09-16T13:52:08.803941+00:00",
+  "elapsed_seconds_UTC": 2843.601136,
+  "elapsed_seconds_monotonic": 2843.601096002,
+  "early_stop_basis": "Complete NEW nontrivial analytical scoped theorem (Theorems A-C), not a reading list, identity-only result, finite scan, or old obstruction.",
+  "ninety_minutes_claimed": false,
+  "padding_or_sleep_used": false,
+  "excluded": "Time in preceding rounds; final manifest/ZIP serialization after this checkpoint.",
+  "assurance": "Clock record and self-review only; independent mathematical audit has not occurred."
+}

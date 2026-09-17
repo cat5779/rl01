@@ -1,3 +1,14 @@
+# Current reviewed handoff
+
+The 2026-09-17 reviewed synchronization supersedes older status summaries.
+Read [KNOWN_RESULTS.md](KNOWN_RESULTS.md), [REVIEW_SCOPE.md](REVIEW_SCOPE.md),
+[READING_MAP.md](READING_MAP.md), and [SYNC_STATUS.json](SYNC_STATUS.json).
+The full target is OPEN.
+
+External agents S19-S21 work through their separately assigned PRs in the DPP repository and do not return ZIPs. Browser researchers still return self-contained ZIPs under their assigned contracts. Publishing this packet starts no task.
+
+---
+
 # Sine entropy research: next-round public handoff
 
 **Full target OPEN.** This packet replaces large attachment uploads and long

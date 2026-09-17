@@ -1,0 +1,37 @@
+{
+  "status": "EXACT_AUTHOR_CHECKS_PASS_NOT_INDEPENDENT_REVIEW",
+  "started_utc": "2026-09-17T02:56:18.409147+00:00",
+  "finished_utc": "2026-09-17T02:56:19.513678+00:00",
+  "python_checks": "16 complete atoms per finite case; no atom omitted",
+  "sympy_version": "1.14.0",
+  "score_cases": [
+    {
+      "eigenvalues": ["1", "1", "0", "0"],
+      "V": "0",
+      "observed_score_error_squared": "0",
+      "latent_score_error_squared": "0",
+      "claimed_upper_bound_squared": "0",
+      "complete_atoms": 16,
+      "all_three_jet_identities_exact": true
+    },
+    {
+      "eigenvalues": ["1/10", "3/10", "7/10", "9/10"],
+      "V": "3/5",
+      "observed_score_error_squared": "8301303491008724812911195/1918708886161106259618398",
+      "latent_score_error_squared": "11313529610802840/2463395110834801",
+      "claimed_upper_bound_squared": "364815394560/31285651951",
+      "complete_atoms": 16,
+      "all_three_jet_identities_exact": true
+    }
+  ],
+  "external_field_atom_numerators": [1521,29679,29679,290321,29679,579121,290321,29679,29679,290321,579121,29679,290321,29679,29679,1521],
+  "external_field_rational_term": "39/800",
+  "external_field_log_coefficients": {
+    "761/39": "-39/1600",
+    "290321/29679": "-11018319/256000000"
+  },
+  "external_field_strict_upper_bound": "-13098319/128000000",
+  "band_constant_rational_lower_bound": "41615795893/5757075456000",
+  "band_constant_minus_one_over_140": "3456798451/40299528192000",
+  "asymptotic_limits": "proved analytically in Markdown, not established by this script"
+}
