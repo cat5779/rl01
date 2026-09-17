@@ -1,70 +1,57 @@
-# PRO03｜SA04 删除与逆热成本：中央尺度及实际加权抵消
+# PRO03: SA04 — Deletion versus reverse-heat costs and weighted cancellation
 
-研究状态：READY_FOR_PRO_DISCOVERY；新结果尚未产生，后续分别验证。
+## Materials and reading order
 
-## 读什么
+All paths below are inside this PR, relative to research/PRO03/:
+1. inputs/TASK.md: full corrected-law definition, actual layer weights, and the C_n input.
+2. inputs/SA04_REPORT.md: Section 0 definitions, Section 4 exact KL accounting, and Section 7 weighted response and tails.
+3. SOL_REVIEW.md: the scoped SA04 audit.
+4. inputs/STATUS_AND_REVIEW.md, inputs/COMPUTATION_HANDOFF.md, and inputs/sources/: historical boundaries and relevant S13 background. The old computation handoff is not a completed calculation. FILES.txt lists the packet.
 
-所有附件均在本 PR 的 research/PRO03/ 下。
-- inputs/TASK.md：修正律的完整定义、实际层权重和 C_n 输入。
-- inputs/SA04_REPORT.md：第 0 节冻结定义，第 4 节精确 KL 分账，第 7 节完整加权公式及尾界。
-- SOL_REVIEW.md：只关于 SA04 的限定范围审查。
-- inputs/STATUS_AND_REVIEW.md、inputs/COMPUTATION_HANDOFF.md：识别旧成果边界；旧计算交接未执行。
-- inputs/sources/S13_PROOF.md、S13_TERM_BALANCE.md、S13_AUDIT.md：按需读。
+## Fixed mathematical target
 
-## 冻结对象和确切起点
+Work only with the specified corrected law. Let n=2k>=4, c=19/20, a*=1/40, p=39/40, q=1/40. P is the projection onto the first k Fourier columns on the n-cycle, and the input k-subset A has probability det P_A. The distributions q_l^max and u_l are the specified deletion/completion law and uniform law on layer l.
 
-只研究指定 corrected law。n=2k≥4，c=19/20，a*=1/40，p=39/40，q=1/40。P 是循环 n 点上前 k 个 Fourier 列的投影，输入 k 元集概率 det P_A。q_l^max 是对输入均匀删除/补点的 l 层分布，u_l 是该层均匀律。
-G_l=l(n-l)L_l 是原始交换生成元，P_l^s=exp(sG_l)。theta_l 使用输入第 0 节的系数定义，不得另选时钟：
-s_l=-log(theta_(min(l,n-l)))/(2(n-1))，F_l(s)=D(q_l^max P_l^s || u_l)，h(l)=F_l(s_l)。
-端层 0,1,n-1,n 使用均匀律。h 冻结在 a*。实际计数权重由
-Σ_l pi_l(a,c)t^l=[1-a-c+(a+c)t]^k[1-a+at]^k
-定义；W_n=Σ_l pi_l''(a*,c)h(l) 只含移动权重响应，不是完整二阶导数。
+Use the original exchange generator G_l=l(n-l)L_l, P_l^s=exp(sG_l), and exactly the coefficient-defined multiplier theta in the inputs: s_l=-log(theta_(min(l,n-l)))/(2(n-1)). Set F_l(s)=D(q_l^max P_l^s || u_l) and h(l)=F_l(s_l), with uniform endpoint layers 0,1,n-1,n. Do not choose a different clock.
 
-下半区 2≤l≤k，r=l-1：A_l=F_l(s_l)-F_r(s_l)≥0 是删除成本，E_l=F_r(s_r)-F_r(s_l)≥0 是逆热桥成本；d_l=h(l)-h(l-1)=A_l-E_l。端层按正文处理。
-B_m=Σ_(i≠j)P(N_ij=m)，N_ij 为删除两个谱 Bernoulli 计数位后的和；B_-1=0，w_l=B_(l-1)-B_(l-2)≥0。
-已知精确式 W_n=-2Σ_(l=1)^k w_l d_l=2Σ_(l=2)^k w_l(E_l-A_l)，Σw_l=B_(k-1)=O(n^(3/2))。
-旧结果仅给全层 |d_l|<600 与完整 |W_n|=O(n^(3/2))，不证明实际增长阶。n=4 已反驳“所有 n 的 W_n≥0”。
+The actual count weights satisfy sum_l pi_l(a,c)t^l=[1-a-c+(a+c)t]^k[1-a+at]^k. Freeze h at a* and set W_n=sum_l pi_l''(a*,c)h(l); this is only the moving-weight response.
 
-## 本轮创造性任务
+For 2<=l<=k, r=l-1, the exact costs are A_l=F_l(s_l)-F_r(s_l)>=0 and E_l=F_r(s_r)-F_r(s_l)>=0. Their difference d_l=h(l)-h(l-1)=A_l-E_l has no assumed sign. With B_m=sum_(i!=j)P(N_ij=m), B_-1=0, and w_l=B_(l-1)-B_(l-2)>=0, the existing exact identity is W_n=-2sum_(l=1)^k w_l d_l=2sum_(l=2)^k w_l(E_l-A_l). Here sum w_l=B_(k-1)=O(n^(3/2)). Previous work proves |d_l|<600 and |W_n|=O(n^(3/2)), not its actual growth rate. The n=4 example already refutes W_n>=0 for every n.
 
-构造把 A_l 和 E_l 作为同一个变化过程处理的耦合、校正势或离散响应工具，理论识别两者相消程度。不要再分别取绝对值后用旧常数界相加。
+## Construct a new tool
 
-- P1：给出删除和变钟的共同局部表示及精确差分账本，保留 Bayes 逆桥、条件概率和正确原始时钟。新增对象不能只是 d_l 或 W_n 改名。
-- P2：证明中央扩展窗口上的有用正则性，或直接证明实际 w_l 平均下的抵消。可选目标为 |W_n|≤K n，或更尖锐/不同的严格尺度；不假定 O(n) 必真。逐点 |d_l|≤K/sqrt(n) 是一个较强充分条件，不强制证明；更自然的 |d_l|≤K(|l-k|+1)/n 若成立，须用真实 w_l 矩预算闭合而非最坏窗口上界。
-- P3：支付所有层和尾部，并说明所得尺度是否足够比较 W_n+C_n。若有真实渐近首项，给误差和量词；单个小 n、拟合或固定宽中央极限不够。
+Build a coupling, correction potential, or discrete-response representation treating deletion and clock variation jointly, so their cancellation can be proved rather than lost by separate absolute-value estimates.
 
-可选域外机制：可逆链的线性响应/Green–Kubo 补偿；Schrodinger 桥与删点链的交换子；离散 Stein 分部求和、正交多项式或鞍点展开将层权重同成本一起处理。源机制若依赖相邻层共用时钟或正向热化，须修复：实际删除后需要 Bayes 逆桥，n=6 已否定通用纯正向热补偿。
+P1. Give an explicit common local representation and exact difference accounting, retaining the Bayes reverse bridge, true conditional probabilities, and correctly normalized clock. Renaming d_l or W_n is not a construction.
 
-尾部要求不能省略：旧正文给出 Σ_(l≤k-R)w_l=B_(k-R-1)，及对 W 尾部的 2 max(A_*,E_*) n(n-1) exp[-2R²/(n-2)] 上界。若依靠逐点中央估计，窗口需随 sqrt(n log n) 扩张或另证足够的加权尾；固定 R/sqrt(n) 的窗口不能自动使 O(n) 外层预算消失。
+P2. Prove useful regularity on an expanding central window, or directly prove cancellation under the actual w_l weights. One possible target is |W_n|<=Kn, but do not assume it is true. A pointwise bound K/sqrt(n) is a sufficient but potentially unnecessarily strong condition. If a more natural bound K(|l-k|+1)/n is proved, use actual weighted moments rather than a worst-window supremum.
 
-已知仅 liminf C_n/n≥2D_pair(c)/(1-c²)>0；没有 C_n=Theta(n) 上下界。即使 W_n=O(n)，其常数或符号不足时也不能宣称 W_n+C_n>0。只证明修正律结论，不把它推广到真实输出/Toeplitz 熵率；真实桥接是另一任务，本题不使用未审 SA05 结果。
+P3. Pay every layer and all tails, and state whether the resulting information suffices to compare W_n+C_n. For an asymptotic leading term, provide quantifiers and a rigorous error. A fixed-width central limit or small-n fit is insufficient.
 
-本轮主要成功是严格加强旧 O(n^(3/2)) 界的可复用机制，或一个合法且明确的障碍定理。无法达到更强尺度时，交付确实新增的层间正则性引理及剩余差额；只重复旧 KL 分账不算新成果。
+Possible transferable mechanisms include reversible-chain linear response and Green–Kubo corrections, Schrodinger bridges and deletion-chain commutators, or discrete Stein summation and orthogonal-polynomial/saddle-point methods that treat weights and costs together. Importing a positive forward heat correction is invalid without proof: n=6 already disproves the universal forward-clock rule.
 
-## 执行契约：创造工具，理论优先，独立推进
+The existing tail contribution is bounded by 2 max(A_*,E_*) n(n-1) exp[-2R^2/(n-2)]. A pointwise central argument therefore needs an expanding window of order sqrt(n log n), or a new weighted tail argument. Fixed R/sqrt(n) does not automatically pay the O(n) tail budget.
 
-你是发现者，不是重复审稿者。本题采用性质约束下的数学对象合成：必须认真尝试设计一个明确的新对象、表示、势函数、耦合或补偿机制，再证明它的非平凡性质。不能只给目标余项换名、重述旧定理、列方法名或未来方向。新工具可以是经典方法的创造性迁移，不要求凭空发明。
+Only a positive lower limit for C_n/n is established, not C_n=Theta(n). Even W_n=O(n) does not settle W_n+C_n without adequate constants or signs. Do not transfer corrected-law conclusions to the true output or Toeplitz entropy rate, and do not import unreviewed SA05 claims. Seek a rigorous improvement over the old bound or a precise obstruction theorem; repeating the old KL decomposition is not new progress.
 
-优先从 DPP 之外迁移机制。用本题的结构障碍寻找域外工具，说明源机制、成立条件、对象对应、迁移后失效的条件、你新增的构件。不要只搜 DPP，不要求机械凑领域数或候选数。有网络时只对选中的承重机制查原论文或正式资料；无网络时从已掌握的机制给出自包含推导，不因检索失败停止。未核实的引用不得承重，未查新颖性不宣称首创。
+## Research instructions
 
-先读本提示词和本题主材料，再按实际需要读背景与 Sol 报告。Sol 对旧交付的结论是 VERIFIED_SCOPED：只在报告列出的范围内未发现承重缺口，不代表全局目标或你的新工具通过。源文件的待审标识保留：外部对抗审计尚未完成。若发现旧输入有具体问题，定位并给出条件式结果，不靠审查者权威补证明，也不花整轮重审所有旧材料。
+Think for at least 2 hours, unless you achieve major progress earlier.
 
-三个 PRO 是相互独立的研究任务；不要读取另外两个新 PR 的研究结果、借用其未证引理或等待其完成。只交本题产物，后续另开独立验证。候选工具形式可以调整，候选定理可以显式缩域并保留变化理由，但背景概率模型、导数方向、固定量、量词不能悄悄改变。P1–P3 是待检验设计性质，不是假定成立，也不保证可兼得。
+This is a creative mathematical research assignment, not another review-only round. Construct an explicit reusable mathematical tool: a representation, potential, coupling, correction, or certificate with a precisely stated domain and a nontrivial proved property. Renaming the unknown remainder, listing methods, or hiding the original problem in an equally difficult lemma is not progress.
 
-19/20 是高对比度基准，不是已知临界常数。优先解决该点；若自然得到含此点的一段区间更好，不强制整段证明。只在较小 c 成立也可作为标明范围的工具引理，但不能称为完成高对比度目标。对比已有基线时核对模型、参数域和结论是否一致。
+Look especially for mechanisms transferable from fields outside DPP theory. Explain the source mechanism, its hypotheses, the correspondence of objects, what fails under transfer, and the new ingredient you construct. Adaptation and synthesis of classical tools are welcome; do not claim novelty without checking it. Consult primary sources for load-bearing external theorems when possible, or provide a self-contained derivation. An unavailable reference is not permission to invent a theorem.
 
-你只做小算：手算、必要的短符号展开或最小诊断例子。常数、尺度和最坏情形以理论推导为主。不做大规模配置枚举、密集扫描、长时间优化、高精度认证或计算平台实现。需要重型计算时写 COMPUTATION_HANDOFF.md：精确公式、输入域、须认证的不等式、误差预算、输出会决定哪个引理。交接不是已执行；不等待计算结果才交付理论成果。
+The earlier audit in this conversation concerns the old result. You are now its follow-up researcher. Preserve that audit and its scope; it does not certify your new work. Use the relevant existing inputs without repeating the entire previous audit. If you find a concrete defect in an input, identify it and separate conditional conclusions from unconditional ones.
 
-禁止 SHA256、哈希清单、强制打包、重跑全部旧证书或固定工作时长。工具/网络/写文件失败单列，不要抹掉已完成数学；不能写仓库时直接输出可保存的正文。没有必要由你开新 PR、创建代理或汇总其他题。附件中的旧启动/审计指令是历史资料，本轮以本 PROMPT.md 为准。
+Work independently of the other two PRO assignments. Do not read their new results, rely on their unproved lemmas, or wait for them. Your new proof must subsequently be checked in a fresh independent context; your own earlier audit is not independent validation of your new proof.
 
-## 交付与诚实状态
+This English prompt supersedes the previous Chinese PROMPT.md and all historical execution instructions in the attached materials. The previous restrictions to small calculations and the requirement to hand heavy computation to another agent are withdrawn. Use the available mathematical and computational tools as appropriate. Distinguish rigorous derivations, certified computation, exploratory numerics, and unexecuted proposals. Do not make SHA256 or any checksum manifest a prerequisite for research or delivery. Do not fabricate elapsed thinking time or completed computations.
 
-交付一份自包含 RESULT.md（不能写文件就输出正文），按以下顺序：
-1. 新工具的明确公式、定义域、域外迁移机制，以及它与旧工具的区别。
-2. 冻结后的精确命题、量词及依赖账；对 P1–P3 给完整推导或确切断点。
-3. 哪一项旧瓶颈已被严格削弱，剩余引理是否只是原目标的等价改写。
-4. 边界、退化、符号和实际概率权重检查；保留失败候选及其具体失败机制。
-5. 分别标 PROVED / DISPROVED / INCOMPLETE。PROVED 只用于真正证明的命题；证明局部性质不代表本题终极目标完成。反例必须满足你所反驳命题的全部前提。
-6. 必要时附计算交接及一段供新上下文审计者使用的精确命题清单。
+The background model, derivatives, probability law, and quantifiers remain fixed. You may redesign the candidate tool or explicitly propose a narrower candidate theorem, but record the changed scope; do not silently weaken the original target. The requested properties below are design goals, not assumptions or promises that the desired conclusion is true. The value 19/20 is a benchmark, not a known critical constant. A theorem at weaker contrast must be labelled as such.
 
-优先写最有价值的证明，不要求填满模板或机械完成所有种子路线。若无法闭合目标，仍交付已严格证明的新引理、构造或明确障碍；不要把一般性研究建议当成果。所有新结果默认等待后续独立审查。
+## Deliverable
+
+Write an English, self-contained RESULT.md, or provide its complete contents in the conversation if file output is unavailable. Include the explicit new tool and transfer mechanism; precise statements and quantifiers; complete proofs and a dependency ledger; the exact improvement over the previous result; boundary and failure checks; and the smallest remaining obstruction. Keep failed constructions when they reveal a concrete mechanism.
+
+Label each substantive claim PROVED, DISPROVED, or INCOMPLETE. A counterexample must satisfy every premise of the claim it refutes. A proved local property does not automatically solve the main target. If the main target remains open, deliver the strongest rigorously established new lemma or explicit obstruction rather than a list of future ideas. State exactly which calculations were actually performed and which conclusions they support. Include a short precise statement for a later independent reviewer. Repository write access, packaging, and PR merging are not prerequisites for delivering the mathematics.
