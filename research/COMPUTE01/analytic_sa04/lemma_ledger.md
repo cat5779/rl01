@@ -7,5 +7,6 @@
 | L3 | `sum_{i!=j}|P_ij|^4=k/24+1/(12k)`. | PROVED_HERE |
 | L4 | `theta_k>=c^2`. | PROVED_HERE |
 | L5 | `A_k>=c^4/72` and `liminf A_k>=2c^4/9`. | PROVED_HERE, PENDING_INDEPENDENT_REVIEW |
-| L6 | `limsup E_k<2c^4/9`. | OPEN; sufficient asymptotic bottleneck |
-| L7 | `d_k` has a positive limit or lower bound. | FROZEN TARGET |
+| L6 | `s_k-s_(k-1)=1/(2k^2)+O(k^-3)` and the bridge has asymptotic mean jump count `1/2`. | PROVED_HERE, PENDING_INDEPENDENT_REVIEW |
+| L7 | `limsup E_k<2c^4/9`. | OPEN; sufficient asymptotic bottleneck |
+| L8 | `d_k` has a positive limit or lower bound. | FROZEN TARGET |
