@@ -1,7 +1,0 @@
-{"event":"round_start","utc":"2026-09-16T13:06:01.096021Z"}
-{"event":"targets_frozen","utc":"2026-09-16T13:21:46.236769Z","targets":2,"candidates_scouted":3}
-{"event":"exact_high_contrast_certificate_written","utc":"2026-09-16T13:23:19.114091Z"}
-{"event":"finite_coupled_certificate_written","utc":"2026-09-16T13:24:03.220990Z"}
-{"event":"proof_draft_completed","utc":"2026-09-16T13:26:15.775702Z"}
-{"event":"parsed_json_and_lf_replay_passed","utc":"2026-09-16T13:32:20.000000Z"}
-{"event":"research_verification_end","utc":"2026-09-16T13:32:32.543402Z","elapsed_seconds":"1591.447381","ninety_minutes_claimed":false,"early_stop_reason":"complete_new_nontrivial_scoped_theorems"}
