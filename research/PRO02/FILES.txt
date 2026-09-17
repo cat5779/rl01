@@ -1,5 +1,8 @@
 FILES.txt
 PROMPT.md
+ROUND2.md
+ROUND2_RESULT.md
+ROUND2_SELF_AUDIT.md
 PROVENANCE.json
 README.md
 SOL_REVIEW.md
@@ -15,3 +18,7 @@ inputs/sources/S7_ONE_SIDED.md
 inputs/sources/S7_PROOF.md
 sol_checks/check_auxiliary_examples.out
 sol_checks/check_auxiliary_examples.py
+checks/benchmark_reduction.py
+checks/enumerate_phi.py
+checks/verify_reductions.py
+checks/.gitignore
