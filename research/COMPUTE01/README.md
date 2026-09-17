@@ -58,7 +58,7 @@ PRO01–PRO03 的理论构造任务，不与那些网页版研究任务争夺同
 
 | 任务 | 状态 | 下一验收点 |
 |---|---|---|
-| C01 SA05 n=8 | EXPLORATORY_PASS | 将 `a_-=1/200`,`a_+=1/50`,`a_*=1/40` 升级为有理区间证书 |
+| C01 SA05 n=8 | FINITE_CERTIFIED_PARTIAL | 完成 256 原子 Hessian 差交叉核查 |
 | C02 SA04 中央尺度 | CLAIMED | 一维链降维与小 n 回归 |
 | C03 SA03 截断判号 | CLAIMED | 现有 R=1 脚本接口与局部残差分项回归 |
 
@@ -74,5 +74,8 @@ python research/COMPUTE01/sa05_n8_explore.py
 `EXPLORATORY`；后续区间版会单独生成 `FINITE_CERTIFIED` 收据。
 
 首轮结果见 `sa05_n8_explore_result.json`。二阶自动微分发现简单候选
-`a_-=1/200` 与 `a_+=1/50`，并给出中点正号；这些符号尚未完成向外舍入认证。
+`a_-=1/200` 与 `a_+=1/50`，并给出中点正号。随后
+`sa05_n8_interval.py` 使用整数与 `Fraction` 完成 96-bit 有理向外区间传播；三个
+符号已认证，见 `SA05_N8_CERTIFICATE.md` 和 `sa05_n8_interval_result.json`。C01 尚欠
+完整 256 原子独立交叉核查，因此状态仍带 `PARTIAL`。
 

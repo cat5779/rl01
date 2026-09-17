@@ -1,0 +1,32 @@
+{
+  "status": "FINITE_CERTIFIED_PARTIAL",
+  "arithmetic": "exact integers and fractions with rational outward intervals",
+  "bits": 96,
+  "model": {
+    "n": 8,
+    "c": "19/20",
+    "states": 70,
+    "orbit_types": 7
+  },
+  "certified_points": [
+    {
+      "a": "1/200",
+      "curvature_interval": ["-0.00037268948828", "-0.00037268948827"],
+      "sign": "negative"
+    },
+    {
+      "a": "1/50",
+      "curvature_interval": ["0.00034554219606", "0.00034554219607"],
+      "sign": "positive"
+    },
+    {
+      "a": "1/40",
+      "curvature_interval": ["0.00044081523988", "0.00044081523989"],
+      "sign": "positive",
+      "role": "midpoint"
+    }
+  ],
+  "scope": "The complete 70-state formula in SA05_HANDOFF section A only.",
+  "remaining": "Independent 256-atom Hessian-difference reconstruction."
+}
+
