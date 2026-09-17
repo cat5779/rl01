@@ -1,67 +1,54 @@
-# PRO02｜SA02 真实秩一揭示：后验归一化与精确余量共同支付
+# PRO02: SA02 — True rank-one reveals, posterior normalization, and joint payment
 
-研究状态：READY_FOR_PRO_DISCOVERY；新结果尚未产生，后续分别验证。
+## Materials and reading order
 
-## 读什么
+All paths below are inside this PR, relative to research/PRO02/:
+1. inputs/TASK.md: strict channel, sine Toeplitz model, and complete Hessian definitions.
+2. inputs/SA02_MATRIX_BELLMAN_FULL_BLOCK.md: especially (3.3)–(5.2), (6.3), (7.3), (8.3), and Sections 10–11.
+3. SOL_REVIEW.md and the available sol_checks/: scoped review and auxiliary exact checks.
+4. inputs/SA02_SOL_ASSESSMENT_AND_NEXT_ROUTE.md: a research proposal, not an established theorem or impossibility result.
+5. inputs/sources/: relevant S7 background. FILES.txt lists the packet.
 
-所有附件均在本 PR 的 research/PRO02/ 下。
-- inputs/TASK.md：严格通道、sine Toeplitz 核及完整 Hessian 定义。
-- inputs/SA02_MATRIX_BELLMAN_FULL_BLOCK.md：主输入，尤其式 (3.3)–(5.2)、(6.3)、(7.3)、(8.3) 和第 10–11 节。
-- SOL_REVIEW.md：SA02 的限定范围审查，附有独立精确小例检查的原有附件。
-- inputs/SA02_SOL_ASSESSMENT_AND_NEXT_ROUTE.md：路线建议，不是已证定理；其中粗尺度推测或判停准则也不是不可能性定理。
-- inputs/sources/S7_PROOF.md、S7_LOCALIZATION.md、S7_ONE_SIDED.md、S7_AUDIT.md：按依赖需要读。
+## Fixed mathematical target
 
-## 冻结对象与当前损失
+Use the finite sine Toeplitz output kernel K_V(a)=aI+cQ_V, density rho=1/2, and 0<a<1-c. The benchmark is c=19/20, a=1/40. H_n(a) is actual output Shannon entropy with natural logarithms; differentiate in a at fixed c.
 
-有限 sine Toeplitz 输出核 K_V(a)=a I+c Q_V；rho=1/2，0<a<1-c。主基准 c=19/20，a*=1/40。H_n(a) 是真实输出 Shannon 熵（自然对数），导数固定 c 对 a 求。
-真实 word Y 下 G_V=[K_V-diag(1-Y)]^(-1)，Z_i=(G_V)_ii。固定核心 I，并沿同一个外部揭示滤过，M_t=(G_(A_t))_II 是矩阵鞅；单步
-Delta M=ζ w w*，ζ=1/p 或 -1/(1-p)，概率为 p 与 1-p。
-这里 p 是该步真实条件成功率，w 与 M 来自同一 Schur 结构，不是任意秩一向量。
+For a true output word, G_V=[K_V-diag(1-Y)]^(-1), Z_i=(G_V)_ii. For a fixed core I and one common external reveal filtration, M_t=(G_(A_t))_II is a matrix martingale. Its actual update is Delta M=zeta ww*, with zeta=1/p or -1/(1-p), occurring with true conditional probabilities p and 1-p. The vector w is constrained by the same Schur structure; it is not an arbitrary rank-one direction.
 
-旧势 T(X)=Σ_(i,j)|X_ij|^4/(X_ii X_jj)。内部完整曲率满足
-C_I^V=-(1/2)Σ_i E Z_i²-(1/2)E T((G_V)_II)-2Σ_(i<j)E r_ij，r_ij≥0。
-r_ij 的具体积分式见主输入式 (3.3)–(3.4)，不可自行替换为独立 pair 平均。
-旧证明把所有 Hermitian 方向都按最坏 Hessian 支付，且丢弃最后的负余量。完整包络 (8.3) 为
-H_n''/n ≤ U_(m,L)+C_* H_m^(harm)/m+Gamma_(delta,c) B_*/(4 delta² L)+4 Xi_delta(m+L)/n。
-delta 是严格通道边距；基准处为 1/40。观察项系数约 4.12×10^10，尚无窗口闭合。该 Gamma 是 Bellman 常数，与别的任务的极限常数无关。
+The old potential is T(X)=sum_(i,j)|X_ij|^4/(X_ii X_jj). The exact core identity is C_I^V=-(1/2)sum_i E Z_i^2-(1/2)E T((G_V)_II)-2sum_(i<j)E r_ij, with explicit r_ij>=0 from (3.3)–(3.4). Its negative remainder was discarded in the previous upper envelope. The all-direction Hessian payment produces a benchmark observation coefficient about 4.12e10. No benchmark window has been closed.
 
-## 本轮创造性任务
+## Construct a new tool
 
-构造一个只为真实揭示路径服务的共同块支付工具：把后验归一化、真实二分支更新和非负 pair 余量一起设计。不要以“归一化后仍是鞅”为未经证明的前提。
+Design a joint block payment mechanism specifically for actual reveals, combining posterior normalization, the two-branch update, and retained exact pair remainder.
 
-- P1：给出新势/坐标/带补偿的预算的精确定义，以及真实两分支下的精确条件变化公式。可从方向二阶变分入手，但只在基点估计不够：必须控制有限更新沿途或直接计算两分支 Jensen 缺陷。
-- P2：证明条件平均支付与可求和预算。允许显式可预测余项，但要支付其总和；归一化产生的漂移、移动分母、交叉项和保留 r_ij 的观察域变化全都要处理。禁止把不同 pair 的后验拼成一个假矩阵，禁止重新引入块维数或边度数乘子。
-- P3：将新引理接回完整 Hessian 的局部化接口，写明尾、观察域、有限端点误差。给出可证明的端点尺度改进或可核查的净负窗口充分条件；不能只对内部有利子式判负。
+P1. Define the new potential, coordinates, or compensated budget and derive its exact conditional change under both true branches. A directional Hessian at the initial point is insufficient: control the full finite update or the exact two-branch Jensen defect. Nonlinear normalized coordinates must not be assumed to remain martingales.
 
-可选域外机制：Burkholder/Bellman 鞅势的定向凹性；信息几何或 self-normalized martingale 的内禀二次变差；Schur 更新下的 barrier 势与余量联合记账。迁移须证明所需几何/凸域和真实可实现方向条件。不要把 self-concordance 当成自动适用的标签。
+P2. Prove the conditional payment inequality and its summable total budget. Account for normalization drift, moving denominators, cross terms, and observation-domain changes of the retained remainder. Predictable error terms are allowed only if their sum is paid. Do not reintroduce a core-dimension or edge-degree multiplier or combine incompatible pair posteriors.
 
-本轮主要成功是一条新的、维数一致、沿真实更新闭合的支付定理及其完整接入式；若还能解析闭合基准点，另列更强结论。不要求在一轮内执行巨大窗口认证。仅磨现有全方向常数、增加求积节点或扫描 m,L 不是主任务。
-如果发现候选必须付高阶边距成本，给出合法真实 Schur 家族和精确下界，注明只否定哪类势/预算。一个候选反例不能判死所有 Bellman 方法，更不能反驳 sine 熵凹性。
+P3. Reconnect the new inequality to the complete entropy Hessian, including spatial tails, observation error, and finite endpoints. Prove an endpoint-scaling improvement or an explicit sufficient inequality for net negative curvature. A favorable internal subexpression is not the full Hessian.
 
-## 执行契约：创造工具，理论优先，独立推进
+Possible transferable mechanisms include directional Burkholder/Bellman martingale potentials, information-geometric or self-normalized quadratic variation, and barrier potentials adapted to Schur updates. Prove the geometry and realizability conditions instead of merely naming them. Improving a few constants in the old all-direction bound is not the main objective.
 
-你是发现者，不是重复审稿者。本题采用性质约束下的数学对象合成：必须认真尝试设计一个明确的新对象、表示、势函数、耦合或补偿机制，再证明它的非平凡性质。不能只给目标余项换名、重述旧定理、列方法名或未来方向。新工具可以是经典方法的创造性迁移，不要求凭空发明。
+A successful core deliverable is a new dimension-uniform payment theorem on genuine updates together with its complete localization interface. Closing the benchmark is a stronger outcome. If a candidate requires high-order endpoint cost, construct a legal Schur family and prove the lower bound for precisely that class of potentials or budgets; do not infer that all Bellman approaches fail.
 
-优先从 DPP 之外迁移机制。用本题的结构障碍寻找域外工具，说明源机制、成立条件、对象对应、迁移后失效的条件、你新增的构件。不要只搜 DPP，不要求机械凑领域数或候选数。有网络时只对选中的承重机制查原论文或正式资料；无网络时从已掌握的机制给出自包含推导，不因检索失败停止。未核实的引用不得承重，未查新颖性不宣称首创。
+## Research instructions
 
-先读本提示词和本题主材料，再按实际需要读背景与 Sol 报告。Sol 对旧交付的结论是 VERIFIED_SCOPED：只在报告列出的范围内未发现承重缺口，不代表全局目标或你的新工具通过。源文件的待审标识保留：外部对抗审计尚未完成。若发现旧输入有具体问题，定位并给出条件式结果，不靠审查者权威补证明，也不花整轮重审所有旧材料。
+Think for at least 2 hours, unless you achieve major progress earlier.
 
-三个 PRO 是相互独立的研究任务；不要读取另外两个新 PR 的研究结果、借用其未证引理或等待其完成。只交本题产物，后续另开独立验证。候选工具形式可以调整，候选定理可以显式缩域并保留变化理由，但背景概率模型、导数方向、固定量、量词不能悄悄改变。P1–P3 是待检验设计性质，不是假定成立，也不保证可兼得。
+This is a creative mathematical research assignment, not another review-only round. Construct an explicit reusable mathematical tool: a representation, potential, coupling, correction, or certificate with a precisely stated domain and a nontrivial proved property. Renaming the unknown remainder, listing methods, or hiding the original problem in an equally difficult lemma is not progress.
 
-19/20 是高对比度基准，不是已知临界常数。优先解决该点；若自然得到含此点的一段区间更好，不强制整段证明。只在较小 c 成立也可作为标明范围的工具引理，但不能称为完成高对比度目标。对比已有基线时核对模型、参数域和结论是否一致。
+Look especially for mechanisms transferable from fields outside DPP theory. Explain the source mechanism, its hypotheses, the correspondence of objects, what fails under transfer, and the new ingredient you construct. Adaptation and synthesis of classical tools are welcome; do not claim novelty without checking it. Consult primary sources for load-bearing external theorems when possible, or provide a self-contained derivation. An unavailable reference is not permission to invent a theorem.
 
-你只做小算：手算、必要的短符号展开或最小诊断例子。常数、尺度和最坏情形以理论推导为主。不做大规模配置枚举、密集扫描、长时间优化、高精度认证或计算平台实现。需要重型计算时写 COMPUTATION_HANDOFF.md：精确公式、输入域、须认证的不等式、误差预算、输出会决定哪个引理。交接不是已执行；不等待计算结果才交付理论成果。
+The earlier audit in this conversation concerns the old result. You are now its follow-up researcher. Preserve that audit and its scope; it does not certify your new work. Use the relevant existing inputs without repeating the entire previous audit. If you find a concrete defect in an input, identify it and separate conditional conclusions from unconditional ones.
 
-禁止 SHA256、哈希清单、强制打包、重跑全部旧证书或固定工作时长。工具/网络/写文件失败单列，不要抹掉已完成数学；不能写仓库时直接输出可保存的正文。没有必要由你开新 PR、创建代理或汇总其他题。附件中的旧启动/审计指令是历史资料，本轮以本 PROMPT.md 为准。
+Work independently of the other two PRO assignments. Do not read their new results, rely on their unproved lemmas, or wait for them. Your new proof must subsequently be checked in a fresh independent context; your own earlier audit is not independent validation of your new proof.
 
-## 交付与诚实状态
+This English prompt supersedes the previous Chinese PROMPT.md and all historical execution instructions in the attached materials. The previous restrictions to small calculations and the requirement to hand heavy computation to another agent are withdrawn. Use the available mathematical and computational tools as appropriate. Distinguish rigorous derivations, certified computation, exploratory numerics, and unexecuted proposals. Do not make SHA256 or any checksum manifest a prerequisite for research or delivery. Do not fabricate elapsed thinking time or completed computations.
 
-交付一份自包含 RESULT.md（不能写文件就输出正文），按以下顺序：
-1. 新工具的明确公式、定义域、域外迁移机制，以及它与旧工具的区别。
-2. 冻结后的精确命题、量词及依赖账；对 P1–P3 给完整推导或确切断点。
-3. 哪一项旧瓶颈已被严格削弱，剩余引理是否只是原目标的等价改写。
-4. 边界、退化、符号和实际概率权重检查；保留失败候选及其具体失败机制。
-5. 分别标 PROVED / DISPROVED / INCOMPLETE。PROVED 只用于真正证明的命题；证明局部性质不代表本题终极目标完成。反例必须满足你所反驳命题的全部前提。
-6. 必要时附计算交接及一段供新上下文审计者使用的精确命题清单。
+The background model, derivatives, probability law, and quantifiers remain fixed. You may redesign the candidate tool or explicitly propose a narrower candidate theorem, but record the changed scope; do not silently weaken the original target. The requested properties below are design goals, not assumptions or promises that the desired conclusion is true. The value 19/20 is a benchmark, not a known critical constant. A theorem at weaker contrast must be labelled as such.
 
-优先写最有价值的证明，不要求填满模板或机械完成所有种子路线。若无法闭合目标，仍交付已严格证明的新引理、构造或明确障碍；不要把一般性研究建议当成果。所有新结果默认等待后续独立审查。
+## Deliverable
+
+Write an English, self-contained RESULT.md, or provide its complete contents in the conversation if file output is unavailable. Include the explicit new tool and transfer mechanism; precise statements and quantifiers; complete proofs and a dependency ledger; the exact improvement over the previous result; boundary and failure checks; and the smallest remaining obstruction. Keep failed constructions when they reveal a concrete mechanism.
+
+Label each substantive claim PROVED, DISPROVED, or INCOMPLETE. A counterexample must satisfy every premise of the claim it refutes. A proved local property does not automatically solve the main target. If the main target remains open, deliver the strongest rigorously established new lemma or explicit obstruction rather than a list of future ideas. State exactly which calculations were actually performed and which conclusions they support. Include a short precise statement for a later independent reviewer. Repository write access, packaging, and PR merging are not prerequisites for delivering the mathematics.
