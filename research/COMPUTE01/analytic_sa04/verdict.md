@@ -34,7 +34,9 @@
   offset-two values and gives
   `4.11,6.42,7.39,7.54,7.16,6.84,6.34,5.50,4.75,4.10` through offset twelve.
   The off-center peak is robust, localized to offsets two or three, and
-  followed by a statistically resolved decline.
+  followed by a statistically resolved decline.  Offsets `14,15,16,17`
+  continue as `3.51,3.32,3.03,2.91`; the offset-sixteen deletion chain has a
+  `1.090` split-Rhat and is explicitly flagged for replication.
 - Research value: the sublemma rules out vanishing of the deletion mechanism
   itself, while the new scaling data show that cancellation with the clock term
   is likely accurate to inverse-root order.

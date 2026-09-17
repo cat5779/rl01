@@ -49,7 +49,9 @@
   `4.11,6.42,7.39,7.54,7.16,6.84,6.34,5.50,4.75,4.10` at offsets
   `0,1,2,3,4,5,6,8,10,12`.  Thus the finite off-center peak is robust and
   localized to offsets two or three; the subsequent decline is resolved
-  through offset twelve.
+  through offset twelve.  The tail fill at offsets `14,15,16,17` gives
+  `3.51,3.32,3.03,2.91`; the offset-sixteen deletion-chain split-Rhat is
+  `1.090` and requires a targeted replication.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 

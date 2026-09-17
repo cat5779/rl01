@@ -98,7 +98,7 @@ They do, however, strengthen the route-level case for a dimension-uniform
 `K/sqrt(n)` window bound and against a constant-size central cusp.  This remains
 finite MCMC evidence, not a proof of the uniform bound or of the sign of `W_n`.
 
-### Higher-statistics independent-seed checkpoint
+### Higher-statistics independent-seed dense window
 
 An independent run with six chains, 2,500 burn-in exchanges, and 12,000
 retained draws per chain gives the following first completed block:
@@ -115,6 +115,10 @@ retained draws per chain gives the following first completed block:
 | 8 | 5.5030 | 0.0455 | 0.988 / 1.005 / 0.972 |
 | 10 | 4.7512 | 0.0409 | 0.991 / 1.003 / 1.010 |
 | 12 | 4.0954 | 0.0337 | 1.016 / 1.012 / 0.987 |
+| 14 | 3.5148 | 0.0330 | 0.981 / 0.980 / 1.034 |
+| 15 | 3.3224 | 0.0332 | 1.015 / 0.989 / 1.029 |
+| 16 | 3.0337 | 0.0293 | 1.090 / 0.999 / 1.025 |
+| 17 | 2.9075 | 0.0289 | 0.974 / 0.994 / 0.993 |
 
 The new central value agrees with the earlier `4.184+/-0.219`, and the new
 offset-two value agrees with `7.491+/-0.183`.  The off-center peak is therefore
@@ -124,6 +128,9 @@ Offset four is lower than offset three by about four combined naive standard
 errors, and offsets five and six continue the decline.  The peak is therefore
 localized to offsets two or three.  Offsets eight, ten, and twelve extend the
 resolved descending segment; the new offset-twelve value agrees with the first
-scan's `4.055+/-0.086`.  Offsets fourteen and seventeen in this
-higher-statistics run remain in progress; this table is a durable checkpoint
-rather than the final dense-window report.
+scan's `4.055+/-0.086`.  The consecutive tail values at offsets
+`14,15,16,17` are `3.515,3.322,3.034,2.908`, so no upturn appears before the
+splice.  The deletion chain at offset sixteen has split-Rhat `1.090`, above the
+rest of the dense run (`0.970`--`1.039`); that point therefore carries a mixing
+caution and is being independently rerun.  All other displayed diagnostics
+are complete.

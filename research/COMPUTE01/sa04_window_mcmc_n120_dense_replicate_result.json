@@ -650,6 +650,136 @@
       "d_l_naive_se": 0.003077837907348578,
       "sqrt_n_d_l": 4.095388384135838,
       "sqrt_n_d_l_naive_se": 0.03371602500398623
+    },
+    {
+      "n": 120,
+      "k": 60,
+      "layer": 46,
+      "offset": 14,
+      "scaled_offset": 1.2780193008453875,
+      "seed": 20380965,
+      "forward_bridge": {
+        "E_k_estimate": 0.007495138587764172,
+        "batch_se": 0.00020080344534952562,
+        "acceptance_rate": 0.5741188118811881,
+        "chain_estimates": [
+          0.007076628437668786,
+          0.007949142138222376,
+          0.008057065950665377,
+          0.006850273188242118,
+          0.007333418486147681,
+          0.007704303325638695
+        ],
+        "chain_estimate_spread": 0.001206792762423259,
+        "mean_importance_weight": 1.0000288463800089,
+        "mean_batch_ess_fraction": 0.9999751805623895,
+        "batch_count": 120,
+        "split_rhat": 0.9796599270278403,
+        "target_entropy_estimate": 4.165142068763745,
+        "target_entropy_batch_se": 0.028242504949409046,
+        "other_entropy_importance_estimate": 4.157646930175981,
+        "other_entropy_importance_batch_se": 0.02830496268003752
+      },
+      "reverse_bridge": {
+        "E_k_estimate": 0.007173716579954573,
+        "batch_se": 0.00015999759916359858,
+        "acceptance_rate": 0.5744851485148514,
+        "chain_estimates": [
+          0.007370445434463346,
+          0.006362494058453372,
+          0.007547238837279213,
+          0.007897841282781082,
+          0.006824535162237577,
+          0.007039744704512851
+        ],
+        "chain_estimate_spread": 0.0015353472243277103,
+        "mean_importance_weight": 0.9999706794859442,
+        "mean_batch_ess_fraction": 0.999976433281761,
+        "batch_count": 120,
+        "split_rhat": 1.0338731938174526,
+        "target_entropy_estimate": 4.1707053837255215,
+        "target_entropy_batch_se": 0.030923179489892403,
+        "other_entropy_importance_estimate": 4.177879100305476,
+        "other_entropy_importance_batch_se": 0.030857545731594816
+      },
+      "paired_deletion_loss": {
+        "A_k_estimate": 0.3281501323868446,
+        "batch_se": 0.0030079157585482935,
+        "acceptance_rate": 0.5571287128712872,
+        "split_rhat": 0.981070460522667,
+        "batch_count": 120
+      },
+      "E_l_estimate": 0.00729853453758337,
+      "E_l_batch_se": 0.00012513300996770137,
+      "d_l_estimate": 0.3208515978492612,
+      "d_l_naive_se": 0.0030105174772299087,
+      "sqrt_n_d_l": 3.514753155072328,
+      "sqrt_n_d_l_naive_se": 0.03297856664084733
+    },
+    {
+      "n": 120,
+      "k": 60,
+      "layer": 43,
+      "offset": 17,
+      "scaled_offset": 1.5518805795979707,
+      "seed": 20380962,
+      "forward_bridge": {
+        "E_k_estimate": 0.004081347378646423,
+        "batch_se": 9.854672591153226e-05,
+        "acceptance_rate": 0.6205610561056105,
+        "chain_estimates": [
+          0.004425797952413513,
+          0.0038725234853608905,
+          0.004224169098110453,
+          0.00404519219358348,
+          0.003878279386841865,
+          0.00404212215556834
+        ],
+        "chain_estimate_spread": 0.0005532744670526226,
+        "mean_importance_weight": 1.000005646308971,
+        "mean_batch_ess_fraction": 0.9999904379823562,
+        "batch_count": 120,
+        "split_rhat": 0.9939373169661868,
+        "target_entropy_estimate": 3.3579502105190064,
+        "target_entropy_batch_se": 0.02542612278846992,
+        "other_entropy_importance_estimate": 3.3538688631403604,
+        "other_entropy_importance_batch_se": 0.025452955363179142
+      },
+      "reverse_bridge": {
+        "E_k_estimate": 0.004305241253647999,
+        "batch_se": 9.338416168250254e-05,
+        "acceptance_rate": 0.6218316831683168,
+        "chain_estimates": [
+          0.004325158096019832,
+          0.004113588498100595,
+          0.00460966730746235,
+          0.0042907333175891795,
+          0.004200317676030995,
+          0.004291982626685042
+        ],
+        "chain_estimate_spread": 0.0004960788093617552,
+        "mean_importance_weight": 0.9999747294579099,
+        "mean_batch_ess_fraction": 0.9999907011979453,
+        "batch_count": 120,
+        "split_rhat": 0.993219105122683,
+        "target_entropy_estimate": 3.3371138910160463,
+        "target_entropy_batch_se": 0.02711459583292098,
+        "other_entropy_importance_estimate": 3.341419132269694,
+        "other_entropy_importance_batch_se": 0.027079342648765495
+      },
+      "paired_deletion_loss": {
+        "A_k_estimate": 0.2696165866028174,
+        "batch_se": 0.002636754157781884,
+        "acceptance_rate": 0.6051749174917491,
+        "split_rhat": 0.9738164258104148,
+        "batch_count": 120
+      },
+      "E_l_estimate": 0.0041993122679981915,
+      "E_l_batch_se": 6.77842039860445e-05,
+      "d_l_estimate": 0.2654172743348192,
+      "d_l_naive_se": 0.0026376252931169116,
+      "sqrt_n_d_l": 2.9075005660943494,
+      "sqrt_n_d_l_naive_se": 0.028893737425726165
     }
   ],
   "limitations": [
