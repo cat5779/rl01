@@ -27,9 +27,10 @@
 - Target: identify limits of `A_k`, `E_k`, and `d_k` directly.
 - New paired diagnostics: `d_k=0.7588+/-0.0112` at `n=40`,
   `0.6779+/-0.0141` at `n=60`, and `0.5714+/-0.0161` at `n=80`.
-  These support a positive central profile even
-  though `E_k` has already outgrown the conservative analytic lower bound for
-  `A_k`.
+  The corresponding `sqrt(n)d_k` values are `4.80,5.25,5.11`.  They support a
+  positive inverse-root central profile, not a dimension-free positive limit,
+  even though `E_k` has already outgrown the conservative analytic lower bound
+  for `A_k`.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 
