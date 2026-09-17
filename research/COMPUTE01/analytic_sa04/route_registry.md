@@ -51,7 +51,9 @@
   localized to offsets two or three; the subsequent decline is resolved
   through offset twelve.  The tail fill at offsets `14,15,16,17` gives
   `3.51,3.32,3.03,2.91`; the offset-sixteen deletion-chain split-Rhat is
-  `1.090` and requires a targeted replication.
+  `1.090`.  A longer independent recheck gives `3.11+/-0.02` with all three
+  split-Rhat values in `[0.989,1.016]`, preserving the tail ordering while
+  showing that naive batch errors should not be overinterpreted finely.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 

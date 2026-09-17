@@ -1,0 +1,79 @@
+{
+  "status": "EXPLORATORY_WINDOW_MCMC",
+  "results": [
+    {
+      "n": 120,
+      "k": 60,
+      "layer": 44,
+      "offset": 16,
+      "scaled_offset": 1.4605934866804429,
+      "seed": 20380964,
+      "forward_bridge": {
+        "E_k_estimate": 0.0048670796011414195,
+        "batch_se": 5.761729994696531e-05,
+        "acceptance_rate": 0.6065631188118812,
+        "chain_estimates": [
+          0.004679789237506937,
+          0.00491503467704304,
+          0.00466919846656384,
+          0.005031889080571572,
+          0.004901753711989154,
+          0.005100332020128185,
+          0.004807193728989123,
+          0.004831445886339503
+        ],
+        "chain_estimate_spread": 0.00043113355356434475,
+        "mean_importance_weight": 0.9999964609702516,
+        "mean_batch_ess_fraction": 0.999988207465359,
+        "batch_count": 160,
+        "split_rhat": 0.9885205398867312,
+        "target_entropy_estimate": 3.576482116816345,
+        "target_entropy_batch_se": 0.016306618150166236,
+        "other_entropy_importance_estimate": 3.571615037215203,
+        "other_entropy_importance_batch_se": 0.016319534896720153
+      },
+      "reverse_bridge": {
+        "E_k_estimate": 0.005071692047168119,
+        "batch_se": 6.678806363109354e-05,
+        "acceptance_rate": 0.607240099009901,
+        "chain_estimates": [
+          0.005242486780123135,
+          0.0048816357693204585,
+          0.0051192293068297754,
+          0.005091534185082236,
+          0.004867487228973832,
+          0.005227040850418874,
+          0.004891155196563935,
+          0.00525296706003271
+        ],
+        "chain_estimate_spread": 0.0003854798310588773,
+        "mean_importance_weight": 0.9999407206748352,
+        "mean_batch_ess_fraction": 0.9999871381650978,
+        "batch_count": 160,
+        "split_rhat": 1.015789335404083,
+        "target_entropy_estimate": 3.571254729522429,
+        "target_entropy_batch_se": 0.015279187871042939,
+        "other_entropy_importance_estimate": 3.576326421569597,
+        "other_entropy_importance_batch_se": 0.015268616976413869
+      },
+      "paired_deletion_loss": {
+        "A_k_estimate": 0.28914542475347066,
+        "batch_se": 0.0015963897426878898,
+        "acceptance_rate": 0.5912351485148515,
+        "split_rhat": 1.0134714704120706,
+        "batch_count": 160
+      },
+      "E_l_estimate": 0.004954383974581819,
+      "E_l_batch_se": 4.362654582207404e-05,
+      "d_l_estimate": 0.28419104077888885,
+      "d_l_naive_se": 0.0015969857501115885,
+      "sqrt_n_d_l": 3.113156873509359,
+      "sqrt_n_d_l_naive_se": 0.017494102387008506
+    }
+  ],
+  "limitations": [
+    "Batch errors do not certify Markov-chain mixing.",
+    "The scan is finite and does not prove a uniform central-window bound.",
+    "The corrected-law conclusions do not transfer automatically to the true output law."
+  ]
+}

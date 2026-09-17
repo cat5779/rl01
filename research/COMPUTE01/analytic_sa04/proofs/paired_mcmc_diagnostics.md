@@ -118,6 +118,7 @@ retained draws per chain gives the following first completed block:
 | 14 | 3.5148 | 0.0330 | 0.981 / 0.980 / 1.034 |
 | 15 | 3.3224 | 0.0332 | 1.015 / 0.989 / 1.029 |
 | 16 | 3.0337 | 0.0293 | 1.090 / 0.999 / 1.025 |
+| 16, targeted recheck | 3.1132 | 0.0175 | 1.013 / 0.989 / 1.016 |
 | 17 | 2.9075 | 0.0289 | 0.974 / 0.994 / 0.993 |
 
 The new central value agrees with the earlier `4.184+/-0.219`, and the new
@@ -131,6 +132,11 @@ resolved descending segment; the new offset-twelve value agrees with the first
 scan's `4.055+/-0.086`.  The consecutive tail values at offsets
 `14,15,16,17` are `3.515,3.322,3.034,2.908`, so no upturn appears before the
 splice.  The deletion chain at offset sixteen has split-Rhat `1.090`, above the
-rest of the dense run (`0.970`--`1.039`); that point therefore carries a mixing
-caution and is being independently rerun.  All other displayed diagnostics
-are complete.
+rest of the dense run (`0.970`--`1.039`).  A targeted independent-seed recheck
+with eight chains, 5,000 burn-in exchanges, and 24,000 retained draws per chain
+gives `3.113+/-0.017` with split-Rhat values `1.013,0.989,1.016`.  This removes
+the mixing warning and preserves the strict tail ordering between offsets
+fifteen and seventeen.  The two offset-sixteen estimates differ by about `2.3`
+combined naive standard errors, warning that the batch-error calculation is
+slightly optimistic for fine point estimates; it does not affect the scale,
+sign, or window-shape conclusion.
