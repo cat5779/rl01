@@ -44,6 +44,10 @@
   `2,6,12,17`; offset 17 is the new tail splice.  All relevant split-Rhat
   values lie in `[0.965,1.040]`.  The second bounded, decreasing-to-the-tail
   profile strengthens the window route without fixing a limiting curve.
+- An independent higher-statistics `n=120` checkpoint reproduces the center
+  and offset-two values and resolves the first four offsets as
+  `4.11,6.42,7.39,7.54`.  Thus the finite off-center peak is robust, although
+  offsets two and three are not yet statistically separated.
 - Risk: proving existence of the entropy increment may be as hard as the
   original sharp-scale problem.
 

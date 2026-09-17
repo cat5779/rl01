@@ -97,3 +97,22 @@ one and decreases toward the splice.  Its values are not identical to the
 They do, however, strengthen the route-level case for a dimension-uniform
 `K/sqrt(n)` window bound and against a constant-size central cusp.  This remains
 finite MCMC evidence, not a proof of the uniform bound or of the sign of `W_n`.
+
+### Higher-statistics independent-seed checkpoint
+
+An independent run with six chains, 2,500 burn-in exchanges, and 12,000
+retained draws per chain gives the following first completed block:
+
+| offset | sqrt(n)d_l | naive SE after scaling | deletion/forward/reverse split-Rhat |
+|---:|---:|---:|:---|
+| 0 | 4.1074 | 0.1749 | 0.974 / 1.039 / 0.986 |
+| 1 | 6.4247 | 0.1222 | 0.988 / 0.996 / 1.001 |
+| 2 | 7.3939 | 0.0869 | 1.026 / 0.998 / 0.971 |
+| 3 | 7.5413 | 0.0668 | 0.985 / 1.002 / 0.975 |
+
+The new central value agrees with the earlier `4.184+/-0.219`, and the new
+offset-two value agrees with `7.491+/-0.183`.  The off-center peak is therefore
+reproducible.  Offsets two and three differ by only about `1.35` combined naive
+standard errors, so the data do not yet localize the exact peak.  Later offsets
+in this higher-statistics run remain in progress; this table is a durable
+checkpoint rather than the final dense-window report.
