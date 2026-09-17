@@ -1,0 +1,33 @@
+{
+  "task": "SA03",
+  "review_status": "PENDING_INDEPENDENT_REVIEW",
+  "source_repository": "randomcat4/dpp-stationary-entropy",
+  "source_pr": 118,
+  "source_ref": "f505f45e1ac0b79e66f592eb425d5637ffbf651a",
+  "source_path": "research_prompts/pro_tasks/results/SA03_S9",
+  "policy": "All new SA claims pending independent review. Original author labels retained as quotations. Each SA audited separately. No checksum gate.",
+  "code_status": "AUTHOR_SUPPLIED_NOT_RERUN_FOR_PUBLICATION",
+  "files": [
+    "COMPUTATION_HANDOFF.md",
+    "README.md",
+    "SA03_EFFECTIVE_REMAINDER.md",
+    "SA03_FIXED_R_NEXT_TERM.md",
+    "SA03_S9_SIGNED_TRANSPORT.md",
+    "SA03_STRUCTURAL_REFINEMENT.md",
+    "SA03_UNIFORM_WEAK_NOISE.md",
+    "SA03_VOLUME_LIMIT.md",
+    "TASK.md",
+    "VERIFICATION_NOTES.md",
+    "check_r1_refinement.py",
+    "check_r1_refinement_result.json",
+    "check_resolvent_algebra.py",
+    "check_resolvent_algebra_result.json",
+    "requirements.txt",
+    "small_check_r1.py",
+    "small_check_r1_result.json",
+    "sources/S9_AUDIT.md",
+    "sources/S9_MESOSCOPIC.md",
+    "sources/S9_SCORE.md"
+  ],
+  "missing_evidence": []
+}

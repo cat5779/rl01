@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "same four genuine R=1 exterior words, no additional enumeration",
+  "checks": [
+    "S6 second Bregman decomposition, exact formal function jets",
+    "S10 pointwise coefficient, exact symbolic Taylor expansion"
+  ],
+  "normalized_kernel": "Gcal/u^2 = 8 + coefficient*t^2 + O(t^3)",
+  "t": "c^2*u^2/pi^2",
+  "coefficients": {"00": 80, "01": 16, "10": 16, "11": 80},
+  "limitation": "The uniform complex bound W9 is proved analytically, not by this check."
+}
