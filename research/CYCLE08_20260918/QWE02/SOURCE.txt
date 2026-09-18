@@ -1,0 +1,3 @@
+Source: randomcat4/dpp-stationary-entropy PR123
+Branch: research/external-qwe02-mutual-information-boundary-response-20260918
+Author submission, pending separate independent audit.

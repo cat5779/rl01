@@ -1,0 +1,20 @@
+{
+  "model": "DPP on two sites, not the assigned sine family",
+  "K": [
+    [
+      "1/5",
+      "1/10"
+    ],
+    [
+      "1/10",
+      "3/5"
+    ]
+  ],
+  "v": [
+    "1",
+    "1"
+  ],
+  "mixed_Fisher_derivative": "-7058578388000000/3400782877756341",
+  "strict_bound": "< -2",
+  "scope": "Refutes entrywise nonnegativity of the diagonal-parameter Hessian of rank-one Fisher information. Does NOT refute its quadratic form in the common-shift direction or the QWE01 target."
+}

@@ -1,0 +1,42 @@
+c                              0.95
+b                              0.024375
+phi(c^2)                       1.42540290098
+universal_lower_per_site       -29.2390338662
+d3                             2.02496602538
+fstar                          0.254478935055
+cyclic_lower_per_site          -26.4885978163
+M_b D_c                        2.79909515991
+target_threshold               -1.20090484009
+remaining_gap                  25.2876929762
+
+Pointwise endpoint-Fisher ansatz counterexample:
+delta                          0.001
+log_odds_cost                  0.11889058745
+observed_fisher                0.114614046644
+skew                           0.00427654080537
+bregman_skew                   0.00427654080537
+uB                             0.00123304562269
+uC                             0.0909090909091
+vA                             0.0112359550562
+vD                             0.0112359550562
+
+Random BSC gain-cell cap checks passed.
+
+Exact cyclic enumeration n=6:
+probability_sum                1
+R                              141.799043434
+susceptibility_cost            80.3548027201
+observed_square                157.634781872
+observed_matrix                157.634781872
+Xi                             -77.2799791522
+D                              88.5190642815
+V                              4.0874825806
+Fa_observed                    246.153846154
+n_over_b                       246.153846154
+gain_square                    16.1176225165
+gain_matrix                    16.1176225165
+FH                             52.6090307814
+gain_identity_rhs              16.1176225165
+R_identity_rhs                 141.799043434
+theorem_rhs                    39.0629912712
+Xi_minus_alphaG                -102.736052163
