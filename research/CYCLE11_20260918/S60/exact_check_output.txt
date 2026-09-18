@@ -1,0 +1,8 @@
+reviewed example F'' = 1095440907576040000/3400782877756341
+reviewed example H12 = -7058578388000000/3400782877756341
+comparator b = [2500/383, 1700/383]
+comparator G'' = 17967160000/56181887
+single full-atom curvature = -75/32
+G_{12,12}''(0) = 22/25
+three-site Bernstein coefficients:
+[48, 61/2, 138/7, 1501/112, 1423/140, 569/64, 495/56, 297/32, 9]
