@@ -1,0 +1,107 @@
+{
+  "status": "FINITE_FULL_WORD_DIAGNOSTIC",
+  "contrast": 0.95,
+  "results": [
+    {
+      "R": 1,
+      "N": 2,
+      "external_bits": 2,
+      "word_count": 4,
+      "quadrature_nodes": 48,
+      "u_interval": [
+        0.5,
+        1.0
+      ],
+      "baseline": 3.0,
+      "integrated_residual_components": {
+        "curvature_minus_8": 0.0452842745256886,
+        "bregman_phi_prime": 0.0021588037242862785,
+        "parameter_derivative": 0.04698506339743268,
+        "signed_transport": -0.02240749496321964
+      },
+      "A_R_second_derivative": 3.0720206466841877,
+      "pointwise_min_normalized_total": 8.02573184951269,
+      "pointwise_max_normalized_total": 8.455323905816021,
+      "posterior_min": 0.4086138141341904,
+      "posterior_max": 0.5913861858658096,
+      "max_r1_closed_form_error": 3.552713678800501e-15
+    },
+    {
+      "R": 3,
+      "N": 4,
+      "external_bits": 6,
+      "word_count": 64,
+      "quadrature_nodes": 48,
+      "u_interval": [
+        0.25,
+        1.0
+      ],
+      "baseline": 3.75,
+      "integrated_residual_components": {
+        "curvature_minus_8": 0.27742586147879345,
+        "bregman_phi_prime": 0.03854458145151726,
+        "parameter_derivative": 0.3990470592023022,
+        "signed_transport": -0.19756223401825626
+      },
+      "A_R_second_derivative": 4.2674552681143565,
+      "pointwise_min_normalized_total": 8.008100464201112,
+      "pointwise_max_normalized_total": 11.981248133747501,
+      "posterior_min": 0.25146454762659953,
+      "posterior_max": 0.7485354523734005,
+      "max_r1_closed_form_error": null
+    },
+    {
+      "R": 5,
+      "N": 6,
+      "external_bits": 10,
+      "word_count": 1024,
+      "quadrature_nodes": 48,
+      "u_interval": [
+        0.16666666666666666,
+        1.0
+      ],
+      "baseline": 3.888888888888889,
+      "integrated_residual_components": {
+        "curvature_minus_8": 0.48805976963833053,
+        "bregman_phi_prime": 0.09724422905557314,
+        "parameter_derivative": 0.8185022814379774,
+        "signed_transport": -0.39580226244061767
+      },
+      "A_R_second_derivative": 4.8968929065801525,
+      "pointwise_min_normalized_total": 8.002439390480735,
+      "pointwise_max_normalized_total": 17.05686809584781,
+      "posterior_min": 0.19347023615319914,
+      "posterior_max": 0.8065297638468009,
+      "max_r1_closed_form_error": null
+    },
+    {
+      "R": 7,
+      "N": 8,
+      "external_bits": 14,
+      "word_count": 16384,
+      "quadrature_nodes": 48,
+      "u_interval": [
+        0.125,
+        1.0
+      ],
+      "baseline": 3.9375,
+      "integrated_residual_components": {
+        "curvature_minus_8": 0.6614653719449513,
+        "bregman_phi_prime": 0.16131197746332776,
+        "parameter_derivative": 1.2341367501847145,
+        "signed_transport": -0.5850849131124719
+      },
+      "A_R_second_derivative": 5.409329186480521,
+      "pointwise_min_normalized_total": 8.00094184311856,
+      "pointwise_max_normalized_total": 22.859695535877904,
+      "posterior_min": 0.16207137935904348,
+      "posterior_max": 0.8379286206409566,
+      "max_r1_closed_form_error": null
+    }
+  ],
+  "limitations": [
+    "Finite radii do not determine the sign of Gamma(19/20).",
+    "Binary64 linear algebra and Gauss-Legendre quadrature are not interval certificates.",
+    "Every reported expectation uses the genuine physical-word DPP law, not spectral Bernoulli words."
+  ]
+}

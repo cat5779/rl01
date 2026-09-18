@@ -1,0 +1,44 @@
+# Current verdict
+
+- Frozen theorem `d_k>=epsilon`: **INCOMPLETE AND NOW NUMERICALLY DISFAVORED**.
+- Strict sublemma `A_k>=c^4/72` and
+  `liminf A_k>=2c^4/9>0.1810`:
+  **PROVED_HERE, PENDING_INDEPENDENT_REVIEW**.
+- Smallest scale obstruction: prove `|A_l-E_l|<=K/sqrt(n)` throughout the
+  expanded central window.  The older attempt to bound `E_k` below the constant
+  `2c^4/9` is contradicted by the finite diagnostics and is no longer the target.
+- The clock-gap asymptotic is settled: its mean jump count tends to `1/2`, so
+  vanishing raw time does not remove the entropy-cost obstruction.
+- A bound using only the initial entropy dissipation is too crude on current
+  exact diagnostics.  Further work should analyze the complete Poissonized
+  finite-exchange channel, not extrapolate the derivative at the left endpoint.
+- Paired MCMC at `n=40,60,80` estimates the actual central increments as
+  `0.7588+/-0.0112`, `0.6779+/-0.0141`, and `0.5714+/-0.0161`.
+  Their inverse-root rescalings are `4.80,5.25,5.11`; this supports eventual
+  positivity and the `n^-1/2` line, while disfavoring a constant positive lower
+  bound.  Comparison against the weak constant `2c^4/9` is also the wrong closure.
+- The follow-up values `sqrt(n)d_k=4.32+/-0.18` at `n=100` and
+  `4.18+/-0.22` at `n=120` reinforce the inverse-root scale but show that the
+  apparent `5.1105` constant at `n=80` was not stabilized.
+- At `n=100`, offsets `2,4,6,8` give the bounded rescaled window profile
+  `6.98,6.19,5.18,4.32`, and offsets `12,15` continue down to `3.12,2.40`.
+  Offset 15 is the report's finite-n tail splice.  This is the first direct
+  evidence for the full version-2 window theorem, not only its central-layer
+  specialization.
+- At `n=120`, a cross-dimensional scan gives `7.49,6.16,4.05,2.80` at offsets
+  `2,6,12,17`, with offset 17 at the new tail splice and all split-Rhat values
+  in `[0.965,1.040]`.  This supports investing in the uniform inverse-root
+  window estimate; it still does not prove a limiting profile or determine the
+  asymptotic sign of `W_n`.
+- A six-chain independent-seed checkpoint reproduces the `n=120` center and
+  offset-two values and gives
+  `4.11,6.42,7.39,7.54,7.16,6.84,6.34,5.50,4.75,4.10` through offset twelve.
+  The off-center peak is robust, localized to offsets two or three, and
+  followed by a statistically resolved decline.  Offsets `14,15,16,17`
+  continue as `3.51,3.32,3.03,2.91`; the offset-sixteen deletion chain has a
+  `1.090` split-Rhat.  Its longer independent recheck gives `3.11+/-0.02` with
+  split-Rhat values in `[0.989,1.016]`; the tail ordering survives, although
+  fine-scale naive error bars are mildly optimistic.
+- Research value: the sublemma rules out vanishing of the deletion mechanism
+  itself, while the new scaling data show that cancellation with the clock term
+  is likely accurate to inverse-root order.
