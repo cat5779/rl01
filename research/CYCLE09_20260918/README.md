@@ -28,3 +28,19 @@ the two assigned mechanisms above.
 
 Publication of these prompts is not proof of execution. Dispatch receipts
 will record one send per chat and any delayed status without resending.
+
+## Later source receipts — supersede the preparation snapshot above
+
+- WARD_STEIN_PR2/: complete seven-file submission from the separate
+  randomcat4/dpp-entropy-concavity PR2, pending its own Sol audit. It is not
+  QWE02. Compare its expected budget with S51 before assigning more research.
+- QWE06/: full PR127 RESULT.md and diagnostic received, pending a separate
+  Sol audit of folded transport, complete derivative-tail payment and the
+  typical negative-damping obstruction. Main target remains author-INCOMPLETE.
+- QWE05/: PR126 result comment received; full proof and bundle are only
+  referenced in shared Drive, not present in the PR. No theorem is certified
+  from this summary. The needed download is QWE05_RESULT_bundle_20260918.zip
+  (or at least QWE05_RESULT_20260918.md).
+
+These submissions replace the earlier no-result status for QWE05/QWE06.
+QWE03/QWE04 still have no received result. S59/S60 were not messaged again.
