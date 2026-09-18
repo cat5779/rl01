@@ -1,0 +1,12 @@
+{
+  "task": "PRO02",
+  "source_sa": "SA02",
+  "source_pr": 118,
+  "source_repository": "randomcat4/dpp-stationary-entropy",
+  "source_ref": "f505f45e1ac0b79e66f592eb425d5637ffbf651a",
+  "public_packet_base": "11d385b",
+  "sol_review": "Local isolated SA01-SA04 Sol high audit, 2026-09-17; only the relevant report copied.",
+  "input_status": "SOL_VERIFIED_SCOPED_EXTERNAL_ADVERSARIAL_REVIEW_PENDING",
+  "new_result_status": "NOT_STARTED",
+  "independent": true
+}
