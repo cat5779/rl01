@@ -20,8 +20,10 @@ QWE05 的核心新增结论可以认证：在冻结的循环 Fourier-DPP 模型�
 
 \[
 \sum_{m=3}^{k-1}\omega_{n,m}\mathcal J_m
-=O(\sqrt n\log n)=o(n).
+\le K_1\sqrt n(1+\log n)=o(n).
 \]
+
+这里以及下文的 `o(n)` 只表示所需方向的**单侧上界**，不主张该加权和的绝对值或双侧量级。
 
 这相对于原有账本是**真正的新优势**：此前未支付的完整非线性插值积分被统一控制，而且没有冻结计数权重、没有把实际输出 KL 换成径向 KL、没有对静态 KL/`chi^2` 不等式作非法微分，也没有重复使用 S14 的响应项 Dirichlet 预算。
 
@@ -36,7 +38,7 @@ W_n^{\rm rel}=\sum_l\pi_l''(a_*)R_l(a_*)\ge-o(n)
 \[
 W_n^{\rm rel}
 \ge -2\sum_{m=3}^{k-1}\omega_{n,m}\mathcal C_m
--O(\sqrt n\log n),
+-K_3\sqrt n(1+\log n),
 \]
 
 其中 `C_m` 是实际真律与修正律在均匀删除下丢失的**反向条件 KL**。提交者明确把
@@ -182,7 +184,14 @@ Q_t-(s'(t))^2
 \left(3\mathcal A_m+\gamma\sqrt{\mathcal A_m}\right).
 \]
 
-尺度代入后，第一项是 `O(1/n)`，第二项一致为 `O((1+log n)/n)`。`m<=3` 时未匹配模式为空，`J_m=0`。因此加权总量确为 `o(n)`。
+尺度代入后，第一项是 `O(1/n)`，第二项一致为 `O((1+log n)/n)`。`m<=3` 时未匹配模式为空，`J_m=0`。因此加权和具有所需的单侧上界
+
+\[
+\sum_m\omega_{n,m}\mathcal J_m
+\le K_1\sqrt n(1+\log n)=o(n).
+\]
+
+这不包含相反方向或绝对值估计。
 
 ## 3. 不能据此跨越的瓶颈
 
@@ -269,7 +278,7 @@ D(p\Vert q)-D(Kp\Vert Kq)=D(p\Vert q)>0.
 | 实际核点态 `f_m/g_m<=poly(n)` | VERIFIED | Jacobi、Bernoulli 分解、势比较链闭合 |
 | 有界似然下的 Poisson score 迁移 | VERIFIED | 不需要似然比与跳数独立 |
 | `J_m<=K(1+log n)/n` | VERIFIED | 参考加速残差已保留 |
-| `sum omega_m J_m=o(n)` | VERIFIED | 使用精确非负通量总质量 `O(n^{3/2})` |
+| `sum omega_m J_m <= K sqrt(n)(1+log n)=o(n)` | VERIFIED_ONE_SIDED | 仅为上界；使用精确非负通量总质量 `O(n^{3/2})` |
 | 响应项的单侧 `O(sqrt n)` 支付 | VERIFIED_SCOPED | 只按下界所需方向使用 |
 | `sum omega_m C_m=o(n)` | OPEN | 本次没有证明 |
 | `W_n^rel>=-o(n)` | INCOMPLETE | 仍被 `C_m` 阻塞 |
