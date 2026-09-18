@@ -2,7 +2,7 @@
 
 ## 总评
 
-- **原稿读取完整性：COMPLETE_VISIBLE_REVIEW。** 初次取得的 `S43_PARTIAL.md` 在第 5.2 节截断；随后取得完整可见的 `S43_CYCLE03_MISSING_PROOF.md`，补齐 count-Stein、actual-count/field 转换和最终装配。附件正文仍未取得；没有读取哈希文件。
+- **原稿读取完整性：COMPLETE_SOURCE_REVIEW。** 初次取得的 `S43_PARTIAL.md` 在第 5.2 节截断；随后先取得完整可见的补证明，再取得原始完整 `S43_RESULT.md` 与原附件版 `S43_CYCLE03_MISSING_PROOF.md`。原主稿第 6–9 节已直接核对，不再存在 count-Stein 来源缺失；没有读取哈希文件。
 - **实际 `B_m` 符号质量：VERIFIED_SCOPED。** 实际二阶计数核具有精确 `+,-,+` 符号型，且
 
 \[
@@ -59,14 +59,30 @@
 
 主审材料：
 
-1. `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/S43_PARTIAL.md`；
-2. `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/S43_CYCLE03_MISSING_PROOF.md`。
+1. 原始完整主稿 `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/recovered/S43_cycle03/S43_RESULT.md`（36,587 字节）；
+2. 原附件版 `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/recovered/S43_cycle03/S43_CYCLE03_MISSING_PROOF.md`（16,369 字节）；
+3. 初次取得的 `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/S43_PARTIAL.md`；
+4. 带获取说明的补发稿 `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/S43_CYCLE03_MISSING_PROOF.md`。
 
 首份文本共 791 行，在
 
 > “the number of ordered triples is Theta...”
 
-处中断。第二份 17,130 字符的完整可见补发稿重述原稿第 6–9 节并展开中间代数。本报告把它当作作者证明而非独立证书，逐式重新检查；仍只使用冻结 corrected-law 定义、此前已独立核验的强 Rayleigh 修正及标准有限概率/矩阵工具。
+处中断。后来取得的原始完整主稿直接包含第 6–9 节；补证明版把这些段落重排并展开中间代数。本报告把两者都当作作者证明而非独立证书，数学状态仍来自逐式独立检查；完整文件的到达本身没有触发结论升级。
+
+### 1.1 原主稿与补证明的一致性
+
+**状态：NO_SUBSTANTIVE_CHANGE。**
+
+逐段映射如下：
+
+- 原主稿 §§6.1–6.3 对应补证明的 Gibbs 层正则性、式 (16) 的实际计数微分以及 count-only correction；
+- 原主稿 §§7–7.1 对应补证明的有限 count-Stein、条件赔率和 Fourier 邻点严格性；
+- 原主稿 §§8–9 对应补证明的输出 KL 预算、端层装配与解析正 margin。
+
+补证明把 Stein 部分移到转换之前，并显式写出有限 `n` 曲率区间、端层说明及若干中间等式。两份文本的 `Q, mathcal D_n, W_n^G, A_c, L_c, M_b, D_c` 定义、偶数 `n` 量词和最终区间完全一致，没有新增前提或改变结论。
+
+原附件版式 (30) 中 `\\rm even` 被文件转义成一次行内回车，属于 TeX 排版损伤；原主稿 (0.1)、(0.3) 和相邻文字均清楚写明沿偶数 `n`。本报告使用原主稿的无损量词，不把该排版问题记为数学缺口。
 
 ## 2. 实际计数核与 `M_b`
 
@@ -773,4 +789,4 @@ Cauchy–Schwarz 与 \(\operatorname{Var}(Y_j)=1/4\) 给
 - corrected cyclic law 与真实 sine-Toeplitz 输出律等价；
 - 一般密度、全合法 \(a\) 的真实熵率凹性。
 
-因此此次补发消除了原 PR #15 唯一承重证明缺口，但没有扩大 corrected-law 的既定作用域。
+因此完整原稿与补证明共同消除了原 PR #15 的来源缺口；二者没有实质数学差异，也没有扩大 corrected-law 的既定作用域。
