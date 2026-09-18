@@ -15,6 +15,7 @@
 | [S43 cycle02](S43.md) | 修正律 `O(n log n)` 限定通过；不判定符号 |
 | [S43 cycle03](S43_CYCLE03.md) | `c=.95` 的负线性上包络与 `-W_n=Theta(n)` 限定通过 |
 | [S43 cycle05](S43_CYCLE05.md) | terminal production 转移、联合抵消与 `-4n` reference 限定通过；`W_n+C_n` 跨越 `-4n` 仍开 |
+| [S52 cycle06](S52_CYCLE06.md) | 实际输出 Fisher–Bregman 下界与循环改进限定通过；距 corrected-law 门槛仍差 `25.2877`/site |
 | [S45 cycle03](S45.md) | 修正律 `|W_n|=O(n)` 限定通过 |
 | [S45 cycle04](S45_CYCLE04.md) | clock limsup 上包络限定通过；不推出联合符号 |
 | [S47 cycle04](S47_CYCLE04.md) | 部分代数式通过；原式 (4) 被反例否定，true-sine tail 仍缺 |
