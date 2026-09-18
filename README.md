@@ -25,7 +25,7 @@ K_n(a)=aI+cQ_{\rho,n},
 其中
 
 \[
-0<\rho<1,qquad 0<c<1,qquad 0\le a\le1-c.
+0<\rho<1,\qquad 0<c<1,\qquad 0\le a\le1-c.
 \]
 
 `H_n(a)` 表示该 DPP 在全部 `2^n` 个配置上的 Shannon 熵。目标是证明
