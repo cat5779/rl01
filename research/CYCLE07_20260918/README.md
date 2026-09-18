@@ -10,4 +10,8 @@ Status: 18 September 2026. Author source and independent review are separate.
 - S54 cycle07: newly prepared task for the complementary signed output-KL D(mu_l||gamma_l) remainder. Distinct from S52 R_n and QWE05's opposite KL direction. Allocation must be confirmed by dispatch receipts; task files alone do not prove execution.
 - QWE01–QWE06: user-reported in progress; no new downloaded artifacts or PR results found in this check.
 
+Final update: S51's direct-user high-contrast continuation completed during the heartbeat and is now idle. Its full visible answer is archived separately as S51_HIGH_C_CONTINUATION.md and queued for a separate audit. It claims a tiny extension beyond .937 and a narrow bias strip; this is not a .95 result or an independently verified theorem.
+
+S54 did not actually start: after the full prompt and exactly one short activation, both latest turns are user-only and the chat is idle. Manual start is required; no further automatic resend. Only S52 remains active among web researchers. Two local Sol reviews are active. See DISPATCH_RECEIPTS.md.
+
 S55/S56 remain available. New web research uses only S51–S56, max3 active globally. S17 is read-only. No research theorem follows from an author PROVED label, a tool's active receipt, or an attachment card.
