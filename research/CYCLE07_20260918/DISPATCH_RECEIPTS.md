@@ -12,3 +12,7 @@
 - QWE01–QWE06 remain user-reported in progress; PR122–127 unchanged, no new downloaded result found.
 - Protected S17 never sent a message.
 - sa-135 read back ACTIVE at135minutes. State/log updated with actual final statuses.
+
+Subsequent user update: S54 was explicitly recreated by the user as a new chat with the same title. Its greeting-only history did not contain the task, so the full original task was restored once to that user-created replacement. The send succeeded, but final read still showed idle/cached greeting; execution is unconfirmed, not declared active. The old chat is not used again.
+
+Source update: full S53 ZIP and the S51 combined refinement ZIP arrived. The latter contains both S51 manuscripts. All six original MD/Python members and both ZIPs are archived under original/ and verified in the PR file list. Both Sol reviewers were notified; earlier truncation gaps are resolved, mathematical verdicts remain pending and separate.
