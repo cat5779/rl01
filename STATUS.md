@@ -1,46 +1,51 @@
-# 当前进展 / Current progress — 2026-09-17
+# 当前状态 — 2026-09-18
 
-**完整固定密度、高对比度的 sine 配置熵率凹性仍 OPEN。** 通用整区间阈值仍为 `c<=37/40`。以下接受的是各自明确作用域的工具、局部定理或方法障碍。
+## 主目标
 
-| 路线 | 已接受的结果 | 当前缺口 |
-|---|---|---|
-| S1 | 半密度、c=.95、a∈[.02,.03] 的真实输出加权计数尾界 | 中央区符号；本次旧审查不认证导入的 all-odds 恒等式 |
-| S2 | 任意权重秩一/余秩一凹性；指定成长 Fourier 家族第二次仿射变换离开 DPP 类 | 固定正密度高秩定理 |
-| S3 | 真实 latent-conditioned 分块的全移动律二阶桥接：固定内区间、边界预算 B/n→0 时 F''−G''=o(n)；局部二元对支付引理 | 条件叶块总和 G'' 的 o(n) 上界；逐原子 pooled 支付被反例否定，但实际平均未被否定 |
-| S4 | 密度≤.01或≥.99、c∈[.925,.959]、a∈[(1−c)/4,3(1−c)/4]，H''≤−11n/250 | 普通密度与剩余参数区域 |
-| S5 | 任意 [2m] 上 m-subset 输入、平衡中点的真实相邻层恒等式；Jeffreys 生产非负 | 计数协方差与生产项的总支付符号；没有非零区间结论 |
-| S6 | 所有密度的极窄高对比度条带及 real-q 分块误差 | 条带宽度仅 10^-13 量级；不能当作全参数突破 |
-| S7 | 完整 Hessian 定位、远场与观察误差；缺失六点证书已补齐并独立复现 | 近场兼容条件表的有符号补偿 |
-| S8 | 固定秩二比较、Fourier/Toeplitz 熵值桥接；第三轮尚无交付 | 高秩可迭代比较与实际 Jensen 符号 |
-| S9 | 固定 R=3 生产定理；成长尺度正负主阶抵消 | 抵消后的次阶总符号 |
-| S11 / S12 | 指定预算机制的上限与精确方法反例 | 不排除有符号分组，不是最终目标反例 |
-| S13 | 修正律中点 clock 分量有严格线性正下界 | 移动计数项 W、离中点项及修正律到真实律的桥接 |
-| S19 | 实际半密度 Toeplitz 家族上，指定 γ≤2 正部例外修补的期望总量有线性正下界 | 只排除这条 o(n) 修补；有符号近场仍可能成立 |
-| S20 / S21 | 当前是待交付任务 | S20 的 tools 库 PR147 接错任务且不完整；S21 正重新生成，旧口头结论无可审核证明 |
-| Q06 | 固定 R=3 系数运输 LP 的全次数 K=1 分数流已证明 | 不等于完整 Q 猜想；Q08 尾项、R=4/5 等未闭合 |
+对实际正弦 Toeplitz 核
 
-## 本次首审与证明
+\[
+K_n(a)=aI+cQ_{\rho,n},
+\]
 
-- [S3：二阶桥接与逐原子障碍](results/S3/README.md)
-- [S5：平衡中点相邻层恒等式](results/S5/README.md)
-- [S19：正部例外修补的障碍](results/S19/README.md)
-- [S7：缺失证书的补齐](results/S7/README.md)
-- [Q06：固定运输模型的全次数结果](https://github.com/randomcat4/dpp-stationary-entropy/blob/4bfea313719fe50cc49c6047c1f5e53b9f684baa/lyons/Q06_round11/README.md)
+在每个固定 `0<rho<1`、`0<c<1` 和全部合法 `0<=a<=1-c` 上证明完整配置 Shannon 熵率凹性。
 
-S3、S5、S19 和 S7 新增证书由三名 Sol medium 子智能体作首次独立核验，既有定理未复审。Q06 采用交付中已有独立审查，协调者只核对来源和集成。S5 原例 `(1,2,3,4,5,5)/20` 不应标成“非 DPP”：该标签已修正；另有严格 Plücker 障碍的 `(10,1,1,1,1,10)/24` 精确对照。S5 上轮 O(sqrt n) 剩余项未审、本轮也不依赖它。
+**状态：OPEN / NOT PROVED。** 下面所有通过项都是严格限定结论；修正循环律、半密度平衡点、有限观测或有限维证书都不能自动升级为这个主目标。
 
-## 下一步
+## 已独立认证的当前结论
 
-优先研究真实平均下的有符号支付、S3 条件叶块曲率，以及 S9 次阶余量。S13 的修正律问题与真实律桥接分开处理。新方法不限领域，但必须保留真实输出权重及完整二阶导数；现有失败清单并不说明领域内或跨领域方法已穷尽。
+| 对象 | 状态 | 已认证范围 | 明确排除 |
+|---|---|---|---|
+| [S43 cycle03](research/INDEPENDENT_REVIEW_20260918/S43_CYCLE03.md) | `VERIFIED_SCOPED` | 修正循环半密度律、`c=19/20`、偶数 `n`：`limsup W_n/n <= -2.689614884862...`，并且 `-W_n=Theta(n)` | 不给出 `W_n/n` 极限，不决定 `W_n+C_n`，不证明真实输出熵率凹性 |
+| [S45 cycle03](research/INDEPENDENT_REVIEW_20260918/S45.md) | `VERIFIED_SCOPED` | 固定 `c` 的修正律中 `|W_n|=O(n)` | 不给符号或极限系数 |
+| [S45 cycle04](research/INDEPENDENT_REVIEW_20260918/S45_CYCLE04.md) | `VERIFIED_SCOPED` | 固定 `c`、偶数 `n` 的 clock limsup 上包络；在 `c=.95` 的系数为 `499.631158492115...` | 不推出 `W_n+C_n` 的符号；该系数不是逐个有限 `n` 的界 |
+| [S42 cycle03](research/INDEPENDENT_REVIEW_20260918/S42_CYCLE03.md) | `VERIFIED_SCOPED` + `DISPROVED` + `GAP` | dyadic 有限弦桥、准自由互信息主控、标量核、数方差和显式尾界通过；第一 doubling 弦严格为正 | 指定尺度只有 `O(eta^2)`，不是 `o(eta^2)`；剩余 11/12 个带符号尺度未支付 |
+| [S41 cycle03](research/INDEPENDENT_REVIEW_20260918/S41_CYCLE03.md) | `VERIFIED_SCOPED` | 可见 §1–§7 的半填充平衡点有限观测证书 | 截断的 §8 未审；常数在 `c=.95` 附近不实用 |
+| [S41 cycle04](research/INDEPENDENT_REVIEW_20260918/S41_CYCLE04.md) | 骨架通过，主引理 `GAP` | posterior projection、Schur 字典、边界能量、outside / anchor flow、随机 anchor 平均与条件装配 | complete-jet Lemma 5.1 没有完整展开和覆盖账本；Theorem A 仅条件成立 |
+| [SA02 平衡线边界](research/INDEPENDENT_REVIEW_20260918/SA02_C37_BOUNDARY.md) | `VERIFIED_SCOPED` | `c=37/40` 平衡点及 `37/40<=c<=937/1000` 的平衡线区间；`c=.95` 有真实 sine 后验障碍 | 不覆盖同一 `c` 的全部合法 `a`；“唯一失效前沿”没有单调性证明 |
 
-PR118的任务已更新为跨领域构造、理论优先；SA01–SA05作者交付见下方待审入口。任务准备审查不等于结果证明审查。
+## 已证伪或仍缺的承重点
 
-## SA01–SA05：作者交付已收齐，独立审查待完成
+- [S42](research/INDEPENDENT_REVIEW_20260918/S42_CYCLE03.md)：`L_J` 取固定倍数的正文尺度不能推出小 `o(eta^2)`；M12 的十进制充分阈值舍入方向也需修正。
+- [S47](research/INDEPENDENT_REVIEW_20260918/S47_CYCLE04.md)：原式 (4) 被 `P=Q` 这一最小反例否定；当前代数重写没有给出真正依赖弦结构的 true-sine tail。
+- [S41](research/INDEPENDENT_REVIEW_20260918/S41_CYCLE04.md)：缺的不是更大常数，而是完整 connected expansion、逐项 prototype 覆盖表和 marked 导数账本。
+- 修正律的 `W_n+C_n` 符号仍未决定；即使决定，也仍需支付到实际正弦输出熵率的桥。
 
-- [SA01：真实后验余量与相容性证书](results/SA01/REVIEW_REQUEST.md) — **待独立审查**
-- [SA02：共同矩阵鞅与整块Bellman补偿](results/SA02/REVIEW_REQUEST.md) — **待独立审查**
-- [SA03：有限抵消、统一有界曲率与体积极限](results/SA03/REVIEW_REQUEST.md) — **待独立审查**
-- [SA04：修正律跨层运输与移动计数响应](results/SA04/REVIEW_REQUEST.md) — **待独立审查**
-- [SA05：真实律与修正律的二阶熵比较](results/SA05/REVIEW_REQUEST.md) — **待独立审查**
+## 其他已审工具
 
-这些新结论不并入上面的已接受定理。分开审查；源码中的作者状态保留，但独立状态统一为PENDING_INDEPENDENT_REVIEW。
+S13、S14、S16、S17 以及早期 S42/S43 的分项结论保存在[审查索引](research/INDEPENDENT_REVIEW_20260918/README.md)。其中旧的 `O(n^(3/2))` 或“符号未知”描述已被后续 S45 / S43 在相同冻结修正律范围内推进，但原文件仍作为研究历史保留。
+
+## 尚未合入的分级证据
+
+[Draft PR #5](https://github.com/cat5779/rl01/pull/5) 继续保留以下四类材料，尚未整体进入主线：
+
+- SA05 `n=8` 的严格有限区间证书；
+- SA03 的有限数值障碍，其中部分仍待区间化和独立复现；
+- SA04 的待审作者证明；
+- SA03 / SA04 的探索性 MCMC。
+
+它们不能合并成一个“已证明”的状态。当前分支保留，待拆分验收。
+
+## 当前研究
+
+[Cycle 05](prompts/CYCLE05/README.md) 正在攻击 S41 complete-jet 缺口和 S43 的 `W+C` 联合支付；S44 的既有定位任务继续运行。任务已派出不等于产生或认证了新结论。
