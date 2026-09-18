@@ -211,6 +211,58 @@ E_8''(1/40)>0.
 
 所以该有限辅助对象既非凹也非凸。它已有区间证书和独立源码检查，但尚未独立重跑，也不是实际熵率主命题的反例。
 
+### 5. 五点复 Hermitian 核直接否定一般 DPP 熵的全局凹性
+
+在五个标号点上取
+
+\[
+e=(1,1,1,1,1)^T,\qquad x=(-2,-1,0,1,2)^T,
+\]
+
+\[
+u=(2,-1,-2,-1,2)^T,\qquad v=(-1,2,0,-2,1)^T,
+\]
+
+并令
+
+\[
+P=\frac{ee^T}{5}+\frac{xx^T}{10},\qquad
+B=e\wedge x-\frac12u\wedge v,\qquad A=\mathrm iB,
+\]
+
+其中 `a wedge b=ab^T-ba^T`，`P` 是秩二正交投影。再设
+
+\[
+K_\varepsilon=\varepsilon I+(1-2\varepsilon)P.
+\]
+
+当 `0<\varepsilon<1/2` 且 `|t|<\varepsilon/\sqrt{50}` 时，`K_{\varepsilon}+tA` 都是严格正压缩并两两可交换，而且 `t` 与 `-t` 的完整配置律完全相同。取
+
+\[
+\varepsilon_0=10^{-6},\qquad h=10^{-10},
+\]
+
+精确有理对数区间证书给出
+
+\[
+\frac{566127}{10^6}
+<D^2H(K_{\varepsilon_0})[A,A]
+<\frac{566128}{10^6},
+\]
+
+以及
+
+\[
+\frac2{10^{21}}
+<\frac{H(K_{\varepsilon_0}-hA)+H(K_{\varepsilon_0}+hA)}2
+-H(K_{\varepsilon_0})
+<\frac3{10^{21}}.
+\]
+
+中点熵严格小于两端熵的平均值，所以完整配置 Shannon 熵在一般复 Hermitian 边缘核上不是全局凹函数；这不是浮点拟合，而是覆盖全部 `2^5=32` 个配置的严格证书。
+
+这个反例不否定本库的真实 sine-Toeplitz 猜想：它使用复方向 `A=\mathrm iB`，既不是共同对角平移 `aI+cK`，也没有平稳或 Toeplitz 结构；它同样没有解决实对称核的三点以上一般情形。
+
 ## 修正律辅助线的当前作用
 
 - **S13 / S45 clock：** clock 分量是线性尺度，并有显式上包络；尚未与 `W_n` 联合支付。
