@@ -7,18 +7,23 @@ Reviewed since the last cycle:
 - PR31: S51 narrow high-c continuation VERIFIED_SCOPED with local proof repair and the frozen SA02 seed dependency. Actual scope c<=.9370000000003 and bias halfwidth1e-9. Not a .95 result.
 - PR29: S53 finite-curvature net and compact-x bounds pass scoped review; infinite Fisher-functional C2 and Gamma identification are not automatic.
 
-New complete submissions, all pending separate audit:
-- S51_C1: Ward and actual conditional cross-ratio formulation, radial V14 cancellation and endpoint obstructions. No Gamma sign theorem.
-- S52: Fisher–Bregman susceptibility lower bound, still short of the corrected concavity threshold.
-- S54: claimed actual output-KL loss reduction from2.799095 to2.790113 at c=.95; no Psi->0 or concavity proof.
-- QWE01 / DPP PR122: explicitly INCOMPLETE. Block ledger and mixed-entry Fisher obstruction are author claims, not a sine counterexample.
-- QWE02 / DPP PR123: claimed dimension-free MI curvature bound32 delta^-12||K_AB||HS² and quadratic chord tail. Constants enormous; independent audit is priority.
+Separate independent reviews now received:
+- S51_C1 / PR35: core Ward, actual conditional cross-ratio and grouped V14 identities pass with explicit reviewed S51-B dependency. Averaged endpoint logarithmic bound and compensated weak compactness pass in scope. Natural-scale uniform integrability, endpoint limit and Gamma sign remain open; the window-scale obstruction is conditional necessary only.
+- S52 / PR37: Fisher–Bregman susceptibility inequality and cyclic asymptotic lower bound pass scoped review. The finite variance identity requires n>=4; n=2 is an explicit exception, without affecting the asymptotic result. At c=.95 the lower bound remains -26.4885978163, far below the sufficient threshold.
+- S54 / PR34: actual output-KL loss reduction from2.79909515990804 to2.790112731640185 at c=.95 is verified with reviewed inputs; no Psi->0 or concavity proof. The resulting strict susceptibility threshold is -1.2098872683598147.
+- QWE01 / DPP PR122 / review PR36: explicitly INCOMPLETE main target. Block ledger and Fisher differential formulas pass; exact negative mixed-entry witness refutes only entrywise positivity. Its common-shift quadratic form remains positive, so it is not a sine or main-target counterexample.
+- QWE02 / DPP PR123 / review PR33: dimension-free MI curvature bound32 delta^-12||K_AB||HS² and true-sine quadratic chord tail are VERIFIED_SCOPED. Constant about4.51e22 at benchmark; no sign or practical certificate.
 - QWE03–QWE06: no new submission found. Their work is not duplicated.
 
-Existing Sol reviewers receive distinct manuscript audits and separate PRs.
-New web task: S55 asks for a reusable fixed-spectral-gap cyclic-to-true-sine
-curvature transfer, with the exact corrected/actual distinction retained.
+S55 complete source has now been received from the user and is under a new,
+separate Sol high audit. All five original files and the ZIP are in S55/.
+The author claims compact-interior two-parameter cyclic-to-true-sine curvature
+transfer, all-anchor and actual-law spatial-tail control, midpoint identities
+and the exact corrected/actual comparison. These are AUTHOR_CLAIM_PENDING_REVIEW,
+not an accepted theorem or a concavity result. See S55/INTAKE.md.
+
 S56 is intentionally unused; no new sign assignment overlaps the external tasks.
-Publication of a prompt does not prove execution; see dispatch receipts.
+Every new assignment is sent once. Delayed UI receipts never trigger a duplicate,
+short activation or automatic transfer. Earlier retry records are history only.
 
 The global full-rho/full-a sine Shannon entropy-rate concavity target remains open.
