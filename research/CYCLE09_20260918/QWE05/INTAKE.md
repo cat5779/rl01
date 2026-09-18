@@ -1,20 +1,31 @@
-# QWE05 / DPP PR126 — summary received, proof missing
+# QWE05 / DPP PR126 — full proof received, separate audit queued
 
-The author posted the archived result comment at 2026-09-18 10:18:37 UTC,
-or 18:18:37 Asia/Singapore. This is a real new submission notification.
-The PR still contains only the original task/source package; the full result
-and checks were saved to an unspecified shared Drive folder.
+Updated intake: 2026-09-18T20:32:41.034483+08:00
+Source repository: randomcat4/dpp-stationary-entropy, PR126.
+Source result directory: research_tasks/external_20260918/QWE05/results/
+Latest harvested PR update UTC: 2026-09-18T12:31:21Z
 
-Required file: QWE05_RESULT_bundle_20260918.zip, or at minimum
-QWE05_RESULT_20260918.md. Neither was found in the default desktop download
-folder or Downloads at intake. No Drive folder URL was supplied in the PR.
+The earlier 18:18 Asia/Singapore comment-only intake is superseded. The
+full 893-line mathematical report QWE05_RESULT.md and both verification
+scripts are now in the PR and harvested here. The author is adding data
+companions. No ZIP or manual download is needed to begin the proof audit.
 
-The author claims a new uniform interpolation remainder bound
-J_m <= K(1+log n)/n and its o(n) payment under actual count-flux weights,
-plus all-mode source control and a chi-squared comparison. The remaining
-conditional-KL flux budget is expressly unpaid. Status: AUTHOR_PARTIAL_CLAIM,
-FULL_SOURCE_MISSING. The comment is not sufficient for a proof review and
-has not been treated as a theorem.
+Current archived files: QWE05_RESULT.md, README.md, analytic_check_summary.json, analytic_run.log, anchor_checks.csv, deletion_ledger.csv, environment.json, full_model.csv, interpolation_checks.csv, qwe05_analytic_checks.py, qwe05_verify.py, radial_checks.csv, run.log, verification_summary.json.
+Report-listed reproduction companions not yet present at this snapshot:
+analytic_source_checks.csv.
+These numerical companions are tracked separately from mathematical source
+completeness; they are not a checksum or proof-acceptance gate.
 
-The existing Sol reviewer was notified that this manuscript is missing;
-no full QWE05 proof-audit assignment was started from the summary alone.
+Author's overall target W_rel >= -o(n) remains INCOMPLETE. New claims pending
+independent review: a uniform J_m <= K(1+log n)/n upper bound, its exact
+count-flux o(n) payment, an all-mode density-source O(n^-2) bound, and a
+polynomial pointwise likelihood comparison allowing Poisson score transfer.
+The resulting sufficient unpaid target is sum omega_m C_m = o(n), where
+C_m is the actual reverse conditional deleted-site KL given the complete
+retained configuration. This is neither a necessary condition nor a proof
+of entropy-rate concavity. The numerical tests are diagnostics only.
+
+One separate QWE05 audit assignment was queued to existing Sol high task
+01a0b04a-afe9-7393-ba97-58270365d292, after its current QWE06 review. It must
+produce QWE05_REVIEW.md and its own RL01 PR. QWE06 and Ward-Stein keep their
+independent reports. S59/S60 are untouched; no web resend was performed.

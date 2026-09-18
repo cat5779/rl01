@@ -1,0 +1,18 @@
+{
+  "source_cases": 270,
+  "anchor_cases": 30,
+  "interpolation_cases": 24,
+  "max_abs_b": 0.9999997609984551,
+  "b_bound": 1.8571428571428572,
+  "max_b_identity_discrepancy": 7.587757644422766e-10,
+  "max_source_ratio": 0.12367350751613444,
+  "min_H_ratio": 1.1466827145407141,
+  "max_y_over_m": 0.024883740085114875,
+  "min_lower_clock_ratio": 2.0011228945376915,
+  "max_upper_clock_ratio": 0.026350666385697476,
+  "max_abs_moment_error": 2.7193891583010554e-10,
+  "max_anchor_log_ratio": 0.10056081116477,
+  "anchor_log_bound": 2.4472245773362196,
+  "max_interpolation_ratio": 3.889125732258569e-05,
+  "max_heat_mass_error": 1.021405182655144e-14
+}

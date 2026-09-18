@@ -21,3 +21,7 @@ unpaid. Numerical diagnostics do not certify asymptotic claims.
 A separate review was sent once to the existing first Sol high reviewer.
 The second reviewer independently audits Ward–Stein PR2. No new web task was
 dispatched or retried.
+
+## Later independent review received
+RL01 PR41 contains a separate 507-line report, copied to ../reviews/QWE06_REVIEW.md. Verdict: PARTIALLY VERIFIED WITH EXPLICIT REVIEWER REPAIRS; original O(n^3) envelope not certified, main target INCOMPLETE. Fixed off-midpoint half-typical negative damping is retained after the reviewer repairs. This supersedes pending-review intake status.
+

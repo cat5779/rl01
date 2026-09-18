@@ -1,4 +1,6 @@
-# QWE05 author result comment — full proof not yet received
+# QWE05 original result comment — historical summary
+
+Full proof subsequently received in PR126 results/QWE05_RESULT.md; see INTAKE.md.
 
 Source: randomcat4/dpp-stationary-entropy PR126
 Posted UTC: 2026-09-18T10:18:37Z

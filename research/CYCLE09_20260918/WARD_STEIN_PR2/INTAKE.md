@@ -37,3 +37,7 @@ determines whether there is a new usable mechanism or an equivalent target.
 S59 and S60 already received their respective tasks once. Neither is resent,
 restarted or given this pending manuscript as an accepted premise. The review
 will be published in a separate PR. No extra web research task is launched.
+
+## Later independent review received
+RL01 PR40 contains a separate 479-line report, copied to ../reviews/WARD_STEIN_PR2_REVIEW.md. Scoped structural tools and V14-relative transfer verified; expected budget exactly equals S51 bJ. No stronger sign threshold. Exact32-site general-projection wordwise obstruction reproduced, not a sine-average counterexample. Unsubmitted additional regressions remain evidence gaps. This supersedes pending-review intake status.
+
