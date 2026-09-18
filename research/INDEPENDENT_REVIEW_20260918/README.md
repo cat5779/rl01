@@ -20,6 +20,7 @@
 | [S47 cycle04](S47_CYCLE04.md) | 部分代数式通过；原式 (4) 被反例否定，true-sine tail 仍缺 |
 | [SA02 平衡线边界](SA02_C37_BOUNDARY.md) | `c=37/40` 与到 `.937` 的平衡线证书通过；`.95` 有实际后验障碍 |
 | [SA03 PRO01 旧审查](SA03_PRO01_SOL_REVIEW.md) | 有符号极限核与有效余项限定通过；`Gamma(c)` 的非零或正号未证明 |
+| [S51 C1 重标度 V14](S51_C1_RENORMALIZED_V14.md) | Ward、actual-law 交叉比测度、V14 补偿与端点对数界通过；自然 `kappa^2` 一致可积性和符号仍开 |
 | [SA04 PRO03 旧审查](SA04_PRO03_SOL_REVIEW.md) | 旧修正律 `O(n^(3/2))` 工具限定通过；当前尺度与符号已由 S45 / S43 推进 |
 
 阅读顺序是：先看根目录 [状态页](../../STATUS.md)，再进入对应报告。作者稿和恢复件位于 `research/CYCLE*` 或 `research/HARVEST*`，只作来源，不因归档而自动获得认证。
