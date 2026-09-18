@@ -2,7 +2,7 @@
 
 ## 总评
 
-- **原稿读取完整性：INCOMPLETE_REVIEW。** `S43_PARTIAL.md` 在第 5.2 节人口平均三阶差分证明中截断；transport flatness、count-Stein 曲率、辅助 Gibbs 响应和最终装配均未取得。附件正文也未取得。没有读取哈希文件。
+- **原稿读取完整性：COMPLETE_VISIBLE_REVIEW。** 初次取得的 `S43_PARTIAL.md` 在第 5.2 节截断；随后取得完整可见的 `S43_CYCLE03_MISSING_PROOF.md`，补齐 count-Stein、actual-count/field 转换和最终装配。附件正文仍未取得；没有读取哈希文件。
 - **实际 `B_m` 符号质量：VERIFIED_SCOPED。** 实际二阶计数核具有精确 `+,-,+` 符号型，且
 
 \[
@@ -28,28 +28,45 @@
 
 对每个固定 `K` 成立；其实际计数核加权贡献为 `o(n)`。
 - **输出 KL 的带符号预算：VERIFIED_SCOPED。** 不需要 `U_l` 的导数或极限；仅用 `0<=U_l<=D_l`、中央 `D_l->D_c` 和实际核正负质量，即得其归一化贡献落在 `[-M_bD_c,M_bD_c]`。
-- **辅助 Gibbs 曲率 `A_c,L_c`：CRITICAL_GAPS（承重证明缺失）。** 可见正文没有 count-Stein 恒等式、没有导出
+- **条件赔率与 count-Stein 曲率：VERIFIED_SCOPED。** 潜变量条件 Bernoulli 分部积分给出精确二阶 Stein 恒等式；DPP 条件赔率的 log-submodularity、邻点协方差和 logit 响应共同导出
 
 \[
  -L_c\le\liminf \frac1n\sum_l\kappa_l\mathscr F_l
  \le\limsup \frac1n\sum_l\kappa_l\mathscr F_l\le-A_c,
 \]
 
-也没有说明边界项如何支付。仅给出常数定义和作者摘要，不能当作证明；本报告无法从第 1–5.2 节独立恢复这些特定常数。
-- **最终负上包络及 `-W_n=Theta(n)`：NOT_REVIEWED。** 它们严格依赖缺失的辅助 Gibbs 曲率证书。当前能认证的是一条条件装配公式，而不是 `limsup W_n/n<=-2.6896...`。
-- **作用域：CORRECTED_LAW_ONLY。** 即使缺失曲率日后补齐，也不自动决定 `W_n+C_n`，更不推出真实输出熵率凹性。
+补发正文中的不等式方向、`16/pi^4` 来源和 `L_c` 两项均正确。
+- **actual-count/field 转换：VERIFIED.** 式 (16) 精确区分共同平移参数 `a` 与平衡参数 `c`；式 (18) 的 KL 链式分解把 count-only 修正隔离出来。中央局部极限和统一可积性给 `R_n''(0)=o(n)`，平衡 score 项也仅为 `O(sqrt(n))=o(n)`，故
+
+\[
+ \sum_l\kappa_l\mathscr F_l
+ =\frac{\mathcal D_n''(0)}{b^2}+o(n).
+\]
+
+- **端层和最终装配：VERIFIED_SCOPED。** 四个规定端层的 heat/Gibbs 律均为均匀律，所有四个账本量为零；实际 `kappa` 尾、evidence 和输出 KL 预算覆盖其余全部层，没有丢失中央或边界项。
+- **最终负上包络及 `-W_n=Theta(n)`：VERIFIED_SCOPED。** 在 `c=19/20`，解析界直接证明 `A_c-M_bD_c>0`，从而
+
+\[
+ \limsup W_n/n\le-2.689614884862\ldots<0,
+ \qquad -W_n=\Theta(n)
+\]
+
+沿充分大的偶数 `n` 成立；不声称 `W_n/n` 极限存在。
+- **未发现反例：NO_DISPROOF。** 补发证明中的承重恒等式均可从冻结模型逐式推出。
+- **作用域：CORRECTED_LAW_ONLY。** 该结论不决定 `W_n+C_n`，也不推出真实输出或 sine-Toeplitz 熵率凹性。
 
 ## 1. 审查材料与证据边界
 
 主审材料：
 
-`C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/S43_PARTIAL.md`。
+1. `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/S43_PARTIAL.md`；
+2. `C:/game/gameproject/showa100/math/rl01-sa-cycle04-20260918/research/CYCLE04_20260918/S43_CYCLE03_MISSING_PROOF.md`。
 
-可见文本共 791 行，在
+首份文本共 791 行，在
 
 > “the number of ordered triples is Theta...”
 
-处中断。作者标题、主定理框和数值常数不是缺页证明的替代品。本报告只使用可见公式、冻结 corrected-law 定义、此前已独立核验的强 Rayleigh 修正及标准有限概率/矩阵工具。
+处中断。第二份 17,130 字符的完整可见补发稿重述原稿第 6–9 节并展开中间代数。本报告把它当作作者证明而非独立证书，逐式重新检查；仍只使用冻结 corrected-law 定义、此前已独立核验的强 Rayleigh 修正及标准有限概率/矩阵工具。
 
 ## 2. 实际计数核与 `M_b`
 
@@ -351,91 +368,409 @@ Poisson-binomial 的统一局部 CLT 与熵尾一致可积性给
 
 这一步不需要 `U_l` 平滑，也不声称其 profile 收敛。
 
-## 10. 缺失的辅助 Gibbs 曲率
+## 10. 补发的 count-Stein / Gibbs 曲率
 
-**状态：CRITICAL_GAPS。**
+**状态：VERIFIED_SCOPED。**
 
-要完成作者定理，还必须证明
+### 10.1 潜变量 Bernoulli 分部积分
+
+定义联合 Gibbs 场
 
 \[
- -L_c\le\liminf\frac1n\sum_l\kappa_l\mathscr F_l
- \le\limsup\frac1n\sum_l\kappa_l\mathscr F_l
- \le-A_c,
+ Q(S)=\pi_{|S|}\gamma_{|S|}(S)
+ =b^kz^{-|S|/2}\det\Lambda_S.
 \]
 
-其中
+Cauchy–Binet 给出等价生成方式：先取投影 DPP 的潜在 \(k\)-集 \(A\)，再令各位在 \(A\) 内以 \(p\)、在 \(A^c\) 内以 \(q\) 独立取一。给定 \(A\) 后，每位方差都等于 \(b=pq\)，而条件均值之和恒为 \(k\)。因此对任意立方体函数 \(f\)，
 
 \[
- A_c=\frac{16c^4}{b\pi^4},
+ E_Q[Xf]=b\sum_iE_Q\partial_i f,
+ \qquad X=N-k.
+\]
+
+对 \(Xf\) 再应用一次，并使用逐点恒等式
+
+\[
+ \partial_i(Xf)=X\partial_i f+f(Y^i),
+\]
+
+得到
+
+\[
+ \operatorname{Cov}(X^2,f)
+ =b^2\sum_{i\ne j}E\partial_{ij}f
+ +bE\mathcal Lf.
+\]
+
+这里没有把潜变量混合误当成独立场；分部积分是在给定 \(A\) 后成立，再对 \(A\) 平均。
+
+### 10.2 条件赔率响应与曲率恒等式
+
+对计数倾斜
+
+\[
+ Q_t=\frac{e^{tX}Q}{E_Qe^{tX}},
  \qquad
- L_c=\frac{c^4}{4b^2}+\frac cb\log\frac pq.
+ \mathcal D_n(t)=D(Q_t\Vert\operatorname{Ber}(m_t)^{\otimes n}),
 \]
 
-可见正文只说明“count-Stein curvature certificate”将完成此事，却在该证明之前截断。缺少至少以下承重内容：
+有 \(m_0=1/2\)、\(m'_0=b\)，且对称性给三阶中心矩为零。直接微分
 
-1. 将 `sum kappa_l mathscr F_l` 变成可定号的 Stein/交换恒等式；
-2. 产生 `16/pi^4` 的 sine/Fourier 下界；
-3. 产生 `L_c` 两项的全局上界；
-4. 支付中央原子、端层和宏观带外边界；
-5. 证明不等式方向与式 (10) 的符号归一一致。
+\[
+ \mathcal D_n(t)=nH_{\rm Ber}(m_t)-H(Q_t)
+\]
 
-这些不能由已有的 `O(1+r^2/n)` 前缀界推出：该前缀界只给 `O(n)` 量级，不给负号或常数。也不能从作者列出的十进制值逆向认证。
+得到
 
-## 11. 当前可认证的最终装配
+\[
+ \mathcal D_n''(0)
+ =\operatorname{Cov}(X^2,\log Q)+nbc^2.
+\]
 
 令
 
 \[
- G_n^{\mathrm{aux}}=\frac1n\sum_l\kappa_l\mathscr F_l.
+ r_i=Q(Y_i=1\mid Y_{-i}),\quad
+ h_i=\log\frac{r_i}{1-r_i},\quad
+ x_i=2r_i-1,\quad
+ v_i=E[r_i(1-r_i)].
 \]
 
-由第 8、9 节，严格可保留的是
+潜变量表示立即给 \(q\le r_i\le p\)。正定 \(L\)-ensemble 的 Schur 补公式给
 
 \[
- \limsup\frac{W_n}{n}
- \le\limsup G_n^{\mathrm{aux}}+M_bD_c,
+ \partial_jh_i
+ =\partial_{ij}\log Q
+ =\log\left(1-\frac{|M_{ij}|^2}{M_{ii}M_{jj}}\right)\le0.
+\]
+
+翻位生成元逐条件平均又给
+
+\[
+ E\mathcal L\log Q=-\sum_iE[x_ih_i].
+\]
+
+故
+
+\[
+ \mathcal D_n''(0)
+ =b^2\sum_{i\ne j}E\partial_jh_i
+ -b\sum_iE[x_ih_i]+nbc^2.
+\]
+
+承重赔率响应恒等式也成立：
+
+\[
+ b\sum_{j\ne i}E\partial_jr_i
+ =\operatorname{Cov}(N,r_i)=b-v_i.
+\]
+
+其中 \(E[X Y_i]=b\) 来自第一次 Stein 恒等式，而
+
+\[
+ \operatorname{Cov}(N,Y_i-r_i)=E[r_i(1-r_i)]=v_i.
+\]
+
+由于 logit 导数在 \([q,p]\) 上介于 \(4\) 与 \(1/b\)，且所有 \(\partial_jr_i\le0\)，
+
+\[
+ \frac1b\partial_jr_i\le\partial_jh_i\le4\partial_jr_i.
+\]
+
+上侧结合 \(4b+c^2=1\) 与
+
+\[
+ x\log\frac{1+x}{1-x}\ge2x^2
+\]
+
+得到
+
+\[
+ \mathcal D_n''(0)\le-b\sum_iE x_i^2.
+\]
+
+下侧使用 \(v_i\le1/4\) 及 \(x_ih_i\le c\log(p/q)\)，得到
+
+\[
+ \mathcal D_n''(0)
+ \ge-n\left(\frac{c^4}{4}+bc\log\frac pq\right).
+\]
+
+每一步的不等式方向都与负增量 \(\partial_jr_i\le0\) 相容；未发现符号翻转。
+
+### 10.3 邻点协方差产生 \(A_c\)
+
+该场的 \(L\)-矩阵是 \(z^{-1/2}\Lambda\)，对应 DPP 核
+
+\[
+ K=qI+cP.
+\]
+
+所以
+
+\[
+ \operatorname{Cov}(Y_i,Y_j)=-c^2|P_{ij}|^2.
+\]
+
+对循环相邻点，
+
+\[
+ |P_{i,i+1}|=\frac1{n\sin(\pi/n)}.
+\]
+
+又 \(r_i=E(Y_i\mid Y_{-i})\)，故
+
+\[
+ \operatorname{Cov}(Y_i,Y_j)=\operatorname{Cov}(r_i,Y_j).
+\]
+
+Cauchy–Schwarz 与 \(\operatorname{Var}(Y_j)=1/4\) 给
+
+\[
+ E x_i^2=4\operatorname{Var}(r_i)
+ \ge16\operatorname{Cov}(Y_i,Y_j)^2
+ =\frac{16c^4}{n^4\sin^4(\pi/n)}.
+\]
+
+因此有限 \(n\) 即有
+
+\[
+-\left(\frac{c^4}{4b^2}+\frac cb\log\frac pq\right)
+\le\frac{\mathcal D_n''(0)}{nb^2}
+\le-\frac{16c^4}{bn^4\sin^4(\pi/n)}.
+\]
+
+这逐项解释了
+
+\[
+ L_c=\frac{c^4}{4b^2}+\frac cb\log\frac pq,
+ \qquad
+ A_c=\frac{16c^4}{b\pi^4}.
+\]
+
+## 11. actual-count / field 转换
+
+**状态：VERIFIED。**
+
+### 11.1 Gibbs 层正则性
+
+补发稿所用的 Gibbs overlap 均值、方差和人口二阶差分正是前文已核验的输入。Fourier 补集恒等式给
+
+\[
+ a_n^\circ(h,j)=a_n^\circ(k-j,k-h).
+\]
+
+在中心对角线上，这使序列关于位移 \(t\) 为偶函数。二阶差分 \(O(n^{-1})\) 因而先给首增量 \(O(n^{-1})\)，再求和得到 \(O(t^2/n)\)。以 Gibbs overlap 的均值替换随机 overlap 只支付方差乘二阶差分，即 \(O(1)\)。
+
+实际计数律在固定宏观带内作指数倾斜后，各 Bernoulli 参数统一远离 \(0,1\)，倾斜中心质量为 \(\Theta(n^{-1/2})\)。率函数二阶导为 \(O(n^{-1})\)。这些事实与相邻二项式比率一起给
+
+\[
+ |\mathscr F_l-\mathscr F_k|
+ \le C\left(1+\frac{(l-k)^2}{n}\right).
+\]
+
+宏观带外，右端已经是 \(O(n)\)，而 \(0\le\mathscr F_l\le n\log2\)，所以同一包络确实覆盖全部层。
+
+### 11.2 两个参数方向没有混淆
+
+共同平移参数 \(a\) 的一阶 score 是 \(X/b\)。在 midpoint 对 \(a\) 再微分，其 score 导数为
+
+\[
+ -\frac nb+\frac{2c}{b}T,
+\]
+
+其中 \(T\) 是保持平均计数不变的平衡 \(c\)-score。由此精确得到
+
+\[
+ \kappa_l
+ =\left(\frac{(l-k)^2}{b^2}-\frac nb\right)\pi_l
+ +\frac{2c}{b}\dot\pi_l.
+\]
+
+对固定高、低两组 Bernoulli 位，\(T\) 的方差为 \(n/(4b)\)。因此 Cauchy–Schwarz、全层前缀界和实际计数四阶矩给
+
+\[
+ \left|\sum_l\dot\pi_l\mathscr F_l\right|
+ \le\sqrt{\frac n{4b}}\,
+ \left[E_\pi(\mathscr F_N-\mathscr F_k)^2\right]^{1/2}
+ =O(\sqrt n)=o(n).
+\]
+
+所以式 (16) 并未把 \(a\)-导数偷换成 \(c\)-导数；二者差异被显式 score 项支付。
+
+### 11.3 count-only 修正确为 \(o(n)\)
+
+计数倾斜不改变给定 \(N=l\) 时的条件律 \(\gamma_l\)。Bernoulli 产品参考在给定计数后则是均匀切片律。因此 KL 链式法则精确给
+
+\[
+ \mathcal D_n(t)
+ =E_{\pi_t}\mathscr F_N+R_n(t),
 \]
 
 \[
- \liminf\frac{W_n}{n}
- \ge\liminf G_n^{\mathrm{aux}}-M_bD_c.
+ R_n(t)=D(\pi_t\Vert\operatorname{Bin}(n,m_t)).
 \]
 
-若未来独立证明第 10 节缺失的辅助曲率界，则作者的区间 (T) 随即成立。当前没有该证明，所以
+有限求和直接微分得到
 
 \[
- \limsup W_n/n\le-A_c+M_bD_c
+ R_n''(0)
+ =\operatorname{Cov}\left(
+ X^2,\log\frac{\pi_N}{\operatorname{Bin}(n,1/2)(N)}
+ \right)+nbc^2.
 \]
 
-以及 `-W_n=Theta(n)` 均不能升级为已验证结论。
-
-在 `c=19/20`，常数的数值复算确为
+在 \(X=\sqrt n\,y\) 的中央格点，
 
 \[
- D_c=0.140983882778\ldots,
- \quad M_bD_c=2.799095159908\ldots,
- \quad A_c-M_bD_c=2.689614884862\ldots.
+ \log\frac{\pi_l}{\operatorname{Bin}(n,1/2)(l)}
+ =-\frac12\log(4b)
+ +\left(2-\frac1{2b}\right)y^2+o(1).
 \]
 
-这只验证算术，不验证缺失的 `A_c` 曲率不等式。
+宏观带内的倾斜比较给 \(C(1+y^2)\) 包络，带外实际计数概率指数小，因此乘 \(y^2\) 后仍统一可积。由 \(X/\sqrt n\) 的 Gaussian 极限及四阶矩收敛，
 
-## 12. 最强可信结论与剩余义务
+\[
+ \frac{R_n''(0)}n
+ \longrightarrow
+ \left(2-\frac1{2b}\right)2b^2+bc^2=0.
+\]
 
-可以认证：
+综合 score 修正与该 count-only 修正，
 
-1. 实际二阶计数核的符号型、`M_b` 正质量和全尾矩账本；
-2. 径向 KL 在中央窗趋于 `D_c`；
-3. 带符号三阶 logdet 行和及人口 `O(n^-2)` 三阶差分；
-4. evidence 在 `sqrt(n)` 层尺度平坦，且其实际核响应为 `o(n)`；
-5. 输出 KL 响应位于 `[-M_bD_c,M_bD_c]`；
-6. 把完整问题约化为单独的辅助 Gibbs 曲率响应。
+\[
+ \boxed{
+ W_n^G:=\sum_l\kappa_l\mathscr F_l
+ =\frac{\mathcal D_n''(0)}{b^2}+o(n).
+ }
+\]
 
-仍未认证：
+因此
 
-- `A_c,L_c` 的 count-Stein 推导；
-- `limsup W_n/n<0`；
-- `-W_n=Theta(n)`；
-- `W_n+C_n` 的符号；
-- 真实输出或 Toeplitz 熵率结论。
+\[
+ -L_c\le\liminf\frac{W_n^G}{n}
+ \le\limsup\frac{W_n^G}{n}\le-A_c.
+\]
 
-因此本轮最有价值的新结果是：作者主定理只剩一个清晰、独立且承重的辅助 Gibbs 曲率义务；其余两项误差预算可以闭合。
+## 12. 端层、实际权重与最终装配
+
+**状态：VERIFIED_SCOPED。**
+
+精确 Bayesian 分解为
+
+\[
+ F_l=\mathscr F_l+U_l+v_l.
+\]
+
+前文已核验：
+
+\[
+ \frac1n\sum_l\kappa_lv_l\to0,
+\]
+
+以及
+
+\[
+ -M_bD_c
+ \le\liminf\frac1n\sum_l\kappa_lU_l
+ \le\limsup\frac1n\sum_l\kappa_lU_l
+ \le M_bD_c.
+\]
+
+补发稿没有引入新的尾假设。宏观带内 \(U_l\) 与 \(|v_l|\) 一致有界；带外的粗 \(O(n)\) 界被
+
+\[
+ 1+\frac{(l-k)^2}{n}
+\]
+
+吸收。实际 \(\kappa_l\) 的四阶尾账本随后给 \(C/K^2\) 补带误差。
+
+四个端层也没有遗漏：在 \(l=0,n\) 时切片为单点；在 \(l=1,n-1\) 时 half-filled 循环对称性使 heat 和 Gibbs 条件律均为均匀律。因此
+
+\[
+ F_l=\mathscr F_l=U_l=v_l=0
+\]
+
+在四个端层全部成立。中央层通过 \(\sum_l\kappa_l=0\) 减去中央常数，而不是被删除。
+
+最终得到
+
+\[
+\boxed{
+-L_c-M_bD_c
+\le\liminf\frac{W_n}{n}
+\le\limsup\frac{W_n}{n}
+\le-A_c+M_bD_c.
+}
+\]
+
+在 \(c=19/20\) 时，完全解析地有
+
+\[
+ 1<\rho_c<2,\qquad
+ D_c<\frac{1-\log2}{2}<\frac16,
+ \qquad
+ bM_b=\sqrt{\frac2{\pi e}}<\frac12.
+\]
+
+再用 \(c^4>4/5\) 和 \(\pi^4<100\)，
+
+\[
+ b(A_c-M_bD_c)
+ >\frac{16}{125}-\frac1{12}
+ =\frac{67}{1500}>0.
+\]
+
+故负号不依赖十进制复算。数值上
+
+\[
+ A_c-M_bD_c
+ =2.689614884862\ldots.
+\]
+
+于是对充分大的偶数 \(n\)，
+
+\[
+ \frac{A_c-M_bD_c}{2}\,n
+ \le -W_n
+ \le (L_c+M_bD_c+1)n.
+\]
+
+这证明
+
+\[
+ \boxed{-W_n=\Theta(n)}
+\]
+
+但不证明 \(W_n/n\) 极限存在。
+
+## 13. 最终裁决与剩余范围
+
+本轮逐项状态：
+
+1. 条件赔率响应恒等式：**VERIFIED**；
+2. 负曲率常数 \(A_c,L_c\)：**VERIFIED**；
+3. actual-count/field 转换式 (16)–(21)：**VERIFIED**；
+4. count-only correction \(R_n''(0)=o(n)\)：**VERIFIED**；
+5. 实际权重尾、中央层和四个端层：**VERIFIED**；
+6. \(c=19/20\) 的负上包络及 \(-W_n=\Theta(n)\)：**VERIFIED_SCOPED**；
+7. 被证明为假的承重主张：**NONE / NO_DISPROOF**。
+
+最强可信结论为
+
+\[
+\boxed{
+ \limsup_{\substack{n\to\infty\\n\ {\rm even}}}\frac{W_n}{n}
+ \le-2.689614884862\ldots,
+ \qquad -W_n=\Theta(n).
+}
+\]
+
+仍不推出：
+
+- \(W_n/n\) 极限存在；
+- \(W_n+C_n\) 的符号；
+- corrected cyclic law 与真实 sine-Toeplitz 输出律等价；
+- 一般密度、全合法 \(a\) 的真实熵率凹性。
+
+因此此次补发消除了原 PR #15 唯一承重证明缺口，但没有扩大 corrected-law 的既定作用域。
