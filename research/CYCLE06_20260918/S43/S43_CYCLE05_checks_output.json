@@ -1,0 +1,440 @@
+{
+  "label": "S43_CYCLE05",
+  "status": "finite diagnostics, not independent verification",
+  "constants": {
+    "c": "0.95",
+    "clock_lower": "27.971948500903766312720843738392390851936982356423864220272696377",
+    "clock_upper": "87.472582228429019448726616653968935176596815491352471495794858738",
+    "old_pair_A": "5.4887100447701220356331481770427706225933988322789416849000063621",
+    "analytic_clock_lower_floor_4A": "21.954840179080488142532592708171082490373595329115766739600025448",
+    "joint_lower": "-105.33122369304738918786072254890824623870745533565528279394017958",
+    "joint_upper": "32.082474477215732627911430364702486777717022951308009130988764677",
+    "M_times_D": "2.799095159908040320219122672394794470024715259000316823296456984",
+    "decimals_are": "high precision evaluations of explicit formulas, not interval certificates",
+    "optional_parity_refinements": [
+      {
+        "opposite_parity_neighbor_pairs": 1,
+        "finite_sum_upper": 87.16267905918592,
+        "finite_sum_lower": 27.97194850090376,
+        "remaining_weight": 0.1894305308612978
+      },
+      {
+        "opposite_parity_neighbor_pairs": 2,
+        "finite_sum_upper": 85.1889226511727,
+        "finite_sum_lower": 28.759929950364565,
+        "remaining_weight": 0.09936725651255318
+      },
+      {
+        "opposite_parity_neighbor_pairs": 3,
+        "finite_sum_upper": 84.75278036924634,
+        "finite_sum_lower": 28.87022207202679,
+        "remaining_weight": 0.06694447774700518
+      },
+      {
+        "opposite_parity_neighbor_pairs": 4,
+        "finite_sum_upper": 84.60903525853861,
+        "finite_sum_lower": 28.89933008572071,
+        "remaining_weight": 0.05040224368294988
+      },
+      {
+        "opposite_parity_neighbor_pairs": 6,
+        "finite_sum_upper": 84.5135075016059,
+        "finite_sum_lower": 28.914824226393538,
+        "remaining_weight": 0.033696291967204806
+      },
+      {
+        "opposite_parity_neighbor_pairs": 8,
+        "finite_sum_upper": 84.4814996902047,
+        "finite_sum_lower": 28.918676027950283,
+        "remaining_weight": 0.025297491945097006
+      }
+    ]
+  },
+  "finite_cases": [
+    {
+      "n": 4,
+      "full_Gibbs": {
+        "mass": 1.0,
+        "count_variance": 0.09750000000000039,
+        "flip_production_per_site": 2.2694561988230038,
+        "flip_over_b_per_site": 93.10589533632833,
+        "compensator_per_site": 26.744756016978005,
+        "predictor_second_moment": 0.7389633406445301,
+        "finite_flip_lower": 1.340696109919084,
+        "finite_flip_upper": 2.2694561988230086,
+        "finite_predictor_lower": 0.40725312499999994,
+        "finite_predictor_upper": 0.7389633406445311,
+        "parity_weight_square_sum": 0.5,
+        "parity_weight_square_sum_formula": 0.5,
+        "max_conditional_range_violation": 7.66053886991358e-15,
+        "largest_logodds_flip_row_sum": 10.503238388193669,
+        "logodds_flip_row_bound": 3041.9999999999945,
+        "Stein_identity_residual": -8.881784197001252e-16,
+        "field_second_derivative_per_site": -0.039427848790911116,
+        "finite_exact_cancellation_residual": -1.4352963262354024e-12
+      },
+      "corrected": {
+        "W_over_n": -0.16676702946585056,
+        "C_over_n": 0.32713840123553956,
+        "W_plus_C_over_n": 0.160371371769689,
+        "WG_over_n": -0.1667670294658501,
+        "weighted_output_KL_over_n": -9.525672591477684e-16,
+        "weighted_evidence_over_n": -1.1737186288636076e-14,
+        "pi_mass": 0.9999999999999999,
+        "B_mass": 12.0,
+        "kappa_mass": 0.0,
+        "layers": [
+          {
+            "l": 2,
+            "s": 0.0006570307904697851,
+            "n_s": 0.0026281231618791403,
+            "theta": 0.9960655754667123,
+            "n_clock_acceleration": 8.398957373189896,
+            "F": 0.058437855266176286,
+            "J_G_over_n2": 0.042987963368652356,
+            "F_minus_FG": 1.6653345369377348e-16,
+            "output_KL": 3.33794922171798e-16,
+            "evidence": 4.112899268904451e-15,
+            "entropy_ledger_residual": -4.2801607373824755e-15
+          }
+        ],
+        "note": "These are pre-asymptotic values at exact clocks, not fits."
+      },
+      "terminal_transfer_difference_per_site": -92.77875693509279
+    },
+    {
+      "n": 6,
+      "full_Gibbs": {
+        "mass": 0.9999999999999977,
+        "count_variance": 0.14624999999999772,
+        "flip_production_per_site": 2.0386631752310875,
+        "flip_over_b_per_site": 83.63746359922408,
+        "compensator_per_site": 23.633173905619685,
+        "predictor_second_moment": 0.6812470967662434,
+        "finite_flip_lower": 0.8863078200692913,
+        "finite_flip_upper": 2.1931717504868686,
+        "finite_predictor_lower": 0.33183587962962957,
+        "finite_predictor_upper": 0.7249739129861108,
+        "parity_weight_square_sum": 0.40740740740740733,
+        "parity_weight_square_sum_formula": 0.4074074074074074,
+        "max_conditional_range_violation": 2.2093438190040615e-14,
+        "largest_logodds_flip_row_sum": 14.830729447736811,
+        "logodds_flip_row_bound": 3041.9999999999945,
+        "Stein_identity_residual": 3.941291737419306e-15,
+        "field_second_derivative_per_site": -0.03565098618123853,
+        "finite_exact_cancellation_residual": 6.650680006714538e-12
+      },
+      "corrected": {
+        "W_over_n": -0.634665527241959,
+        "C_over_n": 1.2676398179171489,
+        "W_plus_C_over_n": 0.6329742906751897,
+        "WG_over_n": -0.6346655272419567,
+        "weighted_output_KL_over_n": -4.965279924179838e-16,
+        "weighted_evidence_over_n": -7.162340127651873e-15,
+        "pi_mass": 1.0,
+        "B_mass": 29.999999999999996,
+        "kappa_mass": -1.3877787807814457e-15,
+        "layers": [
+          {
+            "l": 2,
+            "s": 0.0003286232230786723,
+            "n_s": 0.0019717393384720335,
+            "theta": 0.99671916152036,
+            "n_clock_acceleration": 6.3033513732719815,
+            "F": 0.03346876860994551,
+            "J_G_over_n2": 0.01909657221004056,
+            "F_minus_FG": -4.649058915617843e-16,
+            "output_KL": -4.853650721105279e-16,
+            "evidence": -6.5840756457973746e-15,
+            "entropy_ledger_residual": 6.6045348263461185e-15
+          },
+          {
+            "l": 3,
+            "s": 0.000656170050251248,
+            "n_s": 0.0039370203015074885,
+            "theta": 0.9934597804447025,
+            "n_clock_acceleration": 12.565477444626136,
+            "F": 0.18982259572685534,
+            "J_G_over_n2": 0.11527350278379715,
+            "F_minus_FG": 4.440892098500626e-16,
+            "output_KL": -7.451910887398025e-17,
+            "evidence": -8.930172913833105e-16,
+            "entropy_ledger_residual": 1.4116256101073533e-15
+          }
+        ],
+        "note": "These are pre-asymptotic values at exact clocks, not fits."
+      },
+      "terminal_transfer_difference_per_site": -82.36982378130693
+    },
+    {
+      "n": 8,
+      "full_Gibbs": {
+        "mass": 0.999999999999998,
+        "count_variance": 0.1949999999999985,
+        "flip_production_per_site": 1.8869047105243808,
+        "flip_over_b_per_site": 77.41147530356432,
+        "compensator_per_site": 21.348369922362735,
+        "predictor_second_moment": 0.6400262354218986,
+        "finite_flip_lower": 0.7866195526868319,
+        "finite_flip_upper": 2.16647219356922,
+        "finite_predictor_lower": 0.30543984374999994,
+        "finite_predictor_upper": 0.7200776133056639,
+        "parity_weight_square_sum": 0.3749999999999999,
+        "parity_weight_square_sum_formula": 0.375,
+        "max_conditional_range_violation": 2.6478819137309983e-14,
+        "largest_logodds_flip_row_sum": 18.46560160003713,
+        "logodds_flip_row_bound": 3041.9999999999945,
+        "Stein_identity_residual": 1.1102230246251565e-15,
+        "field_second_derivative_per_site": -0.03330936847062785,
+        "finite_exact_cancellation_residual": 1.9326762412674725e-12
+      },
+      "corrected": {
+        "W_over_n": -1.33374692320285,
+        "C_over_n": 2.6162334189384135,
+        "W_plus_C_over_n": 1.2824864957355635,
+        "WG_over_n": -1.3337466737479668,
+        "weighted_output_KL_over_n": -2.4333161794374543e-10,
+        "weighted_evidence_over_n": -2.492113104686622e-07,
+        "pi_mass": 1.0,
+        "B_mass": 55.99999999999999,
+        "kappa_mass": 6.328271240363392e-15,
+        "layers": [
+          {
+            "l": 2,
+            "s": 0.00021910612444336102,
+            "n_s": 0.0017528489955468882,
+            "theta": 0.9969372141853006,
+            "n_clock_acceleration": 5.604204764507906,
+            "F": 0.024174458819644827,
+            "J_G_over_n2": 0.011061033204259677,
+            "F_minus_FG": -8.777700788442644e-16,
+            "output_KL": -9.34309478337392e-16,
+            "evidence": -1.3732834594941265e-14,
+            "entropy_ledger_residual": 1.3789373994434392e-14
+          },
+          {
+            "l": 3,
+            "s": 0.00032840766165672823,
+            "n_s": 0.002627261293253826,
+            "theta": 0.995412846013025,
+            "n_clock_acceleration": 8.393453471648296,
+            "F": 0.10781022652440732,
+            "J_G_over_n2": 0.05240725794018858,
+            "F_minus_FG": -5.134781488891349e-16,
+            "output_KL": 7.576335937924312e-17,
+            "evidence": 1.811360871965751e-15,
+            "entropy_ledger_residual": -2.4006023802341288e-15
+          },
+          {
+            "l": 4,
+            "s": 0.0006548845598801327,
+            "n_s": 0.005239076479041062,
+            "theta": 0.9908735176387273,
+            "n_clock_acceleration": 16.688482404733055,
+            "F": 0.3584058937260336,
+            "J_G_over_n2": 0.184563421814839,
+            "F_minus_FG": 5.784733564384581e-08,
+            "output_KL": 5.642678980964841e-11,
+            "evidence": 5.779084458888727e-08,
+            "entropy_ledger_residual": 6.426514889454997e-14
+          }
+        ],
+        "note": "These are pre-asymptotic values at exact clocks, not fits."
+      },
+      "terminal_transfer_difference_per_site": -74.79524188462591
+    },
+    {
+      "n": 10,
+      "full_Gibbs": {
+        "mass": 0.9999999999999882,
+        "count_variance": 0.24374999999998553,
+        "flip_production_per_site": 1.778706817698397,
+        "flip_over_b_per_site": 72.97258739275472,
+        "compensator_per_site": 19.62243238519638,
+        "predictor_second_moment": 0.6095374865769922,
+        "finite_flip_lower": 0.746273204465507,
+        "finite_flip_upper": 2.154114112938765,
+        "finite_predictor_lower": 0.29322224999999996,
+        "finite_predictor_upper": 0.7178113260249999,
+        "parity_weight_square_sum": 0.3599999999999997,
+        "parity_weight_square_sum_formula": 0.36,
+        "max_conditional_range_violation": 7.283063041541027e-14,
+        "largest_logodds_flip_row_sum": 22.14965688398918,
+        "logodds_flip_row_bound": 3041.9999999999945,
+        "Stein_identity_residual": 1.5210055437364645e-14,
+        "field_second_derivative_per_site": -0.0316974944400361,
+        "finite_exact_cancellation_residual": 2.55226950685028e-11
+      },
+      "corrected": {
+        "W_over_n": -2.1968807363428295,
+        "C_over_n": 4.197231405848241,
+        "W_plus_C_over_n": 2.0003506695054107,
+        "WG_over_n": -2.1968762471064074,
+        "weighted_output_KL_over_n": -1.6023064643131223e-08,
+        "weighted_evidence_over_n": -4.473212645191058e-06,
+        "pi_mass": 0.9999999999999999,
+        "B_mass": 90.0,
+        "kappa_mass": -6.561483127665024e-15,
+        "layers": [
+          {
+            "l": 2,
+            "s": 0.0001643385861969351,
+            "n_s": 0.0016433858619693512,
+            "theta": 0.9970462762992842,
+            "n_clock_acceleration": 5.254516733130771,
+            "F": 0.019104373260611852,
+            "J_G_over_n2": 0.007263449540882274,
+            "F_minus_FG": 1.4155343563970746e-15,
+            "output_KL": 1.4693813094251535e-15,
+            "evidence": 1.967066772750038e-14,
+            "entropy_ledger_residual": -1.9724514680528456e-14
+          },
+          {
+            "l": 3,
+            "s": 0.00021901026348992837,
+            "n_s": 0.0021901026348992835,
+            "theta": 0.9960655754667123,
+            "n_clock_acceleration": 6.999131144327842,
+            "F": 0.07654935438466826,
+            "J_G_over_n2": 0.03069696582108694,
+            "F_minus_FG": 1.915134717478395e-15,
+            "output_KL": 1.78350188845321e-15,
+            "evidence": 3.445844345788204e-14,
+            "entropy_ledger_residual": -3.432681062885686e-14
+          },
+          {
+            "l": 4,
+            "s": 0.0003281209052049168,
+            "n_s": 0.003281209052049168,
+            "theta": 0.9941112308787142,
+            "n_clock_acceleration": 10.473521525944655,
+            "F": 0.21379758344792718,
+            "J_G_over_n2": 0.09032390639614123,
+            "F_minus_FG": -2.772576079834721e-08,
+            "output_KL": 2.5108355951633046e-12,
+            "evidence": -2.772830092118926e-08,
+            "entropy_ledger_residual": 2.9287246887725874e-14
+          },
+          {
+            "l": 5,
+            "s": 0.0006531809788911226,
+            "n_s": 0.006531809788911226,
+            "theta": 0.9883115888539383,
+            "n_clock_acceleration": 20.752449053280063,
+            "F": 0.548084657611509,
+            "J_G_over_n2": 0.2445902709424501,
+            "F_minus_FG": 9.042601487596613e-07,
+            "output_KL": 3.2492245997852286e-09,
+            "evidence": 9.010107995883005e-07,
+            "entropy_ledger_residual": 1.2457157552975935e-13
+          }
+        ],
+        "note": "These are pre-asymptotic values at exact clocks, not fits."
+      },
+      "terminal_transfer_difference_per_site": -68.77535598690648
+    },
+    {
+      "n": 12,
+      "full_Gibbs": {
+        "mass": 0.9999999999999921,
+        "count_variance": 0.29249999999999204,
+        "flip_production_per_site": 1.697616887175121,
+        "flip_over_b_per_site": 69.64582101231264,
+        "compensator_per_site": 18.28405564392964,
+        "predictor_second_moment": 0.5862351540748688,
+        "finite_flip_lower": 0.7256531405512767,
+        "finite_flip_upper": 2.1474010814851847,
+        "finite_predictor_lower": 0.28658553240740736,
+        "finite_predictor_upper": 0.7165802563910588,
+        "parity_weight_square_sum": 0.3518518518518514,
+        "parity_weight_square_sum_formula": 0.35185185185185186,
+        "max_conditional_range_violation": 1.251776460264864e-13,
+        "largest_logodds_flip_row_sum": 25.352016917644605,
+        "logodds_flip_row_bound": 3041.9999999999945,
+        "Stein_identity_residual": -7.771561172376096e-16,
+        "field_second_derivative_per_site": -0.030516111377074506,
+        "finite_exact_cancellation_residual": -1.2221335055073723e-12
+      },
+      "corrected": {
+        "W_over_n": -3.1719033763780593,
+        "C_over_n": 5.893088236688903,
+        "W_plus_C_over_n": 2.7211848603108435,
+        "WG_over_n": -3.171876741394938,
+        "weighted_output_KL_over_n": -1.771190655839666e-07,
+        "weighted_evidence_over_n": -2.6457863277142945e-05,
+        "pi_mass": 1.0000000000000004,
+        "B_mass": 132.00000000000003,
+        "kappa_mass": 1.988358682889456e-14,
+        "layers": [
+          {
+            "l": 2,
+            "s": 0.00013147518603611792,
+            "n_s": 0.001577702232433415,
+            "theta": 0.9971117250222743,
+            "n_clock_acceleration": 5.044667187198861,
+            "F": 0.01585257079401909,
+            "J_G_over_n2": 0.005147212556190005,
+            "F_minus_FG": -1.1830814106161824e-15,
+            "output_KL": -1.2342994414866857e-15,
+            "evidence": -1.430327373169235e-14,
+            "entropy_ledger_residual": 1.4354491762562854e-14
+          },
+          {
+            "l": 3,
+            "s": 0.00016428464868247582,
+            "n_s": 0.00197141578418971,
+            "theta": 0.996392261313186,
+            "n_clock_acceleration": 6.301284023768352,
+            "F": 0.05974913445002693,
+            "J_G_over_n2": 0.020330694950932024,
+            "F_minus_FG": -5.828670879282072e-16,
+            "output_KL": -5.92370550512292e-16,
+            "evidence": -1.0627449846317499e-14,
+            "entropy_ledger_residual": 1.0636953308901584e-14
+          },
+          {
+            "l": 4,
+            "s": 0.0002188906258133727,
+            "n_s": 0.0026266875097604725,
+            "theta": 0.9951959826139357,
+            "n_clock_acceleration": 8.389791822772674,
+            "F": 0.15376625283141204,
+            "J_G_over_n2": 0.05475379298751526,
+            "F_minus_FG": -1.0994012283882526e-08,
+            "output_KL": 4.0019793312074107e-13,
+            "evidence": -1.0994390383197258e-08,
+            "entropy_ledger_residual": -2.2098618388774394e-14
+          },
+          {
+            "l": 5,
+            "s": 0.00032776351396212146,
+            "n_s": 0.003933162167545457,
+            "theta": 0.992815138115935,
+            "n_clock_acceleration": 12.54090380477707,
+            "F": 0.3434293965757504,
+            "J_G_over_n2": 0.12819923460761762,
+            "F_minus_FG": -1.1694517676463789e-07,
+            "output_KL": 1.1283806115689907e-10,
+            "evidence": -1.1705822426751334e-07,
+            "entropy_ledger_residual": 2.0944171855367663e-13
+          },
+          {
+            "l": 6,
+            "s": 0.0006510680482382337,
+            "n_s": 0.007812816578858805,
+            "theta": 0.9857785961973582,
+            "n_clock_acceleration": 24.742593736313815,
+            "F": 0.7504825525256733,
+            "J_G_over_n2": 0.29515496871758484,
+            "F_minus_FG": 4.8283789073622074e-06,
+            "output_KL": 3.228987204451743e-08,
+            "evidence": 4.796088880452567e-06,
+            "entropy_ledger_residual": 1.5486512252975166e-13
+          }
+        ],
+        "note": "These are pre-asymptotic values at exact clocks, not fits."
+      },
+      "terminal_transfer_difference_per_site": -63.752732775623734
+    }
+  ]
+}

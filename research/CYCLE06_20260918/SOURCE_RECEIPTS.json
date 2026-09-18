@@ -1,0 +1,38 @@
+[
+  {
+    "name": "S41",
+    "archive": "S41_CYCLE05_result.zip",
+    "source_complete": true,
+    "status": "AUTHOR_CLAIMS_PENDING_SEPARATE_INDEPENDENT_REVIEW",
+    "files": [
+      "S41_CYCLE05_checks.py",
+      "S41_CYCLE05_checks_output.txt",
+      "S41_CYCLE05_RESULT.md",
+      "S41_CYCLE05_result.zip"
+    ]
+  },
+  {
+    "name": "S43",
+    "archive": "S43_CYCLE05_result.zip",
+    "source_complete": true,
+    "status": "AUTHOR_CLAIMS_PENDING_SEPARATE_INDEPENDENT_REVIEW",
+    "files": [
+      "S43_CYCLE05_checks.py",
+      "S43_CYCLE05_checks_output.json",
+      "S43_CYCLE05_checks_stdout.txt",
+      "S43_CYCLE05_RESULT.md",
+      "S43_CYCLE05_result.zip"
+    ]
+  },
+  {
+    "name": "S44",
+    "archive": "S44_result.zip",
+    "source_complete": true,
+    "status": "AUTHOR_CLAIMS_PENDING_SEPARATE_INDEPENDENT_REVIEW",
+    "files": [
+      "S44_checks.py",
+      "S44_RESULT.md",
+      "S44_result.zip"
+    ]
+  }
+]
