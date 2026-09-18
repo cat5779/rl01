@@ -11,4 +11,3 @@ Status: 18 September 2026. Author source and independent review are separate.
 - QWE01–QWE06: user-reported in progress; no new downloaded artifacts or PR results found in this check.
 
 S55/S56 remain available. New web research uses only S51–S56, max3 active globally. S17 is read-only. No research theorem follows from an author PROVED label, a tool's active receipt, or an attachment card.
-

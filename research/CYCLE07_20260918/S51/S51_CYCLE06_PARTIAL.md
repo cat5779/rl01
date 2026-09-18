@@ -1279,4 +1279,3 @@ Therefore the exact finite identity is
 \partial_s^2F_R(u,
 
 --- END AVAILABLE TEXT: EXPORT TRUNCATED ---
-

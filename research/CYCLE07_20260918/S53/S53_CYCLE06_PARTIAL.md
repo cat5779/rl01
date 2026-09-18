@@ -1080,7 +1080,6 @@ and
 \begin{aligned}
 \bar B_c(R)={}&
 s_c^{12}
-\left(C_{\rm 
+\left(C_{\rm
 
 --- END AVAILABLE TEXT: EXPORT TRUNCATED ---
-
