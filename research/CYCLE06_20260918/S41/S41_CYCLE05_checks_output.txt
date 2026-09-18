@@ -1,0 +1,18 @@
+Exact U-only directional counterexample
+T0=0, W0=0, Z0=9/4096
+K(lambda)=log((16*lam - 29)/(16*lam - 27))/3 - 9*log(5)/2 + 9*log(3)/2 + 544/45
+dK/dlambda at 1/2=32/1197
+dK/dt for unit outside generator=-16/1197
+dK/dt for legal x=1/2 reveal=-8*log(3)/1197
+
+Connected marked-term coverage
+raw occurrences: 244
+distinct monomials: 147
+minimal domination families: 33
+d0: [(0, 4, 4), (1, 3, 3), (2, 2, 2), (3, 1, 1), (4, 0, 2), (4, 2, 0)]
+ei: [(0, 4, 4), (1, 3, 3), (2, 2, 2), (3, 1, 1), (4, 0, 2), (4, 2, 0)]
+ej: [(0, 4, 4), (1, 3, 3), (2, 2, 2), (3, 1, 1), (4, 0, 2), (4, 2, 0)]
+gamma: [(0, 4, 3), (1, 3, 2), (2, 2, 1), (3, 1, 0), (4, 0, 1)]
+hi: [(0, 3, 3), (1, 2, 2), (2, 1, 1), (3, 0, 2), (3, 2, 0)]
+hj: [(0, 3, 4), (1, 2, 3), (2, 1, 2), (3, 0, 1), (4, 1, 0)]
+S41_CYCLE05 exact checks passed
