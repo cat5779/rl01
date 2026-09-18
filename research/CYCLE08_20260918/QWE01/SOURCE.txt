@@ -1,0 +1,3 @@
+Source: randomcat4/dpp-stationary-entropy PR122
+Branch: research/external-qwe01-posterior-averaged-compensation-20260918
+Author submission, pending separate independent audit.

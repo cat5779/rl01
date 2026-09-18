@@ -1,0 +1,10 @@
+PASS: finite diagnostics only; not an asymptotic proof
+c=0.95, d=0:
+ n      Hdd/n                 J_n                  R_n/n
+ 2      -35.083497602177        5.942143423464       31.083497602177
+ 4      -30.744756016978       10.280885008663       26.744756016978
+ 6      -27.633173905620       13.392467120021       23.633173905620
+ 8      -25.348369922363       15.677271103278       21.348369922363
+10      -23.622432385197       17.403208640444       19.622432385197
+30 cyclic parameter cases; 12 all-anchor Toeplitz cases.
+Wrote S55_CYCLE08_checks_output.json
