@@ -7,7 +7,7 @@
 
 \[
  \frac1n\sum_l(\kappa_l)_+\longrightarrow
- M_b=\frac{2e^{-1/2}}{\sqrt{2\pi},b}.
+ M_b=\frac{2e^{-1/2}}{\sqrt{2\pi}\,b}.
 \]
 
 四阶矩尾账本和全部补层处理成立。
@@ -95,9 +95,9 @@
 局部极限中 `max g_b` 位于 `x=sqrt(b)`，故
 
 \[
- \frac1n\sum_l(\kappa_l)_+	o
+ \frac1n\sum_l(\kappa_l)_+\to
  2\max g_b
- =\frac{2e^{-1/2}}{\sqrt{2\pi},b}=M_b.
+ =\frac{2e^{-1/2}}{\sqrt{2\pi}\,b}=M_b.
 \]
 
 本报告以精确有理系数对 `n=8,12,20,40` 重算了符号块、总和为零及下节四阶矩恒等式，均一致；有限数值只作交叉检查。
@@ -191,21 +191,21 @@ Gibbs 相邻概率比具有固定内部区域内 `-Theta(1/n)` 的对数差。�
 \]
 
 \[
- \frac{\operatorname{Var}_HR}{n}	o
- v_H=\frac b4-rac{c^2\log c}{8}.
+ \frac{\operatorname{Var}_HR}{n}\to
+ v_H=\frac b4-\frac{c^2\log c}{8}.
 \]
 
 Poisson-binomial 的统一局部 CLT 与熵尾一致可积性给
 
 \[
- H(p_l^H)=\frac12\log(2\pi e,n v_H)+o(1).
+ H(p_l^H)=\frac12\log(2\pi e\,n v_H)+o(1).
 \]
 
 把 Gibbs 全局负对数展开对热律积分，均值的 `O(1)` 位移在 `sqrt(n)` 尺度消失，得到
 
 \[
- D(p_l^H\Vert q_l^G)	o
- \frac12\left(\frac{v_H}{v_G}-1-log\frac{v_H}{v_G}\right)
+ D(p_l^H\Vert q_l^G)\to
+ \frac12\left(\frac{v_H}{v_G}-1-\log\frac{v_H}{v_G}\right)
  =D_c.
 \]
 
@@ -213,7 +213,7 @@ Poisson-binomial 的统一局部 CLT 与熵尾一致可积性给
 
 \[
  \frac{v_H}{v_G}
- =1-rac{c^2\log c}{2b}=\rho_c.
+ =1-\frac{c^2\log c}{2b}=\rho_c.
 \]
 
 所有估计在固定中央 `sqrt(n)` 层窗上一致。宏观带内只使用最大质量熵下界和 Gibbs 全局交叉熵界，即可得统一 `O(1)` KL。
@@ -306,7 +306,7 @@ Poisson-binomial 的统一局部 CLT 与熵尾一致可积性给
  v_l=
  \Delta f_l(\mu_l)(E_HR-E_GR)
  +\frac12\Delta^2f_l(\mu_l)
- [\operatorname{Var}_HR-operatorname{Var}_GR]
+ [\operatorname{Var}_HR-\operatorname{Var}_GR]
  +o(1),
 \]
 
@@ -368,7 +368,7 @@ Poisson-binomial 的统一局部 CLT 与熵尾一致可积性给
 \[
  A_c=\frac{16c^4}{b\pi^4},
  \qquad
- L_c=\frac{c^4}{4b^2}+rac cb\log\frac pq.
+ L_c=\frac{c^4}{4b^2}+\frac cb\log\frac pq.
 \]
 
 可见正文只说明“count-Stein curvature certificate”将完成此事，却在该证明之前截断。缺少至少以下承重内容：
@@ -386,7 +386,7 @@ Poisson-binomial 的统一局部 CLT 与熵尾一致可积性给
 令
 
 \[
- G_n^{\mathrm{aux}}=rac1n\sum_l\kappa_l\mathscr F_l.
+ G_n^{\mathrm{aux}}=\frac1n\sum_l\kappa_l\mathscr F_l.
 \]
 
 由第 8、9 节，严格可保留的是
