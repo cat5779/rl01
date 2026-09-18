@@ -54,12 +54,12 @@
 
 [AUDIT.md](results/S9/AUDIT.md) · [EARLIER_FULL_R3_PRODUCTION.md](results/S9/EARLIER_FULL_R3_PRODUCTION.md) · [EARLIER_GROWING_RESULT.md](results/S9/EARLIER_GROWING_RESULT.md) · [EARLIER_INDEPENDENT_AUDIT.md](results/S9/EARLIER_INDEPENDENT_AUDIT.md) · [EARLIER_LAYER_MEASURE.md](results/S9/EARLIER_LAYER_MEASURE.md) · [EARLIER_RESULT.md](results/S9/EARLIER_RESULT.md) · [MESOSCOPIC.md](results/S9/MESOSCOPIC.md) · [SCORE.md](results/S9/SCORE.md)
 
-## SA01–SA05：作者交付已收齐，独立审查待完成
+## SA01–SA05 作者包与后续审查
 
-- [SA01：真实后验余量与相容性证书](results/SA01/REVIEW_REQUEST.md) — **待独立审查**
-- [SA02：共同矩阵鞅与整块Bellman补偿](results/SA02/REVIEW_REQUEST.md) — **待独立审查**
-- [SA03：有限抵消、统一有界曲率与体积极限](results/SA03/REVIEW_REQUEST.md) — **待独立审查**
-- [SA04：修正律跨层运输与移动计数响应](results/SA04/REVIEW_REQUEST.md) — **待独立审查**
-- [SA05：真实律与修正律的二阶熵比较](results/SA05/REVIEW_REQUEST.md) — **待独立审查**
+作者包仍按原样保留，不能把包内状态标签当作统一认证。2026-09-18 的分项裁决见[当前状态](STATUS.md)和[独立审查索引](research/INDEPENDENT_REVIEW_20260918/README.md)。
 
-这些新结论不并入上面的已接受定理。分开审查；源码中的作者状态保留，但独立状态统一为PENDING_INDEPENDENT_REVIEW。
+- [SA01：真实后验余量与相容性证书](results/SA01/REVIEW_REQUEST.md) — 作者包仍待独立整包审查。
+- [SA02：共同矩阵鞅与整块 Bellman 补偿](results/SA02/REVIEW_REQUEST.md) — 平衡线边界已有独立限定结论；其余部分不自动升级。
+- [SA03：有限抵消、统一有界曲率与体积极限](results/SA03/REVIEW_REQUEST.md) — PRO01 旧审查接受有符号极限核和有效余项；`Gamma(c)` 的符号仍未证明。
+- [SA04：修正律跨层运输与移动计数响应](results/SA04/REVIEW_REQUEST.md) — 旧 `O(n^(3/2))` 工具已审；后续 S45 / S43 在冻结修正律内推进到 `O(n)` 和 `c=.95` 的负线性上包络。
+- [SA05：真实律与修正律的二阶熵比较](results/SA05/REVIEW_REQUEST.md) — 作者包仍待独立整包审查；`n=8` 的分级有限证据暂保存在 Draft PR #5。
