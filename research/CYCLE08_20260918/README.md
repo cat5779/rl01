@@ -15,12 +15,16 @@ Separate independent reviews now received:
 - QWE02 / DPP PR123 / review PR33: dimension-free MI curvature bound32 delta^-12||K_AB||HS² and true-sine quadratic chord tail are VERIFIED_SCOPED. Constant about4.51e22 at benchmark; no sign or practical certificate.
 - QWE03–QWE06: no new submission found. Their work is not duplicated.
 
-S55 complete source has now been received from the user and is under a new,
-separate Sol high audit. All five original files and the ZIP are in S55/.
-The author claims compact-interior two-parameter cyclic-to-true-sine curvature
-transfer, all-anchor and actual-law spatial-tail control, midpoint identities
-and the exact corrected/actual comparison. These are AUTHOR_CLAIM_PENDING_REVIEW,
-not an accepted theorem or a concavity result. See S55/INTAKE.md.
+S55 / PR38: complete source independently reviewed, VERIFIED_SCOPED for
+compact-interior two-parameter cyclic-to-true-half-density-sine curvature
+transfer, all-anchor and actual-law spatial-tail control, midpoint identities,
+the infinite pair sum and the exact signed corrected/actual comparison.
+All five original files and the ZIP are in S55/; the separate review is copied
+to reviews/S55_CYCLE08_REVIEW.md. No sign, endpoint uniformity or effective
+physical-volume rate follows. At c=37/40 the old method already has explicit
+negative margin; S55 adds an interface for further work, not a stronger
+concavity certificate there. The separately reviewed narrow high-c strip in
+PR31 is unaffected. See S55/INTAKE.md.
 
 S56 is intentionally unused; no new sign assignment overlaps the external tasks.
 Every new assignment is sent once. Delayed UI receipts never trigger a duplicate,
