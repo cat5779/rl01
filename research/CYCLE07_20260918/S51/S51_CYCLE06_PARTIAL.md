@@ -1,0 +1,1282 @@
+# S51 cycle06 visible source — PARTIAL, UNDER REVIEW
+
+Source chat: Say S51
+Source message: 7d782a37-71d3-4649-9039-f8e1ab084cd0
+Captured 2026-09-18. The tool explicitly truncated this source at 20,000 characters. The original manuscript/ZIP is not present in the download directory. This is a partial chat export, not a complete attachment or independent verification. Do not certify missing sections.
+
+--- BEGIN AUTHOR TEXT ---
+
+# S51 cycle06 result
+
+**PROVED** for every compact subinterval of the legal interior
+\[
+-\frac{1-c}{2}<s<\frac{1-c}{2},
+\]
+and therefore for every chord contained in the assigned interval
+\[
+[-d_c,d_c],\qquad d_c=\frac{1-c}{4}.
+\]
+For \(c=19/20\), this is \([-1/80,1/80]\).
+
+The result is the requested finite-chord/thermodynamic-limit bridge. It does not prove the sign of the curvature functional. The numerical checks are consistency checks, not independent certification.
+
+Artifacts:
+
+:chatgpt-content-reference{index="10"}
+
+:chatgpt-content-reference{index="11"}
+
+:chatgpt-content-reference{index="12"}
+
+The frozen target correctly distinguishes full configuration entropy from \(\operatorname{Tr}b(K)\), and supplies the exact independent-channel representation used below. citeturn541314view1 The finite signed-transport identities and the complete V14 grouping appear in the SA03 author submission, but that submission explicitly left the entropy-rate identification open. citeturn705957view4turn721439view10turn705957view8
+
+---
+
+## 1. The theorem
+
+Let
+\[
+K_{u,s}
+=
+\frac12I+u\left[c\left(Q-\frac12I\right)+sI\right],
+\qquad 0\le u\le1,
+\]
+where \(Q\) is the half-density sine projection. Let \(\mu_{u,s}\) be the corresponding stationary DPP.
+
+For a block \(A_L=\{1,\ldots,L\}\), let \(H_L(u,s)\) be its full Shannon configuration entropy and
+\[
+h_c(s)=\lim_{L\to\infty}\frac{H_L(1,s)}L.
+\]
+
+Let
+\[
+q_{u,s}
+=
+\Pr_{u,s}(Y_0=1\mid Y_{\mathbb Z\setminus\{0\}}),
+\qquad
+\phi(q)=\left(q-\frac12\right)\log\frac q{1-q},
+\]
+and
+\[
+F_\infty(u,s)=\mathbb E_{u,s}\phi(q_{u,s}).
+\]
+
+Then:
+
+\[
+\boxed{
+h_c(s)=\log2-\int_0^1F_\infty(u,s)\,\frac{du}{u}.
+}
+\tag{1}
+\]
+
+There is an explicit complete actual-law local kernel
+\[
+\overline{\mathcal G}_\infty(u,s,z)
+\]
+such that
+\[
+\boxed{
+\partial_s^2F_\infty(u,s)
+=
+u^2\,
+\mathbb E_{u,s}
+\overline{\mathcal G}_\infty(u,s,Y_{\ne0}).
+}
+\tag{2}
+\]
+
+Define
+\[
+\boxed{
+\Gamma_c(s)
+=
+\int_0^1u\,
+\mathbb E_{u,s}
+\overline{\mathcal G}_\infty(u,s,Y_{\ne0})\,du.
+}
+\tag{3}
+\]
+
+Then \(\Gamma_c\) is continuous, and for every chord contained in the legal interior,
+\[
+\boxed{
+\Delta_\eta h_c(s)
+=
+-\int_{-\eta}^{\eta}
+(\eta-|t|)\Gamma_c(s+t)\,dt.
+}
+\tag{4}
+\]
+
+Consequently,
+\[
+\boxed{
+h_c\in C^2\!\left(
+-\frac{1-c}{2},\frac{1-c}{2}
+\right),
+\qquad
+h_c''(s)=-\Gamma_c(s).
+}
+\tag{5}
+\]
+
+The differentiability in (5) is derived from the chord bridge. It is not assumed.
+
+---
+
+# 2. Reusable mechanism: weighted finite-jet chord transfer
+
+The non-DPP-specific tool is the following.
+
+### Weighted triangular-kernel transfer lemma
+
+Let \(J\subset\mathbb R\) be open and let \((U,\nu)\) be a measure space. Suppose
+\[
+f_n(u,\cdot)\in C^2(J),
+\qquad
+g_n(u,s)=\partial_s^2f_n(u,s).
+\]
+
+Suppose that on every compact \(J_0\Subset J\),
+\[
+\int_U\sup_{s\in J_0}|f_n(u,s)-f(u,s)|\,d\nu(u)\to0
+\tag{6}
+\]
+and
+\[
+\int_U\sup_{s\in J_0}|g_n(u,s)-g(u,s)|\,d\nu(u)\to0.
+\tag{7}
+\]
+
+Assume also that
+\[
+\int_U\sup_{s\in J_0}|f(u,s)|\,d\nu(u)<\infty,
+\qquad
+\int_U\sup_{s\in J_0}|g(u,s)|\,d\nu(u)<\infty.
+\]
+
+Put
+\[
+A(s)=\int_Uf(u,s)\,d\nu(u),
+\qquad
+G(s)=\int_Ug(u,s)\,d\nu(u).
+\]
+
+Then
+\[
+\boxed{
+\Delta_\eta A(s)
+=
+\int_{-\eta}^{\eta}(\eta-|t|)G(s+t)\,dt
+}
+\tag{8}
+\]
+whenever the chord is contained in \(J\).
+
+Indeed, for every \(n,u\),
+\[
+\Delta_\eta f_n(u,s)
+=
+\int_{-\eta}^{\eta}
+(\eta-|t|)
+g_n(u,s+t)\,dt.
+\tag{9}
+\]
+Integrate in \(u\) and use (6)–(7).
+
+The same convergence, tested against \(\psi\in C_c^\infty(J)\), gives
+\[
+A''=G
+\]
+distributionally. If \(A\) and \(G\) are continuous, then \(A\in C^2\) and the equality is classical.
+
+Here the measure is
+\[
+d\nu(u)=\frac{du}{u}.
+\]
+The apparent singularity is paid by the bounds
+\[
+F_R=O(u^2),
+\qquad
+\partial_s^2F_R=O(u^2).
+\]
+
+---
+
+# 3. Non-nullness and the \(u=0\) endpoint
+
+Fix a compact interval
+\[
+I\Subset
+\left(-\frac{1-c}{2},\frac{1-c}{2}\right).
+\]
+Write
+\[
+s_*=\sup_{s\in I}|s|,
+\qquad
+\varepsilon=\frac{1-c}{2}-s_*>0.
+\]
+
+Because \(Q\) is a projection, \(\mu_{u,s}\) is obtained from \(X\sim\operatorname{DPP}(Q)\) through the independent channel
+\[
+\Pr(Y_i=1\mid X_i=0)
+=
+\alpha_{u,s}
+=
+\frac12+u\left(s-\frac c2\right),
+\]
+\[
+\Pr(Y_i=1\mid X_i=1)
+=
+\beta_{u,s}
+=
+\frac12+u\left(s+\frac c2\right).
+\]
+
+Uniformly on \([0,1]\times I\),
+\[
+\varepsilon\le\alpha_{u,s}\le\beta_{u,s}\le1-\varepsilon.
+\tag{10}
+\]
+
+For any sigma-field \(\mathcal A\) generated by output coordinates other than zero,
+\[
+\Pr(Y_0=1\mid\mathcal A)
+=
+\alpha_{u,s}
++
+uc\,\Pr(X_0=1\mid\mathcal A).
+\tag{11}
+\]
+Thus every finite- or infinite-observation posterior satisfies
+\[
+q\in[\varepsilon,1-\varepsilon]
+\tag{12}
+\]
+and
+\[
+\left|q-\frac12\right|
+\le
+u\left(\frac c2+s_*\right).
+\tag{13}
+\]
+
+Since the derivative of the logit is \(1/[q(1-q)]\),
+\[
+0\le\phi(q)
+\le
+\frac{(c/2+s_*)^2}
+{\varepsilon(1-\varepsilon)}
+\,u^2.
+\tag{14}
+\]
+
+In particular,
+\[
+\frac{F_J(u,s)}u=O_I(u)
+\]
+uniformly over every observation set \(J\). This pays the \(u=0\) endpoint.
+
+---
+
+# 4. Exact finite-volume entropy production
+
+Let \(A_L=\{1,\ldots,L\}\). For each anchor \(i\), set
+\[
+q_{L,i}
+=
+\Pr(Y_i=1\mid Y_{A_L\setminus\{i\}}),
+\]
+\[
+F_{L,i}(u,s)
+=
+\mathbb E_{u,s}\phi(q_{L,i}).
+\]
+
+For fixed \(s\),
+\[
+K_{u,s}
+=
+\frac{1-u}{2}I+uK_{1,s}.
+\tag{15}
+\]
+Therefore the \(A_L\)-law is obtained from its \(u=1\) law by an independent binary symmetric channel with correlation \(u\).
+
+Set \(u=e^{-t}\). If \(p_t(y)\) is the full block probability vector, then
+\[
+\partial_tp_t(y)
+=
+\frac12\sum_{i\in A_L}
+[p_t(y^i)-p_t(y)].
+\tag{16}
+\]
+
+Differentiating
+\[
+H_L=-\sum_yp_t(y)\log p_t(y)
+\]
+and pairing the two ends of each hypercube edge gives
+\[
+\frac d{dt}H_L(e^{-t},s)
+=
+\sum_{i=1}^LF_{L,i}(e^{-t},s).
+\tag{17}
+\]
+
+For a fixed exterior word, with masses
+\[
+p_0=w(1-q),\qquad p_1=wq,
+\]
+the paired contribution is exactly
+\[
+-\frac12\left[
+(p_1-p_0)\log p_0+(p_0-p_1)\log p_1
+\right]
+=
+w\phi(q).
+\]
+
+Since \(dt/du=-1/u\),
+\[
+\boxed{
+\partial_uH_L(u,s)
+=
+-\frac1u\sum_{i=1}^LF_{L,i}(u,s).
+}
+\tag{18}
+\]
+
+At \(u=0\), the law is i.i.d. fair Bernoulli, so
+\[
+H_L(0,s)=L\log2.
+\]
+Using (14),
+\[
+\frac{H_L(1,s)}L
+=
+\log2
+-
+\int_0^1
+\left[
+\frac1L\sum_{i=1}^LF_{L,i}(u,s)
+\right]\frac{du}{u}.
+\tag{19}
+\]
+
+## The anchor average
+
+Let
+\[
+C_R=\{-R,\ldots,-1,1,\ldots,R\},
+\]
+\[
+q_R=\Pr(Y_0=1\mid Y_{C_R}),
+\qquad
+F_R=\mathbb E\phi(q_R).
+\]
+
+Because
+\[
+\phi''(q)=\frac1{2q^2(1-q)^2}>0,
+\]
+conditional Jensen implies that conditioning on more coordinates increases
+\[
+\mathbb E\phi(\mathbb E[Y_0\mid\mathcal A]).
+\]
+
+Hence every block anchor satisfies
+\[
+F_{L,i}\le F_\infty,
+\]
+and every anchor at least \(R\) sites from the block boundary satisfies
+\[
+F_{L,i}\ge F_R.
+\]
+
+Since \(\phi\ge0\),
+\[
+\left(1-\frac{2R}{L}\right)_+F_R
+\le
+\frac1L\sum_{i=1}^LF_{L,i}
+\le
+F_\infty.
+\tag{20}
+\]
+
+The \(q_R\) form a bounded martingale and converge almost surely and in \(L^1\) to the all-exterior posterior. The common posterior range (12) makes \(\phi\) bounded and continuous, so
+\[
+F_R(u,s)\to F_\infty(u,s).
+\tag{21}
+\]
+
+Let \(L\to\infty\) in (20), then \(R\to\infty\):
+\[
+\frac1L\sum_{i=1}^LF_{L,i}(u,s)
+\to
+F_\infty(u,s).
+\tag{22}
+\]
+
+The majorant from (14), after division by \(u\), is \(O(u)\). Dominated convergence in (19) proves
+\[
+\boxed{
+h_c(s)=\log2-\int_0^1F_\infty(u,s)\,\frac{du}{u}.
+}
+\]
+
+This is the thermodynamic value interface. Every anchor has been retained until the anchor average is taken.
+
+---
+
+# 5. Complete finite conditional curvature
+
+Fix a finite observation set
+\[
+C\subset\mathbb Z\setminus\{0\},
+\]
+and a word \(z\in\{0,1\}^C\). Put
+\[
+\sigma_i=2z_i-1,
+\qquad
+S_z=\operatorname{diag}(\sigma_i).
+\]
+
+On \(\{0\}\cup C\), define
+\[
+h=K_{00}=\frac12+us,
+\qquad
+b=K_{C0}=ucQ_{C0},
+\]
+\[
+B_z
+=
+K_C-\operatorname{diag}(1-z)
+=
+\frac12S_z
++
+u\left[c\left(Q_C-\frac12I\right)+sI\right],
+\]
+\[
+G_z=B_z^{-1},
+\qquad
+v_z=G_zb.
+\]
+
+The exact marginal atom is
+\[
+w_z
+=
+(-1)^{|C|-|z|}\det B_z.
+\tag{23}
+\]
+
+The center-occupied atom is obtained by adjoining the center row and column, so the Schur complement gives
+\[
+\boxed{
+q_z=h-b^*G_zb.
+}
+\tag{24}
+\]
+
+For a flip \(z^i\), set
+\[
+o_i=\frac{w_{z^i}}{w_z},
+\qquad
+d_i=q_{z^i}-q_z.
+\]
+
+## Moving-law transport
+
+Vary \(s\), keeping \(u,c,Q\) fixed. Every conditional channel success probability has derivative \(u\). Therefore
+\[
+w_z'
+=
+u\sum_{i\in C}\sigma_i(w_z+w_{z^i}).
+\tag{25}
+\]
+
+If
+\[
+a_z=\Pr(Y_0=1,Y_C=z),
+\]
+then differentiation of the center coordinate contributes \(uw_z\):
+\[
+a_z'
+=
+uw_z
++
+u\sum_{i\in C}\sigma_i(a_z+a_{z^i}).
+\tag{26}
+\]
+
+Define
+\[
+r_i(z)=-u\sigma_i(z)o_i(z),
+\]
+\[
+(Tg)(z)=\sum_ir_i(z)[g(z^i)-g(z)],
+\qquad
+D=\partial_s+T.
+\tag{27}
+\]
+
+Equation (25) is \(T^*w=w'\), hence
+\[
+\frac d{ds}\mathbb E_wg
+=
+\mathbb E_wDg.
+\tag{28}
+\]
+
+Dividing (26) by \(w_z\) gives
+\[
+q_z'
+=
+u+
+u\sum_i\sigma_io_i(q_{z^i}-q_z),
+\]
+and therefore
+\[
+\boxed{Dq=u.}
+\tag{29}
+\]
+
+This is the cancellation that keeps the volume-sized score terms connected.
+
+For smooth \(\psi\), define
+\[
+\operatorname{Breg}_\psi(p,q)
+=
+\psi(p)-\psi(q)-\psi'(q)(p-q),
+\]
+\[
+\mathcal B_\psi(z)
+=
+\sum_ir_i(z)
+\operatorname{Breg}_\psi(q_{z^i},q_z).
+\]
+
+The exact discrete chain rule is
+\[
+D\psi(q)
+=
+u\psi'(q)+\mathcal B_\psi.
+\tag{30}
+\]
+
+Applying \(D\) again to \(\phi\) gives
+\[
+\boxed{
+\mathcal G_C
+=
+u^2\phi''(q)
++
+u\mathcal B_{\phi'}
++
+D\mathcal B_\phi.
+}
+\tag{31}
+\]
+
+Since differentiation of an expectation is \(D\),
+\[
+\boxed{
+\partial_s^2F_C(u,s)
+=
+\mathbb E_{u,s}\mathcal G_C.
+}
+\tag{32}
+\]
+
+Expanded in ordinary derivatives, this is exactly
+\[
+\sum_z
+\left[
+w_z''\phi(q_z)
++
+2w_z'\phi'(q_z)q_z'
++
+w_z\{
+\phi''(q_z)(q_z')^2+\phi'(q_z)q_z''
+\}
+\right].
+\tag{33}
+\]
+
+Thus the \(w''\), \(2w'q'\), Fisher-like and posterior-acceleration terms are all present.
+
+---
+
+# 6. Explicit normalized V14 kernel
+
+The rank-one determinant and inverse identities give
+\[
+o_i=\sigma_iG_{ii}-1,
+\qquad
+r_i=u(\sigma_i-G_{ii}),
+\tag{34}
+\]
+\[
+G_{z^i}
+=
+G_z-\frac{\sigma_i}{o_i}
+G_ze_ie_i^*G_z,
+\tag{35}
+\]
+\[
+v_{z^i}
+=
+v_z-\frac{\sigma_i}{o_i}v_iG_ze_i,
+\tag{36}
+\]
+\[
+d_i
+=
+\frac{\sigma_i|v_i|^2}{o_i}.
+\tag{37}
+\]
+
+Since
+\[
+G_z'=-uG_z^2,
+\]
+we have
+\[
+q_z'=uA_z,
+\qquad
+A_z=1+\|v_z\|^2,
+\tag{38}
+\]
+and
+\[
+r_i'=u^2(G_z^2)_{ii}.
+\tag{39}
+\]
+
+Put
+\[
+\bar r_i=\frac{r_i}{u}=\sigma_i-G_{ii},
+\]
+\[
+\overline{\mathcal B}_\psi
+=
+\sum_i\bar r_i
+\operatorname{Breg}_\psi(q_{z^i},q_z).
+\]
+
+For \(u>0\), division of (31) by \(u^2\) gives the complete normalized local kernel
+\[
+\boxed{
+\begin{aligned}
+\overline{\mathcal G}_C(z)
+={}&
+\phi''(q)
++
+\overline{\mathcal B}_{\phi'}
+\\
+&+
+\sum_i(G^2)_{ii}
+\operatorname{Breg}_\phi(q_{z^i},q)
+\\
+&+
+\sum_i\bar r_i
+\Big(
+[\phi'(q_{z^i})-\phi'(q)]A_{z^i}
+-\phi''(q)d_iA_z
+\Big)
+\\
+&+
+\sum_j\bar r_j
+\left[
+\overline{\mathcal B}_\phi(z^j)
+-\overline{\mathcal B}_\phi(z)
+\right].
+\end{aligned}
+}
+\tag{40}
+\]
+
+Thus
+\[
+\boxed{
+\partial_s^2F_C(u,s)
+=
+u^2\mathbb E_{u,s}
+\overline{\mathcal G}_C(u,s,Y_C).
+}
+\tag{41}
+\]
+
+At \(u=0\), define
+\[
+\overline{\mathcal G}_C(0,s,z)=8.
+\]
+Indeed \(q=1/2\), \(v=0\), all flip defects vanish, and
+\[
+\phi''(1/2)=8.
+\]
+
+Formula (40) is the complete V14 grouping. The source records this grouping and warns that it had not yet been identified with the true entropy-rate Hessian. citeturn721439view10turn705957view8
+
+---
+
+# 7. Dimension-free domination
+
+On the fixed compact interval \(I\),
+\[
+\varepsilon I\le K\le(1-\varepsilon)I.
+\]
+Put
+\[
+a=\varepsilon^{-1},
+\qquad
+\ell=\|b\|\le\frac{uc}{2},
+\qquad
+L=a\ell.
+\]
+
+Then
+\[
+\|G_z\|\le a,
+\qquad
+\|v_z\|\le L,
+\qquad
+\max(o_i,o_i^{-1})\le a.
+\tag{42}
+\]
+
+From (37),
+\[
+\sum_i|d_i|\le a\|v\|^2,
+\qquad
+\sum_id_i^2\le a^2\|v\|^4.
+\tag{43}
+\]
+
+For \(i\ne j\), with
+\[
+e_{ij}=d_i(z^j)-d_i(z),
+\]
+the two rank-one updates give
+\[
+|e_{ij}|
+\le
+2a^2|G_{ij}||v_i||v_j|
++
+a^3|G_{ij}|^2
+(|v_i|^2+|v_j|^2).
+\tag{44}
+\]
+
+Moreover,
+\[
+\sum_j|G_{ij}|^2=(G^2)_{ii}\le a^2.
+\tag{45}
+\]
+
+Let
+\[
+D_{ij}=\max(|d_i(z)|,|d_i(z^j)|).
+\]
+Then
+\[
+\sum_{i\ne j}D_{ij}|e_{ij}|
+\le
+8a^{10}\|v\|^4.
+\tag{46}
+\]
+
+If
+\[
+M_k=
+\sup_{q\in[\varepsilon,1-\varepsilon]}
+|\phi^{(k)}(q)|,
+\]
+Taylor bounds for the Bregman defects, together with (43)–(46), give
+\[
+\left|
+\overline{\mathcal G}_C-\phi''(q)
+\right|
+\le
+L^4
+\left[
+10M_2a^{12}
++
+M_3(a^3+2a^5L^2)
+\right].
+\tag{47}
+\]
+
+Since \(L\le ac/2\), there is a constant \(B_I<\infty\), independent of the observation volume, such that
+\[
+\boxed{
+|\overline{\mathcal G}_C|\le B_I,
+\qquad
+|\partial_s^2F_C|\le B_Iu^2.
+}
+\tag{48}
+\]
+
+No bare sum of volume-many scores is bounded. The second-flip contributions are controlled only after the connected factors \(G_{ij}\), \(v_i\), and \(v_j\) are retained.
+
+---
+
+# 8. Direct exact-sine limit
+
+No Fejér approximation is needed.
+
+Let
+\[
+C_\infty=\mathbb Z\setminus\{0\},
+\qquad
+\Omega=\{0,1\}^{C_\infty}.
+\]
+On \(\ell^2(C_\infty)\), define
+\[
+H_s
+=
+c\left(Q_{C_\infty}-\frac12I\right)+sI,
+\qquad
+b^0=cQ_{C_\infty,0}.
+\tag{49}
+\]
+
+Since \(Q\) is a projection and \(Q_{00}=1/2\),
+\[
+\|H_s\|
+\le
+\frac c2+s_*
+=
+\frac12-\varepsilon,
+\tag{50}
+\]
+and
+\[
+\|b^0\|^2
+=
+c^2(Q_{00}-Q_{00}^2)
+=
+\frac{c^2}{4}.
+\tag{51}
+\]
+
+For \(z\in\Omega\), define
+\[
+G(u,s,z)
+=
+\left(\frac12S_z+uH_s\right)^{-1},
+\]
+\[
+v(u,s,z)=G(u,s,z)\,ub^0,
+\]
+\[
+q(u,s,z)
+=
+\frac12+us-u(b^0)^*v(u,s,z).
+\tag{52}
+\]
+
+Uniform invertibility follows from
+\[
+\|2uS_zH_s\|\le1-2\varepsilon<1,
+\]
+with Neumann series
+\[
+G
+=
+2\sum_{k\ge0}
+(-2uS_zH_s)^kS_z.
+\tag{53}
+\]
+
+Let \(P_R\) project onto \(C_R\), and define
+\[
+H_{R,s}=P_RH_sP_R,
+\qquad
+b_R^0=P_Rb^0.
+\]
+Embed
+\[
+G_R=(S_z/2+uH_{R,s})^{-1}
+\]
+on the full exterior space, and put
+\[
+v_R=G_Rub_R^0,
+\]
+\[
+q_R
+=
+\frac12+us-u(b_R^0)^*v_R.
+\tag{54}
+\]
+
+These are exactly the finite conditional inverse and posterior on \(C_R\). Outside \(C_R\), \(v_R\) vanishes and flips have no effect.
+
+We have
+\[
+H_{R,s}\to H_s
+\quad\text{strongly, uniformly for }s\in I,
+\]
+and
+\[
+b_R^0\to b^0
+\quad\text{in }\ell^2.
+\tag{55}
+\]
+
+For a fixed \(x\in\ell^2\), the set
+\[
+\{S_zx:z\in\Omega\}
+\]
+is compact: uniformly truncate the tail of \(x\), after which only finitely many sign choices remain. Strong convergence of uniformly bounded operators is uniform on such compact vector sets.
+
+Applying this observation term by term to the uniformly convergent Neumann series yields
+\[
+\sup_{u,s,z}\|v_R-v\|\to0
+\tag{56}
+\]
+and, for every fixed \(i\),
+\[
+\sup_{u,s,z}\|(G_R-G)e_i\|\to0.
+\tag{57}
+\]
+Consequently,
+\[
+\sup_{u,s,z}|q_R-q|\to0.
+\tag{58}
+\]
+
+Each \(q_R\) is the actual finite conditional expectation
+\[
+q_R
+=
+\mathbb E[Y_0\mid Y_{C_R}],
+\]
+so martingale convergence identifies \(q\) in (52) as a continuous version of the actual all-exterior posterior.
+
+---
+
+# 9. Tail payment for the infinite V14 kernel
+
+The family of all vectors
+\[
+v_R(u,s,z),
+\qquad
+R\in\mathbb N\cup\{\infty\},
+\]
+has compact closure. Hence
+\[
+\tau_m
+=
+\sup_{R,u,s,z}
+\sum_{i\notin C_m}|v_{R,i}|^2
+\to0.
+\tag{59}
+\]
+
+For every fixed \(i\),
+\[
+\eta_{i,m}
+=
+\sup_{R,u,s,z}
+\sum_{j\notin C_m}|(G_R)_{ji}|^2
+\to0.
+\tag{60}
+\]
+
+The one-flip tails satisfy
+\[
+\sum_{i\notin C_m}|d_i|
+\le a\tau_m,
+\tag{61}
+\]
+\[
+\sum_{i\notin C_m}d_i^2
+\le a^2L_*^2\tau_m,
+\qquad
+L_*=\frac{ac}{2}.
+\tag{62}
+\]
+
+After expanding the final line of (40), every off-diagonal double-flip term is controlled by finite linear combinations of
+\[
+|G_{ij}||v_i|^3|v_j|,
+\]
+\[
+|G_{ij}|^2|v_i|^4,
+\]
+\[
+|G_{ij}|^2|v_i|^2|v_j|^2,
+\]
+\[
+|G_{ij}|^4|v_i|^4,
+\tag{63}
+\]
+their exchanged versions, and
+\[
+|d_j|D_{ij}^2.
+\tag{64}
+\]
+
+Their tails vanish as follows.
+
+For the first kernel, an \(i\)-tail is bounded by a constant times \(\tau_m\), while a \(j\)-tail is bounded by a constant times \(\sqrt{\tau_m}\).
+
+For the second kernel, an \(i\)-tail follows directly from \(\tau_m\). For a \(j\)-tail, first keep \(i\) in a fixed finite \(C_\ell\) and use \(\eta_{i,m}\), then pay \(i\notin C_\ell\) using \(\tau_\ell\).
+
+The third kernel has either-coordinate tail bounded by
+\[
+a^2L_*^2\tau_m.
+\]
+
+The fourth is bounded by \(a^2\) times the second.
+
+Finally, the connected Bregman term satisfies
+\[
+\sum_{i\notin C_m\ \text{or}\ j\notin C_m}
+|d_j|D_{ij}^2
+\le
+4a^3L_*^4\tau_m.
+\tag{65}
+\]
+
+Thus, after expanding the nested final term in (40), truncating every single and double index to \(C_m\) incurs an error
+\[
+\rho_m\to0
+\]
+uniformly in \(R,u,s,z\).
+
+For fixed \(m\), the truncated kernel depends only on finitely many entries of
+\[
+q_R,\quad v_R,\quad G_Re_i
+\]
+and their finitely flipped versions. Equations (56)–(58) therefore imply convergence of every fixed truncation.
+
+Taking first \(R\to\infty\), then \(m\to\infty\), gives
+\[
+\boxed{
+\sup_{u,s,z}
+|
+\overline{\mathcal G}_R(u,s,z)
+-
+\overline{\mathcal G}_\infty(u,s,z)
+|
+\to0.
+}
+\tag{66}
+\]
+
+This proves:
+
+- absolute convergence of the infinite V14 expression in its connected grouping;
+- independence of the truncation sequence;
+- joint continuity of \(\overline{\mathcal G}_\infty\);
+- the uniform bound
+  \[
+  |\overline{\mathcal G}_\infty|\le B_I.
+  \]
+
+---
+
+# 10. Actual-law expectation limit
+
+Let \(\mu_{u,s}^{\rm ext}\) be the true exterior law on \(\Omega\).
+
+Because \(\overline{\mathcal G}_R\) depends only on \(C_R\),
+\[
+\mathbb E_{\mu_{u,s}^{\rm ext}}
+\overline{\mathcal G}_R
+\]
+is exactly the finite marginal expectation in (41).
+
+Both the finite and infinite functions can be evaluated under the same actual infinite law. Therefore
+\[
+\sup_{u,s}
+\left|
+\mathbb E_{u,s}\overline{\mathcal G}_R
+-
+\mathbb E_{u,s}\overline{\mathcal G}_\infty
+\right|
+\le
+\sup_{u,s,z}
+|
+\overline{\mathcal G}_R-\overline{\mathcal G}_\infty
+|
+\to0.
+\tag{67}
+\]
+
+Likewise,
+\[
+\sup_{u,s}|F_R(u,s)-F_\infty(u,s)|\to0
+\tag{68}
+\]
+by (58) and uniform continuity of \(\phi\) on the common posterior interval.
+
+Finite cylinder probabilities are continuous determinant polynomials in entries of \(K_{u,s}\), so the exterior laws vary weakly continuously in \((u,s)\). Joint continuity and boundedness of the limiting local kernel then imply that
+\[
+(u,s)\longmapsto
+\mathbb E_{u,s}
+\overline{\mathcal G}_\infty(u,s,Y_{\ne0})
+\tag{69}
+\]
+is continuous.
+
+This pays the changing law. No frozen reference expectation is used.
+
+---
+
+# 11. Passing finite chords to the entropy rate
+
+For each finite \(R\),
+\[
+\Delta_\eta F_R(u,s)
+=
+\int_{-\eta}^{\eta}
+(\eta-|t|)
+\,u^2
+\mathbb E_{u,s+t}
+\overline{\mathcal G}_R(u,s+t,Y_{C_R})
+\,dt.
+\tag{70}
+\]
+
+The value functions satisfy
+\[
+|F_R-F_\infty|
+\le
+2C_{0,I}u^2.
+\tag{71}
+\]
+Together with (68), dominated convergence gives
+\[
+\int_0^1
+\sup_{s\in I}|F_R-F_\infty|
+\,\frac{du}{u}
+\to0.
+\tag{72}
+\]
+
+Set
+\[
+g_R(u,s)
+=
+u^2\mathbb E_{u,s}\overline{\mathcal G}_R,
+\]
+\[
+g_\infty(u,s)
+=
+u^2\mathbb E_{u,s}\overline{\mathcal G}_\infty.
+\]
+
+From (66),
+\[
+\begin{aligned}
+\int_0^1
+\sup_{s\in I}|g_R-g_\infty|
+\frac{du}{u}
+&\le
+\int_0^1u\,
+\sup_{u,s,z}
+|\overline{\mathcal G}_R-\overline{\mathcal G}_\infty|
+\,du\\
+&=
+\frac12
+\sup_{u,s,z}
+|\overline{\mathcal G}_R-\overline{\mathcal G}_\infty|
+\to0.
+\end{aligned}
+\tag{73}
+\]
+
+The weighted triangular-kernel transfer lemma now yields
+\[
+\Delta_\eta
+\left(
+\int_0^1F_\infty(u,s)\frac{du}{u}
+\right)
+=
+\int_{-\eta}^{\eta}
+(\eta-|t|)
+\left[
+\int_0^1
+u\mathbb E_{u,s+t}
+\overline{\mathcal G}_\infty(u,s+t)
+\,du
+\right]dt.
+\tag{74}
+\]
+
+Using the value identity (1),
+\[
+\boxed{
+\Delta_\eta h_c(s)
+=
+-\int_{-\eta}^{\eta}
+(\eta-|t|)
+\Gamma_c(s+t)\,dt.
+}
+\]
+
+Since
+\[
+|u\mathbb E\overline{\mathcal G}_\infty|
+\le B_Iu,
+\]
+\(\Gamma_c\) is finite and continuous. The same transfer argument gives
+\[
+h_c''=-\Gamma_c
+\]
+distributionally; continuity upgrades this to
+\[
+h_c\in C^2,
+\qquad
+h_c''(s)=-\Gamma_c(s).
+\]
+
+This completes the requested bridge without assuming differentiability of \(h_c\).
+
+---
+
+# 12. Matching the SA03 midpoint object
+
+At \(s=0\),
+\[
+H_0
+=
+c\left(Q_{C_\infty}-\frac12I\right),
+\qquad
+b^0=cQ_{C_\infty,0},
+\]
+\[
+G=(S_z/2+uH_0)^{-1},
+\qquad
+v=Gub^0,
+\]
+\[
+q=\frac12-u(b^0)^*v.
+\tag{75}
+\]
+
+These are precisely the data in the source’s unsmoothed V14 expression. citeturn721439view9turn721439view10
+
+The source parameter is
+\[
+x=cu,
+\]
+while the center diagonal is
+\[
+h=K_{00}=\frac12+us.
+\]
+At fixed \(u\),
+\[
+\partial_s=u\partial_h.
+\]
+
+Therefore the exact finite identity is
+\[
+\partial_s^2F_R(u,
+
+--- END AVAILABLE TEXT: EXPORT TRUNCATED ---
+
