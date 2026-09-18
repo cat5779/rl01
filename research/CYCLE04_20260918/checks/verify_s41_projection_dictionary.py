@@ -6,7 +6,7 @@ The example uses a rational 7-by-7 projection, balanced channel x=3/5
 and every anchor in that interval.  It checks the posterior projection and
 Schur dictionary, anchor energy comparison, outside-flow direction, and the
 random-anchor conditional-count-variance compression.  It intentionally does
-not claim to verify the unexpanded complete-jet Lemmas 8.1 or 8.2.
+not claim to verify complete-result Lemma 5.1 (partial-export Lemmas 8.1/8.2).
 """
 
 from __future__ import annotations
@@ -182,7 +182,7 @@ def main() -> None:
     check_anchor_and_outside_flow()
     check_random_anchor_average()
     print("S41 projection/Schur/anchor/count-variance finite checks: PASS")
-    print("scope excludes the unexpanded complete-jet Lemmas 8.1 and 8.2")
+    print("scope excludes complete-result Lemma 5.1 (partial-export Lemmas 8.1/8.2)")
 
 
 if __name__ == "__main__":
