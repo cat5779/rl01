@@ -2,6 +2,10 @@
 
 Status: 18 September 2026. Author source and independent review are separate.
 
+Latest source update: the user supplied S53_CYCLE06_result.zip and S51_CYCLE06_C37_REFINEMENT.zip. Both originals and all six extracted MD/Python files are now under S53/original/ and S51/original/. The S51 archive contains BOTH the first bridge manuscript and its high-contrast refinement. All earlier export-truncation gaps below are resolved for the current audits; partial chat files are retained only as historical captures. The two reviewers were notified to use the complete sources and keep manuscript verdicts separate.
+
+Latest dispatch update: the user replaced Say S54 with a newly created chat; its fresh history contained only the greeting. The same full S54 task was restored once to that user-created replacement. This is a user-directed replacement, not an automatic switch to evade the previous one-repair limit. Current execution status is recorded in STATE/receipts, not inferred from this publication.
+
 - S51 cycle06: partial visible author proof, cut at section12 by a20,000-character export limit. Claims true half-density sine noise-flow value and curvature/chord bridge. Under separate Sol review; no Gamma sign theorem certified. The user has started a high-contrast continuation in Say S51, which remains active and is not interrupted.
 - S53 cycle06: partial visible author proof, cut in section11. Claims moving-Galerkin second identity and finite-curvature localization with the full h-dependent normalization. Under a different Sol review. Infinite curvature limit is not automatically differentiability of the infinite functional. Original MD/ZIP is still missing.
 - S52 remains active on the spatial susceptibility lower bound.
