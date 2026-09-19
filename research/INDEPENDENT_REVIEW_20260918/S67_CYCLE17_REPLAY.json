@@ -1,0 +1,71 @@
+{
+  "status": "PASS_SCOPED",
+  "date": "2026-09-19",
+  "scope": "isolated replay of the delivered S67 programs plus an independent standard-library reconstruction",
+  "author_delivery_status": {
+    "rational_core": "exit 0, retained JSON says PASS",
+    "arb_bounds_128_192_256": "all retained logs exit 1 because flint was missing",
+    "arb_counterexamples_128_192_256": "all retained logs exit 1 because flint was missing",
+    "floating_diagnostics": "exit 0; non-rigorous consistency check only",
+    "missing_referenced_file": "certificates/pair_counterexamples.json"
+  },
+  "reviewer_environment": {
+    "python": "3.12.14",
+    "python_flint": "0.9.0",
+    "numpy": "2.5.3",
+    "execution": "fresh temporary copy outside the source checkpoint"
+  },
+  "fresh_replays": {
+    "verify_rational_core_normal": "PASS",
+    "verify_rational_core_optimized": "PASS",
+    "verify_s67_bounds_bits": [128, 192, 256],
+    "verify_s67_bounds_result": "PASS at every precision",
+    "verify_s67_bounds_optimized_192": "PASS",
+    "verify_counterexamples_bits": [128, 192, 256],
+    "verify_counterexamples_result": "PASS at every precision",
+    "verify_counterexamples_optimized_192": "PASS",
+    "check_small_models": "PASS; diagnostic only"
+  },
+  "normal_vs_optimized_sha256": {
+    "rational_core": "c78f56242390ee0172f632d4201f4006f2f82bd0b46fba5cd7f78c87635fda62",
+    "bounds_192": "d3309f1f1b277f5cb3ce348ae4173d65c1fa9cfb51256fb784e07899e651ebc4",
+    "counterexamples_192": "56d88ff0d0553545ea586cb67763049da322211c6001b55f996b736640598494"
+  },
+  "key_rigorous_values": {
+    "U3": [
+      "0.00084887490360597234118593986866945",
+      "0.00084887490360597234118593986866946"
+    ],
+    "limsup_A_upper": [
+      "0.00070219442328008839363374681966945",
+      "0.00070219442328008839363374682066946"
+    ],
+    "U3_minus_required_cap": [
+      "0.00045626242288428676479211416266945",
+      "0.00045626242288428676479211416566946"
+    ],
+    "diagonal_only_route_floor": [
+      "0.00046911618228674650723945948447850",
+      "0.00046911618228674650723945948447851"
+    ],
+    "pointwise_n4_J_minus_W": [
+      "0.00078547997016159356519030242275695",
+      "0.00078547997016159356519030242275696"
+    ],
+    "actual_law_n6_pair_0_5_E_W_minus_E_J_arb_192": "[-0.0003790922420416860132632736413167970483226801089756457 +/- 7.05e-56]",
+    "finite_n6_all_pairs_E_W_minus_E_J_arb_192": "[5.05307942850996968707054877584198879385709482344902602 +/- 4.30e-54]"
+  },
+  "independent_reconstruction": {
+    "program": "S67_CYCLE17_REPLAY.py",
+    "arithmetic": "80-digit Decimal; independent implementation; non-rigorous cross-check",
+    "result": "PASS",
+    "pointwise_n4_J_minus_W": "0.00078547997016159356519030242275695580362067832473633614491476512881382496204551",
+    "actual_law_n6_pair_0_5_E_J_minus_E_W": "0.00037909224204168601326327364131679704832268010897564571605272270413555429156742",
+    "finite_n6_all_pairs_E_W_minus_E_J": "5.053079428509969687070548775841988793857094823449026017422319189565589118976202"
+  },
+  "accepted_without_rerun": {
+    "S64_PR46": "finite n=15/16 KL core and length-convexity interface",
+    "QWE02": "full entropy-chord far-tail interface"
+  },
+  "verdict": "The scoped S67 theorems and counterexamples verify; the entropy-rate chord remains incomplete."
+}
