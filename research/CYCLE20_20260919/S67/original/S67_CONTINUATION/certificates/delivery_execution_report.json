@@ -1,0 +1,22 @@
+{
+  "generated_utc": "2026-09-19T06:28:11.506695+00:00",
+  "research_duration_minutes": "NOT_CERTIFIED",
+  "requested_research_duration_minutes": 120,
+  "reason": "The resumed visible context does not supply a complete independently inspectable continuous active-research timer. Execution wall seconds are not substituted for it.",
+  "entropy_rate_objective": "INCOMPLETE",
+  "proved_acceleration_C_upper_fraction": "110333/166400000",
+  "new_verification_status": "PASS",
+  "actual_sine_diagnostic_status": "PASS_DIAGNOSTIC_NOT_CERTIFICATE",
+  "original_n15_n16_verifier": "NOT_RERUN",
+  "repository_writes": "NONE",
+  "hash_or_zip_acceptance_gate": "NONE",
+  "exact_verification_exit_status": "0",
+  "exact_verification_wall_seconds": 0.024223699999993187,
+  "exact_A_limsup_upper_interval": {
+    "lower": "0.00051637841390488528321703772123076923076923076923076923076923076923",
+    "upper": "0.00051637841390488528321703772123076923076923076923076923076923076924"
+  },
+  "conditional_finite_input_status": "UNVERIFIED: not asserted for any finite window or infinite model",
+  "small_actual_sine_exit_status": "0",
+  "small_actual_sine_wall_seconds": 2.210642929999949
+}

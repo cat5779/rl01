@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "proof_status": "PROVED analytic acceleration bound; entropy-rate objective INCOMPLETE",
+  "checks": [
+    "Machin pi enclosure and uniform three-site Fisher input d_3 > 63/10",
+    "Exact derivative signs and exponential comparison for the odds-width pair lemma",
+    "All count-gauge, transport, hyperbolic-function, and compensated scalar envelope constants",
+    "Exact conditional compensation and C0 algebra",
+    "32 exact rational matrix/configuration checks, including nonzero contraction leakage and count-gauge invariance",
+    "Exact improved all-volume asymptotic bound, unpaid deficit, and explicitly conditional finite-window threshold"
+  ],
+  "pi_interval": {
+    "lower": "3.1415926535897932384626433832795028841971693993751058209749445912",
+    "upper": "3.1415926535897932384626433832795028841971693993751058209749445924"
+  },
+  "three_site_d_star_interval": {
+    "lower": "6.3024560274866583514752714777117328834495733436524973972884764535",
+    "upper": "6.3024560274866583514752714777117328834495733436524973972884764606"
+  },
+  "U_C_fraction": "110333/166400000",
+  "U_C_interval": {
+    "lower": "0.00066305889423076923076923076923076923076923076923076923076923076923",
+    "upper": "0.00066305889423076923076923076923076923076923076923076923076923076924"
+  },
+  "finite_fisher_boundary_beta_fraction": "69/800000",
+  "A_limsup_upper_interval": {
+    "lower": "0.00051637841390488528321703772123076923076923076923076923076923076923",
+    "upper": "0.00051637841390488528321703772123076923076923076923076923076923076924"
+  },
+  "required_C_cap_interval": {
+    "lower": "0.000392612480721685576393825703",
+    "upper": "0.000392612480721685576393825706"
+  },
+  "deficit_lower_interval": {
+    "lower": "0.00027044641350908365437540506323076923076923076923076923076923076923",
+    "upper": "0.00027044641350908365437540506323076923076923076923076923076923076924"
+  },
+  "conditional_input_d_fraction": "83/4",
+  "conditional_input_status": "UNVERIFIED: not asserted for any finite window or infinite model",
+  "U_if_conditional_input_interval": {
+    "lower": "0.00039212139423076923076923076923076923076923076923076923076923076923",
+    "upper": "0.00039212139423076923076923076923076923076923076923076923076923076924"
+  },
+  "delta_if_conditional_input_interval": {
+    "lower": "4.9108649091634562459493376923076923076923076923076923076923076923E-7",
+    "upper": "4.9108649091634562459493376923076923076923076923076923076923076924E-7"
+  },
+  "local_fisher_ceiling_at_b_interval": {
+    "lower": "21.564068870244954344822938778260723070184305401125374844165908554",
+    "upper": "21.564068870244954344822938778260723070184305401125374844165908555"
+  },
+  "started_utc": "2026-09-19T06:20:59.006054+00:00",
+  "finished_utc": "2026-09-19T06:20:59.030281+00:00",
+  "verification_wall_seconds": 0.024223699999993187,
+  "research_session_120_minutes": "NOT_CERTIFIED; verification runtime is not research duration",
+  "original_n15_n16_certificate": "ACCEPTED INPUT; NOT RERUN"
+}

@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-09-19T22:29:14.291257+08:00",
+  "archive_pr": 54,
+  "global_goal": "INCOMPLETE",
+  "S71": {
+    "status": "AUTHOR_ONLY_PARTIAL_TAIL_SEPARATE_REVIEW_DISPATCHED",
+    "visible_characters": 20000,
+    "source_truncated": true,
+    "complete_visible_sections": "1-9, including complete exact checker; section10 tail missing",
+    "review_thread": "01a0b050-7e8f-75a3-a672-0200b567524b"
+  },
+  "S72": {
+    "status": "AUTHOR_ONLY_FULL_VISIBLE_REPLY_ATTACHMENTS_PENDING_SEPARATE_REVIEW_DISPATCHED",
+    "visible_characters": 13541,
+    "source_truncated": false,
+    "attachments_received": false,
+    "review_thread": "01a0b04a-afe9-7393-ba97-58270365d292"
+  },
+  "S73": "active_no_result_do_not_interrupt",
+  "QWE09_round2": {
+    "source_pr": 131,
+    "source_head": "bb9a95edc49a34f45775c011cb35f33b5c0f4d23",
+    "review_pr": 59,
+    "review_head": "574dbf69e134ba6aa3fbe0251b4c9525b6704046",
+    "verdict": "PASS_SCOPED_DIAGNOSTIC_MAIN_INCOMPLETE"
+  },
+  "web_limit": 3,
+  "sol_limit": 2,
+  "independent_counts": true,
+  "active_web": [
+    "S73"
+  ],
+  "new_web_sends": 0,
+  "new_local_tasks": 0,
+  "new_subagents": 0,
+  "download_priority": [
+    "S72 new two attachment files, especially original diagnostic code",
+    "S71 full visible reply ending beyond section9; no rerun needed"
+  ],
+  "next": "Receive separate Sol audits; keep S73 running; only then target verified new obligations in S74/S75, never resend existing work."
+}

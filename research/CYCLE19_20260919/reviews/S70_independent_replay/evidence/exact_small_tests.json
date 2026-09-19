@@ -1,0 +1,36 @@
+{
+  "status": "PROVED exact finite identities",
+  "checks": 345,
+  "configurations_per_law": 16,
+  "Q": [
+    [
+      "17/84",
+      "5/21",
+      "23/84",
+      "11/84"
+    ],
+    [
+      "5/21",
+      "13/42",
+      "8/21",
+      "2/21"
+    ],
+    [
+      "23/84",
+      "8/21",
+      "41/84",
+      "5/84"
+    ],
+    [
+      "11/84",
+      "2/21",
+      "5/84",
+      "17/84"
+    ]
+  ],
+  "scope": "tool unit tests only, not a sine entropy-rate theorem",
+  "falsifications": [
+    "F^2=F !=0: contrast generator is not nilpotent",
+    "positive contrast transport is signed, not a Markov post-processing kernel"
+  ]
+}
