@@ -34,14 +34,14 @@ H_n''(a)\le-\frac n{25}+399
 | 不依赖附件的理论链 | VERIFIED_SCOPED |
 | 正文可见的最终有理 Bernstein 判号 | VERIFIED_SCOPED |
 | 全局条件表包络 | VERIFIED |
-| 256×6 guarded Loewner 证书 | VERIFIED_WITH_SOURCE_REPAIR |
+| 256×6 guarded Loewner 证书 | VERIFIED |
 | \(2^{22}\) 实际概率与移动权重证书 | VERIFIED |
 | 冻结有限体积定理与熵率推论 | VERIFIED_SCOPED |
 | 已发现的理论致命缺口 | 无 |
 
 作者提出的机制不是摘要性改写。无限投影先验的精确通道表示、普通密度的两噪声 Fisher 预算、后验 Loewner 夹逼、四原子包络、半正定分配、得分鞅 Jensen、固定测试函数下的移动权重支付、幂零概率演化以及从有限弦差取熵率极限，可以组成一条闭合的条件证明。
 
-三组有限证书现已隔离重算通过。原 guard 源码在把逐元素区间误差转成 \(2\times2\) Loewner 包络时少了一个安全因子二；原版成功输出本身不足以证明该包络。审查生成的保守修正版使用 \(2\varepsilon I\) 后仍覆盖全部 1,536 个 word/cell，处理 66,614,920 个盒且无失败。因此这是必须回写源码的可修实现问题，不是数学定理或见证失败。
+三组有限证书现已隔离重算通过。guard 源码令 \(\varepsilon\) 等于“最大对角误差加非对角误差”的向上包围，已经控制 \(2\times2\) 对称误差矩阵的最大行和与算子范数，因此原版 Loewner 包络有效。额外把该 \(\varepsilon\) 再乘二的压力测试也覆盖全部 1,536 个 word/cell，处理 66,614,920 个盒且无失败，但这一放宽不是必要修复。
 
 ## 1. 精确通道表示
 
@@ -349,7 +349,7 @@ p_{a_*+h}
 
 ## 9. 有限证书源码审计与隔离重算
 
-### 裁决：VERIFIED_SCOPED；guard 原源码需一行安全修复
+### 裁决：VERIFIED_SCOPED
 
 材料来源：
 
@@ -413,23 +413,31 @@ cert_interval.hpp 在每个非精确长双精度基本运算后再向外移动�
 
 bernstein_lower_numerators.txt 没有随压缩包预置，但 verify_rational_certificates.py 从重生成的系数区间精确产生它；其十二个整数与正文完全相同。因此这是可再生派生物，不是缺失的承重输入。
 
-### 9.4 guard 源码的一处可修实现问题
+### 9.4 guard Loewner 安全量复核
 
-guard_certificate.cpp 第 14 行先以区间逆得到中心矩阵 \(C\)，并令每个对称条目的误差绝对值至多 \(\varepsilon\)。原源码随后使用 \(C\pm\varepsilon I\) 作为 Loewner 包络。逐元素误差至多 \(\varepsilon\) 只推出
+guard_certificate.cpp 第 14 行分别计算两个对角误差上界 \(e_0,e_1\) 和非对角误差上界 \(e_w\)，随后取
 
 \[
-\|B-C\|_{\mathrm{op}}\le
-\|B-C\|_\infty\le2\varepsilon,
+\varepsilon
+=\operatorname{ua}(\max(e_0,e_1),e_w),
 \]
 
-一般不能推出 \(\|B-C\|_{\mathrm{op}}\le\varepsilon\)。因此原版的这一行缺少论证。
+其中 \(\operatorname{ua}\) 是向上包围的加法，不是最大值。因此每一行的绝对行和都至多
 
-审查补丁 S63_guard_loewner_safety.patch 将安全量改为 \(2\varepsilon\)。这是严格的 \(2\times2\) 行和/谱范数界。用补丁后的完整程序重跑全部 word/cell 仍通过，只多处理 4,870 个盒。故：
+\[
+\max(e_0,e_1)+e_w\le\varepsilon,
+\]
 
-- 原作者日志不能单独认证 Loewner 包络；
-- 修复不改变 guard 数据、数学见证或最终系数；
-- 修正版完整通过，足以认证冻结定理；
-- 发布源码应合入该一行修复。
+从而
+
+\[
+\|B-C\|_{\mathrm{op}}
+\le\|B-C\|_\infty\le\varepsilon.
+\]
+
+原版使用 \(C\pm\varepsilon I\) 的 Loewner 包络本来就严格有效。此前把该表达式误读为单一逐元素最大误差，是审查错误，现已撤回。
+
+另以 \(2\varepsilon\) 重跑的版本仍全部通过，只多处理 4,870 个盒；它仅作为冗余压力测试，不是源码补丁或发布要求。
 
 ## 10. 平移见证、边界常数与熵率极限
 
@@ -494,4 +502,4 @@ H_n''(a)
 
 下的有限体积曲率界与熵率弦差结论升级为 VERIFIED_SCOPED。
 
-唯一需要回写的是 guard_certificate.cpp 的 Loewner 安全因子二。保守修正版全量通过，所以这是 REPAIR_REQUIRED 的实现问题，不降低数学定理裁决。整个 \([.02,.03]\)、其他密度及更高 \(c\) 仍然 INCOMPLETE。
+原始证书源码无需 Loewner 安全因子修复；理论链和原版有限证书共同支持 VERIFIED_SCOPED 裁决。整个 \([.02,.03]\)、其他密度及更高 \(c\) 仍然 INCOMPLETE。
