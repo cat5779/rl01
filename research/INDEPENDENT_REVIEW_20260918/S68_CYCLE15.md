@@ -4,28 +4,27 @@
 
 ## 结论先行
 
-**总状态：INCOMPLETE / PENDING_SOURCE。**
+**总状态：VERIFIED_SCOPED / INCOMPLETE_MAIN_TARGET。**
 
-S68 正文中最基础、也最重要的 full-support 代数是正确的：稀疏重采样的二阶互信息展开必须保留同点 \(\chi^2\) 项；自然异点系数 \(\mathcal J_{ij}\) 对 \(p\) 的曲率与 \(p\) 无关；其曲率恰为 S52 actual-output Fisher–Bregman skew 的两倍并按真实外部输出质量加权；共同对角熵 Hessian 的完整二阶账本还必须减去同点 inverse-moment 预算。这一部分是 **VERIFIED_SCOPED**。
+完整 44 文件检查点已经补收并逐行审查。S68 的有限维工具链在其明示量词内通过：
 
-正文还正确地区分了：
+- full-support 稀疏重采样的二、三阶展开及显式余项；
+- 自然异点系数 \(\mathcal J_{ij}\) 与 S52 actual-output Fisher–Bregman skew 的精确两倍关系；
+- projection 正则化的一阶奇异项、pair 极点、有限部和真实插入/删除后验熵公式；
+- 常对角投影的严格有限维符号及循环 Vandermonde 的 \(-\Theta(n^2\log n)\) 二阶常数项；
+- 共同谱隙下的有限边缘核传递、sine 压缩谱隙下界及作者声称的边缘窗口；
+- 六点 true-sine 与八点循环模型的 256 位纯整数/有理区间证书。
 
-- full-support 基准与固定粒子数 projection 支持奇异；
-- 固定 \(n\) 先取零噪声与先取真实无限体积极限；
-- 某个真实可达条件方块的正 skew 与同一 pair 的实际加权平均；
-- 相同有限边缘窗口的核传递与观察全部外部输出后的条件量。
+我在隔离副本中运行完整入口，得到 124 项主代数检查、90 项极点/留数检查、94 项真实插入熵与增长检查、54 项有限部检查，共 362 项通过；三个指定有限模型的严格区间判号也通过。此前的 **PENDING_SOURCE** 是缺件状态，不是数学否决，现已解除。
 
-但是，作者把以下承重证明放在尚未收到的 APPENDIX_BOUNDS.md、APPENDIX_PROJECTION.md 和代码/证书中：
+这个通过有严格边界。它仍然没有证明：
 
-1. full-support 三阶余项的明确常数；
-2. 正则化 projection pair 和的完整 \(-A_n/\eta\) 极点展开；
-3. \(B_{2,n}''\) 的精确插入/删除后验熵公式及其 \(-\Theta(n^2\log n)\) 结论；
-4. 共同谱隙传递界、sine 压缩谱隙下界和增长窗口；
-5. 所谓“纯整数区间证书”的严格复验。
+1. 无限 true-sine 的 signed average 符号；
+2. 固定 \(n\) 的 projection 零噪声极点与 \(n\to\infty\)、\(\eta\downarrow0\) 的联合一致控制；
+3. 从相同有限边缘窗口传到“观察全部外部输出”后的真熵率 Hessian；
+4. 纯 logarithmic 端点包络或完整 \(C(0,1)\)。
 
-因此这些结论当前不能按作者正文末尾“均给出自包含证明”的说法通过。本文没有发现已审基础代数中的反例，但缺失证明本身是决定性的证据缺口。
-
-本审查不证明完整 \(C(0,1)\)，不证明或反驳无限 true-sine 的纯对数端点猜想，也不认证外部新颖性。
+因此结论是“有限维、固定量词工具通过，主目标仍未完成”，而不是“主猜想已证”。本审查也不认证外部新颖性。
 
 ## 1. 审查材料与边界
 
@@ -33,18 +32,14 @@ S68 正文中最基础、也最重要的 full-support 代数是正确的：稀�
 
 - 作者主正文：harvest/CYCLE15/S68/RESULT.md，815 行；
 - 作者可见总结：harvest/CYCLE13/S68/S68_LATEST_VISIBLE_REPLY.md，281 行；
+- APPENDIX_BOUNDS.md，502 行；
+- APPENDIX_PROJECTION.md，668 行；
+- SOURCE_AUDIT.md、README.md、STATUS.json 与 MANIFEST.json；
+- src/ 下 9 个程序及 results/ 下的作者留存输出；
 - 已审 S52 原稿与独立审查；
 - 已审 S51 Cycle06 端点/真熵率接口原稿与独立审查。
 
-未收到：
-
-- APPENDIX_BOUNDS.md；
-- APPENDIX_PROJECTION.md；
-- SOURCE_AUDIT.md；
-- src/interval_certificate.py 及相应严格证书；
-- 作者声称的原 44 文件 ZIP 中其余代码、缓存、检查结果和清单。
-
-缺失附录的引用不能充当证明。本文只对正文中可独立重建的部分给出 **VERIFIED_SCOPED**；其余按 **PENDING_SOURCE** 处理。
+RESULT.md 与先前收到的正文逐字节一致。MANIFEST.json 仅作来源账，不被当作正确性门槛。所有会写 results/ 的程序均在隔离副本中运行，未修改作者检查点。SOURCE_AUDIT.md 只说明来源边界，不能代替外部新颖性检索。
 
 ### 固定的量词区分
 
@@ -66,19 +61,19 @@ S68 正文中最基础、也最重要的 full-support 代数是正确的：稀�
 | 189–279 | actual-output 四格公式、\(\mathcal J_{ij}''=2\sum m_z(\ell_z-e_z)\)、二次性 | **VERIFIED_SCOPED** | 独立逐格求导，真实 \(m_z\) 未丢；两倍系数正确 |
 | 281–309 | 与 S52 skew 的精确识别 | **VERIFIED_SCOPED** | 与已审 S52 式 (21) 完全同一对象；这是识别回旧瓶颈，不是新符号定理 |
 | 311–364 | 同点 inverse-moment 预算、\(\mathcal L_n\)、共同对角 Hessian | **VERIFIED_SCOPED** | 从单点 KL 二阶导与完整 moving-law Hessian 独立重建 |
-| 368–411 | 六点 true-sine 与八点循环的真实可达局部正 skew | **VERIFIED_SCOPED（数值存在性）**；严格“区间证书” **PENDING_SOURCE** | 独立 90 位/双精度重算复现所有显示值；未收到作者区间程序 |
+| 368–411 | 六点 true-sine 与八点循环的真实可达局部正 skew | **VERIFIED_SCOPED** | 独立高精度重算与 256 位纯整数/有理区间程序一致；同一 pair 的实际加权平均仍为负 |
 | 415–448 | 三阶系数 (5.1)/(5.2) | **VERIFIED_SCOPED** | 直接展开 KL 与熵到三阶，系数和符号正确 |
-| 450–474 | remainder 界 (5.3)/(5.4) | **PENDING_SOURCE** | 全部 majorant 与常数证明只在缺失的 APPENDIX_BOUNDS.md |
-| 478–501 | projection 端点的一阶非零曲率与 \(4k(n-k)\varepsilon^2\log(1/\varepsilon)\) 系数 | **VERIFIED_SCOPED** | 由增删粒子数 \(|G-L|\) 的二阶展开可独立得到；完整 \(B_{2,n}''\) 尚未得到 |
-| 503–580 | 正则化 pair 和的 \(-A_n/\eta\) 极点及 (6.3) | **PENDING_SOURCE** | \(A_n\) 的后验碰撞表达与下界代数正确；“它正是 \(S_n\) 留数”的完整分层展开缺失 |
-| 549–575 | 常对角投影的 \(A_n\ge kg/[np_0(1-p_0)]\) | **VERIFIED_SCOPED（作为候选留数的下界）** | 零空间 minor 后验与 Hadamard/对角界足够推出 \(\alpha_+\le g^2/n,\alpha_-\le k^2/n\) |
-| 584–635 | \(B_{2,n}''\) 的真实插入/删除后验熵公式和严格负号 | **PENDING_SOURCE** | 关键式 (7.2)/(7.3) 的分层收集在缺失附录；独立有限枚举只构成强 sanity check |
-| 637–680 | Vandermonde 交换能量 (7.4) 与 \(-\Theta(n^2\log n)\) | (7.4) **VERIFIED_SCOPED**；最终增长 **PENDING_SOURCE** | (7.4) 可由根单位乘积独立重建；增长仍依赖未审的 (7.3) |
-| 681–688 | 补偿后有限部分 \(F_n\) 及 \(d_0=O(n^2)\) | **PENDING_SOURCE** | 公式与“不依赖最小原子”的界都只在缺失附录 |
-| 694–712 | 共同谱隙传递界 (8.1) | **PENDING_SOURCE** | score/全局四格梯度证明与 \(\delta^{-5}\) 常数未提供 |
-| 714–757 | sine 压缩谱隙 \(d_m\)、循环边缘传递 (8.2)–(8.5) | **PENDING_SOURCE** | 插值证明缺失；下游指数运算本身一致 |
-| 759–786 | 对数增长窗口与有噪声多项式窗口 | **PENDING_SOURCE / INCOMPLETE** | 都依赖未审 (5.4)、(8.1)、(8.2)；且明确只比较边缘窗口，不是 all-exterior 条件量 |
-| 790–815 | 完整 \(C(0,1)\) 未证明、平均符号与高阶余项仍开 | **VERIFIED_SCOPED** | 范围声明准确；但 815 行“均给出自包含证明”不适用于当前收到的材料 |
+| 450–474 | remainder 界 (5.3)/(5.4) | **VERIFIED_SCOPED** | Appendix Bounds B1 的 ratio 导数、熵尾和与 \(T=n\varepsilon(1+\beta^{-1})\) 常数逐项通过 |
+| 478–501 | projection 端点的一阶非零曲率与 \(4k(n-k)\varepsilon^2\log(1/\varepsilon)\) 系数 | **VERIFIED_SCOPED** | 由增删粒子数 \(|G-L|\) 的二阶展开独立得到；完整 \(B_{2,n}''\) 见后续 P5 裁决 |
+| 503–580 | 正则化 pair 和的 \(-A_n/\eta\) 极点及 (6.3) | **VERIFIED_SCOPED** | Appendix Projection P4 给出逐层留数和对角有限部；隔离重放 90 项 residue/asymptotic 检查通过 |
+| 549–575 | 常对角投影的 \(A_n\ge kg/[np_0(1-p_0)]\) | **VERIFIED_SCOPED** | 零空间 minor 后验与 Hadamard/对角界推出 \(\alpha_+\le g^2/n,\alpha_-\le k^2/n\) |
+| 584–635 | \(B_{2,n}''\) 的真实插入/删除后验熵公式和严格负号 | **VERIFIED_SCOPED** | P5 的层质量收集、链式熵恒等式与投影 minor 后验上界逐项通过；94 项形状/增长检查通过 |
+| 637–680 | Vandermonde 交换能量 (7.4) 与 \(-\Theta(n^2\log n)\) | **VERIFIED_SCOPED** | 交换算子恒等式、单位根乘积、显式上下界与有限枚举一致 |
+| 681–688 | 补偿后有限部分 \(F_n\) 及 \(d_0=O(n^2)\) | **VERIFIED_SCOPED** | P4 的 \(\gamma_{++},\gamma_{--}\) 界与 P7.1 量级推论通过；54 项有限部检查通过 |
+| 694–712 | 共同谱隙传递界 (8.1) | **VERIFIED_SCOPED（有限边缘）** | B2 的原子梯度、kernel-to-law Fisher 路径和 \(4R\delta^{-5}\) 常数通过 |
+| 714–757 | sine 压缩谱隙 \(d_m\)、循环边缘传递 (8.2)–(8.5) | **VERIFIED_SCOPED（有限边缘）** | B3 插值下界与 B4 周期核误差/窗口指数通过 |
+| 759–786 | 对数增长窗口与有噪声多项式窗口 | **VERIFIED_SCOPED（边缘窗口） / INCOMPLETE（all-exterior）** | B4–B5 的指数算术正确；没有观察全部外部坐标后的信息损失界 |
+| 790–815 | 完整 \(C(0,1)\) 未证明、平均符号与高阶余项仍开 | **VERIFIED_SCOPED** | 范围声明准确；“自包含证明”只覆盖附录中列出的有限维与窗口结论，不覆盖主目标 |
 
 ## 3. full-support 二缺陷展开的独立重建
 
@@ -242,11 +237,16 @@ S_6/6=-13.097521130943996\ldots,\quad
 \mathcal J_{1,6}''=-1.5332360604176072\ldots<0.
 \]
 
-这些复算强力支持“真实可达局部正、实际平均仍可负”的范围判断。不过作者声称的是纯整数区间证书；相应程序和证书未收到，所以“严格认证”这一证据等级仍为 **PENDING_SOURCE**。
+这些复算与补收的 256 位纯整数/有理区间证书一致。区间程序独立构造 true Toeplitz 与循环核，使用 Machin 恒等式围住 \(\pi\)，用带显式正尾界的 atanh 级数围住对数，并对全部原子作向外舍入。隔离运行严格认证：
+
+- 六点 true-sine 在 \(c=1\) 与 \(19/20\) 的指定局部 skew 为正；
+- 同一 pair 的实际权重平均为负；
+- \(c=1\) 时全部 15 个实际 pair 平均为负；
+- 八点秩四循环模型在 \(c=19/20\) 的指定局部 skew 为正而实际 pair 平均为负。
 
 局部反例只否定逐表非正的加强规则，不否定实际加权平均，更不否定无限体积熵率凹性。
 
-## 6. projection 支持奇异：已核验与未核验部分
+## 6. projection 支持奇异：完整有限维核验
 
 对固定 \(k\)-粒子输入，输出等价于：
 
@@ -270,9 +270,15 @@ S_6/6=-13.097521130943996\ldots,\quad
 
 这两个 \(p\)-曲率系数。故原稿 21–32、490–501 行对“一阶不相消”和 logarithmic 系数的修正是正确的。
 
-但是，完整的 \(B_{2,n}''\)、奇异 remainder 及各层常数并未在正文展开，不能据上述两项就验证 (0.2) 的全部内容。
+Appendix Projection P1–P3 把零层与 \(k\pm1,k\pm2\) 层的 \(v,w\) 系数全部列出，并从
 
-### 候选留数下界
+\[
+-\sum_y q_y''\log q_y-\sum_y\frac{(q_y')^2}{q_y}
+\]
+
+逐层收集出一阶项、\(4k(n-k)\varepsilon^2\log(1/\varepsilon)\) 和完整 \(B_{2,n}''\)。对奇异层的 Taylor 余项，附录以最小正原子和五阶多项式导数给出固定 \(n\) 的显式 \(O(\varepsilon^3(1+|\log\varepsilon|))\) 控制。常数极粗，但量词与用途合法；它没有声称对 \(n\) 一致。
+
+### 实际留数及其下界
 
 对 \(|S|=k+1\)，后验
 
@@ -298,7 +304,7 @@ S_6/6=-13.097521130943996\ldots,\quad
 A_n(p_0)\ge\frac{kg}{np_0(1-p_0)}.
 \]
 
-这段下界是自包含并通过的。尚未通过的是：缺失附录必须证明这个 \(A_n\) 确实是完整 \(S_n(\mu_\eta)\) 展开中的 \(-1/\eta\) 留数，并控制余项。故 (6.3) 整体仍为 **PENDING_SOURCE**。
+Appendix Projection P4 进一步把正则化基准 \(\mu_\eta\) 的对角项与每个自然 pair 逐层展开，证明上述 \(A_n\) 正是完整 \(S_n(\mu_\eta)\) 的 \(-1/\eta\) 留数，并给出 logarithmic 项和有限部。对 \((n,k)=(2,1),(4,2),(5,2),(6,3),(8,4),(10,5)\) 及三个 \(p_0\)，隔离重放的 90 项留数/渐近检查全部通过。
 
 ## 7. \(B_{2,n}''\)、交换能量与有限枚举
 
@@ -325,7 +331,13 @@ A_n(p_0)\ge\frac{kg}{np_0(1-p_0)}.
 
 此式在 \(n=4,6,8,10,12\) 的独立枚举中分别以约 \(10^{-15}\) 到 \(10^{-12}\) 的浮点误差吻合。
 
-作者的关键式 (7.2)/(7.3) 把 \(B_{2,n}''\) 表成交换能量与真实一、二次插入/删除后验熵。缺失附录前，本文不把它升级为证明。独立枚举只作 sanity check：
+Appendix Projection P5 从五层质量表直接得到
+
+\[
+B_2''(p)=\frac{h}{p(1-p)}-2h\log(p(1-p))-4h-n+\mathcal C_\mu,
+\]
+
+并用真实增删通道的链式熵恒等式把 \(\mathcal C_\mu\) 改写为交换能量与一、二次插入/删除反向条件熵。裸的 \(H(\mu)\) 系数确实全部相消。此前的有限枚举现在作为独立交叉检查：
 
 | \(n\) | (7.3) 右端 | 从精确有限通道 \(H_{pp}\) 在 \(\varepsilon=10^{-5}\) 提取的 \(B_{2,n}''\) |
 |---:|---:|---:|
@@ -333,15 +345,16 @@ A_n(p_0)\ge\frac{kg}{np_0(1-p_0)}.
 | 6 | \(-29.5360218495\) | \(-29.5399833381\) |
 | 8 | \(-66.4406329980\) | \(-66.4506899659\) |
 
-误差随 \(\varepsilon\downarrow0\) 单调缩小，强烈支持系数公式，但这不是所有 \(n\) 的证明。
+误差随 \(\varepsilon\downarrow0\) 单调缩小，并与附录的固定 \(n\) 余项一致。
 
-如果 (7.3) 成立，那么：
+投影零空间 minor 给出删除集合后验概率至多 \((1-\rho)^r\)，补投影给出删除粒子的对应界。因此：
 
 - projection minor 后验最大概率不超过 \(2^{-r}\)，故 \(h_1\ge\log2,h_2\ge2\log2\)；
 - \(B_{2,n}''(1/2)\le-n-2\mathscr D_\mu<0\)；
-- 结合 (7.4) 和粗熵界，(7.5)–(7.7) 的 \(-\Theta(n^2\log n)\) 推论代数正确。
+- 结合 Vandermonde 交换能量和粗熵界，\(B_{2,n}''(1/2)=-\Theta(n^2\log n)\)；
+- 对所有允许的有限 \(n\)，半密度常数项严格为负；对偶数 \(n\ge256\)，附录给出显式二侧量级界。
 
-当前应发布为：“增长结论有一致的独立有限证据和正确的下游代数，但承重分层公式等待附录核验。”
+这些结论是 **VERIFIED_SCOPED**，但只关于奇异展开的二阶常数项；同阶仍有正的 logarithmic 项，且固定 \(n\) 的展开没有联合控制 \(n\) 与 \(\varepsilon\)。
 
 ## 8. remainder、传递与增长窗口
 
@@ -354,43 +367,58 @@ A_n(p_0)\ge\frac{kg}{np_0(1-p_0)}.
 - 后验归一化产生的重复坐标项；
 - \(\beta_n\) 恶化时的精确量词。
 
-正文只陈述结果并指向缺失附录。因此状态是 **PENDING_SOURCE**。三阶显式系数 (5.1)/(5.2) 本身已独立通过，但不能替代整个尾和。
+Appendix Bounds B1 用 conditional floor \(\beta\) 控制全部 ratio 导数，并以 \(T=n\varepsilon(1+\beta^{-1})\) 收集指数尾。对 \(T\le1/4\)，
+
+\[
+|H_{pp}-\varepsilon^2\mathcal L_n|
+\le(2H(P)+10)T^3
+\]
+
+及互信息值余项 \((4\log(1/\beta)+4)T^3\) 的常数账成立。边界 \(p=0,1\) 由熵表达中的消去处理。124 项主检查包含这些余项的数值压力测试。
 
 ### 共同谱隙传递
 
-(8.1) 的 \(\delta^{-5}\) 常数必须同时支付实际原子权重变化和条件四格变化。正文没有给出 score 到全局四格函数的完整梯度账，因此状态是 **PENDING_SOURCE**。
+Appendix Bounds B2 分开控制对角 inverse moment 与四格函数的梯度，再用归一化路径上的 Fisher 恒等式把核距离传到全律 \(L^1\) 距离。共同谱隙 \([\delta,1-\delta]\) 下得到的简化常数 \(2n\delta^{-5}\|K-L\|_F\) 与截断版本 \(4R\delta^{-5}\) 正确。这个定理只比较同一个有限边缘窗口的无条件律。
 
 ### 窗口算术
 
-在假定 (5.4)、(8.1)、(8.2) 后，正文的下游指数运算一致：
+Appendix Bounds B3–B5 给出 sine 压缩的有限谱隙下界、循环核误差以及窗口选择。逐项核对后：
 
 - \(d_m^{-5}\) 产生 \(15a_\rho m\) 的指数代价；
 - 精确密度匹配给出 \(N^{-2+15a_\rho\kappa}\)；
 - 最近整数匹配给出 \(N^{-1+15a_\rho\kappa}\)；
 - \(m=O(1/\varepsilon)\) 时，\(2m(\varepsilon u)^{-5}e_{m,N}=O(\varepsilon^{-8}N^{-2})\)。
 
-但这些只是相同 \(m\) 点边缘律之间的比较。它们没有包含观察其余无限外部坐标所损失的信息，因此不能与 S51 已审的 all-exterior 真熵率 Hessian 识别互换。
+所以作者声称的 exact-density、nearest-density 及有噪声边缘窗口都在其量词内成立。它们仍只是相同 \(m\) 点边缘律之间的比较，没有包含观察其余无限外部坐标所损失的信息，因此不能与 S51 已审的 all-exterior 真熵率 Hessian 识别互换。
 
-## 9. 关键缺口与最小缺件
+## 9. 已解除的缺件与仍存在的关键缺口
 
-### CRITICAL_GAPS
+### 已解除
 
-1. **当前提交不是自包含证明包。** 原稿 52、474、492、569、645、681–688、712、786 行把承重证明放在缺失附录；815 行“均给出自包含证明”与实际收到的材料不一致。
-2. **严格证书不可复验。** 原稿 394–409 行引用 src/interval_certificate.py，但程序和输出均未收到。独立高精度重算支持数值，不等于作者声称的区间认证。
-3. **projection 极点与 \(B_{2,n}''\) 的核心分层账未展示。** 候选留数下界和 Vandermonde 能量正确，仍不足以自动推出它们在完整熵展开中的系数。
-4. **传递定理的常数与量词未展示。** 不能从核收敛或有限窗口数值直接升级为 all-exterior/entropy-rate 结论。
+1. APPENDIX_BOUNDS.md 与 APPENDIX_PROJECTION.md 已补收并完整审查。
+2. 严格区间程序及输出已在隔离副本重放。
+3. projection 极点、对角有限部、\(B_{2,n}''\) 分层公式和后验熵下界已有自包含推导。
+4. 有限边缘传递的梯度常数、sine 谱隙与增长窗口量词已展示。
 
-### PENDING_SOURCE 的最小解除条件
+### 仍存在
 
-至少需要收到并逐行审查：
+1. **真实平均符号仍开。** \(\mathcal J_{ij}''\) 仍回到 S52 的 signed-average 瓶颈；局部正例不决定总体符号。
+2. **联合极限仍开。** projection 结论是先固定 \(n\) 再令 \(\eta\downarrow0\)，没有给 \(n=n(\eta)\) 的统一余项。
+3. **all-exterior 传递仍开。** 有限边缘核传递没有控制观察无限外部坐标带来的条件信息差。
+4. **主端点目标仍开。** 没有纯 logarithmic 包络，也没有完整 \(C(0,1)\)。
+5. **外部新颖性未认证。** SOURCE_AUDIT.md 是作者来源账，本审查没有执行独立文献占位检索。
 
-1. APPENDIX_BOUNDS.md；
-2. APPENDIX_PROJECTION.md；
-3. SOURCE_AUDIT.md；
-4. src/interval_certificate.py 与它实际读取的输入/输出证书；
-5. 若附录引用其他文件，再补齐那些直接依赖，而不是仅提供 44 文件清单。
+### 隔离重放记录
 
-无需哈希门槛，但文件内容必须可读，且正文中的定理编号、变量和量词必须能与附录逐项对齐。
+在 Python 3.12.14、NumPy 2.3.5 下运行完整入口，状态为 PASS：
+
+- verify.py：124 项；
+- residue_checks.py：90 项；
+- shape_checks.py：94 项；
+- finite_part_checks.py：54 项；
+- interval_certificate.py：3 个指定模型的严格判号。
+
+合计 362 项有限浮点/代数诊断；严格符号只由 256 位向外舍入的整数/有理区间程序决定，不依赖浮点容差。
 
 ## 10. 新工具、旧瓶颈与后续价值
 
@@ -400,8 +428,8 @@ A_n(p_0)\ge\frac{kg}{np_0(1-p_0)}.
 - \(\mathcal J_{ij}\) 对 \(p\) 二次且曲率不依赖 \(p\) 的精确公式；
 - 真实 sine 可达条件方块中的局部正 skew，作为逐表路线的实际模型反例；
 - projection 支持奇异下“一阶不相消”的清晰量词修正；
-- 候选 projection 留数的后验碰撞表达与常对角下界；
-- 若附录通过，\(B_{2,n}''\) 与有限窗口二阶量传递会是可复用工具。
+- projection 留数的后验碰撞表达与常对角下界；
+- \(B_{2,n}''\) 的真实反向条件熵公式、补偿后有限部和有限窗口二阶量传递。
 
 ### 识别回既有瓶颈
 
@@ -413,7 +441,7 @@ A_n(p_0)\ge\frac{kg}{np_0(1-p_0)}.
 
 ### 是否值得后续端点全阶任务
 
-**有条件值得。** 前提是先取得并通过两份承重附录。后续任务不应继续堆叠固定 \(n\) projection 系数，而应冻结为：
+**值得定向推进，但不值得继续堆叠固定 \(n\) projection 系数。** 两份承重附录已经通过；下一任务应冻结为：
 
 > 对随噪声正则化的 true-sine 实际输出，在明确的 \(n=n(\varepsilon)\) 量词下，联合控制
 > \[
@@ -426,10 +454,11 @@ A_n(p_0)\ge\frac{kg}{np_0(1-p_0)}.
 ## 11. 最终裁决
 
 - full-support 二缺陷代数：**VERIFIED_SCOPED**。
+- 三阶系数与显式 full-support remainder：**VERIFIED_SCOPED**。
 - 与 S52 的精确关系：**VERIFIED_SCOPED**，但属于旧 signed-average 瓶颈。
-- 真实可达局部反例：存在性得到独立高精度复算；作者的严格区间证书为 **PENDING_SOURCE**。
+- 真实可达局部反例与同 pair 实际平均：**VERIFIED_SCOPED**，严格区间证书已独立重放。
 - projection 一阶非零曲率与 logarithmic 系数：**VERIFIED_SCOPED**。
-- 完整 \(-A_n/\eta\) 极点、\(B_{2,n}''=-\Theta(n^2\log n)\)、full-support remainder、谱隙传递和窗口定理：**PENDING_SOURCE**。
+- 完整 \(-A_n/\eta\) 极点、对角有限部与 \(B_{2,n}''=-\Theta(n^2\log n)\)：**VERIFIED_SCOPED（固定有限 \(n\)）**。
+- 共同谱隙、sine 谱隙与增长窗口：**VERIFIED_SCOPED（有限边缘窗口）**；all-exterior 传递未证。
 - 无限 true-sine 平均符号、纯 logarithmic 端点界、完整 \(C(0,1)\)：**INCOMPLETE**。
-- 外部新颖性：**PENDING_SOURCE**；未收到 SOURCE_AUDIT.md，本审查也未作外部文献认证。
-
+- 外部新颖性：**NOT_CERTIFIED**；SOURCE_AUDIT.md 已读，但本审查没有作独立外部文献认证。
