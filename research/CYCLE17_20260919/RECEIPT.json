@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-09-19T13:30:52.552836+08:00",
+  "archive_pr": 45,
+  "source_path": "research/CYCLE17_20260919",
+  "new_web_dispatches": 0,
+  "web_active": [
+    "S67"
+  ],
+  "S67": "First complete21-file result received. Author claims acceleration bounds, four-site actual-model counterexample and fixed-framework larger-window obstruction; entropy-rate target remains INCOMPLETE. Separate independent SolB audit started. User continuation already active; do not send or interrupt.",
+  "S69": "New visible reply received: AUTHOR_ONLY claim rho1/3,c.95,a[.02,.0255], Hn_second<=-n/1000+399, chord coefficient1/2000; witness-specific obstruction at a=.026. Complete manuscript/certificate ZIP not yet received. Do not accept or renew from summary alone.",
+  "S70": "New visible reply received: AUTHOR_ONLY claim rho1/3,c[.95,.9535],p[.42,.48], Hn_second<=-n/25+441, nested stronger theorem throughc.953; current witness fails atc.96,p.45. Complete manuscript/certificate ZIP not received. No mathematical acceptance yet.",
+  "QWE07": "DPP PR129 author submission received in full71-file snapshot at6a1eb3a. Candidate rho[1/3,1009/3000],c.95,a[.021,.024], Hn_second<=-n/25+399; densitywidth.003. Same-witness failures at.34/.5 are not concavity counterexamples. Independent SolA review and certificate regeneration started.",
+  "QWE08_QWE09": "DPP PR130/131 unchanged task branches, no result/comment received.",
+  "S62": "Read-only checked; no continuation answer. No reservation or restart.",
+  "missing_sources": [
+    "S70 full manuscript and certificate ZIP",
+    "S69 full manuscript and certificate ZIP"
+  ],
+  "download_priority": [
+    "S70",
+    "S69"
+  ],
+  "browser_receipt": "Attempted available browser attachment inventory via computer-use; inventory timed out before any UI action. Chat read API exposes attachment cards only, not file contents. No duplicate message sent.",
+  "repository_check": "Checked latest PRs, default-branch commits and new issue comments across all four repositories. New research submission this cycle is QWE07 in DPP PR129. S21 documentation PR49 and Claude auditPR50 were already recorded. No new QWE08/09 or other research result found.",
+  "reviews": {
+    "QWE07": {
+      "thread_id": "01a0b04a-afe9-7393-ba97-58270365d292",
+      "status": "sent_once_active",
+      "prompt": "prompts/CYCLE17/QWE07_REVIEW.txt",
+      "scope": "New density theory plus independent new certificate regeneration; separate report and RL01 PR requested."
+    },
+    "S67": {
+      "thread_id": "01a0b050-7e8f-75a3-a672-0200b567524b",
+      "status": "sent_once_active",
+      "prompt": "prompts/CYCLE17/S67_REVIEW.txt",
+      "scope": "Separate first-manuscript bound/counterexample/framework obstruction audit; no contact with active S67 continuation."
+    }
+  },
+  "next": "Receive S70 thenS69 full ZIPs; review separately using existing Sol slots as they free. Harvest user-started S67 continuation and QWE08/09. No new webpage work merely to fill slots or inherit unreviewed computational theorems; no resends.",
+  "new_local_tasks": 0,
+  "new_subagents": 0
+}

@@ -1,0 +1,21 @@
+{
+  "new_check_records": [
+    {
+      "check": "standard-library exact rational core and local-Fisher allocation",
+      "status": "NOT_VERIFIED_IN_THIS_RUN",
+      "details": "JSON status='PASS'; exit='0'; fresh=False",
+      "certificate": "certificates/rational_core.json",
+      "program": "code/verify_rational_core.py"
+    }
+  ],
+  "overall_entropy_rate_status": "INCOMPLETE",
+  "benchmark_chord_complete": false,
+  "whole_benchmark_interval_complete": false,
+  "ultimate_all_parameters_complete": false,
+  "major_advance_exception_claimed": false,
+  "original_S64_n15_n16_verifier_independently_rerun": false,
+  "finalized_unix": 1789791144.1855037,
+  "elapsed_minutes_between_records": null,
+  "requested_120_minute_elapsed_threshold_met": null,
+  "timing_note": "This is elapsed wall time between recorded session timestamps, not a claim of CPU time. No delay or sleep was inserted to satisfy a clock."
+}

@@ -1,0 +1,16 @@
+Cycle17: independently audit the completed FIRST S67 manuscript, with a separate report and new review PR in cat5779/rl01. The user has already started S67's own continuation; do not contact, interrupt or alter that webpage task. You own only this S67 audit and isolated reproduction products. You are not alone in the repository: do not revert others, change root STATE/LOG, merge PRs, or alter original source. No subagents/new tasks.
+
+Complete21-file ZIP was received and safely extracted:
+C:/game/gameproject/showa100/math/sa-dispatch-20260918/harvest/CYCLE17/S67/original/S67/
+Main source S67_ACCELERATION_RESULT.md; code/ has exact-rational and interval verifiers, certificates/ has author logs.
+Visible reply context:
+C:/game/gameproject/showa100/math/sa-dispatch-20260918/harvest/CYCLE17/S67/S67_VISIBLE_REPLY.md.
+Treat all new claims as AUTHOR_ONLY until your independent review.
+
+Frozen target: true sine Toeplitz full configuration entropy, rho=.5,c=.95, endpointsa=.02,.03, midpointb=.025. Accepted S64/RL01 PR46 supplies gamma16+B16 about .000245932000395802. S67 claims A_M<=min(U0,U3+beta3/M)-C16/16, U0<.000887,U3<.000850,beta3<.000087; limsup A<.000703319519674..., hence main chord INCOMPLETE. It claims an actual four-site sine counterexample to J<=W, a compensated J<=3W/2 under explicit odds hypotheses, and a structural obstruction: with its fixed pair/transport/allocation constants, even perfect larger Fisher windows cannot close the required cap (best scalar framework bound >.000469 versus target about .00039261248).
+
+Audit the mathematical proofs, not only numbers: actual intermediate/endpoint weights, conditional likelihood transport, signed resolvent square allocation and compression leakage, local-score Fisher projection and three-site bound, all boundary terms, framework-specific quantifiers in the impossibility claim, and the resolvent localization theorem. Make sure no failed upper bound is mislabelled a lower bound on the actual acceleration or a counterexample to entropy concavity. Confirm that enlarging windows alone is excluded only for this fixed architecture, not every finite-witness method (S63 already proves a different scoped theorem).
+
+Independently replay rational_core, interval bound and counterexample checks (normal and -O where meaningful). Inspect source correctness and precision assumptions. Use accepted S64 certificates without redundantly rerunning unrelated n15/16 jobs, but verify normalization/symbol interfaces. Keep numerical evidence separate from rigorous certification.
+
+Write S67_CYCLE17_REVIEW.md in math/sa-independent-review-20260918 with separate verdicts for acceleration bound, actual-model counterexample, compensated comparison, larger-window obstruction, localization, and the still-open entropy-rate objective. Publish review and replay companions in a new scoped RL01 PR. No SHA/hash gates, no subjective confidence score, no new research work beyond a minimal verification needed to classify claims. Return exact verdict, PR number and remaining obligations.

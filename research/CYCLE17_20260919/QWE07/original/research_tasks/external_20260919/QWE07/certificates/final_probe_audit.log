@@ -1,0 +1,8 @@
+rho 17/50 a 3/125 P enclosure 1771884993/100000000 885942497/50000000
+exact budget 219737025/12358112 ; exact payment gap enclosure -2392165793337/38619100000000 -1196082703573/19309550000000 < 0
+gap outward integer enclosure: -6194256 -6194254 / 100000000
+rho 1/2 a 3/125 P enclosure -5268309089/50000000 -10536618177/100000000
+exact budget 651090475/37074336 ; exact payment gap enclosure -7121049533357497/57928650000000 -14242099065556421/115857300000000 < 0
+gap outward integer enclosure: -12292793866 -12292793864 / 100000000
+DISPROVED: unchanged-test sufficient payment at the two stated points.
+No entropy-concavity counterexample is asserted.

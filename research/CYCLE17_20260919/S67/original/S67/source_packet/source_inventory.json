@@ -1,0 +1,50 @@
+[
+  {
+    "repository_path": "research/CYCLE12_20260919/reviews/S64_CYCLE11_REVIEW.md",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE12_20260919/S64/S64_CYCLE11_RESULT.md",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE12_20260919/S64/S64_checks/README.md",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE12_20260919/S64/S64_checks/verify_s64.py",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE12_20260919/S64/S64_checks/check_results.txt",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE12_20260919/S64/S64_checks/main_chord_020_030_n15_16.json",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE12_20260919/S64/S64_checks/raw_window_counterexamples_n4_n8.json",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE11_20260918/SOURCE_STATUS.md",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE12_20260919/SOURCE_STATUS.md",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE13_20260919/SOURCE_STATUS.md",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "prompts/CYCLE13/S67.md",
+    "available_in_retrieved_packet": false
+  },
+  {
+    "repository_path": "research/CYCLE08_20260918/QWE02/QWE02_TRUE_ENTROPY_DYADIC_TAIL.md",
+    "available_in_retrieved_packet": false
+  }
+]

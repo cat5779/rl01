@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "acceptance_arithmetic": "exact rational arithmetic only",
+  "pi_machin_enclosure": {
+    "lower": "3.14159265358979323846264338327950288",
+    "upper": "3.14159265358979323846264338327950289",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "uniform_C_over_n_bound": {
+    "lower": "0.00088633380431891566455700917906065",
+    "upper": "0.00088633380431891566455700917906066",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "three_site_local_diagonal_Fisher_lower_bound": {
+    "lower": "6.30245602748665835147527147771173288",
+    "upper": "6.30245602748665835147527147771173289",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "three_site_improved_limsup_C_over_n_bound": {
+    "lower": "0.00084887490360597234118593986866945",
+    "upper": "0.00084887490360597234118593986866946",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "three_site_finite_boundary_coefficient_beta3": {
+    "lower": "0.00008634210103074968818032268041418",
+    "upper": "0.00008634210103074968818032268041419",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "three_site_improvement_over_uniform_bound": {
+    "lower": "0.00003745890071294332337106931039120",
+    "upper": "0.00003745890071294332337106931039121",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "three_site_limsup_A_n_upper_bound_interval": {
+    "lower": "0.00070219442328008839363374681966945",
+    "upper": "0.00070219442328008839363374682066946",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "three_site_bound_excess_over_required_cap": {
+    "lower": "0.00045626242288428676479211416266945",
+    "upper": "0.00045626242288428676479211416566946",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "all_window_actual_diagonal_Fisher_upper_bound": {
+    "lower": "26.55625449784536949528755863456252763",
+    "upper": "26.55625449784536949528755863456252764",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "best_possible_diagonal_only_route_lower_floor": {
+    "lower": "0.00046911618228674650723945948447850",
+    "upper": "0.00046911618228674650723945948447851",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "diagonal_only_route_floor_excess_over_required_cap": {
+    "lower": "0.00007650370156506093084563377847850",
+    "upper": "0.00007650370156506093084563378147851",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "diagonal_only_route_obstruction": "PROVED: increasing only the local Fisher window cannot close with the present kappa=3/2 and transport allocation",
+  "uniform_A_n_upper_bound_interval": {
+    "lower": "0.00073965332399303171700481613006065",
+    "upper": "0.00073965332399303171700481613106066",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "required_C_cap": {
+    "lower": "0.00039261248072168557639382570300000",
+    "upper": "0.00039261248072168557639382570600000",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "bound_excess_over_required_cap": {
+    "lower": "0.00049372132359723008816318347306065",
+    "upper": "0.00049372132359723008816318347606066",
+    "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+  },
+  "four_site_actual_sine_counterexample": {
+    "rho": "1/2",
+    "c": "19/20",
+    "b": "1/40",
+    "n": 4,
+    "pair_zero_based": [
+      0,
+      3
+    ],
+    "exterior_sites_zero_based": [
+      1,
+      2
+    ],
+    "exterior_bits_in_that_order": [
+      1,
+      0
+    ],
+    "exterior_pattern_probability": {
+      "lower": "0.34144236823720983872810121554677919",
+      "upper": "0.34144236823720983872810121554677920",
+      "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+    },
+    "J": {
+      "lower": "0.60663438678043776256215877222158027",
+      "upper": "0.60663438678043776256215877222158028",
+      "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+    },
+    "W": {
+      "lower": "0.60584890681027616899696846979882332",
+      "upper": "0.60584890681027616899696846979882333",
+      "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+    },
+    "J_minus_W": {
+      "lower": "0.00078547997016159356519030242275695",
+      "upper": "0.00078547997016159356519030242275696",
+      "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+    },
+    "J_over_W": {
+      "lower": "1.00129649482128647222196005817732489",
+      "upper": "1.00129649482128647222196005817732490",
+      "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+    },
+    "three_halves_W_minus_J": {
+      "lower": "0.30213897343497649093329393247665470",
+      "upper": "0.30213897343497649093329393247665471",
+      "arithmetic": "exact Fraction; decimal endpoints rounded outwards"
+    },
+    "scope": "pointwise conditional pair; NOT an entropy-rate counterexample"
+  },
+  "rational_binary_comparison_and_locality_constants": "PASS",
+  "three_site_exact_algebra_checks": {
+    "status": "PASS",
+    "cases": 15,
+    "scope": "finite cross-checks; the uniform theorem is proved analytically in the manuscript"
+  },
+  "entropy_rate_chord_status": "INCOMPLETE"
+}
+

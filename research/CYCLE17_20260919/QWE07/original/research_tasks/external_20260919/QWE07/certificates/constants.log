@@ -1,0 +1,8 @@
+SINE: exact Machin enclosure and degree-23 remainder proved
+ANALYTIC: trace/gap <= 1881/175 < 11; exp(11) < 60000 proved
+product_4 certified boxes 8 upper 0.00379638671875
+product_10 certified boxes 12 upper 4.460042147450633e-06
+Lebesgue_4 certified boxes 4 upper 2.625
+Lebesgue_10 certified boxes 12 upper 31.125060270440642
+ERROR density 40920957/50000000000 bias 27276183/7629394531250 nodal 3/3125000 TOTAL 3647592747897/3906250000000000 = 0.000933783743461632 < 1/1000
+PSD minimum eigenvalue 1169/10000 minimum improvement 8513/25000

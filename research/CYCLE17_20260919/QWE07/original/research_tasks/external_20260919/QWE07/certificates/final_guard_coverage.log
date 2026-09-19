@@ -1,0 +1,3 @@
+COVERAGE PROVED: 256 guard words, 1536 jobs, 1562 interior-disjoint closed leaves
+All 256 parameter rectangles exactly equal [21/1000,3/125] x [1/3,1009/3000].
+Completed-leaf inner nodes: 94459902 (excludes subdivided parent attempts).
