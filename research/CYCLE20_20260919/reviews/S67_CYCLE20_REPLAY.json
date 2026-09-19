@@ -1,0 +1,37 @@
+{
+  "verdict": "VERIFIED_SCOPED / MAIN TARGET INCOMPLETE",
+  "fixed_parameters": {
+    "rho": "1/2",
+    "c": "19/20",
+    "a0": "1/50",
+    "b": "1/40",
+    "a1": "3/100"
+  },
+  "fresh_exact_replay": {
+    "status": "PASS",
+    "U_C_fraction": "110333/166400000",
+    "A_limsup_upper": "0.00051637841390488528321703772123076923076923076923",
+    "required_C_cap_upper": "0.000392612480721685576393825706",
+    "deficit_lower": "0.00027044641350908365437540506323076923076923076923",
+    "conditional_input": "83/4",
+    "conditional_input_status": "UNVERIFIED",
+    "conditional_gap_lower": "4.9e-7"
+  },
+  "small_actual_sine_replay": {
+    "initial_status": "SKIPPED because optional mpmath was absent",
+    "dependency_added_in_isolated_reproduction": "mpmath 1.4.1",
+    "final_status": "PASS_DIAGNOSTIC_NOT_CERTIFICATE",
+    "n_values": [2, 4, 6]
+  },
+  "independent_fisher_diagnostic_at_a_1_40": {
+    "3": 6.3024560274866595,
+    "15": 8.870099839942378,
+    "17": 8.962353864852036,
+    "19": 9.044400519081472,
+    "21": 9.101216982294051,
+    "status": "FLOATING_DIAGNOSTIC_ONLY"
+  },
+  "old_pr51_window_obstruction": "NOT TRANSFERABLE: it freezes the old transport and diagonal-only allocation constants",
+  "full_c_interval_37_40_to_1": "INCOMPLETE"
+}
+

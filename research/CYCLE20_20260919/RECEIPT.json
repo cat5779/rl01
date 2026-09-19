@@ -1,12 +1,15 @@
 {
-  "checked_at": "2026-09-19T15:54:16.324875+08:00",
+  "checked_at": "2026-09-19T16:01:18.785799+08:00",
   "archive_pr": 54,
   "full_high_contrast_interval": "INCOMPLETE",
   "S67": {
     "source_files": 14,
-    "status": "FULL_SOURCE_RECEIVED_SEPARATE_REVIEW_DISPATCHED",
+    "status": "VERIFIED_SCOPED_MAIN_TARGET_INCOMPLETE",
     "thread_id": "01a0b04a-afe9-7393-ba97-58270365d292",
-    "author_main_target": "INCOMPLETE"
+    "author_main_target": "INCOMPLETE",
+    "review_pr": 56,
+    "review_head": "e30114f78d922146dcc7aef636289b163e54119a",
+    "fisher_input": "20.75 UNVERIFIED; n15/17/19/21 midpoint floating diagnostics approximately 8.87 to 9.10, not certificates"
   },
   "S69": {
     "status": "VERIFIED_SCOPED_AFTER_REPRODUCTION_REPAIR",
