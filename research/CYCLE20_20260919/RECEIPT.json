@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-09-19T15:54:16.324875+08:00",
+  "archive_pr": 54,
+  "full_high_contrast_interval": "INCOMPLETE",
+  "S67": {
+    "source_files": 14,
+    "status": "FULL_SOURCE_RECEIVED_SEPARATE_REVIEW_DISPATCHED",
+    "thread_id": "01a0b04a-afe9-7393-ba97-58270365d292",
+    "author_main_target": "INCOMPLETE"
+  },
+  "S69": {
+    "status": "VERIFIED_SCOPED_AFTER_REPRODUCTION_REPAIR",
+    "review_pr": 55,
+    "review_head": "bf52b165e41ef57924e5db9fb9436e77b72dd8b1",
+    "scope": "rho1/3,c.95,a[.02,.0255]",
+    "repair": "Set FE_UPWARD in each relevant OpenMP parallel region before regeneration."
+  },
+  "literature_audit": "Historical provenance plus new primary-source screening; not a completed transfer proof.",
+  "QWE08_QWE09": "Task-only branches PR130/131, no result/comments at latest remote read",
+  "missing_sources": [],
+  "new_web_sends": 0,
+  "new_local_tasks": 0,
+  "new_subagents": 0
+}
