@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-09-18T19:29:18.334768+00:00",
+  "floating_checks": 362,
+  "exact_certificate_models": 3,
+  "scope": "finite algebra/sign certificates; no independent peer review or infinite-volume proof",
+  "runs": [
+    {
+      "script": "interval_certificate.py",
+      "returncode": 0,
+      "stdout": "PASS: local skew > 0; the same actual-weight averaged pair < 0.\nPASS: all 15 averaged pairs < 0 at n=6 only.\nPASS: -26.511794 < L_6/6 < -26.511793.\nPASS: positive actual conditional skew at c=19/20: true Toeplitz n=6 and cyclic n=8.\n",
+      "stderr": ""
+    },
+    {
+      "script": "verify.py",
+      "returncode": 0,
+      "stdout": "PASS: 124 finite checks.\n",
+      "stderr": ""
+    },
+    {
+      "script": "residue_checks.py",
+      "returncode": 0,
+      "stdout": "PASS: 90 residue and asymptotic checks\n",
+      "stderr": ""
+    },
+    {
+      "script": "shape_checks.py",
+      "returncode": 0,
+      "stdout": "PASS: 94 actual-insertion entropy and cyclic growth checks\n",
+      "stderr": ""
+    },
+    {
+      "script": "finite_part_checks.py",
+      "returncode": 0,
+      "stdout": "PASS: 54 finite-part checks\n",
+      "stderr": ""
+    }
+  ]
+}
