@@ -27,3 +27,9 @@ DPP PR131 的QWE09第二轮结果与RL01 PR59独立复现现已归档。PR59严�
 需要补收：优先S72新答复中的两个附件（尤其诊断源文件）；其次S71完整回复的第10节结尾。S71无须为了导出失败重新研究，已收到的可见证明立即进入审查，不以ZIP/hash作为数学验收门槛。
 
 四库已检查按更新时间排列的PR、默认分支最新提交和新增评论。本轮新增收件为S71/S72、QWE09第二轮及PR59；另两库只看到已知反例文档同步/无新研究交付。无新网页版发送，无重复投放。
+
+## S71 separate audit received: RL01 PR60
+
+VERIFIED_SCOPED_TOOL / SOURCE_PARTIAL_TAIL / MAIN TARGET INCOMPLETE.
+Rank-one block multi-information convexity and two-site common-shift convexity pass independent review. The affine probability-law mixture counterexample is not a counterexample to the actual kernel-shift DPP. Exact checker independently executed successfully. Novelty remains unconfirmed. The missing source tail in section10 does not affect the complete audited sections1-9.
+The all-size identity direction and full contrast interval (0.925,1) remain unresolved. Review, replay and checker archived under reviews/PR60. S72 review remains active; S73 still has no research answer. No webpage message sent.
