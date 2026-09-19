@@ -1,0 +1,36 @@
+{
+  "status": "COMPLETED_FLOATING_DIAGNOSTIC",
+  "source": "actual_payment_diagnostic.py",
+  "results": "actual_payment_results.json",
+  "six_point_exact_replay": "qwe09_six_point_replay.json",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "coverage": {
+    "rho": "1/2",
+    "c": [0.95, 0.99],
+    "noise_p_equals_a_over_1_minus_c": [0.25, 0.5, 0.75],
+    "n": [6, 8, 10, 12],
+    "geometries": ["balanced_pair", "balanced_triple"],
+    "parameter_geometry_records": 48,
+    "distinct_actual_coarse_words": 16320
+  },
+  "numerical_checks": {
+    "maximum_probability_normalization_error": 1.5543122344752192e-15,
+    "maximum_reveal_marginal_error": 6.661338147750939e-16,
+    "maximum_fine_atom_factorization_error": 2.7755575615628914e-17,
+    "maximum_matrix_martingale_error": 2.842170943040401e-14,
+    "minimum_actual_word_probability": 1.1328786313563985e-11,
+    "maximum_masked_condition_number": 396.984462076199
+  },
+  "candidate_minimum_constants_on_tested_family": {
+    "phi_signed_average_payment": 0.0,
+    "chi_signed_average_payment": 0.0,
+    "phi_negative_part_average": 0.003318752368588861,
+    "chi_negative_part_average": 0.0070121536779326355,
+    "phi_wordwise_negative": 3.644637323958458,
+    "chi_wordwise_negative": 1.7601914589542629
+  },
+  "scope": "actual finite sine-DPP words only; floating diagnostics except for the separately replayed six-point dyadic certificate; no entropy theorem"
+}
