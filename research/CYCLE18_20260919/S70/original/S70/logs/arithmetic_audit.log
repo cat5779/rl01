@@ -1,0 +1,1 @@
+{"status": "PROVED exact audit inequalities", "checks": 20128, "by_operation": {"add": 4000, "sub": 4000, "mul": 4000, "div": 4000, "sqrt": 4000, "log": 64, "L": 64}, "rounding_modes": 4, "log_reference": "100 exact rational atanh terms plus positive geometric tail", "scope": "an audit in addition to, not a replacement for, the arithmetic proof"}

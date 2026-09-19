@@ -1,0 +1,21 @@
+{
+  "status": "PROVED exact document/input bookkeeping",
+  "witness_rows": 256,
+  "coefficient_rows": 45,
+  "alpha_bracket": "exact three integer lines",
+  "candidate_repairs": [
+    [
+      99,
+      20
+    ],
+    [
+      100,
+      20
+    ],
+    [
+      152,
+      20
+    ]
+  ],
+  "scope": "Optional comparison of parsed exact values, not a hash, file-identity, manifest, or mathematical acceptance gate"
+}

@@ -1,0 +1,21 @@
+{
+  "S69": {
+    "archive": "S69_delivery.zip",
+    "files": 85,
+    "bytes": 267978,
+    "manuscripts": [
+      "S69_delivery\\RESULT.md"
+    ],
+    "status": "SOURCE_RECEIVED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "S70": {
+    "archive": "S70_proof_and_sources.zip",
+    "files": 75,
+    "bytes": 9524009,
+    "manuscripts": [
+      "S70\\RESULT.md"
+    ],
+    "status": "SOURCE_RECEIVED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "received_at": "2026-09-19T13:55:06.973171+08:00"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PROVED direct full-word point enclosures",
+  "scope": "Additional check of direct tensor evolution and expectation, not a continuum certificate and not an independent implementation of reference probabilities or the potential",
+  "words": 4194304,
+  "method": "Apply each exact signed 2-by-2 tensor factor directly; no Walsh expansion and no truncation; no renormalization",
+  "points": [
+    {
+      "c": "1907/2000",
+      "p": "21/50",
+      "payment_excess_outer_interval": [
+        "0.0402893383954",
+        "0.0402893384014"
+      ],
+      "comparison": "lower bound > 1/25"
+    },
+    {
+      "c": "24/25",
+      "p": "9/20",
+      "payment_excess_outer_interval": [
+        "-3.277834391895",
+        "-3.277834391888"
+      ],
+      "comparison": "upper bound < -3"
+    }
+  ],
+  "source": "certificates/direct_payment_check.cpp",
+  "full_arithmetic_enclosures": "logs/direct_payment_check.log"
+}

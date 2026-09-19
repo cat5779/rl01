@@ -1,0 +1,15 @@
+Cycle18 next independent audit: S69 bias-extension manuscript. Your S67 PR51 review has been read, including the package provenance repairs and completed independent replay; retain its scoped acceptance. This new S69 manuscript gets a separate report and PR. You own only S69 audit/replay products. Other agents are active: do not revert others, modify author source or root STATE/LOG, merge PRs, contact S67/S69/S70 webpage tasks, or spawn agents.
+
+Full85-file source received:
+C:/game/gameproject/showa100/math/sa-dispatch-20260918/harvest/CYCLE18/S69/original/S69_delivery/
+Read RESULT.md, README_CERTIFICATES.md, all verifier sources/exact inputs and logs. Source ZIP S69_delivery.zip is complete; generated binary caches are deliberately reconstructed. Do not inherit author PROVED as acceptance.
+
+Frozen theorem: rho1/3,c19/20,a in[.02,.0255], every n>=22: H_n''<=-n/1000+399; entropy-rate chord coefficient1/2000 on this whole interval. The existing S63 stronger seed bound on[.021,.024] remains intact. Fulla[.02,.03] target is incomplete.
+
+Audit changed affine global cap6501/5000+(2067/400)a, fixed256 guard caps, retuned PSD allocation, exact whole-law shift expectations and outward integer extraction, nilpotent tail and degree12 Bernstein closure, and finite-volume boundary/rate finite-chord implication. Verify reused old guard cells are genuinely covered by unchanged hypotheses; new enlarged parameter cells must be independently certified. Source says run_from_scratch recomputes all11 cells.
+
+Separately audit claimed architecture obstruction at a=.026 with Cdagger=Cbar+.001: all cap/guard/PSD conditions valid on[.0255,.026], while score-matched maximum over EVERY two-vector test in the same22-site nearest-neighbour allocation has payment<=-.09633473233730599320. Check the supremum/variational argument, exact actual law and proper architecture-specific scope; it is not a counterexample to entropy concavity. Also classify the proposed three-site PSD frame lemma and its unfinished distance-two payment, rather than treating a lemma as a completed wider interval.
+
+Independently recompile/replay the new certificate pipeline in isolation (GCC16.2/Boost1.92 working toolchain is documented in the accepted S63 PR47/QWE07 PR52 review and local math/sa02-sol-takeover-20260918 if useful). Check precision and compiler flags. Rebuild whole-law reference/derivative input arrays rather than only consuming supplied coefficient boxes; audit exact integer enclosure assembly; replay cap/guard coverage and the obstruction test where load bearing. Reuse unchanged accepted S63 theory instead of redundantly redoing all history.
+
+No SHA/hash/checksum acceptance gates. Preserve originals, report any dependency/path adaptation separately. Write S69_CYCLE18_REVIEW.md with independent verdicts for enlarged interval, certificate regeneration, test-optimization obstruction and frame lemma; publish a separate scoped RL01 review PR plus compact replay evidence. Do not accept based only on author logs or a few parameter samples. Give progress if long, and exact remaining gaps if incomplete. Do not supply subjective confidence percentages.
