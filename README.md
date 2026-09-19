@@ -263,6 +263,69 @@ K_\varepsilon=\varepsilon I+(1-2\varepsilon)P.
 
 这个反例不否定本库的真实 sine-Toeplitz 猜想：它使用复方向 `A=\mathrm iB`，既不是共同对角平移 `aI+cK`，也没有平稳或 Toeplitz 结构；它同样没有解决实对称核的三点以上一般情形。
 
+### 6. 六点 Fourier 投影否定“所有 Taylor 系数同号”
+
+另一个反例针对的是证明方法，而不是熵凹性本身。令
+
+\[
+P_{6,3}=\operatorname{circ}
+\left(\frac12,\frac13,0,-\frac16,0,\frac13\right),
+\]
+
+即六点循环群上 Fourier 模式 `{-1,0,1}` 的秩三正交投影；等价地，
+
+\[
+(P_{6,3})_{ij}
+=\frac16\left(1+2\cos\frac{2\pi(i-j)}6\right).
+\]
+
+取 `X\sim\operatorname{DPP}(P_{6,3})`，再逐坐标独立通过真实二元信道
+
+\[
+\Pr(Y_i=1\mid X)=a+cX_i.
+\]
+
+记完整标号输出律为 `p_y`，所有导数都是固定 `c` 后对物理参数 `a` 求导，并定义
+
+\[
+H_{aa}
+=-\sum_y p_{y,aa}\log p_y
+-\sum_y\frac{p_{y,a}^2}{p_y},
+\qquad
+F_{\rm diag}
+=\sum_i\sum_y\frac{(\partial_{a_i}p_y)^2}{p_y},
+\]
+
+\[
+U_P(c)=
+\left[H_{aa}+F_{\rm diag}\right]_{a=(1-c)/2}.
+\]
+
+这个量在 `|c|<1` 内解析。对全部 64 个输出 word 作精确有理枚举，得到
+
+\[
+[c^{36}]U_{P_{6,3}}(c)
+=\frac{94817639921336320}{150094635296999121}>0,
+\]
+
+而 36 次以前的所有 Taylor 系数都非正。因此“对 consecutive-Fourier 输入，`U_P` 的每个 Taylor 系数都非正”这一逐系数闭包是假的。
+
+但同一个见证在任务基准点
+
+\[
+a=\frac1{40},\qquad c=\frac{19}{20}
+\]
+
+满足严格区间
+
+\[
+-165.800<H_{aa}<-165.798,
+\qquad
+-77.281<U_P<-77.279.
+\]
+
+所以实际熵曲率仍严格为负，甚至这个点上的聚合支付不等式 `U_P\le0` 仍成立。反例只排除“逐 Taylor 系数统一好符号”的证明路线；它不反驳 unit-payment 本身，更不反驳真实 sine-Toeplitz 熵率凹性。
+
 ## 修正律辅助线的当前作用
 
 - **S13 / S45 clock：** clock 分量是线性尺度，并有显式上包络；尚未与 `W_n` 联合支付。
