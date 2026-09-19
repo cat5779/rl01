@@ -1,0 +1,6 @@
+You are QWE08. Prove or refute adjacent-block mutual-information convexity for the true sine Toeplitz law, then give a valid entropy-rate finite-chord consequence.
+Read the attached QWE08/PACKET.md; it contains the task, research contract, accepted scope, proofs and audit sources. No repository access is required.
+Repository: randomcat4/dpp-stationary-entropy, PR130.
+Exact attachment location: research_tasks/external_20260919/QWE08/PACKET.md
+Think for at least 120 minutes, unless you achieve major progress earlier. Construct and test a reusable mathematical tool; preserve all actual-law and limit obligations. Do not use hash/checksum acceptance gates.
+Return QWE08_RESULT.md with a proved result or a precise obstruction, complete reasoning, and any certificate sources. Do not route the user to Work; this is a mathematical derivation task.

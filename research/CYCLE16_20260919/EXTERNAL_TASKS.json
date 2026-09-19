@@ -1,0 +1,41 @@
+[
+  {
+    "id": "QWE07",
+    "title": "Transport the verified PSD witness across density",
+    "worktree": "C:\\game\\gameproject\\showa100\\math\\qwe07-20260919",
+    "branch": "research/external-qwe07-density-transport-20260919",
+    "base": "227f71d08a570a753c12d6c5d4eea239382901db",
+    "package": "research_tasks/external_20260919/QWE07",
+    "status": "OPEN_FOR_CLAIM",
+    "pr": 129,
+    "url": "https://github.com/randomcat4/dpp-stationary-entropy/pull/129",
+    "published_at": "2026-09-19T11:04:00.154505+08:00",
+    "remote_packet_read_back": true
+  },
+  {
+    "id": "QWE08",
+    "title": "Prove or refute true-block curvature superadditivity with a legal rate interface",
+    "worktree": "C:\\game\\gameproject\\showa100\\math\\qwe08-20260919",
+    "branch": "research/external-qwe08-curvature-superadditivity-20260919",
+    "base": "227f71d08a570a753c12d6c5d4eea239382901db",
+    "package": "research_tasks/external_20260919/QWE08",
+    "status": "OPEN_FOR_CLAIM",
+    "pr": 130,
+    "url": "https://github.com/randomcat4/dpp-stationary-entropy/pull/130",
+    "published_at": "2026-09-19T11:04:31.438759+08:00",
+    "remote_packet_read_back": true
+  },
+  {
+    "id": "QWE09",
+    "title": "Create a paid parity-ensemble curvature tool with correct finite and infinite conditioning",
+    "worktree": "C:\\game\\gameproject\\showa100\\math\\qwe09-20260919",
+    "branch": "research/external-qwe09-parity-ensemble-20260919",
+    "base": "227f71d08a570a753c12d6c5d4eea239382901db",
+    "package": "research_tasks/external_20260919/QWE09",
+    "status": "OPEN_FOR_CLAIM",
+    "pr": 131,
+    "url": "https://github.com/randomcat4/dpp-stationary-entropy/pull/131",
+    "published_at": "2026-09-19T11:04:36.846842+08:00",
+    "remote_packet_read_back": true
+  }
+]

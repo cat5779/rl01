@@ -1,0 +1,65 @@
+{
+  "user_decision": "Retain S67; release S62 reservation; add S69/S70 for3web plus QWE07-09 external.",
+  "dispatches": {
+    "S69": {
+      "attempt_count": 1,
+      "attempt_at": "2026-09-19T10:52:06.542203+08:00",
+      "status": "sent_once_success",
+      "id": "6aad85b1-4828-83ee-9a59-e5b941685f7a",
+      "sent_at": "2026-09-19T10:52:09.941960+08:00"
+    },
+    "S70": {
+      "attempt_count": 1,
+      "attempt_at": "2026-09-19T10:52:10.839396+08:00",
+      "status": "sent_once_success",
+      "id": "6aad85bf-2cc4-83ee-91a7-3bff4654a49c",
+      "sent_at": "2026-09-19T10:52:14.152043+08:00"
+    }
+  },
+  "external_tasks": {
+    "QWE07": {
+      "id": "QWE07",
+      "title": "Transport the verified PSD witness across density",
+      "worktree": "C:\\game\\gameproject\\showa100\\math\\qwe07-20260919",
+      "branch": "research/external-qwe07-density-transport-20260919",
+      "base": "227f71d08a570a753c12d6c5d4eea239382901db",
+      "package": "research_tasks/external_20260919/QWE07",
+      "status": "OPEN_FOR_CLAIM",
+      "pr": 129,
+      "url": "https://github.com/randomcat4/dpp-stationary-entropy/pull/129",
+      "published_at": "2026-09-19T11:04:00.154505+08:00",
+      "remote_packet_read_back": true
+    },
+    "QWE08": {
+      "id": "QWE08",
+      "title": "Prove or refute true-block curvature superadditivity with a legal rate interface",
+      "worktree": "C:\\game\\gameproject\\showa100\\math\\qwe08-20260919",
+      "branch": "research/external-qwe08-curvature-superadditivity-20260919",
+      "base": "227f71d08a570a753c12d6c5d4eea239382901db",
+      "package": "research_tasks/external_20260919/QWE08",
+      "status": "OPEN_FOR_CLAIM",
+      "pr": 130,
+      "url": "https://github.com/randomcat4/dpp-stationary-entropy/pull/130",
+      "published_at": "2026-09-19T11:04:31.438759+08:00",
+      "remote_packet_read_back": true
+    },
+    "QWE09": {
+      "id": "QWE09",
+      "title": "Create a paid parity-ensemble curvature tool with correct finite and infinite conditioning",
+      "worktree": "C:\\game\\gameproject\\showa100\\math\\qwe09-20260919",
+      "branch": "research/external-qwe09-parity-ensemble-20260919",
+      "base": "227f71d08a570a753c12d6c5d4eea239382901db",
+      "package": "research_tasks/external_20260919/QWE09",
+      "status": "OPEN_FOR_CLAIM",
+      "pr": 131,
+      "url": "https://github.com/randomcat4/dpp-stationary-entropy/pull/131",
+      "published_at": "2026-09-19T11:04:36.846842+08:00",
+      "remote_packet_read_back": true
+    }
+  },
+  "audit": "Claude audit read: n12 decomposition numerically reproduced; finite Toeplitz conditional kernels are not projections; superadditivity remains unproved and Fekete/Dini shortcut invalid. Full review/code and English digest included in QWE08/09.",
+  "new_local_tasks": 0,
+  "desktop_folder": "C:\\Users\\UIO\\Desktop\\20260907\\DPP_QWE07-QWE09_20260919",
+  "web_receipt": "S69 and S70 each sent once; both prompts visibly present in histories, no research reply yet. Slots remain reserved despite idle UI; no retry.",
+  "next": "Keep S67/S69/S70 reserved; no web resend. Await three independent external submissions QWE07-09 and send each result to existing sidebar Sol for separate review. S62 no longer reserves capacity; harvest a later reply without automatic restart."
+}

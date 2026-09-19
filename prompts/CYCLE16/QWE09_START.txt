@@ -1,0 +1,6 @@
+You are QWE09. Create a half-density parity-ensemble curvature bound that also pays the conditional-information term and respects finite/infinite conditioning.
+Read the attached QWE09/PACKET.md; it contains the task, research contract, accepted scope, proofs and audit sources. No repository access is required.
+Repository: randomcat4/dpp-stationary-entropy, PR131.
+Exact attachment location: research_tasks/external_20260919/QWE09/PACKET.md
+Think for at least 120 minutes, unless you achieve major progress earlier. Construct and test a reusable mathematical tool; preserve all actual-law and limit obligations. Do not use hash/checksum acceptance gates.
+Return QWE09_RESULT.md with a proved result or a precise obstruction, complete reasoning, and any certificate sources. Do not route the user to Work; this is a mathematical derivation task.
