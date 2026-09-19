@@ -19,7 +19,7 @@ S63 now has full independent proof and certificate acceptance in PR47: rho=1/3,c
 
 S68 full44-file source and independent complete appendix review have been received in PR48. Fixed-volume algebra, bounds and marginal transfer are verified within scope; joint limits/all-exterior/infinite sign remain open. Do not repeat fixed-volume coefficient work.
 
-Claude audit: finite n12 numerical decomposition reproduced, but its conditional kernels are contractions rather than projections. Actual adjacent-block MI convexity is the promising UNPROVED structural target. Fekete/Dini do not automatically establish derivative convergence or infer an interval theorem from one positive sample. See reviews/ for the full report, source, numerical log and English digest.
+Claude audit completed independently in RL01 PR50: finite n12 numerical decomposition reproduced, but its conditional kernels are contractions rather than projections. Actual adjacent-block MI convexity is the promising UNPROVED structural target. Fekete/Dini do not automatically establish derivative convergence or infer an interval theorem from one positive sample. See reviews/ for the full report, source, numerical log and English digest.
 
 Separate repository update: RL01 PR49 adds a scoped consecutive-Fourier coefficientwise obstruction; it is not a concavity counterexample. The caution is included in QWE08/09, with no additional message sent to running webpage jobs.
 

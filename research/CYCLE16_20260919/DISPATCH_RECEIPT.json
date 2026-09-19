@@ -61,5 +61,7 @@
   "new_local_tasks": 0,
   "desktop_folder": "C:\\Users\\UIO\\Desktop\\20260907\\DPP_QWE07-QWE09_20260919",
   "web_receipt": "S69 and S70 each sent once; both prompts visibly present in histories, no research reply yet. Slots remain reserved despite idle UI; no retry.",
-  "next": "Keep S67/S69/S70 reserved; no web resend. Await three independent external submissions QWE07-09 and send each result to existing sidebar Sol for separate review. S62 no longer reserves capacity; harvest a later reply without automatic restart."
+  "next": "Keep S67/S69/S70 reserved; no web resend. Await three independent external submissions QWE07-09 and send each result to existing sidebar Sol for separate review. S62 no longer reserves capacity; harvest a later reply without automatic restart.",
+  "claude_independent_review_pr": 50,
+  "claude_review_status": "Complete, remote OPEN/MERGEABLE PR50 verified: report, replay source and actual log. Findings copied into QWE08/09 and coordinator archive."
 }
