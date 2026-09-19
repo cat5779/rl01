@@ -94,4 +94,3 @@ OPENMP_FENV workers 8 bad 7
 ```
 
 因此审查重放在 `payment_prepare` 和 `payment_step` 的相关并行区入口显式调用 `fesetround(FE_UPWARD)`。修复后的原始浮点区间端点略有变化，但全部 `10^15` 外向整数端点、`10^8` 系数盒和最终有理证书保持完全一致。
-
