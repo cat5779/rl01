@@ -1,0 +1,29 @@
+=== exact_closure exit=0 ===
+SINE: exact Machin enclosure and degree-23 remainder proved
+ANALYTIC: trace/gap <= 1881/175 < 11; exp(11) < 60000 proved
+product_4 certified boxes 8 upper 0.00379638671875
+product_10 certified boxes 12 upper 4.460042147450633e-06
+Lebesgue_4 certified boxes 4 upper 2.625
+Lebesgue_10 certified boxes 12 upper 31.125060270440642
+ERROR density 40920957/50000000000 bias 27276183/7629394531250 nodal 3/3125000 TOTAL 3647592747897/3906250000000000 = 0.000933783743461632 < 1/1000
+PSD minimum eigenvalue 1169/10000 minimum improvement 8513/25000
+PAYMENT Bernstein size 11 x 9; minimum 17107889404629337/600000000000000000000 = 2.8513149007715563e-05
+PAYMENT minimum numerator floor at denominator 1e9 28513
+UPPER Bernstein size 11 x 5; minimum 125473547/200000000 = 0.627367735
+PROVED: P - (C0-1)d >= 1/25 and P <= 19 on the entire rectangle.
+=== supplied_guard_coverage exit=0 ===
+COVERAGE PROVED: 256 guard words, 1536 jobs, 1562 interior-disjoint closed leaves
+All 256 parameter rectangles exactly equal [21/1000,3/125] x [1/3,1009/3000].
+Completed-leaf inner nodes: 94459902 (excludes subdivided parent attempts).
+=== supplied_probe_postcheck exit=0 ===
+rho 17/50 a 3/125 P enclosure 1771884993/100000000 885942497/50000000
+exact budget 219737025/12358112 ; exact payment gap enclosure -2392165793337/38619100000000 -1196082703573/19309550000000 < 0
+gap outward integer enclosure: -6194256 -6194254 / 100000000
+rho 1/2 a 3/125 P enclosure -5268309089/50000000 -10536618177/100000000
+exact budget 651090475/37074336 ; exact payment gap enclosure -7121049533357497/57928650000000 -14242099065556421/115857300000000 < 0
+gap outward integer enclosure: -12292793866 -12292793864 / 100000000
+DISPROVED: unchanged-test sufficient payment at the two stated points.
+No entropy-concavity counterexample is asserted.
+=== reference_overlap exit=0 ===
+CONSISTENCY PASS: all five rho=1/3 nodal enclosures overlap S63 polynomial enclosures.
+S63 coefficient intervals and its 1e-6 tail allowance are used only in this cross-check.
