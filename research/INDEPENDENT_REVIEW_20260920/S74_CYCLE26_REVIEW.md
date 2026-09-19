@@ -4,7 +4,7 @@
 
 ## 总裁决
 
-**`VERIFIED_ANALYTIC_CORE / PAID_REGION_VALID_BUT_EXTREMELY_NARROW / AUTHOR_INTERVAL_ATTACHMENT_NOT_REPLAYED / MAIN_TARGET_INCOMPLETE`。**
+**`VERIFIED_ANALYTIC_CORE / AUTHOR_INTERVAL_CERTIFICATE_REPLAYED / PAID_REGION_VALID_BUT_EXTREMELY_NARROW / MAIN_TARGET_INCOMPLETE`。**
 
 正文的承重解析链通过独立验缝：cofactor 分部积分、条件 odds 表示、梯度算子范数、pinching/sign-conjugation cut 插值、无维度的二次 cut bound、相邻 merge tree 的单次收费、有限体积积分后再取熵值极限的弦桥，以及极稀疏/极稠密产品区域的显式常数，均成立。
 
@@ -16,7 +16,17 @@ F_N(a):=-H_N''(a)
 
 时一致。按此定义，(22)–(25) 的方向和系数正确；这是缺失定义，不是证明断裂。
 
-§6 的三个导出附件未提供，本审查没有执行作者的 directed-integer interval checker，也不认证其精确小数区间。独立 80 位 Decimal 重建得到
+补交的 `certify_mixed.py` 已完成静态安全审查并实际执行，退出码 0。由于作者源码把输出硬编码到 Linux 路径，本审查只重定向这一写出动作到系统临时文件，区间算术源码保持原样。重放 JSON 与补交的 `certificate.json` 逐字段完全一致。
+
+作者程序的 65 位定点区间运算符合外向取整要求：有理数、乘法、倒数和除法分别向下/向上包围；Machin 公式的两个 arctan 使用交错级数下一项余项；log 先缩放到 \([1,2]\)，再使用 atanh 正项级数及
+
+\[
+\frac{2z^{171}}{171(1-z^2)}
+\]
+
+尾界。division-free subset recurrence 对每个 determinant 做区间传播。程序在基点和整个 \([0,10^{-10}]^2\) diagonal rectangle 上各枚举 64 个 atoms，并逐个断言严格正；矩形输入使用 interval diagonal，因依赖丢失只会扩大包围，不会漏掉参数点。
+
+精确重放得到
 
 \[
 \mathcal M_{uv}(0,0)approx-0.00037909224204168601326327,
@@ -31,7 +41,14 @@ D_F\approx32.59075196032424485594,
 M_{3,3}''\approx13.74976747035326575133.
 \]
 
-这些中心值严格落在作者声称区间内；其中后三项还与 SolA PR63 的独立有限枚举一致。但该重建不是 outward interval certificate，因此 §6 的精确区间状态记为 `CORROBORATED_NOT_REPLAYED`，而不是“作者 checker 已执行”。
+这些区间与正文完全一致。作者程序还统一证明整个小矩形上
+
+\[
+\mathcal M_{uv}(u,v)<-3/10000,
+\qquad 0\le u,v\le10^{-10},
+\]
+
+从而 rectangle defect 小于 \(-3\times10^{-24}\)。独立 80 位 Decimal 重建和 SolA PR63 仍作为不同实现的交叉核对，而不再承担 exact interval 证书。
 
 正文没有把有限 Toeplitz compression 当成投影，也没有把一个负的 mixed Hessian 元素误写成 common identity direction 反例。全 \((0.925,1)\)、全部密度和全部合法偏置仍开放。
 
@@ -55,20 +72,20 @@ M_{3,3}''\approx13.74976747035326575133.
 | 一点 seed 区域 (28) | CORRECT | 对每个固定 \(c,\rho\) 和固定正 gap 紧区间成立 |
 | 产品区域 (29)–(30) | CORRECT_EXACT | \(\delta=1/50\)，\(\kappa_1\ge27353/8192\) |
 | 半密度两点 seed 预算 | CORRECTLY_FAILS_THIS_BUDGET | 只说明最坏 word 常数过贵，不说明 rate concavity 失败 |
-| 六点 mixed coordinate 负号 | CORROBORATED_NOT_REPLAYED | 独立高精度重建同号同中心值；作者 exact interval 附件缺失 |
-| 六点 \(C_{\rm acc}<0\)、\(M''>0\) | CROSS_CHECKED_DIAGNOSTIC | 与独立实现及 PR63 一致；不是 common-direction 反例 |
+| 六点 mixed coordinate 负号 | VERIFIED_EXACT_INTERVAL | 作者整数定点区间程序已由审查者执行，基点及整个小矩形均通过 |
+| 六点 \(C_{\rm acc}<0\)、\(M''>0\) | VERIFIED_EXACT_INTERVAL | 输出区间与下载证书、独立实现和 PR63 一致；不是 common-direction 反例 |
 | 全高对比度、任意 \(\rho\) | INCOMPLETE | 已证区域的密度宽度约 \(\delta^{12}\)，极窄 |
 
 ## 1. 冻结对象与证据边界
 
-完整读取 `S74_VISIBLE_RESULT.md` 全部 783 行。正文正常结束于 §7 final ledger，没有截尾。三个导出附件没有下载，按任务要求不以此阻塞解析证明审查。
+完整读取 `S74_VISIBLE_RESULT.md` 全部 783 行。正文正常结束于 §7 final ledger，没有截尾。初审时附件缺失；随后收到承重的 `certify_mixed.py` 与 `certificate.json`，现已补做安全审查和实际重放。
 
 本审查采用以下证据分层：
 
 1. 正文中可逐式复核的一般证明，独立判断正确性；
-2. 自行编写的标准库程序，复核有理常数、merge identity 和六点中心值；
-3. SolA PR63 只用于交叉核对同一六点基点的 \(D_F,C_{\rm acc},M''\) 数值，不把其浮点扫描升级为区间证明；
-4. 未取得的作者 interval checker 及其日志只记为作者声明。
+2. 作者整数定点 interval checker，认证 §6 的严格区间和小矩形 uniform sign；
+3. 自行编写的标准库程序，复核有理常数、merge identity 和六点中心值；
+4. SolA PR63 只用于交叉核对同一六点基点的 \(D_F,C_{\rm acc},M''\) 数值，不把其浮点扫描升级为区间证明。
 
 S73 不作为 S74 的证明输入。S71 只提供任务明确允许接受的 common identity Fisher inequality \(D_F\ge0\)。
 
@@ -289,25 +306,30 @@ B_{1/50}=865433616303812500000
 
 ## 8. 六点 mixed coordinate 与 common direction
 
-作者声称的 interval checker 附件不可用，故不能标记 `EXECUTED_BY_REVIEWER`。本审查从实际六点半密度 sine kernel 重新枚举 64 个 atoms，用 cofactor marginals 计算 \(\partial_1P,\partial_6P,\partial_1\partial_6P\)，得到负的 mixed coordinate 中心值。所有 atoms 在 80 位计算中为正，最小值约 \(2.02609\times10^{-4}\)。
+作者 interval checker 已标记 `EXECUTED_BY_REVIEWER`。其 `IV` 类型以整数端点表示 \(10^{-65}\) 网格：`//` 产生下界，`ceildiv` 产生上界；负区间倒数先取正后反号，四端点乘法覆盖符号变化。所有除法点均先由 atom positivity 或 \(z<1\) 断言排除零。
+
+Machin \(\pi\) 包围包含在相邻的第 55 位小数端点内。`log_iv` 利用 log 单调性分别计算输入区间两端；每个端点缩放至 \([1,2]\)，atanh 展开只累加正项并把几何尾上界加到上端。行列式用 subset Laplace recurrence，无除法和 pivot 分支。
+
+`atoms(6)` 对全部 64 个基点 atoms 逐个断言下端大于零并验证总质量区间包含 1。`atoms(6,rect=True)` 把第 1、6 个 diagonal coordinates 各替换为 \([0,10^{-10}]\) 增量，再次对全部 64 个 interval atoms 做同样检查。由这些 atom 区间生成的 marginal cofactor 导数、Fisher 项和 log 项虽有 dependency overestimation，但仍包含每个共同参数点，因此 uniform mixed bound 有效。
+
+本审查另从实际六点半密度 sine kernel 重新枚举 64 个 atoms，用 cofactor marginals 计算 \(\partial_1P,\partial_6P,\partial_1\partial_6P\)，得到相同中心值。独立实现中的最小 atom 约 \(2.02609\times10^{-4}\)。
 
 同一独立实现重建 common identity 分解，数值与作者区间及 PR63 同一点结果一致。证据关系必须保持：
 
 - 负的 \(\mathcal M_{uv}\) 只否定“每个 mixed diagonal 元素都非负”；
 - \(C_{\rm acc}<0\) 说明 acceleration 本身不可要求非负；
 - 同一点 \(D_F+C_{\rm acc}>0\)，所以它不是 \(M''<0\) 或 common identity convexity 的反例；
-- 80 位 Decimal 是强诊断，不替代缺失的 directed interval certificate。
+- directed interval checker 承担严格符号；80 位 Decimal 与 PR63 只承担跨实现核对。
 
 ## 9. 精确剩余义务
 
-1. 若要正式接纳 §6 的精确 decimal intervals，仍需取得并运行作者的 outward interval checker，或另写可审计的独立区间实现。
-2. 把 worst-word \(B_\delta\) 替换为能利用输出平均、局部 cut 结构或 Fisher cancellation 的可支付常数。
-3. 在固定正密度，特别是 \(\rho=1/2\)，找到满足
+1. 把 worst-word \(B_\delta\) 替换为能利用输出平均、局部 cut 结构或 Fisher cancellation 的可支付常数。
+2. 在固定正密度，特别是 \(\rho=1/2\)，找到满足
    \[
    f_L>B_\delta c^2D_{\rho,L}/2
    \]
    的 seed，或证明更强的直接 rate chord inequality。
-4. 覆盖 \(74/77<c<1\) 以及一般 \(\rho\) 时，不能把当前极窄 density theorem 写成全高对比度结论。
-5. 保持对象边界：有限 Toeplitz compression 是 contraction；negative mixed coordinate 不是总方向反例。
+3. 覆盖 \(74/77<c<1\) 以及一般 \(\rho\) 时，不能把当前极窄 density theorem 写成全高对比度结论。
+4. 保持对象边界：有限 Toeplitz compression 是 contraction；negative mixed coordinate 不是总方向反例。
 
 最终状态：**S74 证明了一个真实、全尺寸、无维度但常数极保守的 acceleration cut bound，并把累计成本精确压到 leakage；它由此得到一个正确但极窄的 rate-concavity 产品区域，没有解决原全区间问题。**

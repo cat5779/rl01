@@ -2,9 +2,35 @@
 
 复现日期：2026-09-20（Asia/Singapore）
 
-## 1. 作者附件状态
+## 1. 作者 interval checker 实际重放
 
-三个导出附件未出现在本地来源目录中。本审查没有作者 checker 的可执行源，故没有作者程序的安全扫描、命令、退出码或原始日志。正文中“executed successfully”只记录为作者声明。
+用户后补 `certify_mixed.py` 和 `certificate.json`。静态检查确认程序没有网络、子进程、动态执行、反序列化或输入读取；唯一写操作是硬编码的 `/mnt/data/S74/certificate.json`。
+
+为保持作者计算源码原样并避免在 Windows 根目录造路径，审查运行通过 `runpy` 执行原文件，只用受限 `open` wrapper 把该一个输出路径重定向到系统临时文件。Python 进程退出码为 0，全部断言通过。实际标准输出见 `S74_CYCLE26_AUTHOR_INTERVAL_REPLAY.log`。
+
+重放结果与下载的 `certificate.json` 逐字段完全一致。
+
+### 外向区间审计
+
+- `IV.q` 使用 floor/`ceildiv` 包围有理数；乘法检查四个端点；倒数按符号分支并反向端点；所有后续运算保持外向。
+- `arctan_inv` 的第 90 项截断后按下一项符号和大小加入交错级数余项。Machin 线性组合继续用区间减法。
+- `log_atanh_unit` 在 \(1\le x\le2\) 上使用正项 atanh 展开，85 项后的上尾由
+  \[
+  2z^{171}/[171(1-z^2)]
+  \]
+  包住；`log_iv` 利用单调性分别包围输入区间两端。
+- determinant 是 division-free subset Laplace recurrence，全部矩阵项使用同一 interval 类型。
+- `atoms(6)` 和 `atoms(6,rect=True)` 分别枚举基点与矩形上的 64 个 interval atoms；两轮均逐 atom 断言下端严格正，并验证总质量区间包含 1。
+- rectangle 模式对第 1、6 个 diagonal entries 各加入 \([0,10^{-10}]\)。dependency 丢失只使区间变宽，因此输出包含每个 \((u,v)\) 参数点。
+
+实际证明的 uniform bound 为
+
+\[
+\mathcal M_{uv}(u,v)<-3/10000
+\quad(0\le u,v\le10^{-10}),
+\]
+
+从而双积分 rectangle defect 小于 \(-3\times10^{-24}\)。
 
 ## 2. 独立程序
 
@@ -77,11 +103,11 @@ K=\tfrac12I+\frac{19}{20\pi}T.
 
 独立中心值逐位进入正文声称区间，并与 PR63 的 `D_F,C_acc,M''` 浮点输出一致。
 
-本实现使用高精度 Decimal，但没有 outward rounding 和解析 remainder enclosure。因此它是独立数值重建，不是对作者 interval certificate 的替代执行。
+本实现使用高精度 Decimal，但没有 outward rounding 和解析 remainder enclosure。因此它只作跨实现核对；严格区间由已经重放的作者 checker 承担。
 
 ## 6. 证据结论
 
 - 一般 cut theorem、merge accounting 和 rate bridge：由解析审查支持。
 - 产品区域系数：由精确有理计算支持。
-- 六点符号：强力独立 corroboration；exact interval 附件仍未重放。
+- 六点符号与小矩形：作者 directed fixed-point interval checker 已实际重放，退出码 0；独立 Decimal 和 PR63 提供交叉核对。
 - 全高对比度和全部密度：没有证书。

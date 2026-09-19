@@ -8,20 +8,27 @@
 
 按任务要求，本审查不使用 SHA 或任何哈希作为验收条件。
 
-## 缺失附件
+## 后补附件与执行状态
 
-可见稿引用三个导出附件，但附件未下载到审查环境。因此：
+初审时三个导出附件均不可用。随后用户补交：
 
-- 没有执行作者的 directed-integer interval checker；
-- 没有执行作者声称的 34-kernel 浮点诊断；
-- 没有把稿内“executed successfully”转换成审查者执行记录。
+- `C:/Users/UIO/Desktop/20260907/certify_mixed.py`；
+- `C:/Users/UIO/Desktop/20260907/certificate.json`。
 
-附件缺失不影响 §2–§5 和 §7 的逐式解析审查。§6 的严格 interval bounds 则只能保留为作者声明，并由独立高精度重建作非区间交叉核对。
+作者 checker 已完成静态安全审查并实际执行，退出码 0。其唯一外部副作用是向硬编码的 `/mnt/data/S74/certificate.json` 写结果；审查运行仅把这一路径重定向到系统临时文件，计算源码未改。重放 JSON 与下载证书逐字段完全一致。
+
+作者源码、下载证书和实际运行日志分别归档为：
+
+- `S74_CYCLE26_AUTHOR_INTERVAL_CHECK.py`；
+- `S74_CYCLE26_AUTHOR_CERTIFICATE.json`；
+- `S74_CYCLE26_AUTHOR_INTERVAL_REPLAY.log`。
+
+未补交的 34-kernel 浮点诊断附件不影响主解析定理，也不再是 §6 interval certificate 的缺口。
 
 ## 可用交叉材料
 
-- SolA RL01 PR63 提供同一半密度六点、`c=.95`、中点、`3+3` 分割的独立有限枚举；其 `D_F`、`C_acc` 和 `M''` 与本次重建一致。
-- PR63 是浮点诊断，不是 S74 mixed-coordinate rectangle 的 exact interval certificate。
+- SolA RL01 PR63 提供同一半密度六点、`c=.95`、中点、`3+3` 分割的独立有限枚举；其 `D_F`、`C_acc` 和 `M''` 与作者区间及本次重建一致。
+- PR63 仍只作跨实现浮点核对；S74 作者 checker 现已承担 mixed-coordinate rectangle 的 exact interval certificate。
 - S73 不作为 S74 的证明输入。
 
 ## 本审查新增证据
