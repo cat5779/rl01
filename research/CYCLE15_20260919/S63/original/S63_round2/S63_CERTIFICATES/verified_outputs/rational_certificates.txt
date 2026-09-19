@@ -1,0 +1,7 @@
+ALPHA: PASS, both 19- and 60-place brackets, exact rational comparisons.
+BERNSTEIN: PASS, degree 11 all coefficients > 1/40000.
+Bernstein lower-bound numerators, common denominator 10^9: [29091, 47114, 61938, 73573, 82033, 87328, 89474, 88485, 84380, 77175, 66890, 53546]
+PAYMENT UPPER: PASS, P(a)<19 on [21/1000,3/125].
+MOVING-LAW TAIL: PASS, <1/10^8; declared remainder 1/10^6.
+PSD: PASS, 256 affine matrices, both interval endpoints (hence the interval).
+RATIONAL CERTIFICATES: ALL PASS.
