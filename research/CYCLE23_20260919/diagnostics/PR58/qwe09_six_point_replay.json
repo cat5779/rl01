@@ -1,0 +1,81 @@
+{
+  "certificate": {
+    "arithmetic": "integer dyadic intervals with outward rounding",
+    "precision_bits": 256,
+    "pi_series_terms_each": 96,
+    "log_series_terms_each": 384,
+    "inputs": {
+      "rho": "1/2",
+      "c": "19/20",
+      "a": "1/40",
+      "n": 6,
+      "observed_sites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "observed_word": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "core_sites": [
+        2,
+        3
+      ],
+      "revealed_site": 5
+    },
+    "enclosures": {
+      "pi": [
+        "3.141592653589793238",
+        "3.141592653589793239"
+      ],
+      "observed_word_probability": [
+        "0.014232864029787238",
+        "0.014232864029787239"
+      ],
+      "Pr_Y5_eq_1_given_word": [
+        "0.291967352633421847",
+        "0.291967352633421848"
+      ],
+      "full_potential_Jensen_gap": [
+        "-0.106585307859143407",
+        "-0.106585307859143406"
+      ],
+      "cross_potential_Jensen_gap": [
+        "-0.096395465271827624",
+        "-0.096395465271827623"
+      ],
+      "quadratic_variation": [
+        "0.170309619791317635",
+        "0.170309619791317636"
+      ],
+      "necessary_full_potential_payment_coefficient": [
+        "0.625832574752639508",
+        "0.625832574752639509"
+      ]
+    },
+    "strict_rational_bounds": {
+      "full_gap": [
+        "-107/1000",
+        "-106/1000"
+      ],
+      "cross_gap": [
+        "-97/1000",
+        "-96/1000"
+      ],
+      "variance": [
+        "170/1000",
+        "171/1000"
+      ],
+      "necessary_payment": [
+        "5/8",
+        "626/1000"
+      ]
+    }
+  }
+}

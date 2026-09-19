@@ -1,0 +1,7 @@
+# Cycle23 diagnostic update — NOT a new theorem
+
+The separate existing Sol completed actual-reveal diagnostics, published in RL01 PR58. The exact old six-site obstruction was independently recovered. For 48 finite parameter/geometry records (rho=.5,n=6,8,10,12,c=.95/.99,p_noise=.25/.5/.75,two small core geometries), the actual weighted signed reveal gains E DeltaPhi and E DeltaChi were positive in every floating-point test. The largest actual-weighted negative-part ratios were approximately .00331875237 and .00701215368; the largest wordwise negative ratios were approximately3.64463733 and1.76019146.
+
+These are finite floating diagnostics, NOT all-size or continuous-parameter inequalities. Positive unconditional gains do not negate the exact negative conditional-word example. The observed gap between broad Hessian bounds and actual reveal directions motivates a direction-adapted estimate, but does not prove which source of loss dominates outside the tested family. The proposed constants1/300,1/140 or signed gains3/4,9/100 are CANDIDATES requiring proof or falsification, not accepted assumptions. Preserve all actual word weights and test larger/other geometries before any universal use.
+
+The report, reproducible source, execution receipt and full results are preserved under sources/PR58/ in this task and research/CYCLE23_20260919/diagnostics/PR58/ in RL01 PR54. This update changes no task target. No new message was sent to S72; its published packet was supplemented without interrupting the active research.
