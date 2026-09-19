@@ -1,0 +1,2 @@
+EXACT_ALPHA_PASS
+EXACT_CONTINUUM_PASS {"eta": "1/5", "M": "21", "G_leaves": 1, "G_min_floor_1e12": 667751932, "upper_leaves": 1, "tail": 2.286298981977474e-08}

@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-19T15:35:23.850629+08:00",
+  "S70": "VERIFIED_SCOPED_PR53",
+  "S69": "review_resume_requested_after_empty_completed_no_report",
+  "S67_continuation": "visible_reply_only_AUTHOR_ONLY_MAIN_INCOMPLETE",
+  "missing_sources": [
+    "S67 continuation full manuscript/certificate ZIP"
+  ],
+  "new_web_sends": 0,
+  "global_theorem": "INCOMPLETE"
+}
