@@ -1,0 +1,7 @@
+
+## S74 independent audit — RL01 PR64
+
+VERIFIED_ANALYTIC_CORE / PAID_REGION_VALID_BUT_EXTREMELY_NARROW / AUTHOR_INTERVAL_ATTACHMENT_NOT_REPLAYED / MAIN_TARGET_INCOMPLETE.
+Accepted: dimension-free quadratic cut acceleration estimate, exact merge-tree charge, integrated finite-to-rate chord bridge and sparse/dense parameter region. Exposition correction: define F_N=-H_N'' before equation22.
+Explicit paid product region: c in[37/40,19/20], a in[1/50,3/100], 0<min(rho,1-rho)<=1e-21. Uniform gap1/50 yields kappa1>=27353/8192 and rate chord coefficient27353/16384. General sufficient density condition rho(1-rho)<4delta^12/(3c^2) is valid for each fixed contrast and compact legal bias interval; it does not cover every density or all legal biases for a fixed density.
+The half-density two-site budget fails, not the entropy conjecture. Independent80-digit six-site reconstruction corroborates negative mixed-coordinate and acceleration values, with positive total MI curvature, but is not an outward interval certificate. Author attachments remain missing; their exact decimal interval claims are CORROBORATED_NOT_REPLAYED. No hash gate. Full(0.925,1) target remains incomplete. No webpage message sent.
