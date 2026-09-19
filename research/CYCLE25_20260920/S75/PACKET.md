@@ -844,8 +844,7 @@ Source: research/CYCLE25_20260920/reviews/PR61/S72_CYCLE24_REVIEW.md
 凹性。
 
 输入文件为
-`S72_VISIBLE_RESULT.md`，SHA256
-`49C2FBFB639024C3A6CCDCA8BFE5ECFFAEC107F638C0ABBA9AE25402480DA877`。
+`S72_VISIBLE_RESULT.md`。
 引用卡片对应的附件在当前环境不可取得，因此本审查没有声称重跑作者的
 随机诊断；我从可见正文独立重建了代数，并另写了真实正弦核全输出枚举。
 
