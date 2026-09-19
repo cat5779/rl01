@@ -75,7 +75,8 @@
       "bytes": 491
     }
   ],
-  "S63": "New round2 package, despite CYCLE11 filename;17 original files including full manuscript,256 witness pairs,certificate source and recorded outputs. Source intake does not certify correctness.",
+  "S63": "New round2 package, despite CYCLE11 filename;Original files including full manuscript,256 witness pairs,certificate source and recorded outputs. Source intake does not certify correctness.",
   "S68": "Main RESULT.md only. Referenced APPENDIX_BOUNDS.md, APPENDIX_PROJECTION.md, SOURCE_AUDIT.md and original44-file package not received. Review received proofs separately from missing sources.",
   "hash_gate": false
 }
+
