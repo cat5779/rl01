@@ -2814,3 +2814,279 @@ strict signs. `QWE09_CYCLE22_SIX_SITE_CHECK.py` is an independent 100-digit
 Decimal cross-check. The finite-\(n\) NumPy residuals and the displayed
 short-window values are diagnostics only: they test implementation identities
 but prove neither the continuum comparison nor the target sign.
+
+
+---
+# Cycle24 external diagnostic source update
+
+QWE09 round2 and independent PR59 are now received. Their new wordwise/pairwise obstructions are independently reproduced finite diagnostics, not aggregate sign theorems or entropy-rate counterexamples. No task target changes. Full source and independent reproducer are archived in research/CYCLE24_20260919/QWE09_ROUND2/.
+
+
+## ROUND2_FINDINGS.md
+
+# QWE09 ROUND2 — concavity attack checkpoint
+
+Date: 2026-09-19. Repository: randomcat4/dpp-stationary-entropy, PR131.
+
+## Findings first
+
+1. **The target concavity question is still open, but several tempting stronger routes have now been falsified.** No new entropy-rate concavity theorem is claimed in this checkpoint.
+
+2. **Actual-model zero-payment Jensen remains false.** The first-round strict six-site true sine-Toeplitz certificate at `rho=1/2, c=19/20, a=1/40` gives:
+
+   - `Delta_Phi in [-0.106585307859143407, -0.106585307859143406]`
+   - `Delta_Chi in [-0.096395465271827624, -0.096395465271827623]`
+   - quadratic variation `Q in [0.170309619791317635, 0.170309619791317636]`
+
+   Hence a one-step payment coefficient for the complete potential must exceed about `0.6258326` on this word. This is a counterexample to uncharged conditional Jensen, not to entropy concavity.
+
+3. **Wordwise negativity is false in the true Toeplitz model.** In direct true half-density sine-Toeplitz finite probes, every tested pointwise complete-potential value remained nonnegative through `n=11`, but at `n=12` the minimum was approximately `-6.3854`, with 14 negative output words. Larger tested volumes produced more negative words. Therefore a proof that requires every output word to have the favorable sign cannot establish the target.
+
+4. **Pairwise mixed-curvature negativity is false for general bipartite projection/contraction models.** A random bipartite projection/contraction probe produced a positive individual even-odd pair contribution of approximately `0.157821`. Therefore the target cannot be reduced to proving every even-odd pair contribution is separately nonpositive in the ambient contraction class.
+
+5. **The aggregate mixed direction remains numerically promising.** In 320 random bipartite projection/contraction Hessian probes, the common curvature direction stayed negative in the tested samples, while the largest aggregate mixed-parity Hessian encountered was only at numerical-zero scale (about `1e-14`). This is diagnostic evidence only; it is not a sign theorem.
+
+6. **The first-round transfer mechanism has not yet shown a fatal contradiction in the second-round audit, but its constants are too loose to certify `c=.95, a in [.02,.03]`.** The load-bearing items still deserving independent proof audit are the dimension-independent Hessian summation, the observation-domain compensation, and the effective all-exterior rate.
+
+7. **The most plausible next structural target is aggregate parity compensation, not pointwise or pairwise sign.** The route now being pursued is a bound on the full even-odd mixed curvature (or an equivalent parity-conditioned ensemble quantity) that uses the joint bipartite geometry and retains the conditional-information remainder.
+
+## What the probes rule out
+
+### A. No wordwise sign proof
+
+A sufficient statement of the form
+
+`Phi(G_y) >= 0 for every actual output word y`
+
+is incompatible with the true Toeplitz finite model. The `n=12` negative words appear in the actual model, not in an arbitrary table relaxation.
+
+This does **not** imply `E Phi(G_Y) < 0` or failure of entropy concavity. It only removes a stronger pointwise mechanism.
+
+### B. No universal pair-by-pair mixed sign in the ambient bipartite class
+
+A statement of the form
+
+`each even-odd pair contribution <= 0`
+
+fails for general random bipartite projections/contractions. Positive individual pairs can coexist with a favorable aggregate mixed Hessian.
+
+Thus any successful proof must permit compensation between pairs, between words, or through a matrix/ensemble inequality.
+
+### C. No free conditional Jensen
+
+The rigorous six-site example already shows that the complete log-curvature potential can decrease after revealing an additional coordinate. A valid martingale/Bellman route must pay this decrease by a quadratic-variation or Fisher-type term. The first-round manuscript uses such a payment; the second round is testing whether the remaining mixed term can be controlled sharply enough for the target interval.
+
+## Current structural decomposition being attacked
+
+At half density, define the two-shift entropy
+
+`H_n(s,t) = H(DPP(c Q_n + s P_E + t P_O)).`
+
+Along the common shift `s=t=a`,
+
+`H_n''(a) = H_ss(a,a) + 2 H_st(a,a) + H_tt(a,a).`
+
+The accepted contrast-`37/40` finite-contraction baseline pays the two pure parity directions after the observed-parity conditioning rewrite. The remaining obstruction is therefore quantitative control of the aggregate mixed term `H_st(a,a)`, equivalently the full even-odd part of the complete curvature potential under the actual law.
+
+The second-round probes indicate that the needed statement, if true, is likely an **aggregate** bipartite inequality. Both stronger candidates have been falsified:
+
+- every actual word has favorable sign;
+- every even-odd pair has favorable sign.
+
+## Candidate proof interfaces
+
+1. **Bipartite matrix inequality.** Seek a bound on the complete mixed log-curvature potential as a single function of the cross block, rather than a sum of independently signed pairs.
+
+2. **Conditional-expectation geometry.** Use the actual inverse-score matrix martingale to compare coarse and fine parity observations, but retain the necessary quadratic payment demonstrated by the six-site counterexample.
+
+3. **Parity-conditioned contraction representation.** For finite Toeplitz windows, use the correct positive contraction
+
+   `B_x = I/2 + (1/2) U* diag(1-2x) U`
+
+   with `U` merely contractive. Do not replace it by a projection. The exact unitary/projection representation belongs only to the full infinite projection or matching finite cyclic projection.
+
+4. **Combined conditional-information accounting.** Work with
+
+   `H(Y_O | Y_E) = E_{X_E} H(Y_O | X_E) + I(X_E ; Y_O | Y_E)`
+
+   so the information remainder is differentiated together with the ensemble term. No separate concavity of the information term is assumed.
+
+## Numerical status and scope
+
+The random projection/contraction tests and the `n=12` wordwise test were exploratory finite computations. They are useful falsification evidence but are **not** interval certificates, all-`n` theorems, or entropy-rate statements.
+
+The current runtime no longer retains the temporary round-2 probe scripts from the interrupted session, so this checkpoint records the recoverable outputs and their logical role only. The strict six-site Jensen obstruction remains reproducible from the committed first-round certificate code.
+
+## Current verdict
+
+**DISPROVED:** wordwise favorable sign as a universal true-Toeplitz proof mechanism; pairwise favorable mixed sign in the general bipartite projection/contraction class; zero-payment conditional Jensen for the complete potential.
+
+**SUPPORTED ONLY NUMERICALLY:** favorable sign of the aggregate mixed direction across the tested bipartite ensembles.
+
+**INCOMPLETE:** strict entropy-rate concavity for `rho=1/2, c=19/20, a in [1/50,3/100]`.
+
+The next load-bearing goal is a proved aggregate parity-mixed curvature inequality with explicit slack large enough to combine with the pure-parity baseline and the finite-to-true response transfer.
+
+
+## QWE09_ROUND2_REVIEW.md
+
+# QWE09 Round 2 独立复现审查
+
+审查日期：2026-09-19（Asia/Singapore）
+
+冻结来源：[`randomcat4/dpp-stationary-entropy` PR #131](https://github.com/randomcat4/dpp-stationary-entropy/pull/131)，head `bb9a95edc49a34f45775c011cb35f33b5c0f4d23`。
+
+## 裁决
+
+**`PASS_SCOPED_DIAGNOSTIC / MAIN CONCAVITY TARGET STILL INCOMPLETE`。**
+
+第二轮新增的可证伪声称均已从公开定义独立复现，不需要原服务器实例、临时脚本或随机种子：
+
+1. 在真实半密度 sine-Toeplitz 有限模型中，逐 word 的 `Phi>=0` 从 `n=12` 开始失败；
+2. 在合法的二部投影模型中，单个偶奇 pair 的混合曲率贡献可以严格为正；
+3. 一组全新、固定随机种子的 320 个二部投影/收缩探针再次呈现“共同方向为负、聚合混合方向未见正值、但单 pair 经常为正”的同一数值图景；
+4. 第一轮六点真实 word 对零支付条件 Jensen 的严格反例，已经在前一份独立审查中由外向区间程序和独立 Decimal 实现双重复现。
+
+因此，作者第二轮关于两条更强证明路线被否定的结论可以通过。第三项仍只能保留为探索诊断，不能升级为聚合符号定理。作者继续把
+
+\[
+\rho=\frac12,\qquad c=\frac{19}{20},\qquad
+a\in\left[\frac1{50},\frac3{100}\right]
+\]
+
+上的严格熵率凹性标为 `INCOMPLETE`，范围表述正确。
+
+## 冻结增量与验收口径
+
+第一轮冻结提交是 `d67db7fd...`。第二轮到 `bb9a95e...` 只增加：
+
+- `results/ROUND2_FINDINGS.md`；
+- `results/QWE09_RESULT.md` 顶部的 14 行第二轮摘要。
+
+作者明确说明临时探针脚本已随服务器实例清空，并把对应结果降级为探索数值。依用户给定口径，本审查不要求恢复原日志；验收问题是：公开声称能否由独立实现重新得到。答案为“能”。
+
+## 1. 真实 Toeplitz 的逐 word 符号失败
+
+独立程序直接构造
+
+\[
+Q_n(i,j)=
+\begin{cases}
+1/2,&i=j,\\
+\sin(\pi(i-j)/2)/(\pi(i-j)),&i\ne j,
+\end{cases}
+\qquad K_n=aI+\frac{19}{20}Q_n.
+\]
+
+对全部 `2^n` 个 word `y`，从定义重算
+
+\[
+G_y=\bigl(K_n-\operatorname{diag}(1-y)\bigr)^{-1}
+\]
+
+以及 ordered-pair 完整势 `Phi(G_y)`。没有导入作者的 `QWE09_checks.py`。
+
+在 `a=1/40` 时得到：
+
+| `n` | `min_y Phi(G_y)` | 负 word 数 |
+|---:|---:|---:|
+| 10 | `2.9624046121038496` | 0 |
+| 11 | `0.2737787380254857` | 0 |
+| 12 | `-6.385418176574598` | 14 |
+| 13 | `-18.90527988714043` | 22 |
+| 14 | `-25.057769153301273` | 76 |
+
+`n=12` 的最小 word（按站点 `0,1,...,11` 顺序）是
+
+```text
+011100001110
+```
+
+14 个负值中最接近零者仍为 `-1.2164387819398115`，而最小非负值为 `1.3282966798295912`，不存在浮点零附近的分类歧义。
+
+端点也给出相同断点：
+
+| `a` | `n=11` 最小值 / 负数 | `n=12` 最小值 / 负数 |
+|---:|---:|---:|
+| `1/50` | `0.016903614496854985 / 0` | `-7.263088505954002 / 14` |
+| `3/100` | `0.016903614496730363 / 0` | `-7.263088505953928 / 14` |
+
+故“所有真实 word 都有有利符号”这条证明路线确实失败。该反例不决定实际概率加权后的 `E Phi` 符号。
+
+## 2. 单 pair 混合符号失败
+
+为了不依赖作者丢失的随机见证，独立构造一个四点秩二投影。令
+
+\[
+\theta=0.0733179141207703,
+\qquad
+U=\begin{pmatrix}
+\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta
+\end{pmatrix},
+\]
+
+\[
+Q=\frac12\begin{pmatrix}I_2&U\\U^T&I_2\end{pmatrix}.
+\]
+
+因为 `U` 正交，直接相乘得 `Q^2=Q`；所以这是合法的二部投影，不是表格松弛。取 `K=aI+cQ`、`a=1/40,c=19/20`，枚举全部 16 个实际输出原子，并用
+
+\[
+H_{st}^{(i,j)}=-\mathbb E f_{ij}(G_Y)
+\]
+
+定义单 pair 的混合曲率贡献。结果是
+
+\[
+\bigl(H_{st}^{(i,j)}\bigr)=
+\begin{pmatrix}
+-13.17828732572662&\mathbf{+0.15782100000000002}\\
+\mathbf{+0.1578209999999999}&-13.178287325726632
+\end{pmatrix}.
+\]
+
+原子总质量误差为 `2.22e-16`，`Q` 的数值特征值为两枚零、两枚一。正 pair 距零足够远，严格否定“每个偶奇 pair 都非正”的普遍命题；同时总混合项仍为
+
+\[
+H_{st}=-26.04093265145325<0.
+\]
+
+这恰好说明为何只能寻求 pair 之间的聚合补偿。
+
+## 3. 320 个全新聚合探针
+
+独立探针使用固定种子 `20260919`，在二部块大小 `2+2` 与 `3+3` 上各取 160 个模型。交替包含随机正交投影和奇异值位于 `[0,1]` 的随机收缩，并加入 `U=0` 基线。全部原子均从行列式公式重新枚举。
+
+结果：
+
+```text
+common curvature range          [-198.15786767231728, -16.0]
+aggregate mixed range          [-37.63094629356886, -0.0]
+positive aggregate count       0 / 320       (threshold 1e-10)
+models with a positive pair    121 / 320     (threshold 1e-10)
+largest positive pair          0.3408482586994143
+maximum mass residual          8.881784197001252e-16
+```
+
+这独立复现了作者报告的质性现象，但不能证明所有二部投影/收缩的聚合混合方向非正。`U=0` 给出数值零上界；“最大值约 `1e-14`”与“最大值为浮点零”在这里具有相同的诊断意义，不是严格裕量。
+
+## 4. 六点 Jensen 反例与最终边界
+
+第二轮沿用了第一轮六点反例，没有新增其数学内容。此前审查已独立得到
+
+```text
+Delta_Phi in [-0.106585307859143407,-0.106585307859143406]
+Delta_Chi in [-0.096395465271827624,-0.096395465271827623]
+-Delta_Phi/Q in [0.625832574752639508,0.625832574752639509]
+```
+
+所以零支付条件 Jensen 仍为严格假命题。它不排除带二次变差支付的比较，不给出无条件平均符号，也不是熵率非凹反例。
+
+最终可接受状态是：
+
+- `DISPROVED`：逐 word 有利符号；一般二部类中的逐 pair 有利符号；零支付条件 Jensen；
+- `REPRODUCED_DIAGNOSTIC_ONLY`：所测聚合混合方向保持非正；
+- `INCOMPLETE`：目标参数盒上的严格熵率凹性，以及整个高对比度区间。
+
+服务器实例被清空不影响以上裁决，因为两个否定性结论已有新的、显式且可重跑的独立见证。
