@@ -24,7 +24,7 @@ Q_rho(i,i)=rho, Q_rho(i,j)=sin(pi*rho*(i-j))/(pi*(i-j)); Q_{rho,n} is a true fin
 
 S71 owns adjacent-block mutual-information/chord superadditivity. S70 was assigned the parity-ensemble combined sign problem. Your distinct responsibility is to replace QWE09's UNUSABLY LARGE observation/truncation payment by a new actual-reveal geometry or multiscale inequality. Do not re-prove those other tasks, repeat the accepted transfer theorem, or merely refine the same envelope by a small factor.
 
-QWE09's self-contained 903-line proof was independently reviewed in the attached report. The stated fixed-positive-gap Hessian/martingale/tail interface is CORRECT within its scope, but does not prove concavity. Its separate public review publication is being finalized. Treat its exact statements as scoped inputs; read the proof whenever extending them. Imported S55 arbitrary-contraction baseline belongs only to its documented use. External novelty has not been certified.
+QWE09's self-contained 903-line proof was independently reviewed in the attached report. The stated fixed-positive-gap Hessian/martingale/tail interface is CORRECT within its scope, but does not prove concavity. Its separate independent review is published in RL01 PR57. Treat its exact statements as scoped inputs; read the proof whenever extending them. Imported S55 arbitrary-contraction baseline belongs only to its documented use. External novelty has not been certified.
 
 ## Exact object, existing interface, and loss
 

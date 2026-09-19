@@ -12,7 +12,7 @@ Q_rho(i,i)=rho, Q_rho(i,j)=sin(pi*rho*(i-j))/(pi*(i-j)); Q_{rho,n} is a true fin
 
 S71 owns adjacent-block mutual-information/chord superadditivity. S70 was assigned the parity-ensemble combined sign problem. Your distinct responsibility is to replace QWE09's UNUSABLY LARGE observation/truncation payment by a new actual-reveal geometry or multiscale inequality. Do not re-prove those other tasks, repeat the accepted transfer theorem, or merely refine the same envelope by a small factor.
 
-QWE09's self-contained 903-line proof was independently reviewed in the attached report. The stated fixed-positive-gap Hessian/martingale/tail interface is CORRECT within its scope, but does not prove concavity. Its separate public review publication is being finalized. Treat its exact statements as scoped inputs; read the proof whenever extending them. Imported S55 arbitrary-contraction baseline belongs only to its documented use. External novelty has not been certified.
+QWE09's self-contained 903-line proof was independently reviewed in the attached report. The stated fixed-positive-gap Hessian/martingale/tail interface is CORRECT within its scope, but does not prove concavity. Its separate independent review is published in RL01 PR57. Treat its exact statements as scoped inputs; read the proof whenever extending them. Imported S55 arbitrary-contraction baseline belongs only to its documented use. External novelty has not been certified.
 
 ## Exact object, existing interface, and loss
 
@@ -55,7 +55,7 @@ Return English RESULT.md (or the same complete text in chat) with exact theorem/
 
 # Complete source attachments
 
-Current task overrides historical assignment/status instructions in sources.
+Independent QWE09 review PR57 is the latest verdict. Current task supersedes historical assignment prose.
 
 
 ---
@@ -627,11 +627,102 @@ if __name__ == '__main__':
 
 
 ---
+## QWE09_CYCLE22_REPLAY.md
+
+# QWE09 Cycle22 重放记录
+
+## 冻结输入
+
+```text
+DPP PR: 131
+head: d67db7fdaf8a15b492807745d10ac3b75706690a
+QWE09_RESULT.md: 903 lines
+Python: 3.12.14
+```
+
+全部命令在原件的隔离读取环境运行；没有修改来源文件。
+
+## 作者精确证书重放
+
+命令：
+
+```text
+python QWE09_checks.py --certificate
+```
+
+真实退出状态：`0`。重新生成的字典与 `QWE09_certificate.json` 的 `certificate` 对象逐项相等：
+
+```text
+CERTIFICATE_MATCH True
+
+observed word probability
+  [0.014232864029787238,0.014232864029787239]
+conditional q
+  [0.291967352633421847,0.291967352633421848]
+full Jensen gap
+  [-0.106585307859143407,-0.106585307859143406]
+cross Jensen gap
+  [-0.096395465271827624,-0.096395465271827623]
+quadratic variation
+  [0.170309619791317635,0.170309619791317636]
+necessary payment coefficient
+  [0.625832574752639508,0.625832574752639509]
+```
+
+## 独立 Decimal 实现
+
+`QWE09_CYCLE22_SIX_SITE_CHECK.py` 不导入作者模块，不使用作者 interval 类。它用标准库 `Decimal` 的 100 位精度，从 Machin 公式构造 `pi`，重新完成矩阵求逆、行列式、Schur 更新和 `Phi/Chi` 计算。
+
+真实退出状态：`0`。输出：
+
+```text
+observed_probability 0.014232864029787238915201161651713698442594072821271027421506
+q                    0.291967352633421847707435426774299914209213916433378595846972
+full_gap            -0.106585307859143406958859621438636056727148780549149020847917
+cross_gap           -0.096395465271827623462796413536245199120255512632598737375338
+variance             0.170309619791317635103084801524650580892559297918639126904372
+payment              0.625832574752639508489102948538918382378683111451404516357992
+```
+
+这些值全部严格落在作者的 dyadic 区间内。独立 Decimal 运行只是第二实现交叉检查；严格符号证书仍来自已审查的外向整数区间程序。
+
+## 有限恒等式诊断
+
+重新运行作者 diagnostics 至 `n=8`，共 12 个 `(n,a)` 实例，退出状态 `0`：
+
+```text
+max |H_second + E Phi|             8.526512829121202e-14
+max |H_mixed + E Chi|              1.7763568394002505e-14
+max |combined mask identity error| 7.815970093361102e-14
+max normalization error            4.440892098500626e-16
+max mask normalization error       1.1102230246251565e-16
+```
+
+这些浮点诊断不承担一般定理的证明作用。
+
+## 参数盒精确检查
+
+标准库 `Fraction` 重算：
+
+```text
+delta      1/50
+kappa      9025/776
+r_delta    49
+Lambda     1486648002527/1204352
+alpha max  9025/9999 < 37/40
+b min      97/2475
+b max      147/2525 < 3/40
+```
+
+因此 Theorem 2 的 contraction 缩放和 scalar-shift 合法域与正文一致。
+
+
+---
 ## QWE09_CYCLE22_REVIEW.md
 
 # QWE09 Cycle22 独立数学审查
 
-审查日期：2026-09-19（Asia/Singapore）  
+审查日期：2026-09-19（Asia/Singapore）
 冻结来源：DPP PR131，提交 `d67db7fdaf8a15b492807745d10ac3b75706690a`
 
 ## 总裁决
@@ -853,6 +944,115 @@ Q          in [0.170309619791317635, 0.170309619791317636]
 真正剩余的 continuum 义务仍是证明某个固定 `m,L` 在整个参数区间满足 (9.1)，或证明 baseline-independent 的 (9.2)，或提供更强结构符号。当前没有任何一项完成。
 
 所以最终状态是：**接口正确，反例正确，目标凹性未解决，整个高对比度区间未解决。**
+
+
+---
+## QWE09_CYCLE22_SIX_SITE_CHECK.py
+
+from decimal import Decimal as D, getcontext
+
+getcontext().prec = 100
+
+
+def atan_inverse(q: int) -> D:
+    qd = D(q)
+    total = D(0)
+    power = D(1) / qd
+    q2 = qd * qd
+    sign = D(1)
+    k = 0
+    while True:
+        term = sign * power / (2 * k + 1)
+        total += term
+        if abs(term) < D("1e-105"):
+            return total
+        power /= q2
+        sign = -sign
+        k += 1
+
+
+def inverse_and_determinant(matrix):
+    n = len(matrix)
+    table = [row[:] + [D(i == j) for j in range(n)]
+             for i, row in enumerate(matrix)]
+    determinant = D(1)
+    sign = 1
+    for j in range(n):
+        pivot = max(range(j, n), key=lambda k: abs(table[k][j]))
+        if pivot != j:
+            table[j], table[pivot] = table[pivot], table[j]
+            sign *= -1
+        diagonal = table[j][j]
+        determinant *= diagonal
+        table[j] = [value / diagonal for value in table[j]]
+        for k in range(n):
+            if k == j:
+                continue
+            factor = table[k][j]
+            table[k] = [left - factor * right
+                        for left, right in zip(table[k], table[j])]
+    return [row[n:] for row in table], D(sign) * determinant
+
+
+pi = 16 * atan_inverse(5) - 4 * atan_inverse(239)
+t = D(19) / (20 * pi)
+masked = [
+    [-D("0.5"), t, D(0), -t / 3, D(0)],
+    [t, -D("0.5"), t, D(0), -t / 3],
+    [D(0), t, -D("0.5"), t, D(0)],
+    [-t / 3, D(0), t, D("0.5"), t],
+    [D(0), -t / 3, D(0), t, D("0.5")],
+]
+coupling = [t / 5, D(0), -t / 3, D(0), t]
+inverse, determinant = inverse_and_determinant(masked)
+inverse_coupling = [
+    sum(inverse[i][j] * coupling[j] for j in range(5))
+    for i in range(5)
+]
+q = D("0.5") - sum(coupling[i] * inverse_coupling[i]
+                       for i in range(5))
+core_sites = [2, 3]
+coarse = [[inverse[i][j] for j in core_sites] for i in core_sites]
+vector = [inverse_coupling[i] for i in core_sites]
+
+
+def fine(sign: int):
+    denominator = q if sign == 1 else 1 - q
+    return [[coarse[i][j] + D(sign) * vector[i] * vector[j] / denominator
+             for j in range(2)] for i in range(2)]
+
+
+def pair_potential(matrix):
+    off_diagonal_square = matrix[0][1] ** 2
+    diagonal_product = matrix[0][0] * matrix[1][1]
+    return (off_diagonal_square
+            + (diagonal_product - off_diagonal_square)
+            * (D(1) - off_diagonal_square / diagonal_product).ln())
+
+
+def full_potential(matrix):
+    return (matrix[0][0] ** 2 + matrix[1][1] ** 2
+            + 2 * pair_potential(matrix))
+
+
+fine_one, fine_zero = fine(1), fine(-1)
+full_gap = (q * full_potential(fine_one)
+            + (1 - q) * full_potential(fine_zero)
+            - full_potential(coarse))
+cross_gap = (q * pair_potential(fine_one)
+             + (1 - q) * pair_potential(fine_zero)
+             - pair_potential(coarse))
+variance = ((vector[0] ** 2 + vector[1] ** 2) ** 2 / (q * (1 - q)))
+
+for name, value in [
+    ("observed_probability", -determinant),
+    ("q", q),
+    ("full_gap", full_gap),
+    ("cross_gap", cross_gap),
+    ("variance", variance),
+    ("payment", -full_gap / variance),
+]:
+    print(name, f"{value:.60f}")
 
 
 ---
@@ -1997,3 +2197,121 @@ odds-width 工具、补偿 resolvent 分配、显式不交换边界，以及 20.
 
 最终状态：**续稿数学在明示范围内 VERIFIED_SCOPED；主目标 INCOMPLETE。**
 
+
+
+---
+## S72_HANDOFF.md
+
+# S72 handoff: the verified QWE09 interface
+
+This page distills the completed Cycle22 audit. It is not a new proof and does
+not enlarge the accepted parameter range.
+
+## Exact interface
+
+On a compact legal interval (J\subset(0,1-c)), the gap and constants are
+
+\[
+\delta=\min_{a\in J}\min\{a,1-a-c\},\qquad
+\kappa=\frac{c^2}{4\delta(\delta+c)},\qquad
+r_\delta=\frac{1-\delta}{\delta},
+\]
+
+\[
+C_H=\max\!\left\{2+7(1+\kappa)\bar\kappa r_\delta^2,
+14(1+\kappa)\bar\kappa\right\},\qquad
+\Lambda=\frac{C_H}{2},
+\]
+
+where \(\bar\kappa=\max\{1,\kappa\}\), and
+
+\[
+\tau(R)=\min\!\left\{\delta^{-2},
+\frac{2c^2}{\pi^2\delta^4}\frac{H_{R-1}+2}{R}\right\}.
+\]
+
+The independently verified observation error is exactly
+
+\[
+\boxed{\epsilon_{m,L}
+=C_{\log}\tau(m)+\frac{\Lambda}{2\delta^2}\tau(L+1)},
+\qquad C_{\log}=\max\{1,\log(1+\kappa)\}.
+\]
+
+It yields \(|h''-W_{m,L}|\le\epsilon_{m,L}\). At half density, after importing
+only the accepted S55 Section 8 arbitrary-contraction baseline, it also yields
+
+\[
+h''\le-\frac1{50}-2V_{m,L}+2\epsilon_{m,L}.
+\]
+
+These statements are uniform only at fixed positive \(\delta\); they are not
+uniform as an endpoint is approached or as \(c\to1\).
+
+## Why the present constant is not yet useful
+
+For \(c=19/20\) and \(J=[1/50,3/100]\), one has \(\delta=1/50\) and
+
+\[
+\Lambda=\frac{1486648002527}{1204352}\approx1.234397\times10^6.
+\]
+
+The observation multiplier is
+\(\Lambda/(2\delta^2)\approx1.542996\times10^9\). The uncapped harmonic-tail
+prefactor in \(\tau\) is
+\(2c^2/(\pi^2\delta^4)\approx1.143030\times10^6\). Their product is
+
+\[
+1.763690\times10^{15},
+\]
+
+before multiplication by \((H_L+2)/(L+1)\). This is the source of the current
+cost; it is not a fitted numerical error. In particular, the short-window
+values \(V_{2,2}\approx0.55166\) and \(W_{2,2}\approx-8.67913\) do not pay the
+rigorous remainder.
+
+## Minimum useful improvement
+
+The smallest theorem-facing deliverable is a fixed pair \((m,L)\), uniform for
+all \(a\in[1/50,3/100]\), such that
+
+\[
+V_{m,L}(a)-\epsilon_{m,L}(a)>-\frac1{100}.
+\]
+
+For an explicit strict margin \(\eta>0\), it is enough to prove
+\(V_{m,L}-\epsilon_{m,L}\ge-1/100+\eta/2\). A sharper witness value without a
+commensurate reduction of the certified observation/tail error does not close
+the target. A baseline-independent alternative is the corresponding uniform
+negative certificate for \(W_{m,L}+\epsilon_{m,L}\).
+
+## Six-site obstruction: exact scope
+
+At \(\rho=1/2\), \(c=19/20\), and \(a=1/40\), the reachable observation word
+\((0,0,0,1,1)\) has positive probability. Its genuine one-site posterior split
+has both complete- and cross-potential Jensen gaps strictly negative. The
+necessary quadratic payment coefficient lies in
+
+\[
+[0.625832574752639508,0.625832574752639509]>5/8.
+\]
+
+This refutes **zero-payment conditional Jensen only**. It does not refute a
+paid Hessian comparison, determine the actual-law average over all words,
+determine \(V_{m,L}\), or provide a counterexample to entropy-rate concavity.
+
+## Evidence separation and input locations
+
+Proof inputs are the frozen 903-line `QWE09_RESULT.md` from DPP PR131 at
+`d67db7fdaf8a15b492807745d10ac3b75706690a`, especially lines 19--70 for the
+constants, lines 74--128 for Theorems 1--2, lines 424--674 for the Hessian,
+martingale, tail, and limiting arguments, lines 727--755 for the two-shift
+baseline transfer, and lines 820--869 for the six-site certificate. The only
+imported theorem is the accepted arbitrary-contraction statement in
+`S55_REVIEW.md`, Section 8.
+
+The 256-bit outward dyadic certificate is proof evidence for the six-site
+strict signs. `QWE09_CYCLE22_SIX_SITE_CHECK.py` is an independent 100-digit
+Decimal cross-check. The finite-\(n\) NumPy residuals and the displayed
+short-window values are diagnostics only: they test implementation identities
+but prove neither the continuum comparison nor the target sign.
