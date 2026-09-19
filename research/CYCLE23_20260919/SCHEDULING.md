@@ -1,7 +1,5 @@
-# Cycle23 scheduling
+# Cycle23 scheduling — user correction applied
 
-Web research limit = 3 simultaneous/reserved chats. Existing sidebar Sol limit = 2. These are INDEPENDENT counts; a Sol audit never consumes a web slot.
+Web limit3 and existing sidebar Sol limit2 are independent. User reports S69 and S70 execution failed; neither is mathematical disproof. User started S71 on QWE08. S72 takes the new actual-reveal error tool; S73 replaces S70 on parity-ensemble sign. S74/S75 remain available. Each new prompt is sent once only; no extra activation for synchronization delay. No message is sent to the user-started S71.
 
-S69 failed operationally per user and was replaced by user-started S71; this is not mathematical disproof. S71 owns QWE08, remains active, and must not receive duplicate task text. S70 currently has no visible answer and remains reserved pending user clarification. S72 is the new independent actual-reveal payment task. S73-S75 are available for later use, not automatically launched.
-
-SolA handles bounded actual-law reveal-payment diagnostics. SolB completes publication of its existing QWE09 review and extracts an English handoff. They use the two existing tasks, no new local task or subagent. All new prompts explicitly prohibit Work routing.
+SolA performs bounded actual-reveal payment diagnostics; SolB finishes QWE09 review publication and an English handoff. No new local tasks or subagents. All new research instructions explicitly prohibit routing or redirecting the user to Work.
