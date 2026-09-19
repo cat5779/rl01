@@ -1,0 +1,48 @@
+{
+  "status": "EXACT_SIGN_CERTIFICATE",
+  "actual_model": {
+    "rho": "1/2",
+    "c": "93/100",
+    "a": "7/200",
+    "adjacent_blocks": [
+      1,
+      1
+    ],
+    "marginal_u": "1/2",
+    "correlation_d": "c^2/pi^2"
+  },
+  "rational_inputs": {
+    "pi_lower": "3",
+    "pi_upper": "22/7",
+    "d_lower": "423801/4840000",
+    "d_upper": "961/10000"
+  },
+  "exact_formulas": {
+    "C_acc": "4 log((1/4-d)/(1/4+d)) = -8 atanh(4d) < 0",
+    "D_F": "2/(1/4-d)-8 = 32d/(1-4d) > 0",
+    "M_second": "D_F+C_acc",
+    "d_derivative_of_M_second": "4d/((1/4-d)^2(1/4+d)) > 0",
+    "M_second_at_d_zero": "0"
+  },
+  "rational_enclosures": {
+    "C_acc_lower": "-19220000/5326479",
+    "C_acc_upper": "-423801/151250",
+    "D_F_lower": "3390408/786199",
+    "D_F_upper": "7688/1539"
+  },
+  "decimal_display_only": {
+    "C_acc_interval": [
+      -3.608387454451618,
+      -2.801990082644628
+    ],
+    "D_F_interval": [
+      4.312404365815779,
+      4.99545159194282
+    ]
+  },
+  "certified_conclusions": {
+    "C_acc_nonnegative": false,
+    "D_F_positive": true,
+    "M_second_positive": true
+  }
+}
