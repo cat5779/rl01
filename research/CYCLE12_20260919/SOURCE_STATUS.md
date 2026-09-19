@@ -1,0 +1,24 @@
+# Cycle12 intake and queue — 2026-09-19
+
+This receipt supplements Cycle11 in RL01 PR45. No newly submitted mathematics below has independent acceptance yet.
+
+- S62: complete visible initial assistant reply recovered, not its separate downloadable attachment. The main c=.95 sign target remains INCOMPLETE. The user explicitly requested a stronger attempt; this continuation is ACTIVE. Do not replace, resend, or evaluate the preliminary manuscript as the author's final answer.
+- S63: full first manuscript received from the user's local download, archived unchanged. It claims two-noise posterior orthogonalization, count-Fisher normalization, true-Toeplitz leakage payment and an all-density cyclic/true curvature bridge. The main log-odds payment and requested sign remain INCOMPLETE. The user requested further work and the continuation is ACTIVE. All new subclaims remain AUTHOR_ONLY; selective audit is deferred until a stable result or a load-bearing need.
+- S64: completed first assignment, full manuscript plus all35 companion files from the original ZIP received. Claims conditional KL supermodularity, stationary block-KL length convexity, two-volume lower extrapolation and actual-sine counterexamples to a two-window monotonicity rule. The probability-acceleration increment remains unpaid and the entropy-rate target INCOMPLETE. One separate existing Sol high reviewer is auditing this package. Do not promote either the claimed tool or obstruction until that review arrives.
+- S52: new user/assistant endpoint discussion, not a new completed proof task. The latest full visible assistant synthesis is archived. Resampling/defect coordinates are a possible research seed. Its finite-window data, fitted exponents, inverse-moment growth, claimed novelty and endpoint asymptotics are UNVERIFIED; original experiment code/data were not received. The exact elementary channel identity can be derived as a starting point but is not by itself a new endpoint theorem. S51 already contains reviewed endpoint work.
+- S65: fourth PR128 task was previously queued with zero sends. Its task file remains prompts/CYCLE11/S65.md. It is now updated BEFORE its first send with the no-Work requirement and a clearly marked optional resampling seed. Only send after a fresh global cap check confirms S62/S63 are the only active tasks and the destination is unassigned. Receipt/STATE, not this preparation memo, determines whether the actual send happened.
+- S66 remains unused. S67 was observed as a new greeting-only chat; no task is assigned to it. S17 remains untouched.
+
+The previous cleanup is COMPLETE, not still running: see research/CYCLE11_20260918/CLEANUP_CURRENT_STATUS.md. Four-repository PR checks found no new research submission after the prior cleanup/PR126 status correction. QWE03/04 closures are operational, not mathematical disproof.
+
+Current verified S61 scope is unchanged: fixed half-density cyclic model at c=.95, sum omega C=o(n), hence a ONE-SIDED W_rel>=-o(n) using reviewed inputs. Neither S63's claimed extension nor S64's claimed all-scale KL payment is an inherited theorem yet. No full entropy-rate sign has been established by these receipts.
+
+## Final pre-send check and user steering
+
+The fresh global check found the user-started S68 ACTIVE on an independent Qwen-origin resampling/two-defect route, alongside S62 and S63. The coordinator stopped BEFORE reserving or sending S65. S65 has zero send attempts and remains on hold under cap3 and overlap review. Its optional two-defect seed has been removed; revisit division of labor after harvesting S68. The user supplied S67–S71 as additional future windows. S71 identity is not yet visible in the app snapshot and must be discovered, never guessed. No message was sent to S68 or either active continuation.
+
+## Independent S64 review received — latest status
+
+RL01 PR46 contains the complete292-line independent S64_CYCLE11_REVIEW.md, copied under reviews/. Verdict VERIFIED_SCOPED / MAIN OBJECTIVE INCOMPLETE. Common-shift conditional likelihood margins, tilted normalized-product interface, conditional KL supermodularity with logdet/HS defect, stationary block-KL length convexity and two-volume extrapolation to all M>=16 pass. The reviewer independently regenerated the entropy certificates, full-atom n=15/16 KL core and determinant budgets. Both raw two-window universal monotonicity directions are strictly disproved by actual sine configuration-law certificates. Weighted/almost-monotone aggregates and the entropy-rate conjecture remain unrefuted.
+
+The complete entropy-chord decomposition still requires an adequate upper bound for C_M/M-C_16/16, the probability-acceleration increment. A future focused continuation may target this remaining signed budget; no new web assignment is made while S62/S63/S68 fill the cap. External novelty of the tool is not certified. This update supersedes the earlier pending-review status only for S64.

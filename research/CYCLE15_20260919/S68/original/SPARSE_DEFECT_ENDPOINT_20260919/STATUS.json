@@ -1,0 +1,39 @@
+{
+  "project": "rl01 sparse-resampling endpoint analysis",
+  "date_asia_singapore": "2026-09-19",
+  "overall": "NEW_FINITE_VOLUME_RESULTS_WITH_PROOFS; FULL_C_0_1_NOT_CLAIMED",
+  "author_proofs_not_independent_review": [
+    "Correct full-support MI expansion with indispensable diagonal chi-square term",
+    "Explicit actual-output pair coefficient, p-quadraticity, exact S52 Bregman-skew identity",
+    "Explicit third coefficient and n/conditional-floor dependent remainder bounds",
+    "Fixed-k support-stratified entropy and p-curvature expansion",
+    "Regularized projection pair pole and fully explicit compensated finite part",
+    "Constant-diagonal projection lower bound on pole residue",
+    "Projection-minor lower bounds on true reverse insertion/deletion entropies",
+    "B2''(1/2) <= -n - 2 D_swap for full-slice constant-diagonal half projections",
+    "B2'' and compensated pair finite part are negative Theta(n^2 log n) for half cyclic Fourier projections",
+    "Actual-law second-quantity transfer with explicit common-gap dependence",
+    "Explicit finite sine spectral floor, logarithmic regular-expansion windows, and noisy polynomial marginal-window transfer"
+  ],
+  "exact_integer_interval_certificates": [
+    "True sine Toeplitz n=6,rho=1/2,c=1: positive local skew, negative actual averaged pairs",
+    "True sine Toeplitz n=6,rho=1/2,c=19/20: positive local skew, negative same averaged pair",
+    "Cyclic n=8,rank=4,c=19/20: positive local skew, negative same actual averaged pair"
+  ],
+  "floating_check_count": 362,
+  "numerical_only": [
+    "True Toeplitz full enumeration and distance profiles through n=18 at half density",
+    "True Toeplitz full enumeration through n=14 at quarter density",
+    "Observed negative individual averaged pairs in the recorded finite samples"
+  ],
+  "not_claimed": [
+    "Full C(0,1) concavity",
+    "Counterexample to original Shannon entropy-rate concavity",
+    "Proof or disproof of infinite true-sine Gamma=O(log(1/epsilon))",
+    "Interchange of zero-noise and thermodynamic limits",
+    "All-exterior derivative-level transfer from full cyclic projection",
+    "Uniform sparse-expansion remainder at n comparable to 1/epsilon",
+    "Quantitative optimal nonlinear rigidity profile",
+    "Uniform summable distance envelope for the actual pair interaction"
+  ]
+}

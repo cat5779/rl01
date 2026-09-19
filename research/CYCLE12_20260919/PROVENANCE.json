@@ -1,0 +1,158 @@
+[
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S52\\S52_ENDPOINT_DISCUSSION.md",
+    "archive": "research/CYCLE12_20260919/S52/S52_ENDPOINT_DISCUSSION.md"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S62\\S62_INITIAL_VISIBLE_REPLY.md",
+    "archive": "research/CYCLE12_20260919/S62/S62_INITIAL_VISIBLE_REPLY.md"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S63\\S63_CYCLE11_RESULT.md",
+    "archive": "research/CYCLE12_20260919/S63/S63_CYCLE11_RESULT.md"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_CYCLE11_RESULT.md",
+    "archive": "research/CYCLE12_20260919/S64/S64_CYCLE11_RESULT.md"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\certify_pair.py",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/certify_pair.py"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\certify_pair_atoms.py",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/certify_pair_atoms.py"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\certify_s64.py",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/certify_s64.py"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n16_a002.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n16_a002.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n16_a00205.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n16_a00205.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n16_a0021.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n16_a0021.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n16_a0025.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n16_a0025.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n1_a002.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n1_a002.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n1_a0025.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n1_a0025.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n2_a002.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n2_a002.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n2_a00205.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n2_a00205.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n2_a0021.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n2_a0021.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n2_a0025.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n2_a0025.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n4_a002.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n4_a002.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n4_a00205.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n4_a00205.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n4_a0021.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n4_a0021.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n4_a0025.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n4_a0025.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n8_a002.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n8_a002.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n8_a00205.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n8_a00205.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n8_a0021.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n8_a0021.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\cert_n8_a0025.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/cert_n8_a0025.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\convex_length_certificate.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/convex_length_certificate.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\finite_chord_certificate.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/finite_chord_certificate.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\kl_budget_certificate.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/kl_budget_certificate.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\kl_budget_check.py",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/kl_budget_check.py"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\pair_atoms_n15.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/pair_atoms_n15.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\pair_atoms_n16.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/pair_atoms_n16.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\pair_n15.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/pair_n15.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\pair_n16.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/pair_n16.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\pair_n16_prefix0.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/pair_n16_prefix0.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\pair_n16_prefix1.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/pair_n16_prefix1.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\pair_n8.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/pair_n8.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\README.md",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/README.md"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\second_chord_certificate.json",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/second_chord_certificate.json"
+  },
+  {
+    "source": "C:\\game\\gameproject\\showa100\\math\\sa-dispatch-20260918\\harvest\\CYCLE12\\S64\\S64_checks\\verify_s64.py",
+    "archive": "research/CYCLE12_20260919/S64/S64_checks/verify_s64.py"
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "received_at": "2026-09-19T10:00:36.234664+08:00",
+  "source_directory": "C:\\Users\\UIO\\Desktop\\20260907",
+  "files": [
+    {
+      "path": "S63/S63_CYCLE11_PACKAGE.zip",
+      "bytes": 35587
+    },
+    {
+      "path": "S68/RESULT.md",
+      "bytes": 26540
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CYCLE11_RESULT.md",
+      "bytes": 35885
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/alpha60.txt",
+      "bytes": 184
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/arithmetic_selftest.cpp",
+      "bytes": 2358
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/cert_interval.hpp",
+      "bytes": 3091
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/exact_fixed.hpp",
+      "bytes": 2871
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/global_ratio_certificate.cpp",
+      "bytes": 1133
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/guard_caps_integer.txt",
+      "bytes": 2667
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/guard_certificate.cpp",
+      "bytes": 5303
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/payment_certificate.cpp",
+      "bytes": 4078
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/payment_coefficients_integer.txt",
+      "bytes": 111
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/principal_probability_certificate.cpp",
+      "bytes": 2298
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/README.md",
+      "bytes": 5728
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/verify_rational_certificates.py",
+      "bytes": 3607
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/verified_outputs/guard_robust_summary.txt",
+      "bytes": 71
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/verified_outputs/payment_robust_log.txt",
+      "bytes": 1903
+    },
+    {
+      "path": "S63/original/S63_round2/S63_CERTIFICATES/verified_outputs/rational_certificates.txt",
+      "bytes": 491
+    }
+  ],
+  "S63": "New round2 package, despite CYCLE11 filename;Original files including full manuscript,256 witness pairs,certificate source and recorded outputs. Source intake does not certify correctness.",
+  "S68": "Main RESULT.md only. Referenced APPENDIX_BOUNDS.md, APPENDIX_PROJECTION.md, SOURCE_AUDIT.md and original44-file package not received. Review received proofs separately from missing sources.",
+  "hash_gate": false
+}
+

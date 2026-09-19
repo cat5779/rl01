@@ -1,0 +1,9 @@
+# Cycle13 dispatch and harvest receipt
+
+- Archived complete visible replies from S63 second round and S68 independent Qwen-origin task in RL01 PR45, research/CYCLE13_20260919. All new claims AUTHOR_ONLY; full attachments missing. S63's old downloaded Cycle11 result is NOT the new second-round manuscript. S68's original checksum list is irrelevant to acceptance.
+- S63 selective independent theoretical audit sent ONCE to existing SolA 01a0b04a-afe9-7393-ba97-58270365d292, gpt-5.6-sol high. It must separate theory from unreceived/unreproduced certificates and create its own review PR. S68 separate full audit awaits proofs; SolB remains available. No new local tasks or subagents.
+- S67 full English acceleration-increment task published at PR45 prompts/CYCLE13/S67.md and sent ONCE successfully to Pronounce S67, 6aad6c42-7c60-83e8-ba9b-64d09103053e. Source is independently accepted S64 PR46, not unverified S63/S68. Includes at least120 minutes unless a proved substantive major advance, no-Work instruction, no hash gate. No activation, retry, continuation or duplicate prompt.
+- S62 latest record is user-only despite idle status, so one slot remains reserved for unresolved continuation. New S67 reserves another. Final conservative web count2/3. Idle alone never proves completion.
+- S65 zero sends remains queued pending full S68 overlap assessment. S67/S69/S70 identities available; S71 remains user-provided but app ID undiscovered. Root has sent no message to S68.
+- Priority downloads: S63 second-round full manuscript/appendix and all linked verification/input/output files (author says ZIP not made); then S68's complete44-file ZIP. Neither is in Desktop/20260907 or newly downloaded in Downloads at intake.
+- Existing135-minute heartbeat still reads latest STATE/LOG; persistence limitation from Cycle12 unchanged. No duplicate automation, direct automation-file edit, or claim that prompt update succeeded.

@@ -1,0 +1,1 @@
+Reviewer-generated independent recomputation logs and derived rational inputs. Original author files are unchanged under S63/original. The original guard and optional doubled-row-sum stress test both pass. Probability binary caches are regenerable and not duplicated here.

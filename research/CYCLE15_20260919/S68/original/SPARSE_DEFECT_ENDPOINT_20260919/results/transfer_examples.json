@@ -1,0 +1,162 @@
+[
+  {
+    "m": 2,
+    "period": 32,
+    "normalized_L_difference": 0.008538765076439248,
+    "kernel_Frobenius_error": 0.0007239394358841798,
+    "diagnostic_gap": 0.08877732355264435,
+    "transfer_upper_bound_using_diagnostic_gap": 39.473846031887724,
+    "proved_sine_gap_floor": 1.0943386226859682e-05,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 2,
+    "period": 64,
+    "normalized_L_difference": 0.0021262674561066675,
+    "kernel_Frobenius_error": 0.00018083220312424612,
+    "diagnostic_gap": 0.08896550060817039,
+    "transfer_upper_bound_using_diagnostic_gap": 9.763537619175585,
+    "proved_sine_gap_floor": 1.0943386226859682e-05,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 2,
+    "period": 128,
+    "normalized_L_difference": 0.0005310425544511332,
+    "kernel_Frobenius_error": 4.5198518881200854e-05,
+    "diagnostic_gap": 0.0890124952821343,
+    "transfer_upper_bound_using_diagnostic_gap": 2.4343858510533756,
+    "proved_sine_gap_floor": 1.0943386226859682e-05,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 2,
+    "period": 256,
+    "normalized_L_difference": 0.00013272790316776195,
+    "kernel_Frobenius_error": 1.129903411844376e-05,
+    "diagnostic_gap": 0.089024240854356,
+    "transfer_upper_bound_using_diagnostic_gap": 0.6081912207462136,
+    "proved_sine_gap_floor": 1.0943386226859682e-05,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 4,
+    "period": 32,
+    "normalized_L_difference": 0.33248897477856687,
+    "kernel_Frobenius_error": 0.002524892926205266,
+    "diagnostic_gap": 0.00531972247446875,
+    "transfer_upper_bound_using_diagnostic_gap": 444756024.84082675,
+    "proved_sine_gap_floor": 2.341423075961762e-12,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 4,
+    "period": 64,
+    "normalized_L_difference": 0.0809530709254016,
+    "kernel_Frobenius_error": 0.0006274804020142136,
+    "diagnostic_gap": 0.005495652599246011,
+    "transfer_upper_bound_using_diagnostic_gap": 93938845.98565112,
+    "proved_sine_gap_floor": 2.341423075961762e-12,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 4,
+    "period": 128,
+    "normalized_L_difference": 0.020107039315439224,
+    "kernel_Frobenius_error": 0.0001566383268256566,
+    "diagnostic_gap": 0.005539819458104835,
+    "transfer_upper_bound_using_diagnostic_gap": 22530244.983382747,
+    "proved_sine_gap_floor": 2.341423075961762e-12,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 4,
+    "period": 256,
+    "normalized_L_difference": 0.005018623638253672,
+    "kernel_Frobenius_error": 3.9145129190008035e-05,
+    "diagnostic_gap": 0.005550872573907061,
+    "transfer_upper_bound_using_diagnostic_gap": 5574661.670965178,
+    "proved_sine_gap_floor": 2.341423075961762e-12,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 6,
+    "period": 32,
+    "normalized_L_difference": 1.9235726509990592,
+    "kernel_Frobenius_error": 0.005555778787265112,
+    "diagnostic_gap": 0.00018609311937620165,
+    "transfer_upper_bound_using_diagnostic_gap": 2084582359917926.2,
+    "proved_sine_gap_floor": 7.712872750165681e-19,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 6,
+    "period": 64,
+    "normalized_L_difference": 0.4553707953722004,
+    "kernel_Frobenius_error": 0.0013707807873672572,
+    "diagnostic_gap": 0.0002136128761894662,
+    "transfer_upper_bound_using_diagnostic_gap": 1200689493549247.2,
+    "proved_sine_gap_floor": 7.712872750165681e-19,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 6,
+    "period": 128,
+    "normalized_L_difference": 0.11235213447935521,
+    "kernel_Frobenius_error": 0.0003415851748324315,
+    "diagnostic_gap": 0.00022080273009588195,
+    "transfer_upper_bound_using_diagnostic_gap": 813555663211160.6,
+    "proved_sine_gap_floor": 7.712872750165681e-19,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 6,
+    "period": 256,
+    "normalized_L_difference": 0.027996390773264324,
+    "kernel_Frobenius_error": 8.532730152943582e-05,
+    "diagnostic_gap": 0.00022261962718197025,
+    "transfer_upper_bound_using_diagnostic_gap": 195065837410310.34,
+    "proved_sine_gap_floor": 7.712872750165681e-19,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 8,
+    "period": 32,
+    "normalized_L_difference": 6.275602697959222,
+    "kernel_Frobenius_error": 0.009893235465939872,
+    "diagnostic_gap": 4.842715964127331e-06,
+    "transfer_upper_bound_using_diagnostic_gap": 6.363734535478254e+21,
+    "proved_sine_gap_floor": 3.0316650840839465e-25,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 8,
+    "period": 64,
+    "normalized_L_difference": 1.434631258953047,
+    "kernel_Frobenius_error": 0.002416483655617749,
+    "diagnostic_gap": 7.050518843153309e-06,
+    "transfer_upper_bound_using_diagnostic_gap": 1.4163928779133346e+21,
+    "proved_sine_gap_floor": 3.0316650840839465e-25,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 8,
+    "period": 128,
+    "normalized_L_difference": 0.3511310696303127,
+    "kernel_Frobenius_error": 0.0006007093123577956,
+    "diagnostic_gap": 7.689949934088779e-06,
+    "transfer_upper_bound_using_diagnostic_gap": 1.0008615276970022e+21,
+    "proved_sine_gap_floor": 3.0316650840839465e-25,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  },
+  {
+    "m": 8,
+    "period": 256,
+    "normalized_L_difference": 0.08732438015491795,
+    "kernel_Frobenius_error": 0.00014996618928971446,
+    "diagnostic_gap": 7.855560002959618e-06,
+    "transfer_upper_bound_using_diagnostic_gap": 9.190929693806115e+20,
+    "proved_sine_gap_floor": 3.0316650840839465e-25,
+    "scope": "numerical illustration; theorem does not rely on numerical eigenvalues"
+  }
+]

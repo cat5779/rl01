@@ -1,0 +1,50 @@
+{
+  "body": "This PR was created at the user's explicit request.\n\nPurpose: prepare the instruction/prompt package for the **next round of four web-based GPT Pro research sessions plus selective GPT-5.6 Sol review**.\n\nIt adds only `research_prompts/next_round_4webpro_sol_20260918/`:\n\n- `README.md` — origin, dispatch policy, and the four-task split.\n- `COMMON.md` — shared mathematical target, evidence rules, counterexample/failed-route inheritance, finite-chord policy, and delivery requirements.\n- `WEB_PRO_01_TRUE_BLOCK_REMAINDER.md` — actual-law full-block signed payment using the retained exact remainder and true rank-one reveal path.\n- `WEB_PRO_02_GENERAL_DENSITY_OFF_MIDPOINT.md` — ordinary density and fixed off-midpoint high-contrast true-law theorem.\n- `WEB_PRO_03_DYADIC_FINITE_CHORD.md` — true-law cross-scale payment for the retained signed dyadic finite-chord sum, inheriting the reviewed QWE02 tail.\n- `WEB_PRO_04_HIGH_CONTRAST_ENDPOINT.md` — all-orders posterior/resummation route aimed directly at `c -> 1`.\n- `SOL_PROTOCOL.md` — selective use of Sol: do not automatically spend one reviewer per Pro; reserve review capacity for results that can change the research allocation and for final composition.\n\nThe prompts explicitly tell the next round to read the newest S59/S60/S61 dispositions before starting and to inherit accepted progress rather than duplicate it. The shared/public counterexample and failed-route area is referenced rather than copied.\n\nScope boundary: this is an instruction-only PR. It does not launch agents, alter README/PROGRESS/STATIONARY_STATUS, change any accepted theorem status, or promote pending author claims.",
+  "files": [
+    {
+      "path": "research_prompts/next_round_4webpro_sol_20260918/COMMON.md",
+      "additions": 100,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "research_prompts/next_round_4webpro_sol_20260918/README.md",
+      "additions": 36,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "research_prompts/next_round_4webpro_sol_20260918/SOL_PROTOCOL.md",
+      "additions": 62,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "research_prompts/next_round_4webpro_sol_20260918/WEB_PRO_01_TRUE_BLOCK_REMAINDER.md",
+      "additions": 84,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "research_prompts/next_round_4webpro_sol_20260918/WEB_PRO_02_GENERAL_DENSITY_OFF_MIDPOINT.md",
+      "additions": 86,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "research_prompts/next_round_4webpro_sol_20260918/WEB_PRO_03_DYADIC_FINITE_CHORD.md",
+      "additions": 90,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "research_prompts/next_round_4webpro_sol_20260918/WEB_PRO_04_HIGH_CONTRAST_ENDPOINT.md",
+      "additions": 77,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefName": "research/next-round-four-web-pro-sol-20260918",
+  "title": "Prepare next-round prompts for four Web Pro researchers and Sol review",
+  "updatedAt": "2026-09-18T15:02:22Z"
+}

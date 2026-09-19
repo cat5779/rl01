@@ -1,0 +1,5 @@
+# Tested versions; only the floating-point scripts need NumPy.
+# interval_certificate.py needs the Python standard library only.
+numpy==2.3.5
+# Optional except when running profile.py / rebuilding high-precision laws:
+mpmath==1.3.0

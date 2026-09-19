@@ -1,0 +1,837 @@
+{
+  "status": "PASS",
+  "kind": "floating-point algebra and finite-model diagnostics; not an infinite-volume proof",
+  "checks_passed": 124,
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "checks": [
+    {
+      "name": "product-law pair coefficients vanish",
+      "status": "PASS",
+      "error": 1.1796119636642288e-16,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "product-law L=-sum Bernoulli Fisher",
+      "status": "PASS",
+      "error": 3.552713678800501e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "n=1 missing diagonal coefficient",
+      "status": "PASS",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "n=1 genuine pair list empty",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "actual weighted Jpp identity random n=2,p=0.19",
+      "status": "PASS",
+      "error": 2.4424906541753444e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=2,p=0.43",
+      "status": "PASS",
+      "error": 6.661338147750939e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=2,p=0.81",
+      "status": "PASS",
+      "error": 2.886579864025407e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "normalization/Fisher decomposition n=2",
+      "status": "PASS",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=3,p=0.19",
+      "status": "PASS",
+      "error": 4.330737157776099e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=3,p=0.43",
+      "status": "PASS",
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=3,p=0.81",
+      "status": "PASS",
+      "error": 4.107825191113079e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "normalization/Fisher decomposition n=3",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=4,p=0.19",
+      "status": "PASS",
+      "error": 2.3175905639050143e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=4,p=0.43",
+      "status": "PASS",
+      "error": 2.3175905639050143e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=4,p=0.81",
+      "status": "PASS",
+      "error": 4.3021142204224816e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "normalization/Fisher decomposition n=4",
+      "status": "PASS",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=5,p=0.19",
+      "status": "PASS",
+      "error": 4.3576253716537394e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=5,p=0.43",
+      "status": "PASS",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "actual weighted Jpp identity random n=5,p=0.81",
+      "status": "PASS",
+      "error": 2.789435349370706e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "normalization/Fisher decomposition n=5",
+      "status": "PASS",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "DPP kernel equals actual resampling output",
+      "status": "PASS",
+      "error": 9.71445146547012e-17,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "H_pp=epsilon^2 actual diagonal Hessian",
+      "status": "PASS",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "MI value remainder tau=0.02",
+      "status": "PASS",
+      "error": 4.7317592990132705e-06,
+      "tolerance": 1.0
+    },
+    {
+      "name": "curvature remainder tau=0.02",
+      "status": "PASS",
+      "error": 6.006068224720033e-05,
+      "tolerance": 1.0
+    },
+    {
+      "name": "MI value remainder tau=0.05",
+      "status": "PASS",
+      "error": 4.72648365947683e-06,
+      "tolerance": 1.0
+    },
+    {
+      "name": "curvature remainder tau=0.05",
+      "status": "PASS",
+      "error": 5.9801875098095996e-05,
+      "tolerance": 1.0
+    },
+    {
+      "name": "MI value remainder tau=0.1",
+      "status": "PASS",
+      "error": 4.7177165866629875e-06,
+      "tolerance": 1.0
+    },
+    {
+      "name": "curvature remainder tau=0.1",
+      "status": "PASS",
+      "error": 5.937307541813193e-05,
+      "tolerance": 1.0
+    },
+    {
+      "name": "third-coefficient curvature convergence",
+      "status": "PASS",
+      "error": 0.0015890209617441808,
+      "tolerance": 0.002221477792048976,
+      "errors": [
+        0.006347079405854217,
+        0.003176539584704541,
+        0.0015890209617441808
+      ]
+    },
+    {
+      "name": "third MI coefficient leaves fourth-order error",
+      "status": "PASS",
+      "error": 3.9922388940689946e-10,
+      "tolerance": 5.084964140728011e-10,
+      "errors": [
+        6.3562051759100124e-09,
+        3.9922388940689946e-10
+      ]
+    },
+    {
+      "name": "all natural pair coefficients quadratic in p",
+      "status": "PASS",
+      "error": 5.204170427930421e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A1 n=2,p=0.23",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=2,p=0.23",
+      "status": "PASS",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=2,p=0.23",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=2,p=0.23",
+      "status": "PASS",
+      "error": 0.3795589069734322,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        0.3795589069734322,
+        0.29383406467419465,
+        0.23975324752954083
+      ]
+    },
+    {
+      "name": "projection A1 n=2,p=0.5",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=2,p=0.5",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=2,p=0.5",
+      "status": "PASS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=2,p=0.5",
+      "status": "PASS",
+      "error": 0.37937433703782464,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        0.37937433703782464,
+        0.2938197825653827,
+        0.23975162290620305
+      ]
+    },
+    {
+      "name": "projection A1 n=2,p=0.74",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=2,p=0.74",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=2,p=0.74",
+      "status": "PASS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=2,p=0.74",
+      "status": "PASS",
+      "error": 0.37952016997857696,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        0.37952016997857696,
+        0.29383107020974486,
+        0.23975324752954083
+      ]
+    },
+    {
+      "name": "projection A1 n=4,p=0.23",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=4,p=0.23",
+      "status": "PASS",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=4,p=0.23",
+      "status": "PASS",
+      "error": 4.440892098500626e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=4,p=0.23",
+      "status": "PASS",
+      "error": 8.141890847166671,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        8.141890847166671,
+        8.110306290650922,
+        8.090050188489801
+      ]
+    },
+    {
+      "name": "projection A1 n=4,p=0.5",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=4,p=0.5",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=4,p=0.5",
+      "status": "PASS",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=4,p=0.5",
+      "status": "PASS",
+      "error": 7.716633763551217,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        7.546895980313998,
+        7.652324593902163,
+        7.716633763551217
+      ]
+    },
+    {
+      "name": "projection A1 n=4,p=0.74",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=4,p=0.74",
+      "status": "PASS",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=4,p=0.74",
+      "status": "PASS",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=4,p=0.74",
+      "status": "PASS",
+      "error": 7.991785387446204,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        7.985522977428729,
+        7.9898044964015416,
+        7.991785387446204
+      ]
+    },
+    {
+      "name": "projection A1 n=5,p=0.23",
+      "status": "PASS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=5,p=0.23",
+      "status": "PASS",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=5,p=0.23",
+      "status": "PASS",
+      "error": 8.881784197001252e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=5,p=0.23",
+      "status": "PASS",
+      "error": 9.002872643696909,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        9.002872643696909,
+        8.839452947415515,
+        8.736450989790795
+      ]
+    },
+    {
+      "name": "projection A1 n=5,p=0.5",
+      "status": "PASS",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=5,p=0.5",
+      "status": "PASS",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=5,p=0.5",
+      "status": "PASS",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=5,p=0.5",
+      "status": "PASS",
+      "error": 16.473153183892308,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        15.570955728865112,
+        16.127683900655434,
+        16.473153183892308
+      ]
+    },
+    {
+      "name": "projection A1 n=5,p=0.74",
+      "status": "PASS",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=5,p=0.74",
+      "status": "PASS",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=5,p=0.74",
+      "status": "PASS",
+      "error": 1.7763568394002505e-14,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=5,p=0.74",
+      "status": "PASS",
+      "error": 24.661681540624066,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        23.498086069123726,
+        24.214501144940833,
+        24.661681540624066
+      ]
+    },
+    {
+      "name": "projection A1 n=6,p=0.23",
+      "status": "PASS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=6,p=0.23",
+      "status": "PASS",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=6,p=0.23",
+      "status": "PASS",
+      "error": 3.019806626980426e-14,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=6,p=0.23",
+      "status": "PASS",
+      "error": 33.33958218840404,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        31.77582079933861,
+        32.73832738790211,
+        33.33958218840404
+      ]
+    },
+    {
+      "name": "projection A1 n=6,p=0.5",
+      "status": "PASS",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=6,p=0.5",
+      "status": "PASS",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=6,p=0.5",
+      "status": "PASS",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=6,p=0.5",
+      "status": "PASS",
+      "error": 31.659168202138076,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        29.09475039207122,
+        30.677011690515574,
+        31.659168202138076
+      ]
+    },
+    {
+      "name": "projection A1 n=6,p=0.74",
+      "status": "PASS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=6,p=0.74",
+      "status": "PASS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=6,p=0.74",
+      "status": "PASS",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=6,p=0.74",
+      "status": "PASS",
+      "error": 32.897377045180036,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        31.07144072349097,
+        32.19598816591704,
+        32.897377045180036
+      ]
+    },
+    {
+      "name": "projection A1 n=8,p=0.23",
+      "status": "PASS",
+      "error": 5.329070518200751e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=8,p=0.23",
+      "status": "PASS",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=8,p=0.23",
+      "status": "PASS",
+      "error": 9.237055564881302e-14,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=8,p=0.23",
+      "status": "PASS",
+      "error": 84.85395129392201,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        78.29755230683966,
+        82.33434476575867,
+        84.85395129392201
+      ]
+    },
+    {
+      "name": "projection A1 n=8,p=0.5",
+      "status": "PASS",
+      "error": 5.329070518200751e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=8,p=0.5",
+      "status": "PASS",
+      "error": 1.2434497875801753e-14,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=8,p=0.5",
+      "status": "PASS",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=8,p=0.5",
+      "status": "PASS",
+      "error": 80.37266609478709,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        71.12960641610903,
+        76.83575459896485,
+        80.37266609478709
+      ]
+    },
+    {
+      "name": "projection A1 n=8,p=0.74",
+      "status": "PASS",
+      "error": 5.329070518200751e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "projection A2 n=8,p=0.74",
+      "status": "PASS",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "projection explicit B2pp n=8,p=0.74",
+      "status": "PASS",
+      "error": 9.947598300641403e-14,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "projection remainder bounded across three eps n=8,p=0.74",
+      "status": "PASS",
+      "error": 83.67469786564308,
+      "tolerance": 100000.0,
+      "scaled_remainders": [
+        76.41541722994786,
+        80.88774608890876,
+        83.67469786564308
+      ]
+    },
+    {
+      "name": "n=2 singular projection closed Hessian",
+      "status": "PASS",
+      "error": 6.938893903907228e-18,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=2,N=32",
+      "status": "PASS",
+      "error": 0.0007239394358841798,
+      "tolerance": 0.003212761849312942
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=2,N=32",
+      "status": "PASS",
+      "error": 0.008538765076439248,
+      "tolerance": 39.473846031887724
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=2,N=64",
+      "status": "PASS",
+      "error": 0.00018083220312424612,
+      "tolerance": 0.0008031904623282355
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=2,N=64",
+      "status": "PASS",
+      "error": 0.0021262674561066675,
+      "tolerance": 9.763537619175585
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=2,N=128",
+      "status": "PASS",
+      "error": 4.5198518881200854e-05,
+      "tolerance": 0.0002007976155820589
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=2,N=128",
+      "status": "PASS",
+      "error": 0.0005310425544511332,
+      "tolerance": 2.4343858510533756
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=2,N=256",
+      "status": "PASS",
+      "error": 1.129903411844376e-05,
+      "tolerance": 5.019940389551472e-05
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=2,N=256",
+      "status": "PASS",
+      "error": 0.00013272790316776195,
+      "tolerance": 0.6081912207462136
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=4,N=32",
+      "status": "PASS",
+      "error": 0.002524892926205266,
+      "tolerance": 0.012851047397251769
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=4,N=32",
+      "status": "PASS",
+      "error": 0.33248897477856687,
+      "tolerance": 444756024.84082675
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=4,N=64",
+      "status": "PASS",
+      "error": 0.0006274804020142136,
+      "tolerance": 0.003212761849312942
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=4,N=64",
+      "status": "PASS",
+      "error": 0.0809530709254016,
+      "tolerance": 93938845.98565112
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=4,N=128",
+      "status": "PASS",
+      "error": 0.0001566383268256566,
+      "tolerance": 0.0008031904623282355
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=4,N=128",
+      "status": "PASS",
+      "error": 0.020107039315439224,
+      "tolerance": 22530244.983382747
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=4,N=256",
+      "status": "PASS",
+      "error": 3.9145129190008035e-05,
+      "tolerance": 0.0002007976155820589
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=4,N=256",
+      "status": "PASS",
+      "error": 0.005018623638253672,
+      "tolerance": 5574661.670965178
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=6,N=32",
+      "status": "PASS",
+      "error": 0.005555778787265112,
+      "tolerance": 0.02891485664381648
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=6,N=32",
+      "status": "PASS",
+      "error": 1.9235726509990592,
+      "tolerance": 2084582359917926.2
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=6,N=64",
+      "status": "PASS",
+      "error": 0.0013707807873672572,
+      "tolerance": 0.00722871416095412
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=6,N=64",
+      "status": "PASS",
+      "error": 0.4553707953722004,
+      "tolerance": 1200689493549247.2
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=6,N=128",
+      "status": "PASS",
+      "error": 0.0003415851748324315,
+      "tolerance": 0.00180717854023853
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=6,N=128",
+      "status": "PASS",
+      "error": 0.11235213447935521,
+      "tolerance": 813555663211160.6
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=6,N=256",
+      "status": "PASS",
+      "error": 8.532730152943582e-05,
+      "tolerance": 0.0004517946350596325
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=6,N=256",
+      "status": "PASS",
+      "error": 0.027996390773264324,
+      "tolerance": 195065837410310.34
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=8,N=32",
+      "status": "PASS",
+      "error": 0.009893235465939872,
+      "tolerance": 0.051404189589007075
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=8,N=32",
+      "status": "PASS",
+      "error": 6.275602697959222,
+      "tolerance": 6.363734535478254e+21
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=8,N=64",
+      "status": "PASS",
+      "error": 0.002416483655617749,
+      "tolerance": 0.012851047397251769
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=8,N=64",
+      "status": "PASS",
+      "error": 1.434631258953047,
+      "tolerance": 1.4163928779133346e+21
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=8,N=128",
+      "status": "PASS",
+      "error": 0.0006007093123577956,
+      "tolerance": 0.003212761849312942
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=8,N=128",
+      "status": "PASS",
+      "error": 0.3511310696303127,
+      "tolerance": 1.0008615276970022e+21
+    },
+    {
+      "name": "cyclic-to-sine kernel estimate m=8,N=256",
+      "status": "PASS",
+      "error": 0.00014996618928971446,
+      "tolerance": 0.0008031904623282355
+    },
+    {
+      "name": "actual interaction transfer diagnostic m=8,N=256",
+      "status": "PASS",
+      "error": 0.08732438015491795,
+      "tolerance": 9.190929693806115e+20
+    }
+  ]
+}
