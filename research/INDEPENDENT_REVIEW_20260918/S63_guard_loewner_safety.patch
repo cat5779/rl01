@@ -1,0 +1,11 @@
+--- a/guard_certificate.cpp
++++ b/guard_certificate.cpp
+@@ -11,7 +11,7 @@
+  for(int i=0;i<n;i++)for(int j=0;j<n;j++)mat[i*n+j]=(i==j?d:I(0))+(fields[i]-d)*q[i*n+j];
+  auto inv=invmat(mat,n);I b[4];for(int i=0;i<2;i++)for(int j=0;j<2;j++)for(int k=0;k<n;k++)b[i*2+j]=b[i*2+j]+q[i*n+k]*inv[k*n+j];
+  I sym=(b[1]+b[2])/I(2);R xx=(b[0].l+b[0].h)/2,yy=(b[3].l+b[3].h)/2,ww=(sym.l+sym.h)/2;
+- R e0=absmax(b[0]-I(xx)),e1=absmax(b[3]-I(yy)),ew=absmax(sym-I(ww));R eps=ua(max(e0,e1),ew);
++ R e0=absmax(b[0]-I(xx)),e1=absmax(b[3]-I(yy)),ew=absmax(sym-I(ww));R eps=um(2,ua(max(e0,e1),ew)); // 2x2 entrywise error -> operator-norm bound
+  if(eps>1e-8L)throw runtime_error("loose guard inverse");
+  if(upper)return {ua(xx,eps),ua(yy,eps),ww};else return {da(xx,-eps),da(yy,-eps),ww};
+ }
