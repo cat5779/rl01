@@ -23,3 +23,9 @@ Other three repositories and default branches show no new external result. RL01 
 Web1/3: S80 only. Sol2/2: QWE08 independent audit and S78 source/replay supplement. Counts are independent. No new local task or subagent. Further PRO work awaits audit inputs or S80's result; do not send QWE08 to active S80 as a duplicate or interrupt.
 
 Missing source tails remain S77 and S79 complete manuscript endings; their mathematical cores and downloaded scripts are already received and audited. S78 ZIP is no longer missing. No current active task requires another download to proceed.
+
+## S78 full original and author certificate replay complete — existing PR68
+
+FULL_ORIGINAL_READ / AUTHOR_CERTIFICATES_REPLAYED / VERIFIED_COMPENSATED_RANK_ONE_REVEAL / MAIN_TARGET_INCOMPLETE.
+The reviewer read phase1(738lines) and continuation(922lines), and confirmed RESULT.md matches continuation. No new load-bearing theorem changes the previous verdict. All four author certificate programs ran unchanged after inspection, exit0; stdout matches the supplied outputs after newline normalization and agrees with the independent interval certificates. Originals and real replay logs are retained in the updated PR68 snapshot.
+The fixed-retained-pair qualification for R^-4 is preserved; no uniform moving-leaf/growing-core extension is accepted. Approximately220-fold improvement still refers to method-error reduction, not entropy-rate closure. No source or author-certificate replay remains missing for S78. SolB is now free; QWE08 audit remains with SolA. S80 untouched, no new web dispatch.
