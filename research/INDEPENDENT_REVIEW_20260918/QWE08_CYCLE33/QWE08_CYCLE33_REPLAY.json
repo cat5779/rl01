@@ -1,0 +1,24 @@
+{
+  "status": "PASS_INDEPENDENT_ALGEBRA_AND_FLOATING_CHECKS_AUTHOR_INTERVAL_RUN_SEPARATE",
+  "rank_one_trials": {
+    "cuts_checked": 300,
+    "minimum_M_second_minus_claimed_bound": 1.241446640307486e-08,
+    "maximum_five_point_error": 3.845568722661563e-08
+  },
+  "small_sine_trials": {
+    "instances_checked": 36,
+    "minimum_M_second": 0.0001317617800715709
+  },
+  "four_site_exact_coefficient": "-1/27",
+  "nilpotent_shift": {
+    "D_power_5_max_abs": 0.0,
+    "shift_polynomial_max_error": 4.163336342344337e-17
+  },
+  "author_integer_json": {
+    "status": "PROVED_FINITE_CONTINUUM",
+    "all_integer_acceptance_inequalities_positive": true,
+    "recorded_minimum_matches": true,
+    "certificate_count": 4
+  },
+  "evidence_scope": "Exact rational coefficient and algebraic identities plus floating probes; the continuum proof relies on the separately rerun fixed-point interval program."
+}
