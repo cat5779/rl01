@@ -4,7 +4,7 @@
 
 ## 总裁决
 
-**`VERIFIED_WITH_REQUIRED_BINARY_DERIVATION / D_SECTOR_PAID_ALL_SIZE_ALL_CONTRAST_AT_MIDPOINT / C_X_REMAINS_OPEN / MAIN_TARGET_INCOMPLETE`。**
+**`VERIFIED_FULL_ORIGINAL / AUTHOR_NUMPY_REPLAYED / D_SECTOR_PAID_ALL_SIZE_ALL_CONTRAST_AT_MIDPOINT / C_X_REMAINS_OPEN / MAIN_TARGET_INCOMPLETE`。**
 
 S76 的主要结构结论成立：在半密度中点，对每个 \(m\ge1\)、每个 \(0<c<1\) 和每个保持 Hamming layer 的双随机通道，equal-pair acceleration 扇区 \(C_D\) 有精确非正表示
 
@@ -12,23 +12,23 @@ S76 的主要结构结论成立：在半密度中点，对每个 \(m\ge1\)、每
 C_D=-4mL\eta_J\le0.
 \]
 
-正文略写成 “direct binary calculation” 的后验方差下界
+Cycle28 可见稿略写成 “direct binary calculation” 的后验方差下界
 
 \[
 \eta_J\ge\overline V_W
 \]
 
-是承重步骤。可在原假设下独立补全，不需要新增 exterior-minor 假设：对每条相邻 \(y,y^{(i)}\) 边，以真实混合参考
+是承重步骤。本审查先在原假设下独立补全，不需要新增 exterior-minor 假设：对每条相邻 \(y,y^{(i)}\) 边，以真实混合参考
 
 \[
 M_{i,y}=\tfrac12(P_y+P_{y^{(i)}})
 \]
 
-和其真实输出权重 \(M_{i,y}^W\) 计算，结论归结为 \(\operatorname{atanh}\) 的凸性。审查报告给出完整推导。可见稿若作为自包含证明，应把这段加入正文；当前状态是 `CORRECT_WITH_REQUIRED_DERIVATION_INSERTION`，不是凭作者断言放行。
+和其真实输出权重 \(M_{i,y}^W\) 计算，结论归结为 \(\operatorname{atanh}\) 的凸性。Cycle30 收到的 453 行完整原稿已经在 §4 写出同一推导，因而原先的自包含性缺口已经消除；本 PR 保留“审查先独立补全、附件后到”的时间顺序，不把后到原稿倒写成初审依据。
 
 剩余 \(C_X\) 公式、归一化和总曲率预算也正确。S76 只支付了 acceleration 的 \(D\) 扇区，没有证明 \(C_X\) 的所需上界，因而没有证明总凹性。四点 actual cyclic 的 \(\Xi_O/\delta_O\) 发散和阈值反例正确，只否定小的 contrast-independent 点态支付。
 
-两个导出附件未下载，本审查没有声称运行作者 NumPy。独立标准库枚举重建了 \(m=2,3,4,5\)、\(c=.95\) 的表格，并额外核对 \(\eta_J\ge\overline V_W\) 的真实 posterior weights。
+Cycle30 又收到并复跑作者 NumPy 源码，`--c 0.95 --max-m 5` 退出码为 0。主表与正文和独立标准库枚举一致；有限差分残差随运行环境有末位差异，但均保持在 \(10^{-9}\) 量级。独立实现还额外核对了 \(\eta_J\ge\overline V_W\) 的真实 posterior weights。
 
 ## 分项裁决
 
@@ -42,19 +42,19 @@ M_{i,y}=\tfrac12(P_y+P_{y^{(i)}})
 | 输入边能量 \(mkL/2\) | CORRECT | 每条边 \(J=2kL\)，共有 \(m\) 个方向 |
 | \(C_D=-8\Delta\mathcal E/k\) | CORRECT | \(C_D=4\partial_\lambda G_0\)、\(\partial_\lambda=-2\partial_k\) |
 | \(C_D=-4mL\eta_J\le0\) | CORRECT_ALL_m_c | 适用于全部 \(m\ge1,0<c<1\) 的中点问题 |
-| \(\eta_J\ge\overline V_W\) | CORRECT_WITH_MISSING_DERIVATION | 可由真实 mixture/reference 和 atanh 凸性补全 |
+| \(\eta_J\ge\overline V_W\) | CORRECT_SELF_CONTAINED_IN_FULL_ORIGINAL | 完整原稿用真实 mixture/reference 和 atanh 凸性证明；初审已独立得到同一推导 |
 | \(C_X\) posterior 公式 | CORRECT | covariance 符号与 \(4L\kappa_2\) 系数正确 |
 | 总中点曲率公式 | CORRECT | 与 S73 的 input curvature 和 \(G''\) 一致 |
-| 剩余 \(C_X\) 预算 | GENUINE_OPEN_OBLIGATION | 不是已支付量的改名，但仍足以阻塞总凹性 |
+| 剩余 \(C_X\) 预算 | GENUINE_OPEN_OBLIGATION | (5.5) 经 (5.4) 与同一有限模型的中点总凹性等价；“更窄”仅指结构上只剩一个扇区 |
 | 四点 \(\Xi/\delta\) 公式 | CORRECT_EXACT | 比值随 \(c\uparrow1\) 发散 |
 | 阈值 \(0.5967833208\ldots\) | CORRECT | 由比值大于 1 的代数等价直接得到 |
-| 作者 NumPy 表 | NOT_REPLAYED | 附件缺失；独立枚举复现相同值 |
+| 作者 NumPy 表 | REPLAYED_EXIT_0 | 主表复现；有限差分残差仅有平台相关末位差异，量级一致 |
 | 全半密度 all-size 总凹性 | INCOMPLETE | 尚缺 actual consecutive-Fourier 的 \(C_X\) 上界 |
 | true sine rate / 任意 \(\rho\) | INCOMPLETE | 归一化 bridge、off-midpoint 和一般密度均未闭合 |
 
 ## 1. 冻结前提与作用域
 
-完整读取 `S76_VISIBLE_RESULT.md` 全部 274 行，正文正常结束于 Files 段，没有截尾。任务允许采用已经独立审计的 S73/PR62，具体包括：
+初审完整读取 `S76_VISIBLE_RESULT.md` 全部 274 行，正文正常结束于 Files 段，没有截尾。Cycle30 又完整读取后到的 `S76_RESULT.md` 全部 453 行；它补全了 binary posterior-variance 推导和计算执行记录，但没有把未解的 \(C_X\)、rate bridge、off-midpoint 或一般 \(\rho\) 变成已证结论。任务允许采用已经独立审计的 S73/PR62，具体包括：
 
 1. midpoint iid pair source 后接 exterior channel 的精确 law；
 2. overlap determinant 与 posterior cumulants；
@@ -296,7 +296,7 @@ H_{out}''=C_X-2m/r+4mL(1-\eta_J).
 C_X\le2m/r-4mL(1-\eta_J).
 \]
 
-这确实比原始未展开 remainder 窄，但仍是全尺寸总凹性的关键义务。已证 \(\eta_J\ge\overline V_W\) 只能给出一个更保守的充分条件，不能自动控制 \(C_X\)。
+由上一条精确恒等式可见，这个不等式对**同一个给定有限通道**并不是比“中点总凹性”逻辑上更弱的充分条件，而是与 \(H_{out}''\le0\) 精确等价。完整原稿所谓 “strictly narrower obligation” 只能理解为结构性收窄：\(D\) 扇区已经支付，待证式只显式含 \(C_X\)；不能理解成已经得到一个更弱且更容易自动成立的定理。进一步以 \(\overline V_W\) 代替 \(\eta_J\) 的 (5.6) 才是更强的充分条件，并且仍未证明。
 
 所有 `all-size/all-contrast` 量词都只属于：半密度、对称 bias \(a=(1-c)/2\)、Hamming-layer 双随机通道下的 \(D\)-sector theorem。它们不覆盖 off-midpoint、一般密度或 rate bridge。
 
@@ -332,9 +332,9 @@ c>
 
 当 \(c\uparrow1\) 时 \(r\downarrow0\)，比值发散。该反例属于 actual cyclic family，但它只否定 \(\Xi_O\le\delta_O\) 这类点态小系数支付；S73 已证的四点总 curvature 仍为负，与此不矛盾。
 
-## 8. 独立计算复现
+## 8. 独立计算与作者附件复现
 
-由于两个导出附件未下载，没有执行作者 NumPy。本审查另写标准库枚举器：
+初审时两个导出附件未下载，因此先另写标准库枚举器：
 
 1. 从前 \(m\) 个 Fourier modes 构造 \(U_m=2(Q_m)_{EO}\)；
 2. 计算全部 exterior minors 和 layer channel；
@@ -343,7 +343,11 @@ c>
 5. 独立从 edge Jeffreys energies 计算 \(\eta_J\)；
 6. 使用每条边自己的 \(M_{i,y}\) 和 \(M_{i,y}^W\) 计算 \(\overline V_W\)。
 
-对 \(c=.95,m=2,3,4,5\)，正文表格全部复现；两种 \(\eta_J\) 算法一致，且每个尺寸都有 \(\eta_J-\overline V_W>0\)。这些是实现诊断；一般性 inequality 由 §5 的解析推导承担。
+对 \(c=.95,m=2,3,4,5\)，正文表格全部复现；两种 \(\eta_J\) 算法一致，且每个尺寸都有 \(\eta_J-\overline V_W>0\)。
+
+Cycle30 收到 `s76_checks.py` 后，先检查其只做本地 NumPy 枚举、无网络、子进程、文件写入、动态执行或反序列化，再以 `--c 0.95 --max-m 5` 运行。退出码为 0，作者主表与正文及独立实现一致。`C_D+8 dG/dk` 是浮点中心差分诊断：本次得到的 \(m=3,5\) 数值分别为 `1.264e-09`、`-2.243e-10`，与原稿表中的 `8.2e-10`、`-1.1e-9` 不逐位相同，但同属舍入/步长敏感的 \(10^{-9}\) 残差，不构成主量不一致。作者源码和原始标准输出随本审查归档。
+
+这些运行都只是有限尺寸实现诊断；一般性 inequality 由 §5 的解析推导承担，不能由 \(m\le5\) 浮点表升级得到。
 
 ## 9. 精确剩余义务
 
@@ -351,6 +355,6 @@ c>
 2. 建立按全部 \(2m\) cyclic sites 归一的 cyclic-to-Hilbert/finite-Toeplitz 二阶响应桥；entropy-value convergence 不可直接求导。
 3. 处理 off-midpoint，此时 Fisher loss、\(\gamma'\) 和全部 moving weights 返回。
 4. 对任意 \(\rho\) 替换半密度 parity-unitary/Hamming-layer 结构。
-5. 若公开稿要求自包含，应把 §5 的 binary-reference 推导插回正文，而不只写 “direct binary calculation”。
+5. 公开表述应把 (5.5) 称为“支付 \(D\) 扇区后剩余的结构化义务”，不要让 “strictly narrower” 暗示它在同一有限模型中比中点总凹性逻辑上更弱。
 
 最终状态：**S76 对所有尺寸与对比度严格支付了中点 acceleration 的 equal-pair 扇区，并给出可计算的 posterior-geometric payment；总凹性仍被未解决的 \(C_X\) 扇区阻塞。**
