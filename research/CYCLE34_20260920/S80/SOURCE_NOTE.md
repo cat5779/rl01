@@ -1,0 +1,1 @@
+Original S80_RESULT.md preserved unchanged. S80_RESULT_RENDERING_FIXED.md fixes only five control characters affecting \big / \frac, as identified by PR71. No mathematical edits. Independent review: RL01 PR71, head b65c0e14171a6ecc5282821c8683c1a514e90442.

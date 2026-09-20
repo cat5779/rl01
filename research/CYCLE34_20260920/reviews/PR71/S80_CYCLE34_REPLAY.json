@@ -1,0 +1,50 @@
+{
+  "status": "PASS_INDEPENDENT_FLOATING_AND_EXACT_CONSTANT_CHECKS",
+  "dephasing": {
+    "cases": 9,
+    "minimum_quantum_minus_classical": 0.32369280967173397
+  },
+  "quantum_telescope": {
+    "sum": 0.1669168925470217,
+    "endpoint_difference": 0.1669168925470217,
+    "error": 0.0
+  },
+  "half_density_D6": {
+    "formula": "3/2 - 806/(75*pi^2)",
+    "closed_value": 0.41113501312367684,
+    "direct_trace_value": 0.4111350131236766,
+    "error": 2.220446049250313e-16
+  },
+  "spectral_residual": {
+    "R6_exact_formula_float": 0.17360594686589215,
+    "pointwise_symbolic_bound_float": 1.268544784082455,
+    "uniform_J_symbolic_bound_float": 1.5775907710209103,
+    "bound_slacks": [
+      1.094938837216563,
+      1.4039848241550181
+    ],
+    "benchmark_chord_seed_gap_per_site_float": 0.00010343588985739505,
+    "benchmark_T_lower_bound_float": -0.17350251097603475
+  },
+  "word_interaction": {
+    "DF": 32.59075196032429,
+    "minus_E_ell_second": 32.59075196032428,
+    "identity_error": 7.105427357601002e-15,
+    "observed": {
+      "ell": 1.7152506738054143,
+      "ell1": 35.1554150737084,
+      "ell2": 1671.2717556376995,
+      "DF": 32.59075196032429,
+      "Irel": 18.55254642772909
+    },
+    "claimed_bounds": {
+      "ell": 200.9293638065624,
+      "ell1": 16074.349104524992,
+      "ell2": 1928921.892542999,
+      "DF": 1928921.892542999,
+      "Irel": 258384699.1341434
+    },
+    "all_bounds_pass_float": true
+  },
+  "scope": "Floating checks support formulas; general results rely on the audited proofs, not these samples."
+}
