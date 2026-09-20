@@ -1,51 +1,53 @@
-# 当前状态 — 2026-09-18
+# 当前数学状态 — 2026-09-20 / Cycle34
 
-## 主目标
+## 总结论
 
-对实际正弦 Toeplitz 核
+真实sine-Toeplitz完整配置Shannon熵率关于a的全参数凹性：OPEN。
+整个c∈(37/40,1)：OPEN。没有已认证的实际sine熵率反例。
+有限弦差到熵值极限是合法闭合路径；不必强求 -h''=lim(-H_n''/n)。
 
-\[
-K_n(a)=aI+cQ_{\rho,n},
-\]
+## 真正的熵率覆盖
 
-在每个固定 `0<rho<1`、`0<c<1` 和全部合法 `0<=a<=1-c` 上证明完整配置 Shannon 熵率凹性。
+记 Gap_tau h=h((1-tau)x+tau y)-(1-tau)h(x)-tau h(y)。“弦系数k”表示 Gap_tau h>=k tau(1-tau)(y-x)^2。
 
-**状态：OPEN / NOT PROVED。** 下面所有通过项都是严格限定结论；修正循环律、半密度平衡点、有限观测或有限维证书都不能自动升级为这个主目标。
+| 已审结论 | 参数范围 | 证据与限制 |
+|---|---|---|
+| 通用基线 | 全rho、全合法a，c<=37/40 | 未被后续局部区域替代 |
+| S63 | rho=1/3,c=.95,a∈[.021,.024] | RL01 PR47；H_n''<=-n/25+399，弦系数1/50 |
+| QWE07 | c=.95,rho∈[1/3,1009/3000],a∈[.021,.024] | RL01 PR52；源DPP PR129；弦系数1/50 |
+| S70旧结果 | rho=1/3,c∈[.95,.9535],p∈[.42,.48],a=(1-c)p | PR53；H_n''<=-n/25+441，弦系数1/50；子区间c<=.953加强到1/10 |
+| S69旧结果 | rho=1/3,c=.95,a∈[.02,.0255] | PR55；修复每个工作线程向上舍入后复现；弦系数1/2000 |
+| S74极稀／极密 | c∈[.925,.95],a∈[.02,.03],0<min(rho,1-rho)<=1e-21 | PR64；严格但密度范围极窄；曲率margin27353/8192，弦系数27353/16384 |
 
-## 已独立认证的当前结论
+这些范围分别证明，不能合成更大的三参数长方体。S69/S70后来的任务运行失败不撤销其较早已审成果。早期半密度平衡线c<=.937附近证书不等于同c下全a定理；极窄延伸更不等于覆盖到.95。
 
-| 对象 | 状态 | 已认证范围 | 明确排除 |
-|---|---|---|---|
-| [S43 cycle03](research/INDEPENDENT_REVIEW_20260918/S43_CYCLE03.md) | `VERIFIED_SCOPED` | 修正循环半密度律、`c=19/20`、偶数 `n`：`limsup W_n/n <= -2.689614884862...`，并且 `-W_n=Theta(n)` | 不给出 `W_n/n` 极限，不决定 `W_n+C_n`，不证明真实输出熵率凹性 |
-| [S45 cycle03](research/INDEPENDENT_REVIEW_20260918/S45.md) | `VERIFIED_SCOPED` | 固定 `c` 的修正律中 `|W_n|=O(n)` | 不给符号或极限系数 |
-| [S45 cycle04](research/INDEPENDENT_REVIEW_20260918/S45_CYCLE04.md) | `VERIFIED_SCOPED` | 固定 `c`、偶数 `n` 的 clock limsup 上包络；在 `c=.95` 的系数为 `499.631158492115...` | 不推出 `W_n+C_n` 的符号；该系数不是逐个有限 `n` 的界 |
-| [S42 cycle03](research/INDEPENDENT_REVIEW_20260918/S42_CYCLE03.md) | `VERIFIED_SCOPED` + `DISPROVED` + `GAP` | dyadic 有限弦桥、准自由互信息主控、标量核、数方差和显式尾界通过；第一 doubling 弦严格为正 | 指定尺度只有 `O(eta^2)`，不是 `o(eta^2)`；剩余 11/12 个带符号尺度未支付 |
-| [S41 cycle03](research/INDEPENDENT_REVIEW_20260918/S41_CYCLE03.md) | `VERIFIED_SCOPED` | 可见 §1–§7 的半填充平衡点有限观测证书 | 截断的 §8 未审；常数在 `c=.95` 附近不实用 |
-| [S41 cycle04](research/INDEPENDENT_REVIEW_20260918/S41_CYCLE04.md) | 骨架通过，主引理 `GAP` | posterior projection、Schur 字典、边界能量、outside / anchor flow、随机 anchor 平均与条件装配 | complete-jet Lemma 5.1 没有完整展开和覆盖账本；Theorem A 仅条件成立 |
-| [SA02 平衡线边界](research/INDEPENDENT_REVIEW_20260918/SA02_C37_BOUNDARY.md) | `VERIFIED_SCOPED` | `c=37/40` 平衡点及 `37/40<=c<=937/1000` 的平衡线区间；`c=.95` 有真实 sine 后验障碍 | 不覆盖同一 `c` 的全部合法 `a`；“唯一失效前沿”没有单调性证明 |
+## 最新承重工具与缺口
 
-## 已证伪或仍缺的承重点
+| 线 / 独审PR（均RL01） | 接受内容 | 不允许升级 |
+|---|---|---|
+| S71 /60 | 正秩一方向MI凸性、共同平移Fisher defect非负、两点种子 | 秩一方向不等于共同identity方向；概率混合不是核平移 |
+| S72 /61 | 实际权重Ward、单侧揭示比较、尾部常数阶改善 | 没有可支付的W/V完整证书 |
+| S73 /62 | 半密度奇偶条件与循环exterior-channel表示、m2障碍 | 按2m全格点归一；diagonal baseline不闭合mixed曲率 |
+| S74 /64 | cut acceleration的维数无关HS界、merge-tree、负mixed entry严格证书 | 一般密度误差过大；逐entry负号不否定共同方向 |
+| S75 /65 | 单中心星形无条件实际平均正漂移、偏置矩工具 | 每个条件背景不成立，不能直接升为多中心 |
+| S76 /66 | 半密度中点所有m和0<c<1：C_D=-4mL eta<=0；原稿及作者程序复跑 | C_X、rate bridge、非中点、一般rho仍缺 |
+| S77 /67 | M''=I_rel-B，Bplus充分条件，条件merge-tree接口、弱cut障碍 | 新表格仅浮点；全尺度Bplus支付未证；原稿末尾缺失 |
+| S78 /68 | F-logdetC-logdet(I-C)秩一凸；真实q非交换累加；reverse-KL；作者4证书复跑 | R^-4仅固定pair或附加距离条件；core/pair约486.93、总上界约490.39仍正；O(k*l)未解 |
+| S79 /69 | second-chaos/shell恒等式、任意逐层通道反例、exterior删除一致性、total-shell比较律凹 | 实际Fourier未反驳也未证明；K''+J''>=0比精确阈值H_hat''更强；ledger尾缺失 |
+| QWE08 /70 | 秩一二部核任意cut MI凸；真半密度总尺寸<=3全c/a；c=.95,a∈[.02,.03]总尺寸<=4严格连续证书 | 不是全尺寸；负monomial需分组；nilpotent算子是旧工具复用 |
+| S80 /71 | 值级Jensen tent、精确quantum telescope、逐word各阶导数界均通过；去重已完成 | 残差无tent面积因子，无新率凹性区域；finite-chord桥大部复用S42 |
 
-- [S42](research/INDEPENDENT_REVIEW_20260918/S42_CYCLE03.md)：`L_J` 取固定倍数的正文尺度不能推出小 `o(eta^2)`；M12 的十进制充分阈值舍入方向也需修正。
-- [S47](research/INDEPENDENT_REVIEW_20260918/S47_CYCLE04.md)：原式 (4) 被 `P=Q` 这一最小反例否定；当前代数重写没有给出真正依赖弦结构的 true-sine tail。
-- [S41](research/INDEPENDENT_REVIEW_20260918/S41_CYCLE04.md)：缺的不是更大常数，而是完整 connected expansion、逐项 prototype 覆盖表和 marked 导数账本。
-- 修正律的 `W_n+C_n` 符号仍未决定；即使决定，也仍需支付到实际正弦输出熵率的桥。
+## 旧线必须保留的边界
 
-## 其他已审工具
+- S55 / PR38：半密度compact interior定性桥；不能免费给一般rho或任意新二阶对象使用。
+- QWE02 / PR33：真实互信息弦、巨大常数远尾；32delta^-12来源是QWE02而非S74。
+- QWE05 + S61 / PR42、44：指定冻结循环模型的单侧条件信息余项已付；不重复续同题，不等于全曲率。
+- S51 / PR35、S68 / PR48：固定规模端点代数不等于联合体积极限。
+- S67 / PR51、56：加速度上界和count-gauge通过，benchmark仍缺Fisher>=20.75等输入。
+- 修正循环W负线性、clock线性上包络均属辅助量；分别有界不决定联合符号。
+- S41 complete-jet主引理仍有缺口；S59/S60作者片段不能因归档而升级为已证。
 
-S13、S14、S16、S17 以及早期 S42/S43 的分项结论保存在[审查索引](research/INDEPENDENT_REVIEW_20260918/README.md)。其中旧的 `O(n^(3/2))` 或“符号未知”描述已被后续 S45 / S43 在相同冻结修正律范围内推进，但原文件仍作为研究历史保留。
+## 收件与调度
 
-## 尚未合入的分级证据
-
-[Draft PR #5](https://github.com/cat5779/rl01/pull/5) 继续保留以下四类材料，尚未整体进入主线：
-
-- SA05 `n=8` 的严格有限区间证书；
-- SA03 的有限数值障碍，其中部分仍待区间化和独立复现；
-- SA04 的待审作者证明；
-- SA03 / SA04 的探索性 MCMC。
-
-它们不能合并成一个“已证明”的状态。当前分支保留，待拆分验收。
-
-## 当前研究
-
-[Cycle 05](prompts/CYCLE05/README.md) 正在攻击 S41 complete-jet 缺口和 S43 的 `W+C` 联合支付；S44 的既有定位任务继续运行。任务已派出不等于产生或认证了新结论。
+S76、S78原件及作者复跑已齐；QWE08原稿与程序已独审。S77、S79数学主体及脚本已审，原文末尾仍缺，不能宣称全文审核。S80完整原稿本轮收齐，独审PR71通过限定工具，主目标仍未闭合。
+旧网页版均已回稿，无运行或预留网页版槽。用户将更换来源，暂不向旧池发新题。最终S80裁决和审查运行状态见HANDOFF.md、最新STATE及Cycle34状态。

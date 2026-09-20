@@ -1,121 +1,39 @@
-# 已失败的方法与仍开放的修改
+# 方法地图与下一轮投入 — 2026-09-20
 
-> 2026-09-18 更新：本页后文保留历史表述；当前权威结论以 [STATUS.md](STATUS.md) 为准。特别是冻结修正律中的旧 `O(n^(3/2))` / 符号未知状态，已被 S45 的 `O(n)` 和 S43 在 `c=.95` 的负线性上包络推进；仍未解决的是 `W_n+C_n` 与真实输出桥。
+主目标和严格覆盖见TARGET.md、STATUS.md；失败命题的冻结参数见COUNTEREXAMPLES.md。旧长表原样保存于docs/history/20260918-root/METHODS.md，旧“正在跑”不再代表当前状态。
 
-本清单不是方法穷尽证明。最新补充：
+## 当前值得继续的三条线
 
-- [S19](results/S19/README.md)：指定 gamma<=2 的正部例外总量不是 o(n)；仍不排除有符号分组。
-- [S3](results/S3/README.md)：逐原子 pooled 支付失败，但坏原子概率很小，不能推出真实期望支付失败。
-- [S5](results/S5/README.md)：相邻层 Jeffreys 项非负仍不足以忽略计数协方差；旧 round4 剩余项未审。
-- S13 的 clock 正项不等于全曲率已付清；S9 主阶抵消也不等于次阶符号已知。
+| 优先级 | 工具与接口 | 下一份成果必须交付什么 | 不值得续费的重复 |
+|---|---|---|---|
+| 1 | QWE08偏置矩／秩一二部MI + S77 Fisher–Burg | 真正高秩、任意尺寸的有符号分组，或结构化负环预算；精确进入M''=I_rel−B | 再证秩一、小尺寸网格、把负monomial删除 |
+| 2 | S78真实揭示logdet补偿 + S75星形平均正性 | 多中心整体预算，压低核心截断并避免O(k*l)逐pair付费 | 只把已较小的远尾再压一倍；误称220倍改善即判号 |
+| 3 | S76 D-sector + S79 exterior跨层一致性 | 利用同一个unitary跨层关系，支付K''+J''>=H_hat''或C_X实际预算 | 任意layer-bistochastic通道定理；只证比较shell凹 |
 
-## 既有方法记录
+这三条都未闭合，且主要服务半密度。要覆盖整个(.925,1)与一般rho，须另付参数范围和真实率传递，不能隐去。
 
-# Failed methods and distinctions to preserve
- that this round must respect
+## S80的准确地位
 
-For a projection P, split on an input site i with `q=P_ii in (0,1)`. On the
-remaining sites,
-`P^(1)=P_-i,-i-P_-i,i P_i,-i/q`,
-`P^(0)=P_-i,-i+P_-i,i P_i,-i/(1-q)`.
-With `H_P(a)=H(DPP(aI+cP))`, define
-`R_P=H_P''-(1-q)H_{P^(0)}''-q H_{P^(1)}''`.
-The proposed universal completion inequality (C), `R_P<=0`, is FALSE.
-For `P=vv*`, `v=(1,sqrt(99))/10`, splitting on the second site, at
-`c=19/20,a=1/1000`, an exact certificate gives `R_P>15` while `H_P''<-552`.
-Thus it is the sufficient recursion step, not full entropy concavity, that fails.
+RL01 PR71独审通过：Fisher–Burg tent、occupation dephasing互信息主控、相邻quantum MI精确dyadic telescope、R_L^q与Lambda_J c²D/(2L)、熵值极限传递；逐配置likelihood interaction ell的各阶导数界和DF=−E ell''也正确。
 
-More strongly, for any fixed `0<c<1`, choose an integer `r>c/(1-c)` and the
-first r Fourier columns on n=2r sites. Every site has q=1/2 and the input has
-full support on the r-subsets. At every possible first coordinate,
-`R_P(a,c)=[c^(r-1)/2]*(r*(1-c)-c)/a+O(1+|log a|)` as a decreases to 0,
-with the same positive right-end obstruction by complementation. Dimension
-is fixed BEFORE taking the endpoint limit. Coordinate ordering alone cannot
-make (C) universal. Signed cancellation across a whole latent tree remains
-possible; requiring each node's excess to be nonpositive is forbidden.
+新贡献是精确相邻quantum telescope细化与逐word导数工具；finite-chord/rate bridge、dephasing主控继承S42/PR16，泄漏估计与S42/S64同族，gap inverse/off-block消项延续QWE02。
 
-Further, unrestricted pair-smoothing curvature for all homogeneous input laws
-is false (a five-bit non-DPP example exists). Atomwise log-concavity, count
-entropy concavity, and a positive Fisher term alone do not settle complete
-entropy curvature. A new obstruction to an auxiliary claim is valuable, but
-must not be advertised as a counterexample to the sine target.
+R_L^q=O(log L/L)不含tent面积。L=6,c=.95中点R≈.173606（浮点），而示例seed弦差/site≈.00010344，量级尚未支付。正确剩余义务是控制sum p_y'' ell_y，保留符号、边界规模、尺度可和与弦面积。不能据当前工具宣称新的局部曲率或全区间定理。
 
+## 已暂停的做法
 
+- 用统一逐word、逐pair、逐mixed-entry正性替代真实加权和；多处已有严格障碍。
+- 不利用exterior结构的任意通道凹性；S79已经反驳。
+- 将有限Toeplitz块当projection，或把count entropy、Tr b(K)当完整空间Shannon熵。
+- 从熵值O(log n/n)、数值单调、拟合指数或固定n端点展开直接推熵率二阶导。
+- 把超加性等同于H_n''/n逐n单调；将Dini用于未证单调/连续的对象。
+- 把周期模型、单点.95或半密度中点的结果外推到全参数。
+- 同一条已付冻结桥反复续费；例如QWE05/S61指定循环单侧条件信息义务已完成。
 
+## 文献与工具去重要求
 
-## Additional pitfalls from the reviewed second round
+仓库已有S42准自由熵／dephasing、QWE02有限弦与真实权重远尾、S47/S77 nilpotent/Bochner、S75/QWE08偏置矩、S76/S79 exterior与second-chaos机制。提新工具前必须对这些具体接口去重。
 
-- A globally averaged localization correction can have positive curvature even
-  when every normalized-posterior first derivative vanishes. Keep second
-  response and output-law derivatives. See S4 in KNOWN_RESULTS.md.
-- No exact common Bernoulli-Laplace clock exists on the supplied growing Fourier
-  family, but its exhibited harmonic moments shrink with size. Nonzero mismatch
-  is not yet an extensive entropy obstruction. See S5.
-- A low-contrast counterexample does not settle a high-contrast-only estimate.
-- A Berezin integral is not a positive probability measure. Unrestricted Jensen
-  has been disproved. Integer replicas do not grant real-q continuation.
-- Replacing the full law by a product loses extensive spatial dependence. A
-  value error bound does not control the a-curvature of its error. See S6.
-- S7's first two stalled runs supplied no theorem. Its later accepted spatial
-  results are now included in the 2026-09-17 review ledger; do not confuse the rounds.
-- This packet's exact finite checks verify their stated finite identities and
-  signs; they do not prove the fixed-density entropy-rate target.
+Claude此前提到的Guerra–Toninelli、Lindeberg/Chatterjee、cavity、Cauchy可积结构、RIP、spectral/entropic independence，是迁移候选。现有归档并不证明每个文献方向都被彻底检索并实际尝试；接手者不得把“提到名称”登记为已试。尤其协方差行和不是Dobrushin sup影响，边际到全条件的桥仍要证明。
 
-## S8's new boundaries
-
-Entropy increase under a real leverage-balancing rotation does not imply convex
-curvature gain. Pointwise positivity/convexity inside a Gaussian representation
-can fail while the integral has the desired sign. Do not discard signed terms
-individually. The reviewed rank-two comparison is a curvature DIFFERENCE; an
-iterable path to a solved reference and a fixed-density sign remain unpaid.
-
-## S9's finite positive result does not close the limit
-
-Full R=3 production positivity is now an accepted regression/starting theorem.
-It does not provide a vanishing approximation error as R grows. A new R=3
-replay is not new research credit. Individual count layers can still have the
-wrong sign despite positivity of the full finite sum. The intact repaired growing-radius Theorems A/B are now separately accepted
-as method obstructions; see the current KNOWN_RESULTS and repair audit.
-
-## Newly reviewed boundaries
-
-Do not repackage the S6 10^(-13)-wide contrast strip or its real-q block error
-as a new discovery. Advance the contrast/shift coverage or pay the remaining
-main-term sign. A value-to-curvature passage is justified here by the special
-full-atom polynomial expansion and nested derivative estimates; an arbitrary
-small entropy value error still does not justify differentiating it.
-
-S9's total negative layer mass is provably nonvanishing. A new approach must
-retain the positive-negative compensation, not demand all layers be convex.
-
-## Reviewed synchronization — 2026-09-17
-
-This packet now includes the accepted scopes of the latest three-reviewer
-integration. Full high-contrast sine entropy-rate concavity remains OPEN.
-Read the [new review ledger](https://github.com/cat5779/rl01/blob/7f081d311ced85cbf850605646808425f6b70129/sine-entropy/round4/optional/overnight-reviewed-20260917/README.md)
-and the independent audit of every imported claim.
-
-- S4: for every finite Hermitian contraction with mean density <=.01 or >=.99,
-  c in [.925,.959], and a in [(1-c)/4,3(1-c)/4], H''<=-11n/250; the associated
-  sine-rate strong Jensen gain is 11t(1-t)(a1-a0)^2/500. Ordinary densities and
-  the remaining channel region are open.
-- S1: weighted actual-output count tails at half density, c=.95,
-  a in [.02,.03]; the imported all-odds identity was not certified by this audit.
-- S2: the stated growing odd-n consecutive-Fourier second affine step is not
-  any contraction DPP law; the seven-site physical curvature reversal is exact.
-- S7: complete Shannon Hessian localization and quantitative posterior spatial
-  tails accepted. Near-field sign remains open. Missing six-site scripts and
-  payloads are NOT independent certificate evidence. Earlier statements that
-  S7 has no accepted theorem refer only to its first two stalled runs.
-- S9: production-weighted critical-scale Gaussian limit and opposite order-R
-  band/complement curvatures accepted; the subleading complete sign is unpaid.
-- S11/S12: precise method-budget and mixed-response obstructions accepted;
-  these are not counterexamples to the entropy-concavity target.
-- S13: for each fixed 0<c<1 along even n, liminf C_n/n >=
-  2D_pair(c)/(1-c^2)>0. This is only a favorable midpoint component. W_n and
-  off-midpoint response remain unpaid. Round-2 asymptotics are not promoted.
-- New S3/S5 archives were missing; their new chat claims are not accepted here.
-
-Each new unit received one independent Sol review, not a second review.
-Historical author and unreviewed files are preserved for provenance; the
-explicit acceptance boundaries override their original completion labels.
+新题要列出：对象、全部量词、创造的工具、最小承重引理、进入最终弦差的公式、反例压力测试。理论优先；有价值的失败应给可复核的最小障碍，不以主观评分或重复命名作为进展。
