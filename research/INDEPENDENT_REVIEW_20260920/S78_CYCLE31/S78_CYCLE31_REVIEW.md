@@ -4,7 +4,7 @@
 
 ## 总裁决
 
-**`VERIFIED_COMPENSATED_RANK_ONE_REVEAL / TWO_ACTUAL_SINE_COUNTEREXAMPLES_CERTIFIED / R4_COROLLARY_REQUIRES_FIXED_PAIR_QUANTIFIER / RATE_TARGET_INCOMPLETE`。**
+**`FULL_ORIGINAL_READ / AUTHOR_CERTIFICATES_REPLAYED / VERIFIED_COMPENSATED_RANK_ONE_REVEAL / TWO_ACTUAL_SINE_COUNTEREXAMPLES_CERTIFIED / R4_COROLLARY_REQUIRES_FIXED_PAIR_QUANTIFIER / RATE_TARGET_INCOMPLETE`。**
 
 续稿的核心补偿定理成立。对严格二点条件核 \(C\)，
 
@@ -26,7 +26,9 @@
 \le3.7456952529240384\ldots .
 \]
 
-两个 actual-sine 负漂移反例均由另写的外向取整区间程序严格复现：同 parity 中心加入使原始 \(f_{0,-3}\) 漂移为负但补偿漂移为正；双中心下新增 opposite-parity 叶使 \(\Chi\) 漂移为负。作者导出的四个证书未取得，本审查不声称重跑它们。
+两个 actual-sine 负漂移反例均由另写的外向取整区间程序严格复现：同 parity 中心加入使原始 \(f_{0,-3}\) 漂移为负但补偿漂移为正；双中心下新增 opposite-parity 叶使 \(\Chi\) 漂移为负。Cycle33 到达的四个作者证书程序又在安全检查后原样重跑，均退出码 0，实际 stdout 与作者保存文本逐字一致。
+
+Cycle33 的完整 `RESULT_PHASE1.md` 和 `RESULT_CONTINUATION.md` 已全文读取；`RESULT.md` 经逐字节比较与续稿相同。完整原件补足了可见稿省略的推导细节和执行记录，但没有新增会改变总裁决的承重结论。
 
 唯一需要实质改写的数学表述是“第一交互缺陷为 \(O(R^{-4})\)”的量词。该结论对固定保留 pair \((p,i)\)、令新中心 \(q\) 远离时正确；若允许 \(i\) 随 \(q\) 移动，则不一致成立。取 \(i=q+1\) 时，式中的直接项
 
@@ -47,6 +49,8 @@
 | 初稿矩阵鞅与 \(Q\le1/2\) | CORRECT | 使用移动真实 \(q\)，不要求秩一更新交换 |
 | 初稿 block Ward 支付 | CORRECT_SCOPED | 继承 PR61 已审计 Ward 接口 |
 | 初稿 \(k=2\) 叶揭示负漂移 | CERTIFIED_INDEPENDENTLY | 外向取整区间严格为负 |
+| Cycle33 完整原件 | READ_IN_FULL | phase1 738 行、continuation 922 行；`RESULT.md` 与 continuation 相同 |
+| 四个作者证书程序 | REPLAYED_EXIT_0 | stdout 与作者 txt 逐字相同，并与独立区间交叉一致 |
 | \(\mathcal F-\ell\) 秩一平方和 | CORRECT_EXACT | 每个 \(s/p_y\) 项化为平方，另留 \(a_{10}^2+a_{01}^2\) |
 | 非交换逐次揭示望远镜 | CORRECT | 每步沿自己的秩一直线应用凸性，未交换矩阵 words |
 | 终端反向 KL 表示 | CORRECT_EXACT | 由 Bayes 恒等式逐个 \(11,00\) 输出得到 |
@@ -354,12 +358,27 @@ D_{\star,\infty}<3.745695253
 
 因此不能写成“高对比度种子已闭合”，更不能外推到全部 \((37/40,1)\)、任意密度或完整 entropy-rate concavity。
 
-## 9. 精确剩余义务
+## 9. Cycle33 完整原件增量审计
+
+完整 phase1 新增展开了统一谱隙保持、signed resolvent、四个 cell-ratio、一般 Hermitian 半凸常数、矩阵鞅 block cap、Ward 型 coupling-sensitive 估计和真实 \(k=2\) 四阶矩。它们与此前独立审查的推导一致，没有出现新的未支付承重跳步。
+
+完整 continuation 新增展开了局部 barrier defect 的 resolvent 公式、逐步谱隙保持、reverse-KL 的 Bayes 推导、multi-pair barrier、全矩递推与数值接口。这些正是本审查已独立重建的部分；作者程序重放又补齐了文件级证据。
+
+唯一仍需改写的原件表述位于第一交互空间衰减。原件从
+
+\[
+S_2=O(R^{-2}),\qquad |b_{qi}|^2=O(|q-i|^{-2})
+\]
+
+直接写“所以 (44) 是 \(O(R^{-4})\) away from the retained pair”。合法量词必须明确固定 \((p,i)\)，或假设 \(|q-i|\gtrsim|p-q|\)。若取 \(i=q+1\)，直接项 \(|b_{qi}|^4=(c/\pi)^4\) 不衰减。原件随后固定 \(p=0,i=1\) 的求和例子是正确的，但不能反向把前一句升级成对移动 retained leaves 的一致结论。
+
+因此 Cycle33 增量裁决是：**来源完整性和作者复现由未取得升级为通过；理论裁决、量词修正和 MAIN_INCOMPLETE 均不变。**
+
+## 10. 精确剩余义务
 
 1. 将 \(486.9287385765\ldots\) 的 full-score core/pair truncation 降到可由基线和星形势支付的尺度。
 2. 对 growing two-parity core，把逐 pair 的 \(O(k\ell)\) barrier 累积降到 \(O(k+\ell)\) 或证明独立的 block-cut cancellation。
 3. 若使用第一交互空间尾，必须保持固定 retained pair 的量词，不能让叶随新增中心移动后仍引用 \(R^{-4}\)。
 4. 给出连续参数区间而非单个 \(c=.95,\rho=.5\) benchmark 的最终符号证书。
-5. 作者导出证书到达后可做来源重放；在此之前，本审查只认证可见证明和这里另写的独立区间证书。
 
 最终状态：**精确 log-determinant 补偿定理和两个反例通过；初稿粗界被合法取代；空间衰减需补固定-pair 量词；率目标仍远未闭合。**

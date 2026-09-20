@@ -2,7 +2,7 @@
 
 复现日期：2026-09-20（Asia/Singapore）
 
-## 1. 环境与命令
+## 1. 独立程序环境与命令
 
 环境：Python 3.12.14，只使用标准库。
 
@@ -94,8 +94,40 @@ D_{\star,\infty}^{\rm floor}\in[&3.7456951075302371445688510467130,\\
 
 完全不随 \(R\) 衰减。这给出“固定 pair”限定的显式必要性。
 
-## 5. 证据边界
+## 5. Cycle33 作者程序安全检查与重放
+
+完整原件到达后，逐个检查四个指定程序。它们的导入限于标准库、`mpmath.iv` 和 SymPy；没有网络访问、子进程、文件写入、动态执行、反序列化或随机抽样。四个程序均无输出路径参数，因此直接从只读来源位置运行，不需要改写路径或源码。
+
+重放环境：
+
+```text
+Python=3.12.14
+mpmath=1.3.0
+sympy=1.14.0
+```
+
+| 作者程序 | 实际状态 | 与作者 txt 比较 | 实际日志 |
+|---|---:|---:|---|
+| `s78_k2_counterexample.py` | exit 0 | 统一换行后逐字相同 | `author_replay/S78_AUTHOR_K2_REPLAY.log` |
+| `s78_center_add_barrier_certificate.py` | exit 0 | 统一换行后逐字相同 | `author_replay/S78_AUTHOR_CENTER_BARRIER_REPLAY.log` |
+| `s78_barrier_moments_interval.py` | exit 0 | 统一换行后逐字相同 | `author_replay/S78_AUTHOR_BARRIER_MOMENTS_REPLAY.log` |
+| `s78_updated_interface_interval.py` | exit 0 | 统一换行后逐字相同 | `author_replay/S78_AUTHOR_UPDATED_INTERFACE_REPLAY.log` |
+
+四项分别打印：
+
+```text
+PASS_INTERVAL_K2_NEGATIVE_REVEAL
+PASS_CENTER_ADD_NEGATIVE_AND_BARRIER_COMPENSATED
+PASS_BARRIER_MOMENT_INTERVAL
+PASS_UPDATED_INTERFACE_INTERVAL
+```
+
+前两个证书用 `mpmath.iv` 对真实 sine 主压缩的 determinant、inverse、log 和全部实际 words 做外向区间运算，并检查总概率区间包含 1。矩证书用 SymPy 生成精确有理 Bernoulli 数，再转成 `mpmath.iv`；第 21 矩和全 support 比值支付余尾。接口证书使用截断 20 项所得支付上界，因此不需要把未知尾错误地加回上端。
+
+作者输出中的两个负漂移区间、补偿正区间、星形 barrier 区间、`490.674433829428...` 总支付和 `220.05415713644...` 改善因子，均与独立证书相容；实际 stdout 又与作者保存文本逐字相同。
+
+## 6. 证据边界
 
 严格区间只认证这里列出的两个有限反例、补偿符号和星形矩 barrier。一般秩一平方和、逐揭示望远镜、reverse-KL 与固定-pair barrier 由 review 中的解析推导承担。有限枚举不证明 growing-core 或 entropy-rate 结论。
 
-作者的四个导出 certificate programs 未取得，因此没有运行、比对或声称复现其文件级输出。
+Cycle33 的作者重放补齐了来源和文件级执行证据，但不改变上述数学证据边界。
