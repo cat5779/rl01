@@ -1,0 +1,83 @@
+{
+  "status": "PASS_EXACT_RATIONAL_INTERVAL_CERTIFICATES",
+  "arithmetic": "outward-rounded integer intervals on a 10^-80 grid",
+  "transcendentals": "Machin/alternating sin-cos/atanh-log Taylor bounds",
+  "pi": [
+    "3.1415926535897932384626433832795028841971",
+    "3.1415926535897932384626433832795028841972"
+  ],
+  "unconditional_sine_pair_counterexample": {
+    "rho": "9/20",
+    "c": "19/20",
+    "a": "1/200",
+    "core": [
+      0,
+      3
+    ],
+    "reveal": 4,
+    "coarse_pair_mean": [
+      "0.000275951180464339752444",
+      "0.000275951180464339752445"
+    ],
+    "after_reveal_1_pair_mean": [
+      "0.000309112753908345023979",
+      "0.000309112753908345023980"
+    ],
+    "after_reveal_0_pair_mean": [
+      "-0.000061355471959941043355",
+      "-0.000061355471959941043354"
+    ],
+    "unconditional_drift": [
+      "-0.000177079144736247071677",
+      "-0.000177079144736247071676"
+    ],
+    "coarse_rational_enclosure": [
+      "-0.000177080",
+      "-0.000177078"
+    ]
+  },
+  "conditional_background_star_counterexample": {
+    "rho": "1/2",
+    "c": "19/20",
+    "a": "1/2000",
+    "core": [
+      0,
+      7
+    ],
+    "old_background": [
+      -1,
+      1
+    ],
+    "background_word": [
+      0,
+      0
+    ],
+    "reveal": -3,
+    "conditional_background_drift": [
+      "-0.000000743263519109895773",
+      "-0.000000743263519109895772"
+    ],
+    "unconditional_drift": [
+      "0.000013875271794819793250",
+      "0.000013875271794819793251"
+    ],
+    "coarse_rational_enclosure": [
+      "-0.00000074327",
+      "-0.00000074325"
+    ]
+  },
+  "infinite_midpoint_nearest_star_lower_bound": {
+    "rho": "1/2",
+    "c": "19/20",
+    "a": "1/40",
+    "base_pair_mean": [
+      "0.154930011623127036514513",
+      "0.154930011623127036514514"
+    ],
+    "proved_lower_bound_value": [
+      "0.262755862074718609606873",
+      "0.262755862074718609606874"
+    ],
+    "certified_statement": "star pair expectation > 0.26275"
+  }
+}

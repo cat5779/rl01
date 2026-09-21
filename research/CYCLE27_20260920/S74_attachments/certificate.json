@@ -1,0 +1,39 @@
+{
+  "arithmetic": "directed integer fixed-point intervals; 65 decimal places",
+  "pi_source": "Machin identity 16 atan(1/5)-4 atan(1/239); alternating-series remainder",
+  "pi_interval": [
+    "3.1415926535897932384626433832795028841971693993751058209",
+    "3.1415926535897932384626433832795028841971693993751058210"
+  ],
+  "kernel": {
+    "N": 6,
+    "rho": "1/2",
+    "c": "19/20",
+    "a": "1/40",
+    "partition": [
+      3,
+      3
+    ]
+  },
+  "mixed_MI_Hessian_1_6": [
+    "-0.0003790922420416860133",
+    "-0.0003790922420416860132"
+  ],
+  "same_entry_on_diagonal_rectangle_0_to_1e-10": [
+    "-0.0003791099694534979385",
+    "-0.0003790745146298547933"
+  ],
+  "Fisher_defect": [
+    "32.5907519603242448559425",
+    "32.5907519603242448559426"
+  ],
+  "acceleration": [
+    "-18.8409844899709791046131",
+    "-18.8409844899709791046130"
+  ],
+  "common_identity_MI_curvature": [
+    "13.7497674703532657513294",
+    "13.7497674703532657513295"
+  ],
+  "meaning": "Mixed entry is negative; common identity curvature is positive. No counterexample to all-size M double prime >= 0 is asserted."
+}

@@ -1,0 +1,3 @@
+EXACT_ALPHA_PASS
+EXACT_PSD_PASS 16384
+EXACT_CONTINUUM_PASS {"eta": "1/25", "M": "21", "G_leaves": 1, "G_min_floor_1e12": 3062919, "upper_leaves": 1, "tail": 3.476373912626243e-08}
