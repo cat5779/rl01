@@ -1,73 +1,12 @@
-# Relative transition candidates and limits of coupling upgrades
+# Relative determinantal transitions
 
-The unrestricted exact joint-iid target remains INCOMPLETE. This is a partial mathematical text. The complete visible Sections 1–3 and visible beginning of Section 4 pass one scoped independent mathematical audit. A separate audit of the core transition and approximation argument is in progress. No whole-manuscript approval is attached.
+Fix a countable discrete group Gamma acting regularly on itself. All operators below commute with that left action and are complex Hermitian when stated as kernels. Write mu_K for the DPP of a positive contraction K, tau for the normalized group trace, and C for the right reduced group C*-algebra. All maps concern fixed kernels. H denotes a total Borel equivariant regular-iid sampler for each fixed positive contraction. L denotes existence of an invariant monotone joining for each ordered pair, without an iid representation requirement.
 
-**INCOMPLETE for the unrestricted joint-iid target.** The missing step is an exactly order-preserving **pair** construction for arbitrary \(A\le B\), not individual marginal sampling.
+The manuscript below claims: (R) a relative pure-birth sampler for each uniformly gapped path C+tTT* with finitely supported T delta_e; (N) for arbitrary fixed K,L and eta>0, a relative equivariant iid transition from a given X of law mu_K to Y of law mu_L, with root mismatch at most tau|K-L|+eta; and (J) an exact ordered joint-iid sampler when B-A belongs to C and B-A>=delta I>0, including singular endpoint kernels. General exact joint iid for every ordered pair is not claimed.
 
-Below are a proved relative transition, its quantitative consequences, a restricted positive theorem, and explicit obstructions. None of the obstructions disproves the existential target.
+For R the constant initial path is the exceptional-input fallback, so it preserves all-input birth order. For N the initial configuration is the fallback. No simultaneous measurable dependence on varying kernels or finitary assertion is claimed. The only external DPP comparison input for R is finite Hermitian stochastic domination under operator order.
 
-Write
-\[
-\tau(K)=\langle K\delta_e,\delta_e\rangle,\qquad
-\mathcal C=C_r^*(\Gamma)
-\]
-in the right regular representation. All kernels are complex Hermitian, all actions are regular, and all choices concern fixed kernels.
-
-## 1. A prescribed invariant ordered joining need not be an iid factor
-
-On \(\mathbb Z\), encode ordered pairs by colors
-\[
-0=(0,0),\qquad1=(0,1),\qquad2=(1,1).
-\]
-Let \(\pi\) be uniform on these colors and set
-\[
-Q=\frac1{36}
-\begin{pmatrix}
-4&5&3\\
-5&2&5\\
-3&5&4
-\end{pmatrix}.
-\]
-Let \(\lambda_0\) consist of independent \(Q\)-pairs on \((2k,2k+1)\), let \(\lambda_1\) use \((2k+1,2k+2)\), and put
-\(\lambda=(\lambda_0+\lambda_1)/2\).
-
-Rows and columns sum to \(1/3\), and \(Q_{00}=Q_{22}=1/9\). Both binary projections are therefore iid, giving, for every finite \(F\),
-\[
-\mathbb P(F\subseteq X)=3^{-|F|},\qquad
-\mathbb P(F\subseteq Y)=(2/3)^{|F|}.
-\]
-These identify \(\mu_{I/3}\) and \(\mu_{2I/3}\). Containment is automatic, and the shift \(T\) exchanges the components, making \(\lambda\) invariant.
-
-Set
-\[
-\phi(a,b)=\mathbf1\{\text{exactly one of }a,b\text{ equals }1\}.
-\]
-Its expectations under \(Q\) and \(\pi\otimes\pi\) are \(5/9\) and \(4/9\). Even-edge averages converge to these respective values under \(\lambda_0,\lambda_1\): for the latter, split the one-dependent sequence into two iid parity subsequences. Odd-edge averages reverse the limits. Thus the configuration determines a mean-zero phase \(H=\pm1\), invariant under \(T^2\) and reversed by \(T\). Each component is \(T^2\)-ergodic, so their exchange makes \(\lambda\) \(T\)-ergodic, but not \(T^2\)-ergodic.
-
-Join \(Z\sim\lambda\) and \(W\sim\nu\) stationarily, where \(\nu\) is \(T^2\)-ergodic. The conditional laws of \(W\) given \(H=\pm1\) are \(T^2\)-invariant and have densities at most two relative to \(\nu\). Ergodicity makes both densities constant. Hence \(W\) is independent of \(H\), and
-\[
-\frac1{18}
-=\left|\mathbb E H\,[\phi(Z_0,Z_1)-\phi(W_0,W_1)]\right|
-\le 2\mathbb P(Z_0\ne W_0).
-\]
-Therefore
-\[
-\boxed{\bar d(\lambda,\nu)\ge 1/36.}
-\]
-
-Every iid factor is \(T^2\)-ergodic, since the iid source, grouped into consecutive pairs, is a Bernoulli shift. Thus \(\lambda\) is not an iid factor. In particular, no equivariant conditional map \(Y=\Psi(X,U)\), with \(X\) iid Bernoulli \(1/3\) and \(U\) independent regular iid, can realize this prescribed joining.
-
-Nevertheless, \(\lambda\) is a weak limit of ordered iid factors with these **same exact marginals**. Use iid Bernoulli \(p\) markers. Between consecutive markers, pair vertices from left to right, leaving a final singleton when necessary. Sample independent \(Q\)-pairs and \(\pi\)-singletons. Conditional on this equivariant partition, both binary marginals remain iid. The invariant null event lacking markers in either direction receives constant color zero.
-
-No markers in \([-r-1,r+1]\) leaves \([-r,r]\) in one uninterrupted pairing. The preceding-marker distance is geometric, with parity bias \(p/[2(2-p)]\). Consequently,
-\[
-\|\lambda_p|_{[-r,r]}-\lambda|_{[-r,r]}\|_{\rm TV}
-\le (2r+3)p+\frac{p}{2(2-p)}
-\longrightarrow0.
-\]
-Every \(\lambda_p\) is still at \(\bar d\)-distance at least \(1/36\) from \(\lambda\). Common-input realizations cannot be Cauchy in root probability: a summably Cauchy subsequence would stabilize by Borel–Cantelli to an iid factor with law \(\lambda\).
-
-This does **not** refute the target: common uniform thresholds monotonically couple the same scalar kernels. Cyclic-coset copies extend the obstruction to groups containing an infinite-order element, including free groups. The general failure of weak closure is already known; the additional features here are the fixed scalar DPP marginals and explicit quantitative separation. 
+## Frozen proof text
 
 ## 2. The finite-support relative transition is proved
 
@@ -319,55 +258,3 @@ X_{n+1}\subseteq X_n\subseteq Y_n\subseteq Y_{n+1}.
 \]
 The limits have marginals \(\mu_A,\mu_B\) by finite determinants. Each transition has a gap; no uniform endpoint gap is assumed.
 
-## 4. The exact remaining gap and representation tests
-
-For ordered pair maps \(F_n\) on one iid input,
-\[
-\sum_n\mathbb P(F_{n+1}(e)\ne F_n(e))<\infty \tag{6}
-\]
-suffices: every coordinate stabilizes almost surely, the ordered alphabet
-\(\{(0,0),(0,1),(1,1)\}\) is preserved, and the invariant exceptional set receives \((\varnothing,\varnothing)\). Entrywise convergence of marginal kernels identifies both limit DPPs.
-
-**Constructing these ordered pair maps for arbitrary \(A\le B\) is unproved.** Independent marginal corrections can create \((1,0)\). Summable order violations do not imply stabilization of successive pair maps. In particular, (5) cannot be used with \(\eta=0\) without another proof. Section 1 shows why weak convergence cannot replace (6).
-
-Order-preserving positive-square approximation can fail. On \(\mathbb Z\), take a positive-measure closed nowhere-dense set \(E\) on the Fourier circle and
-\[
-A=I/8,\qquad B=I/4+P_E/4,\qquad D=I/8+P_E/4.
-\]
-Every continuous multiplier below \(D\) is at most \(1/8\) on the dense open complement, hence everywhere. Dominated finite-support positive-square partial sums therefore have trace at most
-\(1/8<\tau D\), precluding even weak convergence despite the gaps.
-
-A one-hot Hermitian DPP on \(\Gamma\times S\) is also not universal. Vanishing same-fiber two-point determinants force each diagonal fiber block to have rank at most one. Positivity annihilates its orthogonal fiber complement, so
-\[
-K=JCJ^*,\qquad J\delta_g=\delta_g\otimes v.
-\]
-Inclusion determinants identify independent marking of \(\mu_C\). Nested color retention therefore forces independent thinning:
-\[
-\det A_F=\theta^{|F|}\det B_F.
-\]
-On \(C_2\),
-\[
-A=\begin{pmatrix}1/4&1/8\\1/8&1/4\end{pmatrix},\qquad B=I/2
-\]
-satisfy \(0<A<B<I\). Intensities force \(\theta=1/2\), but
-\[
-\det A=3/64\ne1/16=\theta^2\det B.
-\]
-This excludes only that representation.
-
-Finite groups satisfy the full target: average a finite monotone coupling over the group and sample it in coordinates transported from the unique minimum-priority iid vertex, using an independent uniform there. Invariance identifies the law and equivariance follows because the leader translates. On priority ties return the empty pair. The finite domination input permits complex and singular kernels. 
-
-Scalar lower kernels are covered: for \(aI\le B\), independently sample
-\(Z\sim\mu_{(B-aI)/(1-a)}\) and \(X\sim\mathrm{Bern}(a)^\Gamma\), then take \(Y=X\cup Z\). For finite \(F\),
-\[
-\mathbb P(F\subseteq Y^c)
-=(1-a)^{|F|}\det\!\left(\left[I-\frac{B-aI}{1-a}\right]_F\right)
-=\det((I-B)_F).
-\]
-Scalar upper kernels use \(Z\sim\mu_{A/b}\), independent iid Bernoulli \(b\) configuration \(Y\), and \(X=Y\cap Z\); then
-\[
-\mathbb P(F\subseteq X)=b^{|F|}\det((A/b)_F)=\det A_F.
-\]
-The endpoint cases are deterministic. Equal kernels, \(A=0\), and \(B=I\) include singular projection cases. 
-
-The remaining material is not included here. The scope of any mathematical review must be stated by section and claim.
