@@ -109,7 +109,7 @@ The defining DPP inclusion probabilities show that restriction to a finite \(F\s
 =t_s^{|B|}\det Q[B]
 =\det(t_sQ)[B]
 \]
-for every finite \(B\). Thus thinning gives kernel \(t_sQ\). The underlying discrete DPP characterization and positive-contraction construction are recorded in Lyons’s *Determinantal Probability: Basic Properties and Conjectures*, equation (1.1) and Section 2.3. :chatgpt-content-reference{index="0"}
+for every finite \(B\). Thus thinning gives kernel \(t_sQ\). The underlying discrete DPP characterization and positive-contraction construction are recorded in Lyons’s *Determinantal Probability: Basic Properties and Conjectures*, equation (1.1) and Section 2.3. 
 
 Fix \(s>0\). In a finite \(F\), let \(\eta\) be the sites born before \(s\), with observed birth times \(r_y<s\). For a terminal set \(T_0\supseteq\eta\), the history likelihood contains the factor
 \[
@@ -135,7 +135,7 @@ For completeness, the inclusion determinants give the generating polynomial
 \mathbb E\prod_{x\in F}z_x^{Y_s(x)}
 =\det(I-K+K\operatorname{diag}z).
 \]
-Factor out \(I-K\) and expand the remaining determinant by principal minors to obtain (9). This is also Lyons’s equation (2.12); its finite-set and \(\|K\|<1\) hypotheses hold here. All determinants in the denominator are positive. :chatgpt-content-reference{index="1"}
+Factor out \(I-K\) and expand the remaining determinant by principal minors to obtain (9). This is also Lyons’s equation (2.12); its finite-set and \(\|K\|<1\) hypotheses hold here. All determinants in the denominator are positive. 
 
 The ratio in (8) is a Schur complement. By homogeneity of shorting,
 \[
@@ -190,7 +190,7 @@ For fixed \(s,x\), the finite observed-past sigma-fields increase to \(\mathcal 
 \[
 R_x(s)=1_{\{x\in Z,E_x>s\}}.
 \]
-The exact theorem used is Lyons’s *Lecture Notes on Martingales*, Theorem 35.6: conditional expectations of an integrable variable converge along increasing sigma-fields to the conditional expectation on their generated union. :chatgpt-content-reference{index="2"}
+The exact theorem used is Lyons’s *Lecture Notes on Martingales*, Theorem 35.6: conditional expectations of an integrable variable converge along increasing sigma-fields to the conditional expectation on their generated union. 
 
 Combining (10) and (12), with \(\eta=Y_{s-}\), proves (1).
 
@@ -231,7 +231,7 @@ The augmentation issue is handled by the following lemma.
 &=\lim_nM_{a_n}=M_a.
 \end{aligned}
 \]
-The last limit follows from right continuity, also in \(L^1\) by domination. The reverse convergence theorem used here is Lyons’s Theorem 35.9; its hypotheses are decreasing sigma-fields and an integrable terminal variable. :chatgpt-content-reference{index="3"}
+The last limit follows from right continuity, also in \(L^1\) by domination. The reverse convergence theorem used here is Lyons’s Theorem 35.9; its hypotheses are decreasing sigma-fields and an integrable terminal variable. 
 
 Apply this lemma to \(Y_t(x)-\int_0^t\lambda_x(s)\,ds\), which is bounded in absolute value by \(1+T\) on \([0,T]\). Hence the compensator remains valid in \(\mathcal H\).
 
@@ -245,7 +245,7 @@ No triviality of a right germ is assumed. No globally locally finite jump proces
 
 ## 4. Progressive Poisson completion
 
-Independently add iid \(V_x\sim U(0,1)\) and independent unit-intensity PRMs \(M_x\) on \((0,\infty)\times(0,1]\). The auxiliary intensities are sigma-finite, so they meet the existence hypothesis of Last–Penrose, *Lectures on the Poisson Process*, Theorem 3.6. :chatgpt-content-reference{index="4"}
+Independently add iid \(V_x\sim U(0,1)\) and independent unit-intensity PRMs \(M_x\) on \((0,\infty)\times(0,1]\). The auxiliary intensities are sigma-finite, so they meet the existence hypothesis of Last–Penrose, *Lectures on the Poisson Process*, Theorem 3.6. 
 
 Write \(\tau_x=E_x\) when \(x\in Z\), and \(\tau_x=\infty\) otherwise. Define the raw filtration
 \[
@@ -364,7 +364,7 @@ Compensation therefore makes \(Z^h\) a true \(\mathcal G\)-martingale. Hence
 
 Taking \(h\) simple on finitely many disjoint site/time/mark cells proves that their future counts are independent Poisson variables, with joint law independent of \(\mathcal G_t\). Approximation and finite-site exhaustion prove the full common-filtration PRM assertion.
 
-The distributional characterization is Last–Penrose Theorem 3.9. Importantly, its distributional statement is not being substituted for the filtration claim: the conditional identity (18) proves that additional claim. :chatgpt-content-reference{index="5"}
+The distributional characterization is Last–Penrose Theorem 3.9. Importantly, its distributional statement is not being substituted for the filtration claim: the conditional identity (18) proves that additional claim. 
 
 Every real point lies below \(\lambda\), and every virtual point lies above it. Since \(b_s(x,\eta)=0\) on occupied sites, (17) gives (2). The construction commutes with translations, so \((Y,N)\) is jointly invariant.
 
