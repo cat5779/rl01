@@ -25,7 +25,7 @@ G_K(z)=\mathbb E\prod_jz_j^{\eta_j}
       =\det(I-K+K\operatorname{diag}z).
 \tag{2}
 \]
-This follows by expanding \(\prod_j[1+(z_j-1)\eta_j]\) and using the inclusion determinants; it is also Lyons’s equation (2.11), which does **not** require \(\|K\|<1\). :chatgpt-content-reference{index="0"}
+This follows by expanding \(\prod_j[1+(z_j-1)\eta_j]\) and using the inclusion determinants; it is also Lyons’s equation (2.11), which does **not** require \(\|K\|<1\). 
 
 For an arbitrary finite real field \(h\), put
 \[
@@ -170,7 +170,7 @@ b^n_{t,x}(X_t)
 =\mathbb E[\eta_x\mid X_t(z):z\in E_n(x)].
 \tag{14}
 \]
-The conditioning sigma-fields increase to the endpoint observations on \(C(x)\). Upward conditional-expectation convergence applies to the bounded variable \(\eta_x\), so their almost-sure limit is the conditional mean on that component. These are exactly the hypotheses of Lyons’s Theorem 35.6. :chatgpt-content-reference{index="1"}
+The conditioning sigma-fields increase to the endpoint observations on \(C(x)\). Upward conditional-expectation convergence applies to the bounded variable \(\eta_x\), so their almost-sure limit is the conditional mean on that component. These are exactly the hypotheses of Lyons’s Theorem 35.6. 
 
 Independence of the pairs \((\eta|_C,B|_C)\) across components then gives
 \[
@@ -223,14 +223,14 @@ be its usual augmentation. Each \(\beta(x)\) is continuous, square integrable, a
 \end{aligned}
 \tag{18}
 \]
-The decreasing sigma-fields and integrable terminal variable meet Theorem 35.9’s hypotheses. This proves preservation under augmentation rather than presuming trivial right germs. :chatgpt-content-reference{index="2"}
+The decreasing sigma-fields and integrable terminal variable meet Theorem 35.9’s hypotheses. This proves preservation under augmentation rather than presuming trivial right germs. 
 
 Finite variation does not change quadratic covariations, so
 \[
 [\beta(x),\beta(y)]_t=\mathbf1_{\{x=y\}}t.
 \tag{19}
 \]
-Every finite vector \(\beta|_A\) is consequently a continuous local martingale, starting at zero, with bracket \(tI\), in the **same** usual filtration. This is precisely the common-filtration vector Lévy characterization, Sznitman’s Theorem 6.10. :chatgpt-content-reference{index="3"}
+Every finite vector \(\beta|_A\) is consequently a continuous local martingale, starting at zero, with bracket \(tI\), in the **same** usual filtration. This is precisely the common-filtration vector Lévy characterization, Sznitman’s Theorem 6.10. 
 
 Explicitly, Itô’s formula makes
 \(\exp(i\theta\cdot\beta_t|_A+|\theta|^2t/2)\) a local martingale. Its modulus is bounded on bounded horizons, so
@@ -292,12 +292,10 @@ Arbitrary spatially unbounded path fields remain valid inputs to (9)–(13): onl
 
 The source distinction matters. For \(\Gamma=\mathbb Z\) acting trivially on a singleton, \(Q=[p]\), \(0<p<1\), the stated \(W\)-source supplies a random bit. A regular-\(\mathbb Z\) source could not: its equivariant output would be shift invariant and thus constant by Bernoulli-shift ergodicity. That ergodicity follows by approximating an invariant event with finite-coordinate cylinders and translating them to disjoint coordinates. No regular-source assertion is made here.
 
-The observation mechanism appears in Nam–Sly–Zhang, §2 and Lemma 2.1. Their tree/Ising theorem is not used as a general-action theorem, and no originality conclusion is claimed. :chatgpt-content-reference{index="4"}
+The observation mechanism appears in Nam–Sly–Zhang, §2 and Lemma 2.1. Their tree/Ising theorem is not used as a general-action theorem, and no originality conclusion is claimed. 
 
 ### Publication
 
-GitHub publication failed: the GitHub integration was not installed, and `git ls-remote` failed to resolve `github.com`. PR #86 was not updated; nothing was pushed or merged.
-
 The verified archive contains only `research/q77r05/g2/RESULT.md` and `REFERENCES.md`, including expanded details and the external-theorem hypothesis audit:
 
-:chatgpt-content-reference{index="6"}[RESULT.md](sandbox:/mnt/data/q77r05g2-001/research/q77r05/g2/RESULT.md) · :chatgpt-content-reference{index="7"}[REFERENCES.md](sandbox:/mnt/data/q77r05g2-001/research/q77r05/g2/REFERENCES.md) · :chatgpt-content-reference{index="8"}[q77r05g2-001.zip](sandbox:/mnt/data/q77r05g2-001.zip)
+ ·  ·
