@@ -1,0 +1,158 @@
+\documentclass[UTF8,11pt]{ctexart}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,booktabs,tabularx,longtable,array,enumitem,xcolor,hyperref}
+\usepackage{microtype,seqsplit}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{nosep,leftmargin=2.2em}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{DPP 高对比度熵路线账\thanks{只做来源考古与状态记账，不作新的数学判定。公开版以 EULER 统一表示来源主体。}}
+\author{EULER}
+\date{来源快照：2026-10-02}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文整理有限核共同移位与真实平稳 sine 熵率在高对比度区间的路线、局部正区、精确方法障碍、见证失败、未修缺口和无结果中止项。账本共登记 69 个路线单位，覆盖七个仓库的 512 个分支、498 个 PR 和 100 个 ordinary issue，并逐项查看关闭未合并 PR 及 PR 内的来源与审查文件。最重要的逻辑边界是：目前没有登记到高对比度真实 sine 熵率命题本身被反例否定；已有精确反例针对的是更强的逐项支付、点态预算、条件化单调桥或错误的对象替换。
+\end{abstract}
+
+\section{两个不同层次的现状}
+
+有限核共同移位预算法已经完整写出。固定来源为
+\path{papers/stationary-channel/main.tex}，文件提交
+\code{16d5d55269eca9725e5eb3f5d0e6ebd785396741}，正文包含 §4 ``Bayes reallocation at the half threshold''、§5 ``Fisher--Schur closure through contrast twenty-one twenty-fifths''、§5.3 的第二个 Schur budget、张量 Bernstein 精确证书，以及 §6 向平稳情形的有限强 Jensen 传递。对比度到 $23/25$ 的定义、预算和证明是闭合的；这不等同于 $c\approx .95$ 的全参数真实 sine 熵率结果。
+
+真实高对比度 sine 熵率目前是“远尾已付、带符号近场未付”。W02 已给
+\[
+  2\sum_{i<j,\,j-i>D}\mathbf E\lvert g_{ij}(\mathrm{full})\rvert
+  \le nA_h(1+D)^{-\beta},
+\]
+证明次序是 complete posterior 的加权 Schur 行能量、统一 reveal martingale、pair 重排、求和，最后以有界 martingale 收敛与 Fatou 过有限窗极限。常数在 $c\uparrow1$ 或偏置端点退化。剩余的真实 signed near-field aggregate 没有被该远尾结果支付。
+
+\section{账本规模与状态}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+状态 & 路线数\\
+\midrule
+正面闭合（限定范围） & 15\\
+方法被精确反例否定 & 16\\
+只有见证/分配失败（方法本身未被否定） & 6\\
+发现缺口后未修 & 13\\
+修复后被后续路线继承 & 7\\
+无结果中止 & 12\\
+来源缺失 & 0\\
+\midrule
+合计 & 69\\
+\bottomrule
+\end{tabular}
+\caption{状态分组。每个路线单位恰取一个状态。}
+\end{table}
+
+“无结果中止”中既包括 QWE03/04、S59/S60、S62/S65/S66，也包括经过文件树核对后确认只有提示词、任务合同或排程页的 W01、早期 S1/S2/S3/S7 分支。后继分支后来若有局部引理，按后继自己的 PR 和证据登记，不能倒填给原任务壳。
+
+\section{死因统计}
+
+死因统计以 \code{ledger.csv} 中“死因归类”不是“不适用”的 52 行为分母；“其他”合并未收到交付、固定分配余量不足、公式漏项和参数方向错误等明示子类。
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrp{7.4cm}}
+\toprule
+死因 & 数量 & 典型路线\\
+\midrule
+其他（逐行写明） & 20 & 无交付壳、S59/S60/S62 主结果未收到、22 点固定分配不足、S78 余量仍正、S47 公式漏项\\
+逐项收费过强 & 11 & S21、六点零支付 Jensen、$c=463/500$ 点态双预算、RL01 S3、QWE09\\
+对象替换错误 & 8 & 计数熵、谱熵、循环模型直接替换、修正差全局凸性、same-unitary 外的 hybrid\\
+量词顺序错误 & 5 & 条件化曲率单调桥、S64 窗口单调性、S72 条件项、QWE06 极限次序\\
+有限证书无法传到无限体积 & 5 & SA01/QWE01、S42、S68、S73\\
+常数在 $c\uparrow1$ 退化 & 2 & SA03 统一余项、W02 compact-interior 远尾\\
+值界缺弦长平方 & 1 & S80 value telescope\\
+\bottomrule
+\end{tabular}
+\caption{按主死因计数；一行只取一个主分类。}
+\end{table}
+
+\section{反复出现的失败模式}
+
+\subsection{把总平均问题强化成逐项好号}
+
+这是出现次数最多、证据最直接的模式。S21 要求支付多项式逐系数非正，却有正的第 36 阶系数；真实六点 posterior 的单个条件 word 要求 $\lambda>0.625832574752639508>5/8$；$c=463/500$ 的精确有理表甚至打破 $\gamma=2$ 的点态双预算；RL01 S3 的坏原子反号，而完整熵 Hessian 同时严格为负。这一组证据只说明局部负项不能被禁止，不能推出真实平均曲率为正。
+
+\subsection{把局部或有限证书当成率结论}
+
+S42 只支付首个 doubling，S68 仍缺联合 $n$/噪声统一性，S73 缺 big-window mixed budget，SA01/QWE01 也没有闭合 endpoint 和 all-size payment。W02 远尾之所以能过无限体积，是因为它保留了有限窗 martingale、统一行能量与 Fatou 的顺序；其他有限证书若缺同类接口，不能靠“尺寸更大应更好”补齐。
+
+\subsection{换了对象却保留原结论的名字}
+
+计数熵、谱熵、循环修正律、任意二元输入、rank-one 核线和 same-unitary 之外的 hybrid 都不是目标对象。循环模型的 $D$-sector 非正、S61 的一侧 $W_{\rm rel}$、QWE08 的 rank-one MI 和小尺寸证书都是有效局部结论；它们必须经过另行登记的对象桥才能传回真实 sine 配置熵率。
+
+\subsection{值控制冒充曲率控制}
+
+S80 的 $O(\log L/L)$ value error 没有缩弦长度平方，不能除以弦面积得到二阶结论。S42 中把大 $O$ 写成小 $o$、S78 中把约 220 倍的包络改善当成符号余量，也属于同一类“误差量纲不足”。
+
+\section{哪些只是见证失败，是否建议再试}
+
+\begin{longtable}{p{1.8cm}p{5.1cm}p{7.3cm}}
+\toprule
+路线 & 客观状态 & 建议\\
+\midrule
+\endfirsthead
+\toprule
+路线 & 客观状态 & 建议\\
+\midrule
+\endhead
+22 点 PSD 分配 & $17.5679934635\ldots<17.6643281959\ldots$，只否定固定资源与测试分配。 & 理论上可换资源；不建议继续只调同一个 test function。\\
+S67 & factor 1 的单 pair Green 付款失败；Green 结构及较宽常数仍可用。 & 可保留为局部工具；不建议把单 pair 见证直接扩成全局 Fisher 付款。\\
+S69 & 冻结框架在 $a=.026$ 失败，但 $[.02,.0255]$ 的正区仍成立。 & 只有更换见证或加入新资源才值得再试；不建议原样外推。\\
+S70 & 冻结见证在 $c=.96,p=.45$ 失败；$c\le .9535$ 的局部盒仍成立。 & 同上；先保护正区，再另立扩区证书。\\
+S78 & logdet/reverse-KL 结构有效，但 moving-pair obstruction 后总上界约 $+490.39$。 & 可继承非交换 telescope；不建议只压缩同一包络，需 collective core/pair compensation。\\
+QWE09 & mask-uniform 接口留存，但逐词零支付有严格障碍，现有 gap 常数约 $1.76\times10^{15}$。 & 可换成保留跨 word 抵消的资源；不建议再追逐逐词零支付。\\
+\bottomrule
+\end{longtable}
+
+这里的“可复活”只表示证据没有否定整个方法架构；它不表示路线值得优先投入。六条中，账本只建议保留可复用的结构部件，不建议对已经明确余量不足的原见证作无变化重跑。
+
+\section{仍缺什么}
+
+\begin{enumerate}
+  \item 固定 $c=19/20$、固定正宽度偏置 benchmark 下，真实 complete posterior 的 signed near-field aggregate 总付款；必须允许 pair/state 间抵消。
+  \item 从循环/修正律回到真实 Toeplitz 输出的二阶桥、终端付款和同一近场预算。clock 的 $O(n)$ 比较与一侧 $W_{\rm rel}\ge-o(n)$ 都不是这座桥本身。
+  \item $c\uparrow1$ 与偏置端点处不退化的常数，或明确避开端点的定理陈述。W02 的远尾常数只在 compact interior 内稳定。
+  \item 把 S42/S80 的值级全尺度工具升级为带弦长平方的有限弦或真正二阶估计。
+  \item S77/S79 的可见正文工具仍缺高秩全尺度聚合和实际 same-unitary exterior paid shell；其来源尾部可见性也应继续补齐。
+  \item 对 SA01 整包仍缺覆盖性的来源审查；QWE01、QWE06 仍缺最终符号、端点或极限顺序。这里登记为“发现缺口后未修”，不是“来源缺失”。
+\end{enumerate}
+
+\section{来源骨架与完整性说明}
+
+总览中反复引用的五个骨架页已经定位：
+\begin{itemize}
+  \item 工具箱固定页：\path{docs/methods-toolbox.md}；\\提交 \texttt{\seqsplit{fd7f3b4a6937f3b601371606bc5095a870aac12f}}。
+  \item 方法边界原页：\path{docs/methodbounds01.md}；\\提交 \texttt{\seqsplit{16d5d55269eca9725e5eb3f5d0e6ebd785396741}}。
+  \item 旧路线账：\path{docs/rejected-and-stalled-routes.md}；\\提交 \texttt{\seqsplit{fd7f3b4a6937f3b601371606bc5095a870aac12f}}。
+  \item 熵参数地图：\path{docs/entropy01.md}；\\提交 \texttt{\seqsplit{16d5d55269eca9725e5eb3f5d0e6ebd785396741}}。
+  \item 完整错误链与来源：\path{review/sources01.json}；\\提交 \texttt{\seqsplit{5128965453df9f4ea4a9ddce85eedaea7bd05f76}}。
+\end{itemize}
+
+所列种子没有遗留“来源缺失”项。七库中与对象 (a)--(e) 无关的新增 DPP、耦合或 FIID 分支按对象不匹配排除；镜像、导航页和仍开放的纯排程 PR 不进入路线分母。完整逐行字段、精确 SHA、审查路径和后继关系见同目录 \code{ledger.md} 与 \code{ledger.csv}。
+
+\section{最后的逻辑隔离}
+
+\enlargethispage{4\baselineskip}
+本账必须同时保留三句话：
+\begin{enumerate}
+  \item 方法反例不等于原熵命题反例；
+  \item 局部正参数区不等于全高对比区；
+  \item 见证失败不等于方法架构失败，但也不构成继续投入的正面证据。
+\end{enumerate}
+
+截至本快照，未找到高对比度真实 sine 熵率命题本身被否定的原文证据。
+
+\end{document}
