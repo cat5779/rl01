@@ -115,7 +115,7 @@ Hence \(\mathsf S_\eta(A_j)\downarrow\mathsf S_\eta(A)\) strongly. Strong conver
 \]
 for the positive differences \(D\). Equation (7) concerns fixed \(\eta\); it is not used to justify a moving-window limit.
 
-The Hilbert-space foundations here are the orthogonal projection theorem and continuous functional calculus for bounded self-adjoint operators: a closed subspace has an orthogonal projection realizing distance, and continuous functions on the spectrum admit a positive, isometric, unital \(*\)-homomorphism extending polynomial evaluation. Sources are Teschl, Sections 1.3 and 3.1; the polar construction above is supplied directly. :chatgpt-content-reference{index="0"}
+The Hilbert-space foundations here are the orthogonal projection theorem and continuous functional calculus for bounded self-adjoint operators: a closed subspace has an orthogonal projection realizing distance, and continuous functions on the spectrum admit a positive, isometric, unital \(*\)-homomorphism extending polynomial evaluation. Sources are Teschl, Sections 1.3 and 3.1; the polar construction above is supplied directly. 
 
 ## 2. The summed covariant trace estimate
 
@@ -134,7 +134,7 @@ This is an unnormalized finite trace. To prove cyclicity, use matrix entries
 \right].
 \tag{8}
 \]
-The series is absolutely integrable: row-column Cauchy–Schwarz bounds the sum before expectation by \(m\|B\|\|C\|\). Thus Fubini applies under its absolute-integrability hypothesis. :chatgpt-content-reference{index="1"}
+The series is absolutely integrable: row-column Cauchy–Schwarz bounds the sum before expectation by \(m\|B\|\|C\|\). Thus Fubini applies under its absolute-integrability hypothesis. 
 
 Joint covariance and invariance under \(\gamma^{-1}\) transform a summand into
 \[
@@ -278,7 +278,7 @@ D_k(T)\le\int_0^T D_{k-1}(s)\,ds
 \le m\frac{T^k}{k!}.
 \tag{16}
 \]
-The first Borel–Cantelli lemma requires only summability of the event probabilities, not independence. :chatgpt-content-reference{index="2"}
+The first Borel–Cantelli lemma requires only summability of the event probabilities, not independence. 
 
 Applying it here, then using invariance and countability of \(W\) and of integer horizons, gives one conull event on which every coordinate path eventually agrees exactly between successive iterates on every compact time interval. Denote the limit by \(X\). Its coordinates are càdlàg pure-birth paths. They give a càdlàg path in a product metric by controlling finitely many coordinates and then the summable metric tail.
 
@@ -450,7 +450,7 @@ The upward conditional-expectation theorem applies: for integrable \(R\) and inc
 \mathbb E[R\mid\sigma(\cup_n\mathcal F_n)]
 \quad\text{almost surely and in }L^1.
 \]
-Here \(R_x(s)\in[0,1]\), so the hypotheses hold. :chatgpt-content-reference{index="3"}
+Here \(R_x(s)\in[0,1]\), so the hypotheses hold. 
 
 Combining (23) and the samplewise limit (26),
 \[
