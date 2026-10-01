@@ -8,8 +8,11 @@ Let Γ be a countable discrete group, acting regularly on itself. Write μ_Q for
 2. **Ordered invariant coupling.** For each fixed pair A≤B there exists an invariant joint law with marginals μ_A, μ_B and X⊆Y almost surely. The full manuscript, including approximation and removal of the spectral gap, passes a mathematical review.
 3. **Sharp invariant distance.** The ordered-coupling statement implies d̄(μ_A,μ_B)≤τ|A−B| for arbitrary A,B. The distance uses invariant joint laws and normalized mismatch at the identity.
 4. **Marginal sampling.** The separate sampling manuscript constructs a DPP from iid labels indexed by the prescribed countable index set. Combining that result with law-level coupling existence does not yet prove a joint monotone iid factor.
+5. **Joint iid coupling at the FK parameter.** For each fixed Q on the regular orbit, the revised direct construction produces X~Bern(FK(Q)), Y~μ_Q, and X⊆Y from one regular iid input. The complete revised proof passes two full mathematical reviews. When FK(Q)>0, it constructs the coupling directly; when FK(Q)=0, it uses the stated marginal-sampling hypothesis H. The output map is total Borel and equivariant on all inputs. This is a theorem for one fixed kernel, not a grand coupling or an all-kernel measurable family. See PR #92.
 
-These are proof-review findings for the stated domains. The universal pointwise FK threshold assertion is false: a verified tree-projection counterexample and its extensions are recorded in RL01 PR #93. On amenable groups, known determinant approximation combined with the reviewed domination theorem gives pointwise equality. Joint monotone iid realization and a common construction remain separate obligations. Independent domain review and novelty assessment remain open.
+These are proof-review findings for the stated domains. The universal pointwise FK threshold assertion is false: a verified tree-projection counterexample and its extensions are recorded in RL01 PR #93. On amenable groups, known determinant approximation combined with the reviewed domination theorem gives pointwise equality. Joint monotone iid realization for an arbitrary ordered kernel pair, and a common construction covering that case and the FK path, remain separate obligations. Independent domain review and novelty assessment remain open.
+
+Complementing the FK construction gives the upper FK coupling separately. The two separate endpoint constructions do not automatically give one joint triple consisting of lower Bernoulli, DPP, and upper Bernoulli configurations. The exact optimal parameter in the nonamenable tree example is also a separate problem: the task in PR #97 has no result yet.
 
 ## An exact equivalence between ordered coupling and the distance bound
 
@@ -55,7 +58,11 @@ The fixed-symbol equivalences in Lyons–Steif, [Theorem 5.11](https://rdlyons.p
 
 ## Connectivity applications
 
-The two connectivity manuscripts leave the general group-cost equality unresolved. A conditional infinite-contact construction supplies arbitrarily cheap connections if its multiscale geometric hypothesis holds. That hypothesis has not been established for general FUSF. A separate cycle-space/exchange formulation requires its own proof and source audit. The marginal DPP sampler supplies no missing connectivity estimate.
+The three connectivity manuscripts leave the general group-cost equality unresolved. A conditional infinite-contact construction supplies arbitrarily cheap connections if its multiscale geometric hypothesis holds. That hypothesis has not been established for general FUSF. The marginal DPP sampler supplies no missing connectivity estimate.
+
+Two scoped reviews now support further restrictions and bookkeeping. An intersection-relation certificate based on arbitrarily small complete sections fails in the indicated product-of-free-groups example; this does not rule out all cheap repairs. Relative-cost compression and extension identities rephrase the missing bound. Separately, the cycle-defect identity and the FUSF exchange formula are valid with closed boundary operators in the unbounded-degree case. The proposed vanishing exchange budget is equivalent to the group-cost target, rather than a proved weaker lemma. These arguments are recorded with their reviews in PRs #89 and #90.
+
+Exact attainment by a connected graph law at the Betti degree would force treeability. The group-cost target only asks for arbitrarily accurate approximation, so exact attainment must not be inserted as an extra requirement. Weak limits also require a separate connectivity argument and control of incident-edge mass escaping through group labels. None of these observations supplies the missing approximate connected construction, and no fixed-price conclusion has been obtained.
 
 ## Pointwise optimality: corrected route status
 
