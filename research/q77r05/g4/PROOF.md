@@ -13,7 +13,7 @@ If \(W=\varnothing\), use the unique map. Otherwise write
 \[
 Q_{xy}=\langle Q\delta_y,\delta_x\rangle,\qquad \mu=\mathbf P^Q.
 \]
-Countable-set DPP existence applies because \(0\le Q\le I\). Inclusion-exclusion gives uniqueness and all finite pattern probabilities. In particular, \(\mu\) is invariant, and its marginal \(\mu_E\) on a finite set \(E\) is the DPP with kernel \(Q_E\). These are the countable-set facts in Lyons–Thom, Section 2; no soficity-dependent theorem is used. :chatgpt-content-reference{index="0"}
+Countable-set DPP existence applies because \(0\le Q\le I\). Inclusion-exclusion gives uniqueness and all finite pattern probabilities. In particular, \(\mu\) is invariant, and its marginal \(\mu_E\) on a finite set \(E\) is the DPP with kernel \(Q_E\). These are the countable-set facts in Lyons–Thom, Section 2; no soficity-dependent theorem is used. 
 
 Throughout, permutation actions on fields mean \((\gamma y)_x=y_{\gamma^{-1}x}\).
 
@@ -213,7 +213,7 @@ b^n_{t,x}(X_t)
 \tag{15}
 \]
 
-The conditioning sigma-fields increase to the endpoint observations on \(C(x)\). Since \(\eta_x\) is bounded, Lévy’s upward conditional-expectation theorem applies and gives almost-sure convergence to that component posterior. :chatgpt-content-reference{index="1"}
+The conditioning sigma-fields increase to the endpoint observations on \(C(x)\). Since \(\eta_x\) is bounded, Lévy’s upward conditional-expectation theorem applies and gives almost-sure convergence to that component posterior. 
 
 By Section 1 and independence of the noise,
 \[
@@ -296,14 +296,14 @@ This filtration is complete and right-continuous. To check that the martingale p
 =\beta_{s_k}(x).
 \]
 Lévy’s downward theorem applies to conditional expectations of the fixed integrable variable \(\beta_t(x)\). The left side converges in \(L^1\) to
-\(\mathbb E[\beta_t(x)\mid\mathcal F_s]\); by (19), the right side converges to \(\beta_s(x)\). Hence all coordinates remain martingales for this one usual filtration. :chatgpt-content-reference{index="2"}
+\(\mathbb E[\beta_t(x)\mid\mathcal F_s]\); by (19), the right side converges to \(\beta_s(x)\). Hence all coordinates remain martingales for this one usual filtration. 
 
 Since \(\beta(x)-B(x)\) has continuous finite variation, quadratic covariations satisfy
 \[
 [\beta(x),\beta(y)]_t=\mathbf1_{\{x=y\}}t.
 \tag{22}
 \]
-For any finite list of distinct vertices, the corresponding vector \(\beta\) is a continuous martingale starting at zero with bracket \(tI\). These are the hypotheses of the vector Lévy characterization. :chatgpt-content-reference{index="3"}
+For any finite list of distinct vertices, the corresponding vector \(\beta\) is a continuous martingale starting at zero with bracket \(tI\). These are the hypotheses of the vector Lévy characterization. 
 
 In detail, Itô’s formula makes
 \[
@@ -391,4 +391,3 @@ for every finite \(S\subset W\). For disjoint finite \(A,B\subset W\), the compl
 \tag{29}
 \]
 These identify exactly \(\mathbf P^Q\) and prove the frozen statement. \(\square\)
-
