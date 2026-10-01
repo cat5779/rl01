@@ -28,8 +28,6 @@ Question 7.6 明示准传递 W；Question 7.7 没有明示同样的全部量词�
 
 ## 访问与检索限制
 
-Lyons–Thom、ARS、Timár 的 PDF 通过网页工具直接读取。BLPS 作者 PDF 的网页解析反复超时，随后使用本地 Python 在内存中下载原 URL 并以 pypdf 提取指定页，成功读取；文件 712,821 字节、72 页，未把镜像摘要或节选中的引用标记当作定理证据。没有联系作者或发送外部消息。
-
 对 T4×C3 使用了包含 `T_4 C_3 spanning factor iid` 和 `free uniform spanning forest factor product tree` 的补充检索。未定位精确同结论或反例仅记 **UNKNOWN / PRIOR_ART_UNRESOLVED_IN_THIS_AUDIT**；不是完整查新，也不证明“开放”或“新”。
 
 节选的其余 Papangelou、shorting、动力学、finitary 文献比较表，以及截断的 Nam–Sly–Zhang 条目，不在本次来源认证范围内。ARS 的 2024 发表年份没有从这次实际访问的 arXiv 元数据独立核实；本报告依赖已读的 2021 v1 定理，不用该年份支撑数学结论。

@@ -1,7 +1,5 @@
 # G6 可见节选的条件范围审计
 
-日期：2026-10-01。审计者：独立子实例 r04g6scope。
-
 **STATUS: CORRECT_CONDITIONAL_SCOPE / EXCERPT_ONLY。** 在候选 C 成立的条件下，节选 Theorem 1、Theorem 2、T4×C3 自由均匀生成森林推论和一般 Cayley 图的双弧归约成立。Proposition 3 给出的额外“任意作用／正则源”版本反例也成立；它本身不需要 C，不反驳 C。这里不认证 C，不认证新颖性，不给截断后的整份回复盖章。
 
 ## 输入与审计边界

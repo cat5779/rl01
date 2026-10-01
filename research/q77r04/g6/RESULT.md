@@ -10,7 +10,7 @@ Lyons–Thom define Bernoulli shifts using product measures on \(A^\Gamma\), and
 
 > Are determinantal probability measures associated to equivariant positive contractions factors of Bernoulli shifts?
 
-The subsequent implication from Questions 7.5–7.6 invokes Theorem 7.3 and is stated for sofic groups. These passages do not explicitly prescribe a regular Γ-indexed source for every arbitrary target Γ-set. :chatgpt-content-reference{index="0"}
+The subsequent implication from Questions 7.5–7.6 invokes Theorem 7.3 and is stated for sofic groups. These passages do not explicitly prescribe a regular Γ-indexed source for every arbitrary target Γ-set. 
 
 ### Theorem 1: C implies the affirmative answer in the developed setting
 
@@ -179,7 +179,7 @@ The infinite transfer-current theorem gives exactly
 \qquad
 \operatorname{FUSF}_G=\mathbf P^{Q_F}.
 \]
-These are the wired and free projections, respectively—not interchangeable conventions. :chatgpt-content-reference{index="1"}
+These are the wired and free projections, respectively—not interchangeable conventions. 
 
 The exhaustion argument explains the distinction. For a free finite exhaustion \(G_n\), its UST projection, extended by zero outside its edges, is
 \[
@@ -277,7 +277,7 @@ Summing the disjoint choices recovers the FUSF inclusion determinant. Applying C
 
 ### Wired forests: a verified theorem, but the wrong projection for the main test
 
-Angel–Ray–Spinka, Theorems 1.4 and 4.1 and §4, prove that WUSF on a connected transient random rooted graph is a graph factor of iid. **Their WUSF theorem does not require unimodularity.** It implements infinite cycle-popping rather than merely invoking order-independence of Wilson’s output distribution. :chatgpt-content-reference{index="2"}
+Angel–Ray–Spinka, Theorems 1.4 and 4.1 and §4, prove that WUSF on a connected transient random rooted graph is a graph factor of iid. **Their WUSF theorem does not require unimodularity.** It implements infinite cycle-popping rather than merely invoking order-independence of Wilson’s output distribution. 
 
 On \(T_4\square C_3\), the horizontal projection of simple random walk is a lazy transient walk on \(T_4\), so the theorem applies. Its vertex source is exactly Γ-indexed. But it produces \(Q_W\), not the distinct \(Q_F\) above.
 
@@ -303,15 +303,15 @@ e\in F
 \quad\Longleftrightarrow\quad
 e^\dagger\notin W^\dagger.
 \]
-BLPS Theorem 12.2 identifies this law as the **primal FUSF**. The map is Λ-equivariant. Thus this nonamenable, cyclic projection-DPP consequence of C is **already known independently of C**. Its kernel is \(P_{\mathcal C^\perp}\), just as above. :chatgpt-content-reference{index="3"}
+BLPS Theorem 12.2 identifies this law as the **primal FUSF**. The map is Λ-equivariant. Thus this nonamenable, cyclic projection-DPP consequence of C is **already known independently of C**. Its kernel is \(P_{\mathcal C^\perp}\), just as above. 
 
 ### What remains unverified in the literature audit
 
 For the exact Γ-equivariant FUSF assertion on \(T_4\square C_3\), I located neither a matching theorem nor a counterexample. Its individual prior-art status is therefore **UNRESOLVED in this audit**, not certified open or novel.
 
-Timár’s December 16, 2025 revision expressly records the FUSF factor question **in full generality** as open. His Theorem 4, Corollary 5, and Theorem 9 use invariant amenability; free and wired coincide there. That dated statement about the broader graph-factor problem does not certify that every individual nonamenable Cayley example is unresolved. :chatgpt-content-reference{index="4"}
+Timár’s December 16, 2025 revision expressly records the FUSF factor question **in full generality** as open. His Theorem 4, Corollary 5, and Theorem 9 use invariant amenability; free and wired coincide there. That dated statement about the broader graph-factor problem does not certify that every individual nonamenable Cayley example is unresolved. 
 
-Likewise, iid-weight **minimal** spanning forests are not **uniform** spanning forests, and disconnectedness of a FUSF is not a factor obstruction. The relevant primary works distinguish those issues. :chatgpt-content-reference{index="5"}
+Likewise, iid-weight **minimal** spanning forests are not **uniform** spanning forests, and disconnectedness of a FUSF is not a factor obstruction. The relevant primary works distinguish those issues. 
 
 ## 5. Primary-source comparison
 
@@ -319,17 +319,17 @@ Likewise, iid-weight **minimal** spanning forests are not **uniform** spanning f
 
 | Primary source and date | Exact relevant result and hypotheses | Relationship to C and the proposed method |
 |---|---|---|
-| [Lyons–Steif](https://arxiv.org/abs/math/0204324), 2002 preprint; 2003 publication | **Theorem 3.1:** stationary DPPs on \(\mathbb Z^d\), measurable symbols \(0\le f\le1\). | Bernoulli **isomorphism**: stronger conclusion on the abelian special case, including projection symbols. Not the proposed birth construction. :chatgpt-content-reference{index="6"} |
-| [Lyons–Thom](https://arxiv.org/abs/1402.0969), 2014; 2016 publication | **Theorem 7.3:** sofic approximation in \(\bar d\). **Corollary 7.4:** amenable Bernoulli isomorphism. | Nearby approximation; stronger amenable conclusion. Approximation alone is not C. :chatgpt-content-reference{index="7"} |
-| [Georgii–Yoo](https://arxiv.org/abs/math/0401402), 2004; 2005 publication | **(H), Theorems 3.1, 3.6–3.7:** locally trace-class Hermitian \(K\), \(\|K\|<1\); additional condition for equality with the global shorting limit. | Papangelou determinant ratios, antimonotonicity, global conditional intensities: same ingredients, not a universal iid-factor theorem. :chatgpt-content-reference{index="8"} |
-| [Yoo](https://arxiv.org/abs/math/0506189), 2005; 2007 publication | **Preprint Theorem 2.4, (2.22)–(2.27), (H):** bounded positive injective interaction \(A\), functionally completed energy space. | Direct prior art for the residual-distance/shorted Papangelou expression. Arbitrary singular projections are not covered. :chatgpt-content-reference{index="9"} |
-| [Chae–Yoo](https://arxiv.org/abs/1001.1589), 2009 publication; 2010 arXiv | **Theorem 2.2; Proposition 3.8; Assumption (A), Theorem 4.2:** strict diagonal dominance; additional small off-diagonal mass for ergodicity. | Shorting increment identities and invariant Feller dynamics. Same ingredients; invariant measure or ergodicity alone does not establish a factor. :chatgpt-content-reference{index="10"} |
-| [Lytvynov–Ohlerich](https://arxiv.org/abs/math/0702338), 2007; 2008 publication | **§2, Theorem 3.1:** spectral value \(1\) excluded; stated rate-integrability assumptions. | DPP-symmetric conservative Hunt dynamics via Dirichlet forms. Nearby equilibrium result, not prescribed-noise strong realization. :chatgpt-content-reference{index="11"} |
-| [Garcia–Kurtz](https://arxiv.org/abs/math/0605620), 2006 | **Theorem 2.13; Theorems 3.3, 3.10; Lemma 3.16:** weighted worst-case influence \(M<\infty\), with \(M<1\) for contraction. | Poisson equations, Picard construction, common-noise stationary factors are prior art. Their worst-case/unit-death hypotheses are not the candidate’s averaged estimate. :chatgpt-content-reference{index="12"} |
-| [Hough–Krishnapur–Peres–Virág](https://arxiv.org/abs/math/0503110), 2005; 2006 publication | **Theorem 7; Algorithm 18, Proposition 19:** trace-class spectral mixture and finite-dimensional projection sampling. | Exact sampling in that domain. Global normalized selection does not directly treat a nonzero invariant infinite-trace Γ-kernel. :chatgpt-content-reference{index="13"} |
-| [Decreusefond–Flint–Low](https://arxiv.org/abs/1311.1027), 2013 | **(H1), §3.2 Theorem 3.1, Algorithms 1–2:** \(\|K\|<1\), dominating birth–death process and global empty-state coalescence. | Close Papangelou/CFTP ingredients. The global count/visit-empty justification does not establish the infinite-total-intensity Γ application. :chatgpt-content-reference{index="14"} |
-| [Spinka](https://arxiv.org/abs/1901.00123), 2019; 2020 publication | **Theorem 1.1:** finitely dependent invariant processes on transitive amenable locally finite graphs. | Finitary factor: stronger regularity in a special case. Does not cover arbitrary nonamenable or long-range DPPs. :chatgpt-content-reference{index="15"} |
-| [BLPS](https://rdlyons.pages.iu.edu/pdf/usf.pdf), 2001 | **Theorems 5.1, 7.8, 12.2:** transient Wilson law, forest projections, proper-plane duality with locally finite dual. | Identifies the precise laws and enables the planar consequence; not a universal nonamenable-FUSF factor theorem. :chatgpt-content-reference{index="16"} |
-| [Angel–Ray–Spinka](https://arxiv.org/abs/2112.03228), 2021; 2024 publication | **Theorems 1.4/4.1, §4:** connected transient random rooted graph; no unimodularity assumption for this theorem. | Actual graph-FIID theorem for **WUSF**, with stronger graph equivariance than a chosen Γ action. Different projection and method. :chatgpt-content-reference{index="17"} |
-| [Timár](https://arxiv.org/abs/2306.15120), 2023; v2 December 2025 | **Theorem 4, Corollary 5, Theorem 9:** invariant amenability and compatible monotone limits; finitary USF. | Stronger coding regularity in the amenable case, not the distinct nonamenable free law. :chatgpt-content-reference{index="18"} |
+| [Lyons–Steif](https://arxiv.org/abs/math/0204324), 2002 preprint; 2003 publication | **Theorem 3.1:** stationary DPPs on \(\mathbb Z^d\), measurable symbols \(0\le f\le1\). | Bernoulli **isomorphism**: stronger conclusion on the abelian special case, including projection symbols. Not the proposed birth construction.  |
+| [Lyons–Thom](https://arxiv.org/abs/1402.0969), 2014; 2016 publication | **Theorem 7.3:** sofic approximation in \(\bar d\). **Corollary 7.4:** amenable Bernoulli isomorphism. | Nearby approximation; stronger amenable conclusion. Approximation alone is not C.  |
+| [Georgii–Yoo](https://arxiv.org/abs/math/0401402), 2004; 2005 publication | **(H), Theorems 3.1, 3.6–3.7:** locally trace-class Hermitian \(K\), \(\|K\|<1\); additional condition for equality with the global shorting limit. | Papangelou determinant ratios, antimonotonicity, global conditional intensities: same ingredients, not a universal iid-factor theorem.  |
+| [Yoo](https://arxiv.org/abs/math/0506189), 2005; 2007 publication | **Preprint Theorem 2.4, (2.22)–(2.27), (H):** bounded positive injective interaction \(A\), functionally completed energy space. | Direct prior art for the residual-distance/shorted Papangelou expression. Arbitrary singular projections are not covered.  |
+| [Chae–Yoo](https://arxiv.org/abs/1001.1589), 2009 publication; 2010 arXiv | **Theorem 2.2; Proposition 3.8; Assumption (A), Theorem 4.2:** strict diagonal dominance; additional small off-diagonal mass for ergodicity. | Shorting increment identities and invariant Feller dynamics. Same ingredients; invariant measure or ergodicity alone does not establish a factor.  |
+| [Lytvynov–Ohlerich](https://arxiv.org/abs/math/0702338), 2007; 2008 publication | **§2, Theorem 3.1:** spectral value \(1\) excluded; stated rate-integrability assumptions. | DPP-symmetric conservative Hunt dynamics via Dirichlet forms. Nearby equilibrium result, not prescribed-noise strong realization.  |
+| [Garcia–Kurtz](https://arxiv.org/abs/math/0605620), 2006 | **Theorem 2.13; Theorems 3.3, 3.10; Lemma 3.16:** weighted worst-case influence \(M<\infty\), with \(M<1\) for contraction. | Poisson equations, Picard construction, common-noise stationary factors are prior art. Their worst-case/unit-death hypotheses are not the candidate’s averaged estimate.  |
+| [Hough–Krishnapur–Peres–Virág](https://arxiv.org/abs/math/0503110), 2005; 2006 publication | **Theorem 7; Algorithm 18, Proposition 19:** trace-class spectral mixture and finite-dimensional projection sampling. | Exact sampling in that domain. Global normalized selection does not directly treat a nonzero invariant infinite-trace Γ-kernel.  |
+| [Decreusefond–Flint–Low](https://arxiv.org/abs/1311.1027), 2013 | **(H1), §3.2 Theorem 3.1, Algorithms 1–2:** \(\|K\|<1\), dominating birth–death process and global empty-state coalescence. | Close Papangelou/CFTP ingredients. The global count/visit-empty justification does not establish the infinite-total-intensity Γ application.  |
+| [Spinka](https://arxiv.org/abs/1901.00123), 2019; 2020 publication | **Theorem 1.1:** finitely dependent invariant processes on transitive amenable locally finite graphs. | Finitary factor: stronger regularity in a special case. Does not cover arbitrary nonamenable or long-range DPPs.  |
+| [BLPS](https://rdlyons.pages.iu.edu/pdf/usf.pdf), 2001 | **Theorems 5.1, 7.8, 12.2:** transient Wilson law, forest projections, proper-plane duality with locally finite dual. | Identifies the precise laws and enables the planar consequence; not a universal nonamenable-FUSF factor theorem.  |
+| [Angel–Ray–Spinka](https://arxiv.org/abs/2112.03228), 2021; 2024 publication | **Theorems 1.4/4.1, §4:** connected transient random rooted graph; no unimodularity assumption for this theorem. | Actual graph-FIID theorem for **WUSF**, with stronger graph equivariance than a chosen Γ action. Different projection and method.  |
+| [Timár](https://arxiv.org/abs/2306.15120), 2023; v2 December 2025 | **Theorem 4, Corollary 5, Theorem 9:** invariant amenability and compatible monotone limits; finitary USF. | Stronger coding regularity in the amenable case, not the distinct nonamenable free law.  |
 | [Nam–Sly–Zhang](https://arxiv.org/abs/2012.09484), 2020 | **Theorem 1, §2:
