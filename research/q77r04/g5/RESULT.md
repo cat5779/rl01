@@ -594,7 +594,7 @@ Let
 \mu_t:={\bf P}^{tQ}.
 \]
 
-The existence and uniqueness of the DPP associated with a positive contraction on a countable set is standard; Lyons and Lyons–Thom are convenient references. :chatgpt-content-reference{index="0"}
+The existence and uniqueness of the DPP associated with a positive contraction on a countable set is standard; Lyons and Lyons–Thom are convenient references. 
 
 ### 7.1 Finite conditional odds and their limit
 
