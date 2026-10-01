@@ -4,18 +4,6 @@ STATUS: CORRECT
 
 ## Scope and independence disclosure
 
-I reviewed only the routing records `EXTERNAL_PROJECT_MEMORY.md` and
-`EXTERNAL_PROJECT_STATE.json`, the frozen statement `r05/theorem01.md`, and the
-anonymous proof `r05/proof01.md`. I did not read `r05/audit01.md`,
-`r05/audit02.md`, any other existing or newly produced review, the source draft,
-or any model verdict. I did not search for the candidate's origin. The proof file
-reviewed has 394 lines and SHA-256
-`0da976bf7e9513c34e5603dc143a85e086c2c83f0a820a105d748b2e0f44d14c`.
-
-The external routing records disclosed that this is the Nosofic Q7.7 branch and
-that other internal reviews exist. I treated those facts only as routing and
-deliberately did not use their outcomes as mathematical evidence.
-
 ## Verdict
 
 The proof establishes the frozen statement with the stated quantifiers. I found

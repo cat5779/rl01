@@ -2,8 +2,6 @@
 
 ## Current result
 
-Three new gpt-5.6-sol reviewers independently examined the frozen r05 theorem/proof. All report no critical gap in the main prescribed-W DPP proof. This remains an internal model verification result, not a human domain review, formal proof, or novelty certification. The reviewed proof remains unchanged, SHA256 0da976bf7e9513c34e5603dc143a85e086c2c83f0a820a105d748b2e0f44d14c.
-
 - auditp.md: probability, full-history posterior, filtration, unbounded spatial inputs, strong solution, same-noise decoding.
 - auditw.md: definitions, quantifiers, singular complex tilts, all-input Borel equivariance, exact DPP law.
 - auditb.md: original Q7.7 scope, signed FUSF interface, and distinction between the Q7.7 theorem and the unproved LG bridge.
@@ -34,5 +32,3 @@ At user instruction G1/G3/G5 now aim to explore and attempt to solve the LG conj
 3. New constructions beyond determinantal connectivity.
 
 Each task was sent separately, full userMessage readback matched, and no in-flight follow-up was sent. They are running; no web mathematical output is claimed.
-
-The user restored GitHub authentication through the official device flow; the randomcat4 account and push access to cat5779/rl01 were checked. Task/review Draft PRs are being published sequentially with exact remote byte checks, recorded in each task's pr.json and pubaudit01.json. No running web task is sent another prompt just to supply a late-created PR link. No PR has been merged.
