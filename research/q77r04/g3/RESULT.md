@@ -17,7 +17,7 @@ The DPP background used is existence for positive contractions and the defining 
 \mathbf P^Q(F\subseteq Z)=\det Q_F
 \qquad(F\subset W\text{ finite}),
 \]
-which determine the law by inclusion–exclusion. Equivariance of \(Q\) makes this law invariant. These facts are recorded in Sections 2–3 of Lyons–Thom. :chatgpt-content-reference{index="0"}
+which determine the law by inclusion–exclusion. Equivariance of \(Q\) makes this law invariant. These facts are recorded in Sections 2–3 of Lyons–Thom. 
 
 ## 1. Orbit counting and the random-operator trace
 
@@ -29,7 +29,7 @@ H/(H\cap gHg^{-1})\longrightarrow H\cdot gH,
 \qquad
 h(H\cap gHg^{-1})\longmapsto hgH
 \]
-is a bijection: two images agree exactly when the quotient of the representatives lies in \(H\cap gHg^{-1}\). Thus the \(H\)-orbit of \(gH\) has size \(d(g)\). These orbits are indexed by \(H\backslash\Gamma/H\), with the orbit/index convention used in Anantharaman-Delaroche, Section 1.1. :chatgpt-content-reference{index="1"}
+is a bijection: two images agree exactly when the quotient of the representatives lies in \(H\cap gHg^{-1}\). Thus the \(H\)-orbit of \(gH\) has size \(d(g)\). These orbits are indexed by \(H\backslash\Gamma/H\), with the orbit/index convention used in Anantharaman-Delaroche, Section 1.1. 
 
 Let \(f:W^2\to[0,\infty]\) be diagonally \(\Gamma\)-invariant. Choosing one representative per double coset gives
 \[
@@ -98,7 +98,7 @@ invariance and transitivity imply \(B\delta_x=0\) almost surely for each \(x\); 
 
 Thus it is a finite trace on the algebra of bounded covariant random fields. **The fields need not commute with \(\Gamma\) at a fixed sample.** Their joint covariance and the invariant probability law are what establish (4).
 
-This is a direct proof of the random trace property, not an inference from the deterministic root-state criterion discussed in Anantharaman-Delaroche, Section 1.3. :chatgpt-content-reference{index="2"}
+This is a direct proof of the random trace property, not an inference from the deterministic root-state criterion discussed in Anantharaman-Delaroche, Section 1.3. 
 
 ## 2. Shorting and the precise averaged Lipschitz estimate
 
