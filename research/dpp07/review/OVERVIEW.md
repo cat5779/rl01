@@ -9,7 +9,7 @@ Let Γ be a countable discrete group, acting regularly on itself. Write μ_Q for
 3. **Sharp invariant distance.** The ordered-coupling statement implies d̄(μ_A,μ_B)≤τ|A−B| for arbitrary A,B. The distance uses invariant joint laws and normalized mismatch at the identity.
 4. **Marginal sampling.** The separate sampling manuscript constructs a DPP from iid labels indexed by the prescribed countable index set. Combining that result with law-level coupling existence does not yet prove a joint monotone iid factor.
 
-These are proof-review findings for the stated domains. Pointwise FK optimality on arbitrary infinite groups, joint monotone iid realization, and a common construction proving all the statements remain separate obligations. Independent domain review and novelty assessment remain open.
+These are proof-review findings for the stated domains. The universal pointwise FK threshold assertion is false: a verified tree-projection counterexample and its extensions are recorded in RL01 PR #93. On amenable groups, known determinant approximation combined with the reviewed domination theorem gives pointwise equality. Joint monotone iid realization and a common construction remain separate obligations. Independent domain review and novelty assessment remain open.
 
 ## An exact equivalence between ordered coupling and the distance bound
 
@@ -56,3 +56,9 @@ The fixed-symbol equivalences in Lyons–Steif, [Theorem 5.11](https://rdlyons.p
 ## Connectivity applications
 
 The two connectivity manuscripts leave the general group-cost equality unresolved. A conditional infinite-contact construction supplies arbitrarily cheap connections if its multiscale geometric hypothesis holds. That hypothesis has not been established for general FUSF. A separate cycle-space/exchange formulation requires its own proof and source audit. The marginal DPP sampler supplies no missing connectivity estimate.
+
+## Pointwise optimality: corrected route status
+
+On the regular edge orbit of Γ=C3*C3 there is an equivariant projection Q with FK(Q)=0 and exact lower threshold p₋(Q)=1/2. The contraction (I+63Q)/128 is bounded between I/128 and I/2, has FK value 1/8, and dominates Bernoulli(65/256). Thus imposing a two-sided spectral gap does not restore universal pointwise optimality. A separate free-group example is injective with FK(K)=8/27 and p₋(K)=1/3.
+
+For amenable groups, Li–Thom's existing [Theorem 1.4](https://www.math.buffalo.edu/~hfli/entdettor17.pdf) supplies the finite-compression determinant necessity, including singular endpoints. Combined with FK domination, it yields the exact thresholds in that scope. The general pointwise assertion is retired as false; determining its valid scope replaces the former attempt to prove it universally. This change does not affect the domination, invariant ordered-coupling, distance, or marginal sampling proofs. It also does not by itself settle the author's intended meaning of optimality or certify novelty.
