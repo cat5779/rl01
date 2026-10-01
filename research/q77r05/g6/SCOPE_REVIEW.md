@@ -7,8 +7,6 @@ DATE: 2026-10-01 (Asia/Singapore)
 
 ## 1. 对象、隔离和结论边界
 
-本审只读取本轮 `source.md`、`TASK.md` 及外置项目路由入口；未读取其他本轮数学回传、主稿审查报告或 r04 的旧裁决。原始文件 SHA-256：`17DA492CFB7CDEDC3CEA7CF2CA2A456313B44CD3E3361A85FC90E3309C1F7FE4`。
-
 本文条件于 source §1 的 uniform-tilt covariance sampler criterion 及其明确写出的总 Borel 构造最终被证明。这里只核验其假设在 DPP 上成立、该具体构造的对称性范围，以及 source §4–5 的来源与应用。本文的 CORRECT 不得用于把 Brownian 后验、共同滤过、无限维强解或主定理记为已认证。
 
 结论：在该条件下，任意与可数 Γ 集 W 的置换作用交换的 Hermitian 正压缩 Q 都满足应用条件；原论文明确研究的 Q7.7 情形被蕴含。进一步，带符号边作用可以通过“DPP 法则＋核绝对值窗口”直接进入判据，并得到每个固定连通可数局部有限简单图 G 上的总 Borel、全 Aut(G) 精确等变映射
@@ -191,5 +189,3 @@ Lyons–Thom, arXiv:1402.0969v2（2014-05-19），第 3 页允许 countable Γ-s
 | 任意非自由作用的 regular Γ 源 | source 反例成立 |
 | finitary/有限熵源/算法速率/变化随机图的联合编码 | 不在本结论内 |
 | 一般 DPP / 一般 FUSF 的完整先行占位 | 未确认；见 prior01.md |
-
-`source.md` 链接的 sandbox RESULT、REFERENCES、ZIP 未作为本审已读取证据；其中声称包含的额外细节和十六源完整比较不在本裁决内。本审对上述承重应用给出独立补全，未改写用户原件或其他人的证明文件。没有执行 Lean，亦不声称形式化通过。

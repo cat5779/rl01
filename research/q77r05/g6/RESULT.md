@@ -1,7 +1,5 @@
 **PROVED — the sampler criterion below, and consequently the frozen universal prescribed-\(W\)-source DPP statement.** The argument verifies the proposed seed rather than assuming it.
 
-**Novelty is UNKNOWN.** The Brownian mechanism has direct prior art, but no inspected theorem was verified to imply the whole result without the infinite-system argument below. The universal replacement of the \(W\)-source by a regular \(\Gamma\)-source is **DISPROVED**. GitHub publication is **INCOMPLETE**; the files and fallback archive are linked below.
-
 ## 1. Exact sampler criterion
 
 For a finite binary law \(\nu\) on \(F\), let \(\nu^h\) be its tilt by \(\exp(\sum_{z\in F}h_z\eta_z)\), normalized to total mass one. Positive multiplicative fields allow **every \(h\in\mathbb R^F\)**, not just \(h\ge0\).
@@ -92,7 +90,7 @@ The martingale property survives by letting \(r\downarrow s\) in
 \]
 using reverse conditional-expectation convergence and \(L^1\) continuity. Every finite vector of \(\beta\) is standard vector Brownian motion by the martingale/bracket characterization. Therefore \(\beta\) has product Wiener law on the countable product path space.
 
-This supplies the countable-field version of the classical innovation ingredient. Crucially, Brownian innovations alone are not a strong inverse: here (3) and pathwise uniqueness give **\(X=\Psi(\beta)\)**. :chatgpt-content-reference{index="0"}
+This supplies the countable-field version of the classical innovation ingredient. Crucially, Brownian innovations alone are not a strong inverse: here (3) and pathwise uniqueness give **\(X=\Psi(\beta)\)**. 
 
 Finally, on every path input define
 \[
@@ -162,17 +160,17 @@ The files contain sixteen sources, with URLs, versions, and theorem-level compar
 
 | Primary source and version | Exact statement inspected | Relationship |
 |---|---|---|
-| **Nam–Sly–Zhang**, [arXiv:2012.09484v2](https://arxiv.org/pdf/2012.09484v2), 22 Jan 2022 | §2.2/Lemma 2.1, p.5; Propositions 2.2–2.3; Theorem 1, p.2. Free Ising on sufficiently high-degree regular trees, \(\tanh\beta\le c/\sqrt{d-1}\). | **Same observation/strong-SDE method.** Their infinite-radius and root-change estimates are model-specific. A finite coordinatewise derivative bound is not our uniform row bound. :chatgpt-content-reference{index="1"} |
-| **Fujisaki–Kallianpur–Kunita**, 1972 | §2, Lemmas 2.1–2.2, pp.21–22: finite-vector observations, square-integrable signals, and future-noise independence. | **Same innovation ingredient**; Brownianity alone does not establish the strong inverse. :chatgpt-content-reference{index="2"} |
-| **El Alaoui–Montanari**, v2, 9 Sep 2021; **Chen–Eldan**, v2, 6 Jun 2022 | Respectively §3/Theorem 2, pp.6–7; §2.4.2/Facts 13–14, pp.15–16, Proposition 16, p.17. Finite-dimensional Gaussian localization. | **Same finite posterior machinery**, not a countable-site equivariant factor theorem. :chatgpt-content-reference{index="3"} |
-| **Montanari**, v2, 2 Sep 2025; **Shi–Tian–Zhang**, v2, 17 Jan 2026 | Respectively §1.3/Proposition 1.1 and §4.1; §3/Theorem 2, p.6. Finite-dimensional observation/localization representations. | Further **same-method** accounts; no universal infinite DPP assertion. :chatgpt-content-reference{index="4"} |
-| **Borcea–Brändén–Liggett**, v2, 27 Jul 2008 | Proposition 3.5, p.18; Theorems 4.2, p.21, and 4.9, p.24: DPPs are strongly Rayleigh, homogenization, negative dependence under fields. | **Same finite ingredients.** They yield the row bound for finite strongly Rayleigh laws, but not an infinite factor theorem. :chatgpt-content-reference{index="5"} |
-| **Anari–Liu–Oveis Gharan**, v3, 17 Sep 2020; **Anari–Oveis Gharan–Rezaei**, COLT 2016 | Definition 1.2/Theorem 1.3, pp.1–2: finite spectral independence/Glauber gap. Separately Theorem 2, PDF p.3: homogeneous strongly Rayleigh swap-chain mixing. | **Nearby finite samplers.** Different influence hypotheses; no automatic infinite equivariant passage. :chatgpt-content-reference{index="6"} |
-| **Lyons–Steif**, v5, 23 Jan 2003; **Broman**, 2005 | Theorem 3.1, p.15: stationary \(\mathbb Z^d\) DPPs are Bernoulli-isomorphic. Theorem 1.3, PDF p.3: degree-one trigonometric DPPs are two-block factors. | **Stronger restricted DPP conclusions**, including projection symbols in the former. :chatgpt-content-reference{index="7"} |
-| **Lyons–Thom**, v2, 19 May 2014; **Spinka**, v2, 19 Jan 2020 | Theorem 7.3/Corollary 7.4, p.24: sofic approximation/amenable isomorphism. Theorem 1.1, p.2: finitely dependent processes on transitive amenable graphs are finitary. | Approximation is **not itself** a factor construction; isomorphism/finitary results are stronger in narrower domains. :chatgpt-content-reference{index="8"} |
-| **Angel–Ray–Spinka**, 2021/2024; **Timár**, v2, 16 Dec 2025 | Theorems 1.4/4.1, §4: WUSF on connected transient random rooted graphs; no unimodularity assumption in that theorem. Theorems 4/9 and Corollary 5, pp.5–6: invariantly amenable USF, including finitary coding. | Genuine forest-factor results, but **wired or amenable**, not general nonamenable FUSF. :chatgpt-content-reference{index="9"} |
+| **Nam–Sly–Zhang**, [arXiv:2012.09484v2](https://arxiv.org/pdf/2012.09484v2), 22 Jan 2022 | §2.2/Lemma 2.1, p.5; Propositions 2.2–2.3; Theorem 1, p.2. Free Ising on sufficiently high-degree regular trees, \(\tanh\beta\le c/\sqrt{d-1}\). | **Same observation/strong-SDE method.** Their infinite-radius and root-change estimates are model-specific. A finite coordinatewise derivative bound is not our uniform row bound.  |
+| **Fujisaki–Kallianpur–Kunita**, 1972 | §2, Lemmas 2.1–2.2, pp.21–22: finite-vector observations, square-integrable signals, and future-noise independence. | **Same innovation ingredient**; Brownianity alone does not establish the strong inverse.  |
+| **El Alaoui–Montanari**, v2, 9 Sep 2021; **Chen–Eldan**, v2, 6 Jun 2022 | Respectively §3/Theorem 2, pp.6–7; §2.4.2/Facts 13–14, pp.15–16, Proposition 16, p.17. Finite-dimensional Gaussian localization. | **Same finite posterior machinery**, not a countable-site equivariant factor theorem.  |
+| **Montanari**, v2, 2 Sep 2025; **Shi–Tian–Zhang**, v2, 17 Jan 2026 | Respectively §1.3/Proposition 1.1 and §4.1; §3/Theorem 2, p.6. Finite-dimensional observation/localization representations. | Further **same-method** accounts; no universal infinite DPP assertion.  |
+| **Borcea–Brändén–Liggett**, v2, 27 Jul 2008 | Proposition 3.5, p.18; Theorems 4.2, p.21, and 4.9, p.24: DPPs are strongly Rayleigh, homogenization, negative dependence under fields. | **Same finite ingredients.** They yield the row bound for finite strongly Rayleigh laws, but not an infinite factor theorem.  |
+| **Anari–Liu–Oveis Gharan**, v3, 17 Sep 2020; **Anari–Oveis Gharan–Rezaei**, COLT 2016 | Definition 1.2/Theorem 1.3, pp.1–2: finite spectral independence/Glauber gap. Separately Theorem 2, PDF p.3: homogeneous strongly Rayleigh swap-chain mixing. | **Nearby finite samplers.** Different influence hypotheses; no automatic infinite equivariant passage.  |
+| **Lyons–Steif**, v5, 23 Jan 2003; **Broman**, 2005 | Theorem 3.1, p.15: stationary \(\mathbb Z^d\) DPPs are Bernoulli-isomorphic. Theorem 1.3, PDF p.3: degree-one trigonometric DPPs are two-block factors. | **Stronger restricted DPP conclusions**, including projection symbols in the former.  |
+| **Lyons–Thom**, v2, 19 May 2014; **Spinka**, v2, 19 Jan 2020 | Theorem 7.3/Corollary 7.4, p.24: sofic approximation/amenable isomorphism. Theorem 1.1, p.2: finitely dependent processes on transitive amenable graphs are finitary. | Approximation is **not itself** a factor construction; isomorphism/finitary results are stronger in narrower domains.  |
+| **Angel–Ray–Spinka**, 2021/2024; **Timár**, v2, 16 Dec 2025 | Theorems 1.4/4.1, §4: WUSF on connected transient random rooted graphs; no unimodularity assumption in that theorem. Theorems 4/9 and Corollary 5, pp.5–6: invariantly amenable USF, including finitary coding. | Genuine forest-factor results, but **wired or amenable**, not general nonamenable FUSF.  |
 
-The strongly Rayleigh row bound follows explicitly: homogenize to \(2n\) coordinates with deterministic total \(n\). After tilting original coordinates, off-diagonal covariances remain nonpositive and each full covariance row sums to zero. Restricting to original coordinates bounds its absolute row sum by \(2\operatorname{Var}(\eta_i)\le1/2\). The infinite component/exhaustion requirements remain separate. :chatgpt-content-reference{index="10"}
+The strongly Rayleigh row bound follows explicitly: homogenize to \(2n\) coordinates with deterministic total \(n\). After tilting original coordinates, off-diagonal covariances remain nonpositive and each full covariance row sums to zero. Restricting to original coordinates bounds its absolute row sum by \(2\operatorname{Var}(\eta_i)\le1/2\). The infinite component/exhaustion requirements remain separate. 
 
 This does not imply single-bit Glauber mixing: the two-point projection is supported on \(\{(1,0),(0,1)\}\), so every one-bit heat-bath update is frozen despite (5). Swap chains and the Brownian construction are different mechanisms.
 
@@ -180,7 +178,7 @@ This does not imply single-bit Glauber mixing: the two-point projection is suppo
 
 ## 4. Q7.7 and the exact sources
 
-Lyons–Thom allow Bernoulli sources \(A^W\) for countable \(\Gamma\)-sets (p.3). Their developed operators include \(R(\Gamma)\) and \(R(\Gamma,S)=M_S(R(\Gamma))\); Q7.7 is on p.25. The theorem supplies an allowed source, answers the explicitly developed Q7.7 setting, and proves the precise prescribed-\(W\) formulation. No stronger regular-source quantifier is inferred from uncertain author intent. :chatgpt-content-reference{index="11"}
+Lyons–Thom allow Bernoulli sources \(A^W\) for countable \(\Gamma\)-sets (p.3). Their developed operators include \(R(\Gamma)\) and \(R(\Gamma,S)=M_S(R(\Gamma))\); Q7.7 is on p.25. The theorem supplies an allowed source, answers the explicitly developed Q7.7 setting, and proves the precise prescribed-\(W\) formulation. No stronger regular-source quantifier is inferred from uncertain author intent. 
 
 For \(W=\Gamma\times S\), Cayley-diagram arcs identify by \((g,s)\mapsto(g,gs)\); this basis bijection preserves actions, operators, and inclusion determinants. Output grouping gives \((\{0,1\}^S)^\Gamma\). To obtain the regular \(\Gamma\)-source, enumerate \(S=\{s_1,\ldots,s_m\}\) and split binary digits:
 \[
@@ -202,7 +200,7 @@ The respective kernels are
 \mathrm{FUSF}=\mathbf P^{P_{\mathcal C^\perp}},\qquad
 \mathrm{WUSF}=\mathbf P^{P_{\mathcal S}}.
 \]
-These are stated in Lyons–Thom §2, p.6, and follow from strong limits of free projections \(I_{E_n}-P_{\mathcal C_n}\) and wired star projections. :chatgpt-content-reference{index="12"}
+These are stated in Lyons–Thom §2, p.6, and follow from strong limits of free projections \(I_{E_n}-P_{\mathcal C_n}\) and wired star projections. 
 
 Automorphisms act on reference-oriented coordinates by **signed permutations**. The free projection need not commute with the unsigned action. Nevertheless, sign conjugation preserves principal determinants and absolute kernel entries. Thus its unoriented law and threshold windows satisfy the **criterion directly**. The proof is exactly equivariant under every preserving permutation, including the full, possibly uncountable \(\operatorname{Aut}(G)\).
 
@@ -214,6 +212,4 @@ Consequently, the proof gives **vertex-iid, full-\(\operatorname{Aut}(G)\)-equiv
 
 For the frozen fixed-\(Q\) statement, **no analytic or source hypothesis is left open in this proof**. Exact literature priority remains unresolved. Finitary coding, Bernoulli isomorphism, computational rates, and joint random-graph measurability are separate, unasserted conclusions.
 
-GitHub discovery found the connector uninstalled; `gh` was unavailable; `git ls-remote` failed with `Could not resolve host: github.com`. No push, PR creation, merge, or modification of another worker’s files occurred. The archive contains only the two requested repository-relative files.
-
-:chatgpt-content-reference{index="14"}[RESULT.md](sandbox:/mnt/data/q77r05g6/research/q77r05/g6/RESULT.md) · :chatgpt-content-reference{index="15"}[REFERENCES.md](sandbox:/mnt/data/q77r05g6/research/q77r05/g6/REFERENCES.md) · :chatgpt-content-reference{index="16"}[q77r05g6-001.zip](sandbox:/mnt/data/q77r05g6-001.zip)
+ ·  ·
