@@ -1,6 +1,6 @@
 # Critical tree-percolation extraction: route obstructions
 
-The endpoint invariant joining and joint-iid targets remain INCOMPLETE. The auxiliary mathematical claims below are under independent review. The separate finite certificate is not included.
+The endpoint invariant joining and joint-iid targets remain INCOMPLETE. The scoped auxiliary mathematical claims below pass one independent mathematical review. The separate finite certificate is not included or certified.
 
 INCOMPLETE
 
@@ -8,7 +8,7 @@ INCOMPLETE
 
 There are, however, rigorous obstructions to two proposed routes. The rooted Wilson joining cannot itself be invariant, for a reason detectable from the unrooted pair. The wired minimal spanning forest gives an equivariant joint iid extension of critical percolation, but an exact two-edge calculation shows that its marginal is not \(\mu_Q\).
 
-I also give an explicit finite-dimensional criterion equivalent to invariant existence. The first unresolved statement is feasibility of **every** system in that criterion, including its translation constraints. Only its first nontrivial window is certified.
+I also give an explicit finite-dimensional criterion equivalent to invariant existence. The first unresolved statement is feasibility of **every** system in that criterion, including its translation constraints. The separate claimed first-window certificate is not included in the present scope.
 
 ## 1. Classical inputs and their scope
 
