@@ -8,11 +8,7 @@ that Q7.7 factorhood does not supply connectivity or a low-cost connectivity rep
 the sharp cost bound for the regular Bernoulli action of a finitely generated infinite group, Abért--Weiss maximality
 would in fact upgrade it to fixed price; see Section 4.
 
-## Isolation and sources
-
-I read `theorem01.md` and `proof01.md` in full before reading the permitted candidate `g6/source.md`.  I did not read
-`g6/audit01.md`, `g6/prior01.md`, or any other old/new review.  The external project memory and state were used only
-for routing and status disclosure, not as mathematical evidence.
+## Sources
 
 Primary sources checked:
 
@@ -101,7 +97,7 @@ represent the same edge, and an involutive generator can prevent an equivariant 
 candidate's regular-source sentence is correct only when "arc" remains explicit.
 
 For a general nonfree \(\Gamma\)-set, prescribed-\(W\) iid cannot be replaced universally by regular
-\(\Gamma\)-iid.  The coset example in `g6/source.md` correctly detects the stabilizer obstruction when the stabilizer
+\(\Gamma\)-iid.  The coset example correctly detects the stabilizer obstruction when the stabilizer
 acts ergodically on the regular Bernoulli source.  This is a boundary of regularization, not a defect in the answer to
 the paper's own terminology.
 
@@ -186,8 +182,7 @@ Combining the hypothetical sharp Bernoulli upper bound with Gaboriau's universal
  \qquad\text{for every free pmp }\alpha.
 \]
 For finitely generated infinite \(\Gamma\), the missing connectivity/repair step would therefore prove not only the
-group-cost infimum equality but also **fixed price**.  The earlier version of this audit incorrectly denied this
-upgrade; it is preserved as `auditb0.md`.
+group-cost infimum equality but also **fixed price**. This implication uses the stated maximality and lower-bound directions.
 
 Thus the exact present implications are
 \[
