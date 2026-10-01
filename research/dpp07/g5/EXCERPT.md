@@ -1,6 +1,6 @@
 # Relative transition candidates and limits of coupling upgrades
 
-The unrestricted exact joint-iid target remains INCOMPLETE. This is a partial mathematical text. The complete visible Sections 1–3 and visible beginning of Section 4 pass one scoped independent mathematical audit. A separate audit of the core transition and approximation argument is in progress. No whole-manuscript approval is attached.
+The unrestricted exact joint-iid target remains INCOMPLETE. This is a partial mathematical text. The complete visible Sections 1–3 and visible beginning of Section 4 pass one scoped independent mathematical audit. A second independent audit also accepts the frozen core transition and approximation argument (Sections 2–3). No whole-manuscript approval is attached.
 
 **INCOMPLETE for the unrestricted joint-iid target.** The missing step is an exactly order-preserving **pair** construction for arbitrary \(A\le B\), not individual marginal sampling.
 
