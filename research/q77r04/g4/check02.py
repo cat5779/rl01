@@ -7,24 +7,19 @@ from fractions import Fraction as F
 from itertools import combinations
 import json
 
-
 def eye(n):
     return [[F(i == j) for j in range(n)] for i in range(n)]
 
-
 def tr(a):
     return [list(row) for row in zip(*a)]
-
 
 def mul(a, b):
     return [[sum((a[i][k] * b[k][j] for k in range(len(b))), F(0))
              for j in range(len(b[0]))] for i in range(len(a))]
 
-
 def add(a, b, sign=1):
     return [[x + sign * y for x, y in zip(ar, br)]
             for ar, br in zip(a, b)]
-
 
 def inverse(a):
     n = len(a)
@@ -39,7 +34,6 @@ def inverse(a):
                 scale = aug[i][j]
                 aug[i] = [x - scale * y for x, y in zip(aug[i], aug[j])]
     return [row[n:] for row in aug]
-
 
 def determinant(a):
     a = [row[:] for row in a]
@@ -58,19 +52,15 @@ def determinant(a):
             a[i] = [x - factor * y for x, y in zip(a[i], a[j])]
     return answer
 
-
 def subsets(n):
     return [tuple(c) for k in range(n + 1) for c in combinations(range(n), k)]
-
 
 def minor(a, s):
     return determinant([[a[i][j] for j in s] for i in s])
 
-
 def diagonal(values):
     return [[F(values[i]) if i == j else F(0)
              for j in range(len(values))] for i in range(len(values))]
-
 
 def mixed_root(values):
     n = len(values)
@@ -79,7 +69,6 @@ def mixed_root(values):
     h = [[F(i == j) - 2 * v[i] * v[j] / vv
           for j in range(n)] for i in range(n)]
     return mul(mul(h, diagonal(values)), h)
-
 
 roots = {
     "zero": diagonal([0, 0]),

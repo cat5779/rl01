@@ -4,12 +4,6 @@ JUSTIFICATION: 对本次冻结的 BS(2,3)/<a>、指定 Hecke 邻接及端点 Q*=
 
 # G4 独立初审
 
-- 审计日期：2026-10-01。
-- 冻结任务：本目录 `TASK.md`。
-- 审计时字节版本：本目录 `source.md`，521 行、18525 字节，SHA-256 `32DA49E4BBF5212C6A75197E4B944A97D8E5F62A16FC74B694C8EEDF24D357FE`。归档复核（2026-10-01）：当前精确保全原文为 18524 字节、SHA-256 `455501232F055D680309DB9328CCBCC2C43DE471F4A2B2A2DD049C835452E361`，与 `raw01.json` 的 `assistant_message.text` 完全一致；给当前原文仅追加一个 EOF LF（字节 `0A`），独立重算哈希即精确复现审计时哈希。差异仅为末尾单个换行，正文及行号相同，数学结论不变；本次只补版本说明，未重跑数学审稿。
-- 仅读取本轮 G4 原稿；没有读取其他 G 稿或历史审稿正文，没有联系网页版作者、推送 PR 或更改项目状态。
-- 使用 math-theorem 验证者协议。以下判定来自推导复核，不采用原稿的 `PROVED` 标签作为证据。
-
 ## 1. 目标与谱半径
 
 **原稿 17–78 行：通过。** HNN 的两个关联子群分别为 <a²> 和 <a³>。Britton 正规形给出
@@ -112,19 +106,10 @@ liminf 将最终映射延伸到所有输入，仍是 Borel 且等变。耦合中
 
 ## 8. 专项风险与证据边界
 
-- **有限程与空间马尔可夫：**原稿没有使用“有限程核 ⇒ 空间马尔可夫”这一不合法跳步。它使用真实有限边缘的后验以及所有观察坐标的条件期望，空间条件依赖可以无限远。
-- **无穷过去：**这里没有逐顶点抽样顺序；空间穷尽由球的向上 σ 代数处理，时间过去由独立布朗桥处理。
-- **同源等变性：**统一球、统一编码、确定性 Picard 与 liminf 均逐输入等变；辅助 η 只作法则识别。
-- **有限检查附件：**原稿 519 行声称的“六个核、十八个 tilt”附件未进入本目录，本审计未将其视为已验收证据。正确性结论由上述一般解析链支持，不依赖这项计算声称。
-- **形式化：**本次为解析审计，没有 Lean 机械认证，不标记任何形式化通过状态。
-- **交付引用：**原稿中的 `chatgpt-content-reference` 和 sandbox 附件不是可长期追溯的参考文献列表；归档时应补成普通书目信息和可用链接。这是交付完整性问题，不是本证明的数学缺口。
-
 ## 9. 已实际核对的 primary sources
 
 1. Claire Anantharaman-Delaroche, *Approximation properties for coset spaces and their operator algebras*, [作者 v2 PDF](https://www.idpoisson.fr/anantharaman/publications/Almost_normal_v2.pdf)，第 1 节，尤其第 3–5 页的左陪集、L(g)/R(g) 及 Hecke 矩阵约定。已核对相应原文；本审计的树与谱半径结论同时有上文独立推导。
 2. Russell Lyons and Andreas Thom, *Invariant Coupling of Determinantal Measures on Sofic Groups*, [arXiv:1402.0969v2](https://arxiv.org/pdf/1402.0969)，第 2 节第 4 页：可数集合上正压缩核的 DPP 存在性、有限包含概率及容斥唯一性。这里只调用该存在性背景，没有调用 sofic 耦合定理，更没有将其当作本题的 FIID 定理。
 3. Danny Nam, Allan Sly and Lingfu Zhang, *Ising model on trees and factors of IID*, [arXiv:2012.09484](https://arxiv.org/pdf/2012.09484)，第 2.2 节与 Lemma 2.1：布朗观察与后验漂移机制的先行工作。已核对；原稿明确没有直接套用其 Ising 定理，其无限维 DPP 构造在本文内另行完成。
-
-关于向上条件期望收敛与有限维 Lévy 鞅刻画，适用条件已在第 5–6 节逐项核对；尤其后者的条件特征函数论证已在原稿及本审计展开，不依赖无法恢复的网页引用占位符。
 
 最终裁决：**CORRECT（独立初审；冻结具体命题；无关键数学缺口）**。
