@@ -1,0 +1,11 @@
+{
+  "edge_count": 8,
+  "principal_determinants_positive": 255,
+  "connected_determinant_formula_checks": 81,
+  "positive_history_conditional_checks": 182,
+  "zero_probability_histories_skipped": 73,
+  "minimum_conditional_probability": "11/20",
+  "required_lower_bound": "1/2",
+  "status": "PASS",
+  "scope": "FINITE_EXACT_AUXILIARY_CHECK_NOT_A_PROOF_OF_THE_INFINITE_STATEMENT"
+}
