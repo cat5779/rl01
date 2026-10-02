@@ -61,7 +61,7 @@ gives
 \]
 Thus normalization is redundant once the divergence is imposed. Moreover, for a nonnegative flow, \(P_{jj}=0\) forces every edge in direction \(j\) to vanish.
 
-For completeness, nonemptiness holds without any support restriction. We use the nested-projection coupling theorem: projection DPPs corresponding to nested subspaces of codimension one admit a monotone coupling that adds exactly one point. This is the codimension-one case of Lyons, Proposition 10.3. :chatgpt-content-reference{index="0"}
+For completeness, nonemptiness holds without any support restriction. We use the nested-projection coupling theorem: projection DPPs corresponding to nested subspaces of codimension one admit a monotone coupling that adds exactly one point. This is the codimension-one case of Lyons, Proposition 10.3.
 
 Put \(h=\varepsilon/2\) and \(B=K+hP\). On
 \[
@@ -523,4 +523,3 @@ This proves coordinate-permutation equivariance.
 Finally, membership in the original fiber gives nonnegativity, exact divergence, total mass one, and the specified outgoing capacity. The explicit constant (2) depends only on \(\varepsilon,s\), while the selector (1) is the same for every support bound.
 
 Thus the theorem holds for **every fixed finite \(s\)**. No bound uniform as \(s\to\infty\), and hence no unrestricted arbitrary-support dimension-free theorem, is asserted. \(\square\)
-
