@@ -1,5 +1,7 @@
 # Lyons ICM 2014 Conjecture 5.7：支配界、两种“最优”语义与边界
 
+四条主线的英文数学稿见 [paperA.md](../t1/paperA.md)，其中 §§5–7 与附录 B–C 对应本题及新增的 sofic 尖锐非交换距离界。新增专项复核见 [prob01.md](prob01.md) 与 [dbar01.md](dbar01.md)；本文件保留题 2 的完整专题证明。
+
 日期：2026-10-02
 
 ## 结论先行

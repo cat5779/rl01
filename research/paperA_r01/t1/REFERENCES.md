@@ -1,5 +1,7 @@
 # 题 1 参考文献与检索记录
 
+英文稿的统一文献、定理前提及近期候选来源登记见 [sources01.md](sources01.md)。
+
 以下只列实际打开并核对过的来源。页码按所链接版本；预印本版本与正式版页码不混用。
 
 ## 原始与承重来源
@@ -15,7 +17,7 @@
 3. **Itai Benjamini, Russell Lyons, Yuval Peres, Oded Schramm**, *Uniform Spanning Forests*, Annals of Probability **29** (2001), 1--65. 读取作者 PDF；Theorem 7.8 给无限图 Transfer Current determinant 公式，并在其后明确写出 FSF 对应 \(P_{\diamond^\perp}\)、WSF 对应 star projection。
    <https://rdlyons.pages.iu.edu/pdf/usf.pdf>
 
-4. **David Aldous, Russell Lyons**, *Processes on Unimodular Random Networks*, Electronic Journal of Probability **12** (2007), paper 54, 1454--1508. 实际打开并全文转录检索 EJP 正式 PDF 镜像；§2、printed p. 1460 显式构造 rooted-isomorphism class 到编号网络的 continuous canonical representative；printed p. 1461 的 Definition 2.1 定义 \(\mathcal G_*\)、\(\mathcal G_{**}\) 与 Mass-Transport Principle，公式编号为 (2.1)。
+4. **David Aldous, Russell Lyons**, *Processes on Unimodular Random Networks*, Electronic Journal of Probability **12** (2007), paper 54, 1454--1508. 实际打开并全文转录检索 EJP 正式 PDF 镜像；§2、printed p. 1461 显式构造 rooted-isomorphism class 到编号网络的 continuous canonical representative；printed p. 1462 的 Definition 2.1 定义 \(\mathcal G_*\)、\(\mathcal G_{**}\) 与 Mass-Transport Principle，公式编号为 (2.1)。
    <https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/463/463-1495-1-PB.pdf>
    <https://doi.org/10.1214/EJP.v12-463>
 

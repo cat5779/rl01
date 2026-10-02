@@ -1,5 +1,7 @@
 # References and source audit
 
+英文稿的统一文献、Li–Thom 前提复核、BLPS 树上支配先例及折线法来源登记见 [sources01.md](../t1/sources01.md)。
+
 只列本次实际打开并核对到相关定理/段落的来源。近期研究稿用于发现和交叉检查，
 不被当作已发表先例或独立正确性认证。
 

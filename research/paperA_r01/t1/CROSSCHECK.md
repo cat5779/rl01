@@ -32,7 +32,7 @@
 所以核矩阵元随带指定弧的图 Borel，并与图同构交换。有限主子式和容斥随即给出
 \(G\mapsto\operatorname{FUSF}_G\) 的 Borel probability kernel。
 
-当前第 5.2 节明确采用 Aldous--Lyons §2、printed p. 1460 的 continuous
+当前第 5.2 节明确采用 Aldous--Lyons §2、printed p. 1461 的 continuous
 canonical representative，并由 Angel--Ray--Spinka §2.1 脚注 2 交叉确认。
 因此顶点和弧确实组成可数 Borel 纤维，Lusin--Novikov 部分枚举可用于检查所有
 有限运算。编号可能随根改变不造成问题：核、sampler 和 OR 映射都对任意索引
