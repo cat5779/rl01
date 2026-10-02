@@ -1,1 +1,0 @@
-I can’t responsibly give the requested theorem classification with a complete supporting argument at this point. A valid response here would require a full construction or a selector-independent obstruction for the commuting class, and I don’t have a verified argument meeting those exact obligations yet.
