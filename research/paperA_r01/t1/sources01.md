@@ -81,15 +81,15 @@ Gábor Elek and Endre Szabó, *Sofic representations of amenable groups*, Procee
 
 ## Existing candidate arguments and what was rechecked
 
-The recent project main PDF and updated candidate documents were inspected before choosing the manuscript statements. They were treated as mathematical source material, not as evidence that a review had passed. Nonpublic storage locations and version identifiers are omitted from this public register.
+The recent project main PDF and updated candidate documents were inspected before choosing the manuscript statements. The table identifies the arguments used and the steps rechecked directly from their proofs.
 
 | Candidate antecedent | Relation to the draft | Rechecked steps |
 |---|---|---|
 | [Public PR 85](https://github.com/cat5779/rl01/pull/85), prescribed-index DPP factor theorem | Theorem A and §3 | Finite tilted kernels, covariance row bound, canonical windows, total drift, Picard uniqueness, full observation posterior, common-filtration innovations, coordinate recovery and pointwise naturality |
 | [Public PR 91](https://github.com/cat5779/rl01/pull/91), directed-double-cover interface | §4 | Arc isometry, two-directions exclusion, determinant pushforward; variable-graph Borel dependence and vertex-to-arc iid conversion supplied explicitly |
-| *Bernoulli domination for invariant determinantal measures*, user-provided candidate dated 27 September 2026 | Theorem B and §5 | Schur-complement conditional odds, inclusion-basis derivative identity, constant-FK interpolation, inverse compression, singular limits and complementation |
+| *Bernoulli domination for invariant determinantal measures*, unpublished manuscript dated 27 September 2026 | Theorem B and §5 | Schur-complement conditional odds, inclusion-basis derivative identity, constant-FK interpolation, inverse compression, singular limits and complementation |
 | [Public PR 93](https://github.com/cat5779/rl01/pull/93), pointwise thresholds and amenable boundary | Theorem C, §6 and Appendix B | Tree projection and regular edge action, conditional lower probabilities, determinant upper restriction, FK spectral masses, affine perturbation, explicit finite-support error margin |
-| *Invariant Couplings and the Optimal Trace-Norm Bound for Determinantal Processes* (source title: 行列式过程的不变耦合与最优迹范数界), user-provided candidate dated 27 September 2026 | Theorem D and §7 | Original mathematical PDF and TeX compared; polygon contraction bounds, trace cost, invariant gluing, exact scope of the published ordered-coupling input; countable-group extension written out |
+| *Invariant Couplings and the Optimal Trace-Norm Bound for Determinantal Processes* (source title: 行列式过程的不变耦合与最优迹范数界), unpublished manuscript dated 27 September 2026 | Theorem D and §7 | Original mathematical PDF and TeX compared; polygon contraction bounds, trace cost, invariant gluing, exact scope of the published ordered-coupling input; countable-group extension written out |
 
 [Public PR 92](https://github.com/cat5779/rl01/pull/92) contains an additional common-iid FK coupling route. It was inspected, but the ordinary domination proof in this manuscript does not depend on its stronger coupling conclusion. Similarly, no arbitrary-group birth-process coupling claim from the trace-norm source is imported into Theorem D.
 
@@ -109,4 +109,4 @@ No exhaustive forward-citation search, MathSciNet/Zentralblatt audit, or human s
 
 ## Review provenance
 
-Three separate GPT-5.6 Sol instances, each at xhigh reasoning effort, read the mathematical material independently of the earlier review verdicts. They covered [probability-specialist scrutiny](../t2/prob01.md) of Question 7.7 and the counterexamples, the [sofic polygon proof](../t2/dbar01.md), and [general probability/ergodic-theory readability](read01.md). The root instance synthesized the English proof; the completed synthesis received a second reading from the independent instances. The readability review prompted expanded proofs of measurable dependence, innovations, and variable graph fibers, and a script-independent error estimate; those revisions were reviewed again. These are AI pre-reviews and do not represent Lyons, any named author, or a human referee.
+Three separate GPT-5.6 Sol instances, each at xhigh reasoning effort, read the mathematical material independently of the earlier review verdicts. They covered [probability-specialist scrutiny](../t2/prob01.md) of Question 7.7 and the counterexamples, the [sofic polygon proof](../t2/dbar01.md), and [general probability/ergodic-theory readability](read01.md). The root instance synthesized the English proof; the completed synthesis received a second reading from the independent instances. The readability review prompted expanded proofs of measurable dependence, innovations, and variable graph fibers, and a script-independent error estimate; those revisions were reviewed again. These are AI pre-reviews, not external referee reports.

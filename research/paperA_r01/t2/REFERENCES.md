@@ -81,10 +81,10 @@
    - 实际核对了其联合 iid 耦合路线；本报告只证明普通随机序，不依赖该稿的
      total Borel sampler、等变耦合或额外的零参数假设，因此没有把这些结论导入。
 
-## User-provided proof candidate
+## Unpublished proof candidate
 
 9. **Bernoulli domination for invariant determinantal measures**, dated
-   27 September 2026, 用户提供候选 A（无公开链接）。
+   27 September 2026, 未发表候选稿 A。
    - 实际依赖范围：Lemma 1 的有限维条件 odds 与导数方向，以及 §3 对 Theorem 1
      的 FK 等值插值、逆压缩、正则化和补核论证。
    - 本报告逐项重算了 inclusion-basis 导数恒等式、Schur 补变分式、路径导数、
@@ -106,5 +106,4 @@
 - ICM 原句没有形式定义“optimal”，所以本文给出的是基于相邻定理的语义判断，
   不是作者通信或心理意图断言。
 - “近期未发现相同表述”不等于新颖性证明。本交付不提出首次发现或穷尽文献主张。
-- 用户提供候选 A 的可公开识别信息和实际依赖范围已列于第 9 项；未公开的存储
-  位置、仓库信息和版本标识不进入公开稿。
+- 候选稿 A 的书目信息和实际依赖范围见第 9 项。

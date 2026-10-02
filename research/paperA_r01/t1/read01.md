@@ -203,3 +203,23 @@ This judgment concerns internal correctness and readability, not priority. The m
 The final targeted edits close every remaining request in this addendum. Section 3.3 now defines \(C_0\) as continuous paths starting at zero, and both exponent sums in (3.2) explicitly range over \(E_n(x)\). Section 4.2 gives the corrected Aldous–Lyons page, records the preliminary Baire-space recoding, and explains the finite-graph numbering. The manuscript now uses its conventional bibliography and public source register in place of links to internal audit reports; the separately listed computations are clearly described as supplementary, non-certifying checks. The retained status labels implement an explicit editorial requirement and remain harmless.
 
 No mathematical or readability correction from this review remains open. My final general-referee disposition is **accept**. This remains a judgment of internal correctness and exposition, not a novelty or priority certification.
+
+## Editorial review of the normalized manuscript (2 October 2026)
+
+I compared the revised manuscript with the preceding version and re-read the affected proofs. The revision materially improves the paper. The introduction now moves from the three probabilistic questions to the results and their proof mechanisms; the notation \(\mathbf P^Q\), \(Q_F\), \(\operatorname{FK}(Q)\), and \(\bar d\) is conventional and consistent; and §3 explains the observation–innovation construction before introducing the finite-window machinery. The separation of the Brownian-path solution \(\mathcal Z_K\), the path decoder \(\Psi_K\), and the uniform-label sampler \(\Phi_K\) is especially helpful.
+
+The change in exposition has not weakened the main quantifiers. Theorem A remains a jointly Borel, everywhere-defined sampler on the prescribed countable set \(W\), natural under all bijections. Corollary A1 still gives one vertex-i.i.d. graph-factor rule for every locally finite connected simple rooted graph law, without unimodularity or a degree bound. Theorem B remains an ordinary stochastic-domination statement for every countable group. Theorem C still separates fixed-kernel equality on amenable groups from the \(C_3*C_3\) counterexamples, including the finite-support kernel with a gap at both endpoints. Theorem D still concerns invariant joinings on every countable sofic group. The revised proof roadmaps do not import the sampler into either comparison theorem, and the distinction between ordinary domination and invariant monotone coupling remains explicit.
+
+Appendix D is an effective place for the required status labels. It makes the scope auditable without interrupting theorem statements and proofs. The introduction, §§3–4, and §6 now read as a mathematical article rather than a running verification record.
+
+I found no remaining substantive readability obstacle. Three copyedits would remove the only residual points of friction:
+
+1. In Appendix D, replace “Theorem C(1)” by “Theorem C, (C1)” or “the first assertion of Theorem C”; the theorem has no numbered part (1).
+2. In §4.4, write “[ARS, Theorem 1.4, restated there as Theorem 4.1]” if both numbers refer to the Angel–Ray–Spinka paper. As written, “restated as Theorem 4.1” can be mistaken for a cross-reference to this manuscript's Lemma 4.1.
+3. Rename §4 “Random rooted graphs and the free uniform spanning forest.” The current “free forest” is understandable but less precise than the terminology used everywhere else.
+
+Subject to these copyedits, my editorial disposition is **accept**. This round assesses clarity, notation, tone, and preservation of the proved statements; it does not certify novelty or priority.
+
+### Editorial closure
+
+All three copyedits have been made, and the punctuation adjustment in the reverse-martingale paragraph preserves the sentence and estimate. No item from this editorial round remains open. The final editorial disposition is **accept**.

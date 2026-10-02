@@ -150,3 +150,29 @@ A subsequent check of the original Aldous--Lyons PDF corrects the locator used i
 The new Appendix B estimate is also exact: \((20/19)^{16}>785/361>2\) implies \((19/20)^{256}<2^{-16}\), and \(20\cdot2^{-16}<2^{-10}=1/1024\). Together with \(2\sqrt2/3<19/20\), this supplies the claimed paper-level proof of (B.2), independent of the script.
 
 **Post-repair verdict: PROVED with no remaining mathematical or readability objection from this probability review.** The earlier novelty verdict remains **INCOMPLETE**, because the targeted repairs do not constitute an exhaustive prior-art search.
+
+## Editorial notation round
+
+I compared the notation with the published Lyons--Thom paper, Lyons's ICM article, and the Lyons--Steif author PDF, then reread the manuscript after the notation revision.
+
+The adopted notation is well chosen and source-consistent:
+
+- \(\mathbf P^Q\) agrees with Lyons--Thom at printed pp. 575 and 577, including equation (1), and with Lyons's ICM equation (1.1) on printed p. 137.
+- \(\operatorname{FK}(Q)\) agrees exactly with the notation introduced immediately before ICM Conjecture 5.7 on printed p. 158.
+- \(R(\Gamma)\) and \(R(\Gamma,S)\) agree with the definitions on Lyons--Thom printed pp. 580--581. There is no source-based reason to replace \(R\) by \(\mathcal R\).
+- The scalar-kernel notation \(\mathbf P^{pI}\) makes the Bernoulli product law part of the same determinantal family and matches the form of ICM Conjecture 5.7. Lyons--Steif instead writes \(\mu_p\) for product measure in §5 (author-PDF pp. 18 and 22, including Theorem 5.11); importing that separate convention would be less coherent here.
+- Lyons--Thom equation (1) and ICM equation (1.1) write the finite compression with a restriction glyph. The manuscript's \(Q_F\), explicitly defined as the principal compression to \(\ell^2(F)\), is clearer in the dense finite-matrix arguments and is now used consistently.
+
+**Mathematical-meaning check: PROVED.** The change from \(D(Q)\) to \(\operatorname{FK}(Q)\) preserves the zero convention and every determinant identity. The main upper comparison is correctly written as \(\mathbf P^{(1-\operatorname{FK}(I-Q))I}\). Appendix C retains the unnormalized trace through the distinct notation \(\operatorname{FK}_S\), and its upper scalar kernel is likewise parenthesized correctly. The subgroup-compression argument in §7 still uses the original kernel \(D\), not the determinant symbol. No premise, inequality direction, normalization, or index set changed.
+
+The sampler domains are now separated correctly. The deterministic solution is \(\mathcal Z_K\) on the continuous-path space \(\mathcal C_W\); \(\Psi_K\) decodes a path input; a fixed coordinatewise Borel map \(\psi\) sends uniforms to Wiener paths; and
+\[
+ \Phi_K(u)=\Psi_K\bigl((\psi(u_x))_{x\in W}\bigr)
+\]
+is the uniform-input factor map. Equation (3.9) states naturality for \(\Phi_K\), and the graph construction applies \(\Phi_{K_G}\) to the derived uniform arc labels. The Brownian proof consistently distinguishes the independent noise \(B\), observation \(X\), and innovation \(\widetilde B\). These changes remove the earlier domain ambiguity without changing the construction.
+
+The final manuscript applies both typesetting corrections previously noted: the finite-posterior numerator reads \(\sigma_x\,p^K_{F_n(x)}(\sigma)\), and the doubled punctuation after “i.i.d.” is gone.
+
+The final focused rereading also confirms the following scope points. Theorem A is stated before any group action: it supplies a jointly Borel family on every countable set and naturality under every bijection. Only afterward is a permutation action imposed; commutation of \(Q\) with that action turns the action-free identity (3.9) into pointwise equivariance. Thus no regular-orbit or stabilizer premise has entered the theorem. The idea-first opening of §3 accurately previews the later filtering proof, while the finite-window construction remains the device that makes the drift total and canonical. Lemma 4.1's signposts distinguish actual arc fibers from automorphism orbits and explain why temporary numbering descends by naturality. Section 6.4 now separates pointwise, one-determinant uniform, and two-determinant joint questions without changing their quantifiers. Appendix D accurately records the proved, disproved, and incomplete ranges established in the body.
+
+**Final editorial-round verdict: PROVED with no remaining mathematical, scope, notation, or readability objection from this review.** The notation changes and exposition pass preserve every theorem and proof.

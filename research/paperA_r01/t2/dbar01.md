@@ -431,6 +431,80 @@ clarifications agree with the proof audited above.
 The current unified Theorem D and §7 therefore deserve the unqualified verdict
 **PROVED** within their stated countable-sofic scope.
 
+## 9. Final notation-normalization and semantic-preservation review
+
+**STATUS: CORRECT; REVIEW CLOSED WITHOUT REPAIR REQUESTS.** The revised English
+statements of Theorems B--D, their proofs in §§5--7, and Appendices B--D were
+compared with the preceding complete version after the global notation change.
+The changes preserve the mathematical content and improve the distinction
+between probability measures, finite compressions, and traces.
+
+### Statements and scopes
+
+- **Theorem B** still quantifies over every countable group and every positive
+  contraction in \(R(\Gamma)\). Its conclusion remains ordinary stochastic
+  domination. The scalar kernels are now written unambiguously as
+  \(\mathbf P^{\operatorname{FK}(Q)I}\) and
+  \(\mathbf P^{(1-\operatorname{FK}(I-Q))I}\); the parentheses in the upper
+  scalar are correct.
+- **Theorem C** retains both parts: exact pointwise parameters on every
+  countable amenable group, and strict counterexamples on \(C_3*C_3\),
+  including a finite-support kernel with a spectral gap at both endpoints.
+  Complementation still converts every lower-bound counterexample into the
+  stated upper-bound counterexample.
+- **Theorem D** remains restricted to countable sofic groups and invariant
+  joinings. The definition \(\|T\|_1=\tau(|T|)\) makes its displayed right-hand
+  side exactly the earlier \(\tau|A-B|\), with no change of normalization or
+  constant.
+
+### Proof interfaces
+
+1. In §5, \(Q_F\) consistently denotes a principal compression, while \(P_F\)
+   is reserved for the coordinate projection. The finite derivative identity,
+   inverse-compression inequality, and constant-\(\operatorname{FK}\) path are
+   unchanged. Because \(\tau(I)=1\), the scaling identity
+   \(\operatorname{FK}(aT)=a\operatorname{FK}(T)\) used there has precisely the
+   stated scalar power. The singular limit and
+   \(p_+(Q)=1-p_-(I-Q)\) also retain their parentheses and direction.
+2. In §6, the Li--Thom compression formula continues to use ordinary
+   finite-matrix determinants with exponent \(1/|F|\), as required by the
+   unnormalized matrix trace in \(M_d(\mathcal N\Gamma)\). The regular case
+   takes \(d=1\). The tree threshold, complement argument, spectral masses,
+   affine perturbation, and subgroup inheritance were not weakened by the
+   notation change.
+3. In §7, dropping the subscript from \(\bar d\) is harmless because the set
+   \(J_\Gamma\) of invariant joinings is fixed explicitly at the definition.
+   The countable-sofic ordered-coupling reduction, relative-independent
+   gluing, polygon, endpoint costs, and sharpness example are unchanged. The
+   finite-dimensional corollary still uses the ordinary unnormalized trace
+   \(\operatorname{Tr}\), and the finite-group conversion remains
+   \(\bar d=W_H/|\Gamma|\).
+
+### Appendices
+
+- Appendix B retains the explicit finite-support kernel, the exact
+  \(1/1024\) approximation margin, the lower stochastic parameter, and the
+  logarithm estimate. Replacing the old determinant symbol by
+  \(\operatorname{FK}\) changes no inequality.
+- Appendix C explicitly fixes the sum trace
+  \(\tau_S(I)=m\) and
+  \(\operatorname{FK}_S(Q)=\exp\tau_S(\log Q)\). The path factor
+  \((1+t)^{m-1}\), the inverse-diagonal maximum, and the scalar kernels in
+  (C.1) are mutually consistent with that unnormalized trace. The
+  \(m\)-th-root counterexample and the pointwise-sharpness boundary therefore
+  retain their original meaning.
+- Appendix D matches each PROVED, DISPROVED, and INCOMPLETE label to the scope
+  actually established in the body. In particular, it does not promote the
+  unresolved arbitrary-group invariant-coupling problem.
+
+A mechanical notation sweep found no surviving uses of the superseded
+\(\mu_Q\), \(\bar d_\Gamma\), \(Q[F]\), or \(D(Q)\) conventions. The cited
+premises also remain correctly routed: finite DPP order to Lyons--Thom
+Theorem 2.1, invariant ordered coupling to their Theorem 5.1 with its finite
+generating-set premise, and amenable determinant approximation to Li--Thom
+Theorem 1.4. The normalized notation therefore preserves every proof and
+scope relevant to Theorems B--D.
+
 ## References
 
 - R. Lyons and A. Thom, “Invariant coupling of determinantal measures on sofic
