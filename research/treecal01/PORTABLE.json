@@ -1,0 +1,45 @@
+{
+  "status": "PASS_ALL_REQUIRED_PORTABLE_CHECKS",
+  "checks": [
+    {
+      "receipt": "checks/porta.json",
+      "status": "PASS_EXACT_ONE_STEP_MESSAGE_ENCLOSURE",
+      "sha256": "5a99e6545f79f0e86d731dae04013b57f814bd7949ec87d5712d274840f762e6",
+      "strict_sign": null
+    },
+    {
+      "receipt": "checks/portblo.json",
+      "status": "PASS_EXACT_ONE_STEP_MESSAGE_ENCLOSURE",
+      "sha256": "1a28529b66ac0653c85d1e6453da5e1bb91b99cb22b5547219b1ed276a8e65a1",
+      "strict_sign": null
+    },
+    {
+      "receipt": "checks/portbhi.json",
+      "status": "PASS_EXACT_ONE_STEP_MESSAGE_ENCLOSURE",
+      "sha256": "dbb3a0d198792730864809a57477d074458be7dabbcbd283a7a66e7c27b01523",
+      "strict_sign": null
+    },
+    {
+      "receipt": "checks/portstarlo.json",
+      "status": "EXACT_ORDERED_STAR_ENCLOSURE",
+      "sha256": "a42b67809ca35e72a6e04140d8e43f19305a46494a415ce3b5270b9a7b01c5d9",
+      "strict_sign": true
+    },
+    {
+      "receipt": "checks/portstarhi.json",
+      "status": "EXACT_ORDERED_STAR_ENCLOSURE",
+      "sha256": "9734050e9476d0a435dcf45351a3a5fe4e29d3c5307543425c59bb5327017555",
+      "strict_sign": true
+    },
+    {
+      "receipt": "checks/portfar.json",
+      "status": "PASS_INDEPENDENT_ORDERED_FAR_CERTIFICATE",
+      "sha256": "fbe1f801679dd3456a7a0fcc731db2caf6b34830bd03569d3871769446deb166",
+      "strict_sign": null
+    }
+  ],
+  "working_directory_different_from_script_directory": true,
+  "formal_polynomial_identity_rerun": true,
+  "symbolic_checker": "byte-preserved from the independently executed reviewed source; optional SymPy rerun not claimed here",
+  "not_a_new_mathematical_review": true
+}

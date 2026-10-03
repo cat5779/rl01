@@ -1,0 +1,63 @@
+{
+  "arithmetic_code_line_differences": {
+    "verify05.py": [
+      "--- ",
+      "+++ ",
+      "@@ -80,10 +80,10 @@",
+      " assert np.array_equal(laws[0,2],laws[1,2]);nextlaws['12']=nextlaws['02']",
+      " checks.append({'state':'12','pass':checks[-1]['pass'],'same_as':'02'})",
+      " out={'status':'PASS_EXACT_ONE_STEP_MESSAGE_ENCLOSURE' if all(c['pass'] for c in checks) else 'FAIL_ONE_STEP',",
+      "-     'source_sha256':hashlib.sha256(source_blob).hexdigest(),'source':str(src),'checks':checks,",
+      "+     'source_sha256':hashlib.sha256(source_blob).hexdigest(),'source':src.name,'checks':checks,",
+      "      'arithmetic':'ordered Cartesian products; pure int64 arithmetic with sum/product overflow checks; no floating-point arithmetic',",
+      "      'next_pmf':nextlaws,'elapsed_seconds':time.time()-started,",
+      "-     'bridge_required':'bridge04.md bounded quotient-message uniqueness; not verified by this program'}",
+      "+     'bridge_required':'BRIDGE.md bounded quotient-message uniqueness; not verified by this program'}",
+      " dst=Path(args.output) if args.output else ROOT/(src.stem+'verify.json')",
+      " dst.write_text(json.dumps(out,indent=2)+'\\n',encoding='utf-8')",
+      " print(json.dumps({'output':str(dst),'status':out['status'],'seconds':time.time()-started}),flush=True)"
+    ],
+    "post05.py": [
+      "--- ",
+      "+++ ",
+      "@@ -76,7 +76,7 @@",
+      "                 subtotal+=wi*wz*wt*f;terms+=1",
+      "     num+=subtotal;cases.append({'third_open':m,'numerator':subtotal,'terms':terms})",
+      " den=8*mass**3*H;margin=12*num-den",
+      "-out={'status':'EXACT_ORDERED_STAR_ENCLOSURE','source':str(src),'source_sha256':hashlib.sha256(blob).hexdigest(),",
+      "+out={'status':'EXACT_ORDERED_STAR_ENCLOSURE','source':src.name,'source_sha256':hashlib.sha256(blob).hexdigest(),",
+      "      'lambda':data['lambda'],'direction':'lower' if upper else 'upper','numerator':num,'denominator':den,",
+      "      '12num_minus_den':margin,'desired_strict_sign_pass':margin>0 if upper else margin<0,",
+      "      'compression_bins':args.bins,'compression_width_units':W,'cases':cases,"
+    ],
+    "far04.py": [
+      "--- ",
+      "+++ ",
+      "@@ -111,7 +111,7 @@",
+      " den=32*(4*D)**4*H",
+      " margin=48*num-5*den",
+      " out={'status':'EXACT_MIXED_INTERVAL_CANDIDATE','a':{'p':ap,'q':aq},'b':{'p':bp,'q':bq},",
+      "-     'source':str(src),'source_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),",
+      "+     'source':src.name,'source_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),",
+      "      'grid_M':M,'common_resistance_units':U,'probability_denominator':D,",
+      "      'function_denominator':H,'compression_bins':args.bins,'compression_width_units':W,",
+      "      'lower_numerator':num,'lower_denominator':den,'48num_minus_5den':margin,"
+    ],
+    "farverify04.py": [
+      "--- ",
+      "+++ ",
+      "@@ -14,7 +14,7 @@",
+      " path=Path(args.certificate)",
+      " if not path.is_absolute():path=ROOT/path",
+      " cert_blob=path.read_bytes();cert=json.loads(cert_blob)",
+      "-source=Path(cert['source']);source_blob=source.read_bytes();data=json.loads(source_blob)",
+      "+source=path.parent/cert['source'];source_blob=source.read_bytes();data=json.loads(source_blob)",
+      " assert hashlib.sha256(source_blob).hexdigest()==cert['source_sha256']",
+      " assert data['kind']=='upper'",
+      " a=F(cert['a']['p'],cert['a']['q']);b=F(cert['b']['p'],cert['b']['q'])"
+    ],
+    "far04check.py": []
+  },
+  "mathematics_rewritten": false,
+  "scope": "path resolution and source output/provenance only"
+}

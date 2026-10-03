@@ -1,0 +1,15 @@
+{
+  "status": "PROVED",
+  "scope": "finite formal Laurent-polynomial determinant and condensed/contracted denominator identities only",
+  "denominator_terms": 21,
+  "variables": [
+    "r1",
+    "r2",
+    "r3",
+    "s0",
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "no_probabilistic_or_uniform_lambda_claim": true
+}

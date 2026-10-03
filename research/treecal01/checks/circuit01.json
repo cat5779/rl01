@@ -1,0 +1,43 @@
+{
+  "status": "PASS_ROOT_SYMBOLIC_NETWORK_AND_DERIVATIVE_CHECK",
+  "determinant_terms": 21,
+  "derivatives": {
+    "r1": {
+      "monotonicity": "increasing",
+      "numerator_nonnegative_coefficients": true
+    },
+    "r2": {
+      "monotonicity": "decreasing",
+      "numerator_nonnegative_coefficients": true,
+      "separately_convex": true
+    },
+    "r3": {
+      "monotonicity": "increasing",
+      "numerator_nonnegative_coefficients": true
+    },
+    "s0": {
+      "monotonicity": "decreasing",
+      "numerator_nonnegative_coefficients": true,
+      "separately_convex": true
+    },
+    "s1": {
+      "monotonicity": "decreasing",
+      "numerator_nonnegative_coefficients": true,
+      "separately_convex": true
+    },
+    "s2": {
+      "monotonicity": "decreasing",
+      "numerator_nonnegative_coefficients": true,
+      "separately_convex": true
+    },
+    "s3": {
+      "monotonicity": "decreasing",
+      "numerator_nonnegative_coefficients": true,
+      "separately_convex": true
+    }
+  },
+  "selected_vacancy_tree_ratio": true,
+  "adjacent_target": "1/12",
+  "distance_two_target": "5/48",
+  "scope": "finite circuit identities and signs only; infinite bridge separately read"
+}
