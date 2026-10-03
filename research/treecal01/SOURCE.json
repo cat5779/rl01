@@ -1,0 +1,292 @@
+{
+  "status": "SCOPED_MATHEMATICAL_REVIEW_AND_ROOT_EXPORT_CHECK_PASSED",
+  "current_theorem_source_sha256": "a06f0b8b4d713f22f4dcb6b81b9ae6bbe6ccd43d17a9ec645cade81ea160bc12",
+  "review_source_sha256": "c8235597b7840f6f33c050d17bc4a3ba42df91462df21807d57a031ef84acd73",
+  "review_verdict": "CORRECT_SCOPED_NOT_FRESH",
+  "predecessor_review_sources": [
+    {
+      "source": "verifications/c01.md",
+      "sha256": "7455f802127e2e3b94500e1cc624252fafcef12e5e06583cabb5200822779417"
+    },
+    {
+      "source": "verifications/c03.md",
+      "sha256": "a929519bf8acf24cc96ca2750d967b50bf40bde63da34bb6a87757870c1d8343"
+    }
+  ],
+  "exports": [
+    {
+      "source": "c01/proof04.md",
+      "source_sha256": "a06f0b8b4d713f22f4dcb6b81b9ae6bbe6ccd43d17a9ec645cade81ea160bc12",
+      "export": "THEOREM.md",
+      "export_sha256": "38ca94b8c7bc122ee63dab66555bcd6e296da7c4b55cc5133bfadf97839a5a6f",
+      "transformation": "status metadata and logical source-reference names only; full mathematical proof retained"
+    },
+    {
+      "source": "c01/statement04v2.md",
+      "source_sha256": "9c00dbc89fe038b39b983701e0ee07d537c2b7c41ba215bbfbe1f42a3a645f78",
+      "export": "STATEMENT.md",
+      "export_sha256": "6082de20ddf02c774eadcb0bf4280bfe77349e87de190f6bcdc8cf2e2134275c",
+      "transformation": "review-status metadata and source-reference names only"
+    },
+    {
+      "source": "c01/bridge04.md",
+      "source_sha256": "141e5ab92cf94b004eefb9addca7fe872b25ec44a6912fae921ae2f2e17a4abf",
+      "export": "BRIDGE.md",
+      "export_sha256": "8937b0ce4212f906d610fdc9f56f5ce8853f0e9c51a6346f8d108603ac63d3b5",
+      "transformation": "status metadata and source-reference names only; complete infinite bridge retained"
+    },
+    {
+      "source": "c01/compress03.md",
+      "source_sha256": "45e6d5c7c38fbae966b65bf96e8a628a7d0fbd63595007afa5bc7d4787cb2d2d",
+      "export": "CONVEX.md",
+      "export_sha256": "d86c1dc7a45bb4af811a043945d511e60a6612b50c3f4d1c556873a0ab4a517c",
+      "transformation": "complete mathematical lemma retained; obsolete probe/status commentary removed, source reference updated"
+    },
+    {
+      "source": "c01/proof03.md",
+      "source_sha256": "76aba2cedc83ff8140ed83875ef60b18873d4b608ce6901be8db61127c60571b",
+      "export": "CONSTRUCTION.md",
+      "export_sha256": "796eba5bb354e19232b46b78a694820eb8c687a3f8953e7603a7d1b5e4e07f62",
+      "transformation": "exact Sections 1--4 and complete Section 6 continuity paragraph excerpts; mass-transport source-reference name updated"
+    },
+    {
+      "source": "c01/proof02.md",
+      "source_sha256": "63436275ae443bb9a5467e14ae159f3f21b995b8f7fbd0fe6d83c9697c9bf5c0",
+      "export": "MTP.md",
+      "export_sha256": "e4f08649b8a12eebe7dbb38cfbfa7f3f59a064978678ae35ebbdbc6b69856196",
+      "transformation": "complete mass-transport proof excerpt; unrelated unit-WUSF/exit hypotheses and later sections omitted"
+    },
+    {
+      "source": "c01/barrier01.md",
+      "source_sha256": "41af01978cb72d698783ef9fc3bbf05ed6ed73c8af9195e97e7afee1c9e66a48",
+      "export": "history/UNIT.md",
+      "export_sha256": "1288f1863903ac4f3652b3d3a395151fa26d08aa5dcd6f8904564fe93c146935",
+      "transformation": "old pending-review/probe commentary removed; full method counterexample retained"
+    },
+    {
+      "source": "c01/grid256.json",
+      "source_sha256": "f0ca251a8639b5bb89c0d9e5d3c82b329ff76d5b4032f29470048e956afd45e1",
+      "export": "history/grid256.json",
+      "export_sha256": "79fafd334979fc79f2ac6e699eb550fbf4ef7b405094f11de44fbdbdc6d3c765",
+      "transformation": "byte-preserved historical arithmetic certificate or verifier"
+    },
+    {
+      "source": "c01/verifygrid01.py",
+      "source_sha256": "470576ab8ce4167a03ef8dc10efb842a1f6c62a1ffb861dcf436f64ef395273b",
+      "export": "history/verifygrid01.py",
+      "export_sha256": "470576ab8ce4167a03ef8dc10efb842a1f6c62a1ffb861dcf436f64ef395273b",
+      "transformation": "byte-preserved historical arithmetic certificate or verifier"
+    },
+    {
+      "source": "c01/grid06a1137q1000m16384upper.json",
+      "source_sha256": "6cc41b41a014324cdd1a33850e4b316fdb8c3a1f1d7c00b0bca4c574568368ff",
+      "export": "grid06a1137q1000m16384upper.json",
+      "export_sha256": "443cad8a819f27001b11d2cd37f2133a5c91ca4518b93ce04a862358400de6ac",
+      "transformation": "compact JSON; local warm-source path removed; all mathematical fields asserted equal"
+    },
+    {
+      "source": "c01/grid06b229q200m16384lower.json",
+      "source_sha256": "c4fb70236e8278f0194f7affcd23f30f5ad96c13415c356468552ad359e4a4da",
+      "export": "grid06b229q200m16384lower.json",
+      "export_sha256": "97dfca201e4100b3e5288e3aacd92b045b324d59acb5e32c03e04038df361de5",
+      "transformation": "compact JSON; local warm-source path removed; all mathematical fields asserted equal"
+    },
+    {
+      "source": "c01/grid06b229q200m16384upper.json",
+      "source_sha256": "51d4e86434485ffac57712fcdf2ad6db0c6fe17c10d8107a0e94f5e5eea500cc",
+      "export": "grid06b229q200m16384upper.json",
+      "export_sha256": "65d526adabf2f975c087c1b051b1f2716cb0878e92fb6362808a6bcde81e14e0",
+      "transformation": "compact JSON; local warm-source path removed; all mathematical fields asserted equal"
+    },
+    {
+      "source": "c01/grid06a1137q1000m16384upperstar128.json",
+      "source_sha256": "892756f45032fba5703cabcb3df02739390b116a318e89f805e8501ee42a0759",
+      "export": "grid06a1137q1000m16384upperstar128.json",
+      "export_sha256": "7d373455b689640e42222300e0d91b50247b3fdcb4da7864da55ba1ca741f7fa",
+      "transformation": "compact JSON; adjacent PMF source name and exported source hash only"
+    },
+    {
+      "source": "c01/grid06b229q200m16384lowerstar128.json",
+      "source_sha256": "a131562e47b1af5ba668aca6db1205256ae61536d3d7ae7c7df89ada1ea85bca",
+      "export": "grid06b229q200m16384lowerstar128.json",
+      "export_sha256": "29f7080e76040acaa9343daf6eeb9fa7720a285217ec0f1cb919f89476af4b4f",
+      "transformation": "compact JSON; adjacent PMF source name and exported source hash only"
+    },
+    {
+      "source": "c01/far04a1137q1000b229q200m16384k64.json",
+      "source_sha256": "b8b2ff06402083db8ba7355f070afb29664403f362c98d7a95bb8002861a2652",
+      "export": "far04a1137q1000b229q200m16384k64.json",
+      "export_sha256": "362edf170a2432e4da2085c051b8f75e691bc37a818c926222de465bacef20f7",
+      "transformation": "compact JSON; adjacent PMF source name and exported source hash only"
+    },
+    {
+      "source": "c01/verify05.py",
+      "source_sha256": "30b55b97ee6b2f80b8b063e2892e7e48f4baeb8128d03ca8c5f5804099e401bb",
+      "export": "verify05.py",
+      "export_sha256": "114ac74a074333a257a5b9d58e6a1fa1a78417b7ab7f0fdadd22cd452339ba4f",
+      "transformation": "arithmetic unchanged; emitted source basename / adjacent-file source resolution only"
+    },
+    {
+      "source": "c01/post05.py",
+      "source_sha256": "028e90a9bd708a7704b3b20af652f2d6493b31568176d162dd88bc7e84395017",
+      "export": "post05.py",
+      "export_sha256": "452bcbf2bce2caab882838db122023d2ec771a80f596c6e7509c9430b00762d2",
+      "transformation": "arithmetic unchanged; emitted source basename / adjacent-file source resolution only"
+    },
+    {
+      "source": "c01/far04.py",
+      "source_sha256": "4592ddb17356c0be074258b93c634bfb003c54bc2c608fe969bc7dc2b8ee96d5",
+      "export": "far04.py",
+      "export_sha256": "108556aee9e04e03f8b3c3ac82741b631fa829a461de51d32f35c41944371d6d",
+      "transformation": "arithmetic unchanged; emitted source basename / adjacent-file source resolution only"
+    },
+    {
+      "source": "c01/farverify04.py",
+      "source_sha256": "111684093df4074cda6ea47a4697614d0cf83800c69e501b4944737e7133b6b6",
+      "export": "farverify04.py",
+      "export_sha256": "b8fe63a8b5b74e9c3a866ddbe9a07034ea665cd7d6b407b6da425b809038c2f8",
+      "transformation": "arithmetic unchanged; emitted source basename / adjacent-file source resolution only"
+    },
+    {
+      "source": "c01/far04check.py",
+      "source_sha256": "94702e52c59bba5174be2397d70255b6dd1a0c77b853b7688313518347bfa639",
+      "export": "far04check.py",
+      "export_sha256": "94702e52c59bba5174be2397d70255b6dd1a0c77b853b7688313518347bfa639",
+      "transformation": "arithmetic unchanged; emitted source basename / adjacent-file source resolution only"
+    },
+    {
+      "source": "root/c04circuit.py",
+      "source_sha256": "4014ad3cb218f5df5b46ef050153d6a1b43d242620fa3fb49f15e342af870432",
+      "export": "circuit01.py",
+      "export_sha256": "4014ad3cb218f5df5b46ef050153d6a1b43d242620fa3fb49f15e342af870432",
+      "transformation": "byte-preserved independently authored symbolic finite-network checker"
+    },
+    {
+      "source": "root/c04circuit.json",
+      "source_sha256": "1cf4042bbd6be929c8d923bf73529cd47200d314d44b0d9ae8dd1b71d80218b0",
+      "export": "checks/circuit01.json",
+      "export_sha256": "553161186106025cdb3faa3af42a014e567d2edd892a51a3988b82ad1e4c5487",
+      "transformation": "byte-preserved actual symbolic checker receipt"
+    },
+    {
+      "source": "c01/far04check.json",
+      "source_sha256": "d6e2600a60cc5efb83e86063c6d1ffa85c05d1269f2fc1f25964e736e0f74a42",
+      "export": "far04check.json",
+      "export_sha256": "7c0ede689c5055690cef8b0430d755afa013883e02c37cbf47c48edc67301d37",
+      "transformation": "byte-preserved exact polynomial identity receipt"
+    },
+    {
+      "source": "verifications/rootc04a.json",
+      "source_sha256": "2120a41b460c3293088c3df349a7d5d477e8bae6833a61810c2ca30ab6ba150f",
+      "export": "checks/rootc04a.json",
+      "export_sha256": "bcd321d7c4e80ac3c9b9f619c8ae788e5b2718eaa3575e5c5889a7b834089b50",
+      "transformation": "compact reviewer receipt; portable source provenance; duplicate next-PMF payload omitted with semantic digest"
+    },
+    {
+      "source": "verifications/rootc04blo.json",
+      "source_sha256": "f9336f61beca8d91cf8563ac6a2ed872049d6f32999335cd754e9b772cac63fc",
+      "export": "checks/rootc04blo.json",
+      "export_sha256": "44672c1dffaa53702969bf587e9e714da0691c1cb017baf24bf54633ea286978",
+      "transformation": "compact reviewer receipt; portable source provenance; duplicate next-PMF payload omitted with semantic digest"
+    },
+    {
+      "source": "verifications/rootc04bhi.json",
+      "source_sha256": "de327e2c735c3b2980a041e5f3e879d602d18c2b02c2fce0a371b5f82b70a9ec",
+      "export": "checks/rootc04bhi.json",
+      "export_sha256": "838c4e12b9af737498568ff076c43c49addd5bf99dddd5191a119e9eb4b09d15",
+      "transformation": "compact reviewer receipt; portable source provenance; duplicate next-PMF payload omitted with semantic digest"
+    },
+    {
+      "source": "verifications/rootc04starlo.json",
+      "source_sha256": "7867f4706dbed56b4bbaae8248a04dec7b6742f2ea0f40cc909a9dee55ebacce",
+      "export": "checks/rootc04starlo.json",
+      "export_sha256": "c64800f47835e5e9943a271f9596248e72b45ed3a1ade94ba1cb08c185fb3962",
+      "transformation": "compact reviewer receipt; portable source provenance; duplicate next-PMF payload omitted with semantic digest"
+    },
+    {
+      "source": "verifications/rootc04starhi.json",
+      "source_sha256": "7877134d1c50ecdca93a5b3da6fe64b71da0fc00b02457e3a879fbd18417445b",
+      "export": "checks/rootc04starhi.json",
+      "export_sha256": "55678d695be720fd21614bdccc3441707c81572ff296fc8483abf86c833900de",
+      "transformation": "compact reviewer receipt; portable source provenance; duplicate next-PMF payload omitted with semantic digest"
+    },
+    {
+      "source": "verifications/rootc04far.json",
+      "source_sha256": "9ef8349ff0cc35b8b6244eef06f83d47ef8b568eb417b13762bb5c25d2c42858",
+      "export": "checks/rootc04far.json",
+      "export_sha256": "e4dd6eaaa2946fccc3e356b8669a49b2ea2df839477c91636765ed2ac749ea4d",
+      "transformation": "compact reviewer receipt; portable source provenance; duplicate next-PMF payload omitted with semantic digest"
+    },
+    {
+      "source": "verifications/c04.md",
+      "source_sha256": "c8235597b7840f6f33c050d17bc4a3ba42df91462df21807d57a031ef84acd73",
+      "export": "REVIEW.md",
+      "export_sha256": "d2778a4ec6315cc01e112be222571fcf0fe5be1d1a9847d876c465c97195c53e",
+      "transformation": "complete scoped mathematical review retained; reviewer label and portable evidence/source names only"
+    }
+  ],
+  "generated": [
+    {
+      "export": "README.md",
+      "sha256": "cbb3ccc1434c5eb1ada7772f26023975e254c183fed9db6080862ef481ecad77",
+      "kind": "new navigation or presentation metadata only"
+    },
+    {
+      "export": "RUN.md",
+      "sha256": "121965ce42383b6043f7e3821658d957375bbf6e66b4b76615f6209f8cbbbfb7",
+      "kind": "new navigation or presentation metadata only"
+    },
+    {
+      "export": "DIFF.json",
+      "sha256": "f5002b5323dbe7ed21ce495173e573c12f995c82a686ac275c6b1cf31a660423",
+      "kind": "new navigation or presentation metadata only"
+    },
+    {
+      "export": "checks/porta.json",
+      "sha256": "841447c8403edc3ff8e12853a81d66ff617044d6dcfe381777bec196b586cedd",
+      "kind": "actual portable finite-check receipt"
+    },
+    {
+      "export": "checks/portblo.json",
+      "sha256": "80405f5b9b47294cbfaf1d7668d0c9630047bac592f0fe119e96becbb9fa24a9",
+      "kind": "actual portable finite-check receipt"
+    },
+    {
+      "export": "checks/portbhi.json",
+      "sha256": "bc0380582bbb8ad7bf5b0112baa97de1565135c0cb0a14627aa07f1381c35d34",
+      "kind": "actual portable finite-check receipt"
+    },
+    {
+      "export": "checks/portstarlo.json",
+      "sha256": "8f8246c9a174e731cc3bb21a69e4ee983d674622e114e833b31d7a2a334aac97",
+      "kind": "actual portable finite-check receipt"
+    },
+    {
+      "export": "checks/portstarhi.json",
+      "sha256": "97ae95b65307fedd37953d7a1ff1bca9f88c0b76af0b45b8011631bc449ac716",
+      "kind": "actual portable finite-check receipt"
+    },
+    {
+      "export": "checks/portfar.json",
+      "sha256": "1a34b6ca65c75e4fccfeb4f0a9c39abed6c4a9b33c7ae61981d56521a803b4e3",
+      "kind": "actual portable finite-check receipt"
+    },
+    {
+      "export": "PORTABLE.json",
+      "sha256": "f87ad386072004fd20c977a4657a31ffaeac66f96281d1a959b4a9389ddee975",
+      "kind": "new navigation or presentation metadata only"
+    }
+  ],
+  "mathematical_semantic_checks": "all PMF core fields equal; circuit/star arithmetic fields equal; code differences enumerated in DIFF.json",
+  "not_claimed": [
+    "all star roots excluded",
+    "original endpoint problem solved",
+    "iid construction",
+    "new mathematical proof",
+    "fresh blind review",
+    "formalization",
+    "novelty"
+  ],
+  "root_export_review": "Source/output hashes and full mathematical text correspondence checked; all code changes are listed in DIFF.json; PMF numerical fields unchanged. Source proofs and all finite certificates were already fully reviewed and executed. Portable reruns are recorded separately.",
+  "final_presentation_cleanup": "Trailing Markdown whitespace and text LF normalization only; THEOREM historical manifest label now points to portable SOURCE.json. Mathematical values and program operations unchanged."
+}
