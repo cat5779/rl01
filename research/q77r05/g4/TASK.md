@@ -1,0 +1,7 @@
+# Q77 r05 G4: a universal W-indexed DPP factor via Brownian posteriors
+
+Your previous concrete BS(2,3) task has ended. This is a new independent mathematical task, with a broader FROZEN statement; no earlier success establishes it.
+
+Let W be any countable set, Gamma any countable group acting on W by permutations, and Q any Hermitian positive contraction on l2(W) commuting with this action. Prove or disprove that P^Q is the image of product Lebesgue measure on [0,1]^W under a TOTAL Borel Gamma-equivariant map to {0,1}^W. No freeness, finite orbit count, commensurated stabilizer, prescribed locally finite graph, amenability, soficity, propagation bound, or spectral gap may be added. The source is W-indexed, not regular Gamma-indexed. Do not assert finitary coding, a Bernoulli isomorphism, or novelty.
+
+Investigate the attached self-contained seed: replace graph balls by radius-n balls in the threshold graph |Q(x,y)|>=1/n, use independence across kernel-support components, then the Brownian posterior construction. Try first to break the canonical exhaustion, full observation posterior, all-input measurable drift, and independent innovations. The final result must be an end-to-end proof of this exact general statement, or an exact obstruction. Include all finite-tilt algebra at singular endpoints, component independence, right-continuous filtration issues, causal Picard construction and the same-noise limit. A finite-dimensional sampler or an a.s. posterior alone is insufficient.
