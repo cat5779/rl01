@@ -39,7 +39,7 @@
     },
     {
       "file": "REVIEW.md",
-      "sha256": "7a6fd5ce45fe69544e9d7d80bd8b2e846bba5eb6c99792908217a57a6066e133",
+      "sha256": "e637ae29069b4e8db69e215579adb95530def8259ce0916542cda65e7b2a254b",
       "source_sha256": []
     },
     {
@@ -50,5 +50,7 @@
       "sha256": "f87563ec607fa1ec340c6a1e26769c013437eb987ed9a16e97be09eedcad209e"
     }
   ],
-  "current_scope": "Central infinite cyclic subgroup; product cases retained only as source predecessors"
+  "current_scope": "Central infinite cyclic subgroup; product cases retained only as source predecessors",
+  "presentation_review_sha256": "0f7e0814f45fe53e8a8fb481e7f3a0b4f0faa0f51cf11a138521881dbcc02a73",
+  "central_extension_review_sha256": "1910ba665b7cba7b74e2a7e575f7cdd2e3d46ac99c8e1b3da532040d9211a163"
 }
