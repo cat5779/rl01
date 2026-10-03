@@ -1,0 +1,54 @@
+{
+  "description": "Current mathematical presentation, incorporating the explicitly recorded corrections; hashes preserve source lineage.",
+  "files": [
+    {
+      "file": "GENERAL.md",
+      "sha256": "0363827a7865440450a9be9b2b28545582fed769d9e47a4f4b23587aee313b80",
+      "source_sha256": [
+        "521092d8370cea5a7e6f9e6036a3b7b8d443c24898581275d7ab67cf54173ade",
+        "142fe4a1a730447b2b1d03407ce839879c3a0552812abc6501c6c6b54d9cf298"
+      ]
+    },
+    {
+      "file": "LOCAL.md",
+      "sha256": "98f5f2ea5d790384081983718303f28d5a7226fba70e3fd62a907243dbd82fb5",
+      "source_sha256": [
+        "971163cf9560dac00f75115056582a2b095c1407c8670721399f763d41ed4806",
+        "115dd5e10b945c12ffa468975f39dc6bff1ca39e700462a8e1195f24fe086779",
+        "0a06cc7f5e37d090d710fe5429368f9ac7bfc1fde8c49bec36eccbfcadf90cdd"
+      ]
+    },
+    {
+      "file": "FOURIER.md",
+      "sha256": "c4dbfa60aaaab4e098dc293c1045f020d723c4ee379fe328eeac93db032a75bc",
+      "source_sha256": [
+        "89f4a27e5e5e8b1f33a7cbe7d35effcfa7c5e15d77575004db012e3faf8c1b53"
+      ]
+    },
+    {
+      "file": "SAMPLER.md",
+      "sha256": "e0e4663b02944cf51782af9c839693831d4f5fafb6aca416f4361c994712538c",
+      "source_sha256": [
+        "6cf5a6a5ff254dad90763f2bd5ac7c5ced63f9f9d744bcb2965e472977c658a0"
+      ]
+    },
+    {
+      "file": "README.md",
+      "sha256": "adc5a57d835be4b0cc463457a144c7ea11dc291d19122d7f8b0c69555d776b44",
+      "source_sha256": []
+    },
+    {
+      "file": "REVIEW.md",
+      "sha256": "7a6fd5ce45fe69544e9d7d80bd8b2e846bba5eb6c99792908217a57a6066e133",
+      "source_sha256": []
+    },
+    {
+      "file": "CENTER.md",
+      "source_sha256": [
+        "2d4806115e03f8a568945911b42e23c10db934732dd1523a995d461d767f776c"
+      ],
+      "sha256": "f87563ec607fa1ec340c6a1e26769c013437eb987ed9a16e97be09eedcad209e"
+    }
+  ],
+  "current_scope": "Central infinite cyclic subgroup; product cases retained only as source predecessors"
+}
