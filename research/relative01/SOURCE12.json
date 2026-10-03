@@ -1,0 +1,38 @@
+{
+  "current_scope": "Any countable group with an infinite-order element; constructed increments and weighted-small backgrounds",
+  "proof_source_sha256": "dd1fba05fa0cbe6dfd78d43e3263e2306e4f3754b3dae99b2094d7a2eed94f5d",
+  "statement_source_sha256": "bcb52e4e45939d40ebc0d1b3724cc0a030bee8dca781aff6fda48e045c45a7e4",
+  "review_source_sha256": "4f68943e2397fe1f59563dae1775c837ffdd1a6ec3b8f2f354d9f11f1e55a9ca",
+  "transformation": "Proof body retained in full; introductory workflow metadata replaced, local source labels made reader-facing. Earlier CENTER mathematics unchanged.",
+  "files": [
+    {
+      "file": "CYCLIC.md",
+      "sha256": "a76728729744b5d10e952dfb3f777eb762730b8ba42e6b266c38afd2256dc65e"
+    },
+    {
+      "file": "REVIEW12.md",
+      "sha256": "2e6a6daa2e8adb086785ea33f65f1511a5c68ea77831ddaf1493f7d73683c753"
+    },
+    {
+      "file": "README.md",
+      "sha256": "85e990052f60516640b9cdff8640feb8bf2010472c90165dcec569ccb9aff712"
+    },
+    {
+      "file": "CHECK12.py",
+      "sha256": "42c63cb0dc52f593dc8c75c46662eeeebc5340bcb7e123a73851be8b47137039"
+    },
+    {
+      "file": "CHECK12.json",
+      "sha256": "c7e3c6c083302f8c1daf4b275551c7e6798b66f8a08c0acc70013f4c95a34a5f"
+    }
+  ],
+  "not_claimed": [
+    "general JO",
+    "all backgrounds/increments",
+    "all groups",
+    "preassigned metric moments",
+    "composed moments",
+    "novelty",
+    "fresh review"
+  ]
+}
