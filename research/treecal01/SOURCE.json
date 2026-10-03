@@ -67,7 +67,7 @@
       "source": "c01/grid256.json",
       "source_sha256": "f0ca251a8639b5bb89c0d9e5d3c82b329ff76d5b4032f29470048e956afd45e1",
       "export": "history/grid256.json",
-      "export_sha256": "f0ca251a8639b5bb89c0d9e5d3c82b329ff76d5b4032f29470048e956afd45e1",
+      "export_sha256": "79fafd334979fc79f2ac6e699eb550fbf4ef7b405094f11de44fbdbdc6d3c765",
       "transformation": "byte-preserved historical arithmetic certificate or verifier"
     },
     {
@@ -165,14 +165,14 @@
       "source": "root/c04circuit.json",
       "source_sha256": "1cf4042bbd6be929c8d923bf73529cd47200d314d44b0d9ae8dd1b71d80218b0",
       "export": "checks/circuit01.json",
-      "export_sha256": "1cf4042bbd6be929c8d923bf73529cd47200d314d44b0d9ae8dd1b71d80218b0",
+      "export_sha256": "553161186106025cdb3faa3af42a014e567d2edd892a51a3988b82ad1e4c5487",
       "transformation": "byte-preserved actual symbolic checker receipt"
     },
     {
       "source": "c01/far04check.json",
       "source_sha256": "d6e2600a60cc5efb83e86063c6d1ffa85c05d1269f2fc1f25964e736e0f74a42",
       "export": "far04check.json",
-      "export_sha256": "d6e2600a60cc5efb83e86063c6d1ffa85c05d1269f2fc1f25964e736e0f74a42",
+      "export_sha256": "7c0ede689c5055690cef8b0430d755afa013883e02c37cbf47c48edc67301d37",
       "transformation": "byte-preserved exact polynomial identity receipt"
     },
     {
@@ -243,32 +243,32 @@
     },
     {
       "export": "checks/porta.json",
-      "sha256": "5a99e6545f79f0e86d731dae04013b57f814bd7949ec87d5712d274840f762e6",
+      "sha256": "841447c8403edc3ff8e12853a81d66ff617044d6dcfe381777bec196b586cedd",
       "kind": "actual portable finite-check receipt"
     },
     {
       "export": "checks/portblo.json",
-      "sha256": "1a28529b66ac0653c85d1e6453da5e1bb91b99cb22b5547219b1ed276a8e65a1",
+      "sha256": "80405f5b9b47294cbfaf1d7668d0c9630047bac592f0fe119e96becbb9fa24a9",
       "kind": "actual portable finite-check receipt"
     },
     {
       "export": "checks/portbhi.json",
-      "sha256": "dbb3a0d198792730864809a57477d074458be7dabbcbd283a7a66e7c27b01523",
+      "sha256": "bc0380582bbb8ad7bf5b0112baa97de1565135c0cb0a14627aa07f1381c35d34",
       "kind": "actual portable finite-check receipt"
     },
     {
       "export": "checks/portstarlo.json",
-      "sha256": "a42b67809ca35e72a6e04140d8e43f19305a46494a415ce3b5270b9a7b01c5d9",
+      "sha256": "8f8246c9a174e731cc3bb21a69e4ee983d674622e114e833b31d7a2a334aac97",
       "kind": "actual portable finite-check receipt"
     },
     {
       "export": "checks/portstarhi.json",
-      "sha256": "9734050e9476d0a435dcf45351a3a5fe4e29d3c5307543425c59bb5327017555",
+      "sha256": "97ae95b65307fedd37953d7a1ff1bca9f88c0b76af0b45b8011631bc449ac716",
       "kind": "actual portable finite-check receipt"
     },
     {
       "export": "checks/portfar.json",
-      "sha256": "fbe1f801679dd3456a7a0fcc731db2caf6b34830bd03569d3871769446deb166",
+      "sha256": "1a34b6ca65c75e4fccfeb4f0a9c39abed6c4a9b33c7ae61981d56521a803b4e3",
       "kind": "actual portable finite-check receipt"
     },
     {
@@ -288,5 +288,5 @@
     "novelty"
   ],
   "root_export_review": "Source/output hashes and full mathematical text correspondence checked; all code changes are listed in DIFF.json; PMF numerical fields unchanged. Source proofs and all finite certificates were already fully reviewed and executed. Portable reruns are recorded separately.",
-  "final_presentation_cleanup": "Trailing Markdown whitespace only; THEOREM historical manifest label now points to portable SOURCE.json."
+  "final_presentation_cleanup": "Trailing Markdown whitespace and text LF normalization only; THEOREM historical manifest label now points to portable SOURCE.json. Mathematical values and program operations unchanged."
 }
