@@ -1,0 +1,27 @@
+{
+  "description": "Presentation exports of fixed-projector proof, required correction, topology supplement and quantum method boundary. Source hashes preserve the derivation lineage; mathematical scope is recorded in REVIEW03.md.",
+  "files": [
+    {
+      "file": "PROOF03.md",
+      "sha256": "8d955f89fc680d8d02a4259b90866f6bf13be5d54998e2986478fab3383e82a6",
+      "source_sha256": "72828635f83a535e70d796916d4771e1907aeeff3215e5a3e98e727344f06b6f",
+      "correction_source_sha256": "044e64c3f37a36116336680819a22d45ff99a20ad312f8cb6c9f7ecaddd65f3c"
+    },
+    {
+      "file": "ERRATUM03.md",
+      "sha256": "8d938c6e0f1222b87489ce47b0f84bc4ef0dc786a936bbf16bd9b8e0ebb37b43",
+      "source_sha256": "044e64c3f37a36116336680819a22d45ff99a20ad312f8cb6c9f7ecaddd65f3c"
+    },
+    {
+      "file": "TOPOLOGY03.md",
+      "sha256": "f247219b93845bae08ad43332a3e6854eedbb1126d7419d752e5d4a276fa6744",
+      "source_sha256": "b6359236321a8be345cd24d9045327315ecac8daf1e1523683ebbd5965a499fc"
+    },
+    {
+      "file": "METHOD03.md",
+      "sha256": "74e00ae7c8d79fe63d1384dbce71f4a130427845733631bc36df9f011eddf661",
+      "source_sha256": "513a0435e24eb50f643a4ce1d979bedf413da712bd7533e145fb2a396ced19c4",
+      "statement_source_sha256": "ce3600ee0a6b02da314135c705d6ee327958a01f72d0261b93737efa235d603a"
+    }
+  ]
+}
