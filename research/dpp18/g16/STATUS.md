@@ -12,7 +12,7 @@ Date: 2026-10-03. General finite consistency: **OPEN / INCOMPLETE**.
 
 The new fixed-P argument fills the missing weighted repair and variational estimates in Continuation 02. Its complete-current derivative is counted at both endpoints only after combining both differentiated factors. The old split-term justification is not retained in the current proof.
 
-The original packet's bounded-component result is handled separately in the G17 record. Its exact three-input optimization and other structural claims are not promoted by this update. They remain candidates unless a separate scoped review says otherwise.
+The exact three-input task now has a separately reviewed complete proof in [RL01 PR126](https://github.com/cat5779/rl01/pull/126): pair optimum 48 eta/21 and simultaneous optimum 52 eta/21, uniformly on 0 < eta <= 1/10 for the full fibers. The ratio 13/12 is a bounded failure of pairwise optimum gluing, not a disproof of a dimension-independent selector. The original packet's bounded-component result is handled separately in the G17 record; other structural claims retain their individual review status.
 
 The unresolved target is a single rule with dimension-free exponent-one control for arbitrary commuting inputs with varying rank-one projectors, equivalently the simultaneous finite-list statement in TASK.md. Pairwise repairs, fixed-P Holder continuity, and a fixed-E topological argument do not close that target.
 

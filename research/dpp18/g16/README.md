@@ -17,6 +17,7 @@ for all finite E and epsilon-gapped kernels commuting with the same rank-one P. 
 2. [TOPOLOGY03.md](TOPOLOGY03.md): continuity of the same rule across projector-support changes when E is fixed. Its constants depend on E.
 3. [METHOD03.md](METHOD03.md): a quantum positive-overlap obstruction, general quantum endpoint trace comparison, and a scalar example showing why the obstruction does not refute positive selection.
 4. [REVIEW03.md](REVIEW03.md): the checked scope and the remaining gaps in the original derivation.
+5. [Exact three-input gap, RL01 PR126](https://github.com/cat5779/rl01/pull/126): the returned full-fiber proof and two independent exact checks establish the bounded ratio 13/12. Read this as a separate finite obstruction to pairwise optimum gluing.
 
 The earlier [REVIEW02.md](REVIEW02.md) separately checks the fixed-P full-fiber l1 repair with constant 4/epsilon. The new weighted repair is needed because l1 control alone does not control energy under small edge weights.
 
