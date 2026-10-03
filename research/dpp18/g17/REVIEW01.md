@@ -4,7 +4,7 @@
 
 This file records an adversarial re-review of `RESULT.md`. It is **not an
 independent external referee report**: the proof and this review were produced
-within the same ChatGPT research session. The review intentionally re-derived
+within the same research session. The review intentionally re-derived
 the vulnerable steps and attempted to falsify the argument, but it cannot rule
 out correlated model error. No formal verification or novelty certification is
 claimed.
