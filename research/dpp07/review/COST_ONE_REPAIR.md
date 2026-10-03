@@ -1,0 +1,13 @@
+# A cost-one relative forest repair lemma
+
+STATUS: STANDARD COROLLARY; one independent scope review CORRECT. This is a proposed consequence of standard cost compression, not a novelty claim.
+
+Let R be an aperiodic countable probability-measure-preserving equivalence relation on a standard nonatomic probability space (X,mu), with C(R)=1, and let S be an aperiodic subrelation. For every eta>0 there is a countable graphing Phi with C_mu(Phi)<eta and S join R_Phi = R modulo null sets.
+
+Choose an S-complete Borel set A of measure 0<mu(A)<eta/2 using the small complete-section theorem for aperiodic pmp relations. It is R-complete. The complete-section compression identity, using unnormalized restricted measure, gives C_mu(R restricted to A)=C_mu(R)-1+mu(A)=mu(A). Choose a graphing Phi on A generating the full R restricted to A, of cost less than mu(A)+eta/2. If x R y, use S to move x,y to points a,b in A; then a R b, so a and b are connected by Phi. Thus S and Phi generate R. The unnormalized complete-section compression identity holds without ergodicity; the accompanying review reconstructs that argument and the relative input interface.
+
+Application target: Gamma=F2 x F2 with its standard Cayley graph. Let F have its FUSF law, all components infinite, and U be fresh regular iid continuous labels. On X=(F,U) the Gamma action is essentially free and pmp. The known fixed-price-one theorem for this product group gives C(R)=1 for this action; alternatively use an explicit commuting-generator small-section cost construction. Let S be the forest-component subrelation. Its classes are infinite, so S is aperiodic. Apply the lemma.
+
+Every partial isomorphism in Phi has graph in R and can be partitioned over the countably many group elements. Interpret these pieces as undirected edges in each Gamma orbit. Freeness identifies an orbit with Gamma. The resulting map A(F,U) is Borel and equivariant on an invariant conull Borel set, F union A is connected there, and half the expected degree of A outside F is at most C_mu(Phi)<eta. The inequality allows duplicates and edges already in F to be discarded. On the invariant exceptional input set take A empty, obtaining a total Borel everywhere equivariant map. No finite coding radius, uniformity in eta, or continuous/local construction is claimed.
+
+If valid this settles the fixed-price-one benchmark existentially with arbitrary long edges and relative iid input. It does not prove a general LG bound: it already assumes ambient action cost one. For general R the same calculation only yields relative additional cost at most C(R)-1, which need not vanish and is exactly zero here because of the pre-existing fixed-price result.
