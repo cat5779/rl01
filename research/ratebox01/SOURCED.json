@@ -1,0 +1,140 @@
+{
+  "format": "source-presentation-correspondence-v1",
+  "package": "dynamic boundary supplement",
+  "intended_destination": "research/ratebox01",
+  "relation": "Supplement to the existing ratebox01 manuscript, not a separate main frontier claim.",
+  "source_review_mode": "complete different-author scoped reviews in reused contexts; not fresh, formal, external, or novelty certification",
+  "export_review": "PASS_SCOPED_SOURCE_CORRESPONDENCE_NOT_FRESH",
+  "sources": [
+    {
+      "path": "b01/statement09.md",
+      "sha256": "19f8716ed6720beab40c77dc5ac021069f7f3ea9e0f9ef6f08598f8cbe61d85c"
+    },
+    {
+      "path": "b01/proof09.md",
+      "sha256": "57cfb1c84667a7de480f4569fa1eb4baba48ef39df9f34b6c0ee227122419542"
+    },
+    {
+      "path": "b01/statement10.md",
+      "sha256": "f5f0684cca040915bfad176922be0e706b19545d19dc33d52fe3b8726b15a5c8"
+    },
+    {
+      "path": "b01/proof10.md",
+      "sha256": "d60c3c82217021fbad947f677930c1bd5c204715fab6358cdb1cdfe6d37b9069"
+    },
+    {
+      "path": "b01/statement04.md",
+      "sha256": "90602da998b90c7d2c291d57ebb612db64fe6388455ec50b623608683249b283"
+    },
+    {
+      "path": "b01/proof04.md",
+      "sha256": "3be9965d06b23b8c3a75e0ccf70c18925a914173586e8734bc7a48da4be12e4c"
+    },
+    {
+      "path": "root/kernel11.md",
+      "sha256": "c15c542b50bc41ddb03386c5588a707d1e477f0f02535331e17449451d6d6433"
+    },
+    {
+      "path": "verifications/b10.md",
+      "sha256": "545d67a7dd5bf95484e63120d1991332c076f35e93faa4360f52b67709552641"
+    },
+    {
+      "path": "verifications/k11.md",
+      "sha256": "1e7dede340a20301b8b7f15053f070223ecf646bd276be57a4976d4896bda016"
+    },
+    {
+      "path": "verifications/b04.md",
+      "sha256": "310dce624f13c620451b079c8430fbae4a0b2695067d45b97e85782db373206d"
+    }
+  ],
+  "presentations": [
+    {
+      "path": "DYNAMIC.md",
+      "sha256": "f6a5fd2d44c11ada174d819b805cd1e927d059a657132af4950e113d6824cee9",
+      "bytes": 23009,
+      "original_export_sha256": "f6a5fd2d44c11ada174d819b805cd1e927d059a657132af4950e113d6824cee9"
+    },
+    {
+      "path": "KERNEL.md",
+      "sha256": "b6025dbc9312d9970df737a2803c9f1c13342aa44f85bc2e8b5563654bcf0eb8",
+      "bytes": 2983,
+      "original_export_sha256": "b6025dbc9312d9970df737a2803c9f1c13342aa44f85bc2e8b5563654bcf0eb8"
+    },
+    {
+      "path": "MEAN.md",
+      "sha256": "dca6530596599f1899afc522dfcdb9026962f1d894c9de500c44f33d3a6f0885",
+      "bytes": 9190,
+      "original_export_sha256": "bd62f65b99baeb2fd94ce123a8b5d2751b2743373b8e732fc3e8a08d24e14faa"
+    },
+    {
+      "path": "REVIEWD.md",
+      "sha256": "b0c7790c69a051153d0f5eb128f007e045e39871cdc0aa7d7d1127f9a7f194d1",
+      "bytes": 8009,
+      "original_export_sha256": "1535949e999ea55a42bf489ad40bad2f857e078a6e2726085080aca56ff1ef8f"
+    }
+  ],
+  "transformations": [
+    {
+      "output": "DYNAMIC.md",
+      "inputs": [
+        "b01/proof09.md",
+        "b01/proof10.md"
+      ],
+      "kept": "Every mathematical bridge in proof09 Sections1-3 and all proof10 Sections1-7; explicit field definitions and conclusion prepended.",
+      "changes": "Removed author-run status and historical source codes, replaced source references with RESULT.md/MEAN.md/KERNEL.md; kept the one-output scope and all missing interfaces."
+    },
+    {
+      "output": "KERNEL.md",
+      "inputs": [
+        "root/kernel11.md"
+      ],
+      "kept": "Complete frozen mathematical statement, necessity and sufficiency proofs, and every scope limitation.",
+      "changes": "Only author-candidate status and R09 links replaced by reviewed scope and RESULT.md AppendixB references."
+    },
+    {
+      "output": "MEAN.md",
+      "inputs": [
+        "b01/proof04.md"
+      ],
+      "kept": "Complete Sections1-4: Osgood pathwise uniqueness, conditional-copy product-noise compatibility, Dirac extraction, law uniqueness, invariance, and total equivariant version.",
+      "changes": "Explicit bounded-rate specialization c<=M; compatible completion linked to RESULT.md AppendixA; omitted unrelated later examples and source-run status. No conclusion strengthened."
+    },
+    {
+      "output": "REVIEWD.md",
+      "inputs": [
+        "verifications/b10.md",
+        "verifications/k11.md",
+        "verifications/b04.md"
+      ],
+      "kept": "Full dynamic/kernel review mathematics, exact scope, reuse disclosure, and source hashes.",
+      "changes": "Display names and links normalized; bounded mean-source review separately identified; export audit remains pending."
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "RESULT.md",
+      "sha256": "ee17453bf051cd4013eedda82a3a9ed620873cbd499850313c3d38a895a7b67c",
+      "role": "Existing ratebox01 criterion, version-linked ordinary G9 weak input in Section1, full bounded Poisson completion in AppendixA, and static boundary in AppendixB.",
+      "local_export": "Not copied or changed; files are to be installed beside this existing manuscript."
+    }
+  ],
+  "scope": {
+    "accepted_source": "Exact single-orbit DPP field; conditional clearing; failure of finite-box sufficient hypotheses; ambient-a.e continuous Borel version of one root endpoint conditional kernel.",
+    "unresolved": [
+      "Relative finitarity of this actual joint process",
+      "All-initial weak uniqueness",
+      "Assembly of one-coordinate conditional draws into the prescribed joint law",
+      "General nonamenable prescribed-generator invariant weak existence"
+    ],
+    "no_claims": [
+      "General B00 solution",
+      "Counterexample to general B00",
+      "Whole-process conclusion from finite-output kernel criterion",
+      "Priority",
+      "External acceptance",
+      "Full probability formalization"
+    ]
+  },
+  "export_review_sha256": "9051f5db9ca1c71712f76ce961d694b6b9a4bf7e80b60e3be2a99652ed5ab6e7",
+  "final_cleanup": "LF and trailing Markdown whitespace normalization; final receipt appended. No mathematical change."
+}

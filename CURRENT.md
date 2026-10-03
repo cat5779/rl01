@@ -4,6 +4,19 @@
 
 H 允许任意可数指标集 W 与可数群的置换作用，并使用 W-indexed iid。C、D、F、JF、JO 以下默认可数群的正则作用、复 Hermitian 正压缩核；不能把 W 源自动替换成正则群源，也不能把固定核构造提升成跨核共同构造。
 
+## 四条小理论线的当前阅读入口
+
+下列材料按当前已审范围排列，包含三输入、率盒、循环方向与树校准的正文及补充。先读当前正文与范围审查；旧正确 PDF 和先前版本继续由 [ARCHIVE](ARCHIVE.md) 保留，不作为首页首读。内部不同作者范围审查不等于 fresh 验证、完整形式化、外部认证或新颖性认证。
+
+| 分线 | 当前已审内容与入口 | 未闭合范围 |
+|---|---|---|
+| 三输入正流一致性 | [完整十二边 fiber 精确证明](research/flow3exact01/RESULT.md)、[审查与两套精确检查](research/flow3exact01/REVIEW.md)：每个 0<η≤1/10，pairwise optimum 为 48η/21，三输入 simultaneous optimum 为 52η/21，比例 13/12 | 只排除同时实现全部 pairwise optima；不否定一般稳定选择器，也不给无界常数下界。固定 P 的新完整 Hölder 证明另在开放的 [#123](https://github.com/cat5779/rl01/pull/123) |
+| 有限率盒与非局部出生过程 | [当前英文稿](research/ratebox01/RESULT.md)、[范围审查](research/ratebox01/REVIEW.md)：有限盒宽度/Osgood 充分准则及每个 countably infinite G×C2 的全群依赖例；Appendix B 的两类型静态环境分离 mean Osgood 与 relative finitarity。另读[动态补充](research/ratebox01/DYNAMIC.md)、[单输出核准则](research/ratebox01/KERNEL.md)、[补充范围审查](research/ratebox01/REVIEWD.md) | 动态补充只证明同一 single-orbit 场的 finite-box 方法失败、单根终点核有全空间 a.e. 连续版本；没有推出该完整 joint process finitary，也没有构造一般 B00 反例 |
+| 无限阶方向上的相对 DPP 过程 | [CYCLIC 当前构造](research/relative01/CYCLIC.md)、[总入口与审查](research/relative01/README.md)：任意含无限阶元素的可数群，包括 F2；无需该元素 central 或其循环子群 normal。构造增量和 weighted-small finite background，得到 whole-path relative finitary，构造 proper metric 下 relative query/radius 一阶矩有限；另给初始 sampler 可合成 joint iid finitary | 不含任意群、任意增量、任意大背景、预先指定 metric 或合成编码矩。中央循环前身及 optional noncommuting 例见 [历史索引](ARCHIVE.md)，不声称新核逐个包含旧核 |
+| 临界簇商树的星校准与远边 | [当前定理与精确证书](research/treecal01/THEOREM.md)、[入口及范围](research/treecal01/README.md)：某参数位于 (1137/1000,229/200) 可匹配全部单顶点星，但整个区间的指定远边 vacancy 严格大于目标 5/48 | 只否定该 family 在该区间内由星校准推完整 WUSF law；不排除其它参数或构造，不解决原 invariant/joint iid endpoint |
+
+一般无界分量正选择器、任意 nonamenable 群给定 Borel 率的不变弱过程、原树端点和一般 exact JO 均保持开放。
+
 ## 主理论
 
 | 代号 | 当前已审结论 | 仍保留的边界 | 原稿与审查 |
@@ -36,19 +49,19 @@ r 与 s 固定的定理不能提升成随 r、s 增长一致的定理。较早�
 | 当前节点 | 已审结论 | 剩余接口 |
 |---|---|---|
 | Ordinary weak | 在所列可测、连续性及平均活动假设下存在 countable pure-birth prescribed-marginal realization；[抽象证明](research/dpp12/g14/RESULT.md)、[审查](research/dpp12/g14/REVIEW01.md) | 没有不变性、唯一性或强噪声因子 |
-| DPP weak superposition | ordinary weak 与 countable amenable invariant weak 已审；[完整17页原稿](research/dpp10/g9/RESULT.pdf)、[正文](research/dpp10/g9/RESULT.md)、[独立范围审查](research/dpp10/g9/REVIEW.md) | 任意非 amenable 不变弱实现仍需 local fixed-point 存在；强提取需要额外 causal joint product-Poisson 与 AL，尚未由一般 DPP 率推出 |
+| DPP weak superposition | ordinary weak 与 countable amenable invariant weak 已审；[正文](research/dpp10/g9/RESULT.md)、[独立范围审查](research/dpp10/g9/REVIEW.md)；旧 PDF 从 ARCHIVE 阅读 | 任意非 amenable 不变弱实现仍需 local fixed-point 存在；强提取需要额外 causal joint product-Poisson 与 AL，尚未由一般 DPP 率推出 |
 | Complete endpoint reduction | global invariant weak 当且仅当沿 mesh→0 分割可独立选择 local dynamically admissible invariant endpoint laws；无需 refinement compatibility；[完整证明](research/dpp15/g13/RESULT.md)、[审查](research/dpp15/g13/REVIEW.md) | 这是等价约化，没有证明任意群的 local endpoints 存在 |
 | Residually finite quotient criterion | 在商解、局部 DPP／生成元收敛、截断尾及 UI 的明确假设下可取商极限；[证明](research/dpp16/g13/RESULT.md)、[审查](research/dpp16/g13/REVIEW.md) | 不提供所需商解或一般不变存在性 |
 | Fixed finite-range Harris theorem | 对一套固定、uniformly bounded、finite-range covariant rates，共同独立 PRM 在一个好事件上覆盖全部初态；路径唯一、柱 forward equation 唯一、精确 DPP 边缘；[证明](research/dpp17/g13/RESULT.md)、[完整范围审查](research/dpp17/g13/REVIEW.md) | 无界／非局部、跨逼近共同噪声闭合和一般 JO 均没有由此解决 |
 
 ## 当前开放入口
 
-以下链接固定到本次审计 head；未把它们合入已审结果目录。
+以下是仍开放的原目标或候选入口。#123 的已审子结论与未审旧续稿分开记账；其当前 head 已更新。
 
 - [#97](https://github.com/cat5779/rl01/pull/97)：C3*C3 true threshold p₋=1/2 的 invariant endpoint／joint iid。已审无限 branching、两条路径障碍及 LP 等价；未审独立窗口证书不计入。 [冻结证据](https://github.com/cat5779/rl01/blob/d7306c4bf0e5354137eb20dc8ef1c74952a1b3bf/research/dpp08/g2/REVIEW.md)；head `d7306c4bf0e5354137eb20dc8ef1c74952a1b3bf`。
 - [#102](https://github.com/cat5779/rl01/pull/102)：一般 R1b 任意支撑目标任务。受限子路线未解决这个全目标。 [冻结证据](https://github.com/cat5779/rl01/blob/1c6abe9c973c0678ef2bee7d1d177cb23f7e0a4c/research/dpp11/g11/TASK.md)；head `1c6abe9c973c0678ef2bee7d1d177cb23f7e0a4c`。
 - [#122](https://github.com/cat5779/rl01/pull/122)：G15 endpoint-capacity attack，PARTIAL。独立审查仅认证已有范围；新 all-dimensional energy／Hessian 推导没有整证明接受。 [冻结证据](https://github.com/cat5779/rl01/blob/e5be923236f109968a1acc8a46115744c3e6a57c/research/dpp18/g15/REVIEW02.md)；head `e5be923236f109968a1acc8a46115744c3e6a57c`。
-- [#123](https://github.com/cat5779/rl01/pull/123)：G16 commuting finite consistency，OPEN。仅 continuation §1 的 fixed-P 完整正 fiber repair（4/ε）新获主审；其余续稿仍候选。 [冻结证据](https://github.com/cat5779/rl01/blob/b279b112c9bc4b25c7827dd7fb4ae9dc445ae214/research/dpp18/g16/REVIEW02.md)；head `b279b112c9bc4b25c7827dd7fb4ae9dc445ae214`。
+- [#123](https://github.com/cat5779/rl01/pull/123)：G16 commuting finite consistency 的一般目标仍 OPEN。固定同一 rank-one P 的 weighted-energy 规则已有完整、维数及支撑无关的 1/2-Hölder 界 10ε^−3/2；[当前 PROOF03](https://github.com/cat5779/rl01/blob/42c850b3de8239277c899bfca0604e9e4eb13d60/research/dpp18/g16/PROOF03.md)须合读[完整电流计数勘误](https://github.com/cat5779/rl01/blob/42c850b3de8239277c899bfca0604e9e4eb13d60/research/dpp18/g16/ERRATUM03.md)、[范围审查](https://github.com/cat5779/rl01/blob/42c850b3de8239277c899bfca0604e9e4eb13d60/research/dpp18/g16/REVIEW03.md)。固定有限 E 时跨支撑变化的连续性另已补齐；变化 P 的 dimension-free exponent-one 目标仍未解决。旧 continuation 其余主张不自动通过；head 42c850b3de8239277c899bfca0604e9e4eb13d60。
 
 ## 高对比度熵与连通性
 

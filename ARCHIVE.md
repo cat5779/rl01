@@ -98,3 +98,9 @@
 ## 保留原则
 
 未把历史分支整树合回 main，以免携带旧顶层状态或把候选稿呈现成当前定理。所有冻结 head 都可恢复完整 Git tree；机器索引的 changed files 只是精确与 main-base 的差异清单，不冒充整树清单。#73–78 的独立 ICM 问题包不属于这次 DPP 整理。
+
+## 2026-10-03 小理论前身与伴随材料
+
+当前相对过程入口是 [CYCLIC](research/relative01/CYCLIC.md)：环境群只需含无限阶元素。[CENTER](research/relative01/CENTER.md) 保留先前中央循环构造及其可选非交换背景例；它作为伴随与方法史保存，不再作为该线首读。新旧构造的具体核不同，范围扩展不表示逐个核的字面包含。Z、乘积群等前身按同一证明家族理解，不累计成独立主问题的解决。
+
+外包回传 tools [#150](https://github.com/randomcat4/dpp-entropy-tools/pull/150) 已保全到该库标签 `archive/dpp20261003/pr150`，原证明逐字收入本库 [#126](https://github.com/cat5779/rl01/pull/126) 并合并。旧 tools #148 继续是归档镜像；fixed-P 当前完整 Hölder 证明及勘误从本库 [#123](https://github.com/cat5779/rl01/pull/123) 阅读。原 continuation 的其余主张没有随此升级接受。

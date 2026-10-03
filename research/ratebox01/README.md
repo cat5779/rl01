@@ -6,6 +6,8 @@ Read [RESULT.md](RESULT.md) as one current manuscript. It contains:
 2. An exact diagonal-DPP rate family on every countably infinite G x C2, with essential dependence on every off-root coordinate and a whole-path finite certificate.
 3. A separate two-free-orbit static-environment example satisfying all-coupling Osgood mean continuity but admitting no relative finite endpoint certificate from the supplied initial configuration.
 
+A current [dynamic boundary supplement](DYNAMIC.md) makes the static environment active on one regular orbit. The exact finite-box method still fails, yet the one-root endpoint conditional kernel has a full-space almost-everywhere continuous version. This removes that specific static obstruction without proving finitarity of the full joint process. [MEAN.md](MEAN.md) supplies the bounded Osgood strong-extraction interface, [KERNEL.md](KERNEL.md) the one-output criterion, and [REVIEWD.md](REVIEWD.md) the scope checks.
+
 The theorem does not infer finite-box control from mean disagreement control. Its initial ordinary weak theorem is an explicit, version-linked input. It does not settle invariant weak existence for arbitrary Borel rates on a nonamenable regular group. The examples have elementary iid marginal laws; their prescribed dynamics are the subject.
 
 Earlier partial formulations are represented only in the manuscript's source table. [REVIEW.md](REVIEW.md) records current coverage; [SOURCE.json](SOURCE.json) records the preserved source and presentation hash. This remains a research draft without external referee acceptance, complete formalization, or a priority claim.
