@@ -10190,7 +10190,7 @@
       "branch": "q77r04g5",
       "recommendation": "close_superseded",
       "proof_review_level": "AUTHOR_CANDIDATE_FINITARY_UNREVIEWED",
-      "reason": "Finite-query all-completions certificates are stronger than H. Retire this unreviewed historical candidate at its complete frozen head, not by claiming H covers it. An independently reviewed same-scope successor is recorded in a separate library; its proof and audits have not been published in this public repository, so this entry does not certify the old manuscript.",
+      "reason": "Finite-query all-completions certificates are stronger than H. Retire this unreviewed historical candidate at its complete frozen head, not by claiming H covers or certifies its stronger assertion.",
       "successors": [],
       "archive_ref": "archive/dpp20261003/pr83",
       "evidence_files": [

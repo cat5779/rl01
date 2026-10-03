@@ -17,8 +17,6 @@ H 允许任意可数指标集 W 与可数群的置换作用，并使用 W-indexe
 | JF | 每个固定 Q 从一个正则 iid 输入同时产生 Bern(FK(Q))⊆DPP(Q)，全输入 Borel 等变；FK=0 使用 H | 上端由 complement 单独得到；没有自动形成三层 sandwich、grand coupling 或 true p₋ 的 endpoint 因子 | [入口](research/dpp07/g1/README.md)、[修正版证明](research/dpp07/g1/proof03.md)、[冻结修正版审查1](research/dpp07/g1/REVIEW02.md)、[审查2](research/dpp07/g1/REVIEW03.md) |
 | JO | 当 B−A 属于 reduced group C* algebra 且 B−A≥δI>0 时，存在精确 ordered joint iid；允许奇异端点 | 任意有序核对的 exact joint iid 仍开放；η>0 的近最优相对转移不能直接令 η=0 | [核心 §2–3](research/dpp07/g5/CORE.md)、[限定范围审查](research/dpp07/g5/REVIEW02.md) |
 
-有限自由标签 Γ×S、双侧谱隙下的 finite-site／all-completions 证书有独立后继记录；其全文与审查未在本公开库发布。公开旧 [#83](https://github.com/cat5779/rl01/pull/83) 仍按历史候选保全，本页不以 H 或未公开后继认证旧稿。
-
 ## R1b：正流选择器
 
 原目标是非对角、有隙核、任意 rank-one 支撑上的单一 Borel、置换等变、正的 capacitated birth-flow 选择器，稳定常数不依赖维数或支撑大小。这个目标仍开放。
