@@ -1,0 +1,18 @@
+{
+  "source_sha256": "632375bfb75e8602a504f1c29ba1624fa3d74decf46b02c2f89860e146562218",
+  "source_role": "Current assembled manuscript, kept byte-frozen before two presentation clarifications",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "14fa8f7875189666259b1d32624629fc5a72cacce1aa35ef9329a34de836cab0"
+    },
+    {
+      "file": "RESULT.md",
+      "sha256": "ee17453bf051cd4013eedda82a3a9ed620873cbd499850313c3d38a895a7b67c"
+    },
+    {
+      "file": "REVIEW.md",
+      "sha256": "560dd7860b9e9fa3fc1b687cfa478e5ef41387c2af734ae0a944736fde4f543c"
+    }
+  ]
+}
