@@ -1,0 +1,10 @@
+# Sources and the scope of comparison
+
+This is a targeted source check, not a comprehensive novelty determination.
+
+- Lyons, *Determinantal probability: basic properties and conjectures*, [Theorem 2.9](https://rdlyons.pages.iu.edu/pdf/icm-pub.pdf), supplies stochastic domination from Hermitian operator order. This is the finite determinantal input to the relative transition; it does not supply an equivariant relative sampler.
+- Lyons–Thom, [Invariant coupling of determinantal measures on sofic groups](https://arxiv.org/abs/1402.0969), establishes invariant ordered couplings under its sofic hypotheses and separates that result from its Bernoulli-factor question. Those are distinct output requirements.
+- Decreusefond–Moroz, [Optimal transport between determinantal point processes and application to fast simulation](https://arxiv.org/abs/2011.00822), studies transport distances and simulation, including spectral comparison arguments. Its transport results are relevant prior methods; an arbitrary-group equivariant relative-iid conclusion must be proved separately. Version and theorem numbering must be checked against the published manuscript before quoting a specific bound.
+- Boccato–Pieroni–Trevisan, [On Distances Among Slater Determinant States and Determinantal Point Processes](https://doi.org/10.1007/s00023-026-01658-3), Proposition 4.1 and Theorem 4.4, give finite-rank and trace-class DPP distance comparisons. The stated hypotheses involve summable eigenvalues and the costs concern total variation or symmetric difference. These statements do not provide the present fixed-kernel relative equivariant sampler on an infinite regular group orbit. This scope comparison is not an audit of all proofs in that paper.
+
+Finite stochastic domination, conditional determinantal kernels, graphical constructions, and coupling estimates are established tools. The precise combination and its quantitative relative interface require a wider priority search before any originality claim. Current novelty status: UNKNOWN.
