@@ -1,0 +1,350 @@
+{
+  "purpose": "Neutral DPP status handoff for Euler and Claude; no route ranking or new mathematical certification",
+  "checked_at": "2026-10-04T01:08:25.764866+08:00",
+  "timezone": "Asia/Singapore",
+  "repository_main_snapshots": {
+    "cat5779/rl01": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+    "randomcat4/dpp-entropy-concavity": "4b472a7798ec320afbf5235c3fc976fbb1694d09"
+  },
+  "brief": {
+    "path": "STATUS.md",
+    "sha256": "a009d5caee5590d83d71229287ee351ce3df053061f4524e5fe8226cd2adbb2e",
+    "bytes": 17964
+  },
+  "return_slot": {
+    "path": "RETURN.md",
+    "status": "EMPTY_PLACEHOLDER",
+    "bytes": 0,
+    "counted_as_output": false
+  },
+  "sources": [
+    {
+      "repo": "cat5779/rl01",
+      "commit": "42c850b3de8239277c899bfca0604e9e4eb13d60",
+      "path": "research/dpp18/g16/ERRATUM03.md",
+      "sha256": "8d938c6e0f1222b87489ce47b0f84bc4ef0dc786a936bbf16bd9b8e0ebb37b43",
+      "bytes": 1864,
+      "url": "https://github.com/cat5779/rl01/blob/42c850b3de8239277c899bfca0604e9e4eb13d60/research/dpp18/g16/ERRATUM03.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "42c850b3de8239277c899bfca0604e9e4eb13d60",
+      "path": "research/dpp18/g16/PROOF03.md",
+      "sha256": "8d955f89fc680d8d02a4259b90866f6bf13be5d54998e2986478fab3383e82a6",
+      "bytes": 12984,
+      "url": "https://github.com/cat5779/rl01/blob/42c850b3de8239277c899bfca0604e9e4eb13d60/research/dpp18/g16/PROOF03.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "42c850b3de8239277c899bfca0604e9e4eb13d60",
+      "path": "research/dpp18/g16/REVIEW03.md",
+      "sha256": "4268411ec04b53c838badc0e75a88e0bb297e0c43df4e3cc69401706f1a26ce5",
+      "bytes": 4171,
+      "url": "https://github.com/cat5779/rl01/blob/42c850b3de8239277c899bfca0604e9e4eb13d60/research/dpp18/g16/REVIEW03.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "CURRENT.md",
+      "sha256": "4664101071916be88d9605ea6719b2f70bbf5b4fd0413534f0b5f25f39e9527e",
+      "bytes": 13775,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/CURRENT.md",
+      "role": "existing_inventory_not_reaudited_in_this_brief"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/dpp07/g5/CORE.md",
+      "sha256": "d5e7503aeccc6b4052e0ccc08fddc6db2cfdec3221b3281a29f733716e2055f0",
+      "bytes": 14102,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/dpp07/g5/CORE.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/dpp07/g5/REVIEW02.md",
+      "sha256": "88b1d52c9ba0e17ab89f5836754a3489bcc917d5b907a5f0f6353490d1525078",
+      "bytes": 12096,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/dpp07/g5/REVIEW02.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/flow3exact01/RESULT.md",
+      "sha256": "4ea24639b2fa8a21eb0b34e010730e28a11cc656f5d92a5b9be8bc0bfca34b78",
+      "bytes": 7390,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/flow3exact01/RESULT.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/flow3exact01/REVIEW.md",
+      "sha256": "6c535a9dc2ceb955bfc055da8374b1fe7fdbdf8f35972f1003bc609a6f7f626b",
+      "bytes": 2379,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/flow3exact01/REVIEW.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/ratebox01/DYNAMIC.md",
+      "sha256": "f6a5fd2d44c11ada174d819b805cd1e927d059a657132af4950e113d6824cee9",
+      "bytes": 23009,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/ratebox01/DYNAMIC.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/ratebox01/KERNEL.md",
+      "sha256": "b6025dbc9312d9970df737a2803c9f1c13342aa44f85bc2e8b5563654bcf0eb8",
+      "bytes": 2983,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/ratebox01/KERNEL.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/ratebox01/MEAN.md",
+      "sha256": "dca6530596599f1899afc522dfcdb9026962f1d894c9de500c44f33d3a6f0885",
+      "bytes": 9190,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/ratebox01/MEAN.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/ratebox01/RESULT.md",
+      "sha256": "ee17453bf051cd4013eedda82a3a9ed620873cbd499850313c3d38a895a7b67c",
+      "bytes": 35321,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/ratebox01/RESULT.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/ratebox01/REVIEW.md",
+      "sha256": "560dd7860b9e9fa3fc1b687cfa478e5ef41387c2af734ae0a944736fde4f543c",
+      "bytes": 2006,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/ratebox01/REVIEW.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/ratebox01/REVIEWD.md",
+      "sha256": "b0c7790c69a051153d0f5eb128f007e045e39871cdc0aa7d7d1127f9a7f194d1",
+      "bytes": 8009,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/ratebox01/REVIEWD.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/relative01/CYCLIC.md",
+      "sha256": "a76728729744b5d10e952dfb3f777eb762730b8ba42e6b266c38afd2256dc65e",
+      "bytes": 10650,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/relative01/CYCLIC.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/relative01/README.md",
+      "sha256": "85e990052f60516640b9cdff8640feb8bf2010472c90165dcec569ccb9aff712",
+      "bytes": 1976,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/relative01/README.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/relative01/REVIEW12.md",
+      "sha256": "2e6a6daa2e8adb086785ea33f65f1511a5c68ea77831ddaf1493f7d73683c753",
+      "bytes": 11543,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/relative01/REVIEW12.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/treecal01/README.md",
+      "sha256": "cbb3ccc1434c5eb1ada7772f26023975e254c183fed9db6080862ef481ecad77",
+      "bytes": 2145,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/treecal01/README.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/treecal01/REVIEW.md",
+      "sha256": "d2778a4ec6315cc01e112be222571fcf0fe5be1d1a9847d876c465c97195c53e",
+      "bytes": 5440,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/treecal01/REVIEW.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "cat5779/rl01",
+      "commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+      "path": "research/treecal01/THEOREM.md",
+      "sha256": "38ca94b8c7bc122ee63dab66555bcd6e296da7c4b55cc5133bfadf97839a5a6f",
+      "bytes": 15731,
+      "url": "https://github.com/cat5779/rl01/blob/5cf4acc2d6e85d06d03384e597ead893b9e465fc/research/treecal01/THEOREM.md",
+      "role": "mathematical_source_or_scope_review"
+    },
+    {
+      "repo": "randomcat4/dpp-entropy-concavity",
+      "commit": "4b472a7798ec320afbf5235c3fc976fbb1694d09",
+      "path": "CURRENT.md",
+      "sha256": "386f0a7ce05d677328cfaaaffa7407ce42048d7efce475ba0c997d29d140eabf",
+      "bytes": 4964,
+      "url": "https://github.com/randomcat4/dpp-entropy-concavity/blob/4b472a7798ec320afbf5235c3fc976fbb1694d09/CURRENT.md",
+      "role": "existing_inventory_not_reaudited_in_this_brief"
+    },
+    {
+      "repo": "randomcat4/dpp-entropy-concavity",
+      "commit": "4b472a7798ec320afbf5235c3fc976fbb1694d09",
+      "path": "MAP.md",
+      "sha256": "20ea2d33a894b52afe497cac6690053a3b7674322f5673032aff9554ebc6833d",
+      "bytes": 7667,
+      "url": "https://github.com/randomcat4/dpp-entropy-concavity/blob/4b472a7798ec320afbf5235c3fc976fbb1694d09/MAP.md",
+      "role": "existing_inventory_not_reaudited_in_this_brief"
+    }
+  ],
+  "pull_request_status_snapshot": [
+    {
+      "headRefOid": "42c850b3de8239277c899bfca0604e9e4eb13d60",
+      "isDraft": true,
+      "mergeCommit": null,
+      "number": 123,
+      "state": "OPEN",
+      "url": "https://github.com/cat5779/rl01/pull/123"
+    },
+    {
+      "headRefOid": "7e75b3faa617ac8954a7ec3224da7328667f2311",
+      "isDraft": false,
+      "mergeCommit": {
+        "oid": "21c406babe0687473522e3c893667e583e3666d6"
+      },
+      "number": 126,
+      "state": "MERGED",
+      "url": "https://github.com/cat5779/rl01/pull/126"
+    },
+    {
+      "headRefOid": "6dcb008d94549277d7b96a762fc508368924699b",
+      "isDraft": true,
+      "mergeCommit": null,
+      "number": 127,
+      "state": "OPEN",
+      "url": "https://github.com/cat5779/rl01/pull/127",
+      "reply_status": "TASK_ONLY_NO_RETURN_COMMENTS_OR_REVIEWS"
+    },
+    {
+      "headRefOid": "b9ac15b1811e7540b10303fecd09cae4117fb006",
+      "isDraft": true,
+      "mergeCommit": null,
+      "number": 128,
+      "state": "OPEN",
+      "url": "https://github.com/cat5779/rl01/pull/128",
+      "reply_status": "TASK_ONLY_NO_RETURN_COMMENTS_OR_REVIEWS"
+    },
+    {
+      "headRefOid": "10fa7651718530e16708bb8f96f234c3ec506262",
+      "isDraft": false,
+      "mergeCommit": {
+        "oid": "3a4c7a0b78b8fe4acd0bf51a5e44ac3de7646c47"
+      },
+      "number": 129,
+      "state": "MERGED",
+      "url": "https://github.com/cat5779/rl01/pull/129"
+    },
+    {
+      "headRefOid": "49180497d121ce57475983e138d1283485f3cea8",
+      "isDraft": false,
+      "mergeCommit": {
+        "oid": "9f12f9a14c66efb3e1d7279f0be6e0cfb26d7d2b"
+      },
+      "number": 130,
+      "state": "MERGED",
+      "url": "https://github.com/cat5779/rl01/pull/130"
+    },
+    {
+      "headRefOid": "2a530db0050b5eb7f6730d33969d41e1d7399fdf",
+      "isDraft": false,
+      "mergeCommit": {
+        "oid": "64a99402eed28c8a8995f00ce63e9e7480833498"
+      },
+      "number": 131,
+      "state": "MERGED",
+      "url": "https://github.com/cat5779/rl01/pull/131"
+    },
+    {
+      "headRefOid": "c8332197540559fd168088b8e98ae1e4bdef78fd",
+      "isDraft": false,
+      "mergeCommit": {
+        "oid": "b922d48c52db7e89a931a012e75c06f9af8cfd00"
+      },
+      "number": 132,
+      "state": "MERGED",
+      "url": "https://github.com/cat5779/rl01/pull/132"
+    },
+    {
+      "headRefOid": "4deb9c69bbc156ba65d55ae882e1be2387280951",
+      "isDraft": false,
+      "mergeCommit": {
+        "oid": "5cf4acc2d6e85d06d03384e597ead893b9e465fc"
+      },
+      "number": 133,
+      "state": "MERGED",
+      "url": "https://github.com/cat5779/rl01/pull/133"
+    },
+    {
+      "headRefOid": "0aeb7e68c574d9b8f3dcf386d7d912aff2dc26db",
+      "isDraft": true,
+      "number": 148,
+      "state": "CLOSED",
+      "url": "https://github.com/randomcat4/dpp-entropy-tools/pull/148"
+    },
+    {
+      "headRefOid": "15edc060e32c04d3cd08438ca05905737013ebd0",
+      "isDraft": true,
+      "number": 150,
+      "state": "CLOSED",
+      "url": "https://github.com/randomcat4/dpp-entropy-tools/pull/150"
+    }
+  ],
+  "review_scope": "Source and scope consistency for a decision brief; existing scoped reviews inherited, no fresh mathematical review or novelty certification",
+  "mirror": {
+    "source_pr": "https://github.com/randomcat4/dpp-entropy-concavity/pull/13",
+    "source_commit": "bb1b02fba22bd1fb147fc6abb2f4b5ccaf259f8a",
+    "source_brief_sha256": "db656078d1ad7ac23c3a19ec3913233e2674658a9f171e85d07a954064604185",
+    "source_manifest_sha256": "9c4e4606c4c42f43c501e61d72b81554a93eaad296e7e121649f16b25186a65d",
+    "created_at": "2026-10-04T01:17:37.442101+08:00",
+    "changes": [
+      {
+        "old": "供欧拉审阅。",
+        "new": "供欧拉与 Claude 审阅。"
+      },
+      {
+        "old": "[跨库总图](../../MAP.md)",
+        "new": "[跨库总图](https://github.com/randomcat4/dpp-entropy-concavity/blob/4b472a7798ec320afbf5235c3fc976fbb1694d09/MAP.md)"
+      },
+      {
+        "old": "## 请欧拉作出的判断",
+        "new": "## 请审阅者作出的判断"
+      },
+      {
+        "old": "不代表欧拉已回复、已认可本材料或作出了路线选择。",
+        "new": "不代表欧拉或 Claude 已回复、已认可本材料或作出了路线选择。"
+      }
+    ],
+    "mathematical_content_unchanged": true,
+    "source_snapshot_unchanged": true
+  }
+}
