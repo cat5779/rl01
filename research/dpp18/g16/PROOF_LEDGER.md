@@ -308,3 +308,7 @@ However the same scalar family admits a different explicit stable selector, so t
 ## Current certified conclusion
 
 The full commuting theorem remains open after all items above. The unresolved variable is genuinely global coherence when projectors vary, especially for delocalized directions with support increasing with dimension.
+
+## Scoped completion after the original ledger
+
+The fixed-P weighted-energy selector now has a scoped completion in [PROOF03.md](PROOF03.md), with its derivative correction incorporated and documented in [ERRATUM03.md](ERRATUM03.md). The bound is 10 epsilon^(-3/2) times the square root of trace distance. [TOPOLOGY03.md](TOPOLOGY03.md) separately supplies fixed-E support-degeneration continuity; [METHOD03.md](METHOD03.md) isolates a quantum residual-method obstruction without asserting selector nonexistence. [REVIEW03.md](REVIEW03.md) states the precise review coverage. The original general exponent-one varying-P conclusion remains open.

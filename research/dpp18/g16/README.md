@@ -1,72 +1,33 @@
-# DPP selector finite-consistency breakpoint archive
+# Commuting DPP positive selectors: current breakpoint
 
-Date: 2026-10-03
+The general varying-projector, dimension-free Lipschitz finite-consistency problem remains **OPEN / INCOMPLETE**. Its exact statement is [TASK.md](TASK.md).
 
-Primary source task: `cat5779/rl01#123`, **DPP R18 G16: finite-consistency attack**.
+The current fixed-projector conclusion is stronger than the original archive: one weighted-energy rule satisfies
 
-This directory is a handoff archive of the current mathematical breakpoint, the certified inputs inherited from earlier DPP selector work, and the exploratory routes checked during the 2026-10-03 continuation.
-
-## Status
-
-**OPEN / INCOMPLETE.**
-
-No proof or selector-independent disproof of the full commuting finite-consistency theorem is claimed here.
-
-The exact remaining target is:
-
-For every finite coordinate set (E), every (0<\varepsilon<1/2), and every finite list of commuting inputs
 \[
-x_a=(K_a,P_a),\qquad
-\varepsilon I\preceq K_a\preceq(1-\varepsilon)I,\quad
-P_a\text{ rank one},\quad K_aP_a=P_aK_a,
+\|\Psi_E(K,P)-\Psi_E(L,P)\|_1
+\le 10\varepsilon^{-3/2}\|K-L\|_{\rm tr}^{1/2}
 \]
-choose
-\[
-f_a\in\mathcal F_E(K_a,P_a)
-\]
-simultaneously so that
-\[
-\|f_a-f_b\|_1
-\le C_\varepsilon
-\bigl(\|K_a-K_b\|_1+\|P_a-P_b\|_1\bigr)
-\]
-for all (a,b), with (C_\varepsilon) independent of (|E|), the list length, and support size.
 
-By the certified compactness argument in `cat5779/rl01#119`, this finite-consistency property is equivalent, for each fixed (E), to a global Lipschitz selector; averaging over the finite permutation group then gives permutation equivariance without enlarging the constant.
+for all finite E and epsilon-gapped kernels commuting with the same rank-one P. The constant does not depend on E or the support of P. This is an exponent-one-half result with P fixed, not the exponent-one target with P varying.
 
-## What is preserved here
+## Read the current derivations
 
-- `PROOF_LEDGER.md`: certified theorem inventory and exact quantitative bounds.
-- `PROOF_EXTRACTS.md`: self-contained proof skeletons for the main reusable inputs.
-- `BREAKPOINT.md`: the current obstruction after all certified reductions.
-- `FAILED_ROUTES.md`: routes that are known insufficient or were analytically rejected in this continuation.
-- `NEXT_ATTACKS.md`: concrete next proof/disproof programs.
-- `SOURCE_MAP.md`: source PRs and files in `cat5779/rl01`.
-- `CONTINUATION_02_UNREVIEWED.md`: later candidate derivations, deliberately kept out of the certified proof ledger.
-- `REVIEW_REQUEST_CONTINUATION_02.md`: independent-audit checklist for those candidate derivations.
+1. [PROOF03.md](PROOF03.md): the complete weighted repair and two variational inequalities. It incorporates the complete-current derivative correction documented in [ERRATUM03.md](ERRATUM03.md).
+2. [TOPOLOGY03.md](TOPOLOGY03.md): continuity of the same rule across projector-support changes when E is fixed. Its constants depend on E.
+3. [METHOD03.md](METHOD03.md): a quantum positive-overlap obstruction, general quantum endpoint trace comparison, and a scalar example showing why the obstruction does not refute positive selection.
+4. [REVIEW03.md](REVIEW03.md): the checked scope and the remaining gaps in the original derivation.
 
-## Continuation 02 boundary
+The earlier [REVIEW02.md](REVIEW02.md) separately checks the fixed-P full-fiber l1 repair with constant 4/epsilon. The new weighted repair is needed because l1 control alone does not control energy under small edge weights.
 
-The second continuation contains candidate advances on:
+## What remains unresolved
 
-- full-fiber fixed-projector repair;
-- a globally coherent fixed-(P) weighted selector with a candidate (1/2)-Hölder modulus;
-- fixed bounded coordinate components;
-- an explicit three-input finite-family incompatibility;
-- structural obstructions to affine-in-(P) rules and unconstrained weighted currents.
+Changing P can destroy a common positive quantum substate even when the full quantum states are close. That defeats this particular residual method; it does not prove that the weighted optimizer, or every selector, is unstable. The scalar example has an explicit stable optimizer.
 
-These are **not independently reviewed**. The main verdict remains `OPEN / INCOMPLETE` until a separate audit promotes any individual statement.
+The main task remains simultaneous exponent-one control for arbitrary finite lists of commuting inputs with varying, potentially delocalized projectors. Neither a fixed finite incompatibility ratio nor an unstable arbitrary point in a fiber resolves it.
 
-## Important scope rule
+## Historical sources
 
-Several prior negative results concern a particular optimizer or the geometry of the full fiber. They are **not** selector-independent obstructions. In particular:
+[CONTINUATION_02_UNREVIEWED.md](CONTINUATION_02_UNREVIEWED.md) is preserved unchanged. Its fixed-P weighted proof omitted the central weighted-repair and variational steps; the new note supplies them. Other claims in that packet retain their individual review status in [STATUS.md](STATUS.md). The earlier [PROOF_LEDGER.md](PROOF_LEDGER.md), [PROOF_EXTRACTS.md](PROOF_EXTRACTS.md), and [SOURCE_MAP.md](SOURCE_MAP.md) record inherited results and provenance. Older attack plans are historical context rather than the current reading order.
 
-- failure of dimension-free Hausdorff stability of the entire positive fiber does not disprove a well-chosen selector;
-- failure of the global least-Euclidean-norm selector does not disprove a different selector;
-- negative entries of the explicit signed current do not imply failure of positive selection.
-
-Conversely, pairwise repairs are not enough: the frozen target requires one set of choices satisfying all pairwise bounds on every finite list.
-
-## Repository placement note
-
-The source task and its proof history live in `cat5779/rl01`. The active GitHub integration available in this session did not have branch-write access there (GitHub returned HTTP 403 on branch creation). This archive is therefore stored in `randomcat4/dpp-entropy-tools` as a preservation/handoff PR, with all original source locations explicitly recorded.
+The duplicate archive at `randomcat4/dpp-entropy-tools#148` has been closed after preservation. This RL01 directory is the current entry. These are scoped research derivations with local review, not external peer review, full formalization, or a novelty certification. The general problem is not marked solved.

@@ -1,76 +1,19 @@
-# Status
+# Current mathematical status
 
-Date: 2026-10-03
+Date: 2026-10-03. General finite consistency: **OPEN / INCOMPLETE**.
 
-Source task: `cat5779/rl01#123`.
+| Result | Scope | Evidence |
+|---|---|---|
+| Fixed-P full positive-fiber repair | l1 distance at most (4/epsilon)||K-L||_tr | REVIEW02.md |
+| Weighted-energy selector | fixed P, dimension-free exponent-one-half bound with constant 10 epsilon^(-3/2) | PROOF03.md, ERRATUM03.md, REVIEW03.md |
+| Support-degeneration continuity | the same rule on each fixed finite E; no dimension-free varying-P modulus | TOPOLOGY03.md, REVIEW03.md |
+| Quantum positive-overlap obstruction | at K=I/2 every distinct marked pair has maximal common positive mass 1/2; not a selector obstruction | METHOD03.md, REVIEW03.md |
+| Quantum endpoint trace comparison | dimension-free comparison for varying marked inputs; no coordinate-edge repair follows | METHOD03.md, REVIEW03.md |
 
-## Verdict
+The new fixed-P argument fills the missing weighted repair and variational estimates in Continuation 02. Its complete-current derivative is counted at both endpoints only after combining both differentiated factors. The old split-term justification is not retained in the current proof.
 
-**OPEN / INCOMPLETE.**
+The original packet's bounded-component result is handled separately in the G17 record. Its exact three-input optimization and other structural claims are not promoted by this update. They remain candidates unless a separate scoped review says otherwise.
 
-No `PROVED` or `DISPROVED` classification is supported.
+The unresolved target is a single rule with dimension-free exponent-one control for arbitrary commuting inputs with varying rank-one projectors, equivalently the simultaneous finite-list statement in TASK.md. Pairwise repairs, fixed-P Holder continuity, and a fixed-E topological argument do not close that target.
 
-## Certified inherited facts
-
-- explicit dimension-free Lipschitz signed endpoint current;
-- nonempty positive endpoint fibers dominated by (2J_+);
-- dimension-free fixed-projector endpoint-fiber repair;
-- complete scalar-complement selector;
-- complete diagonal selector;
-- complete canonical matching-block selector;
-- support reduction and bounded-support control;
-- finite-consistency/global-selector equivalence;
-- failure of full-fiber Hausdorff stability;
-- failure of the global least-Euclidean-norm selector.
-
-## Continuation 02 review status
-
-`CONTINUATION_02_UNREVIEWED.md` preserves the later derivations verbatim.
-Independent review in `REVIEW02.md` certifies one of them:
-
-- for fixed `P`, the full positive fibers have directed repair and symmetric
-  Hausdorff distance at most `(4/epsilon)||K-L||_1`.
-
-The following items remain candidates:
-
-- a globally coherent fixed-(P) weighted selector with a candidate dimension-free (1/2)-Hölder modulus;
-- the bounded-component derivation in this packet (a complete independent
-  proof is audited separately in PR #124);
-- a candidate exact three-input finite-family incompatibility;
-- candidate structural obstructions to affine-in-(P) rules and to unconstrained weighted currents;
-- a route-level obstruction to arbitrary low-energy repair under varying projectors.
-
-Except for the fixed-projector full-fiber repair just stated, these items remain
-outside `PROOF_LEDGER.md` pending the checks listed in
-`REVIEW_REQUEST_CONTINUATION_02.md`.
-
-## Current gap
-
-Global finite consistency for arbitrary commuting inputs with **varying, delocalized rank-one projectors** and exponent-one dimension-free Lipschitz control.
-
-## Best current positive subproblem
-
-After continuation 02, the most informative positive target is to upgrade a globally coherent nonlinear selector from fixed (P) to varying (P), and from a possible (1/2)-Hölder bound to a true Lipschitz bound.
-
-The previously isolated endpoint-capacity selector problem remains a sufficient route:
-\[
-\mathcal H(x)=
-\{f:\text{correct endpoint marginals},\ 0\le f\le2J_x^+\}.
-\]
-
-## Best current negative subproblem
-
-Construct a selector-independent finite-family obstruction whose required Lipschitz ratio diverges. A fixed non-unit finite-family incompatibility factor is informative but is not enough.
-
-## Archive integrity
-
-This directory intentionally distinguishes:
-
-- upstream audited results;
-- proof skeletons reconstructed from those results;
-- unreviewed candidate derivations;
-- logical reductions;
-- failed/insufficient routes;
-- future attacks.
-
-No live-session candidate is promoted to a certified result without an independent mathematical audit.
+The records establish only the stated local review coverage. No external peer review, full theorem formalization, or novelty certification is asserted. Original continuation bytes and inherited proof history remain preserved.
