@@ -1,0 +1,237 @@
+{
+  "status": "PASS_EXACT_POLYNOMIAL_AND_FULL_FIBER_DUAL_AUDIT",
+  "source_original_sha256": "4ea24639b2fa8a21eb0b34e010730e28a11cc656f5d92a5b9be8bc0bfca34b78",
+  "atoms": [
+    [
+      "1/8",
+      "0",
+      "-1/2"
+    ],
+    [
+      "1/8",
+      "-11/42",
+      "1/6"
+    ],
+    [
+      "1/8",
+      "-1/21",
+      "1/6"
+    ],
+    [
+      "1/8",
+      "-13/42",
+      "1/6"
+    ],
+    [
+      "1/8",
+      "13/42",
+      "1/6"
+    ],
+    [
+      "1/8",
+      "1/21",
+      "1/6"
+    ],
+    [
+      "1/8",
+      "11/42",
+      "1/6"
+    ],
+    [
+      "1/8",
+      "0",
+      "-1/2"
+    ]
+  ],
+  "divergences": [
+    [
+      "-1/4",
+      "0",
+      "1"
+    ],
+    [
+      "-1/12",
+      "11/21",
+      "-1"
+    ],
+    [
+      "-1/12",
+      "2/21",
+      "-1"
+    ],
+    [
+      "1/12",
+      "-13/21",
+      "1"
+    ],
+    [
+      "-1/12",
+      "-13/21",
+      "-1"
+    ],
+    [
+      "1/12",
+      "2/21",
+      "1"
+    ],
+    [
+      "1/12",
+      "11/21",
+      "1"
+    ],
+    [
+      "1/4",
+      "0",
+      "-1"
+    ]
+  ],
+  "pair_dual": [
+    "0",
+    "16/7"
+  ],
+  "pair_norm_eta_coefficient": "48/21",
+  "triple_upper_eta_coefficient": "52/21",
+  "triple_dual_each_eta_coefficient": "26/21",
+  "pair_saturated_support_rank": 4,
+  "rigid_pair_cycle_sum": "-6 eta/21 C",
+  "uniform_atom_lower": "79/840",
+  "uniform_outgoing_upper": "83/210",
+  "capacity_margin_lower": "3/40",
+  "triple_gradient_checks": [
+    {
+      "edge": [
+        0,
+        0
+      ],
+      "three_gradients": [
+        "1/3",
+        "-2/3",
+        "1/3"
+      ]
+    },
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "three_gradients": [
+        "1/3",
+        "1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "edge": [
+        0,
+        2
+      ],
+      "three_gradients": [
+        "-2/3",
+        "1/3",
+        "1/3"
+      ]
+    },
+    {
+      "edge": [
+        1,
+        1
+      ],
+      "three_gradients": [
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "edge": [
+        1,
+        2
+      ],
+      "three_gradients": [
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "edge": [
+        2,
+        0
+      ],
+      "three_gradients": [
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "edge": [
+        2,
+        2
+      ],
+      "three_gradients": [
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "edge": [
+        3,
+        2
+      ],
+      "three_gradients": [
+        "2/3",
+        "-1/3",
+        "-1/3"
+      ]
+    },
+    {
+      "edge": [
+        4,
+        0
+      ],
+      "three_gradients": [
+        "1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "edge": [
+        4,
+        1
+      ],
+      "three_gradients": [
+        "1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "edge": [
+        5,
+        1
+      ],
+      "three_gradients": [
+        "-1/3",
+        "-1/3",
+        "2/3"
+      ]
+    },
+    {
+      "edge": [
+        6,
+        0
+      ],
+      "three_gradients": [
+        "-1/3",
+        "2/3",
+        "-1/3"
+      ]
+    }
+  ],
+  "scope": "all eta in (0,1/10], arbitrary positive divergence fibers; no FC disproof",
+  "fresh_review": false,
+  "independent_of_root_review": true
+}

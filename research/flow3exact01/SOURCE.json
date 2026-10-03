@@ -1,0 +1,53 @@
+{
+  "return_url": "https://github.com/randomcat4/dpp-entropy-tools/pull/150",
+  "return_head": "15edc060e32c04d3cd08438ca05905737013ebd0",
+  "original_path": "research/rl01-pr126-resolution-20261003/RESULT.md",
+  "original_sha256": "4ea24639b2fa8a21eb0b34e010730e28a11cc656f5d92a5b9be8bc0bfca34b78",
+  "task_sha256": "c2453d328aabca1e9ecf7af782afc0828700c61d5130646a051b686845c5cc6b",
+  "reviews": [
+    {
+      "sha256": "38e967894a40dd106a78d743b30ddac5d88d2c0b228b2d44f55e7aceec822dee",
+      "role": "full proof plus independent symbolic reconstruction"
+    },
+    {
+      "sha256": "31deadec544897009ef94b9b15671dcc58d3da30c0c0189f39500e58522c0383",
+      "role": "independent full proof plus rational polynomial reconstruction"
+    }
+  ],
+  "files": [
+    {
+      "file": "CHECK.json",
+      "sha256": "2f783f457420520c260518a44c62638b3accb5c1eaf00621ffb627949eb7cf98"
+    },
+    {
+      "file": "CHECK.py",
+      "sha256": "85353a3b6185ab6e188e50a067ee6488e48eaadd41f94be124da5a9b449df179"
+    },
+    {
+      "file": "CHECK2.json",
+      "sha256": "0663c09c60172168cbe8c39d43f3257c2dcd7a9c39b49fc3db90d91f21c6448e"
+    },
+    {
+      "file": "CHECK2.py",
+      "sha256": "dad1b93a6ba849f23b744a0092a8e6dfda5ed10aae7e40d16c38f28d5435bc0b"
+    },
+    {
+      "file": "README.md",
+      "sha256": "27cc143fc1cb6900793678ddd4bf505a5390176b450633b691635f6a61882fb4"
+    },
+    {
+      "file": "RESULT.md",
+      "sha256": "4ea24639b2fa8a21eb0b34e010730e28a11cc656f5d92a5b9be8bc0bfca34b78"
+    },
+    {
+      "file": "REVIEW.md",
+      "sha256": "6c535a9dc2ceb955bfc055da8374b1fe7fdbdf8f35972f1003bc609a6f7f626b"
+    },
+    {
+      "file": "TASK.md",
+      "sha256": "c2453d328aabca1e9ecf7af782afc0828700c61d5130646a051b686845c5cc6b"
+    }
+  ],
+  "full_frontier_closed": false,
+  "novelty_certified": false
+}
