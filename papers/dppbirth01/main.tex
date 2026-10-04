@@ -1,0 +1,474 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\DPP}{\operatorname{DPP}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Pp}{\mathbb{P}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\cF}{\mathcal{F}}
+
+\title{From DPP Rate Equations to Finitary Birth Dynamics\\
+\large Weak laws, common-noise realizations, and finite certificates on countable groups}
+\author{Anonymous working draft}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Fix a time-indexed determinantal process and a covariant pure-birth rate field
+that satisfies its finite-cylinder continuity equations.  Several inequivalent
+realization questions arise: an ordinary weak law, an invariant weak law, a
+path determined by the supplied initial state and fresh Poisson noise, and a
+path whose individual coordinates admit finite certificates.  We keep these
+notions separate and give sufficient conditions for the stronger levels.
+
+Our main construction is a finite-rate-box criterion.  It controls the
+worst-case oscillation of the rate over finite lower--upper boxes by an Osgood
+modulus and yields a total equivariant relative realization with an almost
+sure finite arbitrary-completion certificate for every coordinate path.  A
+summable local-update hypothesis implies the rate-box criterion.  For
+time-dependent mixture weights, this implication requires an explicit
+integrable factorization of the mixture tails.  The direct local-update
+construction additionally gives first moments for the number and radius of
+relative queries.
+
+Examples separate the criteria.  A genuinely nonlocal diagonal-DPP rate field
+satisfies the rate-box condition but has no finite-mean local-neighborhood
+mixture.  A static two-orbit example has a causal strong realization but no
+relative finite certificate.  Finally, groups containing an infinite-order
+element admit a non-diagonal DPP family with a relative finitary realization
+and finite first query and radius moments in a constructed proper metric.
+These are sufficient theorems, not a solution of invariant weak existence for
+arbitrary Borel prescribed rates on nonamenable groups.
+\end{abstract}
+
+\section{Introduction}
+
+A finite-cylinder forward equation specifies how the desired marginals should
+move, but it does not specify how much randomness or locality is needed to
+realize that movement.  This distinction is particularly sharp for
+determinantal point processes (DPPs).  The same curve of DPP marginals may be
+realized only as a weak martingale law, may admit a common-noise construction,
+or may admit a finitary algorithm whose answer at one coordinate is certified
+after finitely many input labels have been exposed.
+
+This paper organizes these conclusions into a hierarchy.  Let a countable
+group $\Gamma$ act on a countable coordinate set $I$, let
+$\mu_t$ be an invariant curve on $\{0,1\}^I$, and let
+\[
+ a_i(t,x)=(1-x_i)c_i(t,x)
+\]
+be covariant pure-birth rates.  The finite-cylinder continuity equation is
+\begin{equation}
+ \mu_t(f)-\mu_0(f)
+ =\int_0^t\mu_s\!\left(\sum_i a_i(s,x)
+ [f(x^{i,1})-f(x)]\right)\,ds
+ \label{eq:ce}
+\end{equation}
+for every cylinder function $f$.  Equation~\eqref{eq:ce} is necessary for a
+prescribed-marginal dynamics, but it does not imply invariance, pathwise
+uniqueness, common-noise measurability, or finite certificates.
+
+The main result starts from an ordinary weak realization and adds a geometric
+condition on the rate field.  Expose only finitely many coordinates, allow all
+outside completions, and compute the exact lower and upper possible rates.
+If the expected gap of these two thresholds closes with an Osgood modulus, the
+lower and upper graphical envelope processes coalesce.  Their eventual
+agreement produces a finite certificate for the complete coordinate path.
+
+The second contribution compares this criterion with a more concrete
+summable local-update condition.  The comparison is not merely formal when
+the mixture weights depend on time: a tail that is small pointwise in time is
+not automatically bounded by a fixed deterministic sequence.  We supply the
+required $L^1$ tail factorization and obtain a linear Osgood modulus.
+
+\paragraph{Scope.}
+The results do not prove arbitrary-group invariant weak existence, a general
+strong factor construction for unbounded or infinite-range rates, or exact
+ordered joint iid sampling for arbitrary DPP kernels.  These remain distinct
+open problems.
+
+\section{Five realization levels}
+
+The following table records the outputs used throughout the paper.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth}
+                >{\raggedright\arraybackslash}p{0.36\textwidth}
+                >{\raggedright\arraybackslash}p{0.34\textwidth}}
+\toprule
+Level & Output & Not included automatically\\
+\midrule
+Ordinary weak & A martingale law with marginals $\mu_t$ and rates $a$ & Invariance, common noise, uniqueness\\
+Invariant weak & An invariant path law with the same properties & An iid or Poisson construction\\
+Relative strong & An equivariant measurable path from supplied $X_0$ and fresh product noise & Finite certificates\\
+Relative finitary & Each coordinate path is fixed by finitely many complete input labels under every outside completion & Query moments\\
+Unconditional iid factor & First sample $X_0$ equivariantly from iid, then apply a relative construction & Finitary or moment bounds unless proved separately\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Weak convergence of joint laws does not preserve a common-input factor
+representation.  Likewise, separate iid samplers for two marginals do not
+produce an ordered joint factor.  Each arrow in the hierarchy therefore needs
+its own argument.
+
+\section{Common setup and weak inputs}
+
+For clarity, first take $I=\Gamma$ with the regular action.  Write $x^{g,b}$
+for the configuration obtained by setting coordinate $g$ to $b$.  Intrinsic
+rates $c_g$ are independent of the center bit and actual rates are
+\[
+ a_g(t,x)=(1-x_g)c_g(t,x).
+\]
+Every pure-birth rate that vanishes at occupied sites has this form after
+setting $c_g(t,x)=a_g(t,x^{g,0})$.
+
+The ordinary weak-existence input assumes a weakly continuous prescribed
+curve, finite-valued jointly Borel rates, equation~\eqref{eq:ce}, and
+\[
+ \int_0^1\mu_t(a_i(t,\cdot))\,dt<\infty
+\]
+for every coordinate.  It yields a coordinatewise cadlag pure-birth
+martingale law with the prescribed marginals and no simultaneous
+positive-time births.  In the linear DPP application one takes
+$K_t=C+tH$, with $H\succeq0$ and
+\[
+ \eps I\preceq K_t\preceq(1-\eps)I.
+\]
+
+For bounded rates, a weak law in this pure-birth, no-simultaneous-birth class
+admits a compatible enlargement by independent sitewise Poisson random
+measures.  Compatibility means that future product-noise increments are
+independent of the common past and that the path accepts exactly the points
+below its current rate.
+
+For countable amenable groups, averaging the compact convex solution set gives
+an invariant prescribed-marginal weak law.  In the stated linear DPP setting,
+for arbitrary countable groups, invariant weak existence is equivalent to a
+local endpoint condition along a vanishing-mesh sequence of partitions:
+every adjacent time interval must admit a diagonally invariant dynamically
+realizable endpoint law.  Existence of these local invariant endpoint
+elements remains open in general.
+
+\section{Finite rate boxes}
+
+Let $F_1\subset F_2\subset\cdots$ be finite sets containing the identity.
+Given lower and upper patterns $l\le u$ on $gF_R$, let
+\[
+ B_g^R(l,u)=\{z:l_j\le z_j\le u_j\text{ for }j\in gF_R\}.
+\]
+Define exact intrinsic extrema
+\begin{equation}
+ \ell_g^R(t,l,u)=\inf_{z\in B_g^R(l,u)}c_g(t,z),\qquad
+ h_g^R(t,l,u)=\sup_{z\in B_g^R(l,u)}c_g(t,z).
+ \label{eq:extrema}
+\end{equation}
+
+\begin{definition}[BOX]
+Both extrema in~\eqref{eq:extrema} are jointly Borel in time and the finite
+patterns.
+\end{definition}
+
+Drive lower and upper finite-range envelope processes by the same proposal
+field using $\ell^R$ and $h^R$.  Let
+\[
+ \delta_R(t)=\Pp(L_e^R(t)\ne U_e^R(t))
+\]
+and let $W_e^R(t)$ be the current threshold gap.
+
+\begin{definition}[WIDTH]
+There exist constants $A_n,\tau_n\ge0$, with $\tau_n\to0$, and
+$L\in L^1[0,1]$ such that, outside one null time set,
+\begin{equation}
+ \E W_e^R(t)\le L(t)(A_n\delta_R(t)+\tau_n),\qquad R\ge n.
+ \label{eq:width}
+\end{equation}
+Put
+\[
+ \omega(r)=\inf_n(A_nr+\tau_n).
+\]
+We impose either $\omega\equiv0$, or $\omega(r)>0$ for $r>0$ and
+\begin{equation}
+ \int_{0+}\frac{dr}{\omega(r)}=\infty.
+ \label{eq:osgood}
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Shrinking rate boxes]
+Assume ordinary weak existence, a uniform finite rate bound $M$, compatible
+Poisson completion, BOX, WIDTH, and~\eqref{eq:osgood}.  Then there is a total
+Borel exactly equivariant relative realization of the prescribed process.
+Almost surely, every complete coordinate path has a finite
+arbitrary-completion certificate.  The prescribed-marginal weak law is unique
+in the stated class and invariant.  If the initial law has a finitary iid
+sampler with the same certificate convention, then the full path is an iid
+finitary process after composition.
+\end{theorem}
+
+\begin{proof}[Proof roadmap]
+At fixed $R$, the backward ancestor graph is finite because strict-time chains
+of length $k$ have expected count at most $(M|F_R|)^k/k!$.  Exact extrema make
+the envelope systems nested in $R$, while compatible Poisson completion traps
+every weak reference path between them.  Compensation gives
+\[
+ \delta_R(t)\le\int_0^t\E W_e^R(s)\,ds.
+\]
+After taking $R\to\infty$ in the correct order,
+\eqref{eq:width}--\eqref{eq:osgood} and Osgood's lemma force the limiting
+discrepancy to vanish.  Each coordinate chooses its birth time from a fixed
+finite list, so agreement at all times upgrades to eventual equality of the
+entire coordinate paths at some finite radius.  The least successful local
+computation supplies the arbitrary-completion certificate.
+\end{proof}
+
+The theorem asserts no query-size or radius moment, no simultaneous
+all-initial collapse event, and no result for arbitrary unbounded rates.
+
+\section{Summable local updates imply shrinking boxes}
+
+\begin{definition}[LOCAL]
+Suppose the actual rates have the decomposition
+\begin{equation}
+ a_g(t,x)=\sum_{k\ge0}\lambda_k(t)
+ b_k\bigl(t,(x_{gv})_{v\in V_k}\bigr),
+ \label{eq:local}
+\end{equation}
+where $V_k$ is finite and contains the identity,
+$\lambda_k:[0,1]\to[0,\infty)$ is Borel,
+$b_k:[0,1]\times\{0,1\}^{V_k}\to[0,1]$ is Borel and vanishes when the
+center is occupied, and
+\begin{equation}
+ \sum_k\lambda_k(t)|V_k|\le B<\infty
+ \quad\text{for every }t.
+ \label{eq:budget}
+\end{equation}
+\end{definition}
+
+\begin{theorem}[LOCAL implies BOX+WIDTH]
+Under~\eqref{eq:local}--\eqref{eq:budget}, the center-independent intrinsic
+rate satisfies BOX and WIDTH for a nested sequence of finite sets.  One may
+take $A_n=B$, $\tau_n=2^{-n}$, and an integrable $L\ge1$.  Consequently
+$\omega(r)=Br$, with the zero case understood separately.
+\end{theorem}
+
+\begin{proof}
+Replace each component by its center-vacant version.  Then
+\[
+ c_e(t,x)=\sum_k\lambda_k(t)\widetilde b_k(t,x|_{V_k}).
+\]
+For fixed time the series converges uniformly in $x$ because
+$\sum_k\lambda_k(t)\le B$.  Thus $c_e(t,\cdot)$ is continuous.  On every
+finite cylinder, exact extrema may be computed over a countable dense family
+of extensions, so they are Borel in time.  Hence BOX holds.
+
+Put
+\[
+ s_N(t)=\sum_{k>N}\lambda_k(t).
+\]
+Then $0\le s_N\le B$ and $s_N(t)\downarrow0$.  Dominated convergence permits
+a strictly increasing sequence $N_n$ such that
+\[
+ \int_0^1s_{N_n}(t)\,dt\le2^{-2n}.
+\]
+Set
+\begin{equation}
+ L(t)=1+\sum_{n\ge1}2^ns_{N_n}(t).
+ \label{eq:Lfactor}
+\end{equation}
+Then $L\in L^1$, $L\ge1$, and
+$s_{N_n}(t)\le2^{-n}L(t)$ outside one null set.  Let
+\[
+ F_n=\bigcup_{k\le N_n}V_k.
+\]
+These sets are finite, nested, and contain the identity.
+
+For $R\ge n$, a component $k\le N_n$ contributes no width if the two
+left-limit envelope configurations agree on $V_k$, and otherwise contributes
+at most one.  The tail contributes at most $s_{N_n}(t)$.  Translation
+invariance and a union bound give
+\begin{align*}
+ \E W_e^R(t)
+ &\le\sum_{k\le N_n}\lambda_k(t)|V_k|\delta_R(t)+s_{N_n}(t)\\
+ &\le B\delta_R(t)+2^{-n}L(t)\\
+ &\le L(t)(B\delta_R(t)+2^{-n}).
+\end{align*}
+This is WIDTH.  Finally
+\[
+ \omega(r)=\inf_n(Br+2^{-n})=Br,
+\]
+which satisfies the Osgood condition when $B>0$; if $B=0$, all rates vanish.
+\end{proof}
+
+The factorization~\eqref{eq:Lfactor} is essential at this level of
+generality.  The simpler choice
+$\tau_n=\sum_{k>n}\lambda_k$ is valid for time-independent weights but is not
+a deterministic WIDTH constant for arbitrary $\lambda_k(t)$.
+
+\subsection{Quantitative addendum}
+
+The direct LOCAL graphical construction gives more than the qualitative
+conclusion of the rate-box theorem.  If the weights are constant and
+\[
+ B_1=\sum_k\lambda_k\sum_{v\in V_k}|v|<\infty
+\]
+in a fixed left-invariant metric, then the expected number of relative queried
+labels is at most $e^B$, and the expected maximum query radius is at most
+$B_1e^B$.  These moments need not survive composition with a separate initial
+iid sampler.
+
+\section{Mean Osgood uniqueness}
+
+Rate boxes control every outside completion.  A weaker, nonfinitary conclusion
+follows from a condition involving only couplings of the prescribed marginals.
+Assume the covariant rates are bounded, an ordinary prescribed-marginal weak
+law exists in the no-simultaneous-birth class, $L\in L^1[0,1]$, and
+$\omega$ is continuous, nondecreasing, vanishes at zero, is positive away
+from zero, and satisfies~\eqref{eq:osgood}.  Suppose that, outside one fixed
+null set of times, every coupling $(U,V)$ with both laws equal to $\mu_t$
+satisfies
+\begin{equation}
+ \sup_i\E|a_i(t,U)-a_i(t,V)|
+ \le L(t)\omega\!\left(\sup_j\Pp(U_j\ne V_j)\right).
+ \label{eq:mean}
+\end{equation}
+
+\begin{theorem}[Mean Osgood extraction]
+Under the preceding assumptions, compatible conditional copies driven by the
+same Poisson field agree.  The conditional law given the initial state and
+noise is almost surely Dirac.  Hence the prescribed weak law is unique within
+the prescribed-$\mu_t$ martingale class, invariant, and has a causal relative
+strong realization.
+\end{theorem}
+
+This theorem gives no finite certificate and is not an all-initial-law
+uniqueness theorem.
+
+\section{Examples and separations}
+
+\subsection{A nonlocal rate-box example}
+
+For every countably infinite group $G$, take $\Gamma=G\times C_2$, pair each
+site with its $C_2$ partner, and use a lexicographic comparison of two
+enumerated rays to perturb opposite rates.  The perturbations cancel in every
+cylinder equation, so the prescribed marginals remain iid Bernoulli and hence
+diagonal DPPs.  Finite prefixes give
+\[
+ \E W_e^R(t)
+ \le\left(\frac16+\frac{5n}{12}\right)\delta_R(t)
+ +\frac5{24}\left(\frac{17}{32}\right)^n.
+\]
+The induced modulus obeys
+\[
+ \frac{7}{12}r\le\omega(r)\le2r(1+\log(1/r)),
+\]
+so the rate-box theorem gives a relative whole-path finitary realization.
+Every off-root coordinate nevertheless has positive essential influence on
+the root rate, and the summed worst-case coordinate oscillation is infinite.
+Thus no finite-mean nonnegative LOCAL mixture exists.
+
+\subsection{Mean control does not imply finite certificates}
+
+On a two-orbit $(\mathbb{Z}\times C_2)$-set, retain a static iid environment
+and let active-pair rates depend on a closed tail event with empty interior.
+Conditional on the environment, independent pair clocks give a causal
+equivariant strong process with diagonal-DPP marginals and satisfying
+\eqref{eq:mean}.  The generator nevertheless forces a discontinuous
+conditional root-endpoint kernel on a positive-measure set.  A relative
+arbitrary-completion finite certificate would make an everywhere-defined
+version continuous at almost every input, a contradiction.
+
+\subsection{Failure of the box method is not failure of joint finitarity}
+
+A single-orbit dynamic replacement has exact DPP marginals and a causal
+relative strong realization.  Its finite-box widths stay bounded away from
+zero on an event of positive probability, so the exact-box criterion fails
+for every nested query family.  Its one-root endpoint conditional law is
+nevertheless almost-everywhere continuous and that single finite-valued
+output has a relative finite sampler.  This does not produce a finitary
+realization of the complete joint process: independently sampling the
+one-coordinate kernels would destroy the joint law.
+
+\section{A non-diagonal DPP application}
+
+Assume $\Gamma$ contains an element of infinite order.  A positive sandwich
+construction gives a full-support convolution probability $v=a*w*a$ and a
+positive contraction $V=T_v=AWA$, with $\ker V=\ker A$, where $A$ is a cyclic
+spectral-zero operator.  For a weighted-small finite-support Hermitian
+background $b$, set
+\[
+ K_t=\frac12I+T_b+\delta tV^2.
+\]
+This kernel curve is uniformly gapped.  Its exact DPP birth rates satisfy the
+cylinder equations and admit a summable local-update decomposition after the
+inverse-pair coefficients of the convolution kernel are ordered.
+
+\begin{theorem}[Cyclic non-diagonal application]
+For the preceding family, there is a total equivariant relative finitary DPP
+process.  In a constructed proper left-invariant metric, both the relative
+query count and query radius have finite first moments.  Moreover, if a
+bounded finite-propagation operator $T$ satisfies $TT^*\preceq V^2$, then
+$T=0$.
+\end{theorem}
+
+Thus the increment has no nonzero finite-propagation square minorant.  A
+separate gapped initial sampler may be composed with the relative process to
+obtain a joint iid finitary endpoint pair, but this composition does not
+transfer the relative moment bounds.  The construction requires an
+infinite-order element, a constructed increment, weighted-small backgrounds,
+and a constructed metric; it is not general exact ordered joint iid sampling.
+
+\section{Logical picture and open problems}
+
+The proved implications can be summarized as
+\[
+ \text{finite range}\subsetneq\text{LOCAL}
+ \subsetneq\text{BOX+WIDTH}\subseteq\text{relative finitary}
+ \subseteq\text{relative strong}\subseteq\text{weak}.
+\]
+The first two strict containments are witnessed by the cyclic and nonlocal
+rate-box examples.  The static environment separates relative strong from
+relative finitary.  Necessity of BOX+WIDTH for full-process finitarity is not
+known.
+
+We close with four open problems.
+\begin{enumerate}[label=(\arabic*)]
+\item For arbitrary nonamenable groups, do all finite-valued Borel covariant
+  DPP birth rates satisfying the integrated cylinder equations and ordinary
+  weak-existence hypotheses admit an invariant weak realization?
+\item Which rates outside BOX+WIDTH admit a relative finitary full-process
+  realization?  The dynamic example settles only a one-output kernel.
+\item Can arbitrary ordered DPP kernels be joined by one exact equivariant iid
+  factor?
+\item Can the cyclic application's query moments be obtained in a preassigned
+  word metric or after composition with the initial sampler?
+\end{enumerate}
+
+\section*{Draft status and provenance}
+
+This document is a theorem-level working draft assembled from separately
+audited internal research notes.  The comparison LOCAL$\Rightarrow$BOX+WIDTH
+has received a fresh internal scope audit.  Novelty, external domain review,
+formal verification, and journal acceptability have not been certified.
+Full source attributions and proof appendices will be added before any
+submission version.
+
+\end{document}
