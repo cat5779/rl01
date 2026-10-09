@@ -1,0 +1,52 @@
+{
+  "task_id": "BR01",
+  "status": "PROMPT_PREPARED",
+  "created_at": "2026-10-10",
+  "scope": "Audit existing JF proof; integrate FK invariant/common-iid bridge into frozen Chinese manuscript; assess actual shared method for B/JF/D.",
+  "base_commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+  "prompt": "br01q.md",
+  "prompt_sha256_raw": "b6782e5262cfc5a2a93d450821e1e253f04ba5672df8213ba6cdb47c9cadede0",
+  "manuscript": "s01.tex",
+  "manuscript_sha256_raw": "fac20b5ade363d67dae79bde5702d74c4d101a2c2f9d08399767b344e3552b3c",
+  "manuscript_version": "fullzh02; 47 pages total, 30 main-text pages including front matter",
+  "existing_JF_proof_commit": "1f22aa70cbe615a15d7066cf2e36ad9c1e1367d2",
+  "existing_evidence": [
+    {
+      "path": "research/dpp07/g1/proof02.md",
+      "sha256_checkout_bytes": "6e892d05047a4e3d61adac85ea322ee24eb719a9dba10966b3ec5e877dab4975",
+      "git_blob": "c1ffb4d665e961c558f9ae6d19633294fa9676b9"
+    },
+    {
+      "path": "research/dpp07/g1/proof03.md",
+      "sha256_checkout_bytes": "90b7b2e4d37f7a38c9a003d80be5d02c810d8993afa0499c7f9c902c98a9a9c3",
+      "git_blob": "b1cb6086bcb5bfa953c23fe91646a143b478cb6d"
+    },
+    {
+      "path": "research/dpp07/g1/REVIEW02.md",
+      "sha256_checkout_bytes": "c656e600831b7f09e427f9d5e093f7e3c0dfcfcee9d044dfc3076976517c2a15",
+      "git_blob": "d8d028a0f77f83866251ebcd5bcc2e17cd5b0cb9"
+    },
+    {
+      "path": "research/dpp07/g1/REVIEW03.md",
+      "sha256_checkout_bytes": "1f23dd49898cef2ad6e1d19afb3785882cfef43c880dd785f261390ef3d0e32e",
+      "git_blob": "af1052a6144dc2af92530562274bec25c46e6be3"
+    }
+  ],
+  "reply": {
+    "path": "br01r.md",
+    "status": "EMPTY_PLACEHOLDER",
+    "bytes": 0,
+    "received": false,
+    "counts_as_completed_work": false
+  },
+  "current_check": "Source and quantifier match inspected; not a fresh full proof certification",
+  "mathematical_status_changed": false,
+  "novelty_certified": false,
+  "general_ordered_common_iid_solved": false,
+  "correction": "The preceding conversational difficulty assessment missed existing JF and is superseded as a project-status assessment. The paper lacks integration of the existing stronger claim; the repository does not lack a recorded bridge proof.",
+  "provenance": {
+    "prompt": "Prepared by coordinating assistant at user request for Euler",
+    "existing_JF": "Existing repository proof and historical internal reviews; no new authorship or priority inferred",
+    "manuscript": "Byte-preserved user project Chinese revision fullzh02"
+  }
+}

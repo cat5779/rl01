@@ -1,0 +1,2465 @@
+\documentclass[UTF8,zihao=-4,a4paper]{ctexart}
+
+\usepackage[margin=2.5cm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,mathrsfs}
+\numberwithin{equation}{section}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem,needspace}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{xcolor}
+\definecolor{linkblue}{RGB}{30,68,105}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,pdfauthor={EULER}}
+\hypersetup{pdftitle={行列式过程的因子、支配与耦合：自然采样、任意群不变耦合与因子闭性},pdflang={zh-CN}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{2em}
+\linespread{1.12}
+\allowdisplaybreaks[2]
+\setcounter{tocdepth}{1}
+\hypersetup{bookmarksdepth=2}
+\newcommand{\dd}{\bar d}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\ii}{\mathrm{iid}}
+
+\fancyhead[L]{\small 行列式过程：因子与不变耦合}
+\fancyhead[R]{\small EULER}
+\title{\bfseries 行列式过程的因子、支配与耦合\\[0.25em]\large 自然采样、任意群不变耦合与因子闭性}
+\author{EULER}
+\date{}
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+
+我们在任意可数集上，构造了一个从独立均匀随机变量到行列式过程的 Borel 映射。这个映射在置换下自然，并且可测地依赖于核。因此，每个具有等变核的行列式过程都是其指标集上的伯努利乘积作用的因子。作为应用，在每个局部有限、连通、简单的随机根图上，自由均匀生成森林（FUSF）都是 iid 顶点标签的图因子。
+
+对于任意可数群的正则作用，我们证明了由 Fuglede--Kadison 行列式给出的伯努利支配界。在顺从群上，这些界对每个核都是最优的；在 \(C_3*C_3\) 上，即使核属于群代数且谱包含于 \((0,1)\)，也会出现严格不等式。对于任意可数群，我们进一步构造具有精确边缘的近优相对 iid 转移，由此得到有序核的不变单调耦合，以及常数为一的尖锐不变迹范数界；证明包括有限支撑的纯生过程、一般核逼近与奇异端点。
+
+最后，结合 Bowen 的零熵逆系统与 Seward 的生成分割定理，我们给出伯努利因子类在不变 \(\bar d\) 距离下不闭的二元短证。附录进一步在四正则树的菱形化图上构造保持 WUSF、FUSF 及差集三个精确边缘的单调耦合序列：每项均与有限基伯努利移位同构，极限却不是伯努利因子。三个边缘各自仍是因子型投影行列式过程。
+
+\end{abstract}
+\begingroup
+\setlength{\parskip}{0pt}
+\makeatletter
+\renewcommand*\l@section[2]{\@dottedtocline{1}{0em}{2.3em}{\bfseries #1}{\bfseries #2}}
+\makeatother
+\tableofcontents
+\endgroup
+\clearpage
+\section{引言}\label{sec:intro}
+
+行列式概率测度把可数集上的正收缩算子对应为该集合的随机子集。当核在某个群作用下等变时，相应测度是不变的。本文研究从核到随机配置的三个结构：独立标签下的自然采样、伯努利随机支配，以及不变耦合的存在与稳定性。最后一个问题还涉及因子的闭性：即使两个边缘固定而且都是 iid 因子，其最优单调耦合的极限也可能失去因子表示。单个边缘的因子表示、不变联合律的存在，以及联合律的共同 iid 表示，是贯穿全文的三个层次。
+
+令 \(W\) 为可数集。对 \(\ell^2(W)\) 上的正收缩 \(Q\)，记其行列式测度为 \(\mathbf P^Q\)。相应的随机子集称为行列式点过程（determinantal point process，简称 DPP）。也就是说，对任意有限 \(F\subset W\)，
+\[
+ \mathbf P^Q[F\subseteq\eta]=\det Q_F,
+\]
+
+其中 \(Q_F\) 是 \(Q\) 在 \(\ell^2(F)\) 上的主压缩。我们把子集与其指示函数等同。特别地，\(\mathbf P^{pI}\) 就是参数为 \(p\) 的伯努利乘积测度。
+
+\subsection{伯努利移位的因子}
+
+第一个构造不要求存在群作用。正收缩空间采用由矩阵元生成的 Borel 结构。
+
+\textbf{定理 A.} 对每个可数集 \(W\)，存在 Borel 映射
+\[
+ \Phi_Q:[0,1]^W\longrightarrow\{0,1\}^W
+ \quad\text{使得}\quad
+ (\Phi_Q)_*\operatorname{Leb}^W=\mathbf P^Q.
+\]
+
+映射 \((Q,u)\mapsto\Phi_Q(u)\) 联合 Borel 可测。它在可数指标集的双射下自然：对每个 \(\theta:W\to W'\)，
+\[
+ \Phi_{\theta Q\theta^{-1}}(\theta u)=\theta\Phi_Q(u)
+ \qquad(u\in[0,1]^W).
+\]
+
+所有映射以及上述恒等式都在每个输入上逐点定义。
+
+若可数群 \(\Gamma\) 作用于 \(W\)，且 \(Q\) 与诱导的置换算子交换，则定理 A 给出一个 \(\Gamma\)-等变因子映射。这在 \cite{LT} 所用的伯努利移位约定------即 \(A^W\) 上的乘积作用------下回答了 \cite[Question 7.7]{LT}。当 \(W=\Gamma\times S\) 时，源是底空间为 \([0,1]^S\) 的正则伯努利移位。一般稳定子情形下，\(A^W\) 与 \(A^\Gamma\) 的区别不可忽略，见附录 A.1。
+
+\cite[Theorem 7.3 and Corollary 7.4]{LT} 处理的是有限生成集 \(S\) 下的 \(Q\in R(\Gamma)\) 或 \(R(\Gamma,S)\)：对 sofic 群给出有限依赖过程逼近，对顺从群给出与伯努利移位同构。定理 A 则适用于任意可数作用，并直接给出因子映射。本文构造随 \((Q,u)\) 联合可测、对任意指标双射自然的采样器，推论 A1 再由这一构造推出 FUSF 的图因子结论。
+
+\textbf{全对称群推论。} 固定核 \(Q\) 后，同一个映射在每个输入上都与保持 \(Q\) 的全部置换交换；这个对称群无须可数。特别地，若图上的顶点指标 DPP 的核在全自同构群下不变，则该过程是全自同构群等变的 iid 顶点标签因子。只须将每个对称代入逐输入的自然性恒等式；这里不需要对群元素所对应的例外零集取交。
+
+核参数的可测依赖在底图随机时尤其重要，由此得到：
+
+\textbf{推论 A1.} 在每个局部有限、连通、简单的随机根图上，FUSF 都是 iid 均匀顶点标签的图因子。存在一条统一的 Borel 规则，对所有此类图都适用，并且在给定图的条件下具有正确分布。
+
+这里使用 \cite[\S{}2.1]{ARS} 的图因子定义：映射保留底图，并与换根相容。输入律不必是幺模的，度数也不必有统一上界。第 4 节给出构造，并与 \cite[\S{}2]{Tim} 的局部表述比较。本文不声称该因子是有限编码的。
+
+\subsection{伯努利支配及尖锐性}
+
+记 \(R(\Gamma)\) 为 \(\ell^2(\Gamma)\) 上所有与左平移算子交换的有界算子所成的代数（commutant），并令
+\(\tau(T)=\langle T\delta_e,\delta_e\rangle\) 为其典范迹。对有界正算子 \(Q\in R(\Gamma)\)，定义
+\[
+ \operatorname{FK}(Q)
+ =\exp\left(\int_{[0,\|Q\|]}\log\lambda\,d\nu_Q(\lambda)\right),
+\]
+
+其中 \(\nu_Q\) 是关于 \(\tau\) 的谱分布，且约定 \(\exp(-\infty)=0\)。这一定义允许零点处有谱质量。对阶为 \(n\) 的有限群，它就是 \((\det Q)^{1/n}\)；一般情形下，它是相对于典范迹的谱几何平均。
+
+记 \(\mu\preceq\nu\) 表示：每个有界递增柱函数在 \(\mu\) 下的期望都不大于其在 \(\nu\) 下的期望。等价地，存在逐坐标满足 \(X\le Y\) 的耦合 \((X,Y)\)；这里不要求耦合不变。对任意 \(\ell^2(W)\) 上的正收缩 \(Q\)，定义其下、上伯努利参数（各测度均以同一集合 \(W\) 为指标）为
+\[
+ p_-(Q)=\sup\{p\in[0,1]:\mathbf P^{pI}\preceq\mathbf P^Q\},\qquad
+ p_+(Q)=\inf\{p\in[0,1]:\mathbf P^Q\preceq\mathbf P^{pI}\}.
+\]
+
+
+\textbf{定理 B.} 若 \(\Gamma\) 是可数群，\(Q\in R(\Gamma)\) 是正收缩，则
+\[
+ \mathbf P^{\operatorname{FK}(Q)I}
+ \preceq\mathbf P^Q
+ \preceq\mathbf P^{(1-\operatorname{FK}(I-Q))I}.
+ \tag{B}\label{eq:B}
+\]
+
+该结论包括复 Hermitian 核和奇异核。
+
+这正是 \cite[Conjecture 5.7]{ICM} 中的两个不等式；其周围讨论假设 sofic 性，而这里对每个可数群都成立。至于是否最优，则取决于量词。
+
+\textbf{定理 C.} 在每个可数顺从群上，每个正收缩 \(Q\in R(\Gamma)\) 都满足
+\[
+ p_-(Q)=\operatorname{FK}(Q),\qquad
+ p_+(Q)=1-\operatorname{FK}(I-Q).
+ \tag{C1}\label{eq:C1}
+\]
+
+在 \(\Gamma=C_3*C_3\) 上，存在投影 \(\Pi\in R(\Gamma)\)，使得
+\[
+ \operatorname{FK}(\Pi)=0,\qquad
+ p_-(\Pi)=\frac12,\qquad p_+(\Pi)=1.
+ \tag{C2}\label{eq:C2}
+\]
+
+还存在 \(Q\in\mathbb C\Gamma\) 以及某个 \(\varepsilon>0\)，满足
+\(\varepsilon I\le Q\le(1-\varepsilon)I\)，但
+\[
+p_-(Q)>\operatorname{FK}(Q).
+\]
+
+
+每个下界反例取补集后即给出上界反例。因此，在顺从情形中，这些界对每个核都精确，正如格点结果 \cite[Theorem 5.11]{LS}；但对固定的非顺从核则未必精确。若只允许界依赖相应的一个行列式值，则它们在每个群上仍然一致尖锐，因为标量核 \(Q=pI\) 取到等号。第 6.4 节区分这些不同的“最优性”，并列出尚未解决的分类问题。
+
+\subsection{不变耦合}
+
+对 \(\{0,1\}^\Gamma\) 上的不变测度 \(\mu,\nu\)，记 \(J_\Gamma(\mu,\nu)\) 为其在对角作用 \(\gamma(X,Y)=(\gamma X,\gamma Y)\) 下不变的耦合（joining）所成的集合，并定义
+\[
+ \bar d(\mu,\nu)
+ =\inf_{\lambda\in J_\Gamma(\mu,\nu)}
+       \lambda\{(X,Y):X_e\ne Y_e\}.
+\]
+
+再记 \(\|T\|_1=\tau(|T|)\)。普通随机支配本身并不保证存在不变单调耦合，Mester 的例子表明这一点\cite[Theorem~1.5]{Mester}。对有序行列式核，下面的定理同时给出不变单调耦合和 \cite[Lemma~7.8]{LT}之后所问的迹范数估计。
+
+\textbf{定理 D.} 若 \(\Gamma\) 是任意可数群，\(A,B\in R(\Gamma)\) 是正收缩，则
+\[
+ \bar d(\mathbf P^A,\mathbf P^B)\le\|A-B\|_1.
+ \tag{D}\label{eq:D}
+\]
+
+常数 \(1\) 最优。若 \(A\le B\)，则存在 \(\Gamma\)-不变耦合 \((X,Y)\) 满足 \(X\subseteq Y\) 几乎处处，并且
+\[
+ \bar d(\mathbf P^A,\mathbf P^B)=\tau(B-A).
+\]
+
+\cite[Theorem 5.1]{LT} 在 sofic 情形中给出不变单调耦合。第~\ref{sec:cd}~节直接构造相对随机转移，对任意可数群证明上述结论。关键中间结果是：给定 \(X\sim\mathbf P^A\) 和任意 \(\eta>0\)，可用独立的正则 iid 噪声等变地产生 \(Y\sim\mathbf P^B\)，使根失配概率不超过 \(\tau|A-B|+\eta\)。从这种近优转移取得有序耦合时，我们对联合分布取极限；一般的精确有序共同 iid 映射仍需另证。
+
+\subsection{因子的非闭性}
+
+\cite[Question~7.6]{LT}询问：有限字母表上的伯努利因子律是否在不变 $\bar d$ 距离下闭合？下述结论由 Bowen 与 Seward 的既有定理组合推出，第~\ref{sec:short}~节给出短证。
+
+\textbf{命题 E（既有定理的推论）.}
+在 $\Gamma=F(a,b)$ 上，存在 $\{0,1\}^\Gamma$ 上的不变过程律 $\lambda_n,\lambda$，使每个 $\lambda_n$ 与一个非退化二元基伯努利移位同构，$\bar d(\lambda_n,\lambda)\to0$，而 $\lambda$ 不是任何正则伯努利移位的因子。
+
+Bowen 的综述给出零 Rokhlin 熵的伯努利逆系统，并在 Remark~22 中讨论其无限字母 $\bar d$ 实现\cite{BowenSurvey}。Seward 的二元生成分割及有限层近似把它变为上述二元反例。附录~\ref{sec:forest}~再证明一个受约束的强化：在固定菱形图上，耦合始终保持 WUSF、FUSF 和差集的三个精确边缘，非闭性仅发生在联合律中。
+
+\subsection{证明思路与全文结构}
+
+定理 A 的证明是在独立 Brownian 噪声中观测一个行列式配置。条件均值给出漂移。在有限窗口中，漂移对观测场的导数是倾斜后的协方差；协方差行的绝对值和有统一上界，因而漂移具有统一的 Lipschitz 常数。于是得到一条由独立 Brownian 运动驱动、具有唯一解的确定性积分方程，再从该解恢复配置。第 3 节完成这一构造，第 4 节把它用于 FUSF 的传递电流核。
+
+定理 B 的证明在第~5~节把 $Q$ 沿保持 Fuglede--Kadison 行列式的路径变形到标量核，同时使每个递增柱函数的期望下降。第~6~节证明顺从群上的尖锐性，并从正则树的 WUSF 构造反例。第~\ref{sec:cd}~节以有限正流和共同 Poisson 时钟构造相对纯生过程，通过可和失配的逐坐标极限处理一般核，得到定理 D。第~\ref{sec:short}~节用生成分割给出命题 E 的短证。
+
+读完第~2~节后，可分别阅读第~3--4~节的自然采样、第~5--6~节的伯努利支配，以及第~7--8~节的耦合与闭性。附录 A--C保留定义边界、显式有限支撑反例和有限类型核；附录~\ref{sec:forest}~展开固定森林边缘的强化，附录~\ref{cd:finiterange}~记录有限范围包络的定量性质。
+
+\section{预备知识}
+
+所有 Hilbert 空间均为复 Hilbert 空间。正收缩是满足 \(0\le Q\le I\) 的自伴算子。若
+\(\iota_F:\ell^2(F)\to\ell^2(W)\) 是自然嵌入，则
+\(Q_F=\iota_F^*Q\iota_F\)。记 \(P_F=\iota_F\iota_F^*\) 为坐标投影；在取压缩时把其像与 \(\ell^2(F)\) 等同。关于 \(\mathbf P^Q\) 的期望记为 \(\mathbf E^Q\)。
+
+乘积空间上的作用约定为
+\[
+ (\gamma u)(x)=u(\gamma^{-1}x).
+\]
+
+因子是与作用交织的可测映射。对定理 A 中的映射，只要作用保持核 \(Q\)，就对每个输入 \(u\) 有因子等变恒等式 \(\Phi_Q(\gamma u)=\gamma\Phi_Q(u)\)。
+
+DPP 的有限柱概率可由包含概率恢复：
+\[
+ \mathbf P^Q(\eta\cap F=S)
+ =\sum_{S\subseteq T\subseteq F}(-1)^{|T\setminus S|}\det Q_T.
+ \tag{2.1}\label{eq:2.1}
+\]
+
+立即得到两个事实：把过程限制到 \(F\) 相当于把核压缩为 \(Q_F\)；取补集把 \(Q\) 替换为 \(I-Q\)。若核的跨块矩阵元为零，则各块上的过程独立。
+
+我们还使用有限 DPP 比较定理：若有限集上 \(0\le C\le C'\le I\)，则
+\(\mathbf P^C\preceq\mathbf P^{C'}\) \cite[Theorem~4.13]{BBL}，亦见\cite[Theorem~2.1]{LT}的重述。它也推出可数集上的普通随机序支配：先在每个有限压缩上取单调耦合，再通过条件采样扩展到完整边缘律；沿一个穷竭列使用紧致性，得到每个坐标上都保持次序的极限耦合。
+
+\section{从独立 Brownian 运动采样}
+
+先说明基本想法。令 \(\eta\sim\mathbf P^K\)，并令 \(B\) 是与之独立的一族标准 Brownian 运动。观察
+\[
+ X_t(x)=t\eta_x+B_t(x).
+\]
+
+当 \(t\to\infty\) 时，信号压过噪声，\(X_t(x)/t\to\eta_x\)，所以观测路径决定配置。
+
+关键是反过来构造。给定观测历史，从 \(X\) 中减去 \(\eta\) 的条件均值的时间积分：
+\[
+ \widetilde B_t(x)
+ =X_t(x)-\int_0^t
+    \mathbb E[\eta_x\mid \sigma(X_r(z):r\le s,\ z\in W)]\,ds.
+\]
+
+新息（innovation）过程 \(\widetilde B\) 仍是一族独立 Brownian 运动。若条件均值可写成确定性漂移 \(b\)，且
+\[
+ Z_t(x)=w_t(x)+\int_0^t b_{s,x}(Z_s)\,ds
+\]
+
+对每个输入都有唯一解，那么 \(X\) 是 \(\widetilde B\) 的函数；再从 \(X\) 恢复 \(\eta\)，即可得到所需因子。
+
+核心估计是：DPP 经指数倾斜之后，协方差矩阵每一行的绝对值和有统一上界。它使漂移具有与观测坐标数无关的 Lipschitz 常数。由核自身选出的有限集合给出一个处处定义、且在任意重标号下保持不变的 Borel 漂移。
+
+有限维观测与新息的随机局部化表述见\cite[\S3]{EM}。Nam、Sly 和 Zhang 使用这一类方法，构造度数足够大的正则树上、其定理所给参数区间内的自由边界 Ising 律的 iid 因子 \cite[Theorem 1 and Section 2.2]{NSZ}。本文在 DPP 情形中给出自包含的构造：使用由核选出的有限窗口，证明确定性反演、分布识别以及对核参数的联合可测性。
+
+\paragraph{单坐标情形。}
+若 \(W=\{x\}\)、\(K=[p]\)，观测 \(X_t(x)=y\) 后的漂移为
+\[
+ b_t(y)=\frac{p e^{y-t/2}}{1-p+p e^{y-t/2}}.
+\]
+它是 \(\eta_x=1\) 的条件概率，且 \(\partial_y b_t=b_t(1-b_t)\)。下文的有限窗口公式是其多坐标版本，协方差界则同时控制全部坐标导数。第 3.1--3.3 节构造方程，第 3.4 节识别其分布，第 3.5 节转回均匀标签。
+
+\subsection{由核选出的有限窗口}
+
+固定可数集 \(W\) 和 \(0\le K\le I\)。对每个整数 \(n\ge1\)，若不同的 \(x,y\) 满足
+\(|K(x,y)|\ge1/n\)，就在两点间连边，所得图记为 \(D_n\)。令 \(F_n(x)\) 为 \(D_n\) 中以 \(x\) 为中心、半径 \(n\) 的球。
+
+这些集合都是有限的，因为
+\[
+ \sum_y|K(x,y)|^2=(K^2)(x,x)\le K(x,x)\le1,
+\]
+
+故 \(D_n\) 的度至多为 \(n^2\)。\(F_n(x)\) 单调增加，并穷尽 \(x\) 在非零非对角矩阵元图中的连通分量。不同分量之间的核矩阵元为零，故由 \eqref{eq:2.1} 知相应 DPP 配置彼此独立。集合 \(F_n(x)\) 完全由 \(K\) 决定，所以任意指标集双射都会把它们运到变换后核的相应集合。
+
+\subsection{倾斜协方差的一致上界}
+
+\textbf{引理 3.1.} 设有限 DPP 的核为正收缩 \(K_F\)，并以与
+\(\exp(\sum_z h_z\eta_z)\) 成比例的密度作倾斜，其中 \(h_z\) 是任意实数。若 \(p_x\) 是倾斜后的占据概率，则
+\[
+ \sum_y|\operatorname{Cov}(\eta_x,\eta_y)|
+ \le 2p_x(1-p_x)\le\frac12.
+ \tag{3.1}\label{eq:3.1}
+\]
+
+
+\textbf{证明。} 令 \(D=\operatorname{diag}(e^{h_z})\)，并置
+\[
+ M=I-K_F+K_F^{1/2}DK_F^{1/2},\qquad
+ H=D^{1/2}K_F^{1/2}M^{-1}K_F^{1/2}D^{1/2}.
+\]
+
+由 \(M\ge\min(1,\min_zD_{zz})I\)，逆算子存在；又因
+\(M\ge K_F^{1/2}DK_F^{1/2}\)，故 \(0\le H\le I\)。行列式生成函数和
+\(\det(I+AB)=\det(I+BA)\) 表明倾斜后的律正是 \(\mathbf P^H\)。该公式不要求
+\(K_F\) 或 \(I-K_F\) 可逆。
+
+由一、二点行列式公式，
+\[
+ \operatorname{Var}(\eta_x)=p_x(1-p_x),\qquad
+ \operatorname{Cov}(\eta_x,\eta_y)=-|H(x,y)|^2\quad(y\ne x).
+\]
+
+所以绝对协方差行和为
+\[
+ p_x(1-p_x)+(H^2)(x,x)-p_x^2
+ \le 2p_x(1-p_x).
+\]
+
+证毕。该论证同时覆盖奇异核和复 Hermitian 核。 \(\square\)
+
+这一协方差界也属于强瑞利负依赖理论：外场保持强瑞利性及负关联\cite[Theorem~4.9]{BBL}，随机覆盖性质\cite[Proposition~2.2]{PP}给出 $\operatorname{Cov}(\eta_x,\sum_y\eta_y)\ge0$，结合非对角协方差非正，即得同一绝对行和界。下文还使用 DPP 的核窗口和分块独立性来构造联合可测的无限指标采样器。
+
+\subsection{确定性方程}
+
+对固定可数集 \(W\)，令 \(\mathscr K_W\) 为所有矩阵 \(K\in\mathbb C^{W\times W}\) 的集合，其中每个有限主子矩阵均满足 \(0\le K_F\le I_F\)。在矩阵元的乘积拓扑下，它是闭单位圆盘乘积中的闭集，因而是紧致可度量空间。其元素恰好是 \(\ell^2(W)\) 上正收缩的矩阵。令
+\(\mathcal C_W=C_0([0,\infty),\mathbb R)^W\)，这里每条路径在零时刻取零，并采用紧时间区间上一致收敛的拓扑；这同样是 Polish 空间。
+
+对有限 \(F\subset W\)，记
+\(p_F^K(\sigma)=\mathbf P^K(\eta|_F=\sigma)\)。定义有限窗口后验漂移
+\[
+ b^n_{t,x}(y)=
+ \frac{\displaystyle\sum_{\sigma\in\{0,1\}^{F_n(x)}}
+       \sigma_x\,p^K_{F_n(x)}(\sigma)
+       \exp\!\left(\sum_{z\in F_n(x)}(y_z-t/2)\sigma_z\right)}
+      {\displaystyle\sum_{\sigma\in\{0,1\}^{F_n(x)}}
+       p^K_{F_n(x)}(\sigma)
+       \exp\!\left(\sum_{z\in F_n(x)}(y_z-t/2)\sigma_z\right)},
+ \qquad
+ b_{t,x}(y)=\limsup_n b^n_{t,x}(y).
+ \tag{3.2}\label{eq:3.2}
+\]
+
+每个分母均为正，因此 \(b\) 在所有输入上定义且取值于 \([0,1]\)。有限倾斜期望对场变量的导数就是其协方差行，引理 3.1 给出
+\[
+ \sup_x|b_{t,x}(y)-b_{t,x}(y')|
+ \le\frac12\|y-y'\|_\infty
+ \quad\text{只要 }y-y'\in\ell^\infty(W).
+ \tag{3.3}\label{eq:3.3}
+\]
+
+\(\limsup\) 保留此界，也使漂移在后验极限没有概率解释的输入上仍然有定义。
+
+对任意从零出发的连续路径场 \(w\)，迭代定义
+\[
+ Z^0_t=w_t,\qquad
+ Z^{k+1}_t(x)=w_t(x)+\int_0^t b_{s,x}(Z^k_s)\,ds.
+ \tag{3.4}\label{eq:3.4}
+\]
+
+输入在空间上未必有界，但相邻迭代之差有界。由 \eqref{eq:3.3} 归纳得到：对每个有限 \(T\)，
+\[
+ \sup_{x,\,t\le T}|Z^{k+1}_t(x)-Z^k_t(x)|
+ \le\frac{(1/2)^kT^{k+1}}{(k+1)!}.
+ \tag{3.5}\label{eq:3.5}
+\]
+
+故迭代在 \(x\) 上一致、在时间上局部一致地收敛到
+\[
+ Z_t(x)=w_t(x)+\int_0^t b_{s,x}(Z_s)\,ds.
+ \tag{3.6}\label{eq:3.6}
+\]
+
+同一输入下任意两解在 \([0,T]\) 上之差是有界修正，由 \eqref{eq:3.3} 和 Gronwall 不等式得唯一性。记解为 \(\mathcal Z_K(w)\)。
+
+\textbf{命题 3.2（解映射的可测性）.} 方程 \eqref{eq:3.6} 定义联合 Borel 映射
+\[
+ \mathcal Z:\mathscr K_W\times\mathcal C_W\longrightarrow\mathcal C_W,
+ \qquad (K,w)\longmapsto\mathcal Z_K(w),
+\]
+
+并且每对输入都恰有一个解。
+
+\textbf{证明。} 存在唯一性已由 \eqref{eq:3.4}--\eqref{eq:3.6} 给出。为验证可测性，只在验证过程中固定 \(W\) 的一个枚举。对任意固定的 \(z\in W\)，条件 \(z\in F_n(x)\) 是关于 \(K\) 矩阵元的可数个有限路径条件之并，因而是 Borel 条件；对每个有限 \(F\)，事件 \(F_n(x)=F\) 是 Borel 的，而且这样的 \(F\) 只有可数多个。由 \eqref{eq:2.1}，在每个事件上，\eqref{eq:3.2} 的有限和具有 Borel 系数。所以
+\((K,t,y)\mapsto b_{t,x}(y)\) 为 Borel。
+
+路径取值和有界 Borel 函数积分的复合表明
+\((K,w,t)\mapsto Z_t^k(x)\) 逐次为 Borel；参数积分先对简单函数成立，再由有界可测逼近推广。
+
+每个迭代在时间上连续，其在非负有理时刻的值因此定义到连续路径空间的 Borel 映射。局部一致的 Picard 极限保留此性质。定义公式本身不含所选枚举，所以枚举只服务于可测性检查，并未进入最终映射。 \(\square\)
+
+\subsection{分布识别}
+
+\textbf{引理 3.3（分布识别）.} 若 \(w\) 是一族独立标准 Brownian 运动，则
+\[
+ \Psi_K(w)_x
+   =\liminf_{m\to\infty}
+       \mathbf1\{\mathcal Z_K(w)_m(x)>m/2\}
+ \tag{3.7}\label{eq:3.7}
+\]
+
+的分布为 \(\mathbf P^K\)。
+
+\eqref{eq:3.7} 中二元序列的下极限对每条输入路径都有定义。几乎必然恢复只用于识别输出分布。映射 \(\mathcal Z_K\) 与 \(\Psi_K\) 已经由核和任意路径场定义完成，下面的辅助配置只用于验证它们的分布。
+
+\textbf{证明。} 在辅助概率空间上取 \(\eta\sim\mathbf P^K\)，再取与之独立的 iid Brownian 场 \(B\)，并观察
+\[
+X_t(x)=t\eta_x+B_t(x).
+\]
+
+
+\textbf{端点后验。}固定 \(t>0\)，有限维 Gaussian Bayes 公式给出
+\[
+b^n_{t,x}(X_t)=\mathbb E[\eta_x\mid X_t(z),\,z\in F_n(x)].
+\]
+
+在站点 \(z\)，相对于方差 \(t\) 的中心正态变量，观测似然比为
+\(\exp(X_t(z)\sigma_z-t\sigma_z/2)\)，因为 \(\sigma_z^2=\sigma_z\)。对有限窗口相乘正好得到 \eqref{eq:3.2}。窗口递增并穷尽核分量，有界鞅收敛定理把极限识别为该分量全部端点条件下的期望。不同核分量上的 DPP 坐标和 Brownian 路径独立，因此加入其他分量的端点不改变条件期望。
+
+\textbf{观测历史。}对 \(0\le r\le t\)，
+\[
+ X_r(z)=\frac rt X_t(z)
+          +\left(B_r(z)-\frac rt B_t(z)\right).
+\]
+
+任意有限坐标和时刻的桥项都是中心联合 Gaussian，与所有端点 \(B_t(z)\) 协方差为零，并独立于 \(\eta\)，故独立于 \((\eta,X_t)\)。由单调类定理、\(W\) 的可数性和路径连续性，整个桥历史的 sigma 域也独立于 \(\sigma(\eta,X_t)\)。观测历史由端点和这些桥项共同生成，因此加入桥历史不改变端点后验，得到
+\[
+ b_{t,x}(X_t)=
+ \mathbb E[\eta_x\mid\mathcal F_t^0],\qquad
+ \mathcal F_t^0=\sigma(X_r(z):r\le t,\ z\in W).
+ \tag{3.8}\label{eq:3.8}
+\]
+
+有限后验序列对 \((t,\omega)\) 联合可测，并在每个固定 \(t>0\) 几乎处处收敛。Fubini 定理给出在 \(dt\otimes d\mathbb P\)-零集之外的同时收敛，再对可数个站点取交即可。这里不要求各个时刻的后验等式在同一个满测事件上同时成立；对后续时间积分，\(dt\otimes d\mathbb P\) 意义下几乎处处成立已经足够。\(t=0\) 的值对积分无影响。
+
+\textbf{新息过程。} 定义
+\[
+\widetilde B_t(x)=X_t(x)-\int_0^t b_{s,x}(X_s)\,ds.
+\]
+
+漂移有界且渐进可测。对 \(s<t\) 以及 \(A\in\mathcal F_s^0\)，利用未来 Brownian 增量均值为零、\eqref{eq:3.8} 和有界 Fubini，得到
+\[
+\mathbb E[\mathbf1_A(\widetilde B_t(x)-\widetilde B_s(x))]=0.
+\]
+
+所以每个坐标都是同一原始滤过下的连续可积鞅。记底层概率空间的零测集族为 \(\mathcal N\)，定义同一个完备、右连续滤过
+\[
+ \mathcal F_s=\bigcap_{u>s}(\mathcal F_u^0\vee\mathcal N).
+\]
+完备化不改变条件期望。取 \(s_j\downarrow s\) 且 \(s_j<t\)，原始鞅性质给出
+\[
+ \mathbb E[\widetilde B_t(x)\mid\mathcal F_{s_j}^0\vee\mathcal N]
+ =\widetilde B_{s_j}(x).
+\]
+再由反向鞅收敛和估计
+\[
+\mathbb E|\widetilde B_{s_j}(x)-\widetilde B_s(x)|
+\le\sqrt{s_j-s}+(s_j-s)
+\]
+
+可得 \(\mathbb E[\widetilde B_t(x)\mid\mathcal F_s]=\widetilde B_s(x)\)。因此，所有坐标在上述同一个滤过下仍为鞅。有限变差修正不改变二次协变差，所以
+\[
+[\widetilde B(x),\widetilde B(y)]_t=\mathbf1_{\{x=y\}}t.
+\]
+
+对任意有限个互不相同的坐标和 \(\lambda\in\mathbb R^k\)，Itô 公式表明
+\(\exp(i\lambda\cdot\widetilde B_t+|\lambda|^2t/2)\) 在有限时间区间上是真鞅，故
+\[
+\mathbb E\!\left[
+e^{\,i\lambda\cdot(\widetilde B_t-\widetilde B_s)}
+\mid\mathcal F_s\right]
+=e^{-|\lambda|^2(t-s)/2}.
+\]
+
+这识别出独立于过去、协方差为 \((t-s)I\) 的中心正态增量。于是整个可数场具有乘积 Wiener 律。
+
+方程 \eqref{eq:3.6} 的路径唯一性给出
+\[
+X=\mathcal Z_K(\widetilde B).
+\]
+
+在整数时刻 \(m\)，用 \(X_m(x)>m/2\) 判断 \(\eta_x\) 的错误概率至多为 \(e^{-m/8}\)。由 Borel--Cantelli 和 \(W\) 的可数性，\eqref{eq:3.7} 几乎必然同时恢复所有坐标。故 \(\Psi_K(\widetilde B)\sim\mathbf P^K\)。 \(\square\)
+
+\subsection{等变性、核参数和均匀标签}
+
+取一个把 Lebesgue 测度推到 Wiener 测度的 Borel 映射
+\(\psi:[0,1]\to C_0([0,\infty),\mathbb R)\)，并定义
+\[
+\Phi_K(u)=\Psi_K\bigl((\psi(u_x))_{x\in W}\bigr).
+\]
+
+这样的映射可由二进制位编码的独立正态变量和逐次二进网格上的 Brownian 桥构造；在构造失败的零测集上指定零路径。每个站点使用同一映射。
+
+\S{}\S{}3.1--3.4 中的有限和、积分和极限都与指标集双射交换，逐坐标映射 \(\psi\) 也如此。因此对任意双射 \(\theta:W\to W'\)、任意核 \(K\) 和任意输入 \(u\)，
+\[
+\Phi_{\theta K\theta^{-1}}(\theta u)
+=\theta\Phi_K(u).
+\tag{3.9}\label{eq:3.9}
+\]
+
+该恒等式对每个输入成立。命题 3.2 和 \eqref{eq:3.7} 给出对 \((K,u)\) 的联合 Borel 依赖，引理 3.3 给出正确分布，故定理 A 得证。若核等变，则
+\(\gamma Q\gamma^{-1}=Q\)，\eqref{eq:3.9} 即因子恒等式。空指标集采用唯一的空映射。 \(\square\)
+
+\textbf{命题 3.4（对角酉不变性）.}\label{prop:gauge}
+若 $D$ 是任意对角酉算子，则对每个输入 $u$，
+\begin{equation}\label{eq:gauge}
+ \Phi_{DKD^*}(u)=\Phi_K(u).
+\tag{3.10}
+\end{equation}
+\textbf{证明。}
+对角酉共轭保持核元的模，因而保持窗口 $F_n(x)$；它也保持每个有限主子式，故由\eqref{eq:2.1}保持全部 $p_F^K(\sigma)$。于是式\eqref{eq:3.2}的漂移、Picard 迭代及式\eqref{eq:3.7}的解码逐输入相同。\hfill$\square$
+
+\section{随机根图与自由均匀生成森林}
+
+自由均匀生成森林（FUSF）是有限连通耗尽上均匀生成树的弱极限，其中不识别边界顶点。连线均匀生成森林（WUSF）则先将有限顶点集的外部识别为同一个边界顶点，删除自环，再取弱极限。两种极限都存在且不依赖耗尽方式；有限连通图上二者均为均匀生成树\cite{BLPS}。
+
+构造只需从顶点标签产生独立的无向边标签，再对 FUSF 的传递电流核应用定理 A。计算核时可临时选择参考定向；命题~3.4保证采样结果不依赖这个选择。
+
+\subsection{图因子}
+
+令 $\mathcal G_*$ 为局部有限、连通、简单根图同构类所成的标准 Borel 空间。标记空间取 Polish 空间，带标记图空间采用有限根标记球生成的 Borel 结构。图因子是一条保留底图、且与换根相容的 Borel 规则：换根后得到同一个无根输出。等价地，顶点标记是从该顶点观察整张图的 Borel 函数；边标记是从两个端点观察整张图的 Borel 函数，且关于端点对称\cite[\S2.1]{ARS}。
+
+给定图后，每个顶点持有独立均匀标签。输入根图律可以是 $\mathcal G_*$ 上的任意 Borel 概率律；定义不要求幺模性，也不要求度数有统一上界。
+
+\subsection{无向边核与参考定向}
+
+临时给每条无向边选择一个参考方向，以边为坐标定义 $\ell^2(E(G))$。令 $\mathcal C_G$ 为有限圈的有向流所张成空间的闭包，并置
+\begin{equation}\label{eq:4.1}
+ Q_G=I-P_{\mathcal C_G}.
+\tag{4.1}
+\end{equation}
+传递电流定理给出 $\mathbf P^{Q_G}=\operatorname{FUSF}_G$\cite[Theorem~7.8]{BLPS}。改变参考方向相当于以对角符号矩阵 $D$ 共轭 $Q_G$；命题~3.4给出
+\begin{equation}\label{eq:4.2}
+ \Phi_{DQ_GD^*}(u)=\Phi_{Q_G}(u).
+\tag{4.2}
+\end{equation}
+因此可以在任意编号代表上计算，而无须选择一个自同构不变的定向。
+
+\textbf{引理 4.1（根图空间上的可测实现）.}
+将上述核与无向边标签代入定理 A，得到带标记根图同构类上的 Borel 输出，并与换根交换。
+
+\textbf{证明。}
+使用\cite[\S2, p.~1461]{AL}的 Borel 编号代表；其标记空间重编码仅用于可测实现。顶点编号为 $\mathbb N$ 的有限初段或整个 $\mathbb N$。设 $\mathscr B$ 是输入同构类空间，则实际无向边纤维为
+\begin{equation}\label{eq:4.3a}
+ \mathscr E=\{(b,i,j):b\in\mathscr B,\ i<j,\ i\sim j\text{ 于代表图 }b\}.
+\tag{4.3a}
+\end{equation}
+这些纤维保留每条实际边，而不是把同一自同构轨道内的边识别起来。在代表图中从小编号指向大编号。取根部半径 $n$ 球内的全部圈流，按固定次序作 Gram--Schmidt，跳过零向量，便得到其张成空间的投影。该有限计算的矩阵元为 Borel 函数。有限球穷尽每个圈，故投影强收敛到 $P_{\mathcal C_G}$，给出纤维积上联合 Borel 的 $Q_G(e,e')$。
+
+只为实现而固定 $\mathbb N^2$ 的一个枚举，将每个有限边纤维拉回有限初段，将无限纤维拉回 $\mathbb N$。定理 A 的联合 Borel 性给出这些坐标中的输出，再运回实际边上。纤维大小的可数分割和有限标记球事件验证整体可测性。
+
+不同编号代表之间的同构诱导边纤维的双射，可能同时反转某些参考方向。采样器的重标号自然性和 \eqref{eq:4.2}分别消去这两个选择，故在每个输入上得到同一输出；换根同理。即使编号代表依赖输入标签，也可在概率计算中先固定图的一个代表，结果不变。\hfill$\square$
+
+\subsection{顶点标签、无向边标签与分布}
+
+把每个顶点标签拆成连续键 $A_v$ 及独立均匀槽 $B_{v,0},B_{v,1},\ldots$，所有这些变量相互独立。令
+\begin{equation}\label{eq:4.3}
+ r_v(w)=\#\{z\sim v:A_z<A_w\},\qquad
+ Y_{\{v,w\}}=(B_{v,r_v(w)}+B_{w,r_w(v)})\bmod1.
+\tag{4.3}
+\end{equation}
+这是关于端点对称、处处定义的 Borel 规则。几乎必然键值互异；给定键后，每条边使用两个独有的“顶点---槽位”对，故各 $Y_e$ 相互独立且均匀。局部有限性保证秩有限，简单图保证同一顶点的不同邻边使用不同槽。
+
+定义
+\begin{equation}\label{eq:4.4}
+ \varphi(G,U)=\Phi_{Q_G}\bigl(Y(G,U)\bigr).
+\tag{4.4}
+\end{equation}
+引理~4.1给出联合 Borel 性和换根相容性。给定固定图后，定理 A 与传递电流定理识别全部有限边集上的包含概率为 $\det(Q_G)_F$，故输出恰为 FUSF。单顶点图对应空边集及确定的空森林。这证明推论 A1；同一公式也说明 $G\mapsto\operatorname{FUSF}_G$ 是 Borel 概率核。\hfill$\square$
+
+\subsection{局部表述与标签约定}
+
+Timár 的局部表述要求：给定任意误差容忍度，可用某个有限半径的根带标记球，以更小错误概率预测根及其关联边的状态\cite[\S2]{Tim}。上述 Borel 图因子蕴含此性质：有限带标记球生成输入 $\sigma$-代数，条件期望逼近根星输出；若度数无统一上界，先截断到高概率的有界度事件。逆向恢复图因子还需要不同根之间的相容性，见附录 A.2。
+
+在简单图约定下，推论 A1 覆盖\cite{Tim}引言提出的一般 FUSF 因子问题。其 Theorems~1、2(1) 和 Corollary~5处理常返与不变顺从等情形，包括更强的有限编码结论；\cite[Theorem~1.4]{ARS}处理瞬态随机根图上的 WUSF。本文得到普通可测图因子。
+
+简单图假设与顶点标签约定有关：两个顶点之间若有两条不可区分的平行边，交换它们固定全部顶点输入，而均匀生成树必须恰选一条，故对应的多重图命题不成立。有限图上顶点源与边源也不等价：$K_2$ 的单个边标签不能等变地产生两个独立的非退化顶点标签。式~\eqref{eq:4.3}使用的是本证明所需的顶点到边方向。
+
+
+\section{任意可数群上的 Fuglede--Kadison 比较}
+保持行列式的插值与有限维微分比较已写入本工作的早期稿\cite[第2--3节]{FK26}。本节完整给出论证，并处理奇异核及补集。
+
+为证明定理 B，固定可数群 \(\Gamma\) 及正收缩 \(Q\in R(\Gamma)\)，并沿用第 1.2 节的迹和行列式约定。证明机制是从 \(Q\) 通向标量核的一条路径。沿路径，行列式保持不变，而每个递增事件的概率下降。下列有限维计算提供所需单调性。
+
+\subsection{有限维微分比较}
+
+设有限集 \(V\) 上 \(0<C<I\)。对 \(i\in V\) 和 \(A\subseteq V\setminus\{i\}\)，令
+\[
+q_i(A)=\mathbf P^C(i\in X\mid X\setminus\{i\}=A),\qquad
+\Delta_i f(A)=f(A\cup\{i\})-f(A).
+\]
+
+所有配置概率均为正。令 \(L=C(I-C)^{-1}\)，则 \(\mathbf P^C(X=A)=\det(I-C)\det L_A\)。对 \(A\cup\{i\}\) 与 \(A\) 的配置概率取比，再用 Schur 补，得到
+\[
+\frac{q_i(A)}{1-q_i(A)}
+=L_{ii}-L_{iA}L_A^{-1}L_{Ai}
+=\min_{\substack{v_i=1\\\operatorname{supp}v\subseteq A\cup\{i\}}}v^*Lv.
+\tag{5.1}\label{eq:5.1}
+\]
+
+增加 \(A\) 会扩大极小化区域。当 \(A=V\setminus\{i\}\) 时，右端为
+\(1/(L^{-1})_{ii}\)。因 \(L^{-1}=C^{-1}-I\)，
+\[
+q_i(A)\ge\frac1{(C^{-1})_{ii}}.
+\tag{5.2}\label{eq:5.2}
+\]
+
+
+对 \(2^V\) 上任意实函数 \(f\)，有精确导数恒等式
+\[
+\left.\frac{d}{ds}\mathbf E^{C+s(I-rC)}f\right|_{s=0}
+=\sum_{i\in V}\mathbf E^C
+\left[(1-rq_i(X\setminus\{i\}))\Delta_i f(X\setminus\{i\})\right].
+\tag{5.3}\label{eq:5.3}
+\]
+
+验证只需在基函数 \(f_B(X)=\mathbf1_{\{B\subseteq X\}}\) 上计算。\(I\) 的贡献是
+\(\sum_{i\in B}\det C_{B\setminus\{i\}}\)，即
+\(\det(C_B+sI_B)\) 的导数；\(C\) 的贡献是 \(|B|\det C_B\)，即
+\(\det((1+s)C_B)\) 的导数。再用条件期望把
+\(\mathbf1_{\{i\in X\}}\) 替换为 \(q_i(X\setminus\{i\})\)，即得 \eqref{eq:5.3}。
+
+\textbf{引理 5.1（有限微分比较）.} 若 \(f\) 递增，且
+\[
+r\ge\max_i(C^{-1})_{ii},
+\tag{5.4}\label{eq:5.4}
+\]
+
+则由 \eqref{eq:5.2}，\eqref{eq:5.3} 中每个系数都非正，所以导数非正。整个论证均适用于复 Hermitian 矩阵，不含实矩阵元假设。
+
+\subsection{保持行列式的路径}
+
+先设存在 \(\varepsilon>0\) 使得 \(\varepsilon I\le Q\le(1-\varepsilon)I\)，并令
+\(p=\operatorname{FK}(Q)\)。对 \(t\ge0\) 定义
+\[
+a_t=\frac{p}{\operatorname{FK}(Q+tI)},\qquad
+K_t=a_t(Q+tI).
+\tag{5.5}\label{eq:5.5}
+\]
+
+因为 \(\tau(I)=1\)，有
+\[
+\operatorname{FK}(K_t)=a_t\operatorname{FK}(Q+tI)=\operatorname{FK}(Q).
+\]
+
+并且 \(K_0=Q\)，\(K_t\to pI\)（算子范数）。对 \(0<\lambda\le1\)，
+\(\lambda+t\ge(1+t)\lambda\)，故 \(a_t\le(1+t)^{-1}\)，从而 \(0<K_t<I\)。对谱积分求导，
+\(a_t'/a_t=-\tau((Q+tI)^{-1})\)。又
+\(K_t^{-1}=a_t^{-1}(Q+tI)^{-1}\)，所以
+\[
+K_t'=a_t(I-r_tK_t),\qquad r_t=\tau(K_t^{-1}).
+\tag{5.6}\label{eq:5.6}
+\]
+
+
+对有限 \(V\subset\Gamma\)，令 \(C_t=(K_t)_V\)。有逆压缩不等式
+\[
+C_t^{-1}\le P_VK_t^{-1}P_V.
+\tag{5.7}\label{eq:5.7}
+\]
+
+证明可由二次型变分公式看出：左侧二次型是
+\(2\operatorname{Re}\langle v,z\rangle-\langle K_tz,z\rangle\)
+在 \(z\in\ell^2(V)\) 上的上确界；允许所有
+\(z\in\ell^2(\Gamma)\) 后即得到右侧。等变性使 \(K_t^{-1}\) 每个对角元都等于 \(r_t\)，所以 \(C_t\) 满足 \eqref{eq:5.4}。
+
+沿 \eqref{eq:5.5} 应用 \eqref{eq:5.3}，每个递增柱函数的期望都随 \(t\) 下降。这里的概率单调性由引理 5.1 给出，路径上的核本身未必按算子序单调。令 \(t\to\infty\)，得到
+\[
+\mathbf P^{pI}\preceq\mathbf P^Q.
+\tag{5.8}\label{eq:5.8}
+\]
+
+这里使用的作用性质是逆核的所有对角元相等。对任意传递作用，若定义根谱几何平均
+\[
+ G_o(Q)=\exp\left(\int_{[0,1]}\log\lambda\,d\nu_{o,Q}(\lambda)\right),
+\]
+其中 $\nu_{o,Q}$ 为根向量的谱分布，并约定 $\exp(-\infty)=0$；对 $Q+tI$ 同样在其谱上积分。有隙时，同一路径取 $a_t=G_o(Q)/G_o(Q+tI)$，谱积分求导与逆压缩仍给出相同的支配界；奇异核按下一节正则化处理。一般传递作用的根状态未必是迹，所以这里使用根谱量 $G_o$，不将其无条件称为 Fuglede--Kadison 行列式。
+
+例如，在 \(\Gamma=C_2\) 的正则作用下，取等变核
+\[
+ Q=\frac14\begin{pmatrix}2&1\\1&2\end{pmatrix},
+ \qquad p=\operatorname{FK}(Q)=\frac{\sqrt3}{4}.
+\]
+其特征值为 \(1/4\) 和 \(3/4\)。由于 \(1/4<p<3/4\)，既没有 \(pI\le Q\)，也没有 \(Q\le pI\)，而式 \eqref{eq:5.8} 仍给出普通随机支配 \(\mathbf P^{pI}\preceq\mathbf P^Q\)。
+
+\subsection{奇异核与上界}
+
+对一般 \(0\le Q\le I\)，令
+\[
+Q_\epsilon=\frac{Q+\epsilon I}{1+2\epsilon}.
+\]
+
+它们在两个谱端点都有间隙，并在范数中收敛到 \(Q\)。同时
+\[
+\log\operatorname{FK}(Q_\epsilon)
+=\int\log(\lambda+\epsilon)\,d\nu_Q(\lambda)-\log(1+2\epsilon)
+\longrightarrow\log\operatorname{FK}(Q),
+\]
+
+即便极限为 \(-\infty\) 亦然。这由对数积分减去共同上界后的单调收敛得到。由 \eqref{eq:2.1}，有限柱概率收敛，故 \eqref{eq:5.8} 可传到极限。
+
+\(\mathbf P^Q\) 的补集律是 \(\mathbf P^{I-Q}\)，取补集会反转随机序。对 \(I-Q\) 应用 \eqref{eq:5.8}，便得到定理 B 以及
+\[
+p_+(Q)=1-p_-(I-Q).
+\tag{5.9}\label{eq:5.9}
+\]
+
+
+若 \(\ker Q\ne\{0\}\)，零点谱投影非零；群迹忠实性给出零点处正谱质量，故
+\(\operatorname{FK}(Q)=0\)。反之不成立：一个单射核的负对数积分也可能发散。定理 B 在这两种情形都只给出平凡下参数 \(0\)，并不意味着\textbf{最佳}下参数必为零；第 6 节会区分二者。定理 B 得证。 \(\square\)
+
+\section{尖锐性与反例}
+
+\subsection{有限群与顺从群}
+
+若 \(|\Gamma|=n<\infty\)，等变性给出
+\(\operatorname{FK}(Q)=(\det Q)^{1/n}\)。若
+\(\mathbf P^{pI}\preceq\mathbf P^Q\)，用“整个群都被占据”的事件检验便有
+\(p^n\le\det Q\)。结合定理 B 和 \eqref{eq:5.9}，得到 \eqref{eq:C1}，奇异核也包括在内。
+
+对可数顺从群，所需的行列式逼近正是 \cite[Theorem 1.4]{LiT}。以 \(\mathcal N\Gamma\) 表示配有典范迹的群 von Neumann 代数；对其中的矩阵正算子 \(g\in M_d(\mathcal N\Gamma)\)，该定理给出
+\[
+\det_{\mathcal N\Gamma}(g)
+=\inf_{\varnothing\ne F\subset\Gamma\text{ 有限}}
+      (\det g_F)^{1/|F|}
+=\lim_F(\det g_F)^{1/|F|}.
+\tag{6.1}\label{eq:6.1}
+\]
+
+这里 \(g_F\) 是在 \(\ell^2(F)^d\) 上的压缩。极限沿越来越左不变的有限集之网，因此也沿每个 Følner 序列成立；矩阵迹不作归一化。只要求正性，不要求可逆、整系数或有限生成；行列式可以为零。取 \(d=1,g=Q\)。左右正则约定由 \(x\mapsto x^{-1}\) 诱导的酉算子互换，且保持典范迹并重标号有限压缩，所以无 Følner 左右侧问题。
+
+任何有限的“全占据”事件都给出
+\[
+p^{|F|}\le\det Q_F
+\quad\text{若 }\mathbf P^{pI}\preceq\mathbf P^Q.
+\]
+
+在 \eqref{eq:6.1} 中取下确界，得到 \(p\le\operatorname{FK}(Q)\)；定理 B 给出最佳参数的反向不等式。\eqref{eq:5.9} 再给出上参数。故 \eqref{eq:C1} 对所有可数顺从群成立；特别地，此时
+\(\operatorname{FK}(Q)=0\) 强制 \(p_-(Q)=0\)。
+
+格点前身 \cite[Theorem 5.11]{LS} 把 \(\mathbb Z^d\) 上的下参数 \(p_-(Q)\) 识别为 Fourier 乘子的几何平均，上参数 \(p_+(Q)\) 则为 \(1\) 减去补乘子的几何平均。\eqref{eq:6.1} 给出任意顺从群上对应的行列式步骤；不需要 Li--Thom 的熵或代数作用定理。
+
+\subsection{正则树上的计算}
+
+令 \(T_d\) 为 \(d\)-正则树，\(d\ge3\)，把每条边从一个二分部定向到另一个二分部。顶点上的邻接算子记为 \(\mathcal A\)，\(\Delta=dI-\mathcal A\)，并令
+\(\nabla f(e)=f(\operatorname{head}e)-f(\operatorname{tail}e)\)。则
+\[
+\Pi=\nabla\Delta^{-1}\nabla^*
+\tag{6.2}\label{eq:6.2}
+\]
+
+是到闭梯度空间的正交投影，其 DPP 为 WUSF \cite[Theorem 7.8]{BLPS}。这里 \(\Delta\) 可逆，因为带权 Schur 估计给出
+\(\|\mathcal A\|\le2\sqrt{d-1}<d\)。
+
+令
+\[
+r=\frac1{d-1},\qquad c=\frac{d-1}{d(d-2)}.
+\]
+
+Green 核为
+\[
+\Delta^{-1}(x,y)=cr^{\operatorname{dist}(x,y)}.
+\tag{6.3}\label{eq:6.3}
+\]
+
+验证如下：列向量平方可和；\(dr=1+(d-1)r^2\) 给出远离 \(y\) 的调和方程；\(dc(1-r)=1\) 给出 \(y\) 处单位质量。因此
+\(\Pi(e,e)=2c(1-r)=2/d\)。
+
+先证
+\[
+\mathbf P^{rI}\preceq\mathbf P^\Pi.
+\tag{6.4}\label{eq:6.4}
+\]
+
+这正是\cite[\S11, proof of Theorem~11.1]{BLPS}通过 Wilson 算法得到的下支配：该文将树度数写作 $d+1$、参数写作 $1/d$，换成本文约定便为 $1/(d-1)$。下面计算匹配的上限制及补核阈值。
+
+匹配的上限制来自有限连通边集。若 \(F\) 是含 \(m\) 条边的有限子树，则
+\[
+\det\Pi_F
+=r^m\left(1+\frac{d-2}{d}m\right).
+\tag{6.5}\label{eq:6.6}
+\]
+
+在 \(m+1\) 个顶点上令
+\(R_{xy}=r^{\operatorname{dist}(x,y)}\)，\(D_F\) 为定向关联矩阵，则
+\(\Pi_F=D_F(cR)D_F^*\)。树的关联余子式给出，对每个正定顶点矩阵 \(C\)，
+\[
+\det(D_FCD_F^*)=\det C\,\mathbf1^*C^{-1}\mathbf1.
+\]
+
+把有限树定根，并用新息表示
+\(Z_v=rZ_{\operatorname{parent}v}+\sqrt{1-r^2}\xi_v\)、\(Z_o=\xi_o\)，其中 \((\xi_v)\) 为相互独立的标准正态变量，得到
+\[
+\det R=(1-r^2)^m,\qquad
+\mathbf1^*R^{-1}\mathbf1=1+\frac{m(1-r)^2}{1-r^2}.
+\]
+
+具体地，同一个三角变量变换给出逆协方差的二次型
+\[
+ z^*R^{-1}z=|z_o|^2+
+ \frac{1}{1-r^2}\sum_{v\ne o}|z_v-rz_{\operatorname{parent}v}|^2;
+\]
+取 \(z=\mathbf1\)，即得第二个等式。
+
+代入 \(c(1-r^2)=r\) 和 \((1-r)/(1+r)=(d-2)/d\)，即得 \eqref{eq:6.6}。以全占据事件检验并令 \(m\to\infty\)，任何被 \(\mathbf P^\Pi\) 支配的伯努利参数都不超过 \(r\)，故
+\[
+p_-(\Pi)=\frac1{d-1}.
+\tag{6.6}\label{eq:6.7}
+\]
+
+
+固定一个顶点 \(v\)，令 \(S\) 为与 \(v\) 相接的全部边。梯度 \(\nabla\delta_v\) 非零、支撑在 \(S\) 上，且属于 \(\Pi\) 的像，因此 \(\Pi_S\) 有特征值 \(1\)。因此该星全空的概率为零；参数 \(p<1\) 的乘积律却给此事件正概率，所以不可能支配 \(\mathbf P^\Pi\)。故
+\[
+p_+(\Pi)=1.
+\tag{6.7}\label{eq:6.8}
+\]
+
+
+\subsection{\(C_3*C_3\) 上的反例}
+
+取
+\[
+\Gamma=\langle a,b:a^3=b^3=e\rangle=C_3*C_3.
+\]
+
+其 Bass--Serre 树的两类顶点为
+\(\Gamma/\langle a\rangle\) 与 \(\Gamma/\langle b\rangle\)，以 \(g\in\Gamma\) 编号的边连接
+\(g\langle a\rangle\) 和 \(g\langle b\rangle\)。自由积的约化正规形表明这是一棵连通三正则树。左平移在边上自由传递，并保持两部之间的方向。因此边上的 \eqref{eq:6.2} 属于单个正则轨道的 \(R(\Gamma)\)。
+
+该群是 sofic 的：有限群 sofic，而 \cite[Theorem 1]{ES} 的自由积情形保持 sofic 性。因此，这个例子也位于 ICM 猜想原本的 sofic 语境内。
+
+\(\Pi\) 的迹为 \(2/3\)。它是投影，所以谱分布为
+\(\frac13\delta_0+\frac23\delta_1\)。于是
+\[
+\operatorname{FK}(\Pi)=0<\frac12=p_-(\Pi),\qquad
+p_+(I-\Pi)=\frac12<1=1-\operatorname{FK}(\Pi).
+\tag{6.8}\label{eq:6.9}
+\]
+
+\(\Pi\) 与其补分别否定下界和上界的逐核精确性。
+
+即使去掉两个谱端点，失败仍存在。令
+\[
+\widehat Q=\frac{I+63\Pi}{128}.
+\]
+
+对任意 DPP 核 \(K\)，与独立 Bernoulli\((q)\) 场取并，会把核变成
+\(qI+(1-q)K\)；再以保留率 \(s\) 独立稀疏，则核乘以 \(s\)。两种操作都保持已有的逐坐标包含耦合。从 \eqref{eq:6.4} 出发，取
+\(q=1/64,s=1/2\)，得到
+\[
+p_-(\widehat Q)\ge\frac{65}{256},\qquad
+\operatorname{FK}(\widehat Q)
+=\left(\frac1{128}\right)^{1/3}
+ \left(\frac12\right)^{2/3}
+=\frac18.
+\tag{6.9}\label{eq:6.10}
+\]
+
+取补集同样给出严格上界反例。附录 B 把 \(\widehat Q\) 换成一个显式有限支撑群代数核，同时保留间隙。定理 C 的全部反例陈述得证。 \(\square\)
+
+\subsection{一致界与后续问题}
+
+定理 C 区分逐核尖锐性与只依赖一个行列式值的一致界。在顺从群上，界对每个核都精确；在非顺从情形中，$C_3*C_3$ 上的有隙有限支撑反例否定一般逐核精确性，包括\cite[Conjecture~5.7]{ICM}的 sofic 范围。
+
+若下界只能使用 \(\operatorname{FK}(Q)\)，上界只能使用
+\(\operatorname{FK}(I-Q)\)，则定理 B 在每个群上一致尖锐：标量核 \(Q=pI\) 实现每个行列式值并取到两个阈值。若允许界同时使用两个行列式值，则可以询问在固定二元数据下阈值的可能区域；标量例只覆盖 \((p,1-p)\) 这条线，本文没有确定线外区域。
+
+反例可沿子群继承。若 \(H\le\Gamma\)，在每个左陪集上放置同一 \(H\)-核，并把跨陪集矩阵元置零，就得到 \(R(\Gamma)\) 中的核；单位元处谱分布不变，DPP 是各陪集过程的乘积。限制耦合到一个陪集以及独立复制耦合表明
+\(\operatorname{FK},p_-,p_+\) 都不变，有限支撑也保持。因此，任何包含 \(C_3*C_3\) 的可数群都有上述反例，不论该大群是否已知 sofic。
+
+为便于定位问题，定义
+\[
+\delta(Q)=\inf_{\varnothing\ne F\subset\Gamma\text{ 有限}}
+                (\det Q_F)^{1/|F|}.
+\]
+
+全占据事件和定理 B 给出
+\(\operatorname{FK}(Q)\le p_-(Q)\le\delta(Q)\)。顺从性通过 \eqref{eq:6.1} 使两端相等；非顺从时可以不等，而且仅检验全占据事件未必决定所有递增事件上的随机序。尚未解决：哪些群对每个核都有逐点尖锐 FK 界，以及非顺从群上哪些个别核仍有此性质。
+
+\clearpage
+\section{任意可数群上的相对转移与不变耦合}\label{sec:cd}
+
+本节证明任意可数群正则作用下的不变单调耦合与尖锐迹范数界。核心是一个相对构造：已经给定具有指定行列式分布的配置后，加入独立标签，将它变成另一个指定分布的配置，并控制单位元处的改变概率。证明先处理有谱隙的有限支撑正增量，再以可和的改变概率构造一般核的实际极限。最后，为取得精确的单调性，只对联合分布取弱极限。
+
+\subsection{约定与相对纯生过程}\label{cd:setup}
+
+令 $\Gamma$ 为可数离散群，$e$ 为其单位元。左、右正则表示约定为
+\[
+\lambda_g\delta_h=\delta_{gh},\qquad
+\rho_g\delta_h=\delta_{hg^{-1}}.
+\]
+记 $R(\Gamma)=\lambda(\Gamma)'=\rho(\Gamma)''$，并记
+\[
+\mathcal C=\overline{\operatorname{span}\{\rho_g:g\in\Gamma\}}^{\|\cdot\|}
+\subseteq R(\Gamma)
+\]
+为右卷积表示中的约化群 $C^*$ 代数。其典范迹为
+$\tau(T)=\langle T\delta_e,\delta_e\rangle$。下文核均为 $R(\Gamma)$ 中的复 Hermitian 正收缩；有限矩阵的非归一化迹写成 $\operatorname{tr}$。配置空间
+$\Omega=\{0,1\}^{\Gamma}$ 采用乘积拓扑及左作用
+$(gx)_i=x_{g^{-1}i}$。对配置 $x$，$P_x$ 是到其占据坐标的正交投影，$x^c$ 表示补配置。核 $K$ 的行列式分布仍记为 $\mathbf P^K$。
+
+本节的相对映射以 $(x,u)$ 为输入，其中 $u$ 是独立于初始配置的正则 iid 标签。每个坐标可以携带可数条独立随机通道；将这些通道编码进一个均匀标签不改变正则 iid 源。所构造的映射对固定核处处 Borel、逐输入等变。本节不要求这些相对映射随所有核同时可测，也不声称它们具有有限编码半径。
+
+\textbf{定理 7.1（有限支撑相对纯生过程）.}
+设 $C,T\in R(\Gamma)$，$v=T\delta_e$ 具有有限支撑 $S$，并且存在 $\epsilon>0$ 使
+\begin{equation}
+K_t=C+tTT^*,\qquad
+\epsilon I\le K_t\le(1-\epsilon)I\quad(0\le t\le1).
+\label{cd:gappedpath}
+\end{equation}
+给定 $X\sim\mathbf P^C$ 和独立正则 iid 标签，存在上述意义的相对映射，产生路径 $(X_t)_{0\le t\le1}$，满足 $X_0=X$、每个坐标至多由 $0$ 变为 $1$ 一次，并且
+$X_t\sim\mathbf P^{K_t}$。纯生性在每个输入上成立。
+
+若 $v=0$，取常值路径即可。以下设 $S$ 非空。唯一需要引用的有限 DPP 比较事实是：有限 Hermitian 正收缩按算子序有序时，相应 DPP 按随机序有序，见 \cite[Theorem 2.1]{LT}。其余相对构造将在下文给出。
+
+\subsection{任意边界配置下的条件核}\label{cd:conditional}
+
+本小节固定 $t$，暂将 $K_t$ 简记为 $K$。对任意配置 $x$，不论它是否典型，定义
+\begin{equation}
+G_x=(K-P_{x^c})^{-1},\qquad J_x=2P_x-I.
+\label{cd:inverse}
+\end{equation}
+这是处处有定义的，因为
+\begin{equation}
+K-P_{x^c}=\tfrac12J_x[I+J_x(2K-I)],\qquad
+\|2K-I\|\le1-2\epsilon,\qquad \|G_x\|\le\epsilon^{-1}.
+\label{cd:neumann}
+\end{equation}
+由几何级数展开，$G_{t,x}w$ 对每个固定向量 $w$ 都连续依赖于 $(t,x)$：乘积拓扑中的 $x$ 收敛使 $J_x$ 强收敛，有限个因子的乘积保持逐向量连续性，而级数余项一致趋零。因此
+$\{G_{t,x}w:0\le t\le1,\ x\in\Omega\}$ 是 $\ell^2(\Gamma)$ 中的紧集。
+
+对有限 $F\subset\Gamma$，令 $E=F^c$，定义全外部边界条件核
+\begin{equation}
+N_F(t,x)=K_{F,F}-K_{F,E}
+       (K_{E,E}-P_{x^c\cap E})^{-1}K_{E,F}.
+\label{cd:conditionalformula}
+\end{equation}
+压缩算子同样满足 \eqref{cd:neumann}，故公式合法。这个核只依赖 $x|_E$，并满足
+\begin{equation}
+\epsilon I_F\le N_F(t,x)\le(1-\epsilon)I_F.
+\label{cd:conditionalgap}
+\end{equation}
+为说明这一点，先只条件化有限多个外部坐标。若当前条件核在某个坐标的对角元为 $p$，其与剩余坐标的交叉列为 $k$，那么再条件化该坐标占据或空缺，剩余核分别变为
+\begin{equation}
+N_{\mathrm{occ}}=N_0-kk^*/p,\qquad
+N_{\mathrm{vac}}=N_0+kk^*/(1-p).
+\label{cd:onecondition}
+\end{equation}
+占据条件下，$K\ge\epsilon I$ 的 Schur 补给出下界，上界由减去正算子保持；空缺条件下，对 $I-K$ 作同一论证给出上界，下界由加上正算子保持。于是每一步都有 $p\in[\epsilon,1-\epsilon]$，两端谱隙不变。公式还说明：把一个外部坐标从空缺改为占据会使剩余条件核减小。
+
+现说明有限条件化确实收敛到 \eqref{cd:conditionalformula}，而不仅是形式上的 Schur 补。写
+$M=K_{E,E}-P_{x^c\cap E}$，令有限集 $H\uparrow E$。对固定 $w\in\ell^2(E)$，有限逆矩阵作用的误差满足
+\begin{align}
+&\bigl\|(P_HMP_H|_{\ell^2(H)})^{-1}P_Hw
+                  -P_HM^{-1}w\bigr\|\notag\\
+&\hspace{2em}\le\epsilon^{-1}
+ \|P_HM(I-P_H)M^{-1}w\|.
+\label{cd:compressioninverse}
+\end{align}
+这里有限逆矩阵以零延拓到 $E$。由上一段的紧向量像性质，右端对 $(t,x)$ 一致趋零；$M$ 的范数也一致有界。对 $K_{E,F}$ 的有限多列使用同一论证，便得到有限条件核一致收敛。因而 \eqref{cd:conditionalgap} 及对边界占据的反单调性传到极限。特别地，若 $x\le y$，则
+\begin{equation}
+N_F(t,y)\le N_F(t,x).
+\label{cd:antitone}
+\end{equation}
+对 $\mathbf P^{K_t}$ 使用条件期望的鞅收敛，再由有限 DPP 概率对核的连续性，可知给定整个外部配置后的条件分布正是
+$\mathbf P^{N_F(t,x)}$。这为每个固定 $t$ 给出条件律的一个版本；后续不需要在不可数多个时刻同时选择条件律零集。
+
+\subsection{共同配置上的列估计与质量传输}\label{cd:sensitivity}
+
+令 $j\notin F$，以 $x^j$ 表示翻转坐标 $j$ 后的配置。关键单点估计为
+\begin{equation}
+\left|\operatorname{tr}\bigl(N_F(t,x^j)-N_F(t,x)\bigr)\right|
+\le\epsilon^{-1}\sum_{s\in F}|G_{t,x}(s,j)|^2.
+\label{cd:flipbound}
+\end{equation}
+其证明保留原配置处的逆矩阵，这一点将在求和时使用。设
+$H=K_{E,E}-P_{x^c\cap E}$、$A=N_F(t,x)-P_{x^c\cap F}$，并令
+$w=K_{F,E}H^{-1}\delta_j$。分块逆公式给出
+\[
+G_x(F,j)=-A^{-1}w,\qquad w=-A G_x(F,j).
+\]
+由 $0\le N_F\le I$ 得 $-I\le A\le I$，故
+$\|w\|\le\|G_x(F,j)\|$。若翻转为 $0\to1$，Sherman--Morrison 公式给出
+\[
+N_F(t,x^j)-N_F(t,x)=\frac{ww^*}{1+H^{-1}(j,j)}.
+\]
+把其他外部坐标全部条件化后，若 $j$ 的占据概率为 $p$，则
+$H^{-1}(j,j)=-1/(1-p)$。分母倒数的绝对值为 $(1-p)/p\le\epsilon^{-1}$。逆向翻转相应得到 $p/(1-p)\le\epsilon^{-1}$。结合 $\|w\|$ 的界即得 \eqref{cd:flipbound}。
+
+各块用 $g\in\Gamma$ 标记为 $gS$；即使不同标记给出同一个集合，也保留重数。每个坐标恰在 $|S|$ 个标记块中。因此，对同一个 $t,x,j$ 有
+\begin{equation}
+\sum_{g\in\Gamma}
+ \left|\operatorname{tr}\bigl(N_{gS}(t,x^j)-N_{gS}(t,x)\bigr)\right|
+\le |S|\epsilon^{-1}\|G_{t,x}\delta_j\|^2
+\le |S|\epsilon^{-3}.
+\label{cd:column}
+\end{equation}
+其中含 $j$ 的块的实际变化为零，因为条件核不依赖块内配置。另一方面，对固定有限 $F$，\eqref{cd:neumann} 后的紧性及 $G_{t,x}$ 自伴性给出一致的行尾界：
+\begin{equation}
+\sup_{t,x}\sum_{j\notin V}\sum_{s\in F}|G_{t,x}(s,j)|^2
+\longrightarrow0\qquad(V\uparrow\Gamma).
+\label{cd:rowtail}
+\end{equation}
+这里的求和仍发生在同一个配置上，并未把每个矩阵元的上确界分别求和。
+
+设 $L\le U$ 是任意具有联合不变分布的随机配置，令
+$d=\mathbb P(L_e\ne U_e)$。则
+\begin{equation}
+\mathbb E\operatorname{tr}\bigl(N_S(t,L)-N_S(t,U)\bigr)
+\le |S|\epsilon^{-3}d.
+\label{cd:meantrace}
+\end{equation}
+为证明它，写 $D_j=\mathbf1_{\{L_j\ne U_j\}}$，独立取均值为一的指数变量 $\xi_j$，并插值
+\[
+Z_j(r)=L_j+D_j\mathbf1_{\{\xi_j\le r\}},\qquad r\ge0.
+\]
+令 $f_F(x)=\operatorname{tr}N_F(t,x)$。当 $x_j=0$ 时记
+$b_{F,j}(x)=f_F(x)-f_F(x^j)\ge0$；若 $j\in F$ 则记为零。先只允许有限多个坐标翻转，有限生成元公式给出期望变化的积分。令这些有限集穷尽 $\Gamma$ 时，固定有限部分由连续性收敛，余项由 \eqref{cd:flipbound} 与 \eqref{cd:rowtail} 一致控制。因此
+\begin{equation}
+\mathbb E[f_S(L)-f_S(U)]
+=\int_0^\infty\mathbb E\sum_j
+ D_j\mathbf1_{\{\xi_j>r\}}b_{S,j}(Z(r))\,dr.
+\label{cd:generatorinterpolation}
+\end{equation}
+可以先积分至有限时间，再利用 $Z(r)\to U$ 与有界收敛令时间趋于无穷。
+
+对角平移不变性及非负求和给出正则作用的质量传输恒等式
+\begin{align}
+&\mathbb E\sum_jD_j\mathbf1_{\{\xi_j>r\}}b_{S,j}(Z(r))\notag\\
+&\quad=\mathbb E\left[
+ D_e\mathbf1_{\{\xi_e>r\}}\sum_g b_{gS,e}(Z(r))\right]
+\le |S|\epsilon^{-3}d e^{-r}.
+\label{cd:masstransport}
+\end{align}
+恒等式也可直接把左端第 $j$ 项平移 $j^{-1}$ 后相加得到；此时 $j^{-1}S$ 遍历所有标记块。列和中的每一项都在同一个随机配置 $Z(r)$ 处计算，故可使用 \eqref{cd:column}。最后一步只用 $\xi_e$ 与初始分歧独立。积分即得 \eqref{cd:meantrace}；全过程不需要群的顺从性。
+
+\subsection{有限正流及出生率的区间振幅}\label{cd:flows}
+
+在固定标记集 $S$ 上，令 $p_N(\eta)=\mathbf P^N[\eta]$ 为一个有隙有限核的完整配置概率，定义
+\begin{equation}
+b_N(\eta)=\left.\frac{d}{dh}p_{N+hvv^*}(\eta)\right|_{h=0}.
+\label{cd:derivative}
+\end{equation}
+有限布尔立方体的向上边写成 $(\eta,i)$，其中 $\eta_i=0$，对应边列向量
+$c_{\eta,i}=\delta_{\eta+\delta_i}-\delta_\eta$。我们需要非负边流 $q_N(\eta,i)$，其流入减流出为 $b_N$，而且选择须连续、定量可控。
+
+对充分小的 $h>0$，有限 DPP 比较给出从 $p_N$ 到 $p_{N+hvv^*}$ 的单调耦合。把其中每个有序配置对沿向上边路径分解，再除以 $h$，便得到散度为
+$(p_{N+hvv^*}-p_N)/h$ 的非负边流。其总质量等于
+\[
+h^{-1}\bigl(\mathbb E_{N+hvv^*}|\eta|-\mathbb E_N|\eta|\bigr)
+=\|v\|^2.
+\]
+有限维紧性于是说明 $b_N$ 属于边列生成的闭多面锥。
+
+以下构造在整个锥上给出 Lipschitz 正流选择。令
+$m(b)=\sum_\eta|\eta|b(\eta)$。每个边列满足 $m(c_{\eta,i})=1$，所以锥截面 $m(b)=1$ 正是有限多个边列的凸包。对该多面体作一个有限三角剖分，在每个顶点选择一个可行非负边流；在每个单形上仿射插值，并沿射线齐次延拓，在原点取零。相邻单形在公共面上使用相同顶点值，故选择连续；它在有限个锥上分段线性，因而 Lipschitz。散度、非负性及总质量在插值和齐次延拓下保持。因此可选得
+\begin{equation}
+\operatorname{div}q_N=b_N,\qquad q_N\ge0,
+\qquad \sum_{\eta,i:\eta_i=0}q_N(\eta,i)=\|v\|^2.
+\label{cd:flow}
+\end{equation}
+选定 $S$ 内的一次有限标记后，在所有平移块上运输同一个选择；不需要选择整个群的更新顺序。
+
+由逐次条件化及 \eqref{cd:conditionalgap}，
+\begin{equation}
+p_N(\eta)\ge\epsilon^{|S|}.
+\label{cd:pointlower}
+\end{equation}
+完整配置概率及其方向导数都是有限矩阵元的多项式。因此有限状态出生率
+\begin{equation}
+r_N(\eta,i)=q_N(\eta,i)/p_N(\eta),\qquad \eta_i=0,
+\label{cd:blockrate}
+\end{equation}
+在有隙核的紧集上有界，并 Lipschitz 依赖于 $N$。常数可以依赖 $\epsilon,S,v$，无需维数一致性。
+
+记 $v_g=T\delta_g=\lambda_gv$。在每个 $gS$ 上，用核
+$N_{gS}(t,x)$ 和增量 $v_gv_g^*$ 定义上述块率，再将所有含 $i$ 的块在 $i$ 处的贡献相加，得到 $a_i(t,x)$。最初对 $x_i=0$ 定义；对任意 $x$，约定先把 $x_i$ 强制置零再取值。因为有关块的条件核只看块外，这个约定不改变任何真正的出生率。每个坐标仅有 $|S|$ 项，故存在有限 $M$ 使
+\[
+0\le a_i(t,x)\le M,
+\qquad a_{gi}(t,gx)=a_i(t,x).
+\]
+这些率联合连续于 $(t,x)$。
+
+给定确定配置 $L\le U$，写
+\[
+a_i^-(t;L,U)=\inf_{L\le x\le U}a_i(t,x),\qquad
+a_i^+(t;L,U)=\sup_{L\le x\le U}a_i(t,x).
+\]
+若 $(L,U)$ 的分布不变，则存在固定有限常数 $c$，对所有 $t$ 有
+\begin{equation}
+\mathbb E\bigl[a_e^+(t;L,U)-a_e^-(t;L,U)\bigr]
+\le c\,\mathbb P(L_e\ne U_e).
+\label{cd:oscillation}
+\end{equation}
+证明如下。对含根的一个标记块，如果 $L,U$ 在块内有分歧，则由率有界及并集界，其期望贡献至多为常数乘 $|S|d$。若块内无分歧，整个区间的局部配置模式固定，只有条件核变化。由 \eqref{cd:antitone}，所有中间条件核位于两个端点条件核之间。对 Hermitian 矩阵 $E$ 与 $D\ge0$，
+\begin{equation}
+-D\le E\le D\quad\Longrightarrow\quad
+\|E\|_1\le\operatorname{tr}D.
+\label{cd:matrixinterval}
+\end{equation}
+事实上，分别在 $E$ 的正、负谱子空间上取迹，得
+$\operatorname{tr}E_+\le\operatorname{tr}(P_+D)$ 和
+$\operatorname{tr}E_-\le\operatorname{tr}(P_-D)$；相加即得结论。对任意两个中间条件核应用此式，再用 \eqref{cd:blockrate} 的 Lipschitz 性，振幅由端点条件核之差的迹控制。\eqref{cd:meantrace} 给出其期望界；对含根的有限多个标记块相加，就得到 \eqref{cd:oscillation}。
+
+\subsection{共同 Poisson 钟与收缩包络}\label{cd:envelopes}
+
+每个坐标 $i$ 配备独立 Poisson 标记集，定义在
+$[0,1]\times[0,M]$ 上，强度为 $dt\,dz$。这些标记与初始配置 $X$ 独立。几乎必然每个坐标只有有限多个标记，没有时间重合或端点时间标记。标记 $(t,z)$ 是该坐标的一次出生提议，是否接受由 $z$ 与当时出生率比较决定。
+
+我们不对无穷多个坐标的所有标记排序，而是逐轮构造上下包络。令 $L^{(0)}$ 为初始常值路径，$U^{(0)}$ 则在每个初始空坐标的第一个标记时刻置一。已构造上一轮后，$L^{(n+1)}_i$ 在第一个满足
+\[
+z<a_i^-(t;L^{(n)}(t-),U^{(n)}(t-))
+\]
+的自身标记处出生；$U^{(n+1)}_i$ 在第一个满足
+\[
+z\le a_i^+(t;L^{(n)}(t-),U^{(n)}(t-))
+\]
+的自身标记处出生。初始占据坐标始终不变。由于区间缩小时下确界增加、上确界减小，归纳得到
+\begin{equation}
+L^{(n)}\le L^{(n+1)}\le U^{(n+1)}\le U^{(n)}
+\quad\hbox{作为整条路径逐点成立}.
+\label{cd:nestedenvelopes}
+\end{equation}
+每个坐标的出生时刻只能来自其有限标记列表或 $+\infty$，所以该坐标的整条上下路径在有限轮后分别稳定。记极限为 $L^\infty,U^\infty$。
+
+固定输入及一个标记时刻，前跳配置区间构成递减的非空紧集，其交集就是极限区间。连续函数在递减紧集上的极值收敛到交集上的极值，因此上下极限满足相应阈值方程，唯一可能的含混是标记恰等于阈值。每一轮只使用初始配置与过去标记，故极限前跳路径及由其得到的阈值是可预测的。对任意可预测阈值 $b(t)$，Poisson 补偿公式给出
+\[
+\mathbb E\#\{(t,z):z=b(t)\}
+=\mathbb E\int_0^1\int_0^M\mathbf1_{\{z=b(t)\}}\,dz\,dt=0.
+\]
+对所有坐标和两个极限阈值取可数并，便排除了上述相等事件。
+
+上下极限具有联合不变分布。令
+$d(t)=\mathbb P(L_e^\infty(t)\ne U_e^\infty(t))$。根处首次出现分歧，只可能在上下阈值之间的一个标记处。因此补偿公式与 \eqref{cd:oscillation} 给出
+\begin{equation}
+d(t)\le\int_0^t\mathbb E\bigl[a_e^+(s)-a_e^-(s)\bigr]\,ds
+\le c\int_0^t d(s)\,ds.
+\label{cd:gronwall}
+\end{equation}
+Gronwall 不等式推出 $d(t)=0$。对所有坐标和有理时刻取可数交，并利用有限出生时刻列表，可得上下整条路径几乎必然相同。以此共同路径定义 $X_t$。
+
+还需要一种比适应解唯一性更强的逐输入结论。称路径 $Y$ 为同一初始配置、同一标记下的\emph{宽松解}，若它只在自身标记处出生；空坐标遇到严格低于自身当时率的标记必须接受，严格高于率的标记必须拒绝，等于率时可任选。任何这样的路径都被每一轮包络夹住。初始轮显然成立；若上一轮已经夹住它，则低于下阈值的标记也严格低于 $Y$ 的率，迫使 $Y$ 不晚于下包络出生；而 $Y$ 接受的任何标记都不高于上阈值，所以上包络必已出生。归纳得到
+\begin{equation}
+L^{(n)}\le Y\le U^{(n)}\qquad\hbox{对所有 }n.
+\label{cd:trapping}
+\end{equation}
+在包络重合的输入上，宽松解也唯一。这里不要求竞争路径具有不变分布或适应于钟的过滤；这一点将用于识别有限体积极限。
+
+所有包络操作都是 Borel 的：有限坐标标记列表的操作可测，连续率在配置盒上的上下确界可由盒内一个可数稠密族计算，逐坐标稳定极限也可测。标记正则性、包络重合及上述可数条件定义一个不变 Borel 满测集。在其补集上输出初始常值路径，便得到处处定义、逐输入等变且保持纯生性的映射。下面证明它具有所需边缘分布。
+
+\subsection{有限链识别精确边缘}\label{cd:marginals}
+
+对柱函数 $f$ 定义出生生成元
+\begin{equation}
+\mathcal L_t f(x)=\sum_{i:x_i=0}a_i(t,x)
+                     [f(x+\delta_i)-f(x)].
+\label{cd:generator}
+\end{equation}
+柱函数只看有限多个坐标，故此和有限。我们先证明
+\begin{equation}
+\frac d{dt}\mathbf P^{K_t}(f)
+=\mathbf P^{K_t}(\mathcal L_t f).
+\label{cd:forward}
+\end{equation}
+对一个标记块 $gS$ 加上 $hv_gv_g^*$，块外核和跨块矩阵元都不改变；因此块外 DPP 分布不变，而块内条件核恰好加上该秩一矩阵。对外部配置条件化后，\eqref{cd:flow} 的散度等式给出相应柱期望的方向导数。又有
+\[
+TT^*=\sum_{g\in\Gamma}v_gv_g^*
+\quad\hbox{强收敛},
+\]
+因为这是 $T(\sum_g\delta_g\delta_g^*)T^*$。与固定柱支撑相交的标记块只有有限多个；其他块的方向导数为零。将有关导数相加即得 \eqref{cd:forward}。
+
+仅有无穷系统的形式前向方程还不足以识别 $X_t$。为此，取有限 $\Lambda\subset\Gamma$，并对 $i\in\Lambda$、$\eta_i=0$ 定义有限状态率
+\begin{equation}
+\widehat a_i^\Lambda(t,\eta)
+=\mathbb E_{\mathbf P^{K_t}}
+       [a_i(t,X)\mid X_\Lambda=\eta].
+\label{cd:projectedrate}
+\end{equation}
+所有条件事件的概率至少为 $\epsilon^{|\Lambda|}$，所以该式处处有意义；率有界，且连续依赖 $t$。将 \eqref{cd:forward} 用于 $\Lambda$ 上每个完整配置的指示函数，恰得到以 \eqref{cd:projectedrate} 为率的有限纯生链的前向方程。其初始分布为 $\mathbf P^C|_\Lambda$。有限维线性常微分方程的唯一性于是给出该链在时刻 $t$ 的分布为
+\begin{equation}
+\mathbf P^{K_t}|_\Lambda.
+\label{cd:finitemarginal}
+\end{equation}
+
+现在取有限穷尽 $\Lambda\uparrow\Gamma$，把这些链全部放在同一初始配置、同一组坐标钟上：在 $\Lambda$ 内使用率 \eqref{cd:projectedrate}，外部坐标暂时冻结。记所得全配置路径为 $X^\Lambda$。对固定 $i$，当 $i\in\Lambda$ 时，
+\begin{align}
+&|\widehat a_i^\Lambda(t,x_\Lambda)-a_i(t,x)|\notag\\
+&\quad\le\sup_{y:\,y_\Lambda=x_\Lambda}
+              |a_i(t,y)-a_i(t,x)|\longrightarrow0
+\label{cd:uniformrates}
+\end{align}
+对 $(t,x)$ 一致成立，因为 $a_i$ 在紧参数空间上连续。
+
+对一个固定的正则标记输入，每个坐标的整条路径只有有限种可能。可数个有限离散空间的乘积具有序列紧性，因此任意子序列都可再取子序列，使每个坐标的整条路径最终固定。取这样的路径极限 $Y$。在某坐标的任一标记之前，逐坐标前跳配置收敛；结合 \eqref{cd:uniformrates} 及率的连续性，有限链在严格低于极限率的标记处接受、严格高于极限率时拒绝的性质传到极限。因此 $Y$ 是 \S\ref{cd:envelopes} 中的宽松解。选择子列可能破坏适应性，但 \eqref{cd:trapping} 并不需要适应性。由包络重合，所有可能极限都等于 $X$，故整个序列 $X^\Lambda$ 在共同输入上逐坐标、整条路径收敛到 $X$。
+
+对任意有限 $F$ 及 $t$，由有界收敛与 \eqref{cd:finitemarginal}，
+\begin{equation}
+\mathbb P(F\subseteq X_t)
+=\lim_{\Lambda\uparrow\Gamma}\mathbb P(F\subseteq X_t^\Lambda)
+=\det (K_t)_F.
+\label{cd:exactmarginal}
+\end{equation}
+包含概率通过容斥确定所有有限维分布，因此 $X_t\sim\mathbf P^{K_t}$，定理 7.1 得证。有限穷尽仅用于此处分布识别；定义相对映射的包络过程没有使用穷尽集来排列更新。\hfill$\square$
+
+有限范围包络还给出整路径的定量逼近，见附录~\ref{cd:finiterange}；以下一般核构造直接使用定理~7.1。
+
+\subsection{约化代数中的增量与折线}\label{cd:reduced}
+
+先将有限支撑正增量扩展到约化代数的严格正增量。设
+\begin{equation}
+D\in\mathcal C,\qquad D\ge\delta I>0,
+\qquad \epsilon I\le C\le C+D\le(1-\epsilon)I.
+\label{cd:strictincrement}
+\end{equation}
+令 $R_0=D$。若 $R_n$ 已定义，利用约化代数中有限支撑元素的范数稠密性，选有限支撑卷积算子 $T_n$，使
+\[
+\|T_nT_n^*-R_n/2\|\le\tfrac14\min\sigma(R_n),
+\qquad R_{n+1}=R_n-T_nT_n^*.
+\]
+于是
+\begin{equation}
+\tfrac14R_n\le R_{n+1}\le\tfrac34R_n,
+\qquad D=\sum_{n\ge0}T_nT_n^*
+\quad\hbox{按递增部分和范数收敛}.
+\label{cd:positivedecomp}
+\end{equation}
+每个有限阶段的余量仍严格为正，而且范数几何衰减。
+
+对这些增量依次在新随机通道上应用定理 7.1。所有中间核位于 $[C,C+D]$，故使用同一谱隙即可。输出配置逐坐标递增，因而在每个输入上有极限；由有限行列式的连续性，极限分布为 $\mathbf P^{C+D}$。相对转移保持逐输入的包含关系，而根的改变概率恰为
+\begin{equation}
+\mathbb P(X_e\ne Y_e)=\mathbb E(Y_e-X_e)=\tau D.
+\label{cd:incrementcost}
+\end{equation}
+取补配置即可得到对应的递减转移。
+
+再设 $K,L$ 都有谱隙 $\epsilon$，且 $D=L-K\in\mathcal C$。由连续泛函演算，$D_+,D_-\in\mathcal C$。取整数 $n$ 及 $\beta>0$，使
+\[
+\|D_+\|/n+\beta<\epsilon/2,
+\qquad 2n\beta<\eta.
+\]
+令 $C_j=K+jD/n$，$0\le j\le n$，通过中间上点
+\begin{equation}
+C_j\le E_j=C_j+D_+/n+\beta I\ge C_{j+1},
+\label{cd:polygon}
+\end{equation}
+从 $C_j$ 上升到 $E_j$，再下降到 $C_{j+1}$。两个正增量分别为 $D_+/n+\beta I$ 与 $D_-/n+\beta I$，都属于 $\mathcal C$ 且至少为 $\beta I$。各核仍有正谱隙，故前述转移可用。根处不匹配事件的三角不等式给出总费用至多
+\begin{equation}
+\sum_{j=0}^{n-1}\tau[(E_j-C_j)+(E_j-C_{j+1})]
+=\tau|D|+2n\beta<\tau|D|+\eta.
+\label{cd:reducedcost}
+\end{equation}
+这证明约化代数差的近优相对转移。由于路径含有上升和下降，终点即使有序，此构造也不必保持终点的包含关系。
+
+\subsection{强逼近与一般有隙相对接口}\label{cd:strong}
+
+\textbf{定理 7.2（一般近优相对转移）.}
+对任意固定正收缩 $K,L\in R(\Gamma)$ 及 $\eta>0$，存在处处 Borel、逐输入等变的相对映射，使给定 $X\sim\mathbf P^K$ 和独立正则 iid 标签后，输出 $Y\sim\mathbf P^L$，且
+\begin{equation}
+\mathbb P(X_e\ne Y_e)\le\tau|K-L|+\eta.
+\label{cd:nearoptimal}
+\end{equation}
+
+先证明有隙情形。设 $\epsilon I\le K,L\le(1-\epsilon)I$，令 $D=L-K$。我们需要有界的约化代数强逼近，而不要求 $D$ 属于 $\mathcal C$。具体地，存在自伴 $D_m\in\mathcal C$，满足
+\begin{equation}
+\|D_m\|\le\|D\|,\qquad D_m\longrightarrow D\ \hbox{强收敛},
+\qquad \tau|D_m|\longrightarrow\tau|D|.
+\label{cd:strongapprox}
+\end{equation}
+以下给出构造以区分强逼近与范数逼近。将 $D\delta_e$ 的卷积系数截断到递增有限逆闭集，得到自伴有限支撑算子 $S_m$。它们在每个有限支撑向量 $u$ 上满足 $S_mu\to Du$，但 $\|S_m\|$ 未必一致有界。由于 $S_m,D$ 自伴，
+\begin{equation}
+(S_m-\mathrm i I)^{-1}(D-\mathrm i I)u-u
+=(S_m-\mathrm i I)^{-1}(D-S_m)u\longrightarrow0.
+\label{cd:resolventapprox}
+\end{equation}
+预解式范数不超过一，且 $(D-\mathrm i I)$ 作用于有限支撑向量所得集合稠密，所以在稠密集上的收敛延拓为预解式的强收敛。对 $-\mathrm i$ 同理。由预解式生成的函数代数在 $C_0(\mathbb R)$ 中稠密，得到连续紧支撑泛函演算的强收敛。
+
+若 $D=0$，取恒等转移即可。否则，选实函数 $f\in C_c(\mathbb R)$，使它在 $[-\|D\|,\|D\|]$ 上等于恒等函数，并且 $\|f\|_\infty\le\|D\|$，定义 $D_m=f(S_m)$。那么 $D_m\in\mathcal C$，满足 \eqref{cd:strongapprox} 的前两项。有界自伴算子的强收敛经紧区间上的多项式逼近保持绝对值泛函演算，所以 $|D_m|\to|D|$ 强收敛；在 $\delta_e$ 处取矩阵元给出最后一项。
+
+连接强收敛与改变概率的是有限迹不等式：对自伴 $E\in R(\Gamma)$，
+\begin{equation}
+\tau|E|\le\sqrt{\tau(E^2)}=\|E\delta_e\|_2.
+\label{cd:tracecauchy}
+\end{equation}
+这是在 $\tau(I)=1$ 下的 Cauchy--Schwarz 不等式。
+
+选 $n$ 使 $\|D\|/n<\epsilon/2$，令 $C_j=K+jD/n$。对一步
+$C_j\to C_{j+1}$，置
+\[
+H_m=C_j+D_m/n.
+\]
+所有 $H_m$ 至少有 $\epsilon/2$ 的谱隙，且 $H_m-C_j$、$H_{m+1}-H_m$ 都属于 $\mathcal C$。利用 \S\ref{cd:reduced}，先从 $C_j$ 转到 $H_1$，再依次从 $H_m$ 转到 $H_{m+1}$，每次使用新的独立通道。
+
+从强逼近中抽取子列并重新编号，使
+\[
+\|(D_m-D)\delta_e\|\le e_m,
+\qquad \sum_m e_m<\infty,
+\]
+其中总和可按需任意小；同时可让 $\tau|D_1|$ 任意接近 $\tau|D|$。各转移的正余量 $\zeta_m$ 也取可和且总和任意小。由 \eqref{cd:tracecauchy}，第 $m$ 次后续转移的根失配概率至多为
+\begin{equation}
+\tau|H_{m+1}-H_m|+\zeta_m
+\le(e_m+e_{m+1})/n+\zeta_m.
+\label{cd:summablecost}
+\end{equation}
+这些概率可和。Borel--Cantelli 引理给出根配置最终稳定；各阶段具有联合不变分布，故同样结论在每个坐标成立，群的可数性再给出所有坐标同时稳定。由 $H_m\to C_{j+1}$ 的矩阵元收敛，有限行列式识别极限为 $\mathbf P^{C_{j+1}}$。
+
+从给定输入到这个极限的根费用不超过
+\begin{equation}
+\frac{\tau|D_1|}{n}
++\frac1n\sum_{m\ge1}(e_m+e_{m+1})
++\sum_{m\ge0}\zeta_m,
+\label{cd:onestepcost}
+\end{equation}
+其中 $\zeta_0$ 是第一步的余量。它可以小于 $\tau|D|/n$ 加任意指定的正数。将 $n$ 个步骤组合，并使余量总和小于 $\eta$，就得到有隙情形的 \eqref{cd:nearoptimal}。
+
+此处取得的是同一输入上的实际逐坐标极限。稳定事件是 Borel 且不变的；在其补集上返回该步的初始配置，便使映射处处定义并保持等变。新通道与已有配置独立，保证每次应用相对转移时都具有所要求的输入分布。
+
+\subsection{去除两个谱端点的间隙}\label{cd:endpoints}
+
+现在允许 $K,L$ 含有 $0$ 或 $1$ 的谱。给定 $X\sim\mathbf P^K$，用独立标签以概率 $s\in(0,1/2)$ 翻转每个坐标，得到 $X^{(s)}$。其根改变概率恰为 $s$，且其核为
+\begin{equation}
+K_s=sI+(1-2s)K.
+\label{cd:smoothing}
+\end{equation}
+事实上，对有限 $F$，条件于 $X$ 后各次翻转独立，故
+\begin{align}
+\mathbb P(F\subseteq X^{(s)})
+&=\mathbb E\prod_{i\in F}[s+(1-2s)X_i]\notag\\
+&=\sum_{J\subseteq F}s^{|F|-|J|}(1-2s)^{|J|}\det K_J
+=\det (K_s)_F.
+\label{cd:flipdeterminant}
+\end{align}
+这一步给出一个真实相对映射，而非仅在分布层面对核作正则化。
+
+先用有隙接口从 $K_s$ 转到 $L_s=sI+(1-2s)L$。再取
+$s=s_0>s_1>\cdots\downarrow0$，依次从 $L_{s_m}$ 转到 $L_{s_{m+1}}$，各阶段使用可和的小余量。相邻核的迹距离为
+\begin{equation}
+\tau|L_{s_m}-L_{s_{m+1}}|
+=(s_m-s_{m+1})\tau|I-2L|
+\le s_m-s_{m+1}.
+\label{cd:endpointtelescoping}
+\end{equation}
+所有有限阶段都有正谱隙；不要求这些谱隙具有统一正下界。总失配概率可和，因此再次得到共同输入上的逐坐标稳定极限，有限行列式确定其分布为 $\mathbf P^L$。由不匹配事件的三角不等式，总根费用至多
+\begin{align}
+s+(1-2s)\tau|K-L|+s\tau|I-2L|+\sum_m\zeta_m
+&\le\tau|K-L|+2s+\sum_m\zeta_m.
+\label{cd:singularcost}
+\end{align}
+选择 $s$ 与余量总和，使最后两项小于 $\eta$，即得定理 7.2。在不变 Borel 的稳定失败集上返回原始初始配置，完成处处映射的定义。\hfill$\square$
+
+特别地，以空配置为输入，即 $K=0$，定理 7.2 为每个固定核 $L$ 给出一个正则 iid 等变采样器。这也说明本节相对转移的证明无需预先调用定理 A 的采样器。
+
+\subsection{不变单调耦合与尖锐 \texorpdfstring{$\bar d$}{bar-d} 界}\label{cd:joining}
+
+\textbf{定理 7.3（任意可数群的不变耦合）.}
+对任意可数群 $\Gamma$ 与正收缩 $A,B\in R(\Gamma)$，
+\begin{equation}
+\bar d(\mathbf P^A,\mathbf P^B)\le\tau|A-B|.
+\label{cd:sharpbound}
+\end{equation}
+若 $A\le B$，则存在不变耦合 $(X,Y)$，满足 $X\le Y$ 几乎处处，并且
+\begin{equation}
+\bar d(\mathbf P^A,\mathbf P^B)=\tau(B-A).
+\label{cd:orderedequality}
+\end{equation}
+
+\textbf{证明。}
+在 $X\sim\mathbf P^A$ 上加入独立正则 iid 标签，应用定理 7.2。相对映射等变，输入联合分布不变，因此输出 $(X,Y)$ 是不变 joining，且两边缘精确为 $\mathbf P^A,\mathbf P^B$。对每个 $\eta>0$ 都有根不匹配概率至多 $\tau|A-B|+\eta$；先对 joining 取下确界，再令 $\eta\downarrow0$，就得到 \eqref{cd:sharpbound}。
+
+若 $A\le B$，对这些近优 joining 记
+$p_{10}=\mathbb P(X_e=1,Y_e=0)$、$p_{01}=\mathbb P(X_e=0,Y_e=1)$。精确边缘给出
+\[
+p_{01}-p_{10}=\tau(B-A),\qquad
+p_{01}+p_{10}=\mathbb P(X_e\ne Y_e),
+\]
+从而
+\begin{equation}
+2p_{10}=\mathbb P(X_e\ne Y_e)-\tau(B-A)\le\eta.
+\label{cd:orderviolation}
+\end{equation}
+$\Omega\times\Omega$ 为紧可度量空间，故取 $\eta\downarrow0$ 的子列可使 joining 分布弱收敛。不变性与固定边缘在弱收敛下封闭；根逆序事件是开闭柱事件，由 \eqref{cd:orderviolation} 知其极限概率为零。不变性将该结论传到每个坐标，再用 $\Gamma$ 可数，得到 $X\le Y$ 几乎处处。
+
+任意耦合都满足
+\[
+\mathbb P(X_e\ne Y_e)\ge
+|\mathbb EY_e-\mathbb EX_e|.
+\]
+在有序核对上右端为 $\tau(B-A)$，而刚得到的单调 joining 正好达到这个费用，故 \eqref{cd:orderedequality} 成立。取 $A=0$、$B=pI$，$0<p\le1$，便知 \eqref{cd:sharpbound} 中的系数 $1$ 不能减小。\hfill$\square$
+
+也可从不变 joining 空间的紧性看出 $\bar d$ 的下确界总能取到：乘积 joining 保证其非空，而根不匹配指示函数连续。这里的紧性用于概率分布，未用于构造映射极限。尽管取弱极限前可以先用正则 iid 采样 $X$，使每个近优 joining 都来自共同 iid 输入，弱极限本身并不因此保留共同 iid 表示。
+
+作为有限版本，对有限指标集上的任意正收缩矩阵 $A,B$，也有
+\begin{equation}
+W_H(\mathbf P^A,\mathbf P^B)\le\operatorname{tr}|A-B|,
+\label{cd:finitehamming}
+\end{equation}
+其中 $W_H$ 为所有耦合中总 Hamming 距离期望的最小值。给出一个简短独立证明：令 $D=B-A$，对 $0\le k\le N$ 置
+\[
+R_k=\frac{(N-k)A+kB}{N+1},\qquad
+S_k=R_k+\frac{D_+}{N+1}\quad(k<N).
+\]
+由 $D_+\le I$，所有这些核仍是正收缩，且
+$R_k\le S_k\ge R_{k+1}$。有限 DPP 比较使每个有序段的最小 Hamming 费用等于其迹增量。沿
+$A,R_0,S_0,R_1,\ldots,S_{N-1},R_N,B$
+拼接耦合，由三角不等式得到
+\[
+W_H(\mathbf P^A,\mathbf P^B)
+\le\frac{\operatorname{tr}A+\operatorname{tr}B+
+                      N\operatorname{tr}|A-B|}{N+1}.
+\]
+令 $N\to\infty$ 即得 \eqref{cd:finitehamming}。在有限群上，平均平移后的耦合使其不变且不改变总费用，所以
+$\bar d=W_H/|\Gamma|$。
+
+\subsection{严格正约化增量的精确共同 iid 表示}\label{cd:restricted}
+
+\textbf{推论 7.4.}
+若 $0\le A\le B\le I$，并且
+\begin{equation}
+B-A\in\mathcal C,\qquad B-A\ge\delta I>0,
+\label{cd:restrictedhyp}
+\end{equation}
+则存在从同一正则 iid 输入产生 $(X,Y)$ 的处处 Borel 等变映射，使两边缘为 $\mathbf P^A,\mathbf P^B$，且 $X\le Y$ 在每个输入上成立。端点核允许奇异。
+
+\textbf{证明。}
+取 $0<\epsilon_0<\delta/2$。由 $B-A\ge\delta I$ 得
+$A\le(1-\delta)I$、$B\ge\delta I$，所以
+$A+\epsilon_0I$ 与 $B-\epsilon_0I$ 都有正谱隙。先以正则 iid 标签采样 $\mathbf P^{A+\epsilon_0I}$，再用 \S\ref{cd:reduced} 的单调相对转移到 $\mathbf P^{B-\epsilon_0I}$，得到 $X_0\le Y_0$。
+
+令 $\epsilon_n\downarrow0$。对下配置在补核上施行标量正增量转移，使
+$\mathbf P^{A+\epsilon_nI}$ 递减到 $\mathbf P^{A+\epsilon_{n+1}I}$；对上配置施行标量正增量转移，使
+$\mathbf P^{B-\epsilon_nI}$ 递增到 $\mathbf P^{B-\epsilon_{n+1}I}$。每个有限阶段都有正谱隙，标量增量严格为正且属于 $\mathcal C$。这些相对映射的逐输入包含性保证
+\begin{equation}
+X_{n+1}\subseteq X_n\subseteq Y_n\subseteq Y_{n+1}
+\qquad\hbox{在每个输入上成立}.
+\label{cd:exactorderedlimits}
+\end{equation}
+故逐坐标单调极限处处存在，保持 $X\subseteq Y$；有限行列式的连续性给出精确边缘 $\mathbf P^A,\mathbf P^B$。可数条独立通道仍可编码为同一正则 iid 输入。\hfill$\square$
+
+在森林情形中，Bowen 已对连通、局部有限、至多可数顶点的图及其在紧开拓扑下剩余顺从的自同构子群，构造不变 WUSF--FUSF 单调耦合\cite[Theorem~4.1]{Bowen04}。这一存在性结论没有提供共同 iid 映射。
+
+条件 \eqref{cd:restrictedhyp} 是上述精确共同输入结论的实质假设。对一般有序核对，定理 7.3 已证明不变单调 joining，但本节没有证明它能够由共同正则 iid 输入精确地产生。尤其不能仅从两个森林边缘分别为 iid 因子，就推出任意 Cayley 图的 WUSF 与 FUSF 存在保持包含关系的共同 iid 表示；后一个一般问题仍然保留。
+
+\clearpage
+\section{伯努利因子的非闭性}\label{sec:short}
+
+这一节给出 Lyons--Thom Question~7.6 的一个二元反例。证明组合了 Bowen 的零熵逆系统与 Seward 的有限生成分割定理。Bowen 已在综述的 Remark~22 中指出逆极限所给出的无限字母例子，并询问有限字母的改造\cite[\S5.3, Lemma~5.4; \S7.4, Remark~22]{BowenSurvey}。下面的短证完成这一改造；附录~\ref{sec:forest}~进一步把非闭性放入三个精确森林边缘固定的耦合空间。
+
+本节固定 $\Gamma=F(a,b)$。伯努利源均指正则作用 $(\gamma u)(g)=u(\gamma^{-1}g)$，底空间允许是任意标准概率空间；这等价于允许源 $[0,1]^\Gamma$。对遍历保测作用，记
+\[
+ h^{\mathrm{Rok}}_\Gamma(\Omega,\Pi)
+ =\inf\{H_\Pi(\alpha):\alpha\text{ 是可数生成分割}\}.
+\]
+所有熵使用自然对数，所有因子与同构在模零意义下理解。
+
+\subsection{零熵逆系统}
+
+\textbf{引理 8.1（Bowen 的逆系统）.}\label{short:inverse}
+令 $e_n=2^{-n-10}$，取二元分布 $\beta_n=(1-p_n,p_n)$，其中 $0<p_n<1/2$、$H(\beta_n)=e_n$。
+可选择伯努利移位 $B_n=(\{0,1\}^\Gamma,\beta_n^\Gamma)$ 之间的因子映射
+\begin{equation}\label{short:bonding}
+ \pi_n:B_{n+1}\longrightarrow B_n,
+\end{equation}
+使其逆极限 $(\Omega,\Pi)$ 是非原子、混合、本质自由的系统，并满足
+\begin{equation}\label{short:zero}
+ h^{\mathrm{Rok}}_\Gamma(\Omega,\Pi)=0,
+ \qquad (\Omega,\Pi)\text{ 不是任何正则伯努利移位的因子。}
+\end{equation}
+若 $X_n:\Omega\to B_n$ 为坐标映射，则 $\mathcal F_n=\sigma(X_n)$ 递增并生成 $\mathcal B(\Omega)$。
+
+\textbf{证明。}
+Bowen 的弱同构定理说，可数非顺从群上的任意两个非平凡伯努利移位互为因子\cite[Corollary~1.3]{Bowen}，故可选择 \eqref{short:bonding}。相容的有限层联合律给出标准概率空间上的逆极限；这也是\cite[Lemma~5.4]{BowenSurvey}的构造。任意两个有界函数可在 $L^2$ 中同时近似为某一有限层的函数，故各 $B_n$ 的混合性传给逆极限。它因子到非原子、本质自由的 $B_1$，因而自身也非原子、本质自由且非平凡。
+
+为记录后文需要的熵界，令 $\xi_n$ 是根坐标 $X_n(1_\Gamma)$ 的分割。由于 $p_n\le e_n/\log2$ 可和，Borel--Cantelli 表明根部尾序列几乎必然只有有限个 $1$；因此 $\bigvee_{n\ge r}\xi_n$ 模零为可数分割。其群名字恢复所有尾层，再由连接映射恢复低层，所以它生成 $\Omega$，且
+\[
+ H_\Pi\Bigl(\bigvee_{n\ge r}\xi_n\Bigr)
+ \le\sum_{n\ge r}e_n\longrightarrow0.
+\]
+故 Rokhlin 熵为零。另一方面，非顺从 sofic 群的每个非平凡伯努利因子具有正 Rokhlin 熵；这是 Kerr 的完全正 sofic 熵定理\cite{Kerr}与熵比较的推论，准确的因子结论及推导见\cite[Corollary~10.3 的证明]{Bowen}。自由群是非顺从 sofic 群，故得到 \eqref{short:zero}。\hfill$\square$
+
+\subsection{二元生成分割与共同空间上的逼近}
+
+\textbf{命题 E 的证明。}
+Seward 的有限生成分割定理适用于可数无限群在非原子标准概率空间上的遍历保测作用：若 Rokhlin 熵小于概率向量的 Shannon 熵，就存在具有该分布的生成分割\cite[Theorem~1.1]{Seward}。引理~8.1满足这些条件；取概率向量 $(1/2,1/2)$，得到二元生成观察 $f:\Omega\to\{0,1\}$。其名字
+\[
+ Z(\omega)_g=f(g^{-1}\omega)
+\]
+把 $(\Omega,\Pi)$ 模零同构到其过程律 $\lambda$，所以 $\lambda$ 不是 FIID。
+
+令 $f_n=\mathbf1\{\EE[f\mid\mathcal F_n]>1/2\}$。鞅收敛给出
+$\Pi(f_n\ne f)\to0$。因 $f_n$ 在第 $n$ 层可测，其名字律是 $B_n$ 的因子。若只要 FIID 近似，到此已足够。
+
+还可要求每个近似与 $B_n$ 同构。取 $r_n=2^{-n}$，则
+$h^{\mathrm{Rok}}_\Gamma(B_n)\le e_n<r_n\log2$。
+由\cite[Theorem~2.3]{Seward}，在 $B_n$ 中存在支持测度为 $r_n$ 的二元生成预分割；\cite[Lemma~2.2]{Seward}保证每个完整二元扩张都是生成分割。在其支持上按预分割修改 $f_n$，支持外保留 $f_n$，得到生成观察 $\widetilde f_n$，且
+\[
+ \Pi(\widetilde f_n\ne f)
+ \le\Pi(f_n\ne f)+r_n\longrightarrow0.
+\]
+令 $Z_n(\omega)_g=\widetilde f_n(g^{-1}\omega)$，其律 $\lambda_n$ 与 $B_n$ 同构。共同空间 $\Omega$ 上的 $(Z_n,Z)$ 给出真正的不变 joining，因而
+\begin{equation}\label{short:bard}
+ \bar d(\lambda_n,\lambda)
+ \le\Pi(\widetilde f_n\ne f)\longrightarrow0.
+\end{equation}
+所有过程都以 $\{0,1\}^\Gamma$ 为状态空间，故这已经否定 Question~7.6。\hfill$\square$
+
+非闭性说明，联合分布的收敛本身不足以传递 FIID 性；它不排除具有共同输入稳定性的特定极限构造。推论~7.4便给出这种正例。附录~\ref{sec:forest}~的强化保持 WUSF、FUSF 与差集的边缘不变；在那里失去因子表示的仍是联合律，而非三个边缘之一。
+
+\label{sec:mainend}
+
+\clearpage
+\appendix
+\section{两个定义边界}\label{sec:appendices}
+
+\subsection{源的指标集}
+
+令 \(\Gamma\) 为无限群，\(W\) 是带平凡作用的单点集，并取
+\(Q=[p]\)，\(0<p<1\)。目标是带平凡作用的非退化伯努利变量；定理 A 所用的 \(W\)-指标乘积源可直接提供它。但它不可能是正则 iid 移位 \(A^\Gamma\) 的因子：后者遍历，而到该目标的等变映射会产生概率为 \(p\) 的不变事件。
+
+遍历性可直接验证：用有限坐标柱事件逼近一个不变事件，再把这些坐标整体平移到与自身不交的位置。无限群中每个有限集都存在这样的平移。两个分离柱事件独立，令逼近误差趋零便得 \(p=p^2\)。因此，一般不能把定理 A 的 \(W\)-指标源替换为正则 \(\Gamma\)-指标源。
+
+\subsection{Borel 因子与局部逼近}
+
+按 \S{}4 的图因子定义，根处的 Borel 输出可由有限带标记球的函数在概率中逼近。反过来，若存在一套彼此相容的局部逼近且误差趋零，则沿几乎处处收敛的子列可定义 Borel 根输出。要成为图因子，不同根处的输出还必须拼成同一个带标记图。
+
+在输入输出的联合幺模耦合中，若根处发生分歧的概率为零，则质量传输原理表明：几乎必然所有顶点都没有分歧。具体地，对每个半径，让每个顶点向该半径内的全部坏点发送质量，再对可数个半径取并并使用连通性。因此，逆命题对“相容、联合幺模”的表述成立。本文的构造逐点就具备更强相容性，不需用幺模性补救。
+
+不能把条件弱化为“某个任意耦合中根输出局部可预测”。在 \((\mathbb Z,0)\) 上取 iid 标签 \(U\)，定义
+\[
+M_v=\mathbf1_{\{U_0<1/2\}}\mathbin{\mathrm{xor}}(v\bmod2).
+\]
+
+\(M\) 的边缘律是均匀的恰当二染色，根颜色由其标签决定；但该染色不是 iid 因子，因为平移二步在二染色空间上平凡，而 iid 移位限制到偶数平移仍遍历。这里的联合耦合 \((U,M)\) 不具有换根不变性。该例只否定从上述更弱条件推出图因子性质的说法；与 Timár 的比较仍使用前述相容带标记耦合。
+
+\section{一个明确的有限支撑反例}
+
+沿用第 6.3 节的三正则树与 \(\Gamma=C_3*C_3\)；\(\Delta,\nabla,\Pi\) 的记号见 \eqref{eq:6.2}，\(\widehat Q\) 见第 6.3 节。令
+\(\rho=2\sqrt2/3<19/20\)、\(N=255\)，并定义
+\[
+p_N(\Delta)=\frac13\sum_{k=0}^{N}(\mathcal A/3)^k,\qquad
+P_N=\nabla p_N(\Delta)\nabla^*,\qquad
+Q_N=\frac{I+63P_N}{128}.
+\tag{B.1}\label{eq:B.1}
+\]
+
+这三个算子均为实、自伴且有限传播的算子。固定的二部定向与群作用交织，所以 \(P_N\) 与 \(Q_N\) 的边核与正则作用交换；局部有限树上的有限传播在正则边轨道中意味着有限支撑。因此
+\(Q_N\in\mathbb C\Gamma\)。
+
+记 \(U=\mathcal A/3\)，几何级数余项为
+\[
+\Delta^{-1}-p_N(\Delta)
+=\frac13U^{N+1}(I-U)^{-1},\qquad
+\|\Delta^{-1}-p_N(\Delta)\|
+\le\frac{\rho^{N+1}}{3(1-\rho)}.
+\]
+
+结合 \(\|\nabla\|^2=\|\Delta\|<6\)，得到
+\[
+\epsilon:=\|Q_N-\widehat Q\|
+<\frac{63}{128}\,6\,\frac{\rho^{256}}{3(1-\rho)}
+<20(19/20)^{256}<\frac1{1024}.
+\tag{B.2}\label{eq:B.2}
+\]
+
+最后一步可完全精确验证：
+\[
+(20/19)^{16}=(1+1/19)^{16}
+>1+16/19+120/19^2=785/361>2.
+\]
+
+所以 \((19/20)^{256}<2^{-16}\)，进而
+\(20\cdot2^{-16}<2^{-10}\)。而
+\(2\sqrt2/3<19/20\) 平方后等价于 \(3200<3249\)。因此
+\[
+\frac7{1024}I<Q_N<
+\left(\frac12+\frac1{1024}\right)I<I,
+\]
+
+所以这个明确有限支撑算子满足全部正性与收缩前提。
+
+令
+\[
+L=(1/128-\epsilon)I+(63/128)\Pi.
+\]
+
+则 \(L\le Q_N\)。更一般地，若 \(a,b\ge0\) 且 \(0<a+b\le1\)，先与
+Bernoulli\((a/(a+b))\) 取并，再以保留率 \(a+b\) 稀疏，会把
+\(\mathbf P^\Pi\) 变为 \(\mathbf P^{aI+b\Pi}\)。对 Bernoulli\((1/2)\) 乘积测度与 \(\mathbf P^\Pi\) 的一个单调耦合施行同样的并集与稀疏化操作，得
+\(p_-(aI+b\Pi)\ge a+b/2\)。\(a=b=0\) 的情形显然成立。有限 DPP 序和可数压缩于是给出
+\[
+p_-(Q_N)\ge p_-(L)\ge\frac{65}{256}-\epsilon
+>\frac{259}{1024}.
+\tag{B.3}\label{eq:B.3}
+\]
+
+
+\(Q_N\) 与 \(\widehat Q\) 都以 \(mI\) 为下界，其中 \(m=7/1024\)。由对数的积分表示和预解式恒等式，
+\[
+\|\log Q_N-\log\widehat Q\|
+\le\epsilon\int_0^\infty(m+t)^{-2}\,dt
+=\epsilon/m<1/7.
+\]
+
+故
+\[
+\operatorname{FK}(Q_N)
+<\frac{e^{1/7}}8
+<\frac7{48}
+<\frac{259}{1024}
+<p_-(Q_N).
+\tag{B.4}\label{eq:B.4}
+\]
+
+中间不等式来自
+\(\log(7/6)=\int_1^{7/6}x^{-1}\,dx>1/7\)。补核 \(I-Q_N\) 给出有限支撑的严格上界反例。
+
+\section{有限类型核与行列式归一化}
+
+令 \(W=\Gamma\times S\)，其中 \(m=|S|\ge1\)。与该作用交换的有界算子构成代数
+\(M_m(R(\Gamma))\)；有限支撑群代数矩阵
+\(M_m(\mathbb C\Gamma)\) 只是其中一个子类。使用非归一化矩阵迹
+\[
+\tau_S(T)=\sum_{s\in S}
+\langle T\delta_{(e,s)},\delta_{(e,s)}\rangle,
+\qquad \tau_S(I)=m,
+\qquad \operatorname{FK}_S(Q)=\exp\tau_S(\log Q).
+\]
+
+
+\textbf{命题 C.1.} 对每个可数群和每个正收缩
+\(Q\in M_m(R(\Gamma))\)，
+\[
+\mathbf P^{\operatorname{FK}_S(Q)I}\preceq\mathbf P^Q
+\preceq\mathbf P^{(1-\operatorname{FK}_S(I-Q))I}.
+\tag{C.1}\label{eq:C.1}
+\]
+
+
+\textbf{证明。} 先设两个谱端点都有间隙，令
+\(p=\operatorname{FK}_S(Q)\)。把 \eqref{eq:5.5} 改为
+\[
+a_t=\frac{(1+t)^{m-1}p}{\operatorname{FK}_S(Q+tI)},\qquad
+K_t=a_t(Q+tI).
+\]
+
+则 \(K_0=Q\)、\(K_t\to pI\)，且同一谱不等式在总质量 \(m\) 的迹下仍给出
+\(a_t\le(1+t)^{-1}\)。令
+\[
+h_s(t)=\langle(Q+tI)^{-1}\delta_{(e,s)},\delta_{(e,s)}\rangle.
+\]
+
+每个 \(h_s(t)\ge(1+t)^{-1}\)，求导得到
+\[
+K_t'=a_t(I-r_tK_t),\qquad
+r_t=\frac{\sum_s h_s(t)-(m-1)/(1+t)}{a_t}
+\ge\max_s\frac{h_s(t)}{a_t}.
+\tag{C.2}\label{eq:C.2}
+\]
+
+这正是逆压缩后对每个轨道应用 \eqref{eq:5.4} 所需的逆核对角元界。\S{}5 的证明于是原样适用。正则化处理奇异核，取补集给出上界。 \(\square\)
+
+\eqref{eq:C.1} 中使用未归一化行列式，不能改用
+\(\operatorname{FK}_S(Q)^{1/m}\)。例如，平凡群上的核
+\[
+Q=\operatorname{diag}(1/4,3/4)
+\]
+给出两个独立坐标，参数分别为 \(1/4\) 与 \(3/4\)。最佳齐次下、上参数也分别为这两个数，而错误的归一化候选会给出
+\(\sqrt3/4\) 和 \(1-\sqrt3/4\)。
+
+当 \(m>1\) 时，\eqref{eq:C.1} 在顺从群上通常也不是逐核尖锐的。对 \(F\times S\) 使用 \cite[Theorem 1.4]{LiT} 只能得到
+\[
+\operatorname{FK}_S(Q)\le p_-(Q)
+\le\operatorname{FK}_S(Q)^{1/m},\qquad
+1-\operatorname{FK}_S(I-Q)^{1/m}
+\le p_+(Q)\le1-\operatorname{FK}_S(I-Q).
+\tag{C.3}\label{eq:C.3}
+\]
+
+这里 \(p_\pm\) 指所有类型共用一个参数。例如
+\(Q=pI_W\) 有 \(p_-(Q)=p\)，但
+\(\operatorname{FK}_S(Q)=p^m\)。不过，只使用单个行列式数据的一致界 \eqref{eq:C.1} 仍然尖锐：
+\(\operatorname{diag}(p,1,\ldots,1)\) 实现下阈值
+\(p=\operatorname{FK}_S(Q)\)，
+\(\operatorname{diag}(p,0,\ldots,0)\) 实现上阈值
+\(p=1-\operatorname{FK}_S(I-Q)\)。这些例子在每个群上都成立。
+
+最后，定理 A 直接适用于指标集 \(\Gamma\times S\)。其输入源 \([0,1]^{\Gamma\times S}\) 是以
+\([0,1]^S\) 为底空间的正则伯努利移位。因此，无论因子结论还是迹约定，都不需要把类型坐标识别起来，也不需要假设矩阵元为实数。
+
+\clearpage
+\section{固定森林边缘的因子耦合不闭性}\label{sec:forest}
+
+正文已用二元过程说明伯努利因子类不闭。本附录证明一个保持精确森林边缘的强化。
+本附录考察另一种极限问题：当联合分布本身由独立同分布标签生成时，这一性质是否在不变
+$\bar d$ 距离下保持？我们将在一张固定图上构造反例。两个边缘始终是这张图的连线与自由
+均匀生成森林，所有耦合始终单调并达到最小失配成本，甚至两森林的差集也有固定的投影
+行列式分布。发生变化的只是两个森林之间的配对关系。
+
+证明分为三个部分。菱形块的有限计数给出真实森林边缘及两个可逆的单调配对；一个
+伯努利逆系统提供不能由伯努利移位生成的信息；最后，相对生成分割把这一信息放进
+森林缺边处的配对选择中。为使最后一步不依赖未展开的编码断言，我们完整证明所需的
+掩码相对生成引理，包括诱导轨道关系、条件熵压缩以及小支撑修改。
+
+\subsection{过程空间、不变距离与详细结论}\label{b2:statement}
+
+设可数群 $\Gamma$ 作用在可数集 $W$ 上，且只有有限多个轨道。固定每个轨道恰取一个点的
+集合 $W_0$。对有限字母表 $A$ 上的两个 $\Gamma$-不变过程律 $\mu,\nu$，记
+$\mathcal J_\Gamma(\mu,\nu)$ 为它们的所有 $\Gamma$-不变 joining，即
+$A^W\times A^W$ 上具有指定边缘且在对角作用下不变的概率测度。采用
+Lyons--Thom 的求和规范\cite[\S7]{LT}：
+\begin{equation}\label{b2:barddef}
+ \bar d_W(\mu,\nu)
+ =\inf_{\rho\in\mathcal J_\Gamma(\mu,\nu)}
+       \sum_{w\in W_0}\rho\{(x,y):x(w)\ne y(w)\}.
+\end{equation}
+各项仅依赖所属轨道，因而该定义不依赖代表点的具体选择。乘积测度总是一个
+不变 joining，所以取下确界的集合非空。这里不除以 $|W_0|$。
+
+本附录中，正则伯努利移位指 $\Gamma$ 在 $(L^\Gamma,\kappa^\Gamma)$ 上的左移作用，其中
+$(L,\kappa)$ 为标准概率空间；一个过程为 FIID，是指其律是这类移位的可测等变因子。
+由于任意标准基分布可由一个均匀 $[0,1]$ 随机变量产生，这等价于使用
+$[0,1]^\Gamma$ 作为独立同分布源。所有因子与同构均在模零意义下理解。
+
+取 $\Gamma=F(a,b)$，令 $T$ 是其关于 $\{a,a^{-1},b,b^{-1}\}$ 的四正则 Cayley 树。
+每条无向边唯一写作 $e=(g,s)$，其中 $g\in\Gamma$、$s\in\{a,b\}$，端点为
+$p=g$、$q=gs$。把这条边替换为
+\[
+ p-u_e^0-q,\qquad p-u_e^1-q
+\]
+两条长度为二的路径，所得图记为 $G$。四条细边依次定向并编号为
+\begin{equation}\label{b2:edges}
+ 0:p\longrightarrow u_e^0,\quad 1:u_e^0\longrightarrow q,
+ \quad 2:p\longrightarrow u_e^1,\quad 3:u_e^1\longrightarrow q.
+\end{equation}
+左乘保持这些编号，于是
+\begin{equation}\label{b2:orbits}
+ W=E(G)=\Gamma\times\{a,b\}\times\{0,1,2,3\},\qquad
+ W_0=\{(1_\Gamma,s,i):s\in\{a,b\},\ 0\le i\le3\}.
+\end{equation}
+特别地，$W$ 恰有八个自由轨道。对有序森林对 $(X,Y)$，在每条细边记录联合符号
+$(\mathbf1_X(w),\mathbf1_Y(w))$。当 $X\subseteq Y$ 时，固定字母表为
+\begin{equation}\label{b2:alphabet}
+ A_* = \{(0,0),(0,1),(1,1)\}.
+\end{equation}
+
+\medskip
+\Needspace{12\baselineskip}\noindent\textbf{定理 D.1（固定森林边缘下的三字母非闭性）.}
+\emph{令 $\mu_W=\operatorname{WUSF}_G$、$\mu_F=\operatorname{FUSF}_G$。
+存在 $A_*^W$ 上的 $\Gamma$-不变联合律 $\lambda_n$ 和 $\lambda$，具有以下性质：}
+\begin{enumerate}
+ \item \emph{每个 $\lambda_n$ 都与一个 $32$ 点有限基的正则 $\Gamma$-伯努利移位同构；}
+ \item \emph{$\bar d_W(\lambda_n,\lambda)\longrightarrow0$，而 $\lambda$ 不是任何正则
+ $\Gamma$-伯努利移位的因子；}
+ \item \emph{在每个 $\lambda_n$ 以及 $\lambda$ 下，$X\subseteq Y$ 几乎处处成立，且
+ $X$、$Y$ 的边缘分别恒为 $\mu_W$、$\mu_F$；这些 joining 全都达到
+ $\bar d_W(\mu_W,\mu_F)=1$；}
+ \item \emph{$Y\setminus X$ 的边缘也固定。三个边缘 $X$、$Y$、$Y\setminus X$
+ 分别是下文式 \eqref{b2:kernels} 的投影 DPP，并且各自都是 FIID。}
+\end{enumerate}
+
+这一结论在正文命题 E 的非闭性之外，还固定了两森林及差集的三个边缘。
+Lyons--Thom Question~7.6 允许准传递指标集，故这里的八个自由轨道仍属其量词范围。若把 $W$ 上的独立标签按每个 $g\in\Gamma$ 打包，所得就是一个
+正则伯努利移位；反过来，也可只读取 $W$ 的一个自由轨道来产生正则源。因此，正则源与
+本指标集上的伯努利源在此因子问题中没有差别。定理所述不闭性发生在三字母联合律中；
+三个固定边缘各自的 FIID 性并未失效。
+
+\subsection{菱形图及有限均匀生成树的计数}\label{b2:finite}
+
+图 $G$ 是简单、连通、局部有限图；原顶点的度为 $8$，内部顶点的度为 $2$。
+它的顶点集有五个自由 $\Gamma$ 轨道，分别为原顶点轨道及四类内部顶点轨道。
+它也非顺从。事实上，对任意有限顶点集 $A$，记 $S$ 为其中的原顶点，$R$ 为其中的内部顶点。
+树 $T$ 中从 $S$ 到其补集的边至少有 $2|S|$ 条，每条这样的粗边对应两条边不交的路径，
+每条路径至少一次穿越 $A$ 的边界，故
+\[
+ |\partial_E A|\ge4|S|.
+\]
+两端均在 $S$ 中的粗边至多有 $|S|$ 条，其上的内部顶点至多有 $2|S|$ 个。
+$R$ 中其余每个顶点均有至少一条边离开 $A$，因此
+$|\partial_E A|\ge |R|-2|S|$。把这两个下界分别乘以 $3/7$ 和 $4/7$ 后相加，得到
+\begin{equation}\label{b2:cheeger}
+ |\partial_E A|\ge \frac47(|S|+|R|)=\frac47|A|.
+\end{equation}
+此外，$T$ 上的有限能量单位流可在每个菱形的两条路径上各分一半。一个菱形的有效电阻为
+$1$，所以这一替换保持流的能量，表明 $G$ 也是瞬逝的。
+
+先考虑任意有限连通无自环多重图 $H$，并对其每条边作相同的菱形替换。不同粗边的内部顶点
+保持互异，故平行粗边不影响以下讨论。记 $U=\{0,1,2,3\}$。一棵细图生成树在每个菱形内
+至少取两条边，否则有内部顶点孤立；至多取三条边，否则出现四边环。取两条边时，必须在
+$\{0,1\}$ 与 $\{2,3\}$ 中各取一条，恰有四种状态
+\begin{equation}\label{b2:states}
+ S_0=\{0,2\},\qquad S_1=\{0,3\},\qquad
+ S_2=\{1,2\},\qquad S_3=\{1,3\}.
+\end{equation}
+这些状态都不连接两个粗端点。取三条边时，状态为 $U\setminus\{j\}$，$j\in U$；
+这四种状态都连接粗端点。
+
+把使用三边状态的粗边集合记为 $M$。细图配置是一棵生成树，当且仅当 $M$ 是 $H$ 的
+生成树。必要性可从粗端点间的连通性及无环性看出：细图中连接不同粗端点的路径必须经过
+三边块；若 $M$ 有粗环，则在每个三边块内取端点间路径便得到细环。反过来，若 $M$ 是粗树，
+每条树边被替换为一棵连接其端点及内部顶点的树，其余两边块仅把内部顶点悬挂到已有粗顶点上，
+所以整体仍连通且无环。
+
+每个固定粗生成树 $M$ 都恰有
+\begin{equation}\label{b2:count}
+ 4^{|E(H)|}
+\end{equation}
+种细图装饰，因为无论粗边是否属于 $M$，它都各有四个合法状态。这一数目与 $M$ 无关。
+因此，细图均匀生成树的粗集合恰为 $H$ 的均匀生成树；给定 $M$ 后，各粗边块上的四种合法
+状态独立且等概率。这个计数将同时决定自由和连线的无限体积极限。
+
+\subsection{自由与连线极限}\label{b2:limits}
+
+用 $T$ 的有限连通子树 $H_m$ 穷尽整棵树，并把每条边及其内部顶点完整地纳入细图。
+$H_m$ 的生成树只有它自身，故上面的粗集合在每条已纳入的粗边上恒为 $1$。
+令 $m\to\infty$，得到
+\begin{equation}\label{b2:fusf}
+ Y_e=U\setminus\{J_e\},\qquad
+ (J_e)_{e\in E(T)}\text{ 独立且均匀分布于 }U.
+\end{equation}
+由自由均匀生成森林的定义，这就是 $\operatorname{FUSF}_G$。它事实上几乎处处是一棵连通
+无限树：任意两个粗顶点间的有限粗路径均被连接，每个内部顶点也接入该树。
+
+为得到连线极限，令 $V_m$ 为 $T$ 的有限顶点球，并取细顶点集
+\[
+ K_m=V_m\ \cup\ \{u_e^j:e\text{ 至少有一个端点在 }V_m,\ j\in\{0,1\}\}.
+\]
+把 $G\setminus K_m$ 中的顶点识别为一个边界顶点，删除由这一识别产生的自环。
+所剩有限细图恰好等于如下粗多重图的菱形化：保留 $V_m$ 内的粗边，把每条穿出 $V_m$ 的
+粗边的外端点接到一个共同的连线顶点。粗图可能有平行边，但没有自环；每个穿界菱形的
+两个内部顶点均属于 $K_m$，所以其两条长度二路径也完整保留。这说明计数时采用的边界条件
+正是细图的连线边界条件。
+
+对这个有限图使用式 \eqref{b2:count}，再对任意有限柱事件取极限，得到
+\begin{equation}\label{b2:wusf}
+ \begin{gathered}
+ M\sim\operatorname{WUSF}_T,\\
+ \mathcal L(X_e\mid M)=
+ \begin{cases}
+  \text{$\{U\setminus\{j\}:j\in U\}$ 上的均匀律},& M_e=1,\\
+  \text{$\{S_0,S_1,S_2,S_3\}$ 上的均匀律},& M_e=0,
+ \end{cases}
+ \end{gathered}
+\end{equation}
+其中给定整个 $M$ 后，各块条件独立。$K_m$ 穷尽 $G$，所以这正是
+$\operatorname{WUSF}_G$。
+
+粗树上任意一条边属于 $M$ 的概率为 $1/2$。可用连线有效电阻直接计算：删去这条边后，
+每个端点在其余三个分支中到无穷的电阻 $R$ 满足
+$R=(1+R)/3$，故 $R=1/2$。经连线无穷连接两个端点的替代通路电阻为 $2R=1$，
+与原边的单位电阻并联后有效电阻为 $1/2$。单位电导的传递电流公式
+\cite[\S4, Theorem~7.8]{BLPS}于是给出
+\begin{equation}\label{b2:coarsemarginal}
+ \PP(M_e=1)=\PP(M_e=0)=\frac12.
+\end{equation}
+
+后面还需要从独立标签产生 $M$。Angel--Ray--Spinka 的 WUSF 因子定理
+\cite[Theorem~4.1]{ARS}适用于连通、局部有限、瞬逝图，给出 WUSF 的顶点 IID 因子构造。
+本附录只将它用于确定的四正则树 $T$；这里所有条件均满足，顶点集又恰为正则 $\Gamma$ 轨道。
+因此 $M$ 是正则伯努利移位的因子。结合式 \eqref{b2:wusf} 的独立装饰，
+$\operatorname{WUSF}_G$ 也是 FIID；式 \eqref{b2:fusf} 已直接给出 FUSF 的独立块构造。
+
+\subsection{两个不相交的局部单调配对}\label{b2:pairing}
+
+定义 $U$ 上的两个置换 $p_0,p_1$：
+\begin{center}
+\begin{tabular}{c|c|c|c}
+ $i$ & $S_i$ & $p_0(i)$ & $p_1(i)$ \\
+ \hline
+ $0$ & $\{0,2\}$ & $1$ & $3$ \\
+ $1$ & $\{0,3\}$ & $2$ & $1$ \\
+ $2$ & $\{1,2\}$ & $3$ & $0$ \\
+ $3$ & $\{1,3\}$ & $0$ & $2$
+\end{tabular}
+\end{center}
+逐行有 $\{p_0(i),p_1(i)\}=U\setminus S_i$，故
+\begin{equation}\label{b2:match}
+ S_i\subset U\setminus\{p_t(i)\},\qquad t\in\{0,1\}.
+\end{equation}
+两种配对没有共同的有序对：由 $(S_i,U\setminus\{p_t(i)\})$ 可先读出 $i$，再从
+缺失边唯一判定 $t$。同时，每个 $p_t$ 都是置换，所以任何一种配对都把均匀的两边状态
+配到均匀的三边状态。
+
+现在给定任意不变背景 $(M,t)$，其中 $M$ 具有式 \eqref{b2:wusf} 的粗森林律，
+$t_e\in\{0,1\}$ 只需在 $M_e=0$ 时定义。另取独立于整个背景的
+$(I_e)_{e\in E(T)}$，各 $I_e$ 均匀分布于 $U$，并逐块设置
+\begin{equation}\label{b2:localmap}
+ (X_e,Y_e)=
+ \begin{cases}
+ (U\setminus\{I_e\},\ U\setminus\{I_e\}),&M_e=1,\\
+ (S_{I_e},\ U\setminus\{p_{t_e}(I_e)\}),&M_e=0.
+ \end{cases}
+\end{equation}
+显然 $X\subseteq Y$。给定完整背景 $(M,t)$ 后，$Y_e$ 仍在四个三边状态间独立均匀，
+因为每个 $p_{t_e}$ 都是置换。因此 $Y$ 的全律为式 \eqref{b2:fusf}，甚至独立于背景。
+$X$ 的条件律则不依赖 $t$，正好是式 \eqref{b2:wusf}。所以无论背景中的配对类型如何
+相关，两个森林边缘始终保持不变。
+
+差集也有同样的性质：
+\begin{equation}\label{b2:difference}
+ Y_e\setminus X_e=
+ \begin{cases}
+ \varnothing,&M_e=1,\\
+ \{p_{1-t_e}(I_e)\},&M_e=0.
+ \end{cases}
+\end{equation}
+给定背景后，它在每个缺失粗边块中独立均匀地选择一条细边；其条件律完全不依赖 $t$。
+
+与边缘中这一消失的信息相对，联合过程可以恢复全部背景。由
+$|X_e|=2+M_e$ 可读出 $M_e$；若 $M_e=0$，上面的表恢复 $I_e$ 和 $t_e$；
+若 $M_e=1$，共同的缺失边恢复 $I_e$。这些都是有限块上的确定性运算。
+下面将把非 FIID 信息存放在能够被联合过程读取、却不改变三个边缘的配对类型中。
+
+\subsection{一个零 Rokhlin 熵的伯努利逆系统}\label{b2:inverse}
+
+取正文引理~8.1的逆系统 $(\Omega,\Pi)$、伯努利层 $B_n$、坐标 $X_n$ 和连接映射。沿用 $e_n=2^{-n-10}$，并记
+\begin{equation}\label{b2:filtration}
+ \mathcal F_n=\sigma(X_n),\qquad
+ \mathcal F_n\uparrow\mathcal B(\Omega)\pmod0.
+\end{equation}
+该系统非原子、混合、本质自由，Rokhlin 熵为零且不是伯努利因子，均已在正文证明。
+
+本附录还需要相对 Rokhlin 熵。对遍历保测作用 $\Lambda\curvearrowright(Z,\eta)$ 及不变子 $\sigma$-代数 $\mathcal H$，定义
+\begin{equation}\label{b2:rokdef}
+ h^{\mathrm{Rok}}_\Lambda(Z,\eta\mid\mathcal H)
+ =\inf\{H_\eta(\alpha\mid\mathcal H):
+       \sigma_\Lambda(\alpha)\vee\mathcal H=\mathcal B(Z)\pmod0\},
+\end{equation}
+其中 $\alpha$ 遍历可数 Borel 分割，$\sigma_\Lambda(\alpha)$ 是其全部群平移生成的 $\sigma$-代数。$\mathcal H$ 平凡时与正文定义相同。
+
+现在把森林背景固定在第一层。Bowen 定理还给出从 $B_1$ 到
+$([0,1]^\Gamma,\operatorname{Leb}^\Gamma)$ 的因子；复合第\ref{b2:limits}节所用的
+WUSF 因子映射，得到
+\begin{equation}\label{b2:background}
+ M=M(X_1)\sim\operatorname{WUSF}_T.
+\end{equation}
+因此 $M$ 在每个 $\mathcal F_n$ 中都完全可见。
+
+还须验证 $M$ 作为一个 $\Gamma$-系统本质自由，这是掩码引理的一个实质假设。
+任取 $h\ne1_\Gamma$。自由群无挠，故 $h$ 有无限阶；伯努利作用限制到
+$\langle h\rangle$ 后仍混合，因子 $M$ 也如此。事件 $\{hM=M\}$ 对
+$\langle h\rangle$ 不变，故概率为 $0$ 或 $1$。若概率为 $1$，$h$ 在 $M$ 系统上
+几乎处处为恒等；这与该系统的非平凡混合性矛盾，例如对概率为 $1/2$ 的事件
+$\{M_{(1_\Gamma,a)}=1\}$，其各次 $h$-平移的自相关不会趋于 $1/4$。
+因此 $\PP(hM=M)=0$，再对可数个 $h$ 取并，得到所需的本质自由性。
+
+\subsection{已知掩码上的相对生成引理}\label{b2:mask}
+
+本附录证明把信息写入缺失粗边所需的一般事实。掩码必须属于已经知道的因子；其正测度本身
+并不意味着任意观察都能恢复原系统。生成性来自相对 Rokhlin 熵的控制。
+
+\medskip
+\noindent\textbf{引理（掩码相对生成及小修改）.}
+\emph{设可数无限群 $\Lambda$ 在非原子标准概率空间 $(Z,\eta)$ 上作遍历保测作用。
+设 $p:Z\to B$ 是一个因子映射，$B$ 上的作用本质自由，记
+$\mathcal H=p^{-1}(\mathcal B(B))$。令 $D=p^{-1}(D_B)\in\mathcal H$，
+$d=\eta(D)>0$。}
+\begin{enumerate}
+ \item \emph{若 $h^{\mathrm{Rok}}_\Lambda(Z,\eta\mid\mathcal H)=0$，则存在 Borel
+ 函数 $b:D\to\{0,1\}$，使得令}
+ \begin{equation}\label{b2:maskedname}
+ z_b(x)=\begin{cases}b(x),&x\in D,\\ *,&x\notin D,\end{cases}
+ \end{equation}
+ \emph{便有 $\sigma_\Lambda(z_b)\vee\mathcal H=\mathcal B(Z)\pmod0$。}
+ \item \emph{更一般地，设 $0<r\le1$ 且}
+ \begin{equation}\label{b2:maskassumption}
+ h^{\mathrm{Rok}}_\Lambda(Z,\eta\mid\mathcal H)<dr\log2.
+ \end{equation}
+ \emph{则对任意预先给定的 Borel 二元观察 $c:D\to\{0,1\}$，存在具有上述相对生成性的
+ $b$，并且}
+ \begin{equation}\label{b2:maskerror}
+ \eta\{x\in D:b(x)\ne c(x)\}\le dr.
+ \end{equation}
+\end{enumerate}
+
+\subsubsection{因子可见的诱导轨道关系}\label{b2:induction}
+
+先删去一个不变零集，使 $B$ 上的作用自由，并使因子等变性处处成立。
+固定 $\gamma\in\Lambda\setminus\{1_\Lambda\}$，令
+$H_\gamma=D_B\cap\gamma^{-1}D_B$。取 $B$ 的一个可数分离 Borel 代数
+$\{A_j:j\ge1\}$，其中同时列入各集合的补集。因为 $y\ne\gamma y$，集合
+\[
+ H_\gamma\cap A_j\cap\gamma^{-1}(B\setminus A_j),\qquad j\ge1,
+\]
+覆盖 $H_\gamma$。依次减去前面的集合，可得到一个可数 Borel 分割
+$\{E_{\gamma,j}\}_j$，并满足
+\begin{equation}\label{b2:disjoint}
+ E_{\gamma,j}\cap\gamma E_{\gamma,j}=\varnothing.
+\end{equation}
+在 $D_B$ 上交换 $E_{\gamma,j}$ 与 $\gamma E_{\gamma,j}$，其余点保持不动；
+把这一变换提升到 $D$，即定义
+\begin{equation}\label{b2:involution}
+ \tau_{\gamma,j}(x)=
+ \begin{cases}
+ \gamma x,&p(x)\in E_{\gamma,j},\\
+ \gamma^{-1}x,&p(x)\in\gamma E_{\gamma,j},\\
+ x,&\text{其余情形}.
+ \end{cases}
+\end{equation}
+因子等变性及式 \eqref{b2:disjoint} 表明，它是 $D$ 上的 Borel 对合。
+两个交换区域互不相交，且在原作用下等测度，所以它保持归一化测度
+$\eta_D=d^{-1}\eta|_D$。
+
+取一个可数无限抽象群 $\Delta$，令其作用由这些对合生成。例如，可取可数生成的自由群，
+把生成元依次映为各 $\tau_{\gamma,j}$；这一表示无需忠实，其作用也无需自由。
+它的轨道关系恰好是原 $\Lambda$ 轨道关系在 $D$ 中的限制。一方面，每个生成对合都沿着
+原群轨道移动；另一方面，若 $x,\gamma x\in D$，则 $p(x)\in H_\gamma$，
+从而属于某个 $E_{\gamma,j}$，对应对合把 $x$ 送到 $\gamma x$。恒等箭头当然也属于
+$\Delta$ 作用。
+
+每个 $\Delta$ 变换均可按 $\mathcal H_D=\mathcal H|_D$-可测分块，写成原群元素的作用。
+对于生成对合，这是式 \eqref{b2:involution}；对有限复合，依次取各分块的逆像即可。
+所用群元素及分块均可由因子信息判定，故 $\mathcal H_D$ 是 $\Delta$-不变的。
+更具体地，每个对合都在因子 $D_B$ 上诱导同样的交换，因而把一个因子可测集的逆像仍变成
+因子可测集。
+
+诱导作用遍历。若 $C\subset D$ 对 $\Delta$ 不变，在一个共同满测集上使此不变性成立，
+则 $C$ 的 $\Lambda$-饱和集
+$\bigcup_{\gamma\in\Lambda}\gamma C$ 与 $D$ 的交恰为 $C$，因为两种轨道关系在 $D$
+上相同。原作用遍历，故饱和集测度为 $0$ 或 $1$，从而 $\eta_D(C)$ 也为 $0$ 或 $1$。
+因此 $(D,\eta_D)$ 是一个非原子标准概率空间上的遍历 $\Delta$-系统。
+
+\subsubsection{相对熵的压缩及生成性}\label{b2:compression}
+
+枚举 $\Lambda=(g_0=1_\Lambda,g_1,g_2,\ldots)$。由于原作用遍历且 $\eta(D)>0$，
+$D$ 的饱和集为满测集。令
+\begin{equation}\label{b2:firsthit}
+ C_i=\{x:g_ix\in D,\ g_jx\notin D\text{ 对所有 }j<i\},\qquad
+ D_i=g_iC_i\subset D.
+\end{equation}
+各 $C_i$ 属于 $\mathcal H$，模零构成 $Z$ 的分割，且 $C_0=D$。
+尽管各 $D_i$ 可能重叠，对 $y\in D$ 定义
+$I(y)=\{i:y\in D_i\}$ 后仍有
+\begin{equation}\label{b2:finiteindex}
+ \int_D|I(y)|\,d\eta(y)
+ =\sum_i\eta(D_i)=\sum_i\eta(C_i)=1.
+\end{equation}
+所以 $I(y)$ 几乎处处为有限集，而且其形状完全由 $\mathcal H_D$ 知道。
+
+取任意相对 $\mathcal H$ 生成 $Z$ 的可数分割 $\alpha$，并假设
+$H_\eta(\alpha\mid\mathcal H)<\infty$。在 $D$ 上定义可数分割
+\begin{equation}\label{b2:compressedpartition}
+ \beta(y)=\left(I(y),\bigl(\alpha(g_i^{-1}y)\bigr)_{i\in I(y)}\right).
+\end{equation}
+所有有限索引集及其有限个可数取值的元组组成可数集，因此这的确是可数分割；
+在 $I(y)$ 无限的零集上任取一个默认符号即可。这里不要求 $H_{\eta_D}(\beta)$ 有限，
+只估计其相对条件熵。
+
+令 $h_\alpha(x)$ 为 $\alpha$ 在 $x$ 所属因子纤维上的条件分布的 Shannon 熵。
+这是一个 $\mathcal H$-可测函数，积分为 $H_\eta(\alpha\mid\mathcal H)$。
+因子信息已经给出 $I(y)$，所以只需计算元组的条件熵。条件熵的次可加性及 Tonelli 定理给出
+\begin{align}
+ H_{\eta_D}(\beta\mid\mathcal H_D)
+ &\le\frac1d\sum_i\int_{D_i}h_\alpha(g_i^{-1}y)\,d\eta(y)\notag\\
+ &=\frac1d\sum_i\int_{C_i}h_\alpha(x)\,d\eta(x)
+ =\frac1dH_\eta(\alpha\mid\mathcal H).
+ \label{b2:entropycompression}
+\end{align}
+第一行使用了 $\mathcal H$ 的 $\Lambda$-不变性：给定因子后，
+$\alpha(g_i^{-1}y)$ 的条件分布是把 $\alpha$ 在 $g_i^{-1}y$ 所属纤维上的条件分布搬到
+$y$。对可数个 $i$，这些正则条件分布可以同时选取几乎处处成立的版本。
+$D_i$ 为因子可测集，所以把条件测度限制到它并不改变这一纤维描述。
+
+还须证明 $\beta$ 相对 $\mathcal H_D$ 生成诱导系统；单有熵上界并不足够。
+固定 $x\in D$ 和 $h\in\Lambda$。由因子信息可找出唯一的 $i$ 使 $hx\in C_i$，
+于是 $y=g_ihx\in D_i$。从 $x$ 到 $y$ 是 $D$ 内的一条原群箭头，根据上一节可由
+某个 $\Delta$ 对合实现；所用对合的编号由 $p(x)$、$h$ 和 $i$ 可测地确定。
+因此，从 $\beta$ 的全部 $\Delta$ 名字及 $\mathcal H_D$ 可以读取 $\beta(y)$ 的第
+$i$ 项，得到
+\[
+ \alpha(g_i^{-1}y)=\alpha(hx).
+\]
+令 $h$ 遍历原群，便恢复 $\alpha$ 的全部 $\Lambda$ 名字在 $D$ 上的限制。
+$\alpha$ 相对 $\mathcal H$ 生成 $Z$，故
+$\sigma_\Delta(\beta)\vee\mathcal H_D=\mathcal B(D)\pmod0$。
+在式 \eqref{b2:entropycompression} 中对所有相对生成分割取下确界，得到
+\begin{equation}\label{b2:rokcompression}
+ h^{\mathrm{Rok}}_\Delta(D,\eta_D\mid\mathcal H_D)
+ \le\frac1d h^{\mathrm{Rok}}_\Lambda(Z,\eta\mid\mathcal H).
+\end{equation}
+这给出了所需的压缩不等式，且明确保留了归一化因子 $1/d$。
+
+\subsubsection{二元生成与从掩码搬回整个空间}\label{b2:binary}
+
+使用 Seward 的相对有限生成分割定理\cite[Theorem~1.1]{Seward}：可数无限群在非原子
+标准概率空间上作遍历保测作用，给定不变子 $\sigma$-代数 $\mathcal H'$，若相对
+Rokhlin 熵小于 $H(\mathbf p)$，则存在分布为概率向量 $\mathbf p$ 的相对生成分割。
+该定理不要求作用自由。
+
+当引理第一项的相对熵为零时，式 \eqref{b2:rokcompression} 使诱导系统的相对熵也为零。
+取 $\mathbf p=(1/2,1/2)$，在 $D$ 上得到一个二元 Borel 观察 $b$，满足
+\begin{equation}\label{b2:deltagenerating}
+ \sigma_\Delta(b)\vee\mathcal H_D=\mathcal B(D)\pmod0.
+\end{equation}
+上文已逐项证明了应用条件：$\Delta$ 是可数无限群，$(D,\eta_D)$ 非原子且标准，
+诱导作用遍历，$\mathcal H_D$ 不变。$\Delta$ 作用可能不自由或不忠实均不妨碍该应用。
+
+令 $\mathcal S=\sigma_\Lambda(z_b)\vee\mathcal H$，其中 $z_b$ 如
+式 \eqref{b2:maskedname}。每个 $\Delta$ 变换逐块等于一个由 $\mathcal H_D$ 判定的
+$\Lambda$ 元素，所以 $\mathcal S|_D$ 可以读取 $b$ 的全部 $\Delta$ 名字。
+由式 \eqref{b2:deltagenerating}，$\mathcal S|_D=\mathcal B(D)\pmod0$。
+再任取 $A\in\mathcal B(Z)$，用式 \eqref{b2:firsthit} 的分割分解它。
+每个 $g_i(A\cap C_i)$ 是 $D$ 中的 Borel 集，因而属于 $\mathcal S|_D$。
+由于 $D,C_i\in\mathcal H\subseteq\mathcal S$ 且 $\mathcal S$ 为
+$\Lambda$-不变，搬回去可知 $A\cap C_i\in\mathcal S$。对 $i$ 求并，便得
+$A\in\mathcal S$。这证明了引理第一项。
+
+\subsubsection{预分割及任意观察的小修改}\label{b2:prepartition}
+
+为得到定量修改，需要 Seward 定理的预分割版本。先说明其中的术语。
+一个预分割 $\xi$ 是一族两两不交的 Borel 集，其并 $\bigcup\xi$ 称为支持，不要求支持
+为满测集。完整分割 $\zeta$ 扩张 $\xi$，是指 $\zeta$ 在支持上的限制恰为 $\xi$，
+即每个预分割块包含在一个不同的完整分割块中。
+
+对 $\Delta$ 作用，记 $\sigma^{\mathrm{red}}_\Delta(\xi)$ 为如下 Borel 集 $A$ 构成的
+约化 $\sigma$-代数：存在满测集 $D'$，使任意 $x\in A\cap D'$ 和
+$y\in D'\setminus A$ 都能由某个 $\delta\in\Delta$ 区分，而且区分发生在支持内，
+即 $\delta x,\delta y\in\bigcup\xi$ 并落入不同的 $\xi$ 块。
+若 $\zeta$ 为 $\xi$ 的任意完整扩张，同一个 $\delta$ 仍把这两个点送到不同的
+$\zeta$ 块。因此，$\zeta$ 的完整名字区分 $A$ 与其补集，由标准 Borel 因子的可测性准则，
+\begin{equation}\label{b2:reducedinclusion}
+ \sigma^{\mathrm{red}}_\Delta(\xi)\subseteq\sigma_\Delta(\zeta)\pmod0.
+\end{equation}
+这正是 \cite[Lemma~2.2]{Seward} 在完整扩张情形的内容；重要的是支持之外可以任意填充。
+
+\cite[Theorem~2.3]{Seward} 在与上一节相同的群、遍历性、非原子性和不变子代数条件下
+给出以下更强结论：若 $0<r\le1$ 且
+$h^{\mathrm{Rok}}_\Delta(D,\eta_D\mid\mathcal H_D)<r\log2$，则存在两个不交的
+Borel 集 $A_0,A_1\subset D$，使
+\begin{equation}\label{b2:sewardpre}
+ \eta_D(A_0)=\eta_D(A_1)=\frac r2,\qquad
+ \sigma^{\mathrm{red}}_\Delta(\{A_0,A_1\})\vee\mathcal H_D
+ =\mathcal B(D)\pmod0.
+\end{equation}
+在引理第二项的假设 \eqref{b2:maskassumption} 下，压缩不等式
+\eqref{b2:rokcompression} 恰给出这里所需的严格熵不等式。
+
+对给定 $c:D\to\{0,1\}$，令 $b=0$ 于 $A_0$，$b=1$ 于 $A_1$，并在
+$D\setminus(A_0\cup A_1)$ 上令 $b=c$。相应完整二元分割扩张预分割
+$\{A_0,A_1\}$，所以式 \eqref{b2:reducedinclusion} 和 \eqref{b2:sewardpre}
+保证它相对 $\mathcal H_D$ 生成 $D$。按第\ref{b2:binary}节的搬回论证，
+它的掩码名字相对 $\mathcal H$ 生成整个 $Z$。而改变只发生在支持上，因此
+\[
+ \eta\{x\in D:b(x)\ne c(x)\}
+ \le\eta(A_0\cup A_1)=d\eta_D(A_0\cup A_1)=dr,
+\]
+即得式 \eqref{b2:maskerror}，引理证明完毕。\hfill$\square$
+
+这里先在 $D$ 的归一化概率空间上建立诱导作用，再使用预分割定理。
+因此没有要求外部定理直接把支持放进原系统中一个预先指定的集合。因子自由性也有明确用途：
+它保证原群每条非平凡箭头可以通过因子可见的分离集实现为局部对合。
+
+\subsection{非伯努利因子极限的森林编码}\label{b2:limitconstruction}
+
+回到逆系统 $(\Omega,\Pi)$，令 $\mathcal F=\sigma(M)$，并取
+\begin{equation}\label{b2:forestmasks}
+ D=\{\omega:M_{(1_\Gamma,a)}(\omega)=0\},\qquad d=\Pi(D)=\frac12.
+\end{equation}
+由式 \eqref{short:zero}，相对熵
+$h^{\mathrm{Rok}}_\Gamma(\Omega,\Pi\mid\mathcal F)$ 为零。$M$ 因子本质自由，
+而 $D$ 属于 $\mathcal F$，所以掩码引理适用。选取二元 Borel 观察
+$b:D\to\{0,1\}$，使 $M$ 与全部掩码名字一起生成 $\Omega$。
+
+对于缺失粗边，定义配对类型
+\begin{equation}\label{b2:types}
+ t_{(g,a)}(\omega)=b(g^{-1}\omega)\quad\text{当 }M_{(g,a)}(\omega)=0,
+ \qquad
+ t_{(g,b)}(\omega)=0\quad\text{当 }M_{(g,b)}(\omega)=0.
+\end{equation}
+这里 $M_{(g,a)}(\omega)=0$ 恰等价于 $g^{-1}\omega\in D$，故第一项定义合法。
+这一轨道观察显然与指定的 $\Gamma$ 左作用等变。
+在 $\Omega$ 上另加入独立的均匀装饰场 $I\in U^{E(T)}$，按
+式 \eqref{b2:localmap} 产生森林对 $(X,Y)$，记其联合律为 $\lambda$。
+它是 $\Gamma$-不变的，两个森林边缘由第\ref{b2:pairing}节恒为
+$\mu_W,\mu_F$，且差集具有式 \eqref{b2:difference} 的固定条件律。
+
+从联合输出逐块恢复 $M$ 以及所有 $a$ 型缺失粗边上的 $t$，就得到 $b$ 的完整掩码名字。
+掩码引理表明，这些信息与 $M$ 生成 $\mathcal B(\Omega)$。在标准概率空间上，
+这一生成性给出从 $\lambda$ 系统到 $(\Omega,\Pi)$ 的模零可测因子映射。
+若 $\lambda$ 是伯努利移位的因子，复合这一映射便会使 $\Omega$ 也是伯努利因子，
+与式 \eqref{short:zero} 矛盾。因此 $\lambda$ 不是 FIID。
+
+实际上，第\ref{b2:pairing}节还可恢复所有 $I_e$，所以输出映射从
+$\Omega\times U^{E(T)}$ 到 $\lambda$ 具有模零可测逆。不过，排除 FIID 只需恢复
+$\Omega$ 这个因子。我们并未要求极限联合过程本身的熵为零。
+
+\subsection{保持全部边缘的伯努利同构近似}\label{b2:approximation}
+
+将 $b$ 在 $D$ 外延拓为零。令
+\[
+ q_n=\EE_\Pi[\mathbf1_{\{b=1\}}\mid\mathcal F_n],\qquad
+ c_n=\mathbf1_{\{q_n>1/2\}},
+\]
+并在 $D$ 外令 $c_n=0$。因为 $D\in\mathcal F_1\subseteq\mathcal F_n$，
+这一步不引入任何额外误差；它是已知掩码上的最大后验预测，并列时选 $0$。
+由式 \eqref{b2:filtration} 的上升鞅收敛，
+$q_n\to\mathbf1_{\{b=1\}}$ 于 $L^1(\Pi)$。逐点不等式
+\[
+ \mathbf1_{\{c_n\ne b\}}\le2|q_n-\mathbf1_{\{b=1\}}|
+\]
+于是给出
+\begin{equation}\label{b2:prediction}
+ \epsilon_n:=\Pi\{\omega\in D:c_n(\omega)\ne b(\omega)\}\longrightarrow0.
+\end{equation}
+$c_n$ 对 $\mathcal F_n$ 可测，因而可视为 $B_n$ 上的 Borel 观察。
+
+只把 $b$ 替换为 $c_n$ 就已经可以得到 FIID 近似。为使每个近似联合律本身与伯努利移位
+同构，还需保证能够从它恢复整个第 $n$ 层。令 $r_n=2^{-n/2}$。
+由于 $B_n$ 的根二元分割生成整个移位，且其熵为 $e_n$，有
+\begin{equation}\label{b2:approxentropy}
+ h^{\mathrm{Rok}}_\Gamma(B_n\mid\sigma(M))
+ \le e_n=2^{-n-10}<\frac12r_n\log2=dr_n\log2.
+\end{equation}
+这里 $M$ 通过连接映射及式 \eqref{b2:background} 在 $B_n$ 上精确可读，其因子律及
+本质自由性都与先前相同。$B_n$ 非原子且遍历，故掩码引理的小修改版本逐项适用。
+它给出 $B_n$ 上的二元观察 $b_n:D\to\{0,1\}$，满足
+\begin{equation}\label{b2:smallchange}
+ \beta_n^\Gamma\{D\cap\{b_n\ne c_n\}\}\le dr_n,
+ \qquad
+ \sigma_\Gamma(z_{b_n})\vee\sigma(M)=\mathcal B(B_n)\pmod0.
+\end{equation}
+式中 $D$ 表示 $B_n$ 上同一个根部粗边缺失事件，其拉回到 $\Omega$ 恰为
+式 \eqref{b2:forestmasks} 的集合。
+
+在共同空间 $\Omega\times U^{E(T)}$ 上，把式 \eqref{b2:types} 中的
+$b(g^{-1}\omega)$ 替换为 $b_n(g^{-1}X_n(\omega))$；$b$ 型粗边仍使用类型 $0$。
+保留完全相同的 $M$ 与 $I$，再用式 \eqref{b2:localmap} 得到联合律 $\lambda_n$。
+两个森林边缘及差集边缘不依赖配对观察，故仍与极限中的三个边缘完全相同。
+
+每个 $\lambda_n$ 的实际源系统是
+\begin{equation}\label{b2:bernoullisource}
+ B_n\times U^{\Gamma\times\{a,b\}}
+ \cong\bigl(\{0,1\}\times U\times U,
+       \beta_n\times\operatorname{Unif}(U)\times\operatorname{Unif}(U)\bigr)^\Gamma.
+\end{equation}
+这个基空间有 $2\cdot4\cdot4=32$ 个符号。局部映射是等变 Borel 映射，因此
+$\lambda_n$ 至少为这一有限基伯努利移位的因子。为了证明同构，从输出先恢复 $M$、
+全部 $a$ 型缺边上的 $b_n$ 名字，以及所有 $I_e$。式 \eqref{b2:smallchange} 的相对
+生成性继而恢复 $B_n$ 的完整 $\sigma$-代数。于是输出映射拉回的 $\sigma$-代数就是
+式 \eqref{b2:bernoullisource} 的全体 $\sigma$-代数；对标准概率空间，这等价于该映射
+模零可逆。其逆映射也等变，因为原映射等变且模零单射。因此 $\lambda_n$ 与所列正则
+伯努利移位同构，而不只是其不可逆因子。
+
+\subsection{联合过程之间的不变失配估计}\label{b2:convergence}
+
+上述共同空间给出了 $\lambda_n$ 与 $\lambda$ 的一个具体 joining：两套输出使用同一
+$\omega\in\Omega$、同一粗森林 $M$ 和同一装饰 $I$，只替换配对观察。
+$\Pi$ 与装饰场的乘积律不变，两套输出映射又都等变，所以这一外层 joining 确实属于
+$\mathcal J_\Gamma(\lambda_n,\lambda)$。承载这个 joining 的空间无需是伯努利空间；
+每个近似输出具有伯努利源，已由式 \eqref{b2:bernoullisource} 单独证明。
+
+在所有 $b$ 型粗边上，两套输出相同。在 $a$ 型粗边上，若 $M_e=1$，两套输出也相同；
+若 $M_e=0$，则只有配对比特不同时才可能发生失配。此时 $X_e=S_{I_e}$ 的四个坐标
+完全不变，而 $Y_e$ 缺失的边从 $p_0(I_e)$ 换成不同的 $p_1(I_e)$，或反过来。
+因此，恰有两条细边的三字母联合符号改变。
+
+对式 \eqref{b2:orbits} 的全部八个代表求和，得到
+\begin{align}
+ \bar d_W(\lambda_n,\lambda)
+ &\le2\Pi\{\omega\in D:b_n(X_n(\omega))\ne b(\omega)\}\notag\\
+ &\le2\epsilon_n+2dr_n
+ =2\epsilon_n+r_n\longrightarrow0.
+ \label{b2:bardconvergence}
+\end{align}
+其中第一步已包括 $b$ 型的四个零失配项，$a$ 型四个坐标的和则恰为两倍的比特错误概率。
+第二步使用式 \eqref{b2:prediction}、\eqref{b2:smallchange} 及 $d=1/2$。
+这证明的是联合过程的真正不变 $\bar d$ 收敛。生成观察 $b$ 未必局部，故此证明不为
+$\epsilon_n$ 提供统一的数值速度；若需要预定的收敛上界，可选子列使右端小于 $2^{-j}$。
+
+\subsection{固定森林边缘之间的最优成本}\label{b2:optimality}
+
+下面计算与式 \eqref{b2:bardconvergence} 不同的另一个距离，即两个固定森林边缘
+$\mu_W$ 和 $\mu_F$ 之间的距离。任意二元坐标耦合均满足
+\begin{equation}\label{b2:costlower}
+ \rho\{X(w)\ne Y(w)\}
+ \ge\bigl|\EE_\rho Y(w)-\EE_\rho X(w)\bigr|.
+\end{equation}
+由式 \eqref{b2:fusf}、\eqref{b2:wusf}，每粗边块有
+\[
+ \EE|Y_e|=3,\qquad\EE|X_e|=2+\EE M_e=\frac52.
+\]
+所以每个粗边轨道的四条细边的均值差之和为 $1/2$，两个粗边轨道合起来给出成本下界 $1$。
+进一步，各个两边状态的均匀分布在每个坐标上有占用概率 $1/2$，三边状态的相应概率为
+$3/4$，故每个细边都有
+\begin{equation}\label{b2:finemarginals}
+ \EE_{\mu_W}X(w)=\frac12\cdot\frac34+\frac12\cdot\frac12=\frac58,
+ \qquad\EE_{\mu_F}Y(w)=\frac34.
+\end{equation}
+每个坐标的下界因此为 $1/8$。
+
+我们构造的全部联合律均满足 $X(w)\le Y(w)$，所以它们在
+式 \eqref{b2:costlower} 中逐坐标取等。由八个代表的求和规范，
+\begin{equation}\label{b2:optimalcost}
+ \bar d_W(\mu_W,\mu_F)=1,
+\end{equation}
+而每个 $\lambda_n$ 及 $\lambda$ 都是达到此最优值的 joining。
+若采用八轨道平均的另一规范，最优值才是 $1/8$。式 \eqref{b2:optimalcost} 恒定不变，
+而式 \eqref{b2:bardconvergence} 比较的联合律之间的距离趋于零，两者没有混用。
+
+\subsection{三个固定边缘的投影行列式核}\label{b2:dpp}
+
+最后给出三个边缘的算子描述。沿用式 \eqref{b2:edges} 的方向，在
+$\ell^2(E(T))$ 上令 $Q$ 为粗树闭星空间的正交投影，即有限支撑顶点势函数的梯度之闭包
+上的投影。由传递电流定理\cite[Theorem~7.8]{BLPS}，
+$\operatorname{WUSF}_T=\mathbf P^Q$。
+
+在每个细边块 $\mathbb C^4$ 中，令 $P_0$ 投影到两个正交单位向量
+\[
+ \frac1{\sqrt2}(1,-1,0,0),\qquad
+ \frac1{\sqrt2}(0,0,1,-1)
+\]
+张成的空间，令 $K_0$ 为这些 $P_0$ 的块直和，并定义
+$J:\ell^2(E(T))\to\ell^2(E(G))$ 为
+\begin{equation}\label{b2:isometry}
+ J\delta_e=\frac12\sum_{i=0}^3\delta_{(e,i)}.
+\end{equation}
+显然 $J^*J=I$、$K_0J=0$。定义
+\begin{equation}\label{b2:kernels}
+ K_F=K_0+JJ^*,\qquad
+ K_W=K_0+JQJ^*,\qquad
+ K_D=J(I-Q)J^*=K_F-K_W.
+\end{equation}
+三者都与 $\Gamma$ 作用交换，均为 Hermitian 正交投影，并满足
+$0\le K_W\le K_F\le I$。确实，$JQJ^*$ 与 $J(I-Q)J^*$ 是
+$\operatorname{ran}J$ 内两个正交子空间上的投影，而它们又都与
+$\operatorname{ran}K_0$ 正交。
+
+\paragraph{自由森林核.}
+粗图是树，故细图的每个有限循环都由各个菱形内部的循环生成。
+每个菱形的单位循环向量为 $(1,1,-1,-1)/2$；它的正交补恰由前述两个内部梯度向量和
+$(1,1,1,1)/2$ 张成。因此，有限循环空间闭包的正交补投影为
+$K_0+JJ^*=K_F$。由 \cite[Theorem~7.8]{BLPS}，
+\begin{equation}\label{b2:fusfkernel}
+ \mu_F=\mathbf P^{K_F}.
+\end{equation}
+这与独立均匀三边状态的有限计数描述一致。
+
+\paragraph{连线森林核.}
+内部顶点的梯度恰张成 $\operatorname{ran}K_0$。给定有限支撑粗顶点函数 $f$，
+把它延拓到每个内部顶点，取两端值的平均。沿某个菱形的四条已定向细边，梯度均为
+$(f(q)-f(p))/2$，故这一延拓的梯度正好是 $J(df)$。由于 $T$ 局部有限，
+有限支撑 $f$ 的这种延拓仍为有限支撑。
+
+任意有限支撑细顶点函数先限制到粗顶点，再减去上述平均延拓，余项只支撑在内部顶点，
+其梯度属于 $\operatorname{ran}K_0$。反过来，两种梯度都来自有限支撑细顶点函数。
+取闭包得到细图闭星空间的正交分解
+\begin{equation}\label{b2:starspace}
+ \overline{\operatorname{span}\{\text{细图有限支撑梯度}\}}
+ =\operatorname{ran}K_0\mathbin{\oplus}J\operatorname{ran}Q.
+\end{equation}
+其正交性已由 $K_0J=0$ 给出；延拓还满足逐粗边的能量恒等式
+\[
+ 4\left|\frac{f(q)-f(p)}2\right|^2=|f(q)-f(p)|^2,
+\]
+所以不需额外的电导缩放。式 \eqref{b2:starspace} 的投影为 $K_W$，再次由
+传递电流定理得到
+\begin{equation}\label{b2:wusfkernel}
+ \mu_W=\mathbf P^{K_W}.
+\end{equation}
+
+\paragraph{差集核.}
+粗森林补集 $M^c$ 的律为 $\mathbf P^{I-Q}$。给定 $M^c$，式
+\eqref{b2:difference} 在每个占用粗块独立均匀选择一条细边。
+对来自互不相同的 $k$ 个粗块的细边 $(e_1,i_1),\ldots,(e_k,i_k)$，其全部出现在
+$Y\setminus X$ 中的概率为
+\begin{equation}\label{b2:dppdifference}
+ 4^{-k}\det\bigl((I-Q)(e_j,e_l)\bigr)_{j,l=1}^k
+ =\det\bigl(K_D((e_j,i_j),(e_l,i_l))\bigr)_{j,l=1}^k.
+\end{equation}
+若选择的细边中有两条来自同一个粗块，包含概率为零，核矩阵中相应两行相同，故主子式
+也为零。这识别了所有有限包含概率，因此
+\begin{equation}\label{b2:diffkernel}
+ \mathcal L(Y\setminus X)=\mathbf P^{K_D}.
+\end{equation}
+这一个边缘由 FIID 粗森林 $M$ 的补集加独立的四选一装饰直接产生，因而也是 FIID。
+
+式 \eqref{b2:coarsemarginal} 给出 $Q(e,e)=1/2$，于是每条细边都有
+\begin{equation}\label{b2:diagonals}
+ K_W(w,w)=\frac58,\qquad K_F(w,w)=\frac34,\qquad K_D(w,w)=\frac18.
+\end{equation}
+这同时核对了有限计数的边缘概率及式 \eqref{b2:optimalcost} 的最优成本。
+至此，定理 D.1 的所有结论均已证明。\hfill$\square$
+
+\subsection{联合律、共同源与对称性的范围}\label{b2:scope}
+
+三个边缘是 DPP，并不使联合过程成为 DPP。若把 $X,Y$ 看作两个标记层上的随机点集，
+在同一细边的两个不同标记坐标上，单调性给出
+\[
+ \operatorname{Cov}(X(w),Y(w))
+ =\EE X(w)-\EE X(w)\EE Y(w)
+ =\frac58\left(1-\frac34\right)=\frac5{32}>0.
+\]
+而 Hermitian DPP 在不同坐标上的协方差等于相应核元模平方的负数。
+因此这些标记层联合律不是 Hermitian DPP，本附录不闭性不能转述为 DPP 子类的不闭性。
+
+本构造还保持了随机源的准确含义。每个 $\lambda_n$ 使用式 \eqref{b2:bernoullisource}
+的正则独立源，可由一个 $[0,1]^\Gamma$ 场逐点产生；也可在 $G$ 的顶点上放置 IID
+标签，只读取原粗顶点的一个自由轨道。反过来，$G$ 顶点集的五个自由轨道可按群元素打包成
+一个正则伯努利源，所以 $\lambda$ 也不是 $G$ 顶点 IID 标签关于指定 $\Gamma$ 作用的因子。
+所有逆系统、分割、条件期望和解码的异常集仅涉及可数层、可数坐标与可数群元素，取其平移
+的共同零集后，即得到通常模零意义下的等变映射。
+
+这里的全部结论只针对指定的 $F(a,b)$ 左作用。它保持粗边的 $a/b$ 类型、路径编号和方向；
+未标号图的额外自同构未必保持这些数据。因此本附录不提供完整
+$\operatorname{Aut}(G)$ 下的同一反例，也不将其外推到任意 Cayley 图上的共同源问题。
+
+最后，同一对森林边缘仍有很简单的 FIID 单调耦合：在所有缺失粗边上固定 $t_e=0$，
+使用 FIID 的 $M$ 及独立均匀的 $I$，再按式 \eqref{b2:localmap} 配对即可。
+它仍达到最优成本 $1$。定理 D.1 所否定的是这些联合律中 FIID 子类的极限闭性；
+它并不否定这对森林存在精确的共同 IID 包含构造。
+
+
+\section{有限范围包络的定量逼近}\label{cd:finiterange}
+
+沿用第~\ref{sec:cd}~节有隙有限支撑情形的速率、时钟和上下包络。包络论证还给出如下整路径定量逼近。取有限相对邻域 $W_m\uparrow\Gamma$，令
+\[
+\omega_m=\sup\{|a_e(t,x)-a_e(t,y)|:
+                     0\le t\le1,\ x|_{W_m}=y|_{W_m}\}.
+\]
+紧性与连续性说明 $\omega_m\downarrow0$。将包络在 $i$ 处的极值改为仅约束邻域 $iW_m$ 中的配置，而让邻域外自由，就得到同一组钟上的有限范围上下包络。局部下阈值至多比完整下阈值小 $\omega_m$，局部上阈值至多比完整上阈值大 $\omega_m$。其有限范围依赖可以沿时间向后追踪：长度为 $n$ 的有向时间递减标记链，期望数至多为某个有限常数乘
+\[
+\frac{(M|W_m|)^n}{n!}.
+\]
+故不存在无穷向后祖先链，局部包络由有限祖先确定；扩大 $W_m$ 产生嵌套包络。
+
+设局部包络在时刻 $t$ 的根分歧概率为 $d_m(t)$。同一补偿论证给出
+\[
+d_m(t)\le2\omega_m t+c\int_0^t d_m(s)\,ds,
+\qquad d_m(t)\le2\omega_m\frac{e^{ct}-1}{c},
+\]
+其中 $c=0$ 时按连续延拓解释。再对整个时间区间内可能\emph{产生}分歧的标记计数，得到
+\begin{equation}
+\mathbb P(\hbox{根处两条局部包络整条路径不同})
+\le C_c\omega_m,
+\qquad C_c=\frac{2(e^c-1)}c,
+\label{cd:pathapprox}
+\end{equation}
+$C_0=2$。选取 $\omega_{m_k}\le2^{-k}$ 即得共同输入上的可和误差。这里有限祖先只描述相对钟过程；初始配置本身仍可能依赖无穷多个 iid 标签，因而不由此推出初始采样器有限编码。正文一般核的构造直接使用定理 7.1，不依赖本附录的逼近。
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{参考文献}\label{sec:references}
+\begin{thebibliography}{Seward}
+\small
+\linespread{1.0}\selectfont
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{1pt}
+\interlinepenalty=10000
+\bibitem[AL]{AL} David Aldous and Russell Lyons. \emph{Processes on Unimodular Random Networks}. Electronic Journal of Probability \textbf{12} (2007), 1454--1508. \href{https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/463/463-1495-1-PB.pdf}{Published PDF}.
+
+\bibitem[ARS]{ARS} Omer Angel, Gourab Ray and Yinon Spinka. \emph{Uniform even subgraphs and graphical representations of Ising as factors of i.i.d.} Electronic Journal of Probability \textbf{29} (2024), paper 39. \href{https://dspace.library.uvic.ca/server/api/core/bitstreams/ec346c4f-76f7-4bb3-b54e-b95505de66de/content}{Published PDF}.
+
+\bibitem[BBL]{BBL} Julius Borcea, Petter Brändén and Thomas M. Liggett. \emph{Negative dependence and the geometry of polynomials}. Journal of the American Mathematical Society \textbf{22} (2009), 521--567. \href{https://arxiv.org/pdf/0707.2340v2}{作者稿}。
+
+\bibitem[BLPS]{BLPS} Itai Benjamini, Russell Lyons, Yuval Peres and Oded Schramm. \emph{Uniform Spanning Forests}. Annals of Probability \textbf{29} (2001), 1--65. \href{https://rdlyons.pages.iu.edu/pdf/usf.pdf}{Author version, 27 January 2009}.
+
+\bibitem[Bowen]{Bowen} Lewis Bowen. \emph{Finitary random interlacements and the Gaboriau--Lyons problem}. Geometric and Functional Analysis \textbf{29} (2019), no.~3, 659--689. \href{https://arxiv.org/pdf/1707.09573v4}{作者稿}。
+
+\bibitem[Bowen04]{Bowen04} Lewis Bowen. \emph{Couplings of Uniform Spanning Forests}. Proceedings of the American Mathematical Society \textbf{132} (2004), no.~7, 2151--2158. \href{https://arxiv.org/pdf/math/0301291v2}{作者稿}。
+
+\bibitem[BowenS]{BowenSurvey} Lewis Bowen. \emph{Examples in the entropy theory of countable group actions}. Ergodic Theory and Dynamical Systems \textbf{40} (2020), no.~10, 2593--2680. \href{https://arxiv.org/pdf/1704.06349v3}{作者稿}；本文的节号与结果编号按该版本。
+
+\bibitem[EM]{EM} Ahmed El Alaoui and Andrea Montanari. \emph{An Information-Theoretic View of Stochastic Localization}. \href{https://arxiv.org/pdf/2109.00709v2}{arXiv:2109.00709v2}, 2021。
+
+\bibitem[ES]{ES} Gábor Elek and Endre Szabó. \emph{Sofic representations of amenable groups}. Proceedings of the American Mathematical Society \textbf{139} (2011), 4285--4291. \href{https://www.ams.org/proc/2011-139-12/S0002-9939-2011-11222-X/S0002-9939-2011-11222-X.pdf}{Published PDF}; \href{https://arxiv.org/pdf/1010.3424v2}{preprint v2}.
+
+\bibitem[FK26]{FK26} \emph{Bernoulli domination for invariant determinantal measures}. 本工作的早期稿，2026年9月27日；相关证明完整收录于本文第5节。
+
+\bibitem[ICM]{ICM} Russell Lyons. \emph{Determinantal probability: basic properties and conjectures}. Proceedings of the ICM 2014, Vol. IV, 137--161. \href{https://rdlyons.pages.iu.edu/pdf/icm-pub.pdf}{Published author PDF}.
+
+\bibitem[Kerr]{Kerr} David Kerr. \emph{Bernoulli actions of sofic groups have completely positive entropy}. Israel Journal of Mathematics \textbf{202} (2014), 461--474. \href{https://doi.org/10.1007/s11856-014-1077-0}{doi:10.1007/s11856-014-1077-0}。
+
+\bibitem[LiT]{LiT} Hanfeng Li and Andreas Thom. \emph{Entropy, Determinants, and \(L^2\)-Torsion}. Journal of the American Mathematical Society \textbf{27} (2014), 239--292. \href{https://arxiv.org/pdf/1202.1213v2}{Preprint v2}.
+
+\bibitem[LS]{LS} Russell Lyons and Jeffrey E. Steif. \emph{Stationary determinantal processes: phase multiplicity, Bernoullicity, entropy, and domination}. Duke Mathematical Journal \textbf{120} (2003), 515--575. \href{https://rdlyons.pages.iu.edu/pdf/dyn.pdf}{Author version, 1 June 2025}.
+
+\bibitem[LT]{LT} Russell Lyons and Andreas Thom. \emph{Invariant coupling of determinantal measures on sofic groups}. Ergodic Theory and Dynamical Systems \textbf{36} (2016), 574--607. \href{https://rdlyons.pages.iu.edu/pdf/couple-pub.pdf}{Published author PDF}.
+
+\bibitem[Mester]{Mester} Péter Mester. \emph{Invariant monotone coupling need not exist}. Annals of Probability \textbf{41} (2013), no.~3A, 1180--1190. \href{https://arxiv.org/pdf/1011.2283v2}{发表版}。
+
+\bibitem[NSZ]{NSZ} Danny Nam, Allan Sly and Lingfu Zhang. \emph{Ising model on trees and factors of IID}. Communications in Mathematical Physics \textbf{389} (2022), 1009--1046. \href{https://arxiv.org/abs/2012.09484v2}{arXiv:2012.09484v2}.
+
+\bibitem[PP]{PP} Robin Pemantle and Yuval Peres. \emph{Concentration of Lipschitz functionals of determinantal and other strong Rayleigh measures}. Combinatorics, Probability and Computing \textbf{23} (2014), no.~1, 140--160. \href{https://arxiv.org/pdf/1108.0687v3}{作者稿}。
+
+\bibitem[Seward]{Seward} Brandon Seward. \emph{Krieger's finite generator theorem for actions of countable groups I}. Inventiones Mathematicae \textbf{215} (2019), no.~1, 265--310. \href{https://arxiv.org/pdf/1405.3604v5}{arXiv:1405.3604v5}，Theorem 1.1、Lemma 2.2 及 Theorem 2.3。
+
+\bibitem[Tim]{Tim} Ádám Timár. \emph{Factor of iid's through stochastic domination}. arXiv:2306.15120v2, 2025. \href{https://arxiv.org/pdf/2306.15120v2}{Versioned PDF}.
+
+\end{thebibliography}
+\end{document}
