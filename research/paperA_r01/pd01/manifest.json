@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 1040,
+      "sha256": "d2bffcbecf67deb4a691cb80a4df530cd5e0377bff5b25417b18c468eb280a80"
+    },
+    "pd01q.md": {
+      "bytes": 10052,
+      "sha256": "b7330d81cd86dd08d0b07efa87bd3478b23ce7792d18e0e8be3dd3c01da87b18"
+    },
+    "pd01r.md": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "finite01.py": {
+      "bytes": 4536,
+      "sha256": "b12df66317686c385b41bfcfee4ba73df3b3d19a2af964185ceb139d6bb8fad5"
+    },
+    "finite01.json": {
+      "bytes": 181089,
+      "sha256": "b2ec25186067d17b2e48ba68e94a9bacc9eb1012ea399d51edcafff5f3027dfe"
+    },
+    "state.json": {
+      "bytes": 1618,
+      "sha256": "60964f359527d99a120f76ef96aa3cfca52b6b6aabc616dccb80c8b4b9e4a9f9"
+    }
+  },
+  "empty_reply_is_not_received": true
+}
