@@ -1,0 +1,44 @@
+{
+  "id": "PD01",
+  "created_at": "2026-10-11T02:29:18.023528+08:00",
+  "mathematical_status": "UNRESOLVED",
+  "workflow_status": "PROMPT_READY",
+  "target": "For every finite complex Hermitian positive contraction Q, ordinary Bernoulli lower threshold p_minus(Q) equals the minimum nonempty principal-minor geometric mean delta(Q).",
+  "scope": "No symmetry, transitivity, invariant joining, or common iid requirement. Countable ordinary extension only after finite result.",
+  "repository": "cat5779/rl01",
+  "branch": "pd01",
+  "base_commit": "5cf4acc2d6e85d06d03384e597ead893b9e465fc",
+  "prompt": "pd01q.md",
+  "reply": {
+    "path": "pd01r.md",
+    "status": "EMPTY_PLACEHOLDER",
+    "bytes": 0,
+    "received": false,
+    "counts_as_completed_output": false
+  },
+  "empirical_evidence": {
+    "samples": 500,
+    "dimensions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "seed": 761205,
+    "status": "NUMERICAL_PROBE_NOT_PROOF",
+    "source_files": {
+      "finite01.py": {
+        "source_path": "C:\\game\\ai4math\\math\\nosofic01\\resaudit01\\finite01.py",
+        "sha256": "b12df66317686c385b41bfcfee4ba73df3b3d19a2af964185ceb139d6bb8fad5"
+      },
+      "finite01.json": {
+        "source_path": "C:\\game\\ai4math\\math\\nosofic01\\resaudit01\\finite01.json",
+        "sha256": "b2ec25186067d17b2e48ba68e94a9bacc9eb1012ea399d51edcafff5f3027dfe"
+      }
+    }
+  },
+  "prior_art_status": "DIRECT_GENERAL_THEOREM_NOT_CONFIRMED; search requested; no firstness claim",
+  "mathematical_status_changed_by_upload": false,
+  "manuscript_changed": false
+}
